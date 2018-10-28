@@ -8,6 +8,8 @@ brand_button: DOWNLOAD CHEAT SHEET
 brand_link: assets/files/cheatsheet.pdf
 layout: default
 ---
+
+{% capture section1 %}
 ## Introduction to RAPIDS
 
 ##### The RAPIDS data science framework includes a collection of libraries for executing end-to-end data science pipelines completely in the GPU. It is designed to have a familiar look and feel to data scientists working in Python. Here’s a code snippet where we read in a CSV file and output some descriptive statistics.
@@ -22,6 +24,7 @@ for column in gdf.columns:
 RAPIDS uses optimized NVIDIA® CUDA® primitives and high-bandwidth GPU memory to accelerate data preparation and machine learning. The goal of RAPIDS is not only to accelerate the individual parts of the typical data science workflow, but to accelerate the complete end-to-end workflow.
 
 We suggest that you take a look at the sample workflow in our Docker container (described below), which illustrates just how straightforward a basic XGBoost model training and testing looks in RAPIDS.
+{% endcapture %}
 
 <section class="documentation-gray intro-content">
     <div class="documentation-gray-top"></div>
