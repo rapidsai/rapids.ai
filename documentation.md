@@ -10,15 +10,15 @@ layout: default
 ---
 
 <section class="introduction-section intro-content">
-    <div class="fixed-content">
-        <div class="getting-started-small-warp">
-            <div class="intro-text">
+<div class="fixed-content">
+<div class="getting-started-small-warp">
+<div class="intro-text">
                 
 ## Introduction to RAPIDS
 
 The RAPIDS data science framework includes a collection of libraries for executing end-to-end data science pipelines completely in the GPU. It is designed to have a familiar look and feel to data scientists working in Python. Here’s a code snippet where we read in a CSV file and output some descriptive statistics.
 
-            </div>
+</div>
 
 ```python
 import cudf
@@ -31,8 +31,8 @@ RAPIDS uses optimized NVIDIA® CUDA® primitives and high-bandwidth GPU memory t
 
 We suggest that you take a look at the sample workflow in our Docker container (described below), which illustrates just how straightforward a basic XGBoost model training and testing looks in RAPIDS.
 
-        </div>
-    </div>
+</div>
+</div>
 </section>
 
 <section class="documentation-gray intro-content">
