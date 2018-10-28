@@ -8,6 +8,9 @@ brand_button: DOWNLOAD CHEAT SHEET
 brand_link: assets/files/cheatsheet.pdf
 layout: default
 ---
+<section class="introduction-section intro-content">
+<div class="fixed-content">
+<div class="getting-started-small-warp">
 
 ## Introduction to RAPIDS
 
@@ -24,6 +27,9 @@ RAPIDS uses optimized NVIDIA® CUDA® primitives and high-bandwidth GPU memory t
 
 We suggest that you take a look at the sample workflow in our Docker container (described below), which illustrates just how straightforward a basic XGBoost model training and testing looks in RAPIDS.
 
+</div>
+</div>
+</section>
 <section class="documentation-gray intro-content">
     <div class="documentation-gray-top"></div>
     <div class="documentation-inner-content">
