@@ -1,5 +1,7 @@
 ---
 title: Technical Documentation, Docker Container | RAPIDS
+og_title: RAPIDS Technical Documentation
+og_description: Get started with RAPIDS. Find docker container details, download and installation details, and more.
 brand_name: DOCUMENTATION
 brand_tagline: Getting started with RAPIDS
 brand_button: DOWNLOAD CHEAT SHEET
