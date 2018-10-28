@@ -1,10 +1,10 @@
 ---
 title: Technical Documentation, Docker Container | RAPIDS
+brand_name: DOCUMENTATION
+brand_tagline: Getting started with RAPIDS
+brand_button: DOWNLOAD CHEAT SHEET
+brand_link: assets/files/cheatsheet.pdf
 layout: default
-name: DOCUMENTATION
-tagline: Getting started with RAPIDS
-button_name: DOWNLOAD CHEAT SHEET
-button_link: assets/files/cheatsheet.pdf
 ---
 
 <section class="introduction-section intro-content">
