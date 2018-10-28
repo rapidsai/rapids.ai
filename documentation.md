@@ -9,7 +9,6 @@ brand_link: assets/files/cheatsheet.pdf
 layout: default
 ---
 
-{% capture section1 %}
 ## Introduction to RAPIDS
 
 ##### The RAPIDS data science framework includes a collection of libraries for executing end-to-end data science pipelines completely in the GPU. It is designed to have a familiar look and feel to data scientists working in Python. Here’s a code snippet where we read in a CSV file and output some descriptive statistics.
@@ -24,70 +23,24 @@ for column in gdf.columns:
 RAPIDS uses optimized NVIDIA® CUDA® primitives and high-bandwidth GPU memory to accelerate data preparation and machine learning. The goal of RAPIDS is not only to accelerate the individual parts of the typical data science workflow, but to accelerate the complete end-to-end workflow.
 
 We suggest that you take a look at the sample workflow in our Docker container (described below), which illustrates just how straightforward a basic XGBoost model training and testing looks in RAPIDS.
-{% endcapture %}
 
-<section class="documentation-gray intro-content">
-    <div class="documentation-gray-top"></div>
-    <div class="documentation-inner-content">
-        <div class="fixed-content">
-            <div class="getting-started-small-warp">
-                <h2>Download and Setup</h2>
-                <div class="intro-text">
-                    <p>RAPIDS is currently supported on Linux systems only, and we recommend using Docker when you’re just getting started.</p>
-                </div>
-                <h3>Prerequisites</h3>
-                <ul>
-                    <li>GPU support
-                        <ul>
-                            <li>NVIDIA Pascal™ architecture or better</li>
-                        </ul>
-                    </li>
-                    <li>CUDA support
-                        <ul>
-                            <li>
-                                <a href="https://developer.nvidia.com/cuda-92-download-archive" target="_blank">9.2</a>
-                                (tags below for each version)
-                            </li>
-                            <li>
-                                <a href="https://developer.nvidia.com/cuda-downloads" target="_blank">10.0</a>
-                                (tags below for each version)
-                            </li>
-                        </ul>
-                    </li>
-                    <li>OS support
-                        <ul>
-                            <li><a href="http://releases.ubuntu.com/16.04/" target="_blank">Ubuntu 16.04 LTS</a> (tested
-                                and confirmed working)
-                            </li>
-                            <li><a href="http://releases.ubuntu.com/18.04/" target="_blank">Ubuntu 18.04 LTS</a> (tested
-                                and confirmed working)
-                            </li>
-                        </ul>
-                    </li>
-                    <li>Docker support
-                        <ul>
-                            <li><a href="https://docs.docker.com/install/linux/docker-ce/ubuntu/" target="_blank">
-                                Docker CE v18+</a> - apt for Ubuntu 16.04 doesn't include v18+ by default
-                            </li>
-                            <li><a href="https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0)"
-                                   target="_blank">nvidia-docker v2+</a></li>
-                        </ul>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</section>
+## Download and Setup
 
-<section class="docker-container">
-    <div class="fixed-content">
-        <div class="getting-started-small-warp">
-            <h2>RAPIDS Docker Container</h2>
-            <div class="intro-text">
-                <p>We’ve built a container with everything you need to experiment with RAPIDS.</p>
-            </div>
+##### RAPIDS is currently supported on Linux systems only, and we recommend using Docker when you’re just getting started.
 
-            <h3>What’s Included in the Container:</h3>
+### Prerequisites
+
+* GPU - NVIDIA Pascal™ architecture or better
+* CUDA support - [9.2](https://developer.nvidia.com/cuda-92-download-archive) or [10.0](https://developer.nvidia.com/cuda-downloads)
+* Ubuntu 16.04 or 18.04
+* Docker CE v18+
+* [nvidia-docker](https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0)) v2+
+
+## RAPIDS Docker Container
+
+##### We’ve built a container with everything you need to experiment with RAPIDS
+
+### What’s Included in the Container
             <ul>
                 <li>RAPIDS libraries</li>
                 <li>Jupyter notebooks:
