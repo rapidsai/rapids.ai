@@ -17,7 +17,7 @@ layout: home
             on much larger dataset sizes. </p>
         <div class="rapids-perfomance">
             <br><br>
-            <img src="images/rapids-end-to-end-performance-chart-oss-page-r4.svg" alt="End to end Performance Chat"><br>
+            <img src="assets/images/rapids-end-to-end-performance-chart-oss-page-r4.svg" alt="End to end Performance Chat"><br>
             <br>
         </div>
     </div>
@@ -28,11 +28,11 @@ layout: home
     <div class="gpu-pipeline-container">
         <div class="fixed-content">
             <h2>The New GPU <br> Data Science Pipeline</h2>
-            <div class="Pipeline-Diagram"><img src="images/Pipeline-FPO-Diagram.png" alt="" title=""></div>
+            <div class="Pipeline-Diagram"><img src="assets/images/Pipeline-FPO-Diagram.png" alt="" title=""></div>
             <div class="apache-arrow">
                 <!--
                 <div class="apache-arrow-inner">
-                    <span><img src="images/apache-arrow.svg" alt="" title=""></span>
+                    <span><img src="assets/images/apache-arrow.svg" alt="" title=""></span>
                     <span>Apache <br> Arrow</span>
                 </div>
                 -->
@@ -69,20 +69,20 @@ layout: home
             <div class="features-row">
                 <ul>
                     <li>
-                        <img src="images/hassle-free.svg" alt="hassle free">
+                        <img src="assets/images/hassle-free.svg" alt="hassle free">
                         <h3>Hassle-Free Integration</h3>
                         <p>Accelerate your Python data science toolchain with minimal code changes and no new tools to
                             learn.</p>
                     </li>
 
                     <li>
-                        <img src="images/scaling-out.svg" alt="scaling out">
+                        <img src="assets/images/scaling-out.svg" alt="scaling out">
                         <h3>Scaling Out <br> on Any GPU</h3>
                         <p>Seamless scale from GPU workstations to multi-GPU servers and multi-node clusters.</p>
                     </li>
 
                     <li>
-                        <img src="images/top-model.svg" alt="top model">
+                        <img src="assets/images/top-model.svg" alt="top model">
                         <h3>Top Model Accuracy</h3>
                         <p>Increase machine learning model accuracy by iterating on models faster and deploying them
                             more frequently.</p>
@@ -95,13 +95,13 @@ layout: home
 
 
                     <li>
-                        <img src="images/reduces.svg" alt="reduces">
+                        <img src="assets/images/reduces.svg" alt="reduces">
                         <h3>Reduced <br> Training Time</h3>
                         <p>Drastically improve your productivity with near-interactive data science.</p>
                     </li>
 
                     <li>
-                        <img src="images/open-source.svg" alt="open source">
+                        <img src="assets/images/open-source.svg" alt="open source">
                         <h3>Open <br> Source</h3>
                         <p>The open-source software is customizable, extensible, interoperable--supported by NVIDIA and
                             built on Apache Arrow.</p>
@@ -133,22 +133,22 @@ layout: home
         <h3>Community Contributors</h3>
         <div class="contributing-logos">
             <div class="contributing-logo">
-                <img src="images/anaconda.png" alt="anaconda">
+                <img src="assets/images/anaconda.png" alt="anaconda">
             </div>
             <div class="contributing-logo">
-                <img src="images/blazingdb.png" alt="blazingdb">
+                <img src="assets/images/blazingdb.png" alt="blazingdb">
             </div>
             <div class="contributing-logo">
-                <img src="images/Gunrock_Color.png" alt="gunrock">
+                <img src="assets/images/Gunrock_Color.png" alt="gunrock">
             </div>
             <div class="contributing-logo">
-                <img src="images/NVLogo_2D_H.png" alt="nvidia">
+                <img src="assets/images/NVLogo_2D_H.png" alt="nvidia">
             </div>
             <div class="contributing-logo">
-                <img src="images/quansight.png" alt="quantsight">
+                <img src="assets/images/quansight.png" alt="quantsight">
             </div>
             <div class="contributing-logo">
-                <img src="images/scikit-learn_Color.png" alt="scikitlearn">
+                <img src="assets/images/scikit-learn_Color.png" alt="scikitlearn">
             </div>
         </div>
     </div>
@@ -160,51 +160,51 @@ layout: home
         <div class="contributing-logos">
             
             <div class="contributing-logo">
-                <img src="images/Chainer-logo.png" alt="chainer">
+                <img src="assets/images/Chainer-logo.png" alt="chainer">
             </div>
             
             <div class="contributing-logo">
-                <img src="images/databricks-logo.png" alt="databricks">
+                <img src="assets/images/databricks-logo.png" alt="databricks">
             </div>
             
             <div class="contributing-logo">
-                <img src="images/graphistry.png" alt="graphistry">
+                <img src="assets/images/graphistry.png" alt="graphistry">
             </div>
             
             <div class="contributing-logo">
-                <img src="images/gpu-ventures-h2o-ai-logo.png" alt="h20ai">
+                <img src="assets/images/gpu-ventures-h2o-ai-logo.png" alt="h20ai">
             </div>
            
             <div class="contributing-logo">
-                <img src="images/ibm-logo.png" alt="ibm">
+                <img src="assets/images/ibm-logo.png" alt="ibm">
             </div>
 
             <div class="contributing-logo">
-                <img src="images/INRIA_CORPO_SANS_SIGNATURE_RVB.png" alt="inria">
+                <img src="assets/images/INRIA_CORPO_SANS_SIGNATURE_RVB.png" alt="inria">
             </div>
 
             <div class="contributing-logo">
-                <img src="images/MapR_Color.png" alt="mapr">
+                <img src="assets/images/MapR_Color.png" alt="mapr">
             </div>
 
             <div class="contributing-logo">
-                <img src="images/omni_sci_logo.png" alt="omnisci">
+                <img src="assets/images/omni_sci_logo.png" alt="omnisci">
             </div>
 
             <div class="contributing-logo">
-                <img src="images/PyTorch_logo.png" alt="pytorch">
+                <img src="assets/images/PyTorch_logo.png" alt="pytorch">
             </div>
 
             <div class="contributing-logo">
-                <img src="images/uber_logo_2018.png" alt="uber">
+                <img src="assets/images/uber_logo_2018.png" alt="uber">
             </div>
 
             <div class="contributing-logo">
-                <img src="images/ursa_logo.png" alt="ursa">
+                <img src="assets/images/ursa_logo.png" alt="ursa">
             </div>
 
             <div class="contributing-logo">
-                <img src="images/walmart_labs.png" alt="walmart">
+                <img src="assets/images/walmart_labs.png" alt="walmart">
             </div>
 
         </div>
