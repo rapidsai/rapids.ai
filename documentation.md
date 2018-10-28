@@ -13,18 +13,24 @@ layout: default
     <div class="fixed-content">
         <div class="getting-started-small-warp">
             <div class="intro-text">
-                <h2>Introduction to RAPIDS</h2>
-                <p>The RAPIDS data science framework includes a collection of libraries for executing end-to-end data science pipelines completely in the GPU. It is designed to have a familiar look and feel to data scientists working in Python. Here’s a code snippet where we read in a CSV file and output some descriptive statistics.</p>
+                
+## Introduction to RAPIDS
+
+The RAPIDS data science framework includes a collection of libraries for executing end-to-end data science pipelines completely in the GPU. It is designed to have a familiar look and feel to data scientists working in Python. Here’s a code snippet where we read in a CSV file and output some descriptive statistics.
+
             </div>
-            <div class="programing-box">
-                <p>import pygdf as cudf<br><br>
-                    gdf = cudf.read_csv(‘path/to/file.csv’)<br>
-                    for column in gdf.columns: <br>
-                    &nbsp; &nbsp; &nbsp; &nbsp; print(column.mean())
-                </p>
-            </div>
-            <p class="no-padding-bottom">RAPIDS uses optimized NVIDIA® CUDA® primitives and high-bandwidth GPU memory to accelerate data preparation and machine learning. The goal of RAPIDS is not only to accelerate the individual parts of the typical data science workflow, but to accelerate the complete end-to-end workflow.
-            We suggest that you take a look at the sample workflow in our Docker container (described below), which illustrates just how straightforward a basic XGBoost model training and testing looks in RAPIDS.</p>
+
+```python
+import cudf
+gdf = cudf.read_csv(‘path/to/file.csv’)
+for column in gdf.columns:
+    print(column.mean())
+```
+
+RAPIDS uses optimized NVIDIA® CUDA® primitives and high-bandwidth GPU memory to accelerate data preparation and machine learning. The goal of RAPIDS is not only to accelerate the individual parts of the typical data science workflow, but to accelerate the complete end-to-end workflow.
+
+We suggest that you take a look at the sample workflow in our Docker container (described below), which illustrates just how straightforward a basic XGBoost model training and testing looks in RAPIDS.
+
         </div>
     </div>
 </section>
