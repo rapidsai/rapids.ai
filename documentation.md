@@ -46,7 +46,7 @@ $ conda install -c numba -c conda-forge -c rapidsai -c defaults cudf=0.2.0
 For instructions on how to build a development conda environment, see the [cuDF README](https://github.com/rapidsai/cudf#conda) for more information.
 
 
-## Run a RAPIDS Container
+## Run the RAPIDS Container
 
 ##### The RAPIDS Docker containers are configured to run RAPIDS and provide example data/notebooks to get started quickly.
 
@@ -57,8 +57,6 @@ For instructions on how to build a development conda environment, see the [cuDF 
 * Ubuntu 16.04 or 18.04
 * Docker CE v18+
 * [nvidia-docker](https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0)) v2+
-
-### Run a RAPIDS Container
 
 #### Start Container and Notebook Server
 
