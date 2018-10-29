@@ -19,6 +19,7 @@ body
 
 a
 {
+    color: #36c9dd;
     text-decoration: none;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -28,6 +29,7 @@ a
 
 a:hover
 {
+    color: rgb(116, 0, 255);
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
