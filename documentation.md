@@ -58,7 +58,7 @@ For instructions on how to build a development conda environment, see the [cuDF 
 * Docker CE v18+
 * [nvidia-docker](https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0)) v2+
 
-#### Start Container and Notebook Server
+### Start Container and Notebook Server
 
 ```bash
 $ docker pull rapidsai/rapidsai:ubuntu1604_cuda92_py35
@@ -74,14 +74,6 @@ jupyter@container:/$ cd rapids && source activate gdf
 ```
 **NOTE:** This will run [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) on port 8888 on your host machine with a default token/password of `rapids`.
 
-#### Additional Details
+### Advanced Usage
 
 See the [Docker README](https://hub.docker.com/r/rapidsai/rapidsai/) on Docker Hub.
-
-<section class="footer-cta-main">
-    <div class="fixed-content">
-        <h2>Join the Community</h2>
-        <p>Learn how you can be an adopter, contributor, and more.</p>
-        <a href="community.html" class="blue-btn">Join Today</a>
-    </div>
-</section>
