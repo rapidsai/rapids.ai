@@ -24,9 +24,9 @@ RAPIDS uses optimized NVIDIA® CUDA® primitives and high-bandwidth GPU memory t
 
 We suggest that you take a look at the sample workflow in our Docker container (described below), which illustrates just how straightforward a basic XGBoost model training and testing looks in RAPIDS.
 
-## Download Conda Package
+## Install Conda Package
 
-##### RAPIDS is currently supported on Linux systems only, and we recommend using Docker when you’re just getting started.
+##### The fastest way to use cuDF is through conda.
 
 ### Prerequisites
 
@@ -48,7 +48,7 @@ For a complete conda development environment see the [cuDF README](https://githu
 
 ## Run a RAPIDS Container
 
-##### RAPIDS is currently supported on Linux systems only, and we recommend using Docker when you’re just getting started.
+##### The RAPIDS Docker containers are configured to run RAPIDS and provide example notebooks to get started quickly.
 
 ### Prerequisites
 
