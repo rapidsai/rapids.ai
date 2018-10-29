@@ -796,14 +796,14 @@ section.rapids-adopter
     padding: 0px;
 }
 
-.language-python
+div.highlighter-rouge
 {
     border: 1px solid #d3d3d3;
     padding: 20px;
     margin: 0px 0px 30px 0px;
 }
 
-.language-python div pre
+div.highlighter-rouge div pre
 {
     font-size: 16px;
     line-break: 24px;
@@ -812,21 +812,9 @@ section.rapids-adopter
     padding: 0px;
 }
 
-.language-bash
-{
-    border: 1px solid #d3d3d3;
-    padding: 20px;
-    margin: 0px 0px 30px 0px;
-}
-
-.language-bash div pre
-{
-    font-size: 16px;
-    line-break: 24px;
-    font-family: 'Courier New', Courier, monospace;
-    margin: 0px;
-    padding: 0px;
-}
+div.highlighter-rouge .nt,div.highlighter-rouge .nv{color:#36c9dd}
+div.highlighter-rouge .nb{color:#a785e7}
+div.highlighter-rouge .o{color:#7400ff}
 
 .documentation-gray
 {
