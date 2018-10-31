@@ -812,10 +812,6 @@ div.highlighter-rouge div pre
     padding: 0px;
 }
 
-div.highlighter-rouge .nt,div.highlighter-rouge .nv{color:#36c9dd}
-div.highlighter-rouge .nb{color:#a785e7}
-div.highlighter-rouge .o{color:#7400ff}
-
 .documentation-gray
 {
     background: url(../images/bottom-gray-strip.svg) bottom center no-repeat;
