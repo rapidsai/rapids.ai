@@ -53,7 +53,7 @@ For instructions on how to build a development conda environment, see the [cuDF 
 ### Prerequisites
 
 * NVIDIA Pascal™ GPU architecture or better
-* CUDA [9.2](https://developer.nvidia.com/cuda-92-download-archive) or [10.0](https://developer.nvidia.com/cuda-downloads)
+* CUDA [9.2](https://developer.nvidia.com/cuda-92-download-archive) or [10.0](https://developer.nvidia.com/cuda-downloads) compatible nvidia driver
 * Ubuntu 16.04 or 18.04
 * Docker CE v18+
 * [nvidia-docker](https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0)) v2+
@@ -61,19 +61,27 @@ For instructions on how to build a development conda environment, see the [cuDF 
 ### Start Container and Notebook Server
 
 ```bash
-$ docker pull rapidsai/rapidsai:ubuntu1604_cuda92_py35
+$ docker pull rapidsai/rapidsai:cuda9.2_ubuntu1604
 $ docker run --runtime=nvidia \
         --rm -it \
         -p 8888:8888 \
         -p 8787:8787 \
         -p 8786:8786 \
-        rapidsai/rapidsai:ubuntu1604_cuda92_py35
-jupyter@container:/$ cd rapids && source activate gdf
-(gdf) jupyter@container:/$ tar -xzvf data/mortgage.tar.gz --directory=data
-(gdf) jupyter@container:/$ bash utils/start_jupyter.sh
+        rapidsai/rapidsai:cuda9.2_ubuntu1604
+jupyter@container:/rapids/notebooks/$ source activate rapids
+(rapids) jupyter@container:/rapids/notebooks/$ bash utils/start_jupyter.sh
 ```
-**NOTE:** This will run [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) on port 8888 on your host machine with a default token/password of `rapids`.
+**NOTE:** This will run [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) on port 8888 on your host machine.
 
-### Advanced Usage
+### Use JupyterLab to Explore the Notebooks
 
-See the [Docker README](https://hub.docker.com/r/rapidsai/rapidsai/) on Docker Hub.
+Notebooks can be found in two directories within the container:
+
+* `/rapids/notebooks/cuml` - cuML demo notebooks
+  * These notebooks have data pre-loaded in the container image and requires the following command to be run for decompression: `cd /rapids/notebooks/cuml/data && gunzip mortgage.npy.gz`
+* `/rapids/notebooks/mortgage` - cuDF, Dask, XGBoost demo notebook
+  * This notebook requires download of [Mortgage Data](datasets/mortgage-data), see notebook `E2E.ipynb` for more details
+
+## Custom Data and Advanced Usage
+
+See the [RAPIDS Demo Container](https://rapidsai.github.io/demos/containers/rapids-demo) page for more information about using custom datasets.
