@@ -8,7 +8,7 @@ brand_button: DOWNLOAD CHEAT SHEET
 brand_link: assets/files/cheatsheet.pdf
 layout: default
 ---
-
+{% capture section_intro %}
 ## Introduction to RAPIDS
 
 ##### The RAPIDS data science framework includes a collection of libraries for executing end-to-end data science pipelines completely in the GPU. It is designed to have a familiar look and feel to data scientists working in Python. Here’s a code snippet where we read in a CSV file and output some descriptive statistics.
@@ -23,8 +23,10 @@ for column in gdf.columns:
 RAPIDS uses optimized NVIDIA® CUDA® primitives and high-bandwidth GPU memory to accelerate data preparation and machine learning. The goal of RAPIDS is not only to accelerate the individual parts of the typical data science workflow, but to accelerate the complete end-to-end workflow.
 
 We suggest that you take a look at the sample workflow in our Docker container (described below), which illustrates just how straightforward a basic XGBoost model training and testing looks in RAPIDS.
+{% endcapture %}
+{% include sec-intro-white.html content=section_intro %}
 
-
+{% capture section_conda %}
 ## Install Conda Package
 
 ##### The fastest way to use cuDF is through conda.
@@ -44,8 +46,10 @@ $ conda install -c numba -c conda-forge -c rapidsai -c defaults cudf=0.2.0
 ```
 
 For instructions on how to build a development conda environment, see the [cuDF README](https://github.com/rapidsai/cudf#conda) for more information.
+{% endcapture %}
+{% include sec-left-gray.html content=section_conda %}
 
-{% capture rapids_container %}
+{% capture section_container %}
 ## Run the RAPIDS Container
 
 ##### The RAPIDS Docker containers are configured to run RAPIDS and provide example data/notebooks to get started quickly.
@@ -78,15 +82,18 @@ jupyter@container:/rapids/notebooks/$ source activate rapids
 Notebooks can be found in two directories within the container:
 
 * `/rapids/notebooks/cuml` - cuML demo notebooks
-  * These notebooks have data pre-loaded in the container image and requires the following command to be run for decompression: `cd /rapids/notebooks/cuml/data && gunzip mortgage.npy.gz`
+*** These notebooks have data pre-loaded in the container image and requires the following command to be run for decompression: `cd /rapids/notebooks/cuml/data && gunzip mortgage.npy.gz`
 * `/rapids/notebooks/mortgage` - cuDF, Dask, XGBoost demo notebook
-  * This notebook requires download of [Mortgage Data](datasets/mortgage-data), see notebook `E2E.ipynb` for more details
+*** This notebook requires download of [Mortgage Data](datasets/mortgage-data), see notebook `E2E.ipynb` for more details
 {% endcapture %}
-{% include sec-l2r-gray.html content=rapids_container %}
+{% include sec-first-white.html content=section_container %}
 
+{% capture section_custom %}
 ## Custom Data and Advanced Usage
 
 See the [RAPIDS Demo Container](https://rapidsai.github.io/demos/containers/rapids-demo) page for more information about using custom datasets.
+{% endcapture %}
+{% include sec-left-gray.html content=section_custom %}
 
 {% include cta-footer.html 
 name="Join the Community" 
