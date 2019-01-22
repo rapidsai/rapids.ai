@@ -10,7 +10,7 @@ cta_name: Join the Community
 cta_tagline: Learn how you can be an adopter, contributor, and more.
 cta_button: Join Today
 cta_link: community.html
-layout: docs
+layout: default
 ---
 
 ## Introduction to RAPIDS
