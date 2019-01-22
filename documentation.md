@@ -86,7 +86,7 @@ Notebooks can be found in two directories within the container:
 * `/rapids/notebooks/mortgage` - cuDF, Dask, XGBoost demo notebook
 *** This notebook requires download of [Mortgage Data](datasets/mortgage-data), see notebook `E2E.ipynb` for more details
 {% endcapture %}
-{% include sec-first-white.html content=section_container %}
+{% include sec-intro-white.html content=section_container %}
 
 {% capture section_custom %}
 ## Custom Data and Advanced Usage
