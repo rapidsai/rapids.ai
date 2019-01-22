@@ -44,23 +44,26 @@
 <div id="header-2" class="">
     <nav>
         <ul>
-            <li class="active"><a href="https://rapids.ai/index.html"><img src="assets/images/rapids-logo.svg" alt="" width="110" title=""></a>
-            </li>
-            <li><a href="documentation.html">GETTING STARTED</a></li>
-            <li><a href="community.html">COMMUNITY</a></li>
-            <li><a href="https://github.com/RAPIDSai" target="_blank">GITHUB</a></li>
-            <li><a href="https://medium.com/rapids-ai" target="_blank">BLOG</a></li>
+            {% for sl in site.data.site-links %}
+              <li>
+                <a href="{{ sl.link }}">
+                  {{ sl.name }}
+                </a>
+              </li>
+            {% endfor %}
         </ul>
     </nav>
 </div>
 <header>
     <nav>
         <ul>
-            <li><a href="https://rapids.ai/index.html">HOME</a></li>
-            <li><a href="documentation.html">GETTING STARTED</a></li>
-            <li><a href="community.html">COMMUNITY</a></li>
-            <li><a href="https://github.com/RAPIDSai" target="_blank">GITHUB</a></li>
-            <li><a href="https://medium.com/rapids-ai" target="_blank">BLOG</a></li>
+            {% for sl in site.data.site-links %}
+              <li>
+                <a href="{{ sl.link }}">
+                  {{ sl.name }}
+                </a>
+              </li>
+            {% endfor %}
         </ul>
     </nav>
     <div class="branding">
