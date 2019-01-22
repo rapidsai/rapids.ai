@@ -49,7 +49,7 @@ $ conda install -c numba -c conda-forge -c rapidsai -c defaults cudf=0.2.0
 
 For instructions on how to build a development conda environment, see the [cuDF README](https://github.com/rapidsai/cudf#conda) for more information.
 
-
+{% capture rapids_container %}
 ## Run the RAPIDS Container
 
 ##### The RAPIDS Docker containers are configured to run RAPIDS and provide example data/notebooks to get started quickly.
@@ -85,6 +85,8 @@ Notebooks can be found in two directories within the container:
   * These notebooks have data pre-loaded in the container image and requires the following command to be run for decompression: `cd /rapids/notebooks/cuml/data && gunzip mortgage.npy.gz`
 * `/rapids/notebooks/mortgage` - cuDF, Dask, XGBoost demo notebook
   * This notebook requires download of [Mortgage Data](datasets/mortgage-data), see notebook `E2E.ipynb` for more details
+{% endcapture %}
+{% include sec-l2r-gray.html content=rapids_container %}
 
 ## Custom Data and Advanced Usage
 
