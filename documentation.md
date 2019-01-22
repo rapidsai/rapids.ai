@@ -24,7 +24,7 @@ RAPIDS uses optimized NVIDIA® CUDA® primitives and high-bandwidth GPU memory t
 
 We suggest that you take a look at the sample workflow in our Docker container (described below), which illustrates just how straightforward a basic XGBoost model training and testing looks in RAPIDS.
 {% endcapture %}
-{% include sec-intro-white.html content=section_intro %}
+{% include sec-white.html content=section_intro %}
 
 {% capture section_conda %}
 ## Install Conda Package
@@ -85,15 +85,12 @@ Notebooks can be found in two directories within the container:
 *** These notebooks have data pre-loaded in the container image and requires the following command to be run for decompression: `cd /rapids/notebooks/cuml/data && gunzip mortgage.npy.gz`
 * `/rapids/notebooks/mortgage` - cuDF, Dask, XGBoost demo notebook
 *** This notebook requires download of [Mortgage Data](datasets/mortgage-data), see notebook `E2E.ipynb` for more details
-{% endcapture %}
-{% include sec-intro-white.html content=section_container %}
 
-{% capture section_custom %}
 ## Custom Data and Advanced Usage
 
 See the [RAPIDS Demo Container](https://rapidsai.github.io/demos/containers/rapids-demo) page for more information about using custom datasets.
 {% endcapture %}
-{% include sec-left-gray.html content=section_custom %}
+{% include sec-white.html content=section_container %}
 
 {% include cta-footer.html 
 name="Join the Community" 
