@@ -1,0 +1,17 @@
+- name: HOME
+  link: index.html
+
+- name: GETTING STARTED
+  link: documentation.html
+
+- name: COMMUNITY
+  link: community.html
+
+- name: GITHUB
+  link: https://github.com/rapidsai
+
+- name: DEMOS
+  link: https://rapidsai.github.io/demos
+
+- name: BLOG
+  link: https://medium.com/rapids-ai
