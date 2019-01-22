@@ -6,10 +6,6 @@ brand_name: DOCUMENTATION
 brand_tagline: Getting started with RAPIDS
 brand_button: DOWNLOAD CHEAT SHEET
 brand_link: assets/files/cheatsheet.pdf
-cta_name: Join the Community
-cta_tagline: Learn how you can be an adopter, contributor, and more.
-cta_button: Join Today
-cta_link: community.html
 layout: default
 ---
 
@@ -91,3 +87,10 @@ Notebooks can be found in two directories within the container:
 ## Custom Data and Advanced Usage
 
 See the [RAPIDS Demo Container](https://rapidsai.github.io/demos/containers/rapids-demo) page for more information about using custom datasets.
+
+{% include cta-footer.html 
+name="Join the Community" 
+tagline="Learn how you can be an adopter, contributor, and more."
+button="Join Today"
+link="community.html"
+%}
