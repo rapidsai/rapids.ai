@@ -82,9 +82,9 @@ jupyter@container:/rapids/notebooks/$ source activate rapids
 Notebooks can be found in two directories within the container:
 
 * `/rapids/notebooks/cuml` - cuML demo notebooks
-*** These notebooks have data pre-loaded in the container image and requires the following command to be run for decompression: `cd /rapids/notebooks/cuml/data && gunzip mortgage.npy.gz`
+  * These notebooks have data pre-loaded in the container image and requires the following command to be run for decompression: `cd /rapids/notebooks/cuml/data && gunzip mortgage.npy.gz`
 * `/rapids/notebooks/mortgage` - cuDF, Dask, XGBoost demo notebook
-*** This notebook requires download of [Mortgage Data](datasets/mortgage-data), see notebook `E2E.ipynb` for more details
+  * This notebook requires download of [Mortgage Data](datasets/mortgage-data), see notebook `E2E.ipynb` for more details
 
 ## Custom Data and Advanced Usage
 
