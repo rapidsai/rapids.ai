@@ -71,7 +71,7 @@
         <div class="logo">
             <a href="https://rapids.ai/index.html"> <img src="assets/images/rapids-logo.svg" alt="" title=""></a>
         </div>
-        {% if page.brand_name != null and page.brand_name != "" %}
+        {% if page.brand_name == null or page.brand_name == "" %}
           <h1>{{ page.brand_name }}</h1>
         {% endif %}
         <h4>{{ page.brand_tagline }}</h4>
