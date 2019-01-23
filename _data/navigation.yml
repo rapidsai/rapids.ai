@@ -1,11 +1,11 @@
 - name: HOME
-  link: index.html
+  link: {{ site.baseurl }}/index.html
 
 - name: GETTING STARTED
-  link: documentation.html
+  link: {{ site.baseurl }}/documentation.html
 
 - name: COMMUNITY
-  link: community.html
+  link: {{ site.baseurl }}/community.html
 
 - name: GITHUB
   link: https://github.com/rapidsai
@@ -17,4 +17,4 @@
   link: https://medium.com/rapids-ai
 
 - name: Blog
-  link: jobs.html
+  link: {{ site.baseurl }}/jobs.html
