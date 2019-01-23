@@ -7,11 +7,12 @@ title: Join the RAPIDS Team | RAPIDS
 
 {% for category in site.categories %}
 {% if category[0] == "job" %}
-  <ul>
-    {% for post in category[1] %}
-      <li><h2><a href="{{ site.root }}{{ post.url }}">{{ post.title }}</a></h2>
-      <p>{{ post.excerpt }}</p></li>
-    {% endfor %}
-  </ul>
+{% for post in category[1] %}
+### {{ post.title }}
+{{ post.excerpt }}
+
+[Learn more...]({{ post.url }})
+
+{% endfor %}
 {% endif %}
 {% endfor %}
