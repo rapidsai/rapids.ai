@@ -1,26 +1,27 @@
 ---
-layout: default
+layout: short
 ---
 {% capture section-post %}
 ## {{ page.title }}
 
-<p>{{ page.date | date_to_string }} - {{ page.author }}</p>
-
-  <div>Tags - 
-  <ul>
-    {% for tag in page.tags %}
-      <li>{{ tag }}</li>
-    {% endfor %}
-  </ul>
-  </div>
+##### {{ page.date | date_to_string }} - {{ page.author }}
 
 {{ content }}
 
+<p>
+  <div class="tags">Tags 
+    <ul>
+      {% for tag in page.tags %}
+        <li>{{ tag }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+</p>
 {% endcapture %}
 {% include sec-white.html content=section-post %}
 
 {% include cta-footer.html
-  name="RAPIDS NEEDS YOU"
+  name="RAPIDS WANTS YOU"
   tagline="Check out our available job openings and join our team!"
   button="VIEW JOBS"
   link="jobs.html"
