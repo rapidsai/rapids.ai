@@ -1090,7 +1090,7 @@ p.no-padding-bottom
 
     .footer-help-box
     {
-        flex: 0 0 50%;
+        flex: 0 0 33%;
         padding-bottom: 30px;
         padding-top: 20px;
     }

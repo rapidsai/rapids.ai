@@ -105,6 +105,11 @@ layout: default
                 <p>Docker Hub</p>
                 <a href="https://hub.docker.com/u/rapidsai" target="_blank" class="primary-btn green">DOWNLOAD US</a>
             </div>
+            <div class="footer-help-box">
+                <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/stackoverflow-white.svg %}" alt="stack overflow" style="width: 100px;"></div>
+                <p>Stack Overflow</p>
+                <a href="https://hub.docker.com/u/rapidsai" target="_blank" class="primary-btn cyan">ASK US</a>
+            </div>
         </div>
     </div>
 </section>
