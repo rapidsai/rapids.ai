@@ -22,7 +22,7 @@ on much larger dataset sizes.
 
 <div class="rapids-perfomance">
     <br><br>
-    <img src="assets/images/rapids-end-to-end-performance-chart-oss-page-r4.svg" alt="End to end Performance Chat"><br>
+    <img src="{{ site.baseurl }}{% link /assets/images/rapids-end-to-end-performance-chart-oss-page-r4.svg %}" alt="End to end Performance Chat"><br>
     <br>
 </div>
 {% endcapture %}
@@ -31,7 +31,7 @@ on much larger dataset sizes.
 {% capture section_pipeline %}
 ## The New GPU <br> Data Science Pipeline
 
-<div class="Pipeline-Diagram"><img src="assets/images/Pipeline-FPO-Diagram.png" alt="" title=""></div>
+<div class="Pipeline-Diagram"><img src="{{ site.baseurl }}{% link /assets/images/Pipeline-FPO-Diagram.png %}" alt="" title=""></div>
 <div class="gpu-list">
     <ul>
         <li>Apache Arrow <span>This is a columnar, in-memory data structure that delivers efficient and fast data interchange with flexibility to support complex data models.</span>
@@ -61,20 +61,20 @@ on much larger dataset sizes.
             <div class="features-row">
                 <ul>
                     <li>
-                        <img src="assets/images/hassle-free.svg" alt="hassle free">
+                        <img src="{{ site.baseurl }}{% link /assets/images/hassle-free.svg %}" alt="hassle free">
                         <h3>Hassle-Free Integration</h3>
                         <p>Accelerate your Python data science toolchain with minimal code changes and no new tools to
                             learn.</p>
                     </li>
 
                     <li>
-                        <img src="assets/images/scaling-out.svg" alt="scaling out">
+                        <img src="{{ site.baseurl }}{% link /assets/images/scaling-out.svg %}" alt="scaling out">
                         <h3>Scaling Out <br> on Any GPU</h3>
                         <p>Seamless scale from GPU workstations to multi-GPU servers and multi-node clusters.</p>
                     </li>
 
                     <li>
-                        <img src="assets/images/top-model.svg" alt="top model">
+                        <img src="{{ site.baseurl }}{% link /assets/images/top-model.svg %}" alt="top model">
                         <h3>Top Model Accuracy</h3>
                         <p>Increase machine learning model accuracy by iterating on models faster and deploying them
                             more frequently.</p>
@@ -87,13 +87,13 @@ on much larger dataset sizes.
 
 
                     <li>
-                        <img src="assets/images/reduces.svg" alt="reduces">
+                        <img src="{{ site.baseurl }}{% link /assets/images/reduces.svg %}" alt="reduces">
                         <h3>Reduced <br> Training Time</h3>
                         <p>Drastically improve your productivity with near-interactive data science.</p>
                     </li>
 
                     <li>
-                        <img src="assets/images/open-source.svg" alt="open source">
+                        <img src="{{ site.baseurl }}{% link /assets/images/open-source.svg %}" alt="open source">
                         <h3>Open <br> Source</h3>
                         <p>The open-source software is customizable, extensible, interoperable--supported by NVIDIA and
                             built on Apache Arrow.</p>
@@ -125,22 +125,22 @@ on much larger dataset sizes.
         <h3>Community Contributors</h3>
         <div class="contributing-logos">
             <div class="contributing-logo">
-                <img src="assets/images/anaconda.png" alt="anaconda">
+                <img src="{{ site.baseurl }}{% link /assets/images/anaconda.png %}" alt="anaconda">
             </div>
             <div class="contributing-logo">
-                <img src="assets/images/blazingdb.png" alt="blazingdb">
+                <img src="{{ site.baseurl }}{% link /assets/images/blazingdb.png %}" alt="blazingdb">
             </div>
             <div class="contributing-logo">
-                <img src="assets/images/Gunrock_Color.png" alt="gunrock">
+                <img src="{{ site.baseurl }}{% link /assets/images/Gunrock_Color.png %}" alt="gunrock">
             </div>
             <div class="contributing-logo">
-                <img src="assets/images/NVLogo_2D_H.png" alt="nvidia">
+                <img src="{{ site.baseurl }}{% link /assets/images/NVLogo_2D_H.png %}" alt="nvidia">
             </div>
             <div class="contributing-logo">
-                <img src="assets/images/quansight.png" alt="quantsight">
+                <img src="{{ site.baseurl }}{% link /assets/images/quansight.png %}" alt="quantsight">
             </div>
             <div class="contributing-logo">
-                <img src="assets/images/scikit-learn_Color.png" alt="scikitlearn">
+                <img src="{{ site.baseurl }}{% link /assets/images/scikit-learn_Color.png %}" alt="scikitlearn">
             </div>
         </div>
     </div>
@@ -152,51 +152,51 @@ on much larger dataset sizes.
         <div class="contributing-logos">
             
             <div class="contributing-logo">
-                <img src="assets/images/Chainer-logo.png" alt="chainer">
+                <img src="{{ site.baseurl }}{% link /assets/images/Chainer-logo.png %}" alt="chainer">
             </div>
             
             <div class="contributing-logo">
-                <img src="assets/images/databricks-logo.png" alt="databricks">
+                <img src="{{ site.baseurl }}{% link /assets/images/databricks-logo.png %}" alt="databricks">
             </div>
             
             <div class="contributing-logo">
-                <img src="assets/images/graphistry.png" alt="graphistry">
+                <img src="{{ site.baseurl }}{% link /assets/images/graphistry.png %}" alt="graphistry">
             </div>
             
             <div class="contributing-logo">
-                <img src="assets/images/gpu-ventures-h2o-ai-logo.png" alt="h20ai">
+                <img src="{{ site.baseurl }}{% link /assets/images/gpu-ventures-h2o-ai-logo.png %}" alt="h20ai">
             </div>
            
             <div class="contributing-logo">
-                <img src="assets/images/ibm-logo.png" alt="ibm">
+                <img src="{{ site.baseurl }}{% link /assets/images/ibm-logo.png %}" alt="ibm">
             </div>
 
             <div class="contributing-logo">
-                <img src="assets/images/INRIA_CORPO_SANS_SIGNATURE_RVB.png" alt="inria">
+                <img src="{{ site.baseurl }}{% link /assets/images/INRIA_CORPO_SANS_SIGNATURE_RVB.png %}" alt="inria">
             </div>
 
             <div class="contributing-logo">
-                <img src="assets/images/MapR_Color.png" alt="mapr">
+                <img src="{{ site.baseurl }}{% link /assets/images/MapR_Color.png %}" alt="mapr">
             </div>
 
             <div class="contributing-logo">
-                <img src="assets/images/omni_sci_logo.png" alt="omnisci">
+                <img src="{{ site.baseurl }}{% link /assets/images/omni_sci_logo.png %}" alt="omnisci">
             </div>
 
             <div class="contributing-logo">
-                <img src="assets/images/PyTorch_logo.png" alt="pytorch">
+                <img src="{{ site.baseurl }}{% link /assets/images/PyTorch_logo.png %}" alt="pytorch">
             </div>
 
             <div class="contributing-logo">
-                <img src="assets/images/uber_logo_2018.png" alt="uber">
+                <img src="{{ site.baseurl }}{% link /assets/images/uber_logo_2018.png %}" alt="uber">
             </div>
 
             <div class="contributing-logo">
-                <img src="assets/images/ursa_logo.png" alt="ursa">
+                <img src="{{ site.baseurl }}{% link /assets/images/ursa_logo.png %}" alt="ursa">
             </div>
 
             <div class="contributing-logo">
-                <img src="assets/images/walmart_labs.png" alt="walmart">
+                <img src="{{ site.baseurl }}{% link /assets/images/walmart_labs.png %}" alt="walmart">
             </div>
 
         </div>
