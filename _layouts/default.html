@@ -41,7 +41,7 @@
       });
     </script>
 </head>
-<body class="documentation-page">
+<body>
 <div id="header-2" class="">
     <nav>
         <ul>
@@ -71,7 +71,9 @@
         <div class="logo">
             <a href="https://rapids.ai/index.html"> <img src="assets/images/rapids-logo.svg" alt="" title=""></a>
         </div>
-        <h1>{{ page.brand_name }}</h1>
+        {% if page.brand_name != null and page.brand_name != "" %}
+          <h1>{{ page.brand_name }}</h1>
+        {% endif %}
         <h4>{{ page.brand_tagline }}</h4>
         <a href="{{ page.brand_link }}" class="blue-btn">{{ page.brand_button }}</a>
     </div>
