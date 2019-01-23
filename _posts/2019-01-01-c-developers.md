@@ -6,8 +6,6 @@ tags: [c, c++, job, development]
 author: Josh Patterson
 ---
 
-## C/C++ Developer
-
 RAPIDS is looking for talented C/C++ developers to help build RAPIDS.
 
 ### Skills Needed
