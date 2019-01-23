@@ -44,9 +44,16 @@ img
 header
 {
     background: url(../images/header-bg.svg) top center no-repeat;
-    
     padding: 34px 0px 0px 0px;
-    min-height: 608px;
+    min-height: 588px;
+}
+
+header.short
+{
+    background: url(../images/header-bg.svg) top center no-repeat;
+    padding: 34px 0px 0px 0px;
+    min-height: 304px;
+    background-position-y: -334px;
 }
 
 .community-page header
@@ -92,7 +99,40 @@ nav ul li.active a
 .branding
 {
     text-align: center;
-    padding: 131px 0px 0px 0px
+    padding: 75px 0px 0px 0px;
+}
+
+.branding h4
+{
+    padding: 0px 0px 25px 0px;
+    text-align: center;
+    color: #ffffff;
+}
+
+.branding-short
+{
+    text-align: left;
+    padding: 1em 0 0 1em;
+}
+
+.branding-short div h1
+{
+    display: inline-block;
+    padding-left: 0.5em;
+    font-size: 40px;
+}
+
+.branding-short h4
+{
+    text-align: left;
+    font-size: 26px;
+    color: #ffffff;
+    padding: 0px 0px 25px 0px;
+}
+
+.branding-short img
+{
+    height: 30px;
 }
 
 .documentation-page .branding, .community-page .branding
@@ -106,14 +146,34 @@ nav ul li.active a
     max-width: 244px;
 }
 
+h2
+{
+    font-size: 42px;
+    color: rgb(116, 0, 255);
+    font-weight: 600;
+    line-height: 1.2;
+    text-align: center;
+    padding: 30px 0px 10px 0px;
+}
+
+h3 {
+	font-size: 36px;
+	line-height: 42px;
+	font-weight: 500;
+	color: #a785e7;
+	text-align: left;
+	display: block;
+	padding: 30px 0px 10px 0px;
+}
+
 h4
 {
     font-size: 30px;
+    line-height: 36px;
     font-weight: 400;
-    color: rgb(255, 255, 255);
-    line-height: 1.069;
-    text-align: center;
-    padding: 0px 0px 25px 0px;
+    color: #a785e7;
+    text-align: left;
+    padding: 20px 0px 10px 0px;
 }
 
 h5
@@ -122,7 +182,52 @@ h5
     font-weight: 300;
     line-height: 42px;
     color: #666666;
-    padding: 0px 0px 30px 0px;
+    padding: 10px 0px 30px 0px;
+    text-align: center;
+}
+
+section.left-gray
+{
+    background: url(../images/bottom-gray-strip.svg) bottom center no-repeat;
+    background-size: auto 169px;
+    padding-bottom: 168px;
+}
+
+section div.container-gray
+{
+    background: #f8f8f8;
+}
+
+div.tags ul {
+    list-style-type: none;
+    display: inline-flex;
+}
+
+div.tags ul li {
+    background: #eee;
+    padding: 5px;
+    margin-right: 5px;
+}
+
+p, ul, ol
+{
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #888888;
+}
+
+p
+{
+    padding-bottom: 30px;
+}
+
+blockquote p {
+    text-align: center;
+    font-size: 14px;
+}
+
+blockquote img {
     text-align: center;
 }
 
@@ -142,24 +247,6 @@ a.blue-btn, .primary-btn
     transition: all 0.3s ease-in-out;
 }
 
-a.dark-blue-btn, .primary-btn
-{
-    background: #338aff;
-    color: #FFF;
-    display: inline-block;
-    font-weight: 600;
-    font-size: 18px;
-    line-height: 22px;
-    padding: 14px 20px;
-    border-radius: 100px;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-}
-
-
-
 .purple
 {
     background: #d216d2;
@@ -170,6 +257,16 @@ a.dark-blue-btn, .primary-btn
     background: #ffb500;
 }
 
+.green
+{
+    background: #70e800;
+}
+
+.cyan
+{
+    background: #00b7eb;
+}
+
 a.blue-btn:hover, .primary-btn:hover
 {
     background: #a785e7;
@@ -177,25 +274,8 @@ a.blue-btn:hover, .primary-btn:hover
     -moz-transition: all 0.3s ease-in-out;
     -o-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
+    color: #fff;
 
-}
-a.dark-blue-btn:hover, .primary-btn:hover
-{
-    background: #338aff;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
-
-}
-
-h2
-{
-    font-size: 48px;
-    color: rgb(116, 0, 255);
-    font-weight: 600;
-    line-height: 1.2;
-    text-align: center;
 }
 
 .fixed-content
@@ -435,6 +515,7 @@ section.gpu-pipeline
     padding: 70px 0px 55px 0px;
 }
 
+.three-cols-row ul,
 .features-row ul
 {
     display: flex;
@@ -442,6 +523,7 @@ section.gpu-pipeline
     padding: 0px 0px 56px 0px;
 }
 
+.three-cols-row ul li,
 .features-row ul li
 {
     list-style: none;
@@ -450,6 +532,7 @@ section.gpu-pipeline
     padding: 0px 40px;
 }
 
+.three-cols-row ul li h3,
 .features-row ul li h3
 {
     font-size: 36px;
@@ -458,8 +541,10 @@ section.gpu-pipeline
     display: block;
     font-weight: 400;
     padding: 26px 0px 20px 0px;
+    text-align: center;
 }
 
+.three-cols-row ul li p,
 .features-row ul li p
 {
     font-size: 16px;
@@ -804,7 +889,7 @@ div.highlighter-rouge
 
 div.highlighter-rouge div pre
 {
-    font-size: 16px;
+    font-size: 18px;
     line-break: 24px;
     font-family: 'Courier New', Courier, monospace;
     margin: 0px;
@@ -841,7 +926,7 @@ div.highlighter-rouge div pre
     color: #a785e7;
     text-align: left;
     display: block;
-    padding: 10px 0px 10px 0px;
+    padding: 30px 0px 10px 0px;
 }
 
 .getting-started-small-warp h3.large
