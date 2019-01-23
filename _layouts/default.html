@@ -45,10 +45,10 @@
 <div id="header-2" class="">
     <nav>
         <ul>
-            {% for sl in site.data.site-links %}
-              <li>
-                <a href="{{ sl.link }}">
-                  {{ sl.name }}
+            {% for item in site.data.navigation %}
+              <li {% if page.url == item.link %}class="active"{% endif %}>
+                <a href="{{ item.link }}">
+                  {{ item.name }}
                 </a>
               </li>
             {% endfor %}
@@ -58,10 +58,10 @@
 <header>
     <nav>
         <ul>
-            {% for sl in site.data.site-links %}
-              <li>
-                <a href="{{ sl.link }}">
-                  {{ sl.name }}
+            {% for item in site.data.navigation %}
+              <li {% if page.url == item.link %}class="active"{% endif %}>
+                <a href="{{ item.link }}">
+                  {{ item.name }}
                 </a>
               </li>
             {% endfor %}
