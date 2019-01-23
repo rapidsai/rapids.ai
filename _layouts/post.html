@@ -1,0 +1,19 @@
+---
+layout: default
+---
+{% capture section-post %}
+<h1>{{ page.title }}</h1>
+<p>{{ page.date | date_to_string }} - {{ page.author }}</p>
+
+  <div>Tags - 
+  <ul>
+    {% for tag in site.tags %}
+      <li>{{ tag }}</li>
+    {% endfor %}
+  </ul>
+  </div>
+
+{{ content }}
+
+{% endcapture %}
+{% include sec-white.html content=section-post %}
