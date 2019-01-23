@@ -1,11 +1,11 @@
 - name: HOME
-  link: index.html
+  link: /
 
 - name: GETTING STARTED
-  link: documentation.html
+  link: /documentation.html
 
 - name: COMMUNITY
-  link: community.html
+  link: /community.html
 
 - name: GITHUB
   link: https://github.com/rapidsai
