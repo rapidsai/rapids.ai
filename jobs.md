@@ -8,10 +8,10 @@ title: Join the RAPIDS Team | RAPIDS
 {% for category in site.categories %}
 {% if category[0] == "job" %}
 {% for post in category[1] %}
-#### {{ post.title }}
+### {{ post.title }}
 {{ post.excerpt }}
 
-[Learn more...]({{site.root}}{{ post.url }})
+[Learn more...]({{site.repo-name}}{{ post.url }})
 
 {% endfor %}
 {% endif %}
