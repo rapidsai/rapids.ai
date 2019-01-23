@@ -6,8 +6,6 @@ tags: [python, job, development]
 author: Josh Patterson
 ---
 
-## Python Developer
-
 RAPIDS is looking for talented python developers to help build RAPIDS.
 
 ### Skills Needed
