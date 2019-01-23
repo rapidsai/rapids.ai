@@ -1,11 +1,11 @@
 ---
-title: Open GPU Data Science | RAPID
-og_title: RAPIDS: A Data Science & Analytics Pipeline Accelerator
-og_description: A suite of software libraries for executing end-to-end data science completely on GPUs
-brand_name:
-brand_tagline: Open GPU Data Science
-brand_button: GET STARTED
-brand_link: documentation.html
+title: "Open GPU Data Science | RAPID"
+og_title: "RAPIDS: A Data Science & Analytics Pipeline Accelerator"
+og_description: "A suite of software libraries for executing end-to-end data science completely on GPUs"
+brand_name: ""
+brand_tagline: "Open GPU Data Science"
+brand_button: "GET STARTED"
+brand_link: "documentation.html"
 layout: default
 ---
 {% capture section_intro %}
