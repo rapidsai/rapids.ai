@@ -31,18 +31,18 @@ We suggest that you take a look at the sample workflow in our Docker container (
 
 ##### The fastest way to use cuDF is through conda.
 
-### Prerequisites
+#### Prerequisites
 
 * NVIDIA Pascal™ GPU architecture or better
 * CUDA [9.2](https://developer.nvidia.com/cuda-92-download-archive) or [10.0](https://developer.nvidia.com/cuda-downloads)
 * Ubuntu 16.04 or 18.04
 
-### Conda Install
+#### Conda Install
 
 You can get a minimal conda installation with [Miniconda](https://conda.io/miniconda.html) or get the full installation with [Anaconda](https://www.anaconda.com/download). Install and update cuDF using the conda command:
 
 ```bash
-$ conda install -c numba -c conda-forge -c rapidsai -c defaults cudf=0.2.0
+$ conda install -c numba -c conda-forge -c nvidia -c rapidsai -c defaults cudf=0.5
 ```
 
 For instructions on how to build a development conda environment, see the [cuDF README](https://github.com/rapidsai/cudf#conda) for more information.
@@ -54,7 +54,7 @@ For instructions on how to build a development conda environment, see the [cuDF 
 
 ##### The RAPIDS Docker containers are configured to run RAPIDS and provide example data/notebooks to get started quickly.
 
-### Prerequisites
+#### Prerequisites
 
 * NVIDIA Pascal™ GPU architecture or better
 * CUDA [9.2](https://developer.nvidia.com/cuda-92-download-archive) or [10.0](https://developer.nvidia.com/cuda-downloads) compatible nvidia driver
@@ -62,7 +62,7 @@ For instructions on how to build a development conda environment, see the [cuDF 
 * Docker CE v18+
 * [nvidia-docker](https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0)) v2+
 
-### Start Container and Notebook Server
+#### Start Container and Notebook Server
 
 ```bash
 $ docker pull rapidsai/rapidsai:cuda9.2_ubuntu1604
@@ -77,7 +77,7 @@ jupyter@container:/rapids/notebooks/$ source activate rapids
 ```
 **NOTE:** This will run [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) on port 8888 on your host machine.
 
-### Use JupyterLab to Explore the Notebooks
+#### Use JupyterLab to Explore the Notebooks
 
 Notebooks can be found in two directories within the container:
 
@@ -86,9 +86,16 @@ Notebooks can be found in two directories within the container:
 * `/rapids/notebooks/mortgage` - cuDF, Dask, XGBoost demo notebook
   * This notebook requires download of [Mortgage Data](datasets/mortgage-data), see notebook `E2E.ipynb` for more details
 
-## Custom Data and Advanced Usage
+#### Custom Data and Advanced Usage
 
 See the [RAPIDS Demo Container](https://rapidsai.github.io/demos/containers/rapids-demo) page for more information about using custom datasets.
+
+## More Information
+
+Check out the [cuDF](https://rapidsai.github.io/projects/cudf/en/latest), [cuML](https://rapidsai.github.io/projects/cuml/en/latest), and [XGBoost](https://xgboost.readthedocs.io/en/latest/) API docs.
+
+Learn how to setup a mult-node cuDF and XGBoost data preparation and distributed training environment by following the [mortgage data example notebook and scripts](https://github.com/rapidsai/notebooks).
+
 {% endcapture %}
 {% include sec-white.html content=section_container %}
 
