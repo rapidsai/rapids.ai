@@ -2,24 +2,16 @@
 layout: default
 title: Join the RAPIDS Team | RAPIDS
 ---
-<h1>Latest Job Posts</h1>
+
+## Latest Job Posts
 
 {% for category in site.categories %}
-{% if category == "job" %}
+{% if category[0] == "job" %}
   <ul>
     {% for post in category[1] %}
-      <li><h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <li><h2><a href="{{ site.root }}{{ post.url }}">{{ post.title }}</a></h2>
       <p>{{ post.excerpt }}</p></li>
     {% endfor %}
   </ul>
 {% endif %}
 {% endfor %}
-
-<ul>
-  {% for post in site.posts %}
-    <li>
-      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
-      <p>{{ post.excerpt }}</p>
-    </li>
-  {% endfor %}
-</ul>
