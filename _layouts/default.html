@@ -10,8 +10,8 @@
     <meta property="og:type" content="Website"/>
     <meta property="og:description" content="{{ page.og_description }}"/>
     <meta name="og:site_name" content="RAPIDS"/>
-    <meta property="og:image" content="https://rapids.ai/assets/images/og_image.png"/>
-    <meta property="og:image:secure_url" content="https://rapids.ai/assets/images/og_image.png"/>
+    <meta property="og:image" content="{{ site.baseurl }}assets/images/og_image.png"/>
+    <meta property="og:image:secure_url" content="{{ site.baseurl }}assets/images/og_image.png"/>
     <meta property="og:image:type" content="image/jpeg"/>
     <meta property="og:image:width" content="400"/>
     <meta property="og:image:height" content="300"/>
@@ -19,7 +19,7 @@
 
     <meta name="twitter:site" content="https://twitter.com/rapidsai"/>
     <meta name="twitter:card" content="{{ page.og_title }}"/>
-    <meta name="twitter:image" content="https://rapids.ai/assets/images/og_image.png"/>
+    <meta name="twitter:image" content="{{ site.baseurl }}assets/images/og_image.png"/>
     <meta name="twitter:creator" content="@RAPIDSAI"/>
     <meta name="twitter:title" content="{{ page.og_title }}"/>
     <meta name="twitter:description" content="{{ page.og_description }}"/>
@@ -27,8 +27,8 @@
     <title>{{ page.title }}</title>
 
     <link rel='shortcut icon' type='image/x-icon' href='assets/favicon.ico' />
-    <link rel="stylesheet" type="text/css" href="assets/css/style.css">
-    <link rel="stylesheet" type="text/css" href="assets/css/highlight.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/css/style.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}assets/css/highlight.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
     <script>
@@ -69,7 +69,7 @@
     </nav>
     <div class="branding">
         <div class="logo">
-            <a href="https://rapids.ai/index.html"> <img src="assets/images/rapids-logo.svg" alt="" title=""></a>
+            <a href="https://rapids.ai/index.html"> <img src="{{ site.baseurl }}assets/images/rapids-logo.svg" alt="" title=""></a>
         </div>
         {% if page.brand_name != "" %}
           <h1>{{ page.brand_name }}</h1>
