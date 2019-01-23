@@ -36,7 +36,7 @@ layout: default
                 <h3>Corporate Community Adopters</h3>
                 <div class="contributing-logos">
                     <div class="contributing-logo">
-                        <img src="{{ site.baseurl }}{% link /assets/images/walmart_labs.png %}"alt="walmart labs">
+                        <img src="{{ site.baseurl }}{% link /assets/images/walmart_labs.png %}" alt="walmart labs">
                     </div>
                 </div>
 
@@ -59,22 +59,22 @@ layout: default
         <h3>Community Contributors</h3>
         <div class="contributing-logos">
             <div class="contributing-logo">
-                <img src="{{ site.baseurl }}{% link /assets/images/anaconda.png %}"alt="anaconda">
+                <img src="{{ site.baseurl }}{% link /assets/images/anaconda.png %}" alt="anaconda">
             </div>
             <div class="contributing-logo">
-                <img src="{{ site.baseurl }}{% link /assets/images/blazingdb.png %}"alt="blazingdb">
+                <img src="{{ site.baseurl }}{% link /assets/images/blazingdb.png %}" alt="blazingdb">
             </div>
             <div class="contributing-logo">
-                <img src="{{ site.baseurl }}{% link /assets/images/Gunrock_Color.png %}"alt="gunrock">
+                <img src="{{ site.baseurl }}{% link /assets/images/Gunrock_Color.png %}" alt="gunrock">
             </div>
             <div class="contributing-logo">
-                <img src="{{ site.baseurl }}{% link /assets/images/NVLogo_2D_H.png %}"alt="nvidia">
+                <img src="{{ site.baseurl }}{% link /assets/images/NVLogo_2D_H.png %}" alt="nvidia">
             </div>
             <div class="contributing-logo">
-                <img src="{{ site.baseurl }}{% link /assets/images/quansight.png %}"alt="quansight">
+                <img src="{{ site.baseurl }}{% link /assets/images/quansight.png %}" alt="quansight">
             </div>
             <div class="contributing-logo">
-                <img src="{{ site.baseurl }}{% link /assets/images/scikit-learn_Color.png %}"alt="scikitlearn">
+                <img src="{{ site.baseurl }}{% link /assets/images/scikit-learn_Color.png %}" alt="scikitlearn">
             </div>
         </div>
     </div>
@@ -86,24 +86,24 @@ layout: default
         <p>If you have any questions, please reach out.</p>
         <div class="footer-help-section">
             <div class="footer-help-box">
-                <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/Twitter-help.svg %}"alt="twitter"></div>
+                <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/Twitter-help.svg %}" alt="twitter"></div>
                 <p>Twitter</p>
                 <a href="https://twitter.com/RAPIDSai" target="_blank" class="blue-btn">FOLLOW US</a>
             </div>
             <div class="footer-help-box">
-                <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/google-group.svg %}"alt="google groups"></div>
+                <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/google-group.svg %}" alt="google groups"></div>
                 <p>Google Groups</p>
-                <a href="mailto:RAPIDSai@googlegroups.com" class="primary-btn purple">EMAIL US</a>
+                <a href="https://groups.google.com/forum/#!forum/rapidsai" class="primary-btn purple">JOIN US</a>
             </div>
             <div class="footer-help-box">
-                <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/gitlab-icon.svg %}"alt="gitlab"></div>
+                <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/gitlab-icon.svg %}" alt="gitlab"></div>
                 <p>GitHub</p>
                 <a href="https://github.com/RAPIDSai" target="_blank" class="primary-btn orange">CLONE US</a>
             </div>
             <div class="footer-help-box">
-                <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/docker-icon.svg %}"alt="docker"></div>
-                <p>Dockerhub</p>
-                <a href="https://hub.docker.com/u/rapidsai" target="_blank" class="dark-blue-btn">DOWNLOAD US</a>
+                <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/docker-icon.svg %}" alt="docker hub"></div>
+                <p>Docker Hub</p>
+                <a href="https://hub.docker.com/u/rapidsai" target="_blank" class="primary-btn green">DOWNLOAD US</a>
             </div>
         </div>
     </div>
