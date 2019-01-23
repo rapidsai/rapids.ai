@@ -13,5 +13,8 @@
 - name: DEMOS
   link: https://rapidsai.github.io/demos
 
-- name: BLOG
+- name: MEDIUM
   link: https://medium.com/rapids-ai
+
+- name: Blog
+  link: /jobs.html
