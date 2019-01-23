@@ -1,0 +1,15 @@
+<nav>
+    <ul>
+        {% for item in site.data.navigation %}
+          <li {% if page.url contains item.link %}class="active"{% endif %}>
+            {% unless item.link contains 'http' %}
+            <a href="{{ item.link | prepend: site.baseurl }}">
+            {% else %}
+            <a href="{{ item.link }}" target="_blank">
+            {% endunless %}
+              {{ item.name }}
+            </a>
+          </li>
+        {% endfor %}
+    </ul>
+</nav>

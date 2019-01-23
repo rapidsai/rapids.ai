@@ -43,40 +43,20 @@
 </head>
 <body>
 <div id="header-2" class="">
-    <nav>
-        <ul>
-            {% for item in site.data.navigation %}
-              <li {% if page.url == item.link %}class="active"{% endif %}>
-                <a href="{{ item.link }}">
-                  {{ item.name }}
-                </a>
-              </li>
-            {% endfor %}
-        </ul>
-    </nav>
+  {% include nav.html %}
 </div>
 <header>
-    <nav>
-        <ul>
-            {% for item in site.data.navigation %}
-              <li {% if page.url == item.link %}class="active"{% endif %}>
-                <a href="{{ item.link }}">
-                  {{ item.name }}
-                </a>
-              </li>
-            {% endfor %}
-        </ul>
-    </nav>
-    <div class="branding">
-        <div class="logo">
-            <a href="{{ site.baseurl }}"> <img src="{{ site.baseurl }}{% link /assets/images/rapids-logo.svg %}" alt="" title=""></a>
-        </div>
-        {% if page.brand_name != "" %}
-          <h1>{{ page.brand_name }}</h1>
-        {% endif %}
-        <h4>{{ page.brand_tagline }}</h4>
-        <a href="{{ page.brand_link }}" class="blue-btn">{{ page.brand_button }}</a>
+  {% include nav.html %}
+  <div class="branding">
+    <div class="logo">
+      <a href="{{ site.baseurl }}"> <img src="{{ site.baseurl }}{% link /assets/images/rapids-logo.svg %}" alt="RAPIDS logo"></a>
     </div>
+    {% if page.brand_name != "" %}
+      <h1>{{ page.brand_name }}</h1>
+    {% endif %}
+    <h4>{{ page.brand_tagline }}</h4>
+    <a href="{{ page.brand_link }}" class="blue-btn">{{ page.brand_button }}</a>
+  </div>
 </header>
 
 {{ content }}
