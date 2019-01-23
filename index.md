@@ -11,14 +11,9 @@ layout: default
 {% capture section_intro %}
 ## About RAPIDS
 
-The RAPIDS suite of open source software libraries gives you the freedom to execute end-to-end data science
-and analytics pipelines entirely on GPUs. It relies on [NVIDIA® CUDA®](https://developer.nvidia.com/cuda-toolkit) primitives for low-level
-compute optimization, but exposes that GPU parallelism and high-bandwidth memory speed through user-friendly
-Python interfaces. <br> <br> RAPIDS also focuses on common data preparation tasks for analytics and data
-science. This includes a familiar DataFrame API that integrates with a variety of machine learning
-algorithms for end-to-end pipeline accelerations without paying typical serialization costs. RAPIDS also
-includes support for multi-node, multi-GPU deployments, enabling vastly accelerated processing and training
-on much larger dataset sizes.
+##### The RAPIDS suite of open source software libraries gives you the freedom to execute end-to-end data science and analytics pipelines entirely on GPUs. It relies on [NVIDIA® CUDA®](https://developer.nvidia.com/cuda-toolkit) primitives for low-level compute optimization, but exposes that GPU parallelism and high-bandwidth memory speed through user-friendly Python interfaces.
+
+##### RAPIDS also focuses on common data preparation tasks for analytics and data science. This includes a familiar DataFrame API that integrates with a variety of machine learning algorithms for end-to-end pipeline accelerations without paying typical serialization costs. RAPIDS also includes support for multi-node, multi-GPU deployments, enabling vastly accelerated processing and training on much larger dataset sizes.
 
 <div class="rapids-perfomance">
     <br><br>
