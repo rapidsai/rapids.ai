@@ -1,7 +1,9 @@
 <section class="footer-cta-main">
     <div class="fixed-content">
         <h2>{{ include.name }}</h2>
-        <p>{{ include.tagline }}</p>
+        {% if include.tagline != null and include.tagline != "" %}
+            <p>{{ include.tagline }}</p>
+        {% endif %}
         <a href="{{ include.link }}" class="blue-btn">{{ include.button }}</a>
     </div>
 </section>
