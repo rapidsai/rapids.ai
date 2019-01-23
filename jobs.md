@@ -12,7 +12,7 @@ title: Join the RAPIDS Team | RAPIDS
   <div "footer-help-box">
     <h3>{{ post.title }}</h3>
     <p>{{ post.excerpt }}</p>
-    <p><a href="{{ post.url }}">Learn more...</a></p>
+    <p><a href="{{ site.baseurl }}{% link post.id %}">Learn more...</a></p>
   </div>
   {% endfor %}
   {% endif %}
