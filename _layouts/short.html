@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="{{ page.og_description }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="fb:app_id" content="1679326302390196"/>
+    <meta property="og:title" content="{{ page.og_title }}"/>
+    <meta property="og:type" content="Website"/>
+    <meta property="og:description" content="{{ page.og_description }}"/>
+    <meta name="og:site_name" content="RAPIDS"/>
+    <meta property="og:image" content="{{ site.baseurl }}{% link /assets/images/og_image.png %}"/>
+    <meta property="og:image:secure_url" content="{{ site.baseurl }}{% link /assets/images/og_image.png %}"/>
+    <meta property="og:image:type" content="image/jpeg"/>
+    <meta property="og:image:width" content="400"/>
+    <meta property="og:image:height" content="300"/>
+    <meta property="og:image:alt" content="RAPIDS Logo"/>
+
+    <meta name="twitter:site" content="https://twitter.com/rapidsai"/>
+    <meta name="twitter:card" content="{{ page.og_title }}"/>
+    <meta name="twitter:image" content="{{ site.baseurl }}{% link /assets/images/og_image.png %}"/>
+    <meta name="twitter:creator" content="@RAPIDSAI"/>
+    <meta name="twitter:title" content="{{ page.og_title }}"/>
+    <meta name="twitter:description" content="{{ page.og_description }}"/>
+
+    <title>{{ page.title }}</title>
+
+    <link rel='shortcut icon' type='image/x-icon' href='{{ site.baseurl }}{% link /assets/favicon.ico %}' />
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}{% link /assets/css/style.css %}">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}{% link /assets/css/highlight.css %}">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+    <script>
+      $(window).scroll(function () {
+        if ($(window).scrollTop() > $('#header-2').offset().top && !($('#header-2').hasClass('position-fixed'))) {
+          $('#header-2').addClass('position-fixed');
+        } else if ($(window).scrollTop() == 0) {
+          $('#header-2').removeClass('position-fixed');
+        }
+      });
+    </script>
+</head>
+<body>
+<div id="header-2" class="">
+  {% include nav.html %}
+</div>
+<header class="short">
+  {% include nav.html %}
+  <div class="branding-short">
+    <div>
+      <img src="{{ site.baseurl }}{% link /assets/images/rapids-logo.svg %}" alt="RAPIDS logo">
+      {% if page.brand_name != "" %}
+        <h1>{{ page.brand_name }}</h1>
+      {% elsif layout.brand_name != "" %}
+        <h1>{{ layout.brand_name }}</h1>
+      {% endif %}
+    </div>
+    <h4>{{ page.brand_tagline }}</h4>
+  </div>
+</header>
+
+{{ content }}
+
+{% include footer.html %}
+{% include ga.html %} 
+
+</body>
+</html> 
