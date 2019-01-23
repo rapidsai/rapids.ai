@@ -1,2 +1,2 @@
 name: RAPIDS
-baseurl: "https://rapidsai.github.io/rapidsai-staging"
+baseurl: "/rapidsai-staging"
