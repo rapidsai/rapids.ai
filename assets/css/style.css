@@ -176,7 +176,7 @@ h4
     padding: 20px 0px 10px 0px;
 }
 
-h5
+h5, .h5
 {
     font-size: 24px;
     font-weight: 300;
@@ -189,6 +189,13 @@ h5
 section.left-gray
 {
     background: url(../images/bottom-gray-strip.svg) bottom center no-repeat;
+    background-size: auto 169px;
+    padding-bottom: 168px;
+}
+
+section.right-gray
+{
+    background: url(../images/top-gray-strip.svg) bottom center no-repeat;
     background-size: auto 169px;
     padding-bottom: 168px;
 }
@@ -290,6 +297,37 @@ a.blue-btn:hover, .primary-btn:hover
     max-width: 1280px;
     padding: 0 40px;
     margin: 0 auto;
+}
+
+.text-left
+{
+    text-align: left;
+}
+
+.text-center
+{
+    text-align: center;
+}
+
+.text-right
+{
+    text-align: right;
+}
+
+.pad-top-30 {
+    padding-top: 30px;
+}
+
+.pad-top-40 {
+    padding-top: 40px;
+}
+
+.pad-btm-30 {
+    padding-bottom: 30px;
+}
+
+.pad-btm-40 {
+    padding-bottom: 40px;
 }
 
 section.about-rapids h2
