@@ -86,32 +86,22 @@ layout: default
         <p>If you have any questions, please reach out.</p>
         <div class="footer-help-section">
             <div class="footer-help-box">
-                <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/Twitter-help.svg %}" alt="twitter"></div>
-                <p>Twitter</p>
-                <a href="https://twitter.com/RAPIDSai" target="_blank" class="blue-btn">FOLLOW&nbsp;US</a>
-            </div>
-            <div class="footer-help-box">
                 <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/google-group.svg %}" alt="google groups"></div>
                 <p>Google Groups</p>
-                <a href="https://groups.google.com/forum/#!forum/rapidsai" class="primary-btn purple">CONTACT&nbsp;US</a>
-            </div>
-            <div class="footer-help-box">
-                <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/gitlab-icon.svg %}" alt="gitlab"></div>
-                <p>GitHub</p>
-                <a href="https://github.com/RAPIDSai" target="_blank" class="primary-btn orange">CLONE&nbsp;US</a>
+                <a href="https://groups.google.com/forum/#!forum/rapidsai" class="primary-btn blue-btn">CONTACT&nbsp;US</a>
             </div>
             <div class="footer-help-box">
                 <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/docker-icon.svg %}" alt="docker hub"></div>
                 <p>Docker Hub</p>
-                <a href="https://hub.docker.com/u/rapidsai" target="_blank" class="primary-btn green">RUN&nbsp;US</a>
+                <a href="https://hub.docker.com/u/rapidsai" target="_blank" class="primary-btn purple">RUN&nbsp;US</a>
             </div>
             <div class="footer-help-box">
-                <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/stackoverflow-white.svg %}" alt="stack overflow" style="width: 60px;"></div>
+                <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/stackoverflow-white.svg %}" alt="stack overflow"></div>
                 <p>Stack Overflow</p>
-                <a href="https://hub.docker.com/u/rapidsai" target="_blank" class="primary-btn pink">ASK&nbsp;US</a>
+                <a href="https://stackoverflow.com/tags/rapids" target="_blank" class="primary-btn orange">ASK&nbsp;US</a>
             </div>
             <div class="footer-help-box">
-                <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/add-user.svg %}" alt="join rapids" style="width: 60px;"></div>
+                <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/add-user.svg %}" alt="join rapids"></div>
                 <p>Join RAPIDS</p>
                 <a href="{{ site.baseurl }}/jobs.html" target="_blank" class="primary-btn blue">JOIN&nbsp;US</a>
             </div>

@@ -256,27 +256,17 @@ a.blue-btn, .primary-btn
 
 .purple
 {
-    background: #9E0DFF;
+    background: #d216d2;
 }
 
 .orange
 {
-    background: #E88817;
-}
-
-.green
-{
-    background: #70E800;
+    background: #ffb500;
 }
 
 .blue
 {
-    background: #179DE8;
-}
-
-.pink
-{
-    background: #F326FF;
+    background: #338aff;
 }
 
 a.blue-btn:hover, .primary-btn:hover
