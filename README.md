@@ -69,7 +69,7 @@ Once your changes are ready in your fork, create a [new pull request](https://gi
 ## Deployment process
 
 1. Submit proposed changes as a PR to this repo from the contributor's fork
-2. Review PR providing feedback and request any ncecessary changes
+2. Review PR providing feedback and request any necessary changes
 3. Approve PR merging into `master` of this repo
 4. Verify the staging site https://rapidsai.github.io/rapidsai-staging/ to ensure there are no errors or issues after merge
 5. Approve promotion to PROD 
