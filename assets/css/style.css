@@ -1070,7 +1070,7 @@ div.highlighter-rouge div pre
     padding: 0px 30px;
 }
 
-.footer-help-box-image
+.footer-help-box-image img
 {
     min-height: 82px;
     align-items: center;
@@ -1208,7 +1208,7 @@ p.no-padding-bottom
 
     .footer-help-box
     {
-        flex: 0 0 33%;
+        flex: 0 0 50%;
         padding-bottom: 30px;
         padding-top: 20px;
     }
@@ -1541,8 +1541,7 @@ p.no-padding-bottom
 
     .footer-help-box-image img
     {
-        max-width: 60px;
-        height: auto;
+        max-height: 60px;
     }
 
     .footer-help-box p
