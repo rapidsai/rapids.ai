@@ -26,7 +26,7 @@ RAPIDS also focuses on common data preparation tasks for analytics and data scie
 {% capture section_pipeline %}
 ## The New GPU <br> Data Science Pipeline
 
-![RAPIDS Pipeline Diagram]({{ site.baseurl }}{% link /assets/images/Pipeline-FPO-Diagram.png %} %})
+![RAPIDS Pipeline Diagram]({{ site.baseurl }}{% link /assets/images/Pipeline-FPO-Diagram.png %})
 {: .Pipeline-Diagram .text-center }
 
 <div class="gpu-list">
