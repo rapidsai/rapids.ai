@@ -45,7 +45,7 @@ header
 {
     background: url(../images/header-bg.svg) top center no-repeat;
     padding: 34px 0px 0px 0px;
-    min-height: 588px;
+    min-height: 608px;
 }
 
 header.short
