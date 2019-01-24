@@ -93,7 +93,7 @@ layout: default
             <div class="footer-help-box">
                 <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/google-group.svg %}" alt="google groups"></div>
                 <p>Google Groups</p>
-                <a href="https://groups.google.com/forum/#!forum/rapidsai" class="primary-btn purple">JOIN US</a>
+                <a href="https://groups.google.com/forum/#!forum/rapidsai" class="primary-btn purple">CONTACT US</a>
             </div>
             <div class="footer-help-box">
                 <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/gitlab-icon.svg %}" alt="gitlab"></div>
@@ -103,12 +103,12 @@ layout: default
             <div class="footer-help-box">
                 <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/docker-icon.svg %}" alt="docker hub"></div>
                 <p>Docker Hub</p>
-                <a href="https://hub.docker.com/u/rapidsai" target="_blank" class="primary-btn green">DOWNLOAD US</a>
+                <a href="https://hub.docker.com/u/rapidsai" target="_blank" class="primary-btn green">RUN US</a>
             </div>
             <div class="footer-help-box">
-                <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/stackoverflow-white.svg %}" alt="stack overflow" style="width: 100px;"></div>
+                <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/stackoverflow-white.svg %}" alt="stack overflow" style="height: 90px;"></div>
                 <p>Stack Overflow</p>
-                <a href="https://hub.docker.com/u/rapidsai" target="_blank" class="primary-btn cyan">ASK US</a>
+                <a href="https://hub.docker.com/u/rapidsai" target="_blank" class="primary-btn pink">ASK US</a>
             </div>
         </div>
     </div>

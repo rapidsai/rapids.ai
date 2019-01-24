@@ -249,22 +249,27 @@ a.blue-btn, .primary-btn
 
 .purple
 {
-    background: #d216d2;
+    background: #9E0DFF;
 }
 
 .orange
 {
-    background: #ffb500;
+    background: #E88817;
 }
 
 .green
 {
-    background: #70e800;
+    background: #70E800;
 }
 
-.cyan
+.blue
 {
-    background: #00b7eb;
+    background: #179DE8;
+}
+
+.pink
+{
+    background: #F326FF;
 }
 
 a.blue-btn:hover, .primary-btn:hover
