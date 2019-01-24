@@ -7,19 +7,11 @@
 - name: COMMUNITY
   link: /community.html
 
-- name: BLOG
-  link: /blog.html
-
-- name: JOBS
-  link: /jobs.html
-
 - name: GITHUB
   link: https://github.com/rapidsai
 
 - name: DEMOS
   link: https://rapidsai.github.io/demos
 
-- name: MEDIUM
+- name: BLOG
   link: https://medium.com/rapids-ai
-
-
