@@ -110,6 +110,11 @@ layout: default
                 <p>Stack Overflow</p>
                 <a href="https://hub.docker.com/u/rapidsai" target="_blank" class="primary-btn pink">ASK US</a>
             </div>
+            <div class="footer-help-box">
+                <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/add-user.svg %}" alt="join rapids" style="height: 90px;"></div>
+                <p>Join RAPIDS</p>
+                <a href="{{ site.baseurl }}/jobs.html" target="_blank" class="primary-btn blue">JOIN US</a>
+            </div>
         </div>
     </div>
 </section>
