@@ -15,9 +15,9 @@ layout: default
 
 ```python
 import cudf
-gdf = cudf.read_csv(‘path/to/file.csv’)
+gdf = cudf.read_csv('path/to/file.csv')
 for column in gdf.columns:
-    print(column.mean())
+    print(gdf[column].mean())
 ```
 
 RAPIDS uses optimized NVIDIA® CUDA® primitives and high-bandwidth GPU memory to accelerate data preparation and machine learning. The goal of RAPIDS is not only to accelerate the individual parts of the typical data science workflow, but to accelerate the complete end-to-end workflow.
