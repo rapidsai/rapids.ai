@@ -49,6 +49,55 @@ For instructions on how to build a development conda environment, see the [cuDF 
 {% endcapture %}
 {% include sec-left-gray.html content=section_conda %}
 
+{% capture section_pip %}
+## Install Python Package with Pip
+
+##### You can also quickly install cuDF using pip
+
+#### Prerequisites
+
+* NVIDIA Pascal™ GPU architecture or better
+* CUDA [9.2](https://developer.nvidia.com/cuda-92-download-archive) or [10.0](https://developer.nvidia.com/cuda-downloads)
+* Ubuntu 16.04 or 18.04
+
+#### Python Install
+
+##### Ubuntu 16.04
+By default, Ubuntu 16.04's `python3` package is Python 3.5, so you need to install Python 3.6 or 3.7 with the following steps:
+
+```bash
+$ apt-get install software-properties-common python-software-properties
+$ add-apt-repository ppa:jonathonf/python-3.6 #Or 3.7
+$ apt update && apt install python3.6 #Or 3.7
+```
+
+##### Ubuntu 18.04
+
+Simply install the `python3.6` or `python3.7` package:
+
+```bash
+apt install python3.6 #Or 3.7
+```
+
+#### Pip Install
+
+You can install and update cuDF for CUDA 9.2 using the command:
+
+```bash
+$ python3.6 -m pip install cudf-cuda92=0.5
+```
+
+You can install and update cuDF for CUDA 10.0 using the command:
+
+```bash
+$ python3.6 -m pip install cudf-cuda100=0.5
+```
+
+
+Also refer to the [cuML README](https://github.com/rapidsai/cuml/tree/master#pip) for pip install instructions for cuML.
+{% endcapture %}
+{% include sec-left-gray.html content=section_pip %}
+
 {% capture section_container %}
 ## Run the RAPIDS Container
 
