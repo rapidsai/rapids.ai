@@ -42,10 +42,10 @@ We suggest that you take a look at the sample workflow in our Docker container (
 You can get a minimal conda installation with [Miniconda](https://conda.io/miniconda.html) or get the full installation with [Anaconda](https://www.anaconda.com/download). Install and update cuDF using the conda command:
 
 ```bash
-$ conda install -c numba -c conda-forge -c nvidia -c rapidsai -c defaults cudf=0.5
+$ conda install -c numba -c nvidia -c rapidsai -c conda-forge -c defaults cudf=0.5
 ```
 
-For instructions on how to build a development conda environment, see the [cuDF README](https://github.com/rapidsai/cudf#conda) for more information.
+For instructions on how to build a development conda environment, see the [cuDF README](https://github.com/rapidsai/cudf/blob/master/README.md#conda) for more information. Also refer to the [cuML README](https://github.com/rapidsai/cuml/blob/master/README.md#conda) for conda install instructions for cuML.
 {% endcapture %}
 {% include sec-left-gray.html content=section_conda %}
 
@@ -65,15 +65,15 @@ For instructions on how to build a development conda environment, see the [cuDF 
 #### Start Container and Notebook Server
 
 ```bash
-$ docker pull rapidsai/rapidsai:cuda9.2_ubuntu1604
+$ docker pull rapidsai/rapidsai:cuda9.2-runtime-ubuntu16.04
 $ docker run --runtime=nvidia \
         --rm -it \
         -p 8888:8888 \
         -p 8787:8787 \
         -p 8786:8786 \
-        rapidsai/rapidsai:cuda9.2_ubuntu1604
-jupyter@container:/rapids/notebooks/$ source activate rapids
-(rapids) jupyter@container:/rapids/notebooks/$ bash utils/start_jupyter.sh
+        rapidsai/rapidsai:cuda9.2-runtime-ubuntu16.04
+root@container:/rapids/notebooks/$ source activate rapids
+(rapids) root@container:/rapids/notebooks/$ bash utils/start_jupyter.sh
 ```
 **NOTE:** This will run [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) on port 8888 on your host machine.
 
@@ -88,7 +88,10 @@ Notebooks can be found in two directories within the container:
 
 #### Custom Data and Advanced Usage
 
-See the [RAPIDS Demo Container](https://rapidsai.github.io/demos/containers/rapids-demo) page for more information about using custom datasets.
+
+See the [RAPIDS Container README](https://hub.docker.com/r/rapidsai/rapidsai) page for more information about using custom datasets. 
+
+[Docker Hub](https://hub.docker.com/r/rapidsai/rapidsai/) and [NVIDA GPU Cloud](https://ngc.nvidia.com/catalog/containers/nvidia%2Frapidsai%2Frapidsai) host RAPIDS containers with full list of available [tags](https://hub.docker.com/r/rapidsai/rapidsai#full-tag-list).
 
 ## More Information
 
