@@ -17,7 +17,7 @@ The RAPIDS suite of open source software libraries gives you the freedom to exec
 RAPIDS also focuses on common data preparation tasks for analytics and data science. This includes a familiar DataFrame API that integrates with a variety of machine learning algorithms for end-to-end pipeline accelerations without paying typical serialization costs. RAPIDS also includes support for multi-node, multi-GPU deployments, enabling vastly accelerated processing and training on much larger dataset sizes.
 {: .h5 }
 
-![End to end Performance Chat]({{ site.baseurl }}{% link /assets/images/rapids-end-to-end-performance-chart-oss-page-r4.svg %})
+![End to end Performance Chart]({{ site.baseurl }}{% link /assets/images/rapids-end-to-end-performance-chart-oss-page-r4.svg %})
 {: .rapids-perfomance .text-center .pad-top-40 }
 
 {% endcapture %}
