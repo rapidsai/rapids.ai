@@ -200,9 +200,35 @@ section.right-gray
     padding-bottom: 168px;
 }
 
-section div.container-gray
+div.container-gray
 {
     background: #f8f8f8;
+}
+
+div.container-purple
+{
+    background: #9943ff;
+}
+
+section.left-purple
+{
+    background: url(../images/bottom-purple-strip.svg) bottom center no-repeat;
+    background-size: auto 169px;
+    padding-bottom: 168px;
+}
+
+.left-purple h2, .left-purple h4, .left-purple h5
+{
+    color: #FFF;
+}
+
+.left-purple li, .left-purple p
+{
+    color: #d3d3d3;
+}
+
+.left-purple div.highlighter-rouge {
+    background: #eee;
 }
 
 div.tags ul {
