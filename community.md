@@ -100,11 +100,6 @@ layout: default
                 <p>Stack Overflow</p>
                 <a href="https://stackoverflow.com/tags/rapids" target="_blank" class="primary-btn orange">ASK&nbsp;US</a>
             </div>
-            <div class="footer-help-box">
-                <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/add-user.svg %}" alt="join rapids"></div>
-                <p>Join RAPIDS</p>
-                <a href="{{ site.baseurl }}/jobs.html" target="_blank" class="primary-btn blue">JOIN&nbsp;US</a>
-            </div>
         </div>
     </div>
 </section>
