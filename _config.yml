@@ -1,3 +1,4 @@
 name: RAPIDS
 title: RAPIDS
 baseurl: "/rapidsai-staging"
+exclude: ['_drafts', 'README.md', '.gitignore', 'CNAME']
