@@ -1,0 +1,466 @@
+<div class='selector'>
+    <div style='width: 150px;'>
+        <div class='labels'>
+            <div class='label'>Method</div>
+            <div class='label'>Packages</div>
+            <div class='label'>Linux</div>
+            <div class='label'>Python</div>
+            <div class='label'>CUDA</div>
+            <div class='label output'>Command</div>
+        </div>
+    </div>
+    <div style='width: 100%;'>
+        <div class='options'>
+            <div class='method'>
+                <div id='conda' class='option'>Conda</div><div id='docker' class='option'>Docker</div><div id='pip' class='option'>Pip</div><div id='source' class='option'>Source</div>
+            </div>
+            <div class='pkg'>
+                <div id='cudf' class='option'>cuDF</div><div id='cuml' class='option'>cuML</div><div id='both' class='option'>cuDF & cuML</div>
+            </div>
+            <div class='linux'>
+                <div id='ubuntu1604' class='option'>Ubuntu 16.04</div><div id='ubuntu1804' class='option'>Ubuntu 18.04</div>
+            </div>
+            <div class='python'>
+                <div id='py36' class='option'>Python 3.6</div><div id='py37' class='option'>Python 3.7</div>
+            </div>
+            <div class='cuda'>
+                <div id='cuda92' class='option'>CUDA 9.2</div><div id='cuda100' class='option'>CUDA 10.0</div>
+            </div>
+            <div class='output'>
+                <div id='command' class='cmd'># Javascript is needed for this tool to run, please make sure it is enabled</div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<p class="text-center pad-top-40">
+    <a id='copy-command' onclick='CopyToClipboard("command-code")' class='btn primary-btn orange'>COPY COMMAND</a><a id='more-details' href='#using-rapids' class='primary-btn blue'>MORE DETAILS</a>
+</p>
+
+<script type="text/javascript">
+/* Adopted from https://pytorch.org/assets/quick-start-module.js */
+
+    var pkg=['cudf','cuml','both'];
+    var method=['conda','docker','pip','source'];
+    var linux=['ubuntu1604','ubuntu1804'];
+    var python=['py36','py37'];
+    var cuda=['cuda92','cuda100'];
+
+    var pkg_opts = $(".pkg > .option");
+    var method_opts = $(".method > .option");
+    var linux_opts = $(".linux > .option");
+    var python_opts = $(".python > .option");
+    var cuda_opts = $(".cuda > .option");
+
+    var details = {
+        conda: 'conda-install',
+        docker: 'docker-container',
+        pip: 'pip-install',
+        source: 'build-from-source'
+    }
+
+    // Set initial choices
+    var selections = {
+        pkg: 'both',
+        method: 'conda',
+        linux: 'ubuntu1604',
+        python: 'py36',
+        cuda: 'cuda92'
+    };
+
+    pkg_opts.on("click", function() {
+        processClick(pkg_opts, this, "pkg");
+    });
+    method_opts.on("click", function() {
+        processClick(method_opts, this, "method");
+    });
+    linux_opts.on("click", function() {
+        processClick(linux_opts, this, "linux");
+    });
+    python_opts.on("click", function() {
+        processClick(python_opts, this, "python");
+    });
+    cuda_opts.on("click", function() {
+        processClick(cuda_opts, this, "cuda");
+    });
+
+    // Initialize on start
+    $(function() {
+        processClick();
+    });
+    
+    function processClick(options, click, category) {
+        // reset all
+        $(pkg_opts).removeClass("disabled");
+        $(linux_opts).removeClass("disabled");
+        $(python_opts).removeClass("disabled");
+        $(cuda_opts).removeClass("disabled");
+        $(pkg_opts).removeClass("active");
+        $(linux_opts).removeClass("active");
+        $(python_opts).removeClass("active");
+        $(cuda_opts).removeClass("active");
+
+        if (options && click && category ) {
+            $(options).removeClass("active");
+            $(click).addClass("active");
+            selections[category] = click.id;
+        }
+
+        if (selections['method'] == 'docker') {
+            // Handle docker requests
+            $(pkg_opts).addClass("disabled");
+            $("#both").removeClass("disabled");
+            $("#both").addClass("active");
+            selections['pkg'] = 'both';
+        } else if (selections['method'] == 'source') {
+            // Handle source requests
+            $("#both").addClass("disabled");
+            if (selections['pkg'] == 'both') {
+            selections['pkg'] = 'cudf';
+            }
+            $(linux_opts).removeClass("active");
+            $(python_opts).removeClass("active");
+            $(cuda_opts).removeClass("active");
+            $(linux_opts).addClass("disabled");
+            $(python_opts).addClass("disabled");
+            $(cuda_opts).addClass("disabled");
+        } else {
+            $("#"+selections['method']).addClass("active");
+        }
+        $("#"+selections['pkg']).addClass("active");
+        $("#"+selections['linux']).addClass("active");
+        $("#"+selections['python']).addClass("active");
+        $("#"+selections['cuda']).addClass("active");
+
+        showCommand();
+    }
+
+    function getSelections() {
+        if (selections['method'] == 'source') {
+            return ""+selections['pkg']+"-"+selections['method'];
+        } else {
+            return ""+selections['pkg']+"-"+selections['method']+"-"+selections['linux']+"-"+selections['python']+"-"+selections['cuda'];
+        }
+    }
+
+    function showCommand() {
+        var key = getSelections();
+        var command = $("."+key).html();
+        var anchor = details[selections['method']];
+        var txt = (""+selections['method']+" details").toUpperCase();
+        $("#command").html(command);
+        $("#command > div > pre > code ").attr("id", "command-code")
+        $("#more-details").attr('href',"#"+anchor).text(txt);
+    }
+
+    function CopyToClipboard(containerid) {
+        if (document.selection) {
+            var range = document.body.createTextRange();
+            range.moveToElementText(document.getElementById(containerid));
+            range.select().createTextRange();
+            document.execCommand("copy");
+
+        } else if (window.getSelection) {
+            var range = document.createRange();
+            range.selectNode(document.getElementById(containerid));
+            window.getSelection().addRange(range);
+            document.execCommand("copy");
+        }
+    }
+</script>
+
+<!-- docker -->
+
+```bash
+docker pull rapidsai/rapidsai:latest
+docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai:latest
+```
+{: .both-docker-ubuntu1604-py36-cuda92 .hidden }
+
+```bash
+docker pull rapidsai/rapidsai:0.5-cuda9.2-runtime-ubuntu16.04-gcc5-py3.7
+docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai:0.5-cuda9.2-runtime-ubuntu16.04-gcc5-py3.7
+```
+{: .both-docker-ubuntu1604-py37-cuda92 .hidden }
+
+```bash
+docker pull rapidsai/rapidsai:cuda10.0-runtime-ubuntu16.04
+docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai:cuda10.0-runtime-ubuntu16.04
+```
+{: .both-docker-ubuntu1604-py36-cuda10- .hidden }
+
+```bash
+docker pull rapidsai/rapidsai:0.5-cuda10.0-runtime-ubuntu16.04-gcc5-py3.7
+docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai:0.5-cuda10.0-runtime-ubuntu16.04-gcc5-py3.7
+```
+{: .both-docker-ubuntu1604-py37-cuda100 .hidden }
+
+```bash
+docker pull rapidsai/rapidsai:cuda9.2-runtime-ubuntu18.04
+docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai:cuda9.2-runtime-ubuntu18.04
+```
+{: .both-docker-ubuntu1804-py36-cuda92 .hidden }
+
+```bash
+docker pull rapidsai/rapidsai:0.5-cuda9.2-runtime-ubuntu18.04-gcc7-py3.7
+docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai:0.5-cuda9.2-runtime-ubuntu18.04-gcc7-py3.7
+```
+{: .both-docker-ubuntu1804-py37-cuda92 .hidden }
+
+```bash
+docker pull rapidsai/rapidsai:cuda10.0-runtime-ubuntu18.04
+docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai:cuda10.0-runtime-ubuntu18.04
+```
+{: .both-docker-ubuntu1804-py36-cuda100 .hidden }
+
+```bash
+docker pull rapidsai/rapidsai:0.5-cuda10.0-runtime-ubuntu18.04-gcc7-py3.7
+docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai:0.5-cuda10.0-runtime-ubuntu18.04-gcc7-py3.7
+```
+{: .both-docker-ubuntu1804-py37-cuda100 .hidden }
+
+<!-- source -->
+
+```bash
+# See cuDF README for build instructions
+```
+{: .cudf-source .hidden }
+
+```bash
+# See cuML README for build instructions
+```
+{: .cuml-source .hidden }
+
+<!-- conda cuda92 -->
+
+```bash
+conda install -c nvidia -c rapidsai -c numba -c conda-forge -c defaults \
+    cudf=0.5 python=3.6
+```
+{: .cudf-conda-ubuntu1604-py36-cuda92 .cudf-conda-ubuntu1804-py36-cuda92 .hidden }
+
+```bash
+conda install -c nvidia -c rapidsai -c numba -c conda-forge -c defaults \
+    cudf=0.5 python=3.7
+```
+{: .cudf-conda-ubuntu1604-py37-cuda92 .cudf-conda-ubuntu1804-py37-cuda92 .hidden }
+
+```bash
+conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
+    -c defaults cuml=0.5 python=3.6
+```
+{: .cuml-conda-ubuntu1604-py36-cuda92 .cuml-conda-ubuntu1804-py36-cuda92 .hidden }
+
+```bash
+conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
+    -c defaults cuml=0.5 python=3.7
+```
+{: .cuml-conda-ubuntu1604-py37-cuda92 .cuml-conda-ubuntu1804-py37-cuda92 .hidden }
+
+```bash
+conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
+    -c defaults cudf=0.5 cuml=0.5 python=3.6
+```
+{: .both-conda-ubuntu1604-py36-cuda92 .both-conda-ubuntu1804-py36-cuda92 .hidden }
+
+```bash
+conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
+    -c defaults cudf=0.5 cuml=0.5 python=3.7
+```
+{: .both-conda-ubuntu1604-py37-cuda92 .both-conda-ubuntu1804-py37-cuda92 .hidden }
+
+<!-- conda cuda100 -->
+
+```bash
+conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c numba \
+    -c conda-forge -c defaults cudf=0.5 python=3.6
+```
+{: .cudf-conda-ubuntu1604-py36-cuda100 .cudf-conda-ubuntu1804-py36-cuda100 .hidden }
+
+```bash
+conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c numba \
+    -c conda-forge -c defaults cudf=0.5 python=3.7
+```
+{: .cudf-conda-ubuntu1604-py37-cuda100 .cudf-conda-ubuntu1804-py37-cuda100 .hidden }
+
+```bash
+conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
+    -c numba -c conda-forge -c defaults cuml=0.5 python=3.6
+```
+{: .cuml-conda-ubuntu1604-py36-cuda100 .cuml-conda-ubuntu1804-py36-cuda100 .hidden }
+
+```bash
+conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
+    -c numba -c conda-forge -c defaults cuml=0.5 python=3.7
+```
+{: .cuml-conda-ubuntu1604-py37-cuda100 .cuml-conda-ubuntu1804-py37-cuda100 .hidden }
+
+```bash
+conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
+    -c numba -c conda-forge -c defaults cudf=0.5 cuml=0.5 python=3.6
+```
+{: .both-conda-ubuntu1604-py36-cuda100 .both-conda-ubuntu1804-py36-cuda100 .hidden }
+
+```bash
+conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
+    -c numba -c conda-forge -c defaults cudf=0.5 cuml=0.5 python=3.7
+```
+{: .both-conda-ubuntu1604-py37-cuda100 .both-conda-ubuntu1804-py37-cuda100 .hidden }
+
+<!-- pip cudf -->
+
+```bash
+# Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
+
+python3.6 -m pip install cudf-cuda92=0.5
+```
+{: .cudf-pip-ubuntu1604-py36-cuda92 .hidden }
+
+```bash
+# Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
+
+python3.7 -m pip install cudf-cuda92=0.5
+```
+{: .cudf-pip-ubuntu1604-py37-cuda92 .hidden }
+
+```bash
+# Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
+
+python3.6 -m pip install cudf-cuda100=0.5
+```
+{: .cudf-pip-ubuntu1604-py36-cuda100 .hidden }
+
+```bash
+# Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
+
+python3.7 -m pip install cudf-cuda100=0.5
+```
+{: .cudf-pip-ubuntu1604-py37-cuda100 .hidden }
+
+```bash
+python3.6 -m pip install cudf-cuda92=0.5
+```
+{: .cudf-pip-ubuntu1804-py36-cuda92 .hidden }
+
+```bash
+python3.7 -m pip install cudf-cuda92=0.5
+```
+{: .cudf-pip-ubuntu1804-py37-cuda92 .hidden }
+
+```bash
+python3.6 -m pip install cudf-cuda100=0.5
+```
+{: .cudf-pip-ubuntu1804-py36-cuda100 .hidden }
+
+```bash
+python3.7 -m pip install cudf-cuda100=0.5
+```
+{: .cudf-pip-ubuntu1804-py37-cuda100 .hidden }
+
+<!-- pip cuml -->
+
+```bash
+# Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
+
+python3.6 -m pip install cuml-cuda92=0.5
+```
+{: .cuml-pip-ubuntu1604-py36-cuda92 .hidden }
+
+```bash
+# Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
+
+python3.7 -m pip install cuml-cuda92=0.5
+```
+{: .cuml-pip-ubuntu1604-py37-cuda92 .hidden }
+
+```bash
+# Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
+
+python3.6 -m pip install cuml-cuda100=0.5
+```
+{: .cuml-pip-ubuntu1604-py36-cuda100 .hidden }
+
+```bash
+# Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
+
+python3.7 -m pip install cuml-cuda100=0.5
+```
+{: .cuml-pip-ubuntu1604-py37-cuda100 .hidden }
+
+```bash
+python3.6 -m pip install cuml-cuda92=0.5
+```
+{: .cuml-pip-ubuntu1804-py36-cuda92 .hidden }
+
+```bash
+python3.7 -m pip install cuml-cuda92=0.5
+```
+{: .cuml-pip-ubuntu1804-py37-cuda92 .hidden }
+
+```bash
+python3.6 -m pip install cuml-cuda100=0.5
+```
+{: .cuml-pip-ubuntu1804-py36-cuda100 .hidden }
+
+```bash
+python3.7 -m pip install cuml-cuda100=0.5
+```
+{: .cuml-pip-ubuntu1804-py37-cuda100 .hidden }
+
+<!-- pip both -->
+
+```bash
+# Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
+
+python3.6 -m pip install cudf-cuda92=0.5 cuml-cuda92=0.5
+```
+{: .both-pip-ubuntu1604-py36-cuda92 .hidden }
+
+```bash
+# Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
+
+python3.7 -m pip install cudf-cuda92=0.5 cuml-cuda92=0.5
+```
+{: .both-pip-ubuntu1604-py37-cuda92 .hidden }
+
+```bash
+# Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
+
+python3.6 -m pip install cudf-cuda100=0.5 cuml-cuda100=0.5
+```
+{: .both-pip-ubuntu1604-py36-cuda100 .hidden }
+
+```bash
+# Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
+
+python3.7 -m pip install cudf-cuda100=0.5 cuml-cuda100=0.5
+```
+{: .both-pip-ubuntu1604-py37-cuda100 .hidden }
+
+```bash
+python3.6 -m pip install cudf-cuda92=0.5 cuml-cuda92=0.5
+```
+{: .both-pip-ubuntu1804-py36-cuda92 .hidden }
+
+```bash
+python3.7 -m pip install cudf-cuda92=0.5 cuml-cuda92=0.5
+```
+{: .both-pip-ubuntu1804-py37-cuda92 .hidden }
+
+```bash
+python3.6 -m pip install cudf-cuda100=0.5 cuml-cuda100=0.5
+```
+{: .both-pip-ubuntu1804-py36-cuda100 .hidden }
+
+```bash
+python3.7 -m pip install cudf-cuda100=0.5 cuml-cuda100=0.5
+```
+{: .both-pip-ubuntu1804-py37-cuda100 .hidden }

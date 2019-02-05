@@ -1142,6 +1142,87 @@ p.no-padding-bottom
     padding-bottom: 15px;
 }
 
+/* new selector */
+div.selector {
+    width: 100%;
+    display: flex;
+}
+.selector div.labels {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+.selector div.options div {
+    display: flex;
+    flex-direction: row;
+}
+.selector div.label {
+    background: transparent;
+    text-align: left;
+    padding: 0.25em;
+    margin: 0.25em;
+    flex: 1 1;
+    color: #d3d3d3;
+    font-size: 18px;
+    font-weight: 600;
+}
+.selector div.option {
+    background: #e3e3e3;
+    text-align: center;
+    padding: 0.25em 0 0.25em 0.75em;
+    margin: 0.25em;
+    flex: 1 1;
+    font-size: 18px;
+    cursor: pointer;
+}
+.selector div.cmd {
+    cursor: text;
+    background: #fff;
+    padding: 0.25em 0 0.25em 0.75em;
+    margin: 0.25em;
+    flex: 1 1;
+    font-size: 18px;
+}
+.selector div.cmd pre {
+    line-height: 24px;
+    padding: 1em;
+    text-align: left;
+}
+.selector div.active {
+    background: #36c9dd;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.selector div.disabled {
+    background: #a785e7;
+    cursor: not-allowed;
+    font-weight: 400;
+}
+
+.selector div.output {
+    padding-top: 0.5em;
+}
+
+#more-details {
+    margin-left: 4em;
+}
+
+.hidden {
+    display: none;
+}
+
+.noselect, div.option, .primary-btn, a.blue-btn, .primary-btn {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently
+                                supported by Chrome and Opera */
+}
+
+
 @media only screen and (max-width: 1180px)  {
 
     .rapids-perfomance ul li
