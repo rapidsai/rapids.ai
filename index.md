@@ -5,7 +5,7 @@ og_description: "A suite of software libraries for executing end-to-end data sci
 brand_name: ""
 brand_tagline: "Open GPU Data Science"
 brand_button: "GET STARTED"
-brand_link: "documentation.html"
+brand_link: "start.html"
 layout: default
 ---
 {% capture section_intro %}
@@ -175,6 +175,6 @@ RAPIDS is for everyone--users, adopters, and contributors. If you’re a data sc
 name="Experience Data Science on GPUs with RAPIDS" 
 tagline=""
 button="GET STARTED"
-link="documentation.html"
+link="start.html"
 %}
 
