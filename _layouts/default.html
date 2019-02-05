@@ -47,7 +47,11 @@
 </div>
 <header>
   {% include nav.html %}
+  {% if page.brand_name == "" %}
+  <div class="branding home">
+  {% else %}
   <div class="branding">
+  {% endif %}
     <div class="logo">
       <a href="{{ site.baseurl }}"> <img src="{{ site.baseurl }}{% link /assets/images/rapids-logo.svg %}" alt="RAPIDS logo"></a>
     </div>

@@ -44,14 +44,15 @@ img
 header
 {
     background: url(../images/header-bg.svg) top center no-repeat;
-    padding: 34px 0px 0px 0px;
-    min-height: 608px;
+    padding: 34px 0 0 0;
+    min-height: 538px;
+    background-position-y: -80px;
 }
 
 header.short
 {
     background: url(../images/header-bg.svg) top center no-repeat;
-    padding: 34px 0px 0px 0px;
+    padding: 34px 0 0 0;
     min-height: 304px;
     background-position-y: -334px;
 }
@@ -99,7 +100,13 @@ nav ul li.active a
 .branding
 {
     text-align: center;
-    padding: 75px 0px 0px 0px;
+    padding: 50px 0 0 0;
+}
+
+.branding.home
+{
+    text-align: center;
+    padding: 80px 0 0 0;
 }
 
 .branding h4
@@ -140,6 +147,9 @@ nav ul li.active a
     padding-top: 50px;
 }
 
+h2:first-child {
+    padding-top: 0;
+}
 
 .logo img
 {
@@ -225,10 +235,6 @@ section.left-purple
 .left-purple li, .left-purple p
 {
     color: #d3d3d3;
-}
-
-.left-purple div.highlighter-rouge {
-    background: #eee;
 }
 
 div.tags ul {
@@ -330,12 +336,20 @@ a.blue-btn:hover, .primary-btn:hover
     text-align: right;
 }
 
+.pad-top-0 {
+    padding-top: 0;
+}
+
 .pad-top-30 {
     padding-top: 30px;
 }
 
 .pad-top-40 {
     padding-top: 40px;
+}
+
+.pad-btm-0 {
+    padding-bottom: 0;
 }
 
 .pad-btm-30 {
@@ -403,7 +417,7 @@ section.about-rapids p a:hover
     text-transform: uppercase;
     font-weight: 600;
     color: #FFF;
-    padding: 58px 0px 0px 0px;
+    padding: 58px 0 0 0;
 }
 
 section .perfomance-box-inner p
@@ -436,7 +450,7 @@ section .perfomance-box-inner p
     display: flex;
     text-align: center;
     margin: 0px;
-    padding: 107px 0px 0px 0px;
+    padding: 107px 0 0 0;
 }
 
 .rapids-perfomance ul li
@@ -569,10 +583,10 @@ section.gpu-pipeline
     background: #f8f8f8;
 }
 
-.features-content h2
+/*.features-content h2
 {
     padding: 70px 0px 55px 0px;
-}
+}*/
 
 .three-cols-row ul,
 .features-row ul
@@ -682,13 +696,13 @@ section.community-main p
 footer
 {
     background: url(../images/footer-bg.png) top center no-repeat;
-    padding: 100px 0px 0px 0px;
+    padding: 100px 0 0 0;
 }
 
 .footer-content
 {
     display: flex;
-    padding: 40px 0px 0px 0px;
+    padding: 40px 0 0 0;
 }
 
 .footer-nav
@@ -813,7 +827,7 @@ section.contact-rapids h2
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    padding: 50px 0px 0px 0px;
+    padding: 50px 0 0 0;
 }
 
 .contact-opt-box
@@ -941,6 +955,7 @@ section.rapids-adopter
 
 div.highlighter-rouge
 {
+    background: #ffffff;
     border: 1px solid #d3d3d3;
     padding: 20px;
     margin: 0px 0px 30px 0px;
@@ -1088,7 +1103,7 @@ div.highlighter-rouge div pre
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 40px 0px 0px 0px;
+    padding: 40px 0 0 0;
 }
 
 .footer-help-box
@@ -1345,7 +1360,7 @@ div.selector {
 
     .branding
     {
-        padding: 80px 0px 0px 0px;
+        padding: 80px 0 0 0;
     }
 
     .home-page .branding .logo
@@ -1449,12 +1464,12 @@ div.selector {
 
     footer
     {
-        padding: 50px 0px 0px 0px;
+        padding: 50px 0 0 0;
     }
 
     .footer-content
     {
-        padding: 20px 0px 0px 0px;
+        padding: 20px 0 0 0;
     }
 
     .footer-nav
@@ -1542,7 +1557,7 @@ div.selector {
     .contact-opt-box
     {
         flex: 0 0 100%;
-        padding: 60px 0px 0px 0px;
+        padding: 60px 0 0 0;
     }
 
     .contact-opt-box:first-child
@@ -1632,7 +1647,7 @@ div.selector {
     .footer-help-section
     {
         flex-wrap: wrap;
-        padding: 0px 0px 0px 0px;
+        padding: 0 0 0 0px;
     }
 
     .footer-help-box
@@ -1670,7 +1685,7 @@ div.selector {
 
     .Pipeline-Diagram
     {
-        padding: 40px 0px 0px 0px;
+        padding: 40px 0 0 0;
     }
 
     .gpu-list ul li
