@@ -3,6 +3,9 @@
 
 - name: GETTING STARTED
   link: /start.html
+  
+- name: RESOURCES & DOCS
+  link: /docs.html
 
 - name: COMMUNITY
   link: /community.html
@@ -15,3 +18,5 @@
 
 - name: BLOGS
   link: https://medium.com/rapids-ai
+
+  
