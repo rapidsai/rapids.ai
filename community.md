@@ -93,7 +93,7 @@ layout: default
             <div class="footer-help-box">
                 <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/docker-icon.svg %}" alt="docker hub"></div>
                 <p>Docker Hub</p>
-                <a href="https://hub.docker.com/u/rapidsai" target="_blank" class="primary-btn purple">RUN&nbsp;US</a>
+                <a href="https://hub.docker.com/r/rapidsai/rapidsai" target="_blank" class="primary-btn purple">RUN&nbsp;US</a>
             </div>
             <div class="footer-help-box">
                 <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/stackoverflow-white.svg %}" alt="stack overflow"></div>
