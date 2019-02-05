@@ -2,7 +2,7 @@
 title: "Technical Documentation, Docker Container | RAPIDS"
 og_title: "RAPIDS Getting Started"
 og_description: "Get started with RAPIDS using conda, docker, pip, or from source builds."
-brand_name: "GETTING STARTED"
+brand_name: ""
 brand_tagline: "Learn how to use RAPIDS"
 brand_button: "DOWNLOAD CHEAT SHEET"
 brand_link: "assets/files/cheatsheet.pdf"

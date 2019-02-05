@@ -2,8 +2,8 @@
 title: "RAPIDS Developer and Contributor Community | RAPIDS"
 og_title: "RAPIDS Developer and Contributor Community"
 og_description: "Learn how to become a RAPIDS adopter, contributor and more. Start contributing today!"
-brand_name: "COMMUNITY"
-brand_tagline: "Learn how to become an adopter, a contributor, and more."
+brand_name: ""
+brand_tagline: "Learn how to become an adopter,<br/>a contributor, and more."
 brand_button: "CONTRIBUTE"
 brand_link: "https://github.com/rapidsai"
 layout: default
