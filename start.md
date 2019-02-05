@@ -7,6 +7,7 @@ brand_tagline: "Learn how to use RAPIDS"
 brand_button: "DOWNLOAD CHEAT SHEET"
 brand_link: "assets/files/cheatsheet.pdf"
 layout: default
+redirect_from: "/documentation.html"
 ---
 {% capture section_intro %}
 ## Introduction to RAPIDS

@@ -2,3 +2,5 @@ name: RAPIDS
 title: RAPIDS
 baseurl: "/"
 exclude: ['_drafts', 'README.md', '.gitignore', 'CNAME']
+plugins:
+  - jekyll-redirect-from
