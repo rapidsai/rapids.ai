@@ -47,8 +47,9 @@ $ add-apt-repository ppa:jonathonf/python-3.6 #Or 3.7
 $ apt update && apt install python3.6 #Or 3.7
 ```
 ### Install RAPIDS
-##### RAPIDS is available as conda or pip packages, docker images, and from source builds. Use the tool below to select your preferred method, packages, and environment to install RAPIDS. Certain combinations may not be possible and are dimmed automatically. Be sure to review the [prerequisites](#prerequisites) section for more details about requirements to use RAPIDS.
+##### RAPIDS is available as conda or pip packages, docker images, and from source builds. Use the [Installation Script Generator](#IGS) tool below to select your preferred method, packages, and environment to install RAPIDS. Certain combinations may not be possible and are dimmed automatically. Be sure to review the [prerequisites](#prerequisites) section for more details about requirements to use RAPIDS.
 
+### Installation Script Generator ### {#IGS}
 {% include options.html %}
 
 {% endcapture %}
