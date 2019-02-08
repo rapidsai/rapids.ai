@@ -54,7 +54,7 @@ For instructions on how to build a development conda environment, see the [cuDF 
 Run the following command within the Docker container started from the command [above](#get-rapids) to launch the notebook server:
 
 ```bash
-(rapids) root@container:/rapids/notebooks/$ bash utils/start-jupyter.sh
+(rapids) root@container:/rapids/notebooks# bash utils/start-jupyter.sh
 ```
 **NOTE:** This will run [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) on your host machine at port 8888.
 
