@@ -172,57 +172,57 @@
 <!-- docker -->
 
 ```bash
-docker pull rapidsai/rapidsai:latest
-docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+sudo docker pull rapidsai/rapidsai:latest
+sudo docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:latest
 ```
 {: .both-docker-ubuntu1604-py36-cuda92 .hidden }
 
 ```bash
-docker pull rapidsai/rapidsai:0.5-cuda9.2-runtime-ubuntu16.04-gcc5-py3.7
-docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+sudo docker pull rapidsai/rapidsai:0.5-cuda9.2-runtime-ubuntu16.04-gcc5-py3.7
+sudo docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:0.5-cuda9.2-runtime-ubuntu16.04-gcc5-py3.7
 ```
 {: .both-docker-ubuntu1604-py37-cuda92 .hidden }
 
 ```bash
-docker pull rapidsai/rapidsai:cuda10.0-runtime-ubuntu16.04
-docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+sudo docker pull rapidsai/rapidsai:cuda10.0-runtime-ubuntu16.04
+sudo docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:cuda10.0-runtime-ubuntu16.04
 ```
 {: .both-docker-ubuntu1604-py36-cuda10- .hidden }
 
 ```bash
-docker pull rapidsai/rapidsai:0.5-cuda10.0-runtime-ubuntu16.04-gcc5-py3.7
-docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+sudo docker pull rapidsai/rapidsai:0.5-cuda10.0-runtime-ubuntu16.04-gcc5-py3.7
+sudo docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:0.5-cuda10.0-runtime-ubuntu16.04-gcc5-py3.7
 ```
 {: .both-docker-ubuntu1604-py37-cuda100 .hidden }
 
 ```bash
-docker pull rapidsai/rapidsai:cuda9.2-runtime-ubuntu18.04
-docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+sudo docker pull rapidsai/rapidsai:cuda9.2-runtime-ubuntu18.04
+sudo docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:cuda9.2-runtime-ubuntu18.04
 ```
 {: .both-docker-ubuntu1804-py36-cuda92 .hidden }
 
 ```bash
-docker pull rapidsai/rapidsai:0.5-cuda9.2-runtime-ubuntu18.04-gcc7-py3.7
-docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+sudo docker pull rapidsai/rapidsai:0.5-cuda9.2-runtime-ubuntu18.04-gcc7-py3.7
+sudo docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:0.5-cuda9.2-runtime-ubuntu18.04-gcc7-py3.7
 ```
 {: .both-docker-ubuntu1804-py37-cuda92 .hidden }
 
 ```bash
-docker pull rapidsai/rapidsai:cuda10.0-runtime-ubuntu18.04
-docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+sudo docker pull rapidsai/rapidsai:cuda10.0-runtime-ubuntu18.04
+sudo docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:cuda10.0-runtime-ubuntu18.04
 ```
 {: .both-docker-ubuntu1804-py36-cuda100 .hidden }
 
 ```bash
-docker pull rapidsai/rapidsai:0.5-cuda10.0-runtime-ubuntu18.04-gcc7-py3.7
-docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+sudo docker pull rapidsai/rapidsai:0.5-cuda10.0-runtime-ubuntu18.04-gcc7-py3.7
+sudo docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:0.5-cuda10.0-runtime-ubuntu18.04-gcc7-py3.7
 ```
 {: .both-docker-ubuntu1804-py37-cuda100 .hidden }
@@ -230,49 +230,49 @@ docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 <!-- source -->
 
 ```bash
-# See cuDF README for build instructions
+# Please click Source Details below to see cuDF README for build instructions
 ```
 {: .cudf-source .hidden }
 
 ```bash
-# See cuML README for build instructions
+# Please click Source Details below to see cuML README for build instructions
 ```
 {: .cuml-source .hidden }
 
 <!-- conda cuda92 -->
 
 ```bash
-conda install -c nvidia -c rapidsai -c numba -c conda-forge -c defaults \
+sudo conda install -c nvidia -c rapidsai -c numba -c conda-forge -c defaults \
     cudf=0.5 python=3.6
 ```
 {: .cudf-conda-ubuntu1604-py36-cuda92 .cudf-conda-ubuntu1804-py36-cuda92 .hidden }
 
 ```bash
-conda install -c nvidia -c rapidsai -c numba -c conda-forge -c defaults \
+sudo conda install -c nvidia -c rapidsai -c numba -c conda-forge -c defaults \
     cudf=0.5 python=3.7
 ```
 {: .cudf-conda-ubuntu1604-py37-cuda92 .cudf-conda-ubuntu1804-py37-cuda92 .hidden }
 
 ```bash
-conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
+sudo conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
     -c defaults cuml=0.5 python=3.6
 ```
 {: .cuml-conda-ubuntu1604-py36-cuda92 .cuml-conda-ubuntu1804-py36-cuda92 .hidden }
 
 ```bash
-conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
+sudo conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
     -c defaults cuml=0.5 python=3.7
 ```
 {: .cuml-conda-ubuntu1604-py37-cuda92 .cuml-conda-ubuntu1804-py37-cuda92 .hidden }
 
 ```bash
-conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
+sudo conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
     -c defaults cudf=0.5 cuml=0.5 python=3.6
 ```
 {: .both-conda-ubuntu1604-py36-cuda92 .both-conda-ubuntu1804-py36-cuda92 .hidden }
 
 ```bash
-conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
+sudo conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
     -c defaults cudf=0.5 cuml=0.5 python=3.7
 ```
 {: .both-conda-ubuntu1604-py37-cuda92 .both-conda-ubuntu1804-py37-cuda92 .hidden }
@@ -280,37 +280,37 @@ conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
 <!-- conda cuda100 -->
 
 ```bash
-conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c numba \
+sudo conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c numba \
     -c conda-forge -c defaults cudf=0.5 python=3.6
 ```
 {: .cudf-conda-ubuntu1604-py36-cuda100 .cudf-conda-ubuntu1804-py36-cuda100 .hidden }
 
 ```bash
-conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c numba \
+sudo conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c numba \
     -c conda-forge -c defaults cudf=0.5 python=3.7
 ```
 {: .cudf-conda-ubuntu1604-py37-cuda100 .cudf-conda-ubuntu1804-py37-cuda100 .hidden }
 
 ```bash
-conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
+sudo conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
     -c numba -c conda-forge -c defaults cuml=0.5 python=3.6
 ```
 {: .cuml-conda-ubuntu1604-py36-cuda100 .cuml-conda-ubuntu1804-py36-cuda100 .hidden }
 
 ```bash
-conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
+sudo conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
     -c numba -c conda-forge -c defaults cuml=0.5 python=3.7
 ```
 {: .cuml-conda-ubuntu1604-py37-cuda100 .cuml-conda-ubuntu1804-py37-cuda100 .hidden }
 
 ```bash
-conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
+sudo conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
     -c numba -c conda-forge -c defaults cudf=0.5 cuml=0.5 python=3.6
 ```
 {: .both-conda-ubuntu1604-py36-cuda100 .both-conda-ubuntu1804-py36-cuda100 .hidden }
 
 ```bash
-conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
+sudo conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
     -c numba -c conda-forge -c defaults cudf=0.5 cuml=0.5 python=3.7
 ```
 {: .both-conda-ubuntu1604-py37-cuda100 .both-conda-ubuntu1804-py37-cuda100 .hidden }
@@ -320,48 +320,48 @@ conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
-python3.6 -m pip install cudf-cuda92=0.5
+sudo python3.6 -m pip install cudf-cuda92==0.5
 ```
 {: .cudf-pip-ubuntu1604-py36-cuda92 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
-python3.7 -m pip install cudf-cuda92=0.5
+sudo python3.7 -m pip install cudf-cuda92==0.5
 ```
 {: .cudf-pip-ubuntu1604-py37-cuda92 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
-python3.6 -m pip install cudf-cuda100=0.5
+sudo python3.6 -m pip install cudf-cuda100==0.5
 ```
 {: .cudf-pip-ubuntu1604-py36-cuda100 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
-python3.7 -m pip install cudf-cuda100=0.5
+sudo python3.7 -m pip install cudf-cuda100==0.5
 ```
 {: .cudf-pip-ubuntu1604-py37-cuda100 .hidden }
 
 ```bash
-python3.6 -m pip install cudf-cuda92=0.5
+sudo python3.6 -m pip install cudf-cuda92==0.5
 ```
 {: .cudf-pip-ubuntu1804-py36-cuda92 .hidden }
 
 ```bash
-python3.7 -m pip install cudf-cuda92=0.5
+sudo python3.7 -m pip install cudf-cuda92==0.5
 ```
 {: .cudf-pip-ubuntu1804-py37-cuda92 .hidden }
 
 ```bash
-python3.6 -m pip install cudf-cuda100=0.5
+sudo python3.6 -m pip install cudf-cuda100==0.5
 ```
 {: .cudf-pip-ubuntu1804-py36-cuda100 .hidden }
 
 ```bash
-python3.7 -m pip install cudf-cuda100=0.5
+sudo python3.7 -m pip install cudf-cuda100==0.5
 ```
 {: .cudf-pip-ubuntu1804-py37-cuda100 .hidden }
 
@@ -370,48 +370,48 @@ python3.7 -m pip install cudf-cuda100=0.5
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
-python3.6 -m pip install cuml-cuda92=0.5
+sudo python3.6 -m pip install cuml-cuda92==0.5
 ```
 {: .cuml-pip-ubuntu1604-py36-cuda92 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
-python3.7 -m pip install cuml-cuda92=0.5
+sudo python3.7 -m pip install cuml-cuda92==0.5
 ```
 {: .cuml-pip-ubuntu1604-py37-cuda92 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
-python3.6 -m pip install cuml-cuda100=0.5
+sudo python3.6 -m pip install cuml-cuda100==0.5
 ```
 {: .cuml-pip-ubuntu1604-py36-cuda100 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
-python3.7 -m pip install cuml-cuda100=0.5
+sudo python3.7 -m pip install cuml-cuda100==0.5
 ```
 {: .cuml-pip-ubuntu1604-py37-cuda100 .hidden }
 
 ```bash
-python3.6 -m pip install cuml-cuda92=0.5
+sudo python3.6 -m pip install cuml-cuda92==0.5
 ```
 {: .cuml-pip-ubuntu1804-py36-cuda92 .hidden }
 
 ```bash
-python3.7 -m pip install cuml-cuda92=0.5
+sudo python3.7 -m pip install cuml-cuda92==0.5
 ```
 {: .cuml-pip-ubuntu1804-py37-cuda92 .hidden }
 
 ```bash
-python3.6 -m pip install cuml-cuda100=0.5
+sudo python3.6 -m pip install cuml-cuda100==0.5
 ```
 {: .cuml-pip-ubuntu1804-py36-cuda100 .hidden }
 
 ```bash
-python3.7 -m pip install cuml-cuda100=0.5
+sudo python3.7 -m pip install cuml-cuda100==0.5
 ```
 {: .cuml-pip-ubuntu1804-py37-cuda100 .hidden }
 
@@ -420,47 +420,47 @@ python3.7 -m pip install cuml-cuda100=0.5
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
-python3.6 -m pip install cudf-cuda92=0.5 cuml-cuda92=0.5
+sudo python3.6 -m pip install cudf-cuda92==0.5 cuml-cuda92==0.5
 ```
 {: .both-pip-ubuntu1604-py36-cuda92 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
-python3.7 -m pip install cudf-cuda92=0.5 cuml-cuda92=0.5
+sudo python3.7 -m pip install cudf-cuda92==0.5 cuml-cuda92==0.5
 ```
 {: .both-pip-ubuntu1604-py37-cuda92 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
-python3.6 -m pip install cudf-cuda100=0.5 cuml-cuda100=0.5
+sudo python3.6 -m pip install cudf-cuda100==0.5 cuml-cuda100==0.5
 ```
 {: .both-pip-ubuntu1604-py36-cuda100 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
-python3.7 -m pip install cudf-cuda100=0.5 cuml-cuda100=0.5
+sudo python3.7 -m pip install cudf-cuda100==0.5 cuml-cuda100==0.5
 ```
 {: .both-pip-ubuntu1604-py37-cuda100 .hidden }
 
 ```bash
-python3.6 -m pip install cudf-cuda92=0.5 cuml-cuda92=0.5
+sudo python3.6 -m pip install cudf-cuda92==0.5 cuml-cuda92==0.5
 ```
 {: .both-pip-ubuntu1804-py36-cuda92 .hidden }
 
 ```bash
-python3.7 -m pip install cudf-cuda92=0.5 cuml-cuda92=0.5
+sudo python3.7 -m pip install cudf-cuda92==0.5 cuml-cuda92==0.5
 ```
 {: .both-pip-ubuntu1804-py37-cuda92 .hidden }
 
 ```bash
-python3.6 -m pip install cudf-cuda100=0.5 cuml-cuda100=0.5
+sudo python3.6 -m pip install cudf-cuda100==0.5 cuml-cuda100==0.5
 ```
 {: .both-pip-ubuntu1804-py36-cuda100 .hidden }
 
 ```bash
-python3.7 -m pip install cudf-cuda100=0.5 cuml-cuda100=0.5
+sudo python3.7 -m pip install cudf-cuda100==0.5 cuml-cuda100==0.5
 ```
 {: .both-pip-ubuntu1804-py37-cuda100 .hidden }

@@ -34,17 +34,20 @@ We suggest that you take a look at the sample workflow in our Docker container (
 * NVIDIA Pascal™ GPU architecture or better
 * CUDA [9.2](https://developer.nvidia.com/cuda-92-download-archive) or [10.0](https://developer.nvidia.com/cuda-downloads) compatible nvidia driver
 * Ubuntu 16.04 or 18.04
+* Python 3.6 or 3.7
 * For Docker Images
-  * Docker CE v18+
+  * [Docker CE v18+](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
   * [nvidia-docker](https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0)) v2+
 
 #### <br/>Ubuntu 16.04 Python Install
 By default, Ubuntu 16.04's `python3` package is Python 3.5, so you need to install Python 3.6 or 3.7 with the following steps:
 
 ```bash
-$ apt-get install software-properties-common python-software-properties
-$ add-apt-repository ppa:jonathonf/python-3.6 #Or 3.7
-$ apt update && apt install python3.6 #Or 3.7
+$ sudo apt-get install software-properties-common python-software-properties
+$ sudo add-apt-repository ppa:jonathonf/python-3.6 #Or 3.7
+$ sudo apt update && sudo apt install python3.6 #Or 3.7
+$ wget https://bootstrap.pypa.io/get-pip.py
+$ sudo python3.6 get-pip.py #Or python3.7
 ```
 ### Install RAPIDS
 ##### RAPIDS is available as conda or pip packages, docker images, and from source builds. Use the [Installation Script Generator](#IGS) tool below to select your preferred method, packages, and environment to install RAPIDS. Certain combinations may not be possible and are dimmed automatically. Be sure to review the [prerequisites](#prerequisites) section for more details about requirements to use RAPIDS.
