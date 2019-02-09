@@ -28,8 +28,6 @@ We suggest that you take a look at the sample workflow in our Docker container (
 {% include sec-white.html content=section_intro %}
 
 {% capture section_conda %}
-## Installation
-#### 1. Setup Prerequisites
 
 * NVIDIA Pascal™ GPU architecture or better
 * CUDA [9.2](https://developer.nvidia.com/cuda-92-download-archive) or [10.0](https://developer.nvidia.com/cuda-downloads) compatible nvidia driver
