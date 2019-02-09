@@ -31,12 +31,17 @@
             </div>
         </div>
     </div>
+    <!--<div style='width: 100%;'>
+        <div id='details'>
+        </div>
+    </div>-->
 </div>
 
 <p class="text-center pad-top-40">
-    <a id='copy-command' onclick='CopyToClipboard("command-code")' class='btn primary-btn orange'>COPY COMMAND</a><a id='more-details' href='#using-rapids' class='primary-btn blue'>MORE DETAILS</a>
+    <a id='copy-command' class='btn primary-btn orange'>Copy Command to Clipboard</a>
 </p>
-
+<div id='details'>
+</div>
 <script type="text/javascript">
 /* Adopted from https://pytorch.org/assets/quick-start-module.js */
 
@@ -45,6 +50,7 @@
     var linux=['ubuntu1604','ubuntu1804'];
     var python=['py36','py37'];
     var cuda=['cuda92','cuda100'];
+    var readme=['https://github.com/rapidsai/cudf/tree/master#development-setup', 'https://github.com/rapidsai/cuml/tree/master#pip']
 
     var pkg_opts = $(".pkg > .option");
     var method_opts = $(".method > .option");
@@ -133,6 +139,7 @@
         $("#"+selections['cuda']).addClass("active");
 
         showCommand();
+        showRun();
     }
 
     function getSelections() {
@@ -145,12 +152,32 @@
 
     function showCommand() {
         var key = getSelections();
-        var command = $("."+key).html();
-        var anchor = details[selections['method']];
-        var txt = (""+selections['method']+" details").toUpperCase();
-        $("#command").html(command);
-        $("#command > div > pre > code ").attr("id", "command-code")
-        $("#more-details").attr('href',"#"+anchor).text(txt);
+        if(selections['method'] == 'source'){
+            var command = $("."+key).html();
+            var txt = "Go to "+ selections['pkg'] + " README"
+            $("#command").html(command);
+            $("#copy-command").attr('href', readme[pkg.indexOf(selections['pkg'])]).text(txt);
+        }else{
+            var command = $("."+key).html();
+            var txt = 'Copy Command to Clipboard'
+            $("#command").html(command);
+            $("#command > div > pre > code ").attr("id", "command-code")
+            $("#copy-command").attr('href',null).text(txt);
+            $('#copy-command').attr('onclick', 'CopyToClipboard("command-code")').text(txt)
+        }
+    }
+    function showRun() {
+        if( selections['method'] == 'source'){
+            var startText= '<h4 id="3-get-running">3. Get RAPIDS Running from ' + selections['method'].toUpperCase()+ '</h4>';
+        }else{
+            var startText= '<h4 id="3-get-running">3. Get RAPIDS Running with ' + selections['method'].toUpperCase()+ '</h4>';
+        }
+        var htmlText = ['<h3 id="conda-install">Conda Install</h3><p>You can get a minimal conda installation with <a href="https://conda.io/miniconda.html">Miniconda</a> or get the full installation with <a href="https://www.anaconda.com/download">Anaconda</a>.</p><p>For instructions on how to build a development conda environment, see the <a href="https://github.com/rapidsai/cudf/blob/master/README.md#conda">cuDF README</a> for more information. Also refer to the <a href="https://github.com/rapidsai/cuml/blob/master/README.md#conda">cuML README</a> for conda install instructions for cuML.</p>' ,
+                        '<h3 id="docker-container">Docker Container</h3><p>Run the following commands within the Docker container started from the command <a href="#get-rapids">above</a>:</p><div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>root@container:/rapids/notebooks/<span class="nv">$ </span><span class="nb">source </span>activate rapids<span class="o">(</span>rapids<span class="o">)</span> <br>root@container:/rapids/notebooks/<span class="nv">$ </span>bash utils/start-jupyter.sh</code></pre></div></div><p><strong>NOTE:</strong> This will run <a href="https://jupyterlab.readthedocs.io/en/stable/">JupyterLab</a> on port 8888 on your host machine.</p><h5 id="use-jupyterlab-to-explore-the-notebooks">Use JupyterLab to Explore the Notebooks</h5><p>Notebooks can be found in two directories within the container:</p><ul><li><code class="highlighter-rouge">/rapids/notebooks/cuml</code> - cuML demo notebooks<ul><li>These notebooks have data pre-loaded in the container image and will be decompressed by the notebooks</li></ul></li><li><code class="highlighter-rouge">/rapids/notebooks/mortgage</code> - cuDF, Dask, XGBoost demo notebook<ul><li>This notebook requires download of <a href="https://rapidsai.github.io/demos/datasets/mortgage-data">Mortgage Data</a>, see notebook <code class="highlighter-rouge">E2E.ipynb</code> for more details</li></ul></li></ul><h5 id="advanced-usage">Advanced Usage</h5><p>See the <a href="https://hub.docker.com/r/rapidsai/rapidsai">RAPIDS Container README</a> page for more information about using custom datasets. <a href="https://hub.docker.com/r/rapidsai/rapidsai/">Docker Hub</a> and <a href="https://ngc.nvidia.com/catalog/containers/nvidia%2Frapidsai%2Frapidsai">NVIDA GPU Cloud</a> host RAPIDS containers with full list of available <a href="https://hub.docker.com/r/rapidsai/rapidsai#full-tag-list">tags</a>.</p>',
+                        '<h3 id="pip-install">Pip Install</h3><p><strong>NOTE:</strong> Ubuntu 16.04’s <code class="highlighter-rouge">python3</code> package is Python 3.5, follow the <a href="#ubuntu-1604-python-install">python install</a> instructions to upgrade. <br><br>Refer to the <a href="https://github.com/rapidsai/cudf/tree/master#pip">cuDF README</a> or <a href="https://github.com/rapidsai/cuml/tree/master#pip">cuML README</a> for pip install instructions.</p>',
+                        '<h3 id="build-from-source">Build From Source</h3><p>Checkout the <a href="https://github.com/rapidsai/cudf/tree/master#development-setup">cuDF README</a> or <a href="https://github.com/rapidsai/cuml/tree/master#pip">cuML README</a> for from source build instructions.</p>'];
+        var completeText = startText + htmlText[method.indexOf(selections['method'])]
+        $("#details").html(completeText);
     }
 
     function CopyToClipboard(containerid) {
@@ -172,57 +199,57 @@
 <!-- docker -->
 
 ```bash
-docker pull rapidsai/rapidsai:latest
-docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+sudo docker pull rapidsai/rapidsai:latest
+sudo docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:latest
 ```
 {: .both-docker-ubuntu1604-py36-cuda92 .hidden }
 
 ```bash
-docker pull rapidsai/rapidsai:0.5-cuda9.2-runtime-ubuntu16.04-gcc5-py3.7
-docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+sudo docker pull rapidsai/rapidsai:0.5-cuda9.2-runtime-ubuntu16.04-gcc5-py3.7
+sudo docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:0.5-cuda9.2-runtime-ubuntu16.04-gcc5-py3.7
 ```
 {: .both-docker-ubuntu1604-py37-cuda92 .hidden }
 
 ```bash
-docker pull rapidsai/rapidsai:cuda10.0-runtime-ubuntu16.04
-docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+sudo docker pull rapidsai/rapidsai:cuda10.0-runtime-ubuntu16.04
+sudo docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:cuda10.0-runtime-ubuntu16.04
 ```
 {: .both-docker-ubuntu1604-py36-cuda10- .hidden }
 
 ```bash
-docker pull rapidsai/rapidsai:0.5-cuda10.0-runtime-ubuntu16.04-gcc5-py3.7
-docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+sudo docker pull rapidsai/rapidsai:0.5-cuda10.0-runtime-ubuntu16.04-gcc5-py3.7
+sudo docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:0.5-cuda10.0-runtime-ubuntu16.04-gcc5-py3.7
 ```
 {: .both-docker-ubuntu1604-py37-cuda100 .hidden }
 
 ```bash
-docker pull rapidsai/rapidsai:cuda9.2-runtime-ubuntu18.04
-docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+sudo docker pull rapidsai/rapidsai:cuda9.2-runtime-ubuntu18.04
+sudo docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:cuda9.2-runtime-ubuntu18.04
 ```
 {: .both-docker-ubuntu1804-py36-cuda92 .hidden }
 
 ```bash
-docker pull rapidsai/rapidsai:0.5-cuda9.2-runtime-ubuntu18.04-gcc7-py3.7
-docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+sudo docker pull rapidsai/rapidsai:0.5-cuda9.2-runtime-ubuntu18.04-gcc7-py3.7
+sudo docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:0.5-cuda9.2-runtime-ubuntu18.04-gcc7-py3.7
 ```
 {: .both-docker-ubuntu1804-py37-cuda92 .hidden }
 
 ```bash
-docker pull rapidsai/rapidsai:cuda10.0-runtime-ubuntu18.04
-docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+sudo docker pull rapidsai/rapidsai:cuda10.0-runtime-ubuntu18.04
+sudo docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:cuda10.0-runtime-ubuntu18.04
 ```
 {: .both-docker-ubuntu1804-py36-cuda100 .hidden }
 
 ```bash
-docker pull rapidsai/rapidsai:0.5-cuda10.0-runtime-ubuntu18.04-gcc7-py3.7
-docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+sudo docker pull rapidsai/rapidsai:0.5-cuda10.0-runtime-ubuntu18.04-gcc7-py3.7
+sudo docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:0.5-cuda10.0-runtime-ubuntu18.04-gcc7-py3.7
 ```
 {: .both-docker-ubuntu1804-py37-cuda100 .hidden }
@@ -230,49 +257,51 @@ docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 <!-- source -->
 
 ```bash
-# See cuDF README for build instructions
+# Please click the button below to see cuDF README for build instructions.
+# The button links to: https://github.com/rapidsai/cudf/tree/master#development-setup
 ```
 {: .cudf-source .hidden }
 
 ```bash
-# See cuML README for build instructions
+# Please click the button below to see cuML README for build instructions.
+# The button links to: https://github.com/rapidsai/cuml/tree/master#pip
 ```
 {: .cuml-source .hidden }
 
 <!-- conda cuda92 -->
 
 ```bash
-conda install -c nvidia -c rapidsai -c numba -c conda-forge -c defaults \
+sudo conda install -c nvidia -c rapidsai -c numba -c conda-forge -c defaults \
     cudf=0.5 python=3.6
 ```
 {: .cudf-conda-ubuntu1604-py36-cuda92 .cudf-conda-ubuntu1804-py36-cuda92 .hidden }
 
 ```bash
-conda install -c nvidia -c rapidsai -c numba -c conda-forge -c defaults \
+sudo conda install -c nvidia -c rapidsai -c numba -c conda-forge -c defaults \
     cudf=0.5 python=3.7
 ```
 {: .cudf-conda-ubuntu1604-py37-cuda92 .cudf-conda-ubuntu1804-py37-cuda92 .hidden }
 
 ```bash
-conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
+sudo conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
     -c defaults cuml=0.5 python=3.6
 ```
 {: .cuml-conda-ubuntu1604-py36-cuda92 .cuml-conda-ubuntu1804-py36-cuda92 .hidden }
 
 ```bash
-conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
+sudo conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
     -c defaults cuml=0.5 python=3.7
 ```
 {: .cuml-conda-ubuntu1604-py37-cuda92 .cuml-conda-ubuntu1804-py37-cuda92 .hidden }
 
 ```bash
-conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
+sudo conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
     -c defaults cudf=0.5 cuml=0.5 python=3.6
 ```
 {: .both-conda-ubuntu1604-py36-cuda92 .both-conda-ubuntu1804-py36-cuda92 .hidden }
 
 ```bash
-conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
+sudo conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
     -c defaults cudf=0.5 cuml=0.5 python=3.7
 ```
 {: .both-conda-ubuntu1604-py37-cuda92 .both-conda-ubuntu1804-py37-cuda92 .hidden }
@@ -280,37 +309,37 @@ conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
 <!-- conda cuda100 -->
 
 ```bash
-conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c numba \
+sudo conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c numba \
     -c conda-forge -c defaults cudf=0.5 python=3.6
 ```
 {: .cudf-conda-ubuntu1604-py36-cuda100 .cudf-conda-ubuntu1804-py36-cuda100 .hidden }
 
 ```bash
-conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c numba \
+sudo conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c numba \
     -c conda-forge -c defaults cudf=0.5 python=3.7
 ```
 {: .cudf-conda-ubuntu1604-py37-cuda100 .cudf-conda-ubuntu1804-py37-cuda100 .hidden }
 
 ```bash
-conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
+sudo conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
     -c numba -c conda-forge -c defaults cuml=0.5 python=3.6
 ```
 {: .cuml-conda-ubuntu1604-py36-cuda100 .cuml-conda-ubuntu1804-py36-cuda100 .hidden }
 
 ```bash
-conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
+sudo conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
     -c numba -c conda-forge -c defaults cuml=0.5 python=3.7
 ```
 {: .cuml-conda-ubuntu1604-py37-cuda100 .cuml-conda-ubuntu1804-py37-cuda100 .hidden }
 
 ```bash
-conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
+sudo conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
     -c numba -c conda-forge -c defaults cudf=0.5 cuml=0.5 python=3.6
 ```
 {: .both-conda-ubuntu1604-py36-cuda100 .both-conda-ubuntu1804-py36-cuda100 .hidden }
 
 ```bash
-conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
+sudo conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
     -c numba -c conda-forge -c defaults cudf=0.5 cuml=0.5 python=3.7
 ```
 {: .both-conda-ubuntu1604-py37-cuda100 .both-conda-ubuntu1804-py37-cuda100 .hidden }
@@ -320,48 +349,72 @@ conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
-python3.6 -m pip install cudf-cuda92=0.5
+sudo apt-get install software-properties-common python-software-properties
+sudo add-apt-repository ppa:jonathonf/python-3.6 #Or 3.7
+sudo apt update && sudo apt install python3.6 #Or 3.7
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python3.6 get-pip.py #Or python3.7
+sudo apt install libopenblas-base libomp-dev
+sudo python3.6 -m pip install cudf-cuda92==0.5
 ```
 {: .cudf-pip-ubuntu1604-py36-cuda92 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
-python3.7 -m pip install cudf-cuda92=0.5
+sudo apt-get install software-properties-common python-software-properties
+sudo add-apt-repository ppa:jonathonf/python-3.6 #Or 3.7
+sudo apt update && sudo apt install python3.6 #Or 3.7
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python3.6 get-pip.py #Or python3.7
+sudo apt install libopenblas-base libomp-dev
+sudo python3.7 -m pip install cudf-cuda92==0.5
 ```
 {: .cudf-pip-ubuntu1604-py37-cuda92 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
-python3.6 -m pip install cudf-cuda100=0.5
+sudo apt-get install software-properties-common python-software-properties
+sudo add-apt-repository ppa:jonathonf/python-3.6 #Or 3.7
+sudo apt update && sudo apt install python3.6 #Or 3.7
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python3.6 get-pip.py #Or python3.7
+sudo apt install libopenblas-base libomp-dev
+sudo python3.6 -m pip install cudf-cuda100==0.5
 ```
 {: .cudf-pip-ubuntu1604-py36-cuda100 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
-python3.7 -m pip install cudf-cuda100=0.5
+sudo apt-get install software-properties-common python-software-properties
+sudo add-apt-repository ppa:jonathonf/python-3.6 #Or 3.7
+sudo apt update && sudo apt install python3.6 #Or 3.7
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python3.6 get-pip.py #Or python3.7
+sudo apt install libopenblas-base libomp-dev
+sudo python3.7 -m pip install cudf-cuda100==0.5
 ```
 {: .cudf-pip-ubuntu1604-py37-cuda100 .hidden }
 
 ```bash
-python3.6 -m pip install cudf-cuda92=0.5
+sudo python3.6 -m pip install cudf-cuda92==0.5
 ```
 {: .cudf-pip-ubuntu1804-py36-cuda92 .hidden }
 
 ```bash
-python3.7 -m pip install cudf-cuda92=0.5
+sudo python3.7 -m pip install cudf-cuda92==0.5
 ```
 {: .cudf-pip-ubuntu1804-py37-cuda92 .hidden }
 
 ```bash
-python3.6 -m pip install cudf-cuda100=0.5
+sudo python3.6 -m pip install cudf-cuda100==0.5
 ```
 {: .cudf-pip-ubuntu1804-py36-cuda100 .hidden }
 
 ```bash
-python3.7 -m pip install cudf-cuda100=0.5
+sudo python3.7 -m pip install cudf-cuda100==0.5
 ```
 {: .cudf-pip-ubuntu1804-py37-cuda100 .hidden }
 
@@ -370,48 +423,72 @@ python3.7 -m pip install cudf-cuda100=0.5
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
-python3.6 -m pip install cuml-cuda92=0.5
+sudo apt-get install software-properties-common python-software-properties
+sudo add-apt-repository ppa:jonathonf/python-3.6 #Or 3.7
+sudo apt update && sudo apt install python3.6 #Or 3.7
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python3.6 get-pip.py #Or python3.7
+sudo apt install libopenblas-base libomp-dev
+sudo python3.6 -m pip install cuml-cuda92==0.5
 ```
 {: .cuml-pip-ubuntu1604-py36-cuda92 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
-python3.7 -m pip install cuml-cuda92=0.5
+sudo apt-get install software-properties-common python-software-properties
+sudo add-apt-repository ppa:jonathonf/python-3.6 #Or 3.7
+sudo apt update && sudo apt install python3.6 #Or 3.7
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python3.6 get-pip.py #Or python3.7
+sudo apt install libopenblas-base libomp-dev
+sudo python3.7 -m pip install cuml-cuda92==0.5
 ```
 {: .cuml-pip-ubuntu1604-py37-cuda92 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
-python3.6 -m pip install cuml-cuda100=0.5
+sudo apt-get install software-properties-common python-software-properties
+sudo add-apt-repository ppa:jonathonf/python-3.6 #Or 3.7
+sudo apt update && sudo apt install python3.6 #Or 3.7
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python3.6 get-pip.py #Or python3.7
+sudo apt install libopenblas-base libomp-dev
+sudo python3.6 -m pip install cuml-cuda100==0.5
 ```
 {: .cuml-pip-ubuntu1604-py36-cuda100 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
-python3.7 -m pip install cuml-cuda100=0.5
+sudo apt-get install software-properties-common python-software-properties
+sudo add-apt-repository ppa:jonathonf/python-3.6 #Or 3.7
+sudo apt update && sudo apt install python3.6 #Or 3.7
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python3.6 get-pip.py #Or python3.7
+sudo apt install libopenblas-base libomp-dev
+sudo python3.7 -m pip install cuml-cuda100==0.5
 ```
 {: .cuml-pip-ubuntu1604-py37-cuda100 .hidden }
 
 ```bash
-python3.6 -m pip install cuml-cuda92=0.5
+sudo python3.6 -m pip install cuml-cuda92==0.5
 ```
 {: .cuml-pip-ubuntu1804-py36-cuda92 .hidden }
 
 ```bash
-python3.7 -m pip install cuml-cuda92=0.5
+sudo python3.7 -m pip install cuml-cuda92==0.5
 ```
 {: .cuml-pip-ubuntu1804-py37-cuda92 .hidden }
 
 ```bash
-python3.6 -m pip install cuml-cuda100=0.5
+sudo python3.6 -m pip install cuml-cuda100==0.5
 ```
 {: .cuml-pip-ubuntu1804-py36-cuda100 .hidden }
 
 ```bash
-python3.7 -m pip install cuml-cuda100=0.5
+sudo python3.7 -m pip install cuml-cuda100==0.5
 ```
 {: .cuml-pip-ubuntu1804-py37-cuda100 .hidden }
 
@@ -420,47 +497,71 @@ python3.7 -m pip install cuml-cuda100=0.5
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
-python3.6 -m pip install cudf-cuda92=0.5 cuml-cuda92=0.5
+sudo apt-get install software-properties-common python-software-properties
+sudo add-apt-repository ppa:jonathonf/python-3.6 #Or 3.7
+sudo apt update && sudo apt install python3.6 #Or 3.7
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python3.6 get-pip.py #Or python3.7
+sudo apt install libopenblas-base libomp-dev
+sudo python3.6 -m pip install cudf-cuda92==0.5 cuml-cuda92==0.5
 ```
 {: .both-pip-ubuntu1604-py36-cuda92 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
-python3.7 -m pip install cudf-cuda92=0.5 cuml-cuda92=0.5
+sudo apt-get install software-properties-common python-software-properties
+sudo add-apt-repository ppa:jonathonf/python-3.6 #Or 3.7
+sudo apt update && sudo apt install python3.6 #Or 3.7
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python3.6 get-pip.py #Or python3.7
+sudo apt install libopenblas-base libomp-dev
+sudo python3.7 -m pip install cudf-cuda92==0.5 cuml-cuda92==0.5
 ```
 {: .both-pip-ubuntu1604-py37-cuda92 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
-python3.6 -m pip install cudf-cuda100=0.5 cuml-cuda100=0.5
+sudo apt-get install software-properties-common python-software-properties
+sudo add-apt-repository ppa:jonathonf/python-3.6 #Or 3.7
+sudo apt update && sudo apt install python3.6 #Or 3.7
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python3.6 get-pip.py #Or python3.7
+sudo apt install libopenblas-base libomp-dev
+sudo python3.6 -m pip install cudf-cuda100==0.5 cuml-cuda100==0.5
 ```
 {: .both-pip-ubuntu1604-py36-cuda100 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
-python3.7 -m pip install cudf-cuda100=0.5 cuml-cuda100=0.5
+sudo apt-get install software-properties-common python-software-properties
+sudo add-apt-repository ppa:jonathonf/python-3.6 #Or 3.7
+sudo apt update && sudo apt install python3.6 #Or 3.7
+wget https://bootstrap.pypa.io/get-pip.py
+sudo python3.6 get-pip.py #Or python3.7
+sudo apt install libopenblas-base libomp-dev
+sudo python3.7 -m pip install cudf-cuda100==0.5 cuml-cuda100==0.5
 ```
 {: .both-pip-ubuntu1604-py37-cuda100 .hidden }
 
 ```bash
-python3.6 -m pip install cudf-cuda92=0.5 cuml-cuda92=0.5
+sudo python3.6 -m pip install cudf-cuda92==0.5 cuml-cuda92==0.5
 ```
 {: .both-pip-ubuntu1804-py36-cuda92 .hidden }
 
 ```bash
-python3.7 -m pip install cudf-cuda92=0.5 cuml-cuda92=0.5
+sudo python3.7 -m pip install cudf-cuda92==0.5 cuml-cuda92==0.5
 ```
 {: .both-pip-ubuntu1804-py37-cuda92 .hidden }
 
 ```bash
-python3.6 -m pip install cudf-cuda100=0.5 cuml-cuda100=0.5
+sudo python3.6 -m pip install cudf-cuda100==0.5 cuml-cuda100==0.5
 ```
 {: .both-pip-ubuntu1804-py36-cuda100 .hidden }
 
 ```bash
-python3.7 -m pip install cudf-cuda100=0.5 cuml-cuda100=0.5
+sudo python3.7 -m pip install cudf-cuda100==0.5 cuml-cuda100==0.5
 ```
 {: .both-pip-ubuntu1804-py37-cuda100 .hidden }
