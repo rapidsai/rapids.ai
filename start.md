@@ -28,32 +28,98 @@ We suggest that you take a look at the sample workflow in our Docker container (
 {% include sec-white.html content=section_intro %}
 
 {% capture section_conda %}
+## Get RAPIDS
 
-* NVIDIA Pascal™ GPU architecture or better
-* CUDA [9.2](https://developer.nvidia.com/cuda-92-download-archive) or [10.0](https://developer.nvidia.com/cuda-downloads) compatible nvidia driver
-* Ubuntu 16.04 or 18.04
-* Python 3.6 or 3.7
-* For Docker Images
-  * [Docker CE v18+](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
-  * [nvidia-docker](https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0)) v2+
+##### RAPIDS is available as conda or pip packages, docker images, and from source builds. Use the tool below to select your preferred method, packages, and environment to install RAPIDS. Certain combinations may not be possible and are dimmed automatically. Be sure to review the [prerequisites](#prerequisites) section for more details about requirements to use RAPIDS.
 
-#### 2. Install  RAPIDS
-##### RAPIDS is available as conda or pip packages, docker images, and from source builds. Use the [Installation Script Generator](#IGS) tool below to select your preferred method, packages, and environment to install RAPIDS. Certain combinations may not be possible and are dimmed automatically. Be sure to review the [prerequisites](#prerequisites) section for more details about requirements to use RAPIDS.
-
-### Installation Script Generator ### {#IGS}
 {% include options.html %}
 
 {% endcapture %}
 {% include sec-left-purple.html content=section_conda %}
 
+{% capture section_container %}
+## Using RAPIDS
+{: .pad-top-0 .pad-bot-30 }
 
-{% capture section_info %}
-## Next Steps with RAPIDS
+##### Learn how to use RAPIDS with the method of your choice.
 
-Master RAPIDS by reading our Docs, trying our demos and how-tos, and collaborating with us.<br><br>
-[Docs and Resources](/docs.html){: .blue-btn }
-[Connect with Us](/community.html){: .blue-btn }
-{: .text-center }
+### <br/>Conda Install
+
+You can get a minimal conda installation with [Miniconda](https://conda.io/miniconda.html) or get the full installation with [Anaconda](https://www.anaconda.com/download).
+
+For instructions on how to build a development conda environment, see the [cuDF README](https://github.com/rapidsai/cudf/blob/master/README.md#conda) for more information. Also refer to the [cuML README](https://github.com/rapidsai/cuml/blob/master/README.md#conda) for conda install instructions for cuML.
+
+### <br/>Docker Container
+
+Run the following command within the Docker container started from the command [above](#get-rapids) to launch the notebook server:
+
+```bash
+(rapids) root@container:/rapids/notebooks# bash utils/start-jupyter.sh
+```
+**NOTE:** This will run [JupyterLab](https://jupyterlab.readthedocs.io/en/stable/) on your host machine at port 8888.
+
+#### Use JupyterLab to Explore the Notebooks
+
+Notebooks can be found in two directories within the container:
+
+* `/rapids/notebooks/cuml` - cuML demo notebooks
+  * These notebooks have data pre-loaded in the container image and will be decompressed by the notebooks
+* `/rapids/notebooks/mortgage` - cuDF, Dask, XGBoost demo notebook
+  * This notebook requires download of [Mortgage Data](https://rapidsai.github.io/demos/datasets/mortgage-data), see notebook `E2E.ipynb` for more details
+
+#### Advanced Usage
+
+See the [RAPIDS Container README](https://hub.docker.com/r/rapidsai/rapidsai) page for more information about using custom datasets. [Docker Hub](https://hub.docker.com/r/rapidsai/rapidsai/) and [NVIDA GPU Cloud](https://ngc.nvidia.com/catalog/containers/nvidia%2Frapidsai%2Frapidsai) host RAPIDS containers with full list of available [tags](https://hub.docker.com/r/rapidsai/rapidsai#full-tag-list).
+
+<!--  
+    the breaks in the headers are necessary to space the anchor so it doesn't 
+    place the header under the nav bar 
+-->
+### <br/>Pip Install
+
+**NOTE:** Ubuntu 16.04's `python3` package is Python 3.5, follow the [python install](#ubuntu-1604-python-install) instructions to upgrade. 
+Refer to the [cuDF README](https://github.com/rapidsai/cudf/tree/master#pip) or [cuML README](https://github.com/rapidsai/cuml/tree/master#pip) for pip install instructions.
+
+### <br/>Build From Source 
+
+Checkout the [cuDF README](https://github.com/rapidsai/cudf/tree/master#development-setup) or [cuML README](https://github.com/rapidsai/cuml/tree/master#pip) for from source build instructions.
 
 {% endcapture %}
-{% include sec-right-gray.html content=section_info %}
+{% include sec-right-gray.html content=section_container %}
+
+{% capture section_info %}
+## More Information
+
+### <br/>Prerequisites
+
+* NVIDIA Pascal™ GPU architecture or better
+* CUDA [9.2](https://developer.nvidia.com/cuda-92-download-archive) or [10.0](https://developer.nvidia.com/cuda-downloads) compatible nvidia driver
+* Ubuntu 16.04 or 18.04
+* For Docker Images
+  * Docker CE v18+
+  * [nvidia-docker](https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0)) v2+
+
+#### <br/>Ubuntu 16.04 Python Install
+By default, Ubuntu 16.04's `python3` package is Python 3.5, so you need to install Python 3.6 or 3.7 with the following steps:
+
+```bash
+$ apt-get install software-properties-common python-software-properties
+$ add-apt-repository ppa:jonathonf/python-3.6 #Or 3.7
+$ apt update && apt install python3.6 #Or 3.7
+```
+
+#### Documentation
+
+Check out the [cuDF](https://rapidsai.github.io/projects/cudf/en/latest), [cuML](https://rapidsai.github.io/projects/cuml/en/latest), and [XGBoost](https://xgboost.readthedocs.io/en/latest/) API docs.
+
+Learn how to setup a mult-node cuDF and XGBoost data preparation and distributed training environment by following the [mortgage data example notebook and scripts](https://github.com/rapidsai/notebooks).
+
+{% endcapture %}
+{% include sec-white.html content=section_info %}
+
+{% include cta-footer.html 
+name="Join the Community" 
+tagline="Learn how you can be an adopter, contributor, and more."
+button="Join Today"
+link="community.html"
+%}
