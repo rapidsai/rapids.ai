@@ -1,6 +1,7 @@
 <div class='selector'>
     <div style='width: 150px;'>
         <div class='labels'>
+            <div class='label'>&nbsp;</div>
             <div class='label'>Method</div>
             <div class='label'>Packages</div>
             <div class='label'>Linux</div>
@@ -11,8 +12,21 @@
     </div>
     <div style='width: 100%;'>
         <div class='options'>
+            <div class='preferred'>
+                <div class='option'>
+                    <span>
+                        <i class="fas fa-level-up-alt" data-fa-transform="down-6 rotate-180"></i>&nbsp;&nbsp;
+                        <i class="fas fa-check-square blue-font"></i>&nbsp;Preferred&nbsp;&nbsp;
+                        <i class="fas fa-level-down-alt" data-fa-transform="down-6"></i>
+                    </span>
+                </div>
+                <div class='option'>
+                    <span><i class="fas fa-level-up-alt" data-fa-transform="down-6 rotate-180"></i>&nbsp;<i class="fas fa-flask orange-font"></i>&nbsp;Beta</span>
+                    <span>&nbsp;</span>
+                </div>
+            </div>
             <div class='method'>
-                <div id='conda' class='option'>Conda</div><div id='pip' class='option'>Pip</div><div id='docker' class='option'>Docker</div><div id='source' class='option'>Source</div>
+                <div id='conda' class='option'>Conda</div><div id='docker' class='option'>Docker</div><div id='pip' class='option'>Pip</div><div id='source' class='option'>Source</div>
             </div>
             <div class='pkg'>
                 <div id='cudf' class='option'>cuDF</div><div id='cuml' class='option'>cuML</div><div id='both' class='option'>cuDF & cuML</div>
@@ -34,7 +48,7 @@
 </div>
 
 <p class="text-center pad-top-40">
-    <a id='copy-command' onclick='CopyToClipboard("command-code")' class='btn primary-btn orange'>COPY COMMAND</a><a id='more-details' href='#using-rapids' class='primary-btn blue'>MORE DETAILS</a>
+    <a id='copy-command' onclick='CopyToClipboard("command-code")' class='btn primary-btn orange'>COPY COMMAND <i class="fas fa-clipboard"></i></a><a id='more-details' href='#using-rapids' class='primary-btn blue'>MORE DETAILS </a>
 </p>
 
 <script type="text/javascript">
