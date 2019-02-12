@@ -301,6 +301,16 @@ a.blue-btn, .primary-btn
     background: #338aff;
 }
 
+.orange-font
+{
+    color:  #ffb500;
+}
+
+.blue-font
+{
+    color:  #36c9dd;
+}
+
 a.blue-btn:hover, .primary-btn:hover
 {
     background: #a785e7;
@@ -1217,6 +1227,16 @@ div.selector {
 
 .selector div.output {
     padding-top: 0.5em;
+}
+
+.selector div.preferred .option {
+    background: transparent;
+}
+
+.selector div.preferred span {
+    width: 100%;
+    color: #eee;
+    font-weight: 900;
 }
 
 #more-details {
