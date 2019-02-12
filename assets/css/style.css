@@ -1231,6 +1231,7 @@ div.selector {
 
 .selector div.preferred .option {
     background: transparent;
+    padding: 0.25em 0;
 }
 
 .selector div.preferred span {
