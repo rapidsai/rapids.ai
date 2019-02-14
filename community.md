@@ -86,19 +86,24 @@ layout: default
         <p>If you have any questions, please reach out.</p>
         <div class="footer-help-section">
             <div class="footer-help-box">
-                <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/google-group.svg %}" alt="google groups"></div>
+                <div class="footer-help-box-image"><i class="fas fa-users fa-6x white-font"></i></div>
                 <p>Google Groups</p>
                 <a href="https://groups.google.com/forum/#!forum/rapidsai" class="primary-btn blue-btn">CONTACT&nbsp;US</a>
             </div>
             <div class="footer-help-box">
-                <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/docker-icon.svg %}" alt="docker hub"></div>
+                <div class="footer-help-box-image"><i class="fab fa-docker fa-6x white-font"></i></div>
                 <p>Docker Hub</p>
                 <a href="https://hub.docker.com/r/rapidsai/rapidsai" target="_blank" class="primary-btn purple">RUN&nbsp;US</a>
             </div>
             <div class="footer-help-box">
-                <div class="footer-help-box-image"><img src="{{ site.baseurl }}{% link /assets/images/stackoverflow-white.svg %}" alt="stack overflow"></div>
+                <div class="footer-help-box-image"><i class="fab fa-slack fa-6x white-font"></i></div>
+                <p>Slack</p>
+                <a href="https://join.slack.com/t/rapids-goai/shared_invite/enQtMjE0Njg5NDQ1MDQxLTViZWFiYTY5MDA4NWY3OWViODg0YWM1MGQ1NzgzNTQwOWI1YjE3NGFlOTVhYjQzYWQ4YjI4NzljYzhiOGZmMGM" target="_blank" class="primary-btn orange">MESSAGE&nbsp;US</a>
+            </div>
+            <div class="footer-help-box">
+                <div class="footer-help-box-image"><i class="fab fa-stack-overflow fa-6x white-font"></i></div>
                 <p>Stack Overflow</p>
-                <a href="https://stackoverflow.com/tags/rapids" target="_blank" class="primary-btn orange">ASK&nbsp;US</a>
+                <a href="https://stackoverflow.com/tags/rapids" target="_blank" class="primary-btn blue">ASK&nbsp;US</a>
             </div>
         </div>
     </div>
