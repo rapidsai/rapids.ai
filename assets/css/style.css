@@ -311,6 +311,16 @@ a.blue-btn, .primary-btn
     color:  #36c9dd;
 }
 
+.dark-purple-font
+{
+    color:  #7400ff;
+}
+
+.white-font
+{
+    color: #ffffff;
+}
+
 a.blue-btn:hover, .primary-btn:hover
 {
     background: #a785e7;
