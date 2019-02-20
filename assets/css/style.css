@@ -90,7 +90,7 @@ nav ul li.active a
     font-weight: 700;
 }
 
-#header-2 nav ul
+#nav-fixed nav ul
 {
     display: flex;
     justify-content: center;
@@ -1088,7 +1088,7 @@ div.highlighter-rouge div pre
     color: #a785e7;
 }
 
-#header-2
+#nav-fixed
 {
     position: absolute;
     top: -94px;
@@ -1104,7 +1104,7 @@ div.highlighter-rouge div pre
     box-shadow: 4px 1px 11px rgba(0, 0, 0, 0.20);
 }
 
-#header-2.position-fixed{
+#nav-fixed.position-fixed{
     position:fixed;
     padding: 12px 0 12px 0;
     display: block;
@@ -1654,22 +1654,22 @@ div.selector {
         margin: 0px;
     }
 
-    #header-2 nav ul
+    #nav-fixed nav ul
     {
         display: block;
     }
 
-    #header-2 nav ul li:first-child
+    #nav-fixed nav ul li:first-child
     {
         display: block;
     }
     
-    #header-2 nav ul li:first-child a img
+    #nav-fixed nav ul li:first-child a img
     {
         max-width: 90px;
     }
 
-    #header-2
+    #nav-fixed
     {
         top: -110px;
         justify-content:center;
