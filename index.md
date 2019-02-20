@@ -1,5 +1,5 @@
 ---
-title: "Open GPU Data Science | RAPID"
+title: "Open GPU Data Science | RAPIDS"
 og_title: "RAPIDS: A Data Science & Analytics Pipeline Accelerator"
 og_description: "A suite of software libraries for executing end-to-end data science completely on GPUs"
 brand_name: ""
