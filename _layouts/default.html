@@ -32,22 +32,12 @@
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
     <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-    <script>
-      $(window).scroll(function () {
-        if ($(window).scrollTop() > $('#header-2').offset().top && !($('#header-2').hasClass('position-fixed'))) {
-          $('#header-2').addClass('position-fixed');
-        } else if ($(window).scrollTop() == 0) {
-          $('#header-2').removeClass('position-fixed');
-        }
-      });
-    </script>
 </head>
 <body>
-<div id="nav-fixed" class="">
-  {% include nav-fixed.html %}
-</div>
 <header>
-  {% include nav.html %}
+  <div id="nav-fixed" class="position-fixed">
+    {% include nav.html %}
+  </div>
   {% if page.brand_name == "" %}
   <div class="branding home">
   {% else %}

@@ -79,6 +79,12 @@ nav ul li
     margin: 0px;
 }
 
+nav ul li img
+{
+    height: 22px;
+    vertical-align: text-bottom;
+}
+
 nav ul li a
 {
     text-decoration: none;
@@ -1102,6 +1108,7 @@ div.highlighter-rouge div pre
     transition: all 0.3s ease-in-out;
     background: url(../images/header-bg.svg) top center no-repeat;
     box-shadow: 4px 1px 11px rgba(0, 0, 0, 0.20);
+    background-position-y: -80px;
 }
 
 #nav-fixed.position-fixed{
