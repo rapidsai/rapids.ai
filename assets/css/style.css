@@ -57,6 +57,12 @@ header.short
     background-position-y: -334px;
 }
 
+body.short
+{
+    margin-top: 80px;
+    padding-top: 40px;
+}
+
 .community-page header
 {
     background: url(../images/community-header.svg) top center no-repeat;
