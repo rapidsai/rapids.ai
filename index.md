@@ -146,6 +146,9 @@ RAPIDS is for everyone--users, adopters, and contributors. If you’re a data sc
         <img src="{{ site.baseurl }}{% link /assets/images/ibm-logo.png %}" alt="ibm">
     </div>
     <div class="contributing-logo">
+        <img src="{{ site.baseurl }}{% link /assets/images/iguazio_logo.png %}" alt="iguzaio">
+    </div>
+    <div class="contributing-logo">
         <img src="{{ site.baseurl }}{% link /assets/images/INRIA_CORPO_SANS_SIGNATURE_RVB.png %}" alt="inria">
     </div>
     <div class="contributing-logo">
