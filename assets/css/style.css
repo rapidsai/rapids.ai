@@ -222,6 +222,12 @@ section.right-gray
     padding-bottom: 168px;
 }
 
+section.end-gray
+{
+    background: #f8f8f8;
+    padding-bottom: 84px;
+}
+
 div.container-gray
 {
     background: #f8f8f8;
