@@ -63,6 +63,10 @@ body.short
     padding-top: 40px;
 }
 
+body.short h2 {
+    padding-bottom: 30px;
+}
+
 .community-page header
 {
     background: url(../images/community-header.svg) top center no-repeat;
