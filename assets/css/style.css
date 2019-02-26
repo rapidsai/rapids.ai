@@ -1802,3 +1802,52 @@ div.selector {
     }
 
 }
+
+.boxContent{
+    perspective: 80em;
+    width: 960px;
+    margin: auto;
+    display: inherit;
+}
+
+.box{
+    float: left;
+    position: relative;
+    width: 300px;
+    height: 300px;
+    background: rgba(229, 208, 255, 0.35);
+    box-sizing: border-box;
+    padding: 15px;
+    margin: 10px;
+    border-left: 6px solid !important;
+    }
+
+.boxContent a {
+    color: rgb(164, 93, 255);
+}
+
+.boxContent a:hover {
+    color: #36c9dd;
+}
+
+.box h4 {
+    font-size: 27px;
+    font-weight: 600;
+    color: #7400ff !important;
+    padding-top: 0;
+}
+
+.box h4 svg {
+    color: #7400ff !important;
+}
+
+.box p {
+    color: #000000 !important;
+    padding-top: 10px;
+}
+
+.box span.author {
+    display: block;
+    font-style: italic;
+    padding-bottom: 10px;
+}
