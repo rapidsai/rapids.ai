@@ -379,27 +379,35 @@ a.blue-btn:hover, .primary-btn:hover
 }
 
 .pad-top-0 {
-    padding-top: 0;
+    padding-top: 0 !important;
+}
+
+.pad-top-20 {
+    padding-top: 20px !important;
 }
 
 .pad-top-30 {
-    padding-top: 30px;
+    padding-top: 30px !important;
 }
 
 .pad-top-40 {
-    padding-top: 40px;
+    padding-top: 40px !important;
 }
 
 .pad-btm-0 {
-    padding-bottom: 0;
+    padding-bottom: 0 !important;
+}
+
+.pad-btm-20 {
+    padding-bottom: 20px !important ;
 }
 
 .pad-btm-30 {
-    padding-bottom: 30px;
+    padding-bottom: 30px !important ;
 }
 
 .pad-btm-40 {
-    padding-bottom: 40px;
+    padding-bottom: 40px !important;
 }
 
 section.about-rapids h2
