@@ -1,0 +1,19 @@
+<div class="boxContent">
+{% for entry in include.data %}
+  {% unless entry.link contains 'http' %}
+  <a href="{{ entry.link | prepend: site.baseurl }}">
+  {% else %}
+  <a href="{{ entry.link }}" target="_blank">
+  {% endunless %}
+    <div class="box" {% if include.height != nil %}style="height: {{ include.height }} !important;"{% endif %}>
+      <h4><i class="{{ entry.icon | default: 'fas fa-file-code' }} fa-sm"></i>&nbsp;{{ entry.name }}</h4>
+      <p>
+        {% if entry.auth != nil %}
+          <span class="author"><i class="fas fa-user-edit"></i> By {{ entry.auth }}</span>
+        {% endif %}
+        {{ entry.desc }}
+      </p>
+    </div>
+  </a>
+{% endfor %}
+</div>

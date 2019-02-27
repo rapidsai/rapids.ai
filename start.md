@@ -82,7 +82,7 @@ Refer to the [cuDF README](https://github.com/rapidsai/cudf/tree/master#pip) or 
 
 ### <br/>Build From Source 
 
-Checkout the [cuDF README](https://github.com/rapidsai/cudf/tree/master#development-setup) or [cuML README](https://github.com/rapidsai/cuml/tree/master#pip) for from source build instructions.
+Checkout the [cuDF README](https://github.com/rapidsai/cudf/tree/master#development-setup) or [cuML README](https://github.com/rapidsai/cuml/tree/master#installing-from-source) for from source build instructions.
 
 {% endcapture %}
 {% include sec-right-gray.html content=section_container %}
