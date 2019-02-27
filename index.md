@@ -1,5 +1,5 @@
 ---
-title: "Open GPU Data Science | RAPID"
+title: "Open GPU Data Science | RAPIDS"
 og_title: "RAPIDS: A Data Science & Analytics Pipeline Accelerator"
 og_description: "A suite of software libraries for executing end-to-end data science completely on GPUs"
 brand_name: ""
@@ -144,6 +144,9 @@ RAPIDS is for everyone--users, adopters, and contributors. If you’re a data sc
     </div>
     <div class="contributing-logo">
         <img src="{{ site.baseurl }}{% link /assets/images/ibm-logo.png %}" alt="ibm">
+    </div>
+    <div class="contributing-logo">
+        <img src="{{ site.baseurl }}{% link /assets/images/iguazio_logo.png %}" alt="iguzaio">
     </div>
     <div class="contributing-logo">
         <img src="{{ site.baseurl }}{% link /assets/images/INRIA_CORPO_SANS_SIGNATURE_RVB.png %}" alt="inria">
