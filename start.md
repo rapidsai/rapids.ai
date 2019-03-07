@@ -69,7 +69,7 @@ Notebooks can be found in two directories within the container:
 
 #### Advanced Usage
 
-See the [RAPIDS Container README](https://hub.docker.com/r/rapidsai/rapidsai) page for more information about using custom datasets. [Docker Hub](https://hub.docker.com/r/rapidsai/rapidsai/) and [NVIDA GPU Cloud](https://ngc.nvidia.com/catalog/containers/nvidia%2Frapidsai%2Frapidsai) host RAPIDS containers with full list of available [tags](https://hub.docker.com/r/rapidsai/rapidsai#full-tag-list).
+See the [RAPIDS Container README](https://hub.docker.com/r/rapidsai/rapidsai) page for more information about using custom datasets. [Docker Hub](https://hub.docker.com/r/rapidsai/rapidsai/) and [NVIDIA GPU Cloud](https://ngc.nvidia.com/catalog/containers/nvidia%2Frapidsai%2Frapidsai) host RAPIDS containers with full list of available [tags](https://hub.docker.com/r/rapidsai/rapidsai#full-tag-list).
 
 <!--  
     the breaks in the headers are necessary to space the anchor so it doesn't 
@@ -77,10 +77,10 @@ See the [RAPIDS Container README](https://hub.docker.com/r/rapidsai/rapidsai) pa
 -->
 ### <br/>Pip Install
 
-**NOTE:** Ubuntu 16.04's `python3` package is Python 3.5, follow the [python install](#ubuntu-1604-python-install) instructions to upgrade. 
+**NOTE:** Ubuntu 16.04's `python3` package is Python 3.5 by default. Follow the [python install](#ubuntu-1604-python-install) instructions to upgrade.
 Refer to the [cuDF README](https://github.com/rapidsai/cudf/tree/master#pip) or [cuML README](https://github.com/rapidsai/cuml/tree/master#pip) for pip install instructions.
 
-### <br/>Build From Source 
+### <br/>Build From Source
 
 Checkout the [cuDF README](https://github.com/rapidsai/cudf/tree/master#development-setup) or [cuML README](https://github.com/rapidsai/cuml/tree/master#installing-from-source) for from source build instructions.
 
@@ -102,10 +102,20 @@ Checkout the [cuDF README](https://github.com/rapidsai/cudf/tree/master#developm
 #### <br/>Ubuntu 16.04 Python Install
 By default, Ubuntu 16.04's `python3` package is Python 3.5, so you need to install Python 3.6 or 3.7 with the following steps:
 
+**For Python 3.6**
+
 ```bash
-$ apt-get install software-properties-common python-software-properties
-$ add-apt-repository ppa:jonathonf/python-3.6 #Or 3.7
-$ apt update && apt install python3.6 #Or 3.7
+apt-get install software-properties-common python-software-properties
+add-apt-repository ppa:deadsnakes/ppa
+apt update && apt install python3.6-dev
+```
+
+**For Python 3.7**
+
+```bash
+apt-get install software-properties-common python-software-properties
+add-apt-repository ppa:deadsnakes/ppa
+apt update && apt install python3.7-dev
 ```
 
 #### Documentation
