@@ -69,7 +69,7 @@ Notebooks can be found in two directories within the container:
 
 #### Advanced Usage
 
-See the [RAPIDS Container README](https://hub.docker.com/r/rapidsai/rapidsai) page for more information about using custom datasets. [Docker Hub](https://hub.docker.com/r/rapidsai/rapidsai/) and [NVIDA GPU Cloud](https://ngc.nvidia.com/catalog/containers/nvidia%2Frapidsai%2Frapidsai) host RAPIDS containers with full list of available [tags](https://hub.docker.com/r/rapidsai/rapidsai#full-tag-list).
+See the [RAPIDS Container README](https://hub.docker.com/r/rapidsai/rapidsai) page for more information about using custom datasets. [Docker Hub](https://hub.docker.com/r/rapidsai/rapidsai/) and [NVIDIA GPU Cloud](https://ngc.nvidia.com/catalog/containers/nvidia%2Frapidsai%2Frapidsai) host RAPIDS containers with full list of available [tags](https://hub.docker.com/r/rapidsai/rapidsai#full-tag-list).
 
 <!--  
     the breaks in the headers are necessary to space the anchor so it doesn't 
