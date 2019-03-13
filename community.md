@@ -31,16 +31,6 @@ layout: default
         <div class="fixed-content">
             <h2>Become a RAPIDS Adopter</h2>
             <p>RAPIDS features a highly GPU-optimized core dataframe and machine learning kernels that are perfect for adopters who are building high-performance databases, stream processing, machine learning applications, and more. RAPIDS handles the low-level GPU-accelerated NVIDIA® CUDA® code, so you can focus on integrating it with your solution. RAPIDS Python binding can be integrated into the solution as well. Adopters should announce their plans on our public channels. If approved, we’ll add a link to the project on the RAPIDS website.</p>
-
-            <div class="corporate-adopter">
-                <h3>Corporate Community Adopters</h3>
-                <div class="contributing-logos">
-                    <div class="contributing-logo">
-                        <img src="{{ site.baseurl }}{% link /assets/images/walmart_labs.png %}" alt="walmart labs">
-                    </div>
-                </div>
-
-            </div>
         </div>
     </div>
 </section>
@@ -75,6 +65,9 @@ layout: default
             </div>
             <div class="contributing-logo">
                 <img src="{{ site.baseurl }}{% link /assets/images/scikit-learn_Color.png %}" alt="scikitlearn">
+            </div>
+            <div class="contributing-logo">
+                <img src="{{ site.baseurl }}{% link /assets/images/walmart_labs.png %}" alt="walmart labs">
             </div>
         </div>
     </div>
