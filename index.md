@@ -102,7 +102,7 @@ RAPIDS is for everyone--users, adopters, and contributors. If you’re a data sc
 [JOIN NOW](community.html){: .blue-btn }
 {: .text-center }
 
-### Community Contributors
+### Contributors
 {: .text-center .pad-btm-40 }
 
 <div class="contributing-logos">
@@ -124,9 +124,12 @@ RAPIDS is for everyone--users, adopters, and contributors. If you’re a data sc
     <div class="contributing-logo">
         <img src="{{ site.baseurl }}{% link /assets/images/scikit-learn_Color.png %}" alt="scikitlearn">
     </div>
+    <div class="contributing-logo">
+        <img src="{{ site.baseurl }}{% link /assets/images/walmart_labs.png %}" alt="walmart labs">
+    </div>
 </div>
 
-### Ecosystem Partners
+### Adopters
 {: .text-center .pad-btm-40 }
 
 <div class="contributing-logos">
@@ -166,10 +169,30 @@ RAPIDS is for everyone--users, adopters, and contributors. If you’re a data sc
     <div class="contributing-logo">
         <img src="{{ site.baseurl }}{% link /assets/images/ursa_logo.png %}" alt="ursa">
     </div>
+</div>
+
+### Open Source
+{: .text-center .pad-btm-40 }
+
+<div class="contributing-logos">
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/walmart_labs.png %}" alt="walmart">
+        <img src="{{ site.baseurl }}{% link /assets/images/apache-arrow_Color.png %}" alt="Apache Arrow">
+    </div>
+    <div class="contributing-logo">
+        <img src="{{ site.baseurl }}{% link /assets/images/blazingsql_db_logo.png %}" alt="BlazingSQL">
+    </div>
+    <div class="contributing-logo">
+        <img src="{{ site.baseurl }}{% link /assets/images/dask_logo.png %}" alt="Dask">
+    </div>
+    <div class="contributing-logo">
+        <img src="{{ site.baseurl }}{% link /assets/images/numba_logo.png %}" alt="Numba">
+    </div>
+    <div class="contributing-logo">
+        <img src="{{ site.baseurl }}{% link /assets/images/xgboost_logo.png %}" alt="XGboost">
     </div>
 </div>
+
+
 {% endcapture %}
 {% include sec-white.html content=section_community %}
 
