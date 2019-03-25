@@ -4,11 +4,11 @@
 - name: GET STARTED
   link: /start.html
 
-- name: DOCS
-  link: https://docs.rapids.ai
-
 - name: COMMUNITY
   link: /community.html
+
+- name: DOCS
+  link: https://docs.rapids.ai
 
 - name: GITHUB
   link: https://github.com/rapidsai
