@@ -7,11 +7,11 @@
 - name: COMMUNITY
   link: /community.html
 
+- name: DOCS
+  link: https://docs.rapids.ai
+
 - name: GITHUB
   link: https://github.com/rapidsai
-
-- name: DEMOS
-  link: https://rapidsai.github.io/demos
 
 - name: BLOGS
   link: https://medium.com/rapids-ai

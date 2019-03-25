@@ -49,24 +49,6 @@ header
     background-position-y: -80px;
 }
 
-header.short
-{
-    background: url(../images/header-bg.svg) top center no-repeat;
-    padding: 34px 0 0 0;
-    min-height: 304px;
-    background-position-y: -334px;
-}
-
-body.short
-{
-    margin-top: 80px;
-    padding-top: 40px;
-}
-
-body.short h2 {
-    padding-bottom: 30px;
-}
-
 .community-page header
 {
     background: url(../images/community-header.svg) top center no-repeat;
