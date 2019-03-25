@@ -107,25 +107,25 @@ RAPIDS is for everyone--users, adopters, and contributors. If you’re a data sc
 
 <div class="contributing-logos">
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/anaconda.png %}" alt="anaconda">
+        <a href="https://www.anaconda.com/anaconda-community/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/anaconda.png %}" alt="anaconda"> </a>
     </div>
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/blazingdb.png %}" alt="blazingdb">
+        <a href="https://blazingdb.com/#/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/blazingdb.png %}" alt="blazingdb"> </a>
     </div>
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/Gunrock_Color.png %}" alt="gunrock">
+        <a href="https://gunrock.github.io/docs/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/Gunrock_Color.png %}" alt="gunrock"> </a>
     </div>
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/NVLogo_2D_H.png %}" alt="nvidia">
+        <a href="https://developer.nvidia.com/open-source" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/NVLogo_2D_H.png %}" alt="nvidia"> </a>
     </div>
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/quansight.png %}" alt="quantsight">
+        <a href="https://www.quansight.com/projects" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/quansight.png %}" alt="quantsight"> </a>
     </div>
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/scikit-learn_Color.png %}" alt="scikitlearn">
+        <a href="https://scikit-learn.org/stable/index.html" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/scikit-learn_Color.png %}" alt="scikitlearn"> </a>
     </div>
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/walmart_labs.png %}" alt="walmart labs">
+        <a href="https://www.walmartlabs.com/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/walmart_labs.png %}" alt="walmart labs"> </a>
     </div>
 </div>
 
@@ -134,40 +134,40 @@ RAPIDS is for everyone--users, adopters, and contributors. If you’re a data sc
 
 <div class="contributing-logos">
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/Chainer-logo.png %}" alt="chainer">
+        <a href="https://github.com/chainer" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/Chainer-logo.png %}" alt="chainer"> </a>
     </div>
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/databricks-logo.png %}" alt="databricks">
+       <a href="https://github.com/databricks" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/databricks-logo.png %}" alt="databricks"> </a>
     </div>
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/graphistry.png %}" alt="graphistry">
+       <a href="https://github.com/graphistry" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/graphistry.png %}" alt="graphistry"> </a>
     </div>
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/gpu-ventures-h2o-ai-logo.png %}" alt="h20ai">
+        <a href="https://github.com/h2oai" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/gpu-ventures-h2o-ai-logo.png %}" alt="h20ai"> </a>
     </div>
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/ibm-logo.png %}" alt="ibm">
+        <a href="https://ibm.github.io/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/ibm-logo.png %}" alt="ibm"> </a>
     </div>
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/iguazio_logo.png %}" alt="iguzaio">
+       <a href="https://www.iguazio.com/docs/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/iguazio_logo.png %}" alt="iguzaio"> </a>
     </div>
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/INRIA_CORPO_SANS_SIGNATURE_RVB.png %}" alt="inria">
+       <a href="https://github.com/INRIA" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/INRIA_CORPO_SANS_SIGNATURE_RVB.png %}" alt="inria"> </a>
     </div>
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/MapR_Color.png %}" alt="mapr">
+        <a href="https://github.com/mapr/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/MapR_Color.png %}" alt="mapr"> </a>
     </div>
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/omni_sci_logo.png %}" alt="omnisci">
+        <a href="https://github.com/Omnisci" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/omni_sci_logo.png %}" alt="omnisci"> </a>
     </div>
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/PyTorch_logo.png %}" alt="pytorch">
+        <a href="https://pytorch.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/PyTorch_logo.png %}" alt="pytorch"> </a>
     </div>
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/uber_logo_2018.png %}" alt="uber">
+        <a href="https://github.com/uber" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/uber_logo_2018.png %}" alt="uber"> </a>
     </div>
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/ursa_logo.png %}" alt="ursa">
+        <a href="https://ursalabs.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/ursa_logo.png %}" alt="ursa"> </a>
     </div>
 </div>
 
@@ -176,19 +176,22 @@ RAPIDS is for everyone--users, adopters, and contributors. If you’re a data sc
 
 <div class="contributing-logos">
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/apache-arrow_Color.png %}" alt="Apache Arrow">
+        <a href="https://arrow.apache.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/apache-arrow_Color.png %}" alt="Apache Arrow"> </a>
     </div>
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/blazingsql_db_logo.png %}" alt="BlazingSQL">
+        <a href="https://blazingdb.com/#/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/blazingsql_db_logo.png %}" alt="BlazingSQL"> </a>
     </div>
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/dask_logo.png %}" alt="Dask">
+        <a href="https://dask.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/dask_logo.png %}" alt="Dask"> </a>
     </div>
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/numba_logo.png %}" alt="Numba">
+        <a href="http://gpuopenanalytics.com/#/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/GoAi_logo.png %}" alt="GoAi"> </a>
     </div>
     <div class="contributing-logo">
-        <img src="{{ site.baseurl }}{% link /assets/images/xgboost_logo.png %}" alt="XGboost">
+        <a href="https://numba.pydata.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/numba_logo.png %}" alt="Numba"> </a>
+    </div>
+    <div class="contributing-logo">
+        <a href="https://xgboost.ai/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/xgboost_logo.png %}" alt="XGboost"> </a>
     </div>
 </div>
 
