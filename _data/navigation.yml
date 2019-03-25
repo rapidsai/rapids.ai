@@ -4,14 +4,14 @@
 - name: GET STARTED
   link: /start.html
 
+- name: DOCS
+  link: https://docs.rapids.ai
+
 - name: COMMUNITY
   link: /community.html
 
 - name: GITHUB
   link: https://github.com/rapidsai
-
-- name: DEMOS
-  link: https://rapidsai.github.io/demos
 
 - name: BLOGS
   link: https://medium.com/rapids-ai
