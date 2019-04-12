@@ -65,7 +65,7 @@ Notebooks can be found in two directories within the container:
 * `/rapids/notebooks/cuml` - cuML demo notebooks
   * These notebooks have data pre-loaded in the container image and will be decompressed by the notebooks
 * `/rapids/notebooks/mortgage` - cuDF, Dask, XGBoost demo notebook
-  * This notebook requires download of [Mortgage Data](https://rapidsai.github.io/demos/datasets/mortgage-data), see notebook `E2E.ipynb` for more details
+  * This notebook requires download of [Mortgage Data](https://docs.rapids.ai/datasets/mortgage-data), see notebook `E2E.ipynb` for more details
 
 #### Advanced Usage
 
@@ -93,8 +93,8 @@ Checkout the [cuDF README](https://github.com/rapidsai/cudf/tree/master#developm
 ### <br/>Prerequisites
 
 * NVIDIA Pascal™ GPU architecture or better
-* CUDA [9.2](https://developer.nvidia.com/cuda-92-download-archive) or [10.0](https://developer.nvidia.com/cuda-downloads) compatible nvidia driver
-* Ubuntu 16.04 or 18.04
+* CUDA [9.2](https://developer.nvidia.com/cuda-92-download-archive) or [10.0](https://developer.nvidia.com/cuda-10.0-download-archive) compatible nvidia driver
+* Ubuntu 16.04 or 18.04 
 * For Docker Images
   * Docker CE v18+
   * [nvidia-docker](https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0)) v2+
