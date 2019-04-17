@@ -93,8 +93,8 @@ Checkout the [cuDF README](https://github.com/rapidsai/cudf/tree/master#developm
 ### <br/>Prerequisites
 
 * NVIDIA Pascal™ GPU architecture or better
-* CUDA [9.2](https://developer.nvidia.com/cuda-92-download-archive) or [10.0](https://developer.nvidia.com/cuda-downloads) compatible nvidia driver
-* Ubuntu 16.04 or 18.04
+* CUDA [9.2](https://developer.nvidia.com/cuda-92-download-archive) or [10.0](https://developer.nvidia.com/cuda-10.0-download-archive) compatible nvidia driver
+* Ubuntu 16.04 or 18.04 
 * For Docker Images
   * Docker CE v18+
   * [nvidia-docker](https://github.com/nvidia/nvidia-docker/wiki/Installation-(version-2.0)) v2+
