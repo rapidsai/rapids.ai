@@ -1,26 +1,18 @@
 <footer>
-    <div class="fixed-content">
-        <a href="{{ site.baseurl }}{% link index.md %}"><img src="{{ site.baseurl }}{% link /assets/images/footer-logo.svg %}" alt="rapids"></a>
-        <div class="footer-content">
-            <div class="footer-nav">
-                <ul>
-                    <li><a href="{{ site.baseurl }}{% link start.md %}">GETTING STARTED</a></li>
-                    <li><a href="{{ site.baseurl }}{% link community.md %}">COMMUNITY</a></li>
-                    <li><a href="https://github.com/rapidsai" target="_blank">GITHUB</a></li>
-                    <li><a href="https://medium.com/rapids-ai" target="_blank">BLOG</a></li>
-                </ul>
-            </div>
-            <div class="footer-social">
-                <div class="social-title">Stay Connected</div>
+    <a href="{{ site.baseurl }}{% link index.md %}"><img class="footer-logo" src="{{ site.baseurl }}{% link /assets/images/footer-logo.svg %}" alt="rapids"></a>
+    <div class="footer-nav">
+        <ul>
+            <li>
                 <a href="mailto:RAPIDSai@googlegroups.com"><i class="fas fa-envelope fa-2x dark-purple-font"></i></a>
                 <a href="https://twitter.com/rapidsai" target="_blank"><i class="fab fa-twitter fa-2x dark-purple-font"></i></a>
                 <a href="https://join.slack.com/t/rapids-goai/shared_invite/enQtMjE0Njg5NDQ1MDQxLTViZWFiYTY5MDA4NWY3OWViODg0YWM1MGQ1NzgzNTQwOWI1YjE3NGFlOTVhYjQzYWQ4YjI4NzljYzhiOGZmMGM" target="_blank"><i class="fab fa-slack fa-2x dark-purple-font"></i></a>
                 <a href="https://stackoverflow.com/tags/rapids" target="_blank"><i class="fab fa-stack-overflow fa-2x dark-purple-font"></i></a>
-            </div>
-        </div>
-
-        <div class="footer-copy">
-            <p>©{{ site.time | date: '%Y' }} RAPIDS</p>
-        </div>
+            </li>
+            <li><a href="{{ site.baseurl }}{% link start.md %}">GETTING STARTED</a></li>
+            <li><a href="{{ site.baseurl }}{% link community.md %}">COMMUNITY</a></li>
+            <li><a href="https://github.com/rapidsai" target="_blank">GITHUB</a></li>
+            <li><a href="https://medium.com/rapids-ai" target="_blank">BLOG</a></li>
+            <li>©{{ site.time | date: '%Y' }} RAPIDS</li>
+        </ul>
     </div>
 </footer>

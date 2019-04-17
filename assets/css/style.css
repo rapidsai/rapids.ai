@@ -1,7 +1,7 @@
 /*
     font-family: 'Open Sans', sans-serif;
 */
- 
+  
 body
 {
     margin: 0px;
@@ -9,7 +9,7 @@ body
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
-
+  
 *
 {
     margin: 0px;
@@ -94,7 +94,7 @@ nav ul li.active a
     justify-content: center;
     align-items: center;
 }
-
+ 
 .branding
 {
     text-align: center;
@@ -491,7 +491,7 @@ section .perfomance-box-inner p
     padding: 0px 51px 50px;
     flex: 0 0 33%;
 }
-
+  
 .rapids-perfomance {
     text-align: center;
 }
@@ -526,7 +526,7 @@ section.gpu-pipeline
 {
     color: #FFF;
 }
-
+ 
 .Pipeline-Diagram
 {
     display: block;
@@ -553,7 +553,7 @@ section.gpu-pipeline
     line-break: 20px;
     color: #FFF;
 }
-
+  
 .gpu-list
 {
     display: flex;
@@ -603,18 +603,18 @@ section.gpu-pipeline
     background: url(../images/top-gray-strip.svg) top center no-repeat;
     height: 169px;
 }
-
+    
 .features-main
 {
     position: relative;
     /* margin-top: -43px; */
 }
-
+  
 .features-content
 {
     background: #f8f8f8;
 }
-
+    
 /*.features-content h2
 {
     padding: 70px 0px 55px 0px;
@@ -651,7 +651,7 @@ section.gpu-pipeline
 
 .three-cols-row ul li p,
 .features-row ul li p
-{
+{ 
     font-size: 16px;
     line-height: 30px;
     color: #666666;
@@ -797,7 +797,7 @@ footer
     -o-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
 }
-
+  
 .footer-copy a:hover
 {
     color: #000;
@@ -826,14 +826,14 @@ footer
 }
 
 /*------ Start Community page -------------*/
-
+     
 h1
 {
     font-size: 60px;
     font-weight: 600;
     color: #FFF;
 }
-
+  
 .community-page h4
 {
     padding-top: 2px;
@@ -1099,7 +1099,7 @@ div.highlighter-rouge div pre
     padding: 0px;
     color: #a785e7;
 }
-
+   
 #nav-fixed
 {
     position: absolute;
@@ -1506,7 +1506,7 @@ div.selector {
         font-size: 30px;
         font-weight: 600;
     }
-
+  
     footer
     {
         padding: 50px 0 0 0;
@@ -1653,7 +1653,7 @@ div.selector {
         font-size: 24px;
         line-height: 28px;
     }
-
+ 
     nav
     {
         margin: 0 -10px 0 -10px;
@@ -1673,7 +1673,7 @@ div.selector {
         display: block;
     }
 
-    #nav-fixed nav ul li:first-child
+    #nav-fixed nav ul li:first-childs
     {
         display: block;
     }

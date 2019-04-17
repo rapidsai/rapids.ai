@@ -27,9 +27,17 @@
   <title>{{ page.title }}</title>
 
   <link rel='shortcut icon' type='image/x-icon' href='{{ site.baseurl }}{% link /assets/favicon.ico %}' />
+
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+
+<!-- 
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}{% link /assets/css/style.css %}">
+-->
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}{% link /assets/css/highlight.css %}">
   <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}{% link /assets/css/custom.css %}">
+
   <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
   <script defer src="https://use.fontawesome.com/releases/v5.7.1/js/all.js" integrity="sha384-eVEQC9zshBn0rFj4+TU78eNA19HMNigMviK/PU/FFjLXqa/GKPgX58rvt5Z8PLs7" crossorigin="anonymous"></script>
   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
@@ -40,18 +48,11 @@
   <div id="nav-fixed" class="position-fixed">
     {% include nav.html %}
   </div>
-  {% if page.brand_name == "" %}
-  <div class="branding home">
-  {% else %}
-  <div class="branding">
-  {% endif %}
-    <div class="logo">
+  <div class="header-branding">
+    <div class="header-logo">
       <a href="{{ site.baseurl }}"><img src="{{ site.baseurl }}{% link /assets/images/rapids-logo.svg %}" alt="RAPIDS logo"></a>
     </div>
-    {% if page.brand_name != "" %}
-      <h1>{{ page.brand_name }}</h1>
-    {% endif %}
-    <h4>{{ page.brand_tagline }}</h4>
+    <h4 class="header-tagline">{{ page.brand_tagline }}</h4>
     <a href="{{ page.brand_link }}" class="blue-btn">{{ page.brand_button }}</a>
   </div>
 </header>
