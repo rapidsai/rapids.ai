@@ -1,15 +1,7 @@
-<section class="pure-g">
-	{% if include.background == 'section-purple' or include.background == 'section-gray' %}
-		<div class="top-bg-slant {{ include.background }}"></div>
-	{% endif %}
-	<div class="{{ include.background }}">
-	    <div class="container-padding">
-	        <div class="pure-u-1 pure-u-md-1-3"> {{ include.content-left-third | markdownify }} </div>
-	        <div class="pure-u-1 pure-u-md-1-3"> {{ include.content-middle-third | markdownify }} </div>
-	        <div class="pure-u-1 pure-u-md-1-3"> {{ include.content-right-third | markdownify }} </div>
-	    </div>
-	</div>
-	{% if include.background == 'section-purple' or include.background == 'section-gray'%}
-		<div class="bottom-bg-slant {{ include.background }}"></div>
-	{% endif %}
+<section class="pure-g {{ include.background }} padding-top-{{ include.padding-top }} padding-bottom-{{ include.padding-bottom }}">
+    <div class="container-padding">
+        <div class="pure-u-1 pure-u-md-1-3"> {{ include.content-left-third | markdownify }} </div>
+        <div class="pure-u-1 pure-u-md-1-3"> {{ include.content-middle-third | markdownify }} </div>
+        <div class="pure-u-1 pure-u-md-1-3"> {{ include.content-right-third | markdownify }} </div>
+    </div>
 </section>

@@ -1,17 +1,27 @@
-- name: HOME
+- nav: HOME
+  name: index
   link: /index.html
 
-- name: GET STARTED
+- nav: ABOUT
+  name: about
+  link: /about.html
+
+- nav: GET STARTED
+  name: start
   link: /start.html
 
-- name: COMMUNITY
+- nav: COMMUNITY
+  name: community
   link: /community.html
 
-- name: DOCS
+- nav: DOCS
+  name: docs
   link: https://docs.rapids.ai
 
-- name: GITHUB
+- nav: GITHUB
+  name: github
   link: https://github.com/rapidsai
 
-- name: BLOGS
+- nav: BLOGS
+  name: blogs
   link: https://medium.com/rapids-ai

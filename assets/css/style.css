@@ -4,8 +4,8 @@
   
 body
 {
-    margin: 0px;
     font-family: 'Open Sans', sans-serif;
+    color: #666666;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
@@ -1722,7 +1722,7 @@ div.selector {
         font-weight: 300;
         line-height: 27px;
     }
-
+ 
     .top-purple-strip
     {
         bottom: -36px;
@@ -1732,7 +1732,7 @@ div.selector {
     {
         padding: 40px 0 0 0;
     }
-
+ 
     .gpu-list ul li
     {
         font-size: 22px;

@@ -8,202 +8,252 @@ brand_button: "GET STARTED"
 brand_link: "start.html"
 layout: default
 ---
-{% capture section_intro %}
-## About RAPIDS
 
-The RAPIDS suite of open source software libraries gives you the freedom to execute end-to-end data science and analytics pipelines entirely on GPUs. RAPIDS is incubated by [NVIDIA&reg;](https://nvidia.com) based on years of accelerated data science experience. RAPIDS relies on [NVIDIA CUDA&reg;](https://developer.nvidia.com/cuda-toolkit) primitives for low-level compute optimization, and exposes GPU parallelism and high-bandwidth memory speed through user-friendly Python interfaces.
-{: .h5 }
+# GPU DATA SCIENCE
+{: .section-title-full }
 
-RAPIDS also focuses on common data preparation tasks for analytics and data science. This includes a familiar DataFrame API that integrates with a variety of machine learning algorithms for end-to-end pipeline accelerations without paying typical serialization costs. RAPIDS also includes support for multi-node, multi-GPU deployments, enabling vastly accelerated processing and training on much larger dataset sizes.
-{: .h5 }
+{% capture about_top_left %}
+## <i class="fas fa-info"></i> Accelerated Data Science
+The RAPIDS suite of open source software libraries gives you the freedom to execute end-to-end data science and analytics pipelines entirely on GPUs. <a href="https://rapids.ai/about.html" class="bold">Learn more <i class="fas fa-angle-double-right"></i></a>
+{% endcapture %}
 
-![End to end Performance Chart]({{ site.baseurl }}{% link /assets/images/rapids-end-to-end-performance-chart-oss-page-r4.svg %})
-{: .rapids-perfomance .text-center .pad-top-40 }
+{% capture about_top_middle %}
+## <i class="fas fa-expand-arrows-alt"></i> Scale Out on GPUS
+Seamless scale from GPU workstations to multi-GPU servers and multi-node clusters.
+{% endcapture %}
+
+{% capture about_top_right %}
+## <i class="fab fa-python"></i> Python Integration
+Accelerate your Python data science toolchain with minimal code changes and no new tools to learn.
+{% endcapture %}
+
+{% capture about_bottom_left %}
+## <i class="fas fa-bullseye"></i> Top Model Accuracy
+Increase machine learning model accuracy by iterating on models faster and deploying them more frequently.
+{% endcapture %}
+
+{% capture about_bottom_middle %}
+## <i class="far fa-clock"></i> Reduced Training Time
+Drastically improve your productivity with more interactive data science.
+{% endcapture %}
+
+{% capture about_bottom_right %}
+## <i class="fas fa-code-branch"></i> Open Source
+The open-source software is customizable, extensible, interoperable --supported by NVIDIA and built on Apache Arrow.
+{% endcapture %}
+
+{% include section-double-thirds.html 
+    background="background-white" 
+    padding-top="0" padding-bottom="2" 
+    content-top-left-third=about_top_left 
+    content-top-middle-third=about_top_middle 
+    content-top-right-third=about_top_right 
+    content-bottom-left-third=about_bottom_left 
+    content-bottom-middle-third=about_bottom_middle 
+    content-bottom-right-third=about_bottom_right 
+%}
+
+
+
+{% capture start_left %}
+# Getting Started
+{: .section-title-halfs}
+
+The RAPIDS data science framework is designed to have a familiar look and feel to data scientist working in Python. Here’s a code snippet where we read in a CSV file and output some descriptive statistics. Find more details on our <a class="bold" href="https://rapids.ai/start.html"> get started section <i class="fas fa-angle-double-right"></i></a>
+
+```python
+import cudf
+
+gdf = cudf.read_csv('path/to/file.csv')
+for column in gdf.columns:
+    print(gdf[column].mean())
+
+```
+{% endcapture %}
+
+{% capture start_right %}
+## <i class="far fa-bookmark"></i> 10 Minutes to cuDF
+Modeled after 10 Minutes to Pandas, this is a short introduction to cuDF that is geared mainly for new users. <a class="bold" href="https://rapidsai.github.io/projects/cudf/en/latest/10min.html">Go to guide <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
+
+## <i class="far fa-bookmark"></i> GDF Cheat Sheet
+A handy PDF reference guide for handling GPU Data Frames (GDF) with cuDF. <a class="bold" href="https://rapids.ai/assets/files/cheatsheet.pdf">Download PDF <i class="fas fa-angle-double-right"></i></a>
+
+## <i class="far fa-bookmark"></i> Example Notebooks
+A Github repository with examples for cuML using knn, dbscan, pca and tsvd, the End-to-End Mortgage demo, cuGraph demos, and more. <a class="bold" href="https://github.com/rapidsai/notebooks">Go to repo <i class="fas fa-angle-double-right"></i></a>
 
 {% endcapture %}
-{% include sec-white.html content=section_intro %}
+{% include slopecap.html 
+    background="background-gray" 
+    position="top" 
+    slope="down" 
+%}
+{% include section-halfs.html 
+    background="background-gray" 
+    padding-top="0" padding-bottom="2" 
+    content-left-half=start_left 
+    content-right-half=start_right 
+%} 
 
-{% capture section_pipeline %}
-## The New GPU <br> Data Science Pipeline
 
-![RAPIDS Pipeline Diagram]({{ site.baseurl }}{% link /assets/images/Pipeline-FPO-Diagram.png %})
-{: .Pipeline-Diagram .text-center }
+{% include medium-thirds.html
+    background="background-gray"
+    padding-top="0" padding-bottom="0" 
+    link1="https://medium.com/rapids-ai/the-road-to-1-0-building-for-the-long-haul-657ae1afdfd6"
+    image1="https://cdn-images-1.medium.com/max/800/1*GxaubH_8eZTsNRV7FBhiyw.png"
+    title1="The Road to 1.0 — Building for the Long Haul"
+    desc1="RAPIDS was everywhere at NVIDIA’s GTC 2019 in Silicon Valley. It was great to see so many vendors, partners, and customers showcasing RAPIDS in their booths and presentations. Even the RAPIDS press coverage blew me away..."
+    link2="https://medium.com/rapids-ai/rapids-cugraph-1ab2d9a39ec6"
+    image2="https://cdn-images-1.medium.com/max/800/1*pXa2tr1z-op8xWhMuQ67-g.jpeg"
+    title2="RAPIDS cuGraph "
+    desc2="The Data Scientist has a collection of techniques within their proverbial toolbox. Data engineering, statistical analysis, and machine learning are among the most commonly known..."
+    link3="https://medium.com/rapids-ai/rapids-can-now-be-accessed-on-databricks-unified-analytics-platform-666e42284bd1"
+    image3="https://cdn-images-1.medium.com/max/800/1*QOhZrlj6IcRCuETYMmRpiA.png"
+    title3="RAPIDS can now be accessed on Databricks Unified Analytics Platform "
+    desc3="NVIDIA RAPIDS can now be accessed on Databricks Unified Analytics Platform, making it easy for data scientists to leverage RAPIDS for their end-to-end data science workflows... "
+%}
 
-<div class="gpu-list">
-    <ul>
-        <li>Apache Arrow <span>This is a columnar, in-memory data structure that delivers efficient and fast data interchange with flexibility to support complex data models.</span>
-        </li>
-        <li>cuDF<span>The RAPIDS cuDF library is a DataFrame manipulation library based on Apache Arrow that accelerates loading, filtering, and manipulation of data for model training data preparation. The Python bindings of the core-accelerated CUDA DataFrame manipulation primitives mirror the pandas interface for seamless onboarding of pandas users.</span>
-        </li>
-        <li>cuML<span>RAPIDS cuML is a collection of GPU-accelerated machine learning libraries that will provide GPU versions of all machine learning algorithms available in scikit-learn.</span>
-        </li>
-    </ul>
-    <ul>
-        <li>cuGRAPH<span>This is a framework and collection of graph analytics libraries that seamlessly integrate into the RAPIDS data science platform.</span>
-        </li>
-        <li>Deep Learning Libraries<span>RAPIDS provides native array_interface support. This means data stored in Apache Arrow can be seamlessly pushed to deep learning frameworks that accept array_interface such as PyTorch and Chainer.</span>
-        </li>
-        <li>Visualization Libraries Coming Soon<span>RAPIDS will include tightly integrated data visualization libraries based on Apache Arrow. Native GPU in-memory data format provides high-performance, high-FPS data visualization, even with very large datasets.</span>
-        </li>
-    </ul>
-</div>
+
+{% include tweet-thirds.html
+    background="background-gray"
+    padding-top="0" padding-bottom="2" 
+    tweetlink1="https://twitter.com/rapidsai/status/1113184332988997634"
+    poster1="@rapidsai"
+    text1="Check out the NEW RAPIDS 0.6 release with cleaner docs, feature improvements, more functionality, a new graph library, and so much more for #datascience -  https://nvda.ws/2WMsC1H "
+    action1="posted by @rapidsai"
+    tweetlink2="https://twitter.com/TalkPython/status/1117288613153255424"
+    poster2="@TalkPython"
+    text2="Make your Python zing with parallel computation using Dask. That's our topic on this week's episode of @talkpython with @mrocklin"
+    action2="retweeted by @rapidsai"    
+    tweetlink3="https://twitter.com/blazingdb/status/1115680801494974464"
+    poster3="@blazingdb"
+    text3="With #BlazingSQL + @Graphistry: Analyze log data 100x faster than comparable #ApacheSpark cluster at price parity on @rapidsai . Check out the new #blog post to  learn more, see the #code, and a #demo."
+    action3="retweeted by @rapidsai"
+%}
+
+
+{% capture com_left %}
+# RAPIDS Community
+{: .section-title-halfs}
+RAPIDS is committed to being open sourced. We strive for a major release <span class="bold">every 6 weeks</span> (give or take). Below is a generalized release schedule. <a class="bold" href="https://medium.com/rapids-ai/the-road-to-1-0-building-for-the-long-haul-657ae1afdfd6"> Learn more on our road to 1.0 post <i class="fas fa-angle-double-right"></i></a>
+
+## <i class="far fa-calendar-check"></i> Release Schedule
+JAN-2019 <span class="bold">v0.5</span> (previous)
+{: .release-version}
+<i class="fas fa-chevron-right"></i> MAR-2019 <span class="bold">v0.6</span> (current)
+{: .release-version}
+MAY-2019 <span class="bold">v0.7</span> (planned)
+{: .release-version}
 {% endcapture %}
-{% include sec-left-purple.html content=section_pipeline %}
 
-{% capture section_features %}
-## Features of RAPIDS
+{% capture com_right %}
+## <i class="fas fa-code"></i> RAPIDS APIS and Libraries
+RAPIDS is open sourced under the Apache 2.0 open-source license, spanning multiple projects that range from GPU dataframes to GPU accelerated ML algoritms. Its also provides native array_interface support, allowing Apache Arrow stored data to be pushed to deep learning frameworks such as PyTorch and Chainer. Learn more on the <a class="bold" href="https://rapids.ai/about.html">about page <i class="fas fa-angle-double-right"></i></a>
 
-<div class="features-row">
-    <ul>
-        <li>
-            <img src="{{ site.baseurl }}{% link /assets/images/hassle-free.svg %}" alt="hassle free">
-            <h3>Hassle-Free Integration</h3>
-            <p>Accelerate your Python data science toolchain with minimal code changes and no new tools to
-                learn.</p>
-        </li>
-        <li>
-            <img src="{{ site.baseurl }}{% link /assets/images/scaling-out.svg %}" alt="scaling out">
-            <h3>Scaling Out <br> on Any GPU</h3>
-            <p>Seamless scale from GPU workstations to multi-GPU servers and multi-node clusters.</p>
-        </li>
-        <li>
-            <img src="{{ site.baseurl }}{% link /assets/images/top-model.svg %}" alt="top model">
-            <h3>Top Model Accuracy</h3>
-            <p>Increase machine learning model accuracy by iterating on models faster and deploying them
-                more frequently.</p>
-        </li>
-    </ul>
-</div>
-
-<div class="features-row">
-    <ul>
-        <li>
-            <img src="{{ site.baseurl }}{% link /assets/images/reduces.svg %}" alt="reduces">
-            <h3>Reduced <br> Training Time</h3>
-            <p>Drastically improve your productivity with near-interactive data science.</p>
-        </li>
-        <li>
-            <img src="{{ site.baseurl }}{% link /assets/images/open-source.svg %}" alt="open source">
-            <h3>Open <br> Source</h3>
-            <p>The open-source software is customizable, extensible, interoperable--supported by NVIDIA and
-                built on Apache Arrow.</p>
-        </li>
-    </ul>
-</div>
+## <i class="fab fa-github"></i> Contributing
+Whether you are new to RAPIDS, looking to help, or are part of the team, learn about our contributiong guidelines on the <a class="bold" href="https://docs.rapids.ai/contributing"> docs page <i class="fas fa-angle-double-right"></i></a>
 {% endcapture %}
-{% include sec-right-gray.html content=section_features %}
 
-{% capture section_community %}
-## Community
-
-RAPIDS is for everyone--users, adopters, and contributors. If you’re a data scientist, researcher, engineer, or developer using pandas, Dask, scikit-learn, or Spark on CPUs and looking for 50X end-to-end pipeline speedups at scale, look no further. Downloads RAPIDS and give us a run. RAPIDS is open sourced under the Apache 2.0 open source license and intended to be built upon and hardened in the community. While significant time and effort has been invested into making the platform usable and relevant, we need active contributors to help improve it and build its future.
-{: .h5 }
-
-[JOIN NOW](community.html){: .blue-btn }
-{: .text-center }
-
-### Contributors
-{: .text-center .pad-btm-40 }
-
-<div class="contributing-logos">
-    <div class="contributing-logo">
-        <a href="https://www.anaconda.com/anaconda-community/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/anaconda.png %}" alt="anaconda"> </a>
-    </div>
-    <div class="contributing-logo">
-        <a href="https://blazingdb.com/#/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/blazingdb.png %}" alt="blazingdb"> </a>
-    </div>
-    <div class="contributing-logo">
-        <a href="https://gunrock.github.io/docs/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/Gunrock_Color.png %}" alt="gunrock"> </a>
-    </div>
-    <div class="contributing-logo">
-        <a href="https://developer.nvidia.com/open-source" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/NVLogo_2D_H.png %}" alt="nvidia"> </a>
-    </div>
-    <div class="contributing-logo">
-        <a href="https://www.quansight.com/projects" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/quansight.png %}" alt="quantsight"> </a>
-    </div>
-    <div class="contributing-logo">
-        <a href="https://scikit-learn.org/stable/index.html" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/scikit-learn_Color.png %}" alt="scikitlearn"> </a>
-    </div>
-    <div class="contributing-logo">
-        <a href="https://www.walmartlabs.com/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/walmart_labs.png %}" alt="walmart labs"> </a>
-    </div>
-</div>
-
-### Adopters
-{: .text-center .pad-btm-40 }
-
-<div class="contributing-logos">
-    <div class="contributing-logo">
-        <a href="https://github.com/chainer" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/Chainer-logo.png %}" alt="chainer"> </a>
-    </div>
-    <div class="contributing-logo">
-       <a href="https://github.com/databricks" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/databricks-logo.png %}" alt="databricks"> </a>
-    </div>
-    <div class="contributing-logo">
-       <a href="https://github.com/graphistry" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/graphistry.png %}" alt="graphistry"> </a>
-    </div>
-    <div class="contributing-logo">
-        <a href="https://github.com/h2oai" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/gpu-ventures-h2o-ai-logo.png %}" alt="h20ai"> </a>
-    </div>
-    <div class="contributing-logo">
-        <a href="https://ibm.github.io/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/ibm-logo.png %}" alt="ibm"> </a>
-    </div>
-    <div class="contributing-logo">
-       <a href="https://www.iguazio.com/docs/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/iguazio_logo.png %}" alt="iguzaio"> </a>
-    </div>
-    <div class="contributing-logo">
-       <a href="https://github.com/INRIA" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/INRIA_CORPO_SANS_SIGNATURE_RVB.png %}" alt="inria"> </a>
-    </div>
-    <div class="contributing-logo">
-        <a href="https://github.com/mapr/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/MapR_Color.png %}" alt="mapr"> </a>
-    </div>
-    <div class="contributing-logo">
-        <a href="https://github.com/Omnisci" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/omni_sci_logo.png %}" alt="omnisci"> </a>
-    </div>
-    <div class="contributing-logo">
-        <a href="https://pytorch.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/PyTorch_logo.png %}" alt="pytorch"> </a>
-    </div>
-    <div class="contributing-logo">
-        <a href="https://github.com/uber" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/uber_logo_2018.png %}" alt="uber"> </a>
-    </div>
-    <div class="contributing-logo">
-        <a href="https://ursalabs.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/ursa_logo.png %}" alt="ursa"> </a>
-    </div>
-</div>
-
-### Open Source
-{: .text-center .pad-btm-40 }
-
-<div class="contributing-logos">
-    <div class="contributing-logo">
-        <a href="https://arrow.apache.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/apache-arrow_Color.png %}" alt="Apache Arrow"> </a>
-    </div>
-    <div class="contributing-logo">
-        <a href="https://blazingdb.com/#/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/blazingsql_db_logo.png %}" alt="BlazingSQL"> </a>
-    </div>
-    <div class="contributing-logo">
-        <a href="https://dask.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/dask_logo.png %}" alt="Dask"> </a>
-    </div>
-    <div class="contributing-logo">
-        <a href="http://gpuopenanalytics.com/#/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/GoAi_logo.png %}" alt="GoAi"> </a>
-    </div>
-    <div class="contributing-logo">
-        <a href="https://numba.pydata.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/numba_logo.png %}" alt="Numba"> </a>
-    </div>
-    <div class="contributing-logo">
-        <a href="https://xgboost.ai/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/xgboost_logo.png %}" alt="XGboost"> </a>
-    </div>
-</div>
+{% include slopecap.html 
+    background="background-purple" 
+    position="top" 
+    slope="up" 
+%}
+{% include section-halfs.html 
+    background="background-purple" 
+    padding-top="0" padding-bottom="1" 
+    content-left-half=com_left 
+    content-right-half=com_right 
+%} 
 
 
+{% capture lib_top_left %}
+## <i class="fas fa-terminal"></i> cuDF
+cuDF is a Python GPU DataFrame library (built on the <a href="http://arrow.apache.org/" target="_blank">Apache Arrow</a> columnar memory format) for loading, joining, aggregating, filtering, and otherwise manipulating data.
+<br>
+<a href="https://github.com/rapidsai/cudf" class="lib-link">GitHub</a> | <a href="https://docs.rapids.ai/api/cudf/stable/" class="lib-link">Docs</a> | <a href="https://github.com/rapidsai/cudf/blob/branch-0.7/CHANGELOG.md" class="lib-link">Change Log</a>
 {% endcapture %}
-{% include sec-white.html content=section_community %}
+
+{% capture lib_top_middle %}
+## <i class="fas fa-terminal"></i> cuML
+cuML is a suite of libraries that implement machine learning algorithms and mathematical primitives functions that share compatible APIs with other RAPIDS projects.
+<br>
+<a href="https://docs.rapids.ai/api/cuml/stable/" class="lib-link">GitHub</a> | <a href="https://github.com/rapidsai/cuml" class="lib-link">Docs</a> | <a href="https://github.com/rapidsai/cuml/blob/branch-0.7/CHANGELOG.md" class="lib-link">Change Log</a> 
+{% endcapture %}
+
+{% capture lib_top_right %}
+## <i class="fas fa-terminal"></i> cuGraph
+cuGraph is a collection of graph analytics that process data in GDF. cuGraph aims at provides a NetworkX-like API that will be familiar to data scientists, so they can use it to easily accelerate their workflows without going into the details of CUDA programming.
+<br>
+<a href="https://github.com/rapidsai/cugraph" class="lib-link">GitHub</a> | <a href="https://docs.rapids.ai/api/cugraph/stable/" class="lib-link">Docs</a> | <a href="https://github.com/rapidsai/cugraph/blob/branch-0.7/CHANGELOG.md" class="lib-link">Change Log</a> 
+{% endcapture %}
+
+{% capture lib_bottom_left %}
+## <i class="fas fa-terminal"></i> nvStrings
+nvStrings, the Python bindings for <a href="https://github.com/rapidsai/custrings" target="_blank"> cuStrings</a>, provides a pandas-like API that will be familiar to data engineers & data scientists, so they can use it to easily accelerate their workflows without going into the details of CUDA programming.
+<br>
+<a href="https://github.com/rapidsai/custrings" class="lib-link">GitHub</a> | <a href="https://docs.rapids.ai/api/nvstrings/stable/" class="lib-link">Docs</a> | <a href="https://github.com/rapidsai/custrings/blob/branch-0.4/CHANGELOG.md" class="lib-link">Change Log</a> 
+{% endcapture %}
+
+{% capture lib_bottom_middle %}
+## <i class="fas fa-terminal"></i> libcudf
+libcudf is a C/C++ CUDA library for implementing standard dataframe operations. It is part of the cuDF repository. 
+<br>
+<a href="https://github.com/rapidsai/cudf" class="lib-link">GitHub</a> | <a href="https://docs.rapids.ai/api/libcudf/stable/" class="lib-link">Docs</a> | <a href="https://github.com/rapidsai/cudf/blob/branch-0.7/CHANGELOG.md" class="lib-link">Change Log</a> 
+{% endcapture %}
+
+{% capture lib_bottom_right %}
+## <i class="fas fa-terminal"></i> RMM 
+RAPIDS Memory Manager (RMM) is a central place for all device memory allocations in cuDF (C++ and Python) and other RAPIDS libraries. In addition, it is a replacement allocator for CUDA Device Memory (and CUDA Managed Memory) and a pool allocator to make CUDA device memory allocation / deallocation faster and asynchronous.
+<br>
+<a href="https://github.com/rapidsai/rmm" class="lib-link">GitHub</a> | <a href="https://docs.rapids.ai/api/rmm/stable/" class="lib-link">Docs</a> | <a href="https://github.com/rapidsai/rmm/blob/branch-0.7/CHANGELOG.md" class="lib-link">Change Log</a> 
+{% endcapture %}
+
+{% include section-double-thirds.html 
+    background="background-purple" 
+    padding-top="0" padding-bottom="2" 
+    content-top-left-third=lib_top_left 
+    content-top-middle-third=lib_top_middle 
+    content-top-right-third=lib_top_right 
+    content-bottom-left-third=lib_bottom_left 
+    content-bottom-middle-third=lib_bottom_middle 
+    content-bottom-right-third=lib_bottom_right 
+%}
+{% include slopecap.html 
+    background="background-purple" 
+    position="bottom" 
+    slope="down"
+%}
 
 
+# Contributors
+{: .section-title-full}
+{% include contributing-logos.html 
+    padding-top="0" padding-bottom="1" 
+%}
+
+
+# Adopters
+{: .section-title-full}
+{% include adopter-logos.html 
+    padding-top="0" padding-bottom="1" 
+%}
+
+
+# Open Source
+{: .section-title-full}
+{% include open-source-logos.html 
+    padding-top="0" padding-bottom="2" 
+%}
+
+{% include slopecap.html 
+    background="background-darkpurple" 
+    position="top" 
+    slope="up"
+%}
 {% include cta-footer.html 
-name="Experience Data Science on GPUs with RAPIDS" 
-tagline=""
-button="GET STARTED"
-link="start.html"
+    name="Experience Data Science on GPUs with RAPIDS" 
+    tagline=""
+    button="GET STARTED"
+    link="start.html"
 %}
 
