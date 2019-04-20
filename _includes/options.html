@@ -3,6 +3,7 @@
         <div class='labels'>
             <div class='label'>&nbsp;</div>
             <div class='label'>Method</div>
+            <div class='label'>Release</div>
             <div class='label'>Packages</div>
             <div class='label'>Linux</div>
             <div class='label'>Python</div>
@@ -27,6 +28,9 @@
             </div>
             <div class='method'>
                 <div id='conda' class='option'>Conda</div><div id='docker' class='option'>Docker</div><div id='pip' class='option'>Pip</div><div id='source' class='option'>Source</div>
+            </div>
+            <div class='release'>
+                <div id='stable' class='option'>Stable (0.6)</div><div id='nightly' class='option'>Nightly (0.7dev)</div>
             </div>
             <div class='pkg'>
                 <div id='cudf' class='option'>cuDF</div><div id='cuml' class='option'>cuML</div><div id='both' class='option'>cuDF & cuML</div>
@@ -56,12 +60,14 @@
 
     var pkg=['cudf','cuml','both'];
     var method=['conda','docker','pip','source'];
+    var release=['stable','nightly'];
     var linux=['ubuntu1604','ubuntu1804','centos7'];
     var python=['py36','py37'];
     var cuda=['cuda92','cuda100'];
 
     var pkg_opts = $(".pkg > .option");
     var method_opts = $(".method > .option");
+    var release_opts = $(".release > .option");
     var linux_opts = $(".linux > .option");
     var python_opts = $(".python > .option");
     var cuda_opts = $(".cuda > .option");
@@ -77,6 +83,7 @@
     var selections = {
         pkg: 'both',
         method: 'conda',
+        release: 'stable',
         linux: 'ubuntu1604',
         python: 'py36',
         cuda: 'cuda92'
@@ -87,6 +94,9 @@
     });
     method_opts.on("click", function() {
         processClick(method_opts, this, "method");
+    });
+    release_opts.on("click", function() {
+        processClick(release_opts, this, "release");
     });
     linux_opts.on("click", function() {
         processClick(linux_opts, this, "linux");
@@ -106,14 +116,17 @@
     function processClick(options, click, category) {
         // reset all
         $(pkg_opts).removeClass("disabled");
+        $(release_opts).removeClass("disabled");
         $(linux_opts).removeClass("disabled");
         $(python_opts).removeClass("disabled");
         $(cuda_opts).removeClass("disabled");
         $(pkg_opts).removeClass("active");
+        $(release_opts).removeClass("active");
         $(linux_opts).removeClass("active");
         $(python_opts).removeClass("active");
         $(cuda_opts).removeClass("active");
         var prev_linux = selections['linux'];
+        var prev_release = selections['release'];
 
         if (options && click && category) {
             $(options).removeClass("active");
@@ -148,6 +161,14 @@
             } else if (selections['linux'] == 'centos7' && prev_linux != 'centos7') {
                 selections['linux'] = prev_linux;
             }
+            $(release_opts).removeClass("active");
+            $(release_opts).removeClass("disabled");
+            $("#nightly").addClass("disabled");
+            if (selections['release'] == 'nightly' && prev_release == 'nightly') {
+                selections['release'] = 'stable';
+            } else if (selections['release'] == 'nightly' && prev_release != 'nightly') {
+                selections['release'] = prev_release;
+            }
         } else {
             $("#"+selections['method']).addClass("active");
         }
@@ -155,15 +176,16 @@
         $("#"+selections['linux']).addClass("active");
         $("#"+selections['python']).addClass("active");
         $("#"+selections['cuda']).addClass("active");
+        $("#"+selections['release']).addClass("active");
 
         showCommand();
     }
 
     function getSelections() {
         if (selections['method'] == 'source') {
-            return ""+selections['pkg']+"-"+selections['method'];
+            return ""+selections['release']+"-"+selections['pkg']+"-"+selections['method'];
         } else {
-            return ""+selections['pkg']+"-"+selections['method']+"-"+selections['linux']+"-"+selections['python']+"-"+selections['cuda'];
+            return ""+selections['release']+"-"+selections['pkg']+"-"+selections['method']+"-"+selections['linux']+"-"+selections['python']+"-"+selections['cuda'];
         }
     }
 
@@ -193,6 +215,10 @@
     }
 </script>
 
+<!--
+    STABLE commands
+-->
+
 <!-- docker - ubuntu 16.04 -->
 
 ```bash
@@ -200,28 +226,28 @@ docker pull rapidsai/rapidsai:latest
 docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:latest
 ```
-{: .both-docker-ubuntu1604-py36-cuda92 .hidden }
+{: .stable-both-docker-ubuntu1604-py36-cuda92 .hidden }
 
 ```bash
 docker pull rapidsai/rapidsai:0.6-cuda9.2-runtime-ubuntu16.04-gcc5-py3.7
 docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:0.6-cuda9.2-runtime-ubuntu16.04-gcc5-py3.7
 ```
-{: .both-docker-ubuntu1604-py37-cuda92 .hidden }
+{: .stable-both-docker-ubuntu1604-py37-cuda92 .hidden }
 
 ```bash
 docker pull rapidsai/rapidsai:cuda10.0-runtime-ubuntu16.04
 docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:cuda10.0-runtime-ubuntu16.04
 ```
-{: .both-docker-ubuntu1604-py36-cuda100 .hidden }
+{: .stable-both-docker-ubuntu1604-py36-cuda100 .hidden }
 
 ```bash
 docker pull rapidsai/rapidsai:0.6-cuda10.0-runtime-ubuntu16.04-gcc5-py3.7
 docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:0.6-cuda10.0-runtime-ubuntu16.04-gcc5-py3.7
 ```
-{: .both-docker-ubuntu1604-py37-cuda100 .hidden }
+{: .stable-both-docker-ubuntu1604-py37-cuda100 .hidden }
 
 <!-- docker - ubuntu 18.04 -->
 
@@ -230,28 +256,28 @@ docker pull rapidsai/rapidsai:cuda9.2-runtime-ubuntu18.04
 docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:cuda9.2-runtime-ubuntu18.04
 ```
-{: .both-docker-ubuntu1804-py36-cuda92 .hidden }
+{: .stable-both-docker-ubuntu1804-py36-cuda92 .hidden }
 
 ```bash
 docker pull rapidsai/rapidsai:0.6-cuda9.2-runtime-ubuntu18.04-gcc7-py3.7
 docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:0.6-cuda9.2-runtime-ubuntu18.04-gcc7-py3.7
 ```
-{: .both-docker-ubuntu1804-py37-cuda92 .hidden }
+{: .stable-both-docker-ubuntu1804-py37-cuda92 .hidden }
 
 ```bash
 docker pull rapidsai/rapidsai:cuda10.0-runtime-ubuntu18.04
 docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:cuda10.0-runtime-ubuntu18.04
 ```
-{: .both-docker-ubuntu1804-py36-cuda100 .hidden }
+{: .stable-both-docker-ubuntu1804-py36-cuda100 .hidden }
 
 ```bash
 docker pull rapidsai/rapidsai:0.6-cuda10.0-runtime-ubuntu18.04-gcc7-py3.7
 docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:0.6-cuda10.0-runtime-ubuntu18.04-gcc7-py3.7
 ```
-{: .both-docker-ubuntu1804-py37-cuda100 .hidden }
+{: .stable-both-docker-ubuntu1804-py37-cuda100 .hidden }
 
 <!-- docker - centos 7 -->
 
@@ -260,37 +286,37 @@ docker pull rapidsai/rapidsai:cuda9.2-runtime-centos7
 docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:cuda9.2-runtime-centos7
 ```
-{: .both-docker-centos7-py36-cuda92 .hidden }
+{: .stable-both-docker-centos7-py36-cuda92 .hidden }
 
 ```bash
 docker pull rapidsai/rapidsai:0.6-cuda9.2-runtime-centos7-gcc7-py3.7
 docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:0.6-cuda9.2-runtime-centos7-gcc7-py3.7
 ```
-{: .both-docker-centos7-py37-cuda92 .hidden }
+{: .stable-both-docker-centos7-py37-cuda92 .hidden }
 
 ```bash
 docker pull rapidsai/rapidsai:cuda10.0-runtime-centos7
 docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:cuda10.0-runtime-centos7
 ```
-{: .both-docker-centos7-py36-cuda100 .hidden }
+{: .stable-both-docker-centos7-py36-cuda100 .hidden }
 
 ```bash
 docker pull rapidsai/rapidsai:0.6-cuda10.0-runtime-centos7-gcc7-py3.7
 docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai:0.6-cuda10.0-runtime-centos7-gcc7-py3.7
 ```
-{: .both-docker-centos7-py37-cuda100 .hidden }
+{: .stable-both-docker-centos7-py37-cuda100 .hidden }
 
 <!-- source -->
 
-<div class="cudf-source hidden">
-    <pre># See <a href="https://github.com/rapidsai/cudf/tree/master#development-setup" _target="blank">cuDF README</a> for build instructions</pre>
+<div class="stable-cudf-source hidden">
+    <pre># See <a href="https://github.com/rapidsai/cudf/tree/master#buildinstall-from-source" _target="blank">cuDF README</a> for build instructions</pre>
 </div>
 
-<div class="cuml-source hidden">
-    <pre># See <a href="https://github.com/rapidsai/cuml/tree/master#installing-from-source" _target="blank">cuML README</a> for build instructions</pre>
+<div class="stable-cuml-source hidden">
+    <pre># See <a href="https://github.com/rapidsai/cuml/tree/master#buildinstall-from-source" _target="blank">cuML README</a> for build instructions</pre>
 </div>
 
 <!-- conda cuda92 -->
@@ -299,37 +325,37 @@ docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 conda install -c nvidia -c rapidsai -c numba -c conda-forge \
     cudf=0.6 python=3.6
 ```
-{: .cudf-conda-ubuntu1604-py36-cuda92 .cudf-conda-ubuntu1804-py36-cuda92 .cudf-conda-centos7-py36-cuda92 .hidden }
+{: .stable-cudf-conda-ubuntu1604-py36-cuda92 .stable-cudf-conda-ubuntu1804-py36-cuda92 .stable-cudf-conda-centos7-py36-cuda92 .hidden }
 
 ```bash
 conda install -c nvidia -c rapidsai -c numba -c conda-forge \
     cudf=0.6 python=3.7
 ```
-{: .cudf-conda-ubuntu1604-py37-cuda92 .cudf-conda-ubuntu1804-py37-cuda92 .cudf-conda-centos7-py37-cuda92 .hidden }
+{: .stable-cudf-conda-ubuntu1604-py37-cuda92 .stable-cudf-conda-ubuntu1804-py37-cuda92 .stable-cudf-conda-centos7-py37-cuda92 .hidden }
 
 ```bash
 conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
     cuml=0.6 python=3.6
 ```
-{: .cuml-conda-ubuntu1604-py36-cuda92 .cuml-conda-ubuntu1804-py36-cuda92 .cuml-conda-centos7-py36-cuda92 .hidden }
+{: .stable-cuml-conda-ubuntu1604-py36-cuda92 .stable-cuml-conda-ubuntu1804-py36-cuda92 .stable-cuml-conda-centos7-py36-cuda92 .hidden }
 
 ```bash
 conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
     cuml=0.6 python=3.7
 ```
-{: .cuml-conda-ubuntu1604-py37-cuda92 .cuml-conda-ubuntu1804-py37-cuda92 .cuml-conda-centos7-py37-cuda92 .hidden }
+{: .stable-cuml-conda-ubuntu1604-py37-cuda92 .stable-cuml-conda-ubuntu1804-py37-cuda92 .stable-cuml-conda-centos7-py37-cuda92 .hidden }
 
 ```bash
 conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
     cudf=0.6 cuml=0.6 python=3.6
 ```
-{: .both-conda-ubuntu1604-py36-cuda92 .both-conda-ubuntu1804-py36-cuda92 .both-conda-centos7-py36-cuda92 .hidden }
+{: .stable-both-conda-ubuntu1604-py36-cuda92 .stable-both-conda-ubuntu1804-py36-cuda92 .stable-both-conda-centos7-py36-cuda92 .hidden }
 
 ```bash
 conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
     cudf=0.6 cuml=0.6 python=3.7
 ```
-{: .both-conda-ubuntu1604-py37-cuda92 .both-conda-ubuntu1804-py37-cuda92 .both-conda-centos7-py37-cuda92 .hidden }
+{: .stable-both-conda-ubuntu1604-py37-cuda92 .stable-both-conda-ubuntu1804-py37-cuda92 .stable-both-conda-centos7-py37-cuda92 .hidden }
 
 <!-- conda cuda100 -->
 
@@ -337,37 +363,37 @@ conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
 conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c numba \
     -c conda-forge cudf=0.6 python=3.6
 ```
-{: .cudf-conda-ubuntu1604-py36-cuda100 .cudf-conda-ubuntu1804-py36-cuda100 .cudf-conda-centos7-py36-cuda100 .hidden }
+{: .stable-cudf-conda-ubuntu1604-py36-cuda100 .stable-cudf-conda-ubuntu1804-py36-cuda100 .stable-cudf-conda-centos7-py36-cuda100 .hidden }
 
 ```bash
 conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c numba \
     -c conda-forge cudf=0.6 python=3.7
 ```
-{: .cudf-conda-ubuntu1604-py37-cuda100 .cudf-conda-ubuntu1804-py37-cuda100 .cudf-conda-centos7-py37-cuda100 .hidden }
+{: .stable-cudf-conda-ubuntu1604-py37-cuda100 .stable-cudf-conda-ubuntu1804-py37-cuda100 .stable-cudf-conda-centos7-py37-cuda100 .hidden }
 
 ```bash
 conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
     -c numba -c conda-forge cuml=0.6 python=3.6
 ```
-{: .cuml-conda-ubuntu1604-py36-cuda100 .cuml-conda-ubuntu1804-py36-cuda100 .cuml-conda-centos7-py36-cuda100 .hidden }
+{: .stable-cuml-conda-ubuntu1604-py36-cuda100 .stable-cuml-conda-ubuntu1804-py36-cuda100 .stable-cuml-conda-centos7-py36-cuda100 .hidden }
 
 ```bash
 conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
     -c numba -c conda-forge cuml=0.6 python=3.7
 ```
-{: .cuml-conda-ubuntu1604-py37-cuda100 .cuml-conda-ubuntu1804-py37-cuda100 .cuml-conda-centos7-py37-cuda100 .hidden }
+{: .stable-cuml-conda-ubuntu1604-py37-cuda100 .stable-cuml-conda-ubuntu1804-py37-cuda100 .stable-cuml-conda-centos7-py37-cuda100 .hidden }
 
 ```bash
 conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
     -c numba -c conda-forge cudf=0.6 cuml=0.6 python=3.6
 ```
-{: .both-conda-ubuntu1604-py36-cuda100 .both-conda-ubuntu1804-py36-cuda100 .both-conda-centos7-py36-cuda100 .hidden }
+{: .stable-both-conda-ubuntu1604-py36-cuda100 .stable-both-conda-ubuntu1804-py36-cuda100 .stable-both-conda-centos7-py36-cuda100 .hidden }
 
 ```bash
 conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
     -c numba -c conda-forge cudf=0.6 cuml=0.6 python=3.7
 ```
-{: .both-conda-ubuntu1604-py37-cuda100 .both-conda-ubuntu1804-py37-cuda100 .both-conda-centos7-py37-cuda100 .hidden }
+{: .stable-both-conda-ubuntu1604-py37-cuda100 .stable-both-conda-ubuntu1804-py37-cuda100 .stable-both-conda-centos7-py37-cuda100 .hidden }
 
 <!-- pip cudf -->
 
@@ -376,48 +402,48 @@ conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
 
 python3.6 -m pip install cudf-cuda92==0.6
 ```
-{: .cudf-pip-ubuntu1604-py36-cuda92 .hidden }
+{: .stable-cudf-pip-ubuntu1604-py36-cuda92 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
 python3.7 -m pip install cudf-cuda92==0.6
 ```
-{: .cudf-pip-ubuntu1604-py37-cuda92 .hidden }
+{: .stable-cudf-pip-ubuntu1604-py37-cuda92 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
 python3.6 -m pip install cudf-cuda100==0.6
 ```
-{: .cudf-pip-ubuntu1604-py36-cuda100 .hidden }
+{: .stable-cudf-pip-ubuntu1604-py36-cuda100 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
 python3.7 -m pip install cudf-cuda100==0.6
 ```
-{: .cudf-pip-ubuntu1604-py37-cuda100 .hidden }
+{: .stable-cudf-pip-ubuntu1604-py37-cuda100 .hidden }
 
 ```bash
 python3.6 -m pip install cudf-cuda92==0.6
 ```
-{: .cudf-pip-ubuntu1804-py36-cuda92 .hidden }
+{: .stable-cudf-pip-ubuntu1804-py36-cuda92 .hidden }
 
 ```bash
 python3.7 -m pip install cudf-cuda92==0.6
 ```
-{: .cudf-pip-ubuntu1804-py37-cuda92 .hidden }
+{: .stable-cudf-pip-ubuntu1804-py37-cuda92 .hidden }
 
 ```bash
 python3.6 -m pip install cudf-cuda100==0.6
 ```
-{: .cudf-pip-ubuntu1804-py36-cuda100 .hidden }
+{: .stable-cudf-pip-ubuntu1804-py36-cuda100 .hidden }
 
 ```bash
 python3.7 -m pip install cudf-cuda100==0.6
 ```
-{: .cudf-pip-ubuntu1804-py37-cuda100 .hidden }
+{: .stable-cudf-pip-ubuntu1804-py37-cuda100 .hidden }
 
 <!-- pip cuml -->
 
@@ -426,48 +452,48 @@ python3.7 -m pip install cudf-cuda100==0.6
 
 python3.6 -m pip install cuml-cuda92==0.6
 ```
-{: .cuml-pip-ubuntu1604-py36-cuda92 .hidden }
+{: .stable-cuml-pip-ubuntu1604-py36-cuda92 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
 python3.7 -m pip install cuml-cuda92==0.6
 ```
-{: .cuml-pip-ubuntu1604-py37-cuda92 .hidden }
+{: .stable-cuml-pip-ubuntu1604-py37-cuda92 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
 python3.6 -m pip install cuml-cuda100==0.6
 ```
-{: .cuml-pip-ubuntu1604-py36-cuda100 .hidden }
+{: .stable-cuml-pip-ubuntu1604-py36-cuda100 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
 python3.7 -m pip install cuml-cuda100==0.6
 ```
-{: .cuml-pip-ubuntu1604-py37-cuda100 .hidden }
+{: .stable-cuml-pip-ubuntu1604-py37-cuda100 .hidden }
 
 ```bash
 python3.6 -m pip install cuml-cuda92==0.6
 ```
-{: .cuml-pip-ubuntu1804-py36-cuda92 .hidden }
+{: .stable-cuml-pip-ubuntu1804-py36-cuda92 .hidden }
 
 ```bash
 python3.7 -m pip install cuml-cuda92==0.6
 ```
-{: .cuml-pip-ubuntu1804-py37-cuda92 .hidden }
+{: .stable-cuml-pip-ubuntu1804-py37-cuda92 .hidden }
 
 ```bash
 python3.6 -m pip install cuml-cuda100==0.6
 ```
-{: .cuml-pip-ubuntu1804-py36-cuda100 .hidden }
+{: .stable-cuml-pip-ubuntu1804-py36-cuda100 .hidden }
 
 ```bash
 python3.7 -m pip install cuml-cuda100==0.6
 ```
-{: .cuml-pip-ubuntu1804-py37-cuda100 .hidden }
+{: .stable-cuml-pip-ubuntu1804-py37-cuda100 .hidden }
 
 <!-- pip both -->
 
@@ -476,45 +502,225 @@ python3.7 -m pip install cuml-cuda100==0.6
 
 python3.6 -m pip install cudf-cuda92==0.6 cuml-cuda92==0.6
 ```
-{: .both-pip-ubuntu1604-py36-cuda92 .hidden }
+{: .stable-both-pip-ubuntu1604-py36-cuda92 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
 python3.7 -m pip install cudf-cuda92==0.6 cuml-cuda92==0.6
 ```
-{: .both-pip-ubuntu1604-py37-cuda92 .hidden }
+{: .stable-both-pip-ubuntu1604-py37-cuda92 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
 python3.6 -m pip install cudf-cuda100==0.6 cuml-cuda100==0.6
 ```
-{: .both-pip-ubuntu1604-py36-cuda100 .hidden }
+{: .stable-both-pip-ubuntu1604-py36-cuda100 .hidden }
 
 ```bash
 # Ubuntu 16.04's python3 package is Python 3.5, follow install instructions below
 
 python3.7 -m pip install cudf-cuda100==0.6 cuml-cuda100==0.6
 ```
-{: .both-pip-ubuntu1604-py37-cuda100 .hidden }
+{: .stable-both-pip-ubuntu1604-py37-cuda100 .hidden }
 
 ```bash
 python3.6 -m pip install cudf-cuda92==0.6 cuml-cuda92==0.6
 ```
-{: .both-pip-ubuntu1804-py36-cuda92 .hidden }
+{: .stable-both-pip-ubuntu1804-py36-cuda92 .hidden }
 
 ```bash
 python3.7 -m pip install cudf-cuda92==0.6 cuml-cuda92==0.6
 ```
-{: .both-pip-ubuntu1804-py37-cuda92 .hidden }
+{: .stable-both-pip-ubuntu1804-py37-cuda92 .hidden }
 
 ```bash
 python3.6 -m pip install cudf-cuda100==0.6 cuml-cuda100==0.6
 ```
-{: .both-pip-ubuntu1804-py36-cuda100 .hidden }
+{: .stable-both-pip-ubuntu1804-py36-cuda100 .hidden }
 
 ```bash
 python3.7 -m pip install cudf-cuda100==0.6 cuml-cuda100==0.6
 ```
-{: .both-pip-ubuntu1804-py37-cuda100 .hidden }
+{: .stable-both-pip-ubuntu1804-py37-cuda100 .hidden }
+
+<!--
+    NIGHTLY commands
+-->
+
+<!-- docker - ubuntu 16.04 -->
+
+```bash
+docker pull rapidsai/rapidsai-nightly:latest
+docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-nightly:latest
+```
+{: .nightly-both-docker-ubuntu1604-py36-cuda92 .hidden }
+
+```bash
+docker pull rapidsai/rapidsai-nightly:0.7-cuda9.2-runtime-ubuntu16.04-gcc5-py3.7
+docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-nightly:0.7-cuda9.2-runtime-ubuntu16.04-gcc5-py3.7
+```
+{: .nightly-both-docker-ubuntu1604-py37-cuda92 .hidden }
+
+```bash
+docker pull rapidsai/rapidsai-nightly:cuda10.0-runtime-ubuntu16.04
+docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-nightly:cuda10.0-runtime-ubuntu16.04
+```
+{: .nightly-both-docker-ubuntu1604-py36-cuda100 .hidden }
+
+```bash
+docker pull rapidsai/rapidsai-nightly:0.7-cuda10.0-runtime-ubuntu16.04-gcc5-py3.7
+docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-nightly:0.7-cuda10.0-runtime-ubuntu16.04-gcc5-py3.7
+```
+{: .nightly-both-docker-ubuntu1604-py37-cuda100 .hidden }
+
+<!-- docker - ubuntu 18.04 -->
+
+```bash
+docker pull rapidsai/rapidsai-nightly:cuda9.2-runtime-ubuntu18.04
+docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-nightly:cuda9.2-runtime-ubuntu18.04
+```
+{: .nightly-both-docker-ubuntu1804-py36-cuda92 .hidden }
+
+```bash
+docker pull rapidsai/rapidsai-nightly:0.7-cuda9.2-runtime-ubuntu18.04-gcc7-py3.7
+docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-nightly:0.7-cuda9.2-runtime-ubuntu18.04-gcc7-py3.7
+```
+{: .nightly-both-docker-ubuntu1804-py37-cuda92 .hidden }
+
+```bash
+docker pull rapidsai/rapidsai-nightly:cuda10.0-runtime-ubuntu18.04
+docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-nightly:cuda10.0-runtime-ubuntu18.04
+```
+{: .nightly-both-docker-ubuntu1804-py36-cuda100 .hidden }
+
+```bash
+docker pull rapidsai/rapidsai-nightly:0.7-cuda10.0-runtime-ubuntu18.04-gcc7-py3.7
+docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-nightly:0.7-cuda10.0-runtime-ubuntu18.04-gcc7-py3.7
+```
+{: .nightly-both-docker-ubuntu1804-py37-cuda100 .hidden }
+
+<!-- docker - centos 7 -->
+
+```bash
+docker pull rapidsai/rapidsai-nightly:cuda9.2-runtime-centos7
+docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-nightly:cuda9.2-runtime-centos7
+```
+{: .nightly-both-docker-centos7-py36-cuda92 .hidden }
+
+```bash
+docker pull rapidsai/rapidsai-nightly:0.7-cuda9.2-runtime-centos7-gcc7-py3.7
+docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-nightly:0.7-cuda9.2-runtime-centos7-gcc7-py3.7
+```
+{: .nightly-both-docker-centos7-py37-cuda92 .hidden }
+
+```bash
+docker pull rapidsai/rapidsai-nightly:cuda10.0-runtime-centos7
+docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-nightly:cuda10.0-runtime-centos7
+```
+{: .nightly-both-docker-centos7-py36-cuda100 .hidden }
+
+```bash
+docker pull rapidsai/rapidsai-nightly:0.7-cuda10.0-runtime-centos7-gcc7-py3.7
+docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-nightly:0.7-cuda10.0-runtime-centos7-gcc7-py3.7
+```
+{: .nightly-both-docker-centos7-py37-cuda100 .hidden }
+
+<!-- source -->
+
+<div class="nightly-cudf-source hidden">
+    <pre># See <a href="https://github.com/rapidsai/cudf#buildinstall-from-source" _target="blank">cuDF README</a> for build instructions</pre>
+</div>
+
+<div class="nightly-cuml-source hidden">
+    <pre># See <a href="https://github.com/rapidsai/cuml#buildinstall-from-source" _target="blank">cuML README</a> for build instructions</pre>
+</div>
+
+<!-- conda cuda92 -->
+
+```bash
+conda install -c nvidia -c rapidsai-nightly -c numba -c conda-forge \
+    cudf=0.7 python=3.6
+```
+{: .nightly-cudf-conda-ubuntu1604-py36-cuda92 .nightly-cudf-conda-ubuntu1804-py36-cuda92 .nightly-cudf-conda-centos7-py36-cuda92 .hidden }
+
+```bash
+conda install -c nvidia -c rapidsai-nightly -c numba -c conda-forge \
+    cudf=0.7 python=3.7
+```
+{: .nightly-cudf-conda-ubuntu1604-py37-cuda92 .nightly-cudf-conda-ubuntu1804-py37-cuda92 .nightly-cudf-conda-centos7-py37-cuda92 .hidden }
+
+```bash
+conda install -c nvidia -c rapidsai-nightly -c pytorch -c numba -c conda-forge \
+    cuml=0.7 python=3.6
+```
+{: .nightly-cuml-conda-ubuntu1604-py36-cuda92 .nightly-cuml-conda-ubuntu1804-py36-cuda92 .nightly-cuml-conda-centos7-py36-cuda92 .hidden }
+
+```bash
+conda install -c nvidia -c rapidsai-nightly -c pytorch -c numba -c conda-forge \
+    cuml=0.7 python=3.7
+```
+{: .nightly-cuml-conda-ubuntu1604-py37-cuda92 .nightly-cuml-conda-ubuntu1804-py37-cuda92 .nightly-cuml-conda-centos7-py37-cuda92 .hidden }
+
+```bash
+conda install -c nvidia -c rapidsai-nightly -c pytorch -c numba -c conda-forge \
+    cudf=0.7 cuml=0.7 python=3.6
+```
+{: .nightly-both-conda-ubuntu1604-py36-cuda92 .nightly-both-conda-ubuntu1804-py36-cuda92 .nightly-both-conda-centos7-py36-cuda92 .hidden }
+
+```bash
+conda install -c nvidia -c rapidsai-nightly -c pytorch -c numba -c conda-forge \
+    cudf=0.7 cuml=0.7 python=3.7
+```
+{: .nightly-both-conda-ubuntu1604-py37-cuda92 .nightly-both-conda-ubuntu1804-py37-cuda92 .nightly-both-conda-centos7-py37-cuda92 .hidden }
+
+<!-- conda cuda100 -->
+
+```bash
+conda install -c nvidia/label/cuda10.0 -c rapidsai-nightly/label/cuda10.0 -c numba \
+    -c conda-forge cudf=0.7 python=3.6
+```
+{: .nightly-cudf-conda-ubuntu1604-py36-cuda100 .nightly-cudf-conda-ubuntu1804-py36-cuda100 .nightly-cudf-conda-centos7-py36-cuda100 .hidden }
+
+```bash
+conda install -c nvidia/label/cuda10.0 -c rapidsai-nightly/label/cuda10.0 -c numba \
+    -c conda-forge cudf=0.7 python=3.7
+```
+{: .nightly-cudf-conda-ubuntu1604-py37-cuda100 .nightly-cudf-conda-ubuntu1804-py37-cuda100 .nightly-cudf-conda-centos7-py37-cuda100 .hidden }
+
+```bash
+conda install -c nvidia/label/cuda10.0 -c rapidsai-nightly/label/cuda10.0 -c pytorch \
+    -c numba -c conda-forge cuml=0.7 python=3.6
+```
+{: .nightly-cuml-conda-ubuntu1604-py36-cuda100 .nightly-cuml-conda-ubuntu1804-py36-cuda100 .nightly-cuml-conda-centos7-py36-cuda100 .hidden }
+
+```bash
+conda install -c nvidia/label/cuda10.0 -c rapidsai-nightly/label/cuda10.0 -c pytorch \
+    -c numba -c conda-forge cuml=0.7 python=3.7
+```
+{: .nightly-cuml-conda-ubuntu1604-py37-cuda100 .nightly-cuml-conda-ubuntu1804-py37-cuda100 .nightly-cuml-conda-centos7-py37-cuda100 .hidden }
+
+```bash
+conda install -c nvidia/label/cuda10.0 -c rapidsai-nightly/label/cuda10.0 -c pytorch \
+    -c numba -c conda-forge cudf=0.7 cuml=0.7 python=3.6
+```
+{: .nightly-both-conda-ubuntu1604-py36-cuda100 .nightly-both-conda-ubuntu1804-py36-cuda100 .nightly-both-conda-centos7-py36-cuda100 .hidden }
+
+```bash
+conda install -c nvidia/label/cuda10.0 -c rapidsai-nightly/label/cuda10.0 -c pytorch \
+    -c numba -c conda-forge cudf=0.7 cuml=0.7 python=3.7
+```
+{: .nightly-both-conda-ubuntu1604-py37-cuda100 .nightly-both-conda-ubuntu1804-py37-cuda100 .nightly-both-conda-centos7-py37-cuda100 .hidden }
