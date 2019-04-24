@@ -57,7 +57,7 @@ h2 {
 }
 
 h3 {
-    font-size: 1.4em;
+    font-size: 1.3em;
     color: #7306ff;
     font-weight: 300;
     margin-bottom: 0em;
@@ -68,11 +68,13 @@ p {
     font-size: 1.1em;
     line-height: 1.3em;
     margin-top: 0.4em;
+
 }
 
-.bold {
-    font-weight: 600;
+strong {
+	font-weight: 600;
 }
+
 
 .full-image {
 	width: 100%;
@@ -80,6 +82,12 @@ p {
 
 .half-image {
 	width: 50%;
+}
+
+.flex-center {
+	display: flex;
+	justify-content: center; /* align horizontal */
+	align-items: center; /* align vertical */
 }
 
 
@@ -176,8 +184,7 @@ header {
 /* layout */
 .container-padding {
     width: 100%;
-    max-width: 1280px;
-    /* max width! */
+    max-width: 1280px; /* max width! */
     padding: 0 2em;
     margin: 0 auto;
 }
@@ -359,6 +366,10 @@ header {
     margin-bottom: 0;
 }
 
+.section-subtitle-top {
+	margin-top: 1.5em;
+}
+
 .intro-icons {
     width: 40px;
     height: 40px;
@@ -403,6 +414,7 @@ a h2:hover {
     align-items: center;
     width: 100%;
     max-width: 1280px;
+    margin: 0 auto;
 }
 
 .logo-flex {
@@ -412,7 +424,6 @@ a h2:hover {
 .logo-flex a img {
     max-width: 120px;
 }
-
 
 /* footer */
 .footer-cta-main {
@@ -464,6 +475,29 @@ footer {
 	text-align: center;
 }
 
+.footer-help-section {
+	color: white;
+	display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding-top: 3em;
+    padding-bottom: 6em;
+}
+
+.footer-help-box {
+    margin: 0 1.5em;
+}
+
+.footer-help-box .icon {
+    display: block;
+    margin: 0 auto;
+    padding-bottom: 0.1em;
+}
+
 
 /* buttons */
 a.blue-btn,
@@ -493,25 +527,101 @@ a.blue-btn:hover,
 
 }
 
-/* random */
-.noselect,
-div.option,
-.primary-btn,
-a.blue-btn,
-.primary-btn {
-    -webkit-touch-callout: none;
-    /* iOS Safari */
-    -webkit-user-select: none;
-    /* Safari */
-    -khtml-user-select: none;
-    /* Konqueror HTML */
-    -moz-user-select: none;
-    /* Firefox */
-    -ms-user-select: none;
-    /* Internet Explorer/Edge */
-    user-select: none;
-    /* Non-prefixed version, currently
-                                supported by Chrome and Opera */
+/* install options selector */
+/* new selector */
+
+.selector {
+    width: 100%;
+    display: flex;
+}
+.selector div.labels {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+.selector div.options div {
+    display: flex;
+    flex-direction: row;
+}
+.selector div.label {
+    background: transparent;
+    text-align: left;
+    padding: 0.25em;
+    margin: 0.25em;
+    flex: 1 1;
+    color: #d3d3d3;
+    font-size: 18px;
+    font-weight: 600;
+}
+.selector div.option {
+    background: #e3e3e3;
+    text-align: center;
+    padding: 0.25em 0 0.25em 0.75em;
+    margin: 0.25em;
+    flex: 1 1;
+    font-size: 18px;
+    cursor: pointer;
+}
+.selector div.cmd {
+    cursor: text;
+    background: #fff;
+    padding: 0.25em 0 0.25em 0.75em;
+    margin: 0.25em;
+    flex: 1 1;
+    font-size: 18px;
+}
+.selector div.cmd pre {
+    line-height: 24px;
+    padding: 1em;
+    text-align: left;
+}
+.selector div.active {
+    background: #36c9dd;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.selector div.disabled {
+    background: #a785e7;
+    cursor: not-allowed;
+    font-weight: 400;
+}
+
+.selector div.output {
+    padding-top: 0.5em;
+}
+
+.selector div.preferred .option {
+    background: transparent;
+    padding: 0.25em 0;
+}
+
+.selector div.preferred span {
+    width: 100%;
+    color: #eee;
+    font-weight: 900;
+}
+
+#more-details {
+    margin-left: 4em;
+}
+
+.hidden {
+    display: none;
+}
+
+.noselect, div.option, .primary-btn, a.blue-btn, .primary-btn {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -khtml-user-select: none; /* Konqueror HTML */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+.selector-buttons {
+	text-align: center;
+	margin-top: 3em;
 }
 
 

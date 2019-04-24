@@ -9,59 +9,40 @@ brand_link: "https://github.com/rapidsai"
 layout: default
 ---
 
-<section class="about-rapids contact-rapids">
-    <div class="fixed-content">
-        <h2>RAPIDS Community</h2>
-        <p> RAPIDS is for everyone—users, adopters, and contributors. If you’re a data
-            scientist, researcher, engineer, or developer using pandas, Dask, scikit-learn, or Spark on CPUs
-            and looking for 50X end-to-end pipeline speedups at scale, look no further. Download RAPIDS and
-            give us a run. The RAPIDS cuDF library is almost a drop-in, API-compatible, GPU-accelerated
-            replacement for pandas and Dask (if you want to scale to multi-GPU and multi-node).</p>
-        <p>
-            RAPIDS is also open sourced under the Apache 2.0 open-source license and is intended to be built
-            upon and hardened in the community. While significant time and effort have been invested into
-            making the platform usable and relevant, we need active contributors to help improve it and
-            build its future.</p>
-    </div>
-</section>
+{% capture com_left %}
+# RAPIDS Community
+{: .section-title-halfs}
 
-<section class="rapids-adopter community-main">
-    <div class="top-main-gray-strip"></div>
-    <div class="rapids-adopter-container ßfixed-content">
-        <div class="community-content-inner">
-            <h2>Become a RAPIDS Contributor</h2>
-            <p class="no-padding-botton">Contributors include anyone who helps improve the project—whether by reporting issues, adding documentation and examples, or contributing code. RAPIDS is built on open-source projects, fork our repositories from GitHub, start hacking, and open a pull request. Join us on Google Groups and let us know what you're working on.</p>
-        </div>
-    </div>
-</section>
+RAPIDS is for everyone—users, adopters, and contributors. If you’re a data scientist, researcher, engineer, or developer using pandas, Dask, scikit-learn, or Spark on CPUs and looking for 50X end-to-end pipeline speedups at scale, look no further. Download RAPIDS and give us a run. The RAPIDS cuDF library is almost a drop-in, API-compatible, GPU-accelerated replacement for pandas and Dask (if you want to scale to multi-GPU and multi-node).
+{% endcapture %}
 
-<section class="contributing-partner">
-    <div class="fixed-content">
-        <h3>Contributors</h3>
-        <div class="contributing-logos">
-            <div class="contributing-logo">
-                <img src="{{ site.baseurl }}{% link /assets/images/anaconda.png %}" alt="anaconda">
-            </div>
-            <div class="contributing-logo">
-                <img src="{{ site.baseurl }}{% link /assets/images/blazingdb.png %}" alt="blazingdb">
-            </div>
-            <div class="contributing-logo">
-                <img src="{{ site.baseurl }}{% link /assets/images/Gunrock_Color.png %}" alt="gunrock">
-            </div>
-            <div class="contributing-logo">
-                <img src="{{ site.baseurl }}{% link /assets/images/NVLogo_2D_H.png %}" alt="nvidia">
-            </div>
-            <div class="contributing-logo">
-                <img src="{{ site.baseurl }}{% link /assets/images/quansight.png %}" alt="quansight">
-            </div>
-            <div class="contributing-logo">
-                <img src="{{ site.baseurl }}{% link /assets/images/scikit-learn_Color.png %}" alt="scikitlearn">
-            </div>
-            <div class="contributing-logo">
-                <img src="{{ site.baseurl }}{% link /assets/images/walmart_labs.png %}" alt="walmart labs">
-            </div>
-        </div>
-    </div>
-</section>
+{% capture com_right %}
+## <i class="fas fa-code"></i> Open Source
+{: .section-subtitle-top}
+RAPIDS is also open sourced under the Apache 2.0 open-source license and is intended to be built upon and hardened in the community. While significant time and effort have been invested into making the platform usable and relevant, we need active contributors to help improve it and build its future.
 
-{% include cta-footer-help.html %}
+## <i class="fab fa-github"></i> Become a RAPIDS Contributor
+Contributors include anyone who helps improve the project—whether by reporting issues, adding documentation and examples, or contributing code. RAPIDS is built on open-source projects, fork our repositories from GitHub, start hacking, and open a pull request. Join us on Google Groups and let us know what you're working on.
+{% endcapture %}
+
+{% include section-halfs.html
+    background="background-white" 
+    padding-top="0" padding-bottom="1" 
+    content-left-half=com_left 
+    content-right-half=com_right
+%} 
+
+# Contributors
+{: .section-title-full}
+{% include contributing-logos.html 
+    padding-top="0" padding-bottom="2" 
+%}
+
+{% include slopecap.html 
+    background="background-darkpurple" 
+    position="top" 
+    slope="down"
+%}
+{% include cta-footer-help.html 
+   background="background-darkpurple" 
+%}

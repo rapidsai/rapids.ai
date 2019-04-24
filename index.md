@@ -14,7 +14,7 @@ layout: default
 
 {% capture about_top_left %}
 ## <i class="fas fa-info"></i> Accelerated Data Science
-The RAPIDS suite of open source software libraries gives you the freedom to execute end-to-end data science and analytics pipelines entirely on GPUs. <a href="https://rapids.ai/about.html" class="bold">Learn more <i class="fas fa-angle-double-right"></i></a>
+The RAPIDS suite of open source software libraries gives you the freedom to execute end-to-end data science and analytics pipelines entirely on GPUs. <a href="about.html" class="bold">Learn more <i class="fas fa-angle-double-right"></i></a>
 {% endcapture %}
 
 {% capture about_top_middle %}
@@ -59,7 +59,7 @@ The open-source software is customizable, extensible, interoperable --supported 
 # Getting Started
 {: .section-title-halfs}
 
-The RAPIDS data science framework is designed to have a familiar look and feel to data scientist working in Python. Here’s a code snippet where we read in a CSV file and output some descriptive statistics. Find more details on our <a class="bold" href="https://rapids.ai/start.html"> get started section <i class="fas fa-angle-double-right"></i></a>
+The RAPIDS data science framework is designed to have a familiar look and feel to data scientist working in Python. Here’s a code snippet where we read in a CSV file and output some descriptive statistics. Find more details on our <a class="bold" href="start.html"> get started section <i class="fas fa-angle-double-right"></i></a>
 
 ```python
 import cudf
@@ -73,6 +73,8 @@ for column in gdf.columns:
 
 {% capture start_right %}
 ## <i class="far fa-bookmark"></i> 10 Minutes to cuDF
+{: .section-subtitle-top}
+
 Modeled after 10 Minutes to Pandas, this is a short introduction to cuDF that is geared mainly for new users. <a class="bold" href="https://rapidsai.github.io/projects/cudf/en/latest/10min.html">Go to guide <i class="fa fa-angle-double-right" aria-hidden="true"></i></a>
 
 ## <i class="far fa-bookmark"></i> GDF Cheat Sheet
@@ -95,46 +97,22 @@ A Github repository with examples for cuML using knn, dbscan, pca and tsvd, the 
 %} 
 
 
-{% include medium-thirds.html
+{% include medium-thirds-json.html
     background="background-gray"
     padding-top="0" padding-bottom="0" 
-    link1="https://medium.com/rapids-ai/the-road-to-1-0-building-for-the-long-haul-657ae1afdfd6"
-    image1="https://cdn-images-1.medium.com/max/800/1*GxaubH_8eZTsNRV7FBhiyw.png"
-    title1="The Road to 1.0 — Building for the Long Haul"
-    desc1="RAPIDS was everywhere at NVIDIA’s GTC 2019 in Silicon Valley. It was great to see so many vendors, partners, and customers showcasing RAPIDS in their booths and presentations. Even the RAPIDS press coverage blew me away..."
-    link2="https://medium.com/rapids-ai/rapids-cugraph-1ab2d9a39ec6"
-    image2="https://cdn-images-1.medium.com/max/800/1*pXa2tr1z-op8xWhMuQ67-g.jpeg"
-    title2="RAPIDS cuGraph "
-    desc2="The Data Scientist has a collection of techniques within their proverbial toolbox. Data engineering, statistical analysis, and machine learning are among the most commonly known..."
-    link3="https://medium.com/rapids-ai/rapids-can-now-be-accessed-on-databricks-unified-analytics-platform-666e42284bd1"
-    image3="https://cdn-images-1.medium.com/max/800/1*QOhZrlj6IcRCuETYMmRpiA.png"
-    title3="RAPIDS can now be accessed on Databricks Unified Analytics Platform "
-    desc3="NVIDIA RAPIDS can now be accessed on Databricks Unified Analytics Platform, making it easy for data scientists to leverage RAPIDS for their end-to-end data science workflows... "
 %}
 
 
-{% include tweet-thirds.html
+{% include tweet-thirds-json.html
     background="background-gray"
     padding-top="0" padding-bottom="2" 
-    tweetlink1="https://twitter.com/rapidsai/status/1113184332988997634"
-    poster1="@rapidsai"
-    text1="Check out the NEW RAPIDS 0.6 release with cleaner docs, feature improvements, more functionality, a new graph library, and so much more for #datascience -  https://nvda.ws/2WMsC1H "
-    action1="posted by @rapidsai"
-    tweetlink2="https://twitter.com/TalkPython/status/1117288613153255424"
-    poster2="@TalkPython"
-    text2="Make your Python zing with parallel computation using Dask. That's our topic on this week's episode of @talkpython with @mrocklin"
-    action2="retweeted by @rapidsai"    
-    tweetlink3="https://twitter.com/blazingdb/status/1115680801494974464"
-    poster3="@blazingdb"
-    text3="With #BlazingSQL + @Graphistry: Analyze log data 100x faster than comparable #ApacheSpark cluster at price parity on @rapidsai . Check out the new #blog post to  learn more, see the #code, and a #demo."
-    action3="retweeted by @rapidsai"
 %}
 
 
 {% capture com_left %}
 # RAPIDS Community
 {: .section-title-halfs}
-RAPIDS is committed to being open sourced. We strive for a major release <span class="bold">every 6 weeks</span> (give or take). Below is a generalized release schedule. <a class="bold" href="https://medium.com/rapids-ai/the-road-to-1-0-building-for-the-long-haul-657ae1afdfd6"> Learn more on our road to 1.0 post <i class="fas fa-angle-double-right"></i></a>
+RAPIDS is committed to being open sourced. We strive for a major release <strong>every 6 weeks</strong> (give or take). Below is a generalized release schedule. <a class="bold" href="https://medium.com/rapids-ai/the-road-to-1-0-building-for-the-long-haul-657ae1afdfd6"> Learn more on our road to 1.0 post <i class="fas fa-angle-double-right"></i></a>
 
 ## <i class="far fa-calendar-check"></i> Release Schedule
 JAN-2019 <span class="bold">v0.5</span> (previous)
@@ -147,7 +125,9 @@ MAY-2019 <span class="bold">v0.7</span> (planned)
 
 {% capture com_right %}
 ## <i class="fas fa-code"></i> RAPIDS APIS and Libraries
-RAPIDS is open sourced under the Apache 2.0 open-source license, spanning multiple projects that range from GPU dataframes to GPU accelerated ML algoritms. Its also provides native array_interface support, allowing Apache Arrow stored data to be pushed to deep learning frameworks such as PyTorch and Chainer. Learn more on the <a class="bold" href="https://rapids.ai/about.html">about page <i class="fas fa-angle-double-right"></i></a>
+{: .section-subtitle-top}
+
+RAPIDS is open sourced under the Apache 2.0 open-source license, spanning multiple projects that range from GPU dataframes to GPU accelerated ML algoritms. Its also provides native array_interface support, allowing Apache Arrow stored data to be pushed to deep learning frameworks such as PyTorch and Chainer. Learn more on the <a class="bold" href="about.html">about page <i class="fas fa-angle-double-right"></i></a>
 
 ## <i class="fab fa-github"></i> Contributing
 Whether you are new to RAPIDS, looking to help, or are part of the team, learn about our contributiong guidelines on the <a class="bold" href="https://docs.rapids.ai/contributing"> docs page <i class="fas fa-angle-double-right"></i></a>

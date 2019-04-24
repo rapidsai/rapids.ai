@@ -1,0 +1,55 @@
+{
+	"twitter": [
+		{
+			"tweetLink": "https://twitter.com/rapidsai/status/1113184332988997634",
+			"poster": "@rapidsai",
+			"type": "post",
+			"text": "Check out the NEW RAPIDS 0.6 release with cleaner docs, feature improvements, more functionality, a new graph library, and so much more for #datascience",
+			"link": "https://nvda.ws/2WMsC1H ",
+			"date": "02.02.2019"
+		},
+		{
+			"tweetLink": "https://twitter.com/TalkPython/status/1117288613153255424",
+			"poster": "@TalkPython",
+			"type": "retweet",
+			"text": "Make your Python zing with parallel computation using Dask. That's our topic on this week's episode of @talkpython with @mrocklin",
+			"link": "https://nvda.ws/2WMsC1H ",
+			"date": "02.03.2019"
+		},
+		{
+			"tweetLink": "https://twitter.com/rapidsai/status/1113184332988997634",
+			"poster": "@rapidsai",
+			"type": "post",
+			"text": "With #BlazingSQL + @Graphistry: Analyze log data 100x faster than comparable #ApacheSpark cluster at price parity on @rapidsai . Check out the new #blog post to learn more, see the #code, and a #demo",
+			"link": "https://nvda.ws/2WMsC1H ",
+			"date": "02.05.2019"
+		}
+		
+	],
+	"medium": [
+		{
+			"mediumLink": "https://medium.com/rapids-ai/the-road-to-1-0-building-for-the-long-haul-657ae1afdfd6",
+			"title": "The Road to 1.0 — Building for the Long Haul",
+			"text": "RAPIDS was everywhere at NVIDIA’s GTC 2019 in Silicon Valley. It was great to see so many vendors, partners, and customers showcasing RAPIDS in their booths and presentations. Even the RAPIDS press coverage blew me away",
+			"image": "https://cdn-images-1.medium.com/max/800/1*GxaubH_8eZTsNRV7FBhiyw.png",
+			"date": "03.20.2019",
+			"poster": "Josh Patterson"
+		},
+		{
+			"mediumLink": "https://medium.com/rapids-ai/rapids-cugraph-1ab2d9a39ec6",
+			"title": "The Road to 1.0 — Building for the Long Haul",
+			"text": "RAPIDS was everywhere at NVIDIA’s GTC 2019 in Silicon Valley. It was great to see so many vendors, partners, and customers showcasing RAPIDS in their booths and presentations. Even the RAPIDS press coverage blew me away",
+			"image": "https://cdn-images-1.medium.com/max/800/1*pXa2tr1z-op8xWhMuQ67-g.jpeg",
+			"date": "03.21.2019",
+			"poster": "Brad Rees"
+		},
+		{
+			"mediumLink": "https://medium.com/rapids-ai/the-road-to-1-0-building-for-the-long-haul-657ae1afdfd6",
+			"title": "RAPIDS can now be accessed on Databricks Unified Analytics Platform ",
+			"text": "NVIDIA RAPIDS can now be accessed on Databricks Unified Analytics Platform, making it easy for data scientists to leverage RAPIDS for their end-to-end data science workflows",
+			"image": "https://cdn-images-1.medium.com/max/800/1*QOhZrlj6IcRCuETYMmRpiA.png",
+			"date": "03.20.2019",
+			"poster": "Karthikeyan Rajendran"
+		}
+	]
+}

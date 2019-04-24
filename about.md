@@ -4,39 +4,45 @@ og_title: "RAPIDS: A Data Science & Analytics Pipeline Accelerator"
 og_description: "A suite of software libraries for executing end-to-end data science completely on GPUs"
 brand_name: ""
 brand_tagline: "More About RAPIDS"
-brand_button: "GET STARTED"
-brand_link: "start.html"
+brand_button: "LEARN MORE"
+brand_link: "https://medium.com/rapids-ai"
 layout: default
 ---
+
 {% capture about_top_left %}
-## About RAPIDS
-The RAPIDS suite of open source software libraries gives you the ability to execute end-to-end data science and analytics pipelines entirely on GPUs. RAPIDS is incubated by <a  href="https://developer.nvidia.com/open-source" class="bold" target="_blank"> NVIDIA® </a> based on years of accelerated data science experience. RAPIDS relies on <a href="https://developer.nvidia.com/cuda-toolkit" class="bold" target="_blank">NVIDIA CUDA®</a> primitives for low-level compute optimization, and exposes GPU parallelism and high-bandwidth memory speed through user-friendly Python interfaces.
+# About RAPIDS 
+{: .section-title-halfs}
+
+The RAPIDS suite of open source software libraries and APIs gives you the ability to execute end-to-end data science and analytics pipelines entirely on GPUs. RAPIDS is incubated by <strong>[NVIDIA®](https://developer.nvidia.com/open-source){: target="_blank"}</strong> based on extensive hardware and data science science experience. RAPIDS utilizes <strong>[NVIDIA CUDA®](https://developer.nvidia.com/cuda-toolkit){: target="_blank"}</strong> primitives for low-level compute optimization, and exposes GPU parallelism and high-bandwidth memory speed through user-friendly Python interfaces.
 
 RAPIDS also focuses on common data preparation tasks for analytics and data science. This includes a familiar DataFrame API that integrates with a variety of machine learning algorithms for end-to-end pipeline accelerations without paying typical serialization costs. RAPIDS also includes support for multi-node, multi-GPU deployments, enabling vastly accelerated processing and training on much larger dataset sizes.
+
+## Apache Arrow
+RAPIDS had its start from the <a href="https://arrow.apache.org/" class="bold" target="_blank">Apache Arrow</a> and <a href="http://gpuopenanalytics.com/#/f" class="bold" target="_blank">GoAi</a> projects based on a columnar, in-memory data structure that delivers efficient and fast data interchange with flexibility to support complex data models.
+
 {% endcapture %}
 
 {% capture about_top_right %}
-<img class="full-image" src="{{ site.baseurl }}{% link /assets/images/rapids-end-to-end-performance-chart-oss-page-r4.svg %}" alt="performance">
-{: .padding-top-0}
-{% endcapture %}
+## Libraries and APIs Overview
+{: .section-subtitle-top}
 
-{% capture about_bottom_left %}
-## Apache Arrow
-This is a columnar, in-memory data structure that delivers efficient and fast data interchange with flexibility to support complex data models.
-
-## Example Libraires and APIs
-<span class="bold">cuDF</span> is a DataFrame manipulation library based on Apache Arrow, <span class="bold">cuML</span> a collection of GPU-accelerated machine learning libraries that will provide GPU versions of learning algorithms available in scikit-learn, <span class="bold">cuGraph</span> is a collection of graph analytics libraries that seamlessly integrate into the RAPIDS data science platform.
+Some RAPIDS projects include <a href="https://github.com/rapidsai/cudf" class="bold" target="_blank">cuDF</a>, a DataFrame manipulation library; <a href="https://github.com/rapidsai/cuml" class="bold" target="_blank">cuML</a>, a collection of machine learning libraries that will provide GPU versions of algorithms available in scikit-learn; <a href="https://github.com/rapidsai/cugraph" class="bold" target="_blank">cuGraph</a>, a collection of graph analytics libraries that seamlessly integrate into the RAPIDS data science platform. Development follows a 6 week release schedule, so new features and libraries are always on the way. 
 
 ## Integration With Deep Learning Libraries
 RAPIDS provides native array_interface support. This means data stored in Apache Arrow can be seamlessly pushed to deep learning frameworks that accept array_interface such as PyTorch and Chainer. 
 
 ## Visualization
-RAPIDS is working to integrat with other data visualization libraries, through arrow and cuDF. Native GPU in-memory data format provides high-performance, high-FPS data visualization capabilities, even with very large datasets.
+Our focus on Python allows RAPIDS to play well with most data science visualization libraries. For even greater performance, we are working towards deeper integration with these libraries since a native GPU in-memory data format provides high-performance, high-FPS data visualization capabilities, even with very large datasets.
+{% endcapture %}
+
+{% capture about_bottom_left %}
+<img class="half-image" src="{{ site.baseurl }}{% link /assets/images/EaseVsPerformance.svg %}" alt="ease">
+{: .flex-center}
 {% endcapture %}
 
 {% capture about_bottom_right %}
-<img class="half-image" src="{{ site.baseurl }}{% link /assets/images/EaseVsPerformance.svg %}" alt="ease">
-{: .padding-top-0}
+<img class="full-image" src="{{ site.baseurl }}{% link /assets/images/rapids-end-to-end-performance-chart-oss-page-r4.svg %}" alt="performance">
+{: .flex-center}
 {% endcapture %}
 
 {% include section-double-halfs.html
@@ -54,9 +60,9 @@ RAPIDS is working to integrat with other data visualization libraries, through a
     slope="up"
 %}
 {% include cta-footer.html 
-name="Experience Data Science on GPUs with RAPIDS" 
+name="Learn more about Data Science on GPUs with RAPIDS" 
 tagline=""
-button="GET STARTED"
-link="start.html"
+button="LEARN MORE"
+link="https://medium.com/rapids-ai"
 %}
 

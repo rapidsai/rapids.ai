@@ -1,12 +1,12 @@
 /* From https://github.com/mozmorris/tomorrow-pygments/blob/master/css/tomorrow.css */
 
 .highlight  { 
-	background: #ffffff; 
+	background: #efefef; 
 	color: #4d4d4c; 
 	padding-top: 0.25em;
 	padding-bottom: 0.25em;
 	padding-left: 1em;
-	width: 90%;
+	margin-right: 3em;
 }
 .highlight .hll { background-color: #d6d6d6 }
 .highlight .c { color: #8e908c } /* Comment */
