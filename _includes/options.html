@@ -1,65 +1,50 @@
 <section class='{{ include.background }} padding-top-{{ include.padding-top }} padding-bottom-{{ include.padding-bottom }}'>
     <div class='container-padding'>
         <div class='selector '>
-            <div class='labels'>
-                <div class='label'>&nbsp;</div>
-                <div class='label'>Method</div>
-                <div class='label'>Release</div>
-                <div class='label'>Packages</div>
-                <div class='label'>Linux</div>
-                <div class='label'>Python</div>
-                <div class='label'>CUDA</div>
-                <div class='label output'>Command</div>
-            </div>
             <div class='options'>
-                <div class='preferred'>
-                    <div class='option'>
-                        <span>
-                            <i class="fas fa-level-up-alt" data-fa-transform="down-6 rotate-180"></i>&nbsp;&nbsp;
-                            <i class="fas fa-check-square blue-font"></i>&nbsp;Preferred&nbsp;&nbsp;
-                            <i class="fas fa-level-down-alt" data-fa-transform="down-6"></i>
-                        </span>
-                    </div>
-                    <div class='option'>
-                        <span><i class="fas fa-level-up-alt" data-fa-transform="down-6 rotate-180"></i>&nbsp;<i class="fas fa-flask orange-font"></i>&nbsp;Beta</span>
-                        <span>&nbsp;</span>
-                    </div>
-                </div>
                 <div class='method'>
-                    <div id='conda' class='option'>Conda</div>
-                    <div id='docker' class='option'>Docker</div>
-                    <div id='pip' class='option'>Pip</div>
-                    <div id='source' class='option'>Source</div>
+                    <div class='option-label'>Method</div>
+                    <div id='conda' class='option' title="preferred">Conda</div>
+                    <div id='docker' class='option' title="preferred">Docker</div>
+                    <div id='pip' class='option' title="beta">Pip <i class="fas fa-flask"></i></div>
+                    <div id='source' class='option' title="advanced">Source <i class="fas fa-cogs"></i></div>
                 </div>
                 <div class='release'>
+                    <div class='option-label'>Release</div>
                     <div id='stable' class='option'>Stable (0.6)</div>
                     <div id='nightly' class='option'>Nightly (0.7dev)</div>
                 </div>
                 <div class='pkg'>
+                    <div class='option-label'>Packages</div>
                     <div id='cudf' class='option'>cuDF</div>
                     <div id='cuml' class='option'>cuML</div>
                     <div id='both' class='option'>cuDF & cuML</div>
                 </div>
                 <div class='linux'>
+                    <div class='option-label'>Linux</div>
                     <div id='ubuntu1604' class='option'>Ubuntu 16.04</div>
                     <div id='ubuntu1804' class='option'>Ubuntu 18.04</div>
                     <div id='centos7' class='option'>CentOS 7</div>
                 </div>
                 <div class='python'>
+                    <div class='option-label'>Python</div>
                     <div id='py36' class='option'>Python 3.6</div>
                     <div id='py37' class='option'>Python 3.7</div>
                 </div>
                 <div class='cuda'>
+                    <div class='option-label'>CUDA</div>
                     <div id='cuda92' class='option'>CUDA 9.2</div>
                     <div id='cuda100' class='option'>CUDA 10.0</div>
                 </div>
-                <div class='output'>
-                    <div id='command' class='cmd'># Javascript is needed for this tool to run, please make sure it is enabled</div>
-                </div>
+            </div>
+            <div class='cmd'>
+                <div class='cmd-label'>Command</div>
+                <div id='command' class='cmd-box'># Javascript is needed for this tool to run, please make sure it is enabled</div>                
             </div>
         </div>
+
         <div class="selector-buttons">
-            <a id='copy-command' onclick='CopyToClipboard("command-code")' class='btn primary-btn orange'>COPY COMMAND <i class="fas fa-clipboard"></i></a><a id='more-details' href='#using-rapids' class='primary-btn blue'>MORE DETAILS </a>
+            <a id='copy-command' onclick='CopyToClipboard("command-code")' class='primary-btn'>COPY COMMAND <i class="fas fa-clipboard"></i></a>
         </div>
     </div>
 </section>
@@ -205,22 +190,23 @@ function showCommand() {
     var txt = ("" + selections['method'] + " details").toUpperCase();
     $("#command").html(command);
     $("#command > div > pre > code ").attr("id", "command-code")
-    $("#more-details").attr('href', "#" + anchor).text(txt);
 }
 
 function CopyToClipboard(containerid) {
-    if (document.selection) {
+
+    if (document.selection) { //IE
         var range = document.body.createTextRange();
         range.moveToElementText(document.getElementById(containerid));
-        range.select().createTextRange();
+        range.select();
         document.execCommand("copy");
-
-    } else if (window.getSelection) {
+    } else if (window.getSelection) { //others
         var range = document.createRange();
         range.selectNode(document.getElementById(containerid));
+        window.getSelection().removeAllRanges();
         window.getSelection().addRange(range);
         document.execCommand("copy");
     }
+
 }
 </script>
 
