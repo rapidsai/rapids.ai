@@ -14,7 +14,7 @@ redirect_from: "/documentation.html"
 # Getting Started
 {: .section-title-halfs}
 
-The RAPIDS data science framework includes a collection of libraries for executing end-to-end data science pipelines completely in the GPU. It is designed to have a familiar look and feel to data scientists working in Python. Here’s a code snippet where we read in a CSV file and output some descriptive statistics.
+The RAPIDS data science framework includes a collection of libraries for executing end-to-end data science pipelines completely in the GPU. It is designed to have a familiar look and feel to data scientists working in Python. Here’s a code snippet where we read in a CSV file and output some descriptive statistics:
 
 ```python
 import cudf
@@ -22,6 +22,10 @@ gdf = cudf.read_csv('path/to/file.csv')
 for column in gdf.columns:
     print(gdf[column].mean())
 ```
+
+## <i class="fas fa-bolt"></i> Try Now In Colaboratory
+Jump right into a GPU powered RAPIDS notebook with **[Colabratory](https://colab.research.google.com/notebooks/welcome.ipynb){: target="_blank"}** for free. **[Go to example notebook <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y){: target="_blank"}**
+
 {% endcapture %}
 
 {% capture start_right %}

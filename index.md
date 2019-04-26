@@ -19,7 +19,7 @@ The RAPIDS suite of open source software libraries gives you the freedom to exec
 
 {% capture about_top_middle %}
 ## <i class="fas fa-expand-arrows-alt"></i> Scale Out on GPUS
-Seamlessly scale from GPU workstations to multi-GPU servers and multi-node clusters.
+Seamlessly scale from GPU workstations to multi-GPU servers and multi-node clusters with Dask. **[Learn more about Dask <i class="fas fa-angle-double-right"></i>](https://dask.org/){: target="_blank"}**
 {% endcapture %}
 
 {% capture about_top_right %}
@@ -59,7 +59,7 @@ The open-source software is customizable, extensible, interoperable --supported 
 # Getting Started
 {: .section-title-halfs}
 
-The RAPIDS data science framework is designed to have a familiar look and feel to data scientist working in Python. Here’s a code snippet where we read in a CSV file and output some descriptive statistics. Find more details on our **[get started section <i class="fas fa-angle-double-right"></i>](about.html)**
+The RAPIDS data science framework is designed to have a familiar look and feel to data scientist working in Python. Here’s a code snippet where we read in a CSV file and output some descriptive statistics:
 
 ```python
 import cudf
@@ -69,6 +69,9 @@ for column in gdf.columns:
     print(gdf[column].mean())
 
 ```
+<br>
+Find more details on our **[get started section <i class="fas fa-angle-double-right"></i>](start.html)**
+
 {% endcapture %}
 
 {% capture start_right %}
@@ -82,6 +85,9 @@ A handy PDF reference guide for handling GPU Data Frames (GDF) with cuDF. **[Dow
 
 ## <i class="far fa-bookmark"></i> Example Notebooks
 A Github repository with examples for cuML using knn, dbscan, pca and tsvd, the End-to-End Mortgage demo, cuGraph demos, and more. **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks){: target="_blank"}**
+
+## <i class="fas fa-bolt"></i> Try Now In Colaboratory
+Jump right into a GPU powered RAPIDS notebook with **[Colabratory](https://colab.research.google.com/notebooks/welcome.ipynb){: target="_blank"}** for free. **[Go to example notebook <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y){: target="_blank"}**
 
 {% endcapture %}
 {% include slopecap.html 
