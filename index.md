@@ -39,7 +39,7 @@ Drastically improve your productivity with more interactive data science.
 
 {% capture about_bottom_right %}
 ## <i class="fas fa-code-branch"></i> Open Source
-The open-source software is customizable, extensible, interoperable --supported by NVIDIA and built on Apache Arrow. **[Learn more <i class="fas fa-angle-double-right"></i>](community.html)**
+RAPIDS is an open source project. Supported by NVIDIA, it also relies on numba, apache arrow, and many more open source projects . **[Learn more <i class="fas fa-angle-double-right"></i>](community.html)**
 {% endcapture %}
 
 {% include section-double-thirds.html 
@@ -133,7 +133,7 @@ MAY-2019 <span class="bold">v0.7</span> (planned)
 ## <i class="fas fa-code"></i> RAPIDS APIS and Libraries
 {: .section-subtitle-top-1}
 
-RAPIDS is open sourced under the Apache 2.0 open-source license, spanning multiple projects that range from GPU dataframes to GPU accelerated ML algorithms. Its also provides native array_interface support, allowing Apache Arrow stored data to be pushed to deep learning frameworks such as PyTorch and Chainer. **[Learn more <i class="fas fa-angle-double-right"></i>](about.html)**
+RAPIDS is open source licensed under Apache 2.0, spanning multiple projects that range from GPU dataframes to GPU accelerated ML algorithms. Its also provides native array_interface support, allowing Apache Arrow data to be pushed to deep learning frameworks. **[Learn more <i class="fas fa-angle-double-right"></i>](about.html)**
 
 ## <i class="fab fa-github"></i> Contributing
 Whether you are new to RAPIDS, looking to help, or are part of the team, learn about our contributing guidelines on our contributing page. **[Go to Docs <i class="fas fa-angle-double-right"></i>](https://docs.rapids.ai/contributing){: target="_blank"}**
@@ -154,21 +154,21 @@ Whether you are new to RAPIDS, looking to help, or are part of the team, learn a
 
 {% capture lib_top_left %}
 ## <i class="fas fa-terminal"></i> cuDF
-cuDF is a Python GPU DataFrame library (built on the **[Apache Arrow](http://arrow.apache.org/){: target="_blank"}** columnar memory format) for loading, joining, aggregating, filtering, and otherwise manipulating data.
+cuDF is a Python GPU DataFrame library (built on the **[Apache Arrow](http://arrow.apache.org/){: target="_blank"}** columnar memory format) for loading, joining, aggregating, filtering, and otherwise manipulating data all in a **[pandas-like](https://pandas.pydata.org/){: target="_blank"}** API familiar to data scientists.
 <br>
 **[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** | **[Docs](https://docs.rapids.ai/api/cudf/stable/){: target="_blank"}** | **[Change Log](https://github.com/rapidsai/cudf/blob/branch-0.7/CHANGELOG.md){: target="_blank"}**
 {% endcapture %}
 
 {% capture lib_top_middle %}
 ## <i class="fas fa-terminal"></i> cuML
-cuML is a suite of libraries that implement machine learning algorithms and mathematical primitives functions that share compatible APIs with other RAPIDS projects.
+cuML is a suite of libraries that implement machine learning algorithms and mathematical primitives functions that are compatible with other RAPIDS projects, all in a **[scikit-learn-like](https://scikit-learn.org/stable/index.html){: target="_blank"}** API familiar to data scientists.
 <br>
 **[GitHub](https://github.com/rapidsai/cuml){: target="_blank"}** | **[Docs](https://docs.rapids.ai/api/cuml/stable/){: target="_blank"}** | **[Change Log](https://github.com/rapidsai/cuml/blob/branch-0.7/CHANGELOG.md){: target="_blank"}**
 {% endcapture %}
 
 {% capture lib_top_right %}
 ## <i class="fas fa-terminal"></i> cuGraph
-cuGraph is a collection of graph analytics that process data in GDF. cuGraph aims at providing a NetworkX-like API that will be familiar to data scientists, so they can use it to easily accelerate their workflows without going into the details of CUDA programming.
+cuGraph is a collection of graph analytics that process data in GDF. cuGraph aims at providing a **[NetworkX-like](https://networkx.github.io/){: target="_blank"}** API familiar to data scientists, so they can use it to easily accelerate their workflows without going into the details of CUDA programming.
 <br>
 **[GitHub](https://github.com/rapidsai/cugraph){: target="_blank"}** | **[Docs](https://docs.rapids.ai/api/cugraph/stable/){: target="_blank"}** | **[Change Log](https://github.com/rapidsai/cugraph/blob/branch-0.7/CHANGELOG.md){: target="_blank"}**
 {% endcapture %}

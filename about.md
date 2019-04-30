@@ -26,10 +26,11 @@ RAPIDS had its start from the **[Apache Arrow](https://arrow.apache.org/){: targ
 ## Libraries and APIs Overview
 {: .section-subtitle-top-1}
 
-Some RAPIDS projects include **[cuDF](https://github.com/rapidsai/cudf){: target="_blank"}**, a dataframe manipulation library; **[cuML](https://github.com/rapidsai/cuml){: target="_blank"}**, a collection of machine learning libraries that will provide GPU versions of algorithms available in scikit-learn; **[cuGraph](https://github.com/rapidsai/cugraph){: target="_blank"}**, a collection of graph analytics libraries that seamlessly integrate into the RAPIDS data science platform. Development follows a 6 week release schedule, so new features and libraries are always on the way. 
+Some RAPIDS projects include **[cuDF](https://github.com/rapidsai/cudf){: target="_blank"}**, a pandas-like dataframe manipulation library; **[cuML](https://github.com/rapidsai/cuml){: target="_blank"}**, a collection of machine learning libraries that will provide GPU versions of algorithms available in scikit-learn; **[cuGraph](https://github.com/rapidsai/cugraph){: target="_blank"}**, a network-X like API that seamlessly integrate into the RAPIDS data science platform. Development follows a 6 week release schedule, so new features and libraries are always on the way. 
 
 ## Integration With Deep Learning Libraries
-RAPIDS provides native array_interface support. This means data stored in Apache Arrow can be seamlessly pushed to deep learning frameworks that accept array_interface such as PyTorch and Chainer. 
+RAPIDS provides native array_interface support. This means data stored in Apache Arrow can be seamlessly pushed to deep learning frameworks that accept array_interface such as **[PyTorch](https://github.com/pytorch/pytorch){: target="_blank"}** and **[Chainer](https://github.com/chainer){: target="_blank"}**, or work with **[DLPack](https://github.com/dmlc/dlpack){: target="_blank"}** and **[MXNet](https://github.com/apache/incubator-mxnet){: target="_blank"}**. 
+
 
 ## Visualization
 Our focus on Python allows RAPIDS to play well with most data science visualization libraries. For even greater performance, we are working towards deeper integration with these libraries since a native GPU in-memory data format provides high-performance, high-FPS data visualization capabilities, even with very large datasets.
