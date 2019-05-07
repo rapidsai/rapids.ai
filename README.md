@@ -6,24 +6,63 @@ This is a STAGING repo for all changes that will push to PROD aka https://rapids
 
 **All changes for PROD** go through this repo and the [deployment process](#deployment-process) outlined below.
 
-### Jekyll conversion
+### Jekyll Markup
 
-This is a conversion of the original rapids.ai site to use Jekyll allowing for use of Markdown instead of all HTML. With Jekyll we can make posts and also mix HTML and Markdown with eachother. In addition, we can template and reuse a lot of the coding and formatting of elements as snippets. This will make things much easier to change and add in the future.
+The content of this site is written in .md files and converted to html. Try to avoid using raw html and rely on the templates described below. Note, any css updates should use the `custom.css` and any code highlight updates should use the `highlight.css` files. 
 
-### Core site improvements
+### Templates, Includes, and Styles
 
-With the Jekyll change the following areas have been updated:
+Most content should use the `default` layout and include the top line page variables (an example can be see on index.md). Layouts use templates in the `_includes` folder. The default layout already includes the nav, header and footer. Using the templates will ensure that your content is **responsive** to various screen sizes and follows the **site design**. Depending on the desired layout, a section heading may be outside or inside of the layout content. Refer to index/about/start/community.md for reference examples. The most useful templates are:
 
-- [Home](https://rapidsai.github.io/rapidsai-staging/index.html) - [raw Markdown file](/index.md)
-  - WIP on conversion to Markdown and templates
-- [Documentation](https://rapidsai.github.io/rapidsai-staging/documentation.html) - [raw Markdown file](/documentation.md)
-  - Fully converted to Markdown with code highlighting and sections mimicing original site design
-- [Community](https://rapidsai.github.io/rapidsai-staging/community.html) - [raw Markdown file](/community.md)
-  - WIP on conversion to Markdown and templates
-  - Updated footer CTA boxes
-  - Added new footer CTA boxes for Stack Overflow and Join RAPIDS with link to job board
-- Site Footer - [html template](/_includes/footer.html)
-  - Added icon and link for Stack Overflow
+* section-single: 1x1 Row by Cols
+* section-halfs: 1x2 Row by Cols
+* section-double-halfs: 2x2 Row by Cols
+* section-thirds: 1x3 Row by Cols
+* section-double-thirds: 2x3 Row by Cols
+
+#### Sections
+Section content is generally formatted as follows, but be sure to view the html file for the exact capture variable names to pass to the include. Background can be: 'background-white / background-gray / background-purple / background-darkpurple.' Padding-top and padding-bottom can be: 0 / 1 / 2. To get the diagonal background effect, you must include slopecap, for both the top and bottom of a section. Position can be top / bottom and slope can be up / down. Exact formatting might require some tinkering...
+
+```
+{% capture name_left %}
+
+CONTENT
+
+{% endcapture %}
+{% capture name_right %}
+
+CONTENT
+
+{% endcapture %}
+{% include slopecap.html 
+    background="background-purple" 
+    position="top" 
+    slope="up" 
+%}
+{% include section-halfs.html 
+    background="background-purple" 
+    padding-top="1" padding-bottom="1" 
+    content-left-half=name_left 
+    content-right-half=name_right 
+%} 
+{% include slopecap.html 
+    background="background-purple" 
+    position="bottom" 
+    slope="up" 
+%}
+
+```
+#### Links
+Links should use the following format, with target being unnecessary if the link is withint rapids.ai: 
+```**[NAME <i FONT-AWEOME-ICON"></i>](LINK){: target="_blank"}**
+```
+
+#### Font Icons
+Font Awesome Icons are fun, but use them accordingly. They are one of the few exceptions to including in line HTML. See the [free gallery here](https://fontawesome.com/icons?d=gallery&m=free).
+
+#### Twitter and Medium 
+Twitter and Medium sections content are updated from the local `post.json` file, which is updated a few times a day with an external job. 
+
 
 ### Experimental feature examples
 
@@ -38,10 +77,8 @@ These examples are made possible by the new Jekyll site and can either be used i
 
 Will create these as issues in the future, but wanted to capture where we are at the moment.
 
-- [ ] - Finish converting elements of home page from HTML to Markdown and templates
-- [ ] - Finish converting elements of community page from HTML to Markdown and templates
-- [ ] - Condense CSS formatting
-  - Original CSS was copy/pasted & customized for each page, with the templates we need to standardize this for consistency
+- [ ] Finish site blog to mirror Medium
+
 
 ## Contributing
 

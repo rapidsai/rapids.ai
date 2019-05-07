@@ -400,7 +400,7 @@ a h2:hover, .footer-nav ul li a:hover {
     line-height: 1.1em;
 }
 
-.tweet-action {
+.tweet-action, .medium-poster {
     color: #ababab;
     font-size: 0.9em;
 }
