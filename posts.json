@@ -1,6 +1,44 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1126588046919524352",
+      "screen_name": "richardkerris",
+      "name": "richardkerris",
+      "type": "retweet",
+      "text": "RT @richardkerris: Spending time learning about @blazingdb is amazing.. check out what they are doing with @rapidsai  - follow them both.",
+      "link": [],
+      "date": "Thu May 09 20:41:36 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1126583016539721728",
+      "screen_name": "tomekdrabas",
+      "name": "Tomek Drabas",
+      "type": "retweet",
+      "text": "RT @tomekdrabas: These numbers... Just wow! Fantastic results from @blazingdb and @rapidsai on #T4 in #GoogleCloud https://t.co/NZjiVTAX7K",
+      "link": [
+        "https://t.co/NZjiVTAX7K"
+      ],
+      "date": "Thu May 09 20:21:36 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1126582927792513034",
+      "screen_name": "rodaramburu",
+      "name": "Rodrigo Aramburu",
+      "type": "retweet",
+      "text": "RT @rodaramburu: Running a #netflow analysis on 15M rows  in Colab. Took ~5s to load 1.7GB from #GDrive into #Colab, and then #GPU fast #SQ...",
+      "link": [],
+      "date": "Thu May 09 20:21:15 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1126453803895676928",
+      "screen_name": "blazingdb",
+      "name": "BlazingDB",
+      "type": "retweet",
+      "text": "RT @blazingdb: Released Today!  #BlazingSQL + @rapidsai + @GoogleColab = #SQL #Query millions of rows for free, insanely fast, on @nvidia T...",
+      "link": [],
+      "date": "Thu May 09 11:48:10 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1126303583828201473",
       "screen_name": "adbreind",
       "name": "Adam Breindel",
@@ -48,47 +86,6 @@
         "https://t.co/UkCofzxhLr"
       ],
       "date": "Wed May 08 01:29:57 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1125935380086177792",
-      "screen_name": "dask_dev",
-      "name": "Dask",
-      "type": "retweet",
-      "text": "RT @dask_dev: @hiroysato Yes.  See Python bindings here: https://t.co/9ZkF1FAOFR  Also, the UCX integration isn't just for dask-cudf.  UCX...",
-      "link": [
-        "https://t.co/9ZkF1FAOFR"
-      ],
-      "date": "Wed May 08 01:28:08 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1125935270581260288",
-      "screen_name": "adbreind",
-      "name": "Adam Breindel",
-      "type": "retweet",
-      "text": "RT @adbreind: Check it out: dask-cudf is getting OpenUCX support! What is OpenUCX? If you\u2019re coming from the commercial data eng world, thi...",
-      "link": [],
-      "date": "Wed May 08 01:27:42 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1125897336507355136",
-      "screen_name": "datametrician",
-      "name": "Joshua Patterson",
-      "type": "retweet",
-      "text": "RT @datametrician: @DataScienceLA Thanks @DataScienceLA for doing this. @XGBoostProject on 1M+ rows really shines on #GPU!",
-      "link": [],
-      "date": "Tue May 07 22:56:57 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1125897195192967168",
-      "screen_name": "rapidsai",
-      "name": "RAPIDS AI",
-      "type": "post",
-      "text": "@heshan_cheri @datametrician @linuxfoundation @UberEng Congrats! https://t.co/yFdc793EiM was definitely one of the... https://t.co/ba3OEn99fS",
-      "link": [
-        "https://t.co/yFdc793EiM",
-        "https://t.co/ba3OEn99fS"
-      ],
-      "date": "Tue May 07 22:56:24 +0000 2019"
     }
   ],
   "medium": [
