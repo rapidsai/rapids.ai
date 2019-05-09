@@ -305,75 +305,75 @@ docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 
 ```bash
 conda install -c nvidia -c rapidsai -c numba -c conda-forge \
-    cudf=0.7 python=3.6
+    cudf=0.7 python=3.6 cudatoolkit=9.2
 ```
 {: .stable-cudf-conda-ubuntu1604-py36-cuda92 .stable-cudf-conda-ubuntu1804-py36-cuda92 .stable-cudf-conda-centos7-py36-cuda92 .hidden }
 
 ```bash
 conda install -c nvidia -c rapidsai -c numba -c conda-forge \
-    cudf=0.7 python=3.7
+    cudf=0.7 python=3.7 cudatoolkit=9.2
 ```
 {: .stable-cudf-conda-ubuntu1604-py37-cuda92 .stable-cudf-conda-ubuntu1804-py37-cuda92 .stable-cudf-conda-centos7-py37-cuda92 .hidden }
 
 ```bash
 conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
-    cuml=0.7 python=3.6
+    cuml=0.7 python=3.6 cudatoolkit=9.2
 ```
 {: .stable-cuml-conda-ubuntu1604-py36-cuda92 .stable-cuml-conda-ubuntu1804-py36-cuda92 .stable-cuml-conda-centos7-py36-cuda92 .hidden }
 
 ```bash
 conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
-    cuml=0.7 python=3.7
+    cuml=0.7 python=3.7 cudatoolkit=9.2
 ```
 {: .stable-cuml-conda-ubuntu1604-py37-cuda92 .stable-cuml-conda-ubuntu1804-py37-cuda92 .stable-cuml-conda-centos7-py37-cuda92 .hidden }
 
 ```bash
 conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
-    cudf=0.7 cuml=0.7 python=3.6
+    cudf=0.7 cuml=0.7 python=3.6 cudatoolkit=9.2
 ```
 {: .stable-both-conda-ubuntu1604-py36-cuda92 .stable-both-conda-ubuntu1804-py36-cuda92 .stable-both-conda-centos7-py36-cuda92 .hidden }
 
 ```bash
 conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
-    cudf=0.7 cuml=0.7 python=3.7
+    cudf=0.7 cuml=0.7 python=3.7 cudatoolkit=9.2
 ```
 {: .stable-both-conda-ubuntu1604-py37-cuda92 .stable-both-conda-ubuntu1804-py37-cuda92 .stable-both-conda-centos7-py37-cuda92 .hidden }
 
 <!-- conda cuda100 -->
 
 ```bash
-conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c numba \
-    -c conda-forge cudf=0.7 python=3.6
+conda install -c nvidia -c rapidsai -c numba -c conda-forge \
+    cudf=0.7 python=3.6 cudatoolkit=10.0
 ```
 {: .stable-cudf-conda-ubuntu1604-py36-cuda100 .stable-cudf-conda-ubuntu1804-py36-cuda100 .stable-cudf-conda-centos7-py36-cuda100 .hidden }
 
 ```bash
-conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c numba \
-    -c conda-forge cudf=0.7 python=3.7
+conda install -c nvidia -c rapidsai -c numba -c conda-forge \
+    cudf=0.7 python=3.6 cudatoolkit=10.0
 ```
 {: .stable-cudf-conda-ubuntu1604-py37-cuda100 .stable-cudf-conda-ubuntu1804-py37-cuda100 .stable-cudf-conda-centos7-py37-cuda100 .hidden }
 
 ```bash
-conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
-    -c numba -c conda-forge cuml=0.7 python=3.6
+conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
+    cuml=0.7 python=3.6 cudatoolkit=10.0
 ```
 {: .stable-cuml-conda-ubuntu1604-py36-cuda100 .stable-cuml-conda-ubuntu1804-py36-cuda100 .stable-cuml-conda-centos7-py36-cuda100 .hidden }
 
 ```bash
-conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
-    -c numba -c conda-forge cuml=0.7 python=3.7
+conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
+    cuml=0.7 python=3.7 cudatoolkit=10.0
 ```
 {: .stable-cuml-conda-ubuntu1604-py37-cuda100 .stable-cuml-conda-ubuntu1804-py37-cuda100 .stable-cuml-conda-centos7-py37-cuda100 .hidden }
 
 ```bash
-conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
-    -c numba -c conda-forge cudf=0.7 cuml=0.7 python=3.6
+conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
+    cudf=0.7 cuml=0.7 python=3.6 cudatoolkit=10.0
 ```
 {: .stable-both-conda-ubuntu1604-py36-cuda100 .stable-both-conda-ubuntu1804-py36-cuda100 .stable-both-conda-centos7-py36-cuda100 .hidden }
 
 ```bash
-conda install -c nvidia/label/cuda10.0 -c rapidsai/label/cuda10.0 -c pytorch \
-    -c numba -c conda-forge cudf=0.7 cuml=0.7 python=3.7
+conda install -c nvidia -c rapidsai -c pytorch -c numba -c conda-forge \
+    cudf=0.7 cuml=0.7 python=3.7 cudatoolkit=10.0
 ```
 {: .stable-both-conda-ubuntu1604-py37-cuda100 .stable-both-conda-ubuntu1804-py37-cuda100 .stable-both-conda-centos7-py37-cuda100 .hidden }
 
@@ -485,74 +485,74 @@ docker run --runtime=nvidia --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 
 ```bash
 conda install -c nvidia -c rapidsai-nightly -c numba -c conda-forge \
-    cudf=0.8 python=3.6
+    cudf=0.8 python=3.6 cudatoolkit=9.2
 ```
 {: .nightly-cudf-conda-ubuntu1604-py36-cuda92 .nightly-cudf-conda-ubuntu1804-py36-cuda92 .nightly-cudf-conda-centos7-py36-cuda92 .hidden }
 
 ```bash
 conda install -c nvidia -c rapidsai-nightly -c numba -c conda-forge \
-    cudf=0.8 python=3.7
+    cudf=0.8 python=3.7 cudatoolkit=9.2
 ```
 {: .nightly-cudf-conda-ubuntu1604-py37-cuda92 .nightly-cudf-conda-ubuntu1804-py37-cuda92 .nightly-cudf-conda-centos7-py37-cuda92 .hidden }
 
 ```bash
 conda install -c nvidia -c rapidsai-nightly -c pytorch -c numba -c conda-forge \
-    cuml=0.8 python=3.6
+    cuml=0.8 python=3.6 cudatoolkit=9.2
 ```
 {: .nightly-cuml-conda-ubuntu1604-py36-cuda92 .nightly-cuml-conda-ubuntu1804-py36-cuda92 .nightly-cuml-conda-centos7-py36-cuda92 .hidden }
 
 ```bash
 conda install -c nvidia -c rapidsai-nightly -c pytorch -c numba -c conda-forge \
-    cuml=0.8 python=3.7
+    cuml=0.8 python=3.7 cudatoolkit=9.2
 ```
 {: .nightly-cuml-conda-ubuntu1604-py37-cuda92 .nightly-cuml-conda-ubuntu1804-py37-cuda92 .nightly-cuml-conda-centos7-py37-cuda92 .hidden }
 
 ```bash
 conda install -c nvidia -c rapidsai-nightly -c pytorch -c numba -c conda-forge \
-    cudf=0.8 cuml=0.8 python=3.6
+    cudf=0.8 cuml=0.8 python=3.6 cudatoolkit=9.2
 ```
 {: .nightly-both-conda-ubuntu1604-py36-cuda92 .nightly-both-conda-ubuntu1804-py36-cuda92 .nightly-both-conda-centos7-py36-cuda92 .hidden }
 
 ```bash
 conda install -c nvidia -c rapidsai-nightly -c pytorch -c numba -c conda-forge \
-    cudf=0.8 cuml=0.8 python=3.7
+    cudf=0.8 cuml=0.8 python=3.7 cudatoolkit=9.2
 ```
 {: .nightly-both-conda-ubuntu1604-py37-cuda92 .nightly-both-conda-ubuntu1804-py37-cuda92 .nightly-both-conda-centos7-py37-cuda92 .hidden }
 
 <!-- conda cuda100 -->
 
 ```bash
-conda install -c nvidia/label/cuda10.0 -c rapidsai-nightly/label/cuda10.0 -c numba \
-    -c conda-forge cudf=0.8 python=3.6
+conda install -c nvidia -c rapidsai-nightly -c numba -c conda-forge \
+    cudf=0.8 python=3.6 cudatoolkit=10.0
 ```
 {: .nightly-cudf-conda-ubuntu1604-py36-cuda100 .nightly-cudf-conda-ubuntu1804-py36-cuda100 .nightly-cudf-conda-centos7-py36-cuda100 .hidden }
 
 ```bash
-conda install -c nvidia/label/cuda10.0 -c rapidsai-nightly/label/cuda10.0 -c numba \
-    -c conda-forge cudf=0.8 python=3.7
+conda install -c nvidia -c rapidsai-nightly/label/cuda10.0 -c numba -c conda-forge \
+    cudf=0.8 python=3.7 cudatoolkit=10.0
 ```
 {: .nightly-cudf-conda-ubuntu1604-py37-cuda100 .nightly-cudf-conda-ubuntu1804-py37-cuda100 .nightly-cudf-conda-centos7-py37-cuda100 .hidden }
 
 ```bash
-conda install -c nvidia/label/cuda10.0 -c rapidsai-nightly/label/cuda10.0 -c pytorch \
-    -c numba -c conda-forge cuml=0.8 python=3.6
+conda install -c nvidia -c rapidsai-nightly -c pytorch -c numba -c conda-forge \
+    cuml=0.8 python=3.6 cudatoolkit=10.0
 ```
 {: .nightly-cuml-conda-ubuntu1604-py36-cuda100 .nightly-cuml-conda-ubuntu1804-py36-cuda100 .nightly-cuml-conda-centos7-py36-cuda100 .hidden }
 
 ```bash
-conda install -c nvidia/label/cuda10.0 -c rapidsai-nightly/label/cuda10.0 -c pytorch \
-    -c numba -c conda-forge cuml=0.8 python=3.7
+conda install -c nvidia -c rapidsai-nightly -c pytorch -c numba -c conda-forge \
+    cuml=0.8 python=3.7 cudatoolkit=10.0
 ```
 {: .nightly-cuml-conda-ubuntu1604-py37-cuda100 .nightly-cuml-conda-ubuntu1804-py37-cuda100 .nightly-cuml-conda-centos7-py37-cuda100 .hidden }
 
 ```bash
-conda install -c nvidia/label/cuda10.0 -c rapidsai-nightly/label/cuda10.0 -c pytorch \
-    -c numba -c conda-forge cudf=0.8 cuml=0.8 python=3.6
+conda install -c nvidia -c rapidsai-nightly -c pytorch -c numba -c conda-forge \
+    cudf=0.8 cuml=0.8 python=3.6 cudatoolkit=10.0
 ```
 {: .nightly-both-conda-ubuntu1604-py36-cuda100 .nightly-both-conda-ubuntu1804-py36-cuda100 .nightly-both-conda-centos7-py36-cuda100 .hidden }
 
 ```bash
-conda install -c nvidia/label/cuda10.0 -c rapidsai-nightly/label/cuda10.0 -c pytorch \
-    -c numba -c conda-forge cudf=0.8 cuml=0.8 python=3.7
+conda install -c nvidia -c rapidsai-nightly -c pytorch -c numba -c conda-forge \
+    cudf=0.8 cuml=0.8 python=3.7 cudatoolkit=10.0
 ```
 {: .nightly-both-conda-ubuntu1604-py37-cuda100 .nightly-both-conda-ubuntu1804-py37-cuda100 .nightly-both-conda-centos7-py37-cuda100 .hidden }
