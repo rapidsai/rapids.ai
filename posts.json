@@ -1,6 +1,15 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1126303583828201473",
+      "screen_name": "adbreind",
+      "name": "Adam Breindel",
+      "type": "retweet",
+      "text": "RT @adbreind: Hello! Best news I\u2019ve seen in ... a long time. This is huge, and if you\u2019re in one of my data eng or ML/AI workshops, we\u2019ll be...",
+      "link": [],
+      "date": "Thu May 09 01:51:14 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1126221933635203073",
       "screen_name": "blazingdb",
       "name": "BlazingDB",
@@ -80,17 +89,6 @@
         "https://t.co/ba3OEn99fS"
       ],
       "date": "Tue May 07 22:56:24 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1125896547378401283",
-      "screen_name": "heshan_cheri",
-      "name": "Shan He",
-      "type": "retweet",
-      "text": "RT @heshan_cheri: It's official, https://t.co/SqbQgo2asx joins the Linux Foundation @linuxfoundation under the Urban Computing Foundation,...",
-      "link": [
-        "https://t.co/SqbQgo2asx"
-      ],
-      "date": "Tue May 07 22:53:49 +0000 2019"
     }
   ],
   "medium": [
