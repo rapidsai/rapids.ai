@@ -53,8 +53,9 @@ CONTENT
 
 ```
 #### Links
-Links should use the following format, with target being unnecessary if the link is withint rapids.ai: 
-```**[NAME <i FONT-AWEOME-ICON"></i>](LINK){: target="_blank"}**
+Links should use the following format, with target being unnecessary if the link is within rapids.ai: 
+```
+**[NAME <i FONT-AWEOME-ICON"></i>](LINK){: target="_blank"}**
 ```
 
 #### Font Icons
