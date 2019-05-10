@@ -94,27 +94,11 @@ For instructions on how to build a development conda environment, see the **[cuD
 
 Checkout the **[cuDF README](https://github.com/rapidsai/cudf/tree/master#development-setup){: target="_blank"}** or **[cuML README](https://github.com/rapidsai/cuml/tree/master#installing-from-source){: target="_blank"}** for from-source build instructions.
 
-
-## <i class="fab fa-ubuntu"></i> Ubuntu 16.04 Python Install
+## <i class="fas fa-laptop-code"></i> Where is Pip?
 {: .section-subtitle-top-2}
 
-**NOTE:**  By default, Ubuntu 16.04's `python3` package is Python 3.5, so you need to install Python 3.6 or 3.7 with the following steps:
+Refer to this **[Blog Post](###){: target="_blank"}** for details on why we no longer support PIP installs. 
 
-**For Python 3.6**
-
-```bash
-apt-get install software-properties-common python-software-properties
-add-apt-repository ppa:deadsnakes/ppa
-apt update && apt install python3.6-dev
-```
-
-**For Python 3.7**
-
-```bash
-apt-get install software-properties-common python-software-properties
-add-apt-repository ppa:deadsnakes/ppa
-apt update && apt install python3.7-dev
-```
 {% endcapture %}
 
 {% capture use_right %}
@@ -139,13 +123,6 @@ Notebooks can be found in two directories within the container:
 ### Advanced Usage
 
 See the **[RAPIDS Container README](https://hub.docker.com/r/rapidsai/rapidsai){: target="_blank"}** page for more information about using custom datasets. **[Docker Hub](https://hub.docker.com/r/rapidsai/rapidsai/){: target="_blank"}** and **[NVIDIA GPU Cloud](https://ngc.nvidia.com/catalog/containers/nvidia%2Frapidsai%2Frapidsai){: target="_blank"}** host RAPIDS containers with full list of available **[tags](https://hub.docker.com/r/rapidsai/rapidsai#full-tag-list){: target="_blank"}**.
-
-
-## <i class="fas fa-laptop-code"></i> Where is Pip?
-{: .section-subtitle-top-2}
-
-Refer to this **[Blog Post](###){: target="_blank"}** for details on why we no longer support PIP installs. 
-
 
 {% endcapture %}
 
