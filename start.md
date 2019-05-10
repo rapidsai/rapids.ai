@@ -4,8 +4,8 @@ og_title: "RAPIDS Getting Started"
 og_description: "Get started with RAPIDS using conda, docker, pip, or from source builds."
 brand_name: ""
 brand_tagline: "Learn How To Use RAPIDS"
-brand_button: "DOWNLOAD CHEAT SHEET"
-brand_link: "assets/files/cheatsheet.pdf"
+brand_button: "LAUNCH NOW IN COLAB"
+brand_link: "https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y#forceEdit=true&offline=true&sandboxMode=true"
 layout: default
 redirect_from: "/documentation.html"
 ---
@@ -24,7 +24,7 @@ for column in gdf.columns:
 ```
 
 ## <i class="fas fa-bolt"></i> Try Now In Colaboratory
-Jump right into a GPU powered RAPIDS notebook with **[Colabratory](https://colab.research.google.com/notebooks/welcome.ipynb){: target="_blank"}** for free. **[Go to example notebook <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y){: target="_blank"}**
+Jump right into a GPU powered RAPIDS notebook with **[Colabratory](https://colab.research.google.com/notebooks/welcome.ipynb){: target="_blank"}** for free. **[Go to example notebook <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
 
 {% endcapture %}
 
@@ -89,12 +89,15 @@ You can get a minimal conda installation with **[Miniconda](https://conda.io/min
 
 For instructions on how to build a development conda environment, see the **[cuDF README](https://github.com/rapidsai/cudf/blob/master/README.md#conda){: target="_blank"}** for more information. Also refer to the **[cuML README](https://github.com/rapidsai/cuml/blob/master/README.md#conda){: target="_blank"}** for conda install instructions for cuML.
 
-## <i class="fas fa-laptop-code"></i> Pip Install
+## <i class="far fa-file-code"></i> Build From Source
 {: .section-subtitle-top-2}
 
-Refer to the **[cuDF README](https://github.com/rapidsai/cudf/tree/master#pip){: target="_blank"}** or **[cuML README](https://github.com/rapidsai/cuml/tree/master#pip){: target="_blank"}** for detailed pip install instructions.
+Checkout the **[cuDF README](https://github.com/rapidsai/cudf/tree/master#development-setup){: target="_blank"}** or **[cuML README](https://github.com/rapidsai/cuml/tree/master#installing-from-source){: target="_blank"}** for from-source build instructions.
 
-### Ubuntu 16.04 Python Install
+
+## <i class="fab fa-ubuntu"></i> Ubuntu 16.04 Python Install
+{: .section-subtitle-top-2}
+
 **NOTE:**  By default, Ubuntu 16.04's `python3` package is Python 3.5, so you need to install Python 3.6 or 3.7 with the following steps:
 
 **For Python 3.6**
@@ -137,10 +140,13 @@ Notebooks can be found in two directories within the container:
 
 See the **[RAPIDS Container README](https://hub.docker.com/r/rapidsai/rapidsai){: target="_blank"}** page for more information about using custom datasets. **[Docker Hub](https://hub.docker.com/r/rapidsai/rapidsai/){: target="_blank"}** and **[NVIDIA GPU Cloud](https://ngc.nvidia.com/catalog/containers/nvidia%2Frapidsai%2Frapidsai){: target="_blank"}** host RAPIDS containers with full list of available **[tags](https://hub.docker.com/r/rapidsai/rapidsai#full-tag-list){: target="_blank"}**.
 
-## <i class="far fa-file-code"></i> Build From Source
+
+## <i class="fas fa-laptop-code"></i> Where is Pip?
 {: .section-subtitle-top-2}
 
-Checkout the **[cuDF README](https://github.com/rapidsai/cudf/tree/master#development-setup){: target="_blank"}** or **[cuML README](https://github.com/rapidsai/cuml/tree/master#installing-from-source){: target="_blank"}** for from-source build instructions.
+Refer to this **[Blog Post](###){: target="_blank"}** for details on why we no longer support PIP installs. 
+
+
 {% endcapture %}
 
 {% include section-halfs.html
@@ -158,8 +164,8 @@ Checkout the **[cuDF README](https://github.com/rapidsai/cudf/tree/master#develo
 %}
 {% include cta-footer.html 
 name="Join the Community" 
-button="CONTRIBUTE"
-link="community.html"
+button="LAUNCH NOW IN COLAB"
+link="https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y#forceEdit=true&offline=true&sandboxMode=true"
 %}
 
 
