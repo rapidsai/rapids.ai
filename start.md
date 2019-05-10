@@ -55,6 +55,7 @@ We suggest that you take a look at the sample workflow in our Docker container (
     content-right-half=start_right
 %} 
 
+<div id="get-rapids"></div>
 
 {% capture get_content %}
 # RAPIDS Release Selector
