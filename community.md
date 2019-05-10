@@ -3,65 +3,46 @@ title: "RAPIDS Developer and Contributor Community | RAPIDS"
 og_title: "RAPIDS Developer and Contributor Community"
 og_description: "Learn how to become a RAPIDS adopter, contributor and more. Start contributing today!"
 brand_name: ""
-brand_tagline: "Learn how to become an adopter,<br/>a contributor, and more."
+brand_tagline: "Learn How To Contribute To RAPIDS"
 brand_button: "CONTRIBUTE"
 brand_link: "https://github.com/rapidsai"
 layout: default
 ---
 
-<section class="about-rapids contact-rapids">
-    <div class="fixed-content">
-        <h2>RAPIDS Community</h2>
-        <p> RAPIDS is for everyone—users, adopters, and contributors. If you’re a data
-            scientist, researcher, engineer, or developer using pandas, Dask, scikit-learn, or Spark on CPUs
-            and looking for 50X end-to-end pipeline speedups at scale, look no further. Download RAPIDS and
-            give us a run. The RAPIDS cuDF library is almost a drop-in, API-compatible, GPU-accelerated
-            replacement for pandas and Dask (if you want to scale to multi-GPU and multi-node).</p>
-        <p>
-            RAPIDS is also open sourced under the Apache 2.0 open-source license and is intended to be built
-            upon and hardened in the community. While significant time and effort have been invested into
-            making the platform usable and relevant, we need active contributors to help improve it and
-            build its future.</p>
-    </div>
-</section>
+{% capture com_left %}
+# RAPIDS Community
+{: .section-title-halfs}
 
-<section class="rapids-adopter community-main">
-    <div class="top-main-gray-strip"></div>
-    <div class="rapids-adopter-container ßfixed-content">
-        <div class="community-content-inner">
-            <h2>Become a RAPIDS Contributor</h2>
-            <p class="no-padding-botton">Contributors include anyone who helps improve the project—whether by reporting issues, adding documentation and examples, or contributing code. RAPIDS is built on open-source projects, fork our repositories from GitHub, start hacking, and open a pull request. Join us on Google Groups and let us know what you're working on.</p>
-        </div>
-    </div>
-</section>
+RAPIDS is for everyone: users, adopters, and contributors. If you’re a data scientist, researcher, engineer, or developer using pandas, Dask, scikit-learn, or Spark on CPUs, our **[RAPIDS projects](https://github.com/rapidsai){: target="_blank"}** are almost drop in replacements that can speed up your end-to-end workflow up to 50x.
+{% endcapture %}
 
-<section class="contributing-partner">
-    <div class="fixed-content">
-        <h3>Contributors</h3>
-        <div class="contributing-logos">
-            <div class="contributing-logo">
-                <img src="{{ site.baseurl }}{% link /assets/images/anaconda.png %}" alt="anaconda">
-            </div>
-            <div class="contributing-logo">
-                <img src="{{ site.baseurl }}{% link /assets/images/blazingdb.png %}" alt="blazingdb">
-            </div>
-            <div class="contributing-logo">
-                <img src="{{ site.baseurl }}{% link /assets/images/Gunrock_Color.png %}" alt="gunrock">
-            </div>
-            <div class="contributing-logo">
-                <img src="{{ site.baseurl }}{% link /assets/images/NVLogo_2D_H.png %}" alt="nvidia">
-            </div>
-            <div class="contributing-logo">
-                <img src="{{ site.baseurl }}{% link /assets/images/quansight.png %}" alt="quansight">
-            </div>
-            <div class="contributing-logo">
-                <img src="{{ site.baseurl }}{% link /assets/images/scikit-learn_Color.png %}" alt="scikitlearn">
-            </div>
-            <div class="contributing-logo">
-                <img src="{{ site.baseurl }}{% link /assets/images/walmart_labs.png %}" alt="walmart labs">
-            </div>
-        </div>
-    </div>
-</section>
+{% capture com_right %}
+## <i class="fas fa-code"></i> Open Source
+{: .section-subtitle-top-1}
+RAPIDS is open sourced under the Apache 2.0 license and is intended to be improved and extended upon by help from the community. While significant time and effort have been invested into making the platform to date, we need active contributors to help build its future.
 
-{% include cta-footer-help.html %}
+## <i class="fab fa-github"></i> Become a Contributor
+Contributors include anyone who helps improve any of our projects, whether by contributing code or reporting issues. We particularly love hearing about how you have used RAPIDS, so give us a mention on **[Twitter](https://twitter.com/rapidsai){: target="_blank"}**. So **[get started](start.html)** with RAPIDS, fork our repositories from GitHub, start building, and open a pull request. You can also join us on **[Google Groups](https://groups.google.com/forum/#!forum/rapidsai){: target="_blank"}** or **[Slack](https://join.slack.com/t/rapids-goai/shared_invite/enQtMjE0Njg5NDQ1MDQxLTViZWFiYTY5MDA4NWY3OWViODg0YWM1MGQ1NzgzNTQwOWI1YjE3NGFlOTVhYjQzYWQ4YjI4NzljYzhiOGZmMGM){: target="_blank"}** to ask questions and let us know what you're working on, too.
+{% endcapture %}
+
+{% include section-halfs.html
+    background="background-white" 
+    padding-top="1em" padding-bottom="5em" 
+    content-left-half=com_left 
+    content-right-half=com_right
+%} 
+
+# Contributors
+{: .section-title-full}
+{% include contributing-logos.html 
+    padding-top="1em" padding-bottom="10em" 
+%}
+
+{% include slopecap.html 
+    background="background-darkpurple" 
+    position="top" 
+    slope="down"
+%}
+{% include cta-footer-help.html 
+   background="background-darkpurple" 
+%}
