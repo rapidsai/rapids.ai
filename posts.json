@@ -1,6 +1,28 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1126698115484999681",
+      "screen_name": "dask_dev",
+      "name": "Dask",
+      "type": "retweet",
+      "text": "RT @dask_dev: A Dask user sent us this well written blog post on deploying Dask on Kubernetes on ec2, worth a read: https://t.co/MRjjWmNjLb",
+      "link": [
+        "https://t.co/MRjjWmNjLb"
+      ],
+      "date": "Fri May 10 03:58:58 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1126619139307651079",
+      "screen_name": "BartleyR",
+      "name": "Bartley",
+      "type": "retweet",
+      "text": "RT @BartleyR: Blazing fast! \ud83d\udd25\ud83e\udd2f\ud83d\udc4f https://t.co/cme5T26nV2",
+      "link": [
+        "https://t.co/cme5T26nV2"
+      ],
+      "date": "Thu May 09 22:45:09 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1126588046919524352",
       "screen_name": "richardkerris",
       "name": "richardkerris",
@@ -66,26 +88,6 @@
         "https://t.co/HsKwOi1ygl"
       ],
       "date": "Wed May 08 03:01:03 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1125939601665712129",
-      "screen_name": "dask_dev",
-      "name": "Dask",
-      "type": "retweet",
-      "text": "RT @dask_dev: @SamuelDataT @moshezadka @raymondh @__loges__ Your Spark cluster probably runs the Yarn resource manager, which other distrib...",
-      "link": [],
-      "date": "Wed May 08 01:44:54 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1125935837177233409",
-      "screen_name": "rapidsai",
-      "name": "RAPIDS AI",
-      "type": "post",
-      "text": "@dask_dev @hiroysato We\u2019re really excited about this in other projects like Dask-CuPy, which extends the awesome... https://t.co/UkCofzxhLr",
-      "link": [
-        "https://t.co/UkCofzxhLr"
-      ],
-      "date": "Wed May 08 01:29:57 +0000 2019"
     }
   ],
   "medium": [
