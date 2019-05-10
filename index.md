@@ -84,7 +84,7 @@ Modeled after 10 Minutes to Pandas, this is a short introduction to cuDF that is
 A handy PDF reference guide for handling GPU Data Frames (GDF) with cuDF. **[Download PDF <i class="fas fa-angle-double-right"></i>](https://rapids.ai/assets/files/cheatsheet.pdf){: target="_blank"}**
 
 ## <i class="far fa-bookmark"></i> Example Notebooks
-A Github repository with examples for cuML using knn, dbscan, pca and tsvd, the End-to-End Mortgage demo, cuGraph demos, and more. **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks){: target="_blank"}**
+A Github repository with examples of XGBoost, cuML demos, cuGraph demos, and more. **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks){: target="_blank"}**
 
 ## <i class="fas fa-bolt"></i> Try Now In Colaboratory
 Jump right into a GPU powered RAPIDS notebook with **[Colabratory](https://colab.research.google.com/notebooks/welcome.ipynb){: target="_blank"}** for free. **[Go to example notebook <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
@@ -125,7 +125,7 @@ Jump right into a GPU powered RAPIDS notebook with **[Colabratory](https://colab
 {% capture com_left %}
 # RAPIDS Community
 {: .section-title-halfs}
-RAPIDS is committed to being open sourced. We strive for a major release **every 6 weeks** (give or take). Below is a generalized release schedule. **[Learn more on our road to 1.0 post <i class="fas fa-angle-double-right"></i>](https://medium.com/rapids-ai/the-road-to-1-0-building-for-the-long-haul-657ae1afdfd6){: target="_blank"}**
+RAPIDS is committed to being open sourced. We strive for a major release **every 6 weeks** (give or take). Below is a generalized release schedule. Learn more on our **[Road To 1.0 post <i class="fas fa-angle-double-right"></i>](https://medium.com/rapids-ai/the-road-to-1-0-building-for-the-long-haul-657ae1afdfd6){: target="_blank"}**
 
 ## <i class="far fa-calendar-check"></i> Release Schedule
 <svg id="release-schedule-svg" data-name="release-schedule" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 309.3 64.97">
@@ -177,7 +177,7 @@ Whether you are new to RAPIDS, looking to help, or are part of the team, learn a
 {% capture lib_top_left %}
 ## <i class="fas fa-terminal"></i> cuDF <span class="api-tag">API</span>
 
-**[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cudf/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/branch-0.7/CHANGELOG.md){: target="_blank"}**
+**[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cudf/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/master/CHANGELOG.md){: target="_blank"}**
 
 cuDF is a Python GPU DataFrame library (built on the **[Apache Arrow](http://arrow.apache.org/){: target="_blank"}** columnar memory format) for loading, joining, aggregating, filtering, and otherwise manipulating data all in a **[pandas-like](https://pandas.pydata.org/){: target="_blank"}** API familiar to data scientists.
 
@@ -186,7 +186,7 @@ cuDF is a Python GPU DataFrame library (built on the **[Apache Arrow](http://arr
 {% capture lib_top_middle %}
 ## <i class="fas fa-terminal"></i> cuML <span class="api-tag">API</span>
 
-**[GitHub](https://github.com/rapidsai/cuml){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cuml/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuml/blob/branch-0.7/CHANGELOG.md){: target="_blank"}**
+**[GitHub](https://github.com/rapidsai/cuml){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cuml/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuml/blob/master/CHANGELOG.md){: target="_blank"}**
 
 cuML is a suite of libraries that implement machine learning algorithms and mathematical primitives functions that are compatible with other RAPIDS projects, all in a **[scikit-learn-like](https://scikit-learn.org/stable/index.html){: target="_blank"}** API familiar to data scientists.
 
@@ -196,7 +196,7 @@ cuML is a suite of libraries that implement machine learning algorithms and math
 {% capture lib_top_right %}
 ## <i class="fas fa-terminal"></i> cuGraph <span class="api-tag">API</span>
 
-**[GitHub](https://github.com/rapidsai/cugraph){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cugraph/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cugraph/blob/branch-0.7/CHANGELOG.md){: target="_blank"}**
+**[GitHub](https://github.com/rapidsai/cugraph){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cugraph/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cugraph/blob/master/CHANGELOG.md){: target="_blank"}**
 
 cuGraph is a collection of graph analytics that process data in GDF. cuGraph aims at providing a **[NetworkX-like](https://networkx.github.io/){: target="_blank"}** API familiar to data scientists, so they can use it to easily accelerate their workflows without going into the details of CUDA programming.
 
@@ -205,7 +205,7 @@ cuGraph is a collection of graph analytics that process data in GDF. cuGraph aim
 {% capture lib_bottom_left %}
 ## <i class="fas fa-terminal"></i> nvStrings <span class="api-tag">API</span>
 
-**[GitHub](https://github.com/rapidsai/custrings){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/nvstrings/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/custrings/blob/branch-0.4/CHANGELOG.md){: target="_blank"}**
+**[GitHub](https://github.com/rapidsai/custrings){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/nvstrings/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/custrings/blob/master/CHANGELOG.md){: target="_blank"}**
 
 nvStrings, the Python bindings for **[cuStrings](https://github.com/rapidsai/custrings){: target="_blank"}**, provides a pandas-like API that will be familiar to data engineers & data scientists, so they can use it to easily accelerate their workflows without going into the details of CUDA programming.
 
@@ -215,7 +215,7 @@ nvStrings, the Python bindings for **[cuStrings](https://github.com/rapidsai/cus
 {% capture lib_bottom_middle %}
 ## <i class="fas fa-terminal"></i> libcudf <span class="lib-tag">LIB</span>
 
-**[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/libcudf/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/branch-0.7/CHANGELOG.md){: target="_blank"}**
+**[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/libcudf/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/master/CHANGELOG.md){: target="_blank"}**
 
 libcudf is a C/C++ CUDA library for implementing standard dataframe operations. It is part of the cuDF repository. 
 
@@ -224,7 +224,7 @@ libcudf is a C/C++ CUDA library for implementing standard dataframe operations. 
 {% capture lib_bottom_right %}
 ## <i class="fas fa-terminal"></i> RMM <span class="lib-tag">LIB</span>
 
-**[GitHub](https://github.com/rapidsai/rmm){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/rmm/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/rmm/blob/branch-0.7/CHANGELOG.md){: target="_blank"}**
+**[GitHub](https://github.com/rapidsai/rmm){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/rmm/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/rmm/blob/master/CHANGELOG.md){: target="_blank"}**
 
 RAPIDS Memory Manager (RMM) is a central place for all device memory allocations in cuDF (C++ and Python) and other RAPIDS libraries. In addition, it is a replacement allocator for CUDA Device Memory (and CUDA Managed Memory) and a pool allocator to make CUDA device memory allocation / deallocation faster and asynchronous.
 

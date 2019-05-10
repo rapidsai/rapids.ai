@@ -13,7 +13,7 @@ layout: default
 # RAPIDS Community
 {: .section-title-halfs}
 
-RAPIDS is for everyone: users, adopters, and contributors. If you’re a data scientist, researcher, engineer, or developer using pandas, Dask, scikit-learn, or Spark on CPUs you can speed up your end-to-end pipeline up to 50x. The RAPIDS cuDF library is almost a drop in, API compatible, GPU accelerated replacement for pandas and Dask. 
+RAPIDS is for everyone: users, adopters, and contributors. If you’re a data scientist, researcher, engineer, or developer using pandas, Dask, scikit-learn, or Spark on CPUs, our **[RAPIDS projects](https://github.com/rapidsai){: target="_blank"}** are almost drop in replacements that can speed up your end-to-end workflow up to 50x.
 {% endcapture %}
 
 {% capture com_right %}
@@ -22,7 +22,7 @@ RAPIDS is for everyone: users, adopters, and contributors. If you’re a data sc
 RAPIDS is open sourced under the Apache 2.0 license and is intended to be improved and extended upon by help from the community. While significant time and effort have been invested into making the platform to date, we need active contributors to help build its future.
 
 ## <i class="fab fa-github"></i> Become a Contributor
-Contributors include anyone who helps improve the project, whether by reporting issues, adding documentation and examples, or contributing code. RAPIDS is built on open source projects, so fork our repositories from GitHub, start building, and open a pull request. You can also join us on Google Groups, Twitter, or Slack to ask questions and let us know what you're working on.
+Contributors include anyone who helps improve any of our projects, whether by contributing code or reporting issues. We particularly love hearing about how you have used RAPIDS, so give us a mention on **[Twitter](https://twitter.com/rapidsai){: target="_blank"}**. So **[get started](start.html)** with RAPIDS, fork our repositories from GitHub, start building, and open a pull request. You can also join us on **[Google Groups](https://groups.google.com/forum/#!forum/rapidsai){: target="_blank"}** or **[Slack](https://join.slack.com/t/rapids-goai/shared_invite/enQtMjE0Njg5NDQ1MDQxLTViZWFiYTY5MDA4NWY3OWViODg0YWM1MGQ1NzgzNTQwOWI1YjE3NGFlOTVhYjQzYWQ4YjI4NzljYzhiOGZmMGM){: target="_blank"}** to ask questions and let us know what you're working on, too.
 {% endcapture %}
 
 {% include section-halfs.html
