@@ -27,7 +27,7 @@ Contributors include anyone who helps improve the project, whether by reporting 
 
 {% include section-halfs.html
     background="background-white" 
-    padding-top="0" padding-bottom="1" 
+    padding-top="1em" padding-bottom="5em" 
     content-left-half=com_left 
     content-right-half=com_right
 %} 
@@ -35,7 +35,7 @@ Contributors include anyone who helps improve the project, whether by reporting 
 # Contributors
 {: .section-title-full}
 {% include contributing-logos.html 
-    padding-top="0" padding-bottom="2" 
+    padding-top="1em" padding-bottom="10em" 
 %}
 
 {% include slopecap.html 

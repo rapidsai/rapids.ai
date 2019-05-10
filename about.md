@@ -48,11 +48,11 @@ Our focus on Python allows RAPIDS to play well with most data science visualizat
 
 {% include section-double-halfs.html
     background="background-white" 
-    padding-top="0" padding-bottom="2" 
-    content-top-left-half =about_top_left 
+    padding-top="1em" padding-bottom="10em" 
+    content-top-left-half=about_top_left 
     content-top-right-half=about_top_right
-    content-bottom-left-half =about_bottom_left
-    content-bottom-right-half =about_bottom_right 
+    content-bottom-left-half=about_bottom_left
+    content-bottom-right-half=about_bottom_right 
 %} 
 
 {% include slopecap.html 
