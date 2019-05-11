@@ -1,6 +1,24 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1127067405635735553",
+      "screen_name": "datametrician",
+      "name": "Joshua Patterson",
+      "type": "retweet",
+      "text": "RT @datametrician: You know how I know @blazingdb #BlazingSQL is getting popular... getting mentioned in @TheRegister https://t.co/lAzHK8Vz...",
+      "link": [],
+      "date": "Sat May 11 04:26:24 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1127012753007312898",
+      "screen_name": "rodaramburu",
+      "name": "Rodrigo Aramburu",
+      "type": "retweet",
+      "text": "RT @rodaramburu: Running a #netflow analysis on 15M rows  in Colab. Took ~5s to load 1.7GB from #GDrive into #Colab, and then #GPU fast #SQ...",
+      "link": [],
+      "date": "Sat May 11 00:49:13 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1126871085260136449",
       "screen_name": "MurrayData",
       "name": "John Murray",
@@ -52,15 +70,6 @@
       "date": "Thu May 09 20:21:36 +0000 2019"
     },
     {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1126582927792513034",
-      "screen_name": "rodaramburu",
-      "name": "Rodrigo Aramburu",
-      "type": "retweet",
-      "text": "RT @rodaramburu: Running a #netflow analysis on 15M rows  in Colab. Took ~5s to load 1.7GB from #GDrive into #Colab, and then #GPU fast #SQ...",
-      "link": [],
-      "date": "Thu May 09 20:21:15 +0000 2019"
-    },
-    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1126453803895676928",
       "screen_name": "blazingdb",
       "name": "BlazingDB",
@@ -77,15 +86,6 @@
       "text": "RT @adbreind: Hello! Best news I\u2019ve seen in ... a long time. This is huge, and if you\u2019re in one of my data eng or ML/AI workshops, we\u2019ll be...",
       "link": [],
       "date": "Thu May 09 01:51:14 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1126221933635203073",
-      "screen_name": "blazingdb",
-      "name": "BlazingDB",
-      "type": "retweet",
-      "text": "RT @blazingdb: We are happy to announce that #BlazingSQL is now free on @GoogleColab!   Get up and running on an @NVIDIA #T4 #GPU in less t...",
-      "link": [],
-      "date": "Wed May 08 20:26:47 +0000 2019"
     }
   ],
   "medium": [
