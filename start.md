@@ -130,11 +130,14 @@ Run the following command within the Docker container started from the copied Do
 
 ### Use JupyterLab to Explore the Notebooks
 
-Notebooks can be found in two directories within the container:
+Notebooks can be found in notebooks directory within the container:
 
-<i class="far fa-folder-open"></i> **`/rapids/notebooks/cuml`** <br> These cuML demo notebooks have data preloaded in the container image and will be decompressed by the notebooks.
+<i class="far fa-folder-open"></i> **`/rapids/notebooks/cuml`** (cuML demos)
 
-<i class="far fa-folder-open"></i> **`/rapids/notebooks/mortgage`** <br> This cuDF, Dask, XGBoost demo notebook requires the download of **[Mortgage Data](https://docs.rapids.ai/datasets/mortgage-data){: target="_blank"}**, see notebook **`E2E.ipynb`** for more details.
+<i class="far fa-folder-open"></i> **`/rapids/notebooks/cugraph`** (cuGraph demos)
+
+<i class="far fa-folder-open"></i> **`/rapids/notebooks/tutorials`** (DBSCAN tutorial)
+
 
 ### Advanced Usage
 

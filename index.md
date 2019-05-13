@@ -69,8 +69,10 @@ for column in gdf.columns:
     print(gdf[column].mean())
 
 ```
-<br>
 Find more details on our **[get started section <i class="fas fa-angle-double-right"></i>](start.html)**
+
+## <i class="fas fa-bolt"></i> Try Now In Colaboratory
+Jump right into a GPU powered RAPIDS notebook with **[Colabratory](https://colab.research.google.com/notebooks/welcome.ipynb){: target="_blank"}** for free. **[Go to example notebook <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
 
 {% endcapture %}
 
@@ -80,14 +82,25 @@ Find more details on our **[get started section <i class="fas fa-angle-double-ri
 
 Modeled after 10 Minutes to Pandas, this is a short introduction to cuDF that is geared mainly for new users. **[Go to guide <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://rapidsai.github.io/projects/cudf/en/latest/10min.html){: target="_blank"}**
 
+## <i class="far fa-bookmark"></i> 10 Minutes to Dask-XGBoost
+{: .section-subtitle-top-1}
+
+A short introduction to XGBoost with a distributed CUDA DataFrame via Dask-cuDF. **[Go to guide <i class="fas fa-angle-double-right"></i>](https://rapidsai.github.io/projects/cudf/en/0.7.0/dask-xgb-10min.html){: target="_blank"}**
+
+
 ## <i class="far fa-bookmark"></i> GDF Cheat Sheet
+{: .section-subtitle-top-1}
+
 A handy PDF reference guide for handling GPU Data Frames (GDF) with cuDF. **[Download PDF <i class="fas fa-angle-double-right"></i>](https://rapids.ai/assets/files/cheatsheet.pdf){: target="_blank"}**
 
+
 ## <i class="far fa-bookmark"></i> Example Notebooks
+{: .section-subtitle-top-1}
+
 A Github repository with examples of XGBoost, cuML demos, cuGraph demos, and more. **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks){: target="_blank"}**
 
-## <i class="fas fa-bolt"></i> Try Now In Colaboratory
-Jump right into a GPU powered RAPIDS notebook with **[Colabratory](https://colab.research.google.com/notebooks/welcome.ipynb){: target="_blank"}** for free. **[Go to example notebook <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
+
+
 
 {% endcapture %}
 {% include slopecap.html 
