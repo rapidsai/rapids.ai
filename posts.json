@@ -1,6 +1,15 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1128002229091196928",
+      "screen_name": "datametrician",
+      "name": "Joshua Patterson",
+      "type": "retweet",
+      "text": "RT @datametrician: First big announcement, #fintech community, @RAPIDSai blows away #STACA3 record with @dask_dev &amp; @numba_jit on @NvidiaAI...",
+      "link": [],
+      "date": "Mon May 13 18:21:03 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1127221602087731201",
       "screen_name": "blazingdb",
       "name": "BlazingDB",
@@ -77,15 +86,6 @@
         "https://t.co/NZjiVTAX7K"
       ],
       "date": "Thu May 09 20:21:36 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1126453803895676928",
-      "screen_name": "blazingdb",
-      "name": "BlazingDB",
-      "type": "retweet",
-      "text": "RT @blazingdb: Released Today!  #BlazingSQL + @rapidsai + @GoogleColab = #SQL #Query millions of rows for free, insanely fast, on @nvidia T...",
-      "link": [],
-      "date": "Thu May 09 11:48:10 +0000 2019"
     }
   ],
   "medium": [
