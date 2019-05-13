@@ -138,6 +138,7 @@ Notebooks can be found in notebooks directory within the container:
 
 <i class="far fa-folder-open"></i> **`/rapids/notebooks/tutorials`** (DBSCAN tutorial)
 
+<i class="far fa-folder-open"></i> **`/rapids/notebooks/xgboost`** (XGBoost demo)
 
 ### Advanced Usage
 
