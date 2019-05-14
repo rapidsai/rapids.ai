@@ -106,7 +106,7 @@
     {
       "mediumLink": "https://medium.com/rapids-ai/run-rapids-on-google-colab-for-free-1617ac6323a8?source=rss----2d7ba3077a44---4",
       "title": "Run RAPIDS on Google Colab For Free",
-      "text": "Run RAPIDS on Google Colab - ForFreeGoogle Colab is a hosted Jupyter-Notebook like service which has long offered free access to GPU instances.This week Colab got even sweeter. The GPUs powering Colab were upgraded to NVIDIA new T4 GPUs....",
+      "text": "Google Colab is a hosted Jupyter-Notebook like service which has long offered free access to GPU instances.This week Colab got even sweeter. The GPUs powering Colab were upgraded to NVIDIA new T4 GPUs. This upgrade unlocks new software p...",
       "image": "https://cdn-images-1.medium.com/max/850/1*3QNSkwjX6gGJBQUBXVgvZA.jpeg",
       "date": "Fri, 26 Apr 2019 17:17:09 GMT",
       "poster": "Randy Gelhausen"
@@ -114,7 +114,7 @@
     {
       "mediumLink": "https://medium.com/rapids-ai/the-road-to-1-0-building-for-the-long-haul-657ae1afdfd6?source=rss----2d7ba3077a44---4",
       "title": "The Road to 1.0 - Building for the Long Haul",
-      "text": "The Road to 1.0 - Building for the LongHaulRAPIDS was everywhere at NVIDIA's GTC 2019 in Silicon Valley. It was great to see so many vendors, partners, and customers showcasing RAPIDS in their booths and presentations. Even the RAPIDS pr...",
+      "text": "RAPIDS was everywhere at NVIDIA's GTC 2019 in Silicon Valley. It was great to see so many vendors, partners, and customers showcasing RAPIDS in their booths and presentations. Even the RAPIDS press coverage blew me away. Not that we need...",
       "image": "https://cdn-images-1.medium.com/max/1024/1*GxaubH_8eZTsNRV7FBhiyw.png",
       "date": "Fri, 29 Mar 2019 17:23:37 GMT",
       "poster": "Josh Patterson"
@@ -130,7 +130,7 @@
     {
       "mediumLink": "https://medium.com/rapids-ai/dask-and-the-array-function-protocol-advances-on-nep-18-aa20baef8574?source=rss----2d7ba3077a44---4",
       "title": "Dask and the __array_function__ protocol: Advances on NEP-18",
-      "text": "By: PeterEntschevDask is versatile for analytics parallelism, but there is still one issue to leverage it to a broader spectrum: allowing it to transparently work with NumPy-like libraries. We have previously discussed how to work with G...",
+      "text": "To understand what's the end goal of this change, consider the following example:import numpy as np import dask.array as da x = np.random.random((5000, 1000)) d = da.from_array(x, chunks=(1000, 1000)) u, s, v = np.linalg.svd(x)Now consid...",
       "image": "https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FR5CiXti_MWo%3Ffeature%3Doembed&amp;url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DR5CiXti_MWo&amp;image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FR5CiXti_MWo%2Fhqdefault.jpg&amp;key=a19fcc184b9711e1b4764040d3dc5c07&amp;type=text%2Fhtml&amp;schema=youtube",
       "date": "Mon, 18 Mar 2019 00:00:00 GMT",
       "poster": "Mike Beaumont"
@@ -138,7 +138,7 @@
     {
       "mediumLink": "https://medium.com/rapids-ai/rapids-can-now-be-accessed-on-databricks-unified-analytics-platform-666e42284bd1?source=rss----2d7ba3077a44---4",
       "title": "RAPIDS can now be accessed on Databricks Unified Analytics Platform",
-      "text": "By: Ikroop Dhillon, Karthikeyan Rajendran, and TaureanDyerNVIDIA RAPIDS can now be accessed on Databricks Unified Analytics Platform, making it easy for data scientists to leverage RAPIDS for their end-to-end data science workflows. Data...",
+      "text": "Running PCA Demo Notebook using RAPIDS on DatabricksAfter installing the initialization script and restarting your cluster, download the spark_rapids_pca_demo html file and import it into your Databricks workspace. Attach your notebook t...",
       "image": "https://cdn-images-1.medium.com/max/1024/1*QOhZrlj6IcRCuETYMmRpiA.png",
       "date": "Tue, 19 Mar 2019 04:02:06 GMT",
       "poster": "Karthikeyan Rajendran"
@@ -146,7 +146,7 @@
     {
       "mediumLink": "https://medium.com/rapids-ai/essential-machine-learning-with-linear-models-in-rapids-part-1-of-a-series-992fab0240da?source=rss----2d7ba3077a44---4",
       "title": "Essential Machine Learning with Linear Models in RAPIDS: part 1 of a series.",
-      "text": "Essential Machine Learning with Linear Models in RAPIDS: part 1 of aseriesBy: PaulMahlerPhoto by BlacknellThis blog is the first in a series about regression analysis in RAPIDS, an open GPU data science platform. There are many varieties...",
+      "text": "This blog is the first in a series about regression analysis in RAPIDS, an open GPU data science platform. There are many varieties of regression techniques, and we're working to include them all in RAPIDS. In this blog edition, I use Or...",
       "image": "https://cdn-images-1.medium.com/max/800/1*qVPEU8NVQMvZJgz9ipekhA.jpeg",
       "date": "Tue, 05 Mar 2019 23:29:34 GMT",
       "poster": "Paul Mahler"
@@ -154,7 +154,7 @@
     {
       "mediumLink": "https://medium.com/rapids-ai/using-rapids-with-singularity-774c4c158be1?source=rss----2d7ba3077a44---4",
       "title": "Using RAPIDS with Singularity",
-      "text": "By: ScottMcMillanRAPIDS is accelerating High Performance Computing (HPC). Containers make it easy to use RAPIDS for your HPC workload, however, it's only available in NGC and Docker\u2026 until today. Since Docker is not typically available t...",
+      "text": "RAPIDS is accelerating High Performance Computing (HPC). Containers make it easy to use RAPIDS for your HPC workload, however, it's only available in NGC and Docker\u2026 until today. Since Docker is not typically available to users of shared...",
       "image": "https://cdn-images-1.medium.com/max/500/1*eDEKyf-p0nl_G3SFMupT_w.png",
       "date": "Tue, 26 Feb 2019 21:16:01 GMT",
       "poster": "Mike Beaumont"
@@ -162,7 +162,7 @@
     {
       "mediumLink": "https://medium.com/rapids-ai/blazingsql-part-1-the-gpu-dataframe-gdf-and-cudf-in-rapids-ai-1dd1397c6ad9?source=rss----2d7ba3077a44---4",
       "title": "BlazingSQL Part 1: The GPU DataFrame (GDF) and cuDF in RAPIDS AI",
-      "text": "By: RodrigoAramburuIn November 2018, we released BlazingSQL, a GPU-accelerated SQL engine built entirely on top of RAPIDS AI. RAPIDS AI is a set of open source libraries for GPU accelerating data preparation and machine learning built by...",
+      "text": "In November 2018, we released BlazingSQL, a GPU-accelerated SQL engine built entirely on top of RAPIDS AI. RAPIDS AI is a set of open source libraries for GPU accelerating data preparation and machine learning built by multiple contribut...",
       "image": "https://cdn-images-1.medium.com/proxy/1*YDZ4RHRAqXI454uoYslT3g.png",
       "date": "Mon, 25 Feb 2019 17:42:40 GMT",
       "poster": "Mike Beaumont"
