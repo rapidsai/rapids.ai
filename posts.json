@@ -1,94 +1,102 @@
 {
   "twitter": [
     {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1124900671138947073",
-      "screen_name": "SciPyConf",
-      "name": "SciPyConf",
-      "type": "retweet",
-      "text": "RT @SciPyConf: #SciPy2019 Conference Schedule is now available! So, so many great talks to choose from! https://t.co/4Qv0L2GYC3 #Python #Sc...",
-      "link": [
-        "https://t.co/4Qv0L2GYC3"
-      ],
-      "date": "Sun May 05 04:56:34 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1124900635596345344",
-      "screen_name": "DisasterAi",
-      "name": "Disaster Intelligence",
-      "type": "retweet",
-      "text": "RT @DisasterAi: We are hiring!  Contract #Geospatial Data Pipeline Developer:  See our posting at: https://t.co/gMYe1bWjfs  #GPU #RAPIDS #N...",
-      "link": [
-        "https://t.co/gMYe1bWjfs"
-      ],
-      "date": "Sun May 05 04:56:25 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1124782115491422209",
-      "screen_name": "micahstubbs",
-      "name": "@micahstubbs",
-      "type": "retweet",
-      "text": "RT @micahstubbs: a nice blog post from @ceshine_en exploring the new NVIDIA #RAPIDS GPU library.  shows a 15x Speedup on #UMAP vs CPU!   \ud83d\udcc4...",
-      "link": [],
-      "date": "Sat May 04 21:05:28 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1124698074041872385",
-      "screen_name": "peterhoffmann",
-      "name": "Peter Hoffmann",
-      "type": "retweet",
-      "text": "RT @peterhoffmann: Congratulations to @FlorianJetter, @xhochy, @crepererum and the @BlueYonderTech team for open sourcing https://t.co/ms4E...",
-      "link": [],
-      "date": "Sat May 04 15:31:31 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1124512691710611458",
-      "screen_name": "olgias",
-      "name": "Filippo B",
-      "type": "retweet",
-      "text": "RT @olgias: @mrocklin @rapidsai @dask_dev @pangeo_data @NCARKMPaul @_DPeterK_ @_JacobTomlinson 3. interested in dask, pangeo, xarray, and t...",
-      "link": [],
-      "date": "Sat May 04 03:14:52 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1124389773789917184",
-      "screen_name": "rapidsai",
-      "name": "RAPIDS AI",
-      "type": "post",
-      "text": "Thanks #AnacondaCON for an amazing show. Read @nvidia @datametrician blog reflecting on highlights. https://t.co/5xHVWZUmUY",
-      "link": [
-        "https://t.co/5xHVWZUmUY"
-      ],
-      "date": "Fri May 03 19:06:26 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1124373732514942980",
-      "screen_name": "tomekdrabas",
-      "name": "Tomek Drabas",
-      "type": "retweet",
-      "text": "RT @tomekdrabas: \"Similarity in graphs: Jaccard versus the Overlap Coefficient\" by @BradReesWork @rapidsai",
-      "link": [],
-      "date": "Fri May 03 18:02:42 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1124373558942097410",
-      "screen_name": "BartleyR",
-      "name": "Bartley",
-      "type": "retweet",
-      "text": "RT @BartleyR: Did you know you can use @rapidsai to parse #cyber event logs? You can also use it to classify network flow. See our new cybe...",
-      "link": [],
-      "date": "Fri May 03 18:02:00 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1124373346441777157",
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1128002229091196928",
       "screen_name": "datametrician",
       "name": "Joshua Patterson",
       "type": "retweet",
-      "text": "RT @datametrician: Woot! Sneak peak into @RAPIDSai 0.7 #cuGraph functionality! Each release I\u2019m more and more amazed at all the contributio...",
+      "text": "RT @datametrician: First big announcement, #fintech community, @RAPIDSai blows away #STACA3 record with @dask_dev &amp; @numba_jit on @NvidiaAI...",
       "link": [],
-      "date": "Fri May 03 18:01:10 +0000 2019"
+      "date": "Mon May 13 18:21:03 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1127221602087731201",
+      "screen_name": "blazingdb",
+      "name": "BlazingDB",
+      "type": "retweet",
+      "text": "RT @blazingdb: Crazy to see #BlazingSQL mentioned here. @GoogleColab went live on Wednesday but it seems people are already seeing the pote...",
+      "link": [],
+      "date": "Sat May 11 14:39:07 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1127067405635735553",
+      "screen_name": "datametrician",
+      "name": "Joshua Patterson",
+      "type": "retweet",
+      "text": "RT @datametrician: You know how I know @blazingdb #BlazingSQL is getting popular... getting mentioned in @TheRegister https://t.co/lAzHK8Vz...",
+      "link": [],
+      "date": "Sat May 11 04:26:24 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1127012753007312898",
+      "screen_name": "rodaramburu",
+      "name": "Rodrigo Aramburu",
+      "type": "retweet",
+      "text": "RT @rodaramburu: Running a #netflow analysis on 15M rows  in Colab. Took ~5s to load 1.7GB from #GDrive into #Colab, and then #GPU fast #SQ...",
+      "link": [],
+      "date": "Sat May 11 00:49:13 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1126871085260136449",
+      "screen_name": "MurrayData",
+      "name": "John Murray",
+      "type": "retweet",
+      "text": "RT @MurrayData: Following my #GTC19 presentation, I've now been asked if our Spatia software with @rapidsai can process #bathymetry data to...",
+      "link": [],
+      "date": "Fri May 10 15:26:17 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1126698115484999681",
+      "screen_name": "dask_dev",
+      "name": "Dask",
+      "type": "retweet",
+      "text": "RT @dask_dev: A Dask user sent us this well written blog post on deploying Dask on Kubernetes on ec2, worth a read: https://t.co/MRjjWmNjLb",
+      "link": [
+        "https://t.co/MRjjWmNjLb"
+      ],
+      "date": "Fri May 10 03:58:58 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1126619139307651079",
+      "screen_name": "BartleyR",
+      "name": "Bartley",
+      "type": "retweet",
+      "text": "RT @BartleyR: Blazing fast! \ud83d\udd25\ud83e\udd2f\ud83d\udc4f https://t.co/cme5T26nV2",
+      "link": [
+        "https://t.co/cme5T26nV2"
+      ],
+      "date": "Thu May 09 22:45:09 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1126588046919524352",
+      "screen_name": "richardkerris",
+      "name": "richardkerris",
+      "type": "retweet",
+      "text": "RT @richardkerris: Spending time learning about @blazingdb is amazing.. check out what they are doing with @rapidsai  - follow them both.",
+      "link": [],
+      "date": "Thu May 09 20:41:36 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1126583016539721728",
+      "screen_name": "tomekdrabas",
+      "name": "Tomek Drabas",
+      "type": "retweet",
+      "text": "RT @tomekdrabas: These numbers... Just wow! Fantastic results from @blazingdb and @rapidsai on #T4 in #GoogleCloud https://t.co/NZjiVTAX7K",
+      "link": [
+        "https://t.co/NZjiVTAX7K"
+      ],
+      "date": "Thu May 09 20:21:36 +0000 2019"
     }
   ],
   "medium": [
+    {
+      "mediumLink": "https://medium.com/rapids-ai/gpu-accelerated-cyber-log-parsing-with-rapids-10896f57eee9?source=rss----2d7ba3077a44---4",
+      "title": "GPU Accelerated Cyber Log Parsing with RAPIDS",
+      "text": "By: Bianca Rhodes US, Bhargav Suryadevara, and NickBeckerSecurity Operations (SecOps) and IT departments are collecting, managing, and attempting to analyze more data than ever before. Employees are likely to connect their own devices to...",
+      "image": "https://cdn-images-1.medium.com/max/677/1*oOWTQONjytP3vq_97Svz7w.png",
+      "date": "Tue, 07 May 2019 20:37:42 GMT",
+      "poster": "Bianca Rhodes US"
+    },
     {
       "mediumLink": "https://medium.com/rapids-ai/similarity-in-graphs-jaccard-versus-the-overlap-coefficient-610e083b877d?source=rss----2d7ba3077a44---4",
       "title": "Similarity in graphs: Jaccard versus the Overlap Coefficient",
@@ -159,14 +167,6 @@
       "text": "By: RodrigoAramburuIn November 2018, we released BlazingSQL, a GPU-accelerated SQL engine built entirely on top of RAPIDS AI. RAPIDS AI is a set of open source libraries for GPU accelerating data preparation and machine learning built by...",
       "image": "https://cdn-images-1.medium.com/proxy/1*YDZ4RHRAqXI454uoYslT3g.png",
       "date": "Mon, 25 Feb 2019 17:42:40 GMT",
-      "poster": "Mike Beaumont"
-    },
-    {
-      "mediumLink": "https://medium.com/rapids-ai/blazingsql-the-gpu-sql-engine-now-runs-over-20x-faster-than-apache-spark-e0b38e72796e?source=rss----2d7ba3077a44---4",
-      "title": "BlazingSQL - The GPU SQL Engine now runs over 20X Faster than Apache Spark!",
-      "text": "BlazingSQL - The GPU SQL Engine now runs over 20X Faster than ApacheSpark!By: RodrigoAramburuA few weeks ago we released BlazingSQL's first benchmark on an end to end workload.TL,DR you can check out the full articlehere.The key takeaway...",
-      "image": "https://cdn-images-1.medium.com/max/450/1*NkqeAHprrwrYYck3X4k0eQ.png",
-      "date": "Mon, 18 Feb 2019 17:57:51 GMT",
       "poster": "Mike Beaumont"
     }
   ]
