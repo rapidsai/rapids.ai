@@ -1,6 +1,24 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1128121811005087746",
+      "screen_name": "datametrician",
+      "name": "Joshua Patterson",
+      "type": "retweet",
+      "text": "RT @datametrician: Second big news of the day, @RAPIDSai is on @GCPcloud #DataProc! If you want to try multi-node multi-GPU @XGBoostProject...",
+      "link": [],
+      "date": "Tue May 14 02:16:13 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1128121770131648514",
+      "screen_name": "AnimaAnandkumar",
+      "name": "Anima Anandkumar",
+      "type": "retweet",
+      "text": "RT @AnimaAnandkumar: Achieved by harnessing the parallel processing power of 16 NVIDIA GPUs in a #DGX-2 server and Python, NVIDIA delivered...",
+      "link": [],
+      "date": "Tue May 14 02:16:04 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1128002229091196928",
       "screen_name": "datametrician",
       "name": "Joshua Patterson",
@@ -66,26 +84,6 @@
         "https://t.co/cme5T26nV2"
       ],
       "date": "Thu May 09 22:45:09 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1126588046919524352",
-      "screen_name": "richardkerris",
-      "name": "richardkerris",
-      "type": "retweet",
-      "text": "RT @richardkerris: Spending time learning about @blazingdb is amazing.. check out what they are doing with @rapidsai  - follow them both.",
-      "link": [],
-      "date": "Thu May 09 20:41:36 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1126583016539721728",
-      "screen_name": "tomekdrabas",
-      "name": "Tomek Drabas",
-      "type": "retweet",
-      "text": "RT @tomekdrabas: These numbers... Just wow! Fantastic results from @blazingdb and @rapidsai on #T4 in #GoogleCloud https://t.co/NZjiVTAX7K",
-      "link": [
-        "https://t.co/NZjiVTAX7K"
-      ],
-      "date": "Thu May 09 20:21:36 +0000 2019"
     }
   ],
   "medium": [
