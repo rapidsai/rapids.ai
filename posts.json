@@ -1,6 +1,24 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1128686081493225472",
+      "screen_name": "NvidiaAI",
+      "name": "NVIDIA AI",
+      "type": "retweet",
+      "text": "RT @NvidiaAI: At STAC Summit in London today, members discussed the newest benchmark for the backtesting of trading strategies. Learn how t...",
+      "link": [],
+      "date": "Wed May 15 15:38:26 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1128686008361308161",
+      "screen_name": "HammanHydro",
+      "name": "Joe Hamman",
+      "type": "retweet",
+      "text": "RT @HammanHydro: Are you interested in what it costs to run @pangeo_data in the cloud? I just published a blog post on the topic: \"Pangeo a...",
+      "link": [],
+      "date": "Wed May 15 15:38:09 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1128121811005087746",
       "screen_name": "datametrician",
       "name": "Joshua Patterson",
@@ -62,28 +80,6 @@
       "text": "RT @MurrayData: Following my #GTC19 presentation, I've now been asked if our Spatia software with @rapidsai can process #bathymetry data to...",
       "link": [],
       "date": "Fri May 10 15:26:17 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1126698115484999681",
-      "screen_name": "dask_dev",
-      "name": "Dask",
-      "type": "retweet",
-      "text": "RT @dask_dev: A Dask user sent us this well written blog post on deploying Dask on Kubernetes on ec2, worth a read: https://t.co/MRjjWmNjLb",
-      "link": [
-        "https://t.co/MRjjWmNjLb"
-      ],
-      "date": "Fri May 10 03:58:58 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1126619139307651079",
-      "screen_name": "BartleyR",
-      "name": "Bartley",
-      "type": "retweet",
-      "text": "RT @BartleyR: Blazing fast! \ud83d\udd25\ud83e\udd2f\ud83d\udc4f https://t.co/cme5T26nV2",
-      "link": [
-        "https://t.co/cme5T26nV2"
-      ],
-      "date": "Thu May 09 22:45:09 +0000 2019"
     }
   ],
   "medium": [
