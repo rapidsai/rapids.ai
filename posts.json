@@ -1,6 +1,26 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1129019708160716802",
+      "screen_name": "ChainerOfficial",
+      "name": "Chainer",
+      "type": "retweet",
+      "text": "RT @ChainerOfficial: Released #Chainer/#CuPy v6.0.0! Summary of the changes is available in the blog. https://t.co/qHgA1Wx3Iy https://t.co/...",
+      "link": [
+        "https://t.co/qHgA1Wx3Iy"
+      ],
+      "date": "Thu May 16 13:44:09 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1129019380723924992",
+      "screen_name": "ChainerOfficial",
+      "name": "Chainer",
+      "type": "retweet",
+      "text": "RT @ChainerOfficial: Released #Chainer/#CuPy v7.0.0a1! In this release, many examples including ImageNet, DCGAN and VAE start supporting Ch...",
+      "link": [],
+      "date": "Thu May 16 13:42:51 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1128847003037790209",
       "screen_name": "blazingdb",
       "name": "BlazingDB",
@@ -62,27 +82,17 @@
       "text": "RT @datametrician: First big announcement, #fintech community, @RAPIDSai blows away #STACA3 record with @dask_dev &amp; @numba_jit on @NvidiaAI...",
       "link": [],
       "date": "Mon May 13 18:21:03 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1127221602087731201",
-      "screen_name": "blazingdb",
-      "name": "BlazingDB",
-      "type": "retweet",
-      "text": "RT @blazingdb: Crazy to see #BlazingSQL mentioned here. @GoogleColab went live on Wednesday but it seems people are already seeing the pote...",
-      "link": [],
-      "date": "Sat May 11 14:39:07 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1127067405635735553",
-      "screen_name": "datametrician",
-      "name": "Joshua Patterson",
-      "type": "retweet",
-      "text": "RT @datametrician: You know how I know @blazingdb #BlazingSQL is getting popular... getting mentioned in @TheRegister https://t.co/lAzHK8Vz...",
-      "link": [],
-      "date": "Sat May 11 04:26:24 +0000 2019"
     }
   ],
   "medium": [
+    {
+      "mediumLink": "https://medium.com/rapids-ai/experience-blazingsql-running-100x-faster-than-apache-spark-on-google-colab-4ad579dd98b4?source=rss----2d7ba3077a44---4",
+      "title": "Experience BlazingSQL Running 100X Faster than Apache Spark on Google Colab",
+      "text": "Unlock the potential of Google Colab with RAPIDS AI + BlazingSQLIf you've been following our blog posts, you'll know that last week we launched a version of BlazingSQL + RAPIDS AI ecosystem with a free NVIDIA T4 GPU on Google Colab. Read...",
+      "image": "https://cdn-images-1.medium.com/max/800/1*yw0GImEAdnyu6ntne3QlaQ.png",
+      "date": "Wed, 15 May 2019 16:13:49 GMT",
+      "poster": "Mike Beaumont"
+    },
     {
       "mediumLink": "https://medium.com/rapids-ai/gpu-accelerated-cyber-log-parsing-with-rapids-10896f57eee9?source=rss----2d7ba3077a44---4",
       "title": "GPU Accelerated Cyber Log Parsing with RAPIDS",
@@ -153,14 +163,6 @@
       "text": "RAPIDS is accelerating High Performance Computing (HPC). Containers make it easy to use RAPIDS for your HPC workload, however, it's only available in NGC and Docker\u2026 until today. Since Docker is not typically available to users of shared...",
       "image": "https://cdn-images-1.medium.com/max/500/1*eDEKyf-p0nl_G3SFMupT_w.png",
       "date": "Tue, 26 Feb 2019 21:16:01 GMT",
-      "poster": "Mike Beaumont"
-    },
-    {
-      "mediumLink": "https://medium.com/rapids-ai/blazingsql-part-1-the-gpu-dataframe-gdf-and-cudf-in-rapids-ai-1dd1397c6ad9?source=rss----2d7ba3077a44---4",
-      "title": "BlazingSQL Part 1: The GPU DataFrame (GDF) and cuDF in RAPIDS AI",
-      "text": "In November 2018, we released BlazingSQL, a GPU-accelerated SQL engine built entirely on top of RAPIDS AI. RAPIDS AI is a set of open source libraries for GPU accelerating data preparation and machine learning built by multiple contribut...",
-      "image": "https://cdn-images-1.medium.com/proxy/1*YDZ4RHRAqXI454uoYslT3g.png",
-      "date": "Mon, 25 Feb 2019 17:42:40 GMT",
       "poster": "Mike Beaumont"
     }
   ]
