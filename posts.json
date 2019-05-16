@@ -1,6 +1,24 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1128847003037790209",
+      "screen_name": "blazingdb",
+      "name": "BlazingDB",
+      "type": "retweet",
+      "text": "RT @blazingdb: Just released a blog post about how you can process 20M rows with #GPU fast #BlazingSQL 100X faster than #ApacheSpark on @Go...",
+      "link": [],
+      "date": "Thu May 16 02:17:53 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1128835025628045312",
+      "screen_name": "blazingdb",
+      "name": "BlazingDB",
+      "type": "retweet",
+      "text": "RT @blazingdb: Best part: It's free! High-performance #GPU computing and #DataScience  with #BlazingSQL  + @rapidsai  on @GoogleColab \ud83d\udd25\ud83d\udd25\ud83d\udd25...",
+      "link": [],
+      "date": "Thu May 16 01:30:17 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1128686081493225472",
       "screen_name": "NvidiaAI",
       "name": "NVIDIA AI",
@@ -62,24 +80,6 @@
       "text": "RT @datametrician: You know how I know @blazingdb #BlazingSQL is getting popular... getting mentioned in @TheRegister https://t.co/lAzHK8Vz...",
       "link": [],
       "date": "Sat May 11 04:26:24 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1127012753007312898",
-      "screen_name": "rodaramburu",
-      "name": "Rodrigo Aramburu",
-      "type": "retweet",
-      "text": "RT @rodaramburu: Running a #netflow analysis on 15M rows  in Colab. Took ~5s to load 1.7GB from #GDrive into #Colab, and then #GPU fast #SQ...",
-      "link": [],
-      "date": "Sat May 11 00:49:13 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1126871085260136449",
-      "screen_name": "MurrayData",
-      "name": "John Murray",
-      "type": "retweet",
-      "text": "RT @MurrayData: Following my #GTC19 presentation, I've now been asked if our Spatia software with @rapidsai can process #bathymetry data to...",
-      "link": [],
-      "date": "Fri May 10 15:26:17 +0000 2019"
     }
   ],
   "medium": [
