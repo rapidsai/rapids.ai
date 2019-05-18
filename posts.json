@@ -1,6 +1,15 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1129569450846511106",
+      "screen_name": "dask_dev",
+      "name": "Dask",
+      "type": "retweet",
+      "text": "RT @dask_dev: @amuellerml @hug_nicolas Ooh, fun.  Let me know if I can help try to scale this out.  I have this Actor framework now for low...",
+      "link": [],
+      "date": "Sat May 18 02:08:38 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1129019708160716802",
       "screen_name": "ChainerOfficial",
       "name": "Chainer",
@@ -73,15 +82,6 @@
       "text": "RT @AnimaAnandkumar: Achieved by harnessing the parallel processing power of 16 NVIDIA GPUs in a #DGX-2 server and Python, NVIDIA delivered...",
       "link": [],
       "date": "Tue May 14 02:16:04 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1128002229091196928",
-      "screen_name": "datametrician",
-      "name": "Joshua Patterson",
-      "type": "retweet",
-      "text": "RT @datametrician: First big announcement, #fintech community, @RAPIDSai blows away #STACA3 record with @dask_dev &amp; @numba_jit on @NvidiaAI...",
-      "link": [],
-      "date": "Mon May 13 18:21:03 +0000 2019"
     }
   ],
   "medium": [
