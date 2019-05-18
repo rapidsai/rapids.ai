@@ -1,6 +1,15 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1129728165180583937",
+      "screen_name": "Connected_Data",
+      "name": "Connected Data LDN",
+      "type": "retweet",
+      "text": "RT @Connected_Data: Did you know @NvidiaAI has #opensource #graph #analytics library called cuGraph? Integrates w RAPIDS #datascience ecosy...",
+      "link": [],
+      "date": "Sat May 18 12:39:18 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1129569450846511106",
       "screen_name": "dask_dev",
       "name": "Dask",
@@ -73,15 +82,6 @@
       "text": "RT @datametrician: Second big news of the day, @RAPIDSai is on @GCPcloud #DataProc! If you want to try multi-node multi-GPU @XGBoostProject...",
       "link": [],
       "date": "Tue May 14 02:16:13 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1128121770131648514",
-      "screen_name": "AnimaAnandkumar",
-      "name": "Anima Anandkumar",
-      "type": "retweet",
-      "text": "RT @AnimaAnandkumar: Achieved by harnessing the parallel processing power of 16 NVIDIA GPUs in a #DGX-2 server and Python, NVIDIA delivered...",
-      "link": [],
-      "date": "Tue May 14 02:16:04 +0000 2019"
     }
   ],
   "medium": [
