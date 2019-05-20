@@ -1,6 +1,24 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1130467298077270016",
+      "screen_name": "MurrayData",
+      "name": "John Murray",
+      "type": "retweet",
+      "text": "RT @MurrayData: Since @rapidsai was released, I've wanted to use it to speed up #spatial queries. It was a question at #GTC19. We've now ac...",
+      "link": [],
+      "date": "Mon May 20 13:36:21 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1130466906144727040",
+      "screen_name": "clmt",
+      "name": "Cl\u00e9ment Farabet",
+      "type": "retweet",
+      "text": "RT @clmt: Gave a talk at #ScaledML recently, a good overview of our team\u2019s work at nvidia on scaling AI development for self driving cars @...",
+      "link": [],
+      "date": "Mon May 20 13:34:48 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1129728165180583937",
       "screen_name": "Connected_Data",
       "name": "Connected Data LDN",
@@ -64,24 +82,6 @@
       "text": "RT @NvidiaAI: At STAC Summit in London today, members discussed the newest benchmark for the backtesting of trading strategies. Learn how t...",
       "link": [],
       "date": "Wed May 15 15:38:26 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1128686008361308161",
-      "screen_name": "HammanHydro",
-      "name": "Joe Hamman",
-      "type": "retweet",
-      "text": "RT @HammanHydro: Are you interested in what it costs to run @pangeo_data in the cloud? I just published a blog post on the topic: \"Pangeo a...",
-      "link": [],
-      "date": "Wed May 15 15:38:09 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1128121811005087746",
-      "screen_name": "datametrician",
-      "name": "Joshua Patterson",
-      "type": "retweet",
-      "text": "RT @datametrician: Second big news of the day, @RAPIDSai is on @GCPcloud #DataProc! If you want to try multi-node multi-GPU @XGBoostProject...",
-      "link": [],
-      "date": "Tue May 14 02:16:13 +0000 2019"
     }
   ],
   "medium": [
