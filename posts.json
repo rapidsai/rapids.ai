@@ -1,6 +1,15 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1130852259829387264",
+      "screen_name": "NvidiaAI",
+      "name": "NVIDIA AI",
+      "type": "retweet",
+      "text": "RT @NvidiaAI: Learn how the largest insurance company in China experienced an 80X speedup with GPU-accelerated #XGBoost and @rapidsai, maki...",
+      "link": [],
+      "date": "Tue May 21 15:06:03 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1130685094530887680",
       "screen_name": "nuclioio",
       "name": "nuclio",
@@ -73,18 +82,33 @@
       "text": "RT @blazingdb: Just released a blog post about how you can process 20M rows with #GPU fast #BlazingSQL 100X faster than #ApacheSpark on @Go...",
       "link": [],
       "date": "Thu May 16 02:17:53 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1128835025628045312",
-      "screen_name": "blazingdb",
-      "name": "BlazingDB",
-      "type": "retweet",
-      "text": "RT @blazingdb: Best part: It's free! High-performance #GPU computing and #DataScience  with #BlazingSQL  + @rapidsai  on @GoogleColab \ud83d\udd25\ud83d\udd25\ud83d\udd25...",
-      "link": [],
-      "date": "Thu May 16 01:30:17 +0000 2019"
     }
   ],
   "medium": [
+    {
+      "mediumLink": "https://medium.com/rapids-ai/using-rapids-with-pytorch-e602da018285?source=rss----2d7ba3077a44---4",
+      "title": "Using RAPIDS with Pytorch",
+      "text": "In this post we take a look at how to use cuDF, the RAPIDS dataframe library, to do some of the preprocessing steps required to get the mortgage data in a format that PyTorch can process so that we can explore the performance of deep lea...",
+      "image": "https://cdn-images-1.medium.com/max/800/1*OgeJ5Y2fFHhRi-PLVi0HlA.jpeg",
+      "date": "Tue, 21 May 2019 20:31:01 GMT",
+      "poster": "Even Oldridge"
+    },
+    {
+      "mediumLink": "https://medium.com/rapids-ai/rapids-0-7-release-drops-pip-packages-47fc966e9472?source=rss----2d7ba3077a44---4",
+      "title": "RAPIDS 0.7 Release Drops PIP Packages",
+      "text": "Like many projects, it has been a struggle for RAPIDS to integrate with the PyPI ecosystem without introducing all sorts of dependency problems for end users. In order to maintain the best user experience, we've come to the conclusion th...",
+      "image": "https://cdn-images-1.medium.com/max/805/1*utSxSJl2RD5ujQLVRLHHvg.jpeg",
+      "date": "Tue, 21 May 2019 20:01:00 GMT",
+      "poster": "Keith Kraus US"
+    },
+    {
+      "mediumLink": "https://medium.com/rapids-ai/the-rise-of-notebooks-extended-82d40f8efbef?source=rss----2d7ba3077a44---4",
+      "title": "The Rise of Notebooks Extended",
+      "text": "I recently had the privilege of presenting a workshop at the AI + Education Curiosity Conference 2019. There, I demonstrated to educators, school district staff, researchers, and students how RAPIDS software enables students to learn and...",
+      "image": "https://cdn-images-1.medium.com/max/910/1*9l36JIH1kTGIkCmRZUqSsQ.png",
+      "date": "Tue, 21 May 2019 18:51:20 GMT",
+      "poster": "Taurean Dyer"
+    },
     {
       "mediumLink": "https://medium.com/rapids-ai/experience-blazingsql-running-100x-faster-than-apache-spark-on-google-colab-4ad579dd98b4?source=rss----2d7ba3077a44---4",
       "title": "Experience BlazingSQL Running 100X Faster than Apache Spark on Google Colab",
@@ -139,30 +163,6 @@
       "text": "To understand what's the end goal of this change, consider the following example:import numpy as np import dask.array as da x = np.random.random((5000, 1000)) d = da.from_array(x, chunks=(1000, 1000)) u, s, v = np.linalg.svd(x)Now consid...",
       "image": "https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FR5CiXti_MWo%3Ffeature%3Doembed&amp;url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DR5CiXti_MWo&amp;image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FR5CiXti_MWo%2Fhqdefault.jpg&amp;key=a19fcc184b9711e1b4764040d3dc5c07&amp;type=text%2Fhtml&amp;schema=youtube",
       "date": "Mon, 18 Mar 2019 00:00:00 GMT",
-      "poster": "Mike Beaumont"
-    },
-    {
-      "mediumLink": "https://medium.com/rapids-ai/rapids-can-now-be-accessed-on-databricks-unified-analytics-platform-666e42284bd1?source=rss----2d7ba3077a44---4",
-      "title": "RAPIDS can now be accessed on Databricks Unified Analytics Platform",
-      "text": "Running PCA Demo Notebook using RAPIDS on DatabricksAfter installing the initialization script and restarting your cluster, download the spark_rapids_pca_demo html file and import it into your Databricks workspace. Attach your notebook t...",
-      "image": "https://cdn-images-1.medium.com/max/1024/1*QOhZrlj6IcRCuETYMmRpiA.png",
-      "date": "Tue, 19 Mar 2019 04:02:06 GMT",
-      "poster": "Karthikeyan Rajendran"
-    },
-    {
-      "mediumLink": "https://medium.com/rapids-ai/essential-machine-learning-with-linear-models-in-rapids-part-1-of-a-series-992fab0240da?source=rss----2d7ba3077a44---4",
-      "title": "Essential Machine Learning with Linear Models in RAPIDS: part 1 of a series.",
-      "text": "This blog is the first in a series about regression analysis in RAPIDS, an open GPU data science platform. There are many varieties of regression techniques, and we're working to include them all in RAPIDS. In this blog edition, I use Or...",
-      "image": "https://cdn-images-1.medium.com/max/800/1*qVPEU8NVQMvZJgz9ipekhA.jpeg",
-      "date": "Tue, 05 Mar 2019 23:29:34 GMT",
-      "poster": "Paul Mahler"
-    },
-    {
-      "mediumLink": "https://medium.com/rapids-ai/using-rapids-with-singularity-774c4c158be1?source=rss----2d7ba3077a44---4",
-      "title": "Using RAPIDS with Singularity",
-      "text": "RAPIDS is accelerating High Performance Computing (HPC). Containers make it easy to use RAPIDS for your HPC workload, however, it's only available in NGC and Docker\u2026 until today. Since Docker is not typically available to users of shared...",
-      "image": "https://cdn-images-1.medium.com/max/500/1*eDEKyf-p0nl_G3SFMupT_w.png",
-      "date": "Tue, 26 Feb 2019 21:16:01 GMT",
       "poster": "Mike Beaumont"
     }
   ]
