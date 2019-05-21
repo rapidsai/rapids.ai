@@ -1,6 +1,15 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1130685094530887680",
+      "screen_name": "nuclioio",
+      "name": "nuclio",
+      "type": "retweet",
+      "text": "RT @nuclioio: Coming up at 4:30pm in Barcelona: @yaronhaviv is speaking at the #Serverless Practitioners Summit about maximizing #GPU utili...",
+      "link": [],
+      "date": "Tue May 21 04:01:48 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1130467298077270016",
       "screen_name": "MurrayData",
       "name": "John Murray",
@@ -73,15 +82,6 @@
       "text": "RT @blazingdb: Best part: It's free! High-performance #GPU computing and #DataScience  with #BlazingSQL  + @rapidsai  on @GoogleColab \ud83d\udd25\ud83d\udd25\ud83d\udd25...",
       "link": [],
       "date": "Thu May 16 01:30:17 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1128686081493225472",
-      "screen_name": "NvidiaAI",
-      "name": "NVIDIA AI",
-      "type": "retweet",
-      "text": "RT @NvidiaAI: At STAC Summit in London today, members discussed the newest benchmark for the backtesting of trading strategies. Learn how t...",
-      "link": [],
-      "date": "Wed May 15 15:38:26 +0000 2019"
     }
   ],
   "medium": [
