@@ -1,6 +1,60 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1131303829281038336",
+      "screen_name": "AnimaAnandkumar",
+      "name": "Anima Anandkumar",
+      "type": "retweet",
+      "text": "RT @AnimaAnandkumar: Without end-to-end pipelines, optimizing a single module is not very meaningful. For #DeepLearning the marriage with #...",
+      "link": [],
+      "date": "Wed May 22 21:00:26 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1131279661353377792",
+      "screen_name": "nkoumchatzky",
+      "name": "Nicolas Koumchatzky",
+      "type": "retweet",
+      "text": "RT @nkoumchatzky: Great to confirm that DL for tabular data can perform at least as well as XGBoost with a rather straightforward model and...",
+      "link": [],
+      "date": "Wed May 22 19:24:24 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1131279536178511872",
+      "screen_name": "jeremyphoward",
+      "name": "Jeremy Howard",
+      "type": "retweet",
+      "text": "RT @jeremyphoward: It's so great to see the impact of a very strong practitioner like @Even_Oldridge joining a very strong foundational tea...",
+      "link": [],
+      "date": "Wed May 22 19:23:54 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1131262270917500930",
+      "screen_name": "rapidsai",
+      "name": "RAPIDS AI",
+      "type": "post",
+      "text": "@PyTorch @Even_Oldridge @NvidiaAI @cmgreen210 @nkoumchatzky Awww... we\u2019re blushing \u263a\ufe0f more to come in the next releases \ud83d\ude09",
+      "link": [],
+      "date": "Wed May 22 18:15:17 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1131257654918242304",
+      "screen_name": "PyTorch",
+      "name": "PyTorch",
+      "type": "retweet",
+      "text": "RT @PyTorch: @Even_Oldridge @NvidiaAI @rapidsai @cmgreen210 @nkoumchatzky PyTorch &lt;3 Rapids",
+      "link": [],
+      "date": "Wed May 22 17:56:57 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1131255422432813056",
+      "screen_name": "Even_Oldridge",
+      "name": "Even Oldridge",
+      "type": "retweet",
+      "text": "RT @Even_Oldridge: Excited to share some of the work I've been doing at @NvidiaAI on @rapidsai, working with @cmgreen210 and @nkoumchatzky...",
+      "link": [],
+      "date": "Wed May 22 17:48:05 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1130960795083390988",
       "screen_name": "blazingdb",
       "name": "BlazingDB",
@@ -28,60 +82,6 @@
         "https://t.co/tQcHZKv9bU"
       ],
       "date": "Tue May 21 22:15:10 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1130852259829387264",
-      "screen_name": "NvidiaAI",
-      "name": "NVIDIA AI",
-      "type": "retweet",
-      "text": "RT @NvidiaAI: Learn how the largest insurance company in China experienced an 80X speedup with GPU-accelerated #XGBoost and @rapidsai, maki...",
-      "link": [],
-      "date": "Tue May 21 15:06:03 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1130685094530887680",
-      "screen_name": "nuclioio",
-      "name": "nuclio",
-      "type": "retweet",
-      "text": "RT @nuclioio: Coming up at 4:30pm in Barcelona: @yaronhaviv is speaking at the #Serverless Practitioners Summit about maximizing #GPU utili...",
-      "link": [],
-      "date": "Tue May 21 04:01:48 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1130467298077270016",
-      "screen_name": "MurrayData",
-      "name": "John Murray",
-      "type": "retweet",
-      "text": "RT @MurrayData: Since @rapidsai was released, I've wanted to use it to speed up #spatial queries. It was a question at #GTC19. We've now ac...",
-      "link": [],
-      "date": "Mon May 20 13:36:21 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1130466906144727040",
-      "screen_name": "clmt",
-      "name": "Cl\u00e9ment Farabet",
-      "type": "retweet",
-      "text": "RT @clmt: Gave a talk at #ScaledML recently, a good overview of our team\u2019s work at nvidia on scaling AI development for self driving cars @...",
-      "link": [],
-      "date": "Mon May 20 13:34:48 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1129728165180583937",
-      "screen_name": "Connected_Data",
-      "name": "Connected Data LDN",
-      "type": "retweet",
-      "text": "RT @Connected_Data: Did you know @NvidiaAI has #opensource #graph #analytics library called cuGraph? Integrates w RAPIDS #datascience ecosy...",
-      "link": [],
-      "date": "Sat May 18 12:39:18 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1129569450846511106",
-      "screen_name": "dask_dev",
-      "name": "Dask",
-      "type": "retweet",
-      "text": "RT @dask_dev: @amuellerml @hug_nicolas Ooh, fun.  Let me know if I can help try to scale this out.  I have this Actor framework now for low...",
-      "link": [],
-      "date": "Sat May 18 02:08:38 +0000 2019"
     }
   ],
   "medium": [
