@@ -1,6 +1,35 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1130960795083390988",
+      "screen_name": "blazingdb",
+      "name": "BlazingDB",
+      "type": "retweet",
+      "text": "RT @blazingdb: Want to learn more about the #GDF (#GPU Dataframe), the foundation of the @rapidsai ecosystem? The GDF is based on the @Apac...",
+      "link": [],
+      "date": "Tue May 21 22:17:20 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1130960288164065282",
+      "screen_name": "leland_mcinnes",
+      "name": "Leland McInnes",
+      "type": "retweet",
+      "text": "RT @leland_mcinnes: Many thanks to @datametrician @cjnolet and @rapidsai for making this possible -- definitely some amazing performance av...",
+      "link": [],
+      "date": "Tue May 21 22:15:19 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1130960252164292608",
+      "screen_name": "franschrandez",
+      "name": "Nicolas Fernandez",
+      "type": "retweet",
+      "text": "RT @franschrandez: Reproduced the #UMAP on #RAPIDS example by @ceshine_en (https://t.co/tQcHZKv9bU) on Colab (with help from https://t.co/7...",
+      "link": [
+        "https://t.co/tQcHZKv9bU"
+      ],
+      "date": "Tue May 21 22:15:10 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1130852259829387264",
       "screen_name": "NvidiaAI",
       "name": "NVIDIA AI",
@@ -53,35 +82,6 @@
       "text": "RT @dask_dev: @amuellerml @hug_nicolas Ooh, fun.  Let me know if I can help try to scale this out.  I have this Actor framework now for low...",
       "link": [],
       "date": "Sat May 18 02:08:38 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1129019708160716802",
-      "screen_name": "ChainerOfficial",
-      "name": "Chainer",
-      "type": "retweet",
-      "text": "RT @ChainerOfficial: Released #Chainer/#CuPy v6.0.0! Summary of the changes is available in the blog. https://t.co/qHgA1Wx3Iy https://t.co/...",
-      "link": [
-        "https://t.co/qHgA1Wx3Iy"
-      ],
-      "date": "Thu May 16 13:44:09 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1129019380723924992",
-      "screen_name": "ChainerOfficial",
-      "name": "Chainer",
-      "type": "retweet",
-      "text": "RT @ChainerOfficial: Released #Chainer/#CuPy v7.0.0a1! In this release, many examples including ImageNet, DCGAN and VAE start supporting Ch...",
-      "link": [],
-      "date": "Thu May 16 13:42:51 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1128847003037790209",
-      "screen_name": "blazingdb",
-      "name": "BlazingDB",
-      "type": "retweet",
-      "text": "RT @blazingdb: Just released a blog post about how you can process 20M rows with #GPU fast #BlazingSQL 100X faster than #ApacheSpark on @Go...",
-      "link": [],
-      "date": "Thu May 16 02:17:53 +0000 2019"
     }
   ],
   "medium": [
