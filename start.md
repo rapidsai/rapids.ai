@@ -111,7 +111,7 @@ Checkout the **[cuDF README](https://github.com/rapidsai/cudf/tree/master#develo
 ## <i class="fas fa-laptop-code"></i> Where is Pip?
 {: .section-subtitle-top-2}
 
-Refer to our **[blog post](https://medium.com/rapids-ai){: target="_blank"}** for details on why we no longer support PIP installs. 
+Refer to our **[RAPIDS 0.7 Release Drops PIP Packages — and sticks with Conda](https://medium.com/rapids-ai/rapids-0-7-release-drops-pip-packages-47fc966e9472){: target="_blank"}** post for details on why we no longer support PIP installs. 
 
 {% endcapture %}
 
