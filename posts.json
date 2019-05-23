@@ -1,6 +1,33 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1131371405310926849",
+      "screen_name": "adbreind",
+      "name": "Adam Breindel",
+      "type": "retweet",
+      "text": "RT @adbreind: Yes! If you haven't tried this out yet, now is the time. Kick the tires for free on Google Colab. And local install \"just wor...",
+      "link": [],
+      "date": "Thu May 23 01:28:57 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1131347939203461120",
+      "screen_name": "sperezl",
+      "name": "Sergi P\u00e9rez Labernia",
+      "type": "retweet",
+      "text": "RT @sperezl: Final del primer d\u00eda #hpcadmintech19 Gran organizaci\u00f3n, conocimiento y un placer de gente  @hpcsie con @rcuda_  @rapidsai  @qf...",
+      "link": [],
+      "date": "Wed May 22 23:55:42 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1131346814223945729",
+      "screen_name": "datametrician",
+      "name": "Joshua Patterson",
+      "type": "retweet",
+      "text": "RT @datametrician: 0.7 is live! @RAPIDSai is moving on up in the best of ways. More bridges fewer walls between RAPIDS &amp; @XGBoostProject, @...",
+      "link": [],
+      "date": "Wed May 22 23:51:14 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1131303829281038336",
       "screen_name": "AnimaAnandkumar",
       "name": "Anima Anandkumar",
@@ -53,38 +80,17 @@
       "text": "RT @Even_Oldridge: Excited to share some of the work I've been doing at @NvidiaAI on @rapidsai, working with @cmgreen210 and @nkoumchatzky...",
       "link": [],
       "date": "Wed May 22 17:48:05 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1130960795083390988",
-      "screen_name": "blazingdb",
-      "name": "BlazingDB",
-      "type": "retweet",
-      "text": "RT @blazingdb: Want to learn more about the #GDF (#GPU Dataframe), the foundation of the @rapidsai ecosystem? The GDF is based on the @Apac...",
-      "link": [],
-      "date": "Tue May 21 22:17:20 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1130960288164065282",
-      "screen_name": "leland_mcinnes",
-      "name": "Leland McInnes",
-      "type": "retweet",
-      "text": "RT @leland_mcinnes: Many thanks to @datametrician @cjnolet and @rapidsai for making this possible -- definitely some amazing performance av...",
-      "link": [],
-      "date": "Tue May 21 22:15:19 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1130960252164292608",
-      "screen_name": "franschrandez",
-      "name": "Nicolas Fernandez",
-      "type": "retweet",
-      "text": "RT @franschrandez: Reproduced the #UMAP on #RAPIDS example by @ceshine_en (https://t.co/tQcHZKv9bU) on Colab (with help from https://t.co/7...",
-      "link": [
-        "https://t.co/tQcHZKv9bU"
-      ],
-      "date": "Tue May 21 22:15:10 +0000 2019"
     }
   ],
   "medium": [
+    {
+      "mediumLink": "https://medium.com/rapids-ai/rapids-0-7-well-were-moving-on-up-8670ca7bd936?source=rss----2d7ba3077a44---4",
+      "title": "RAPIDS 0.7: Well We're Moving On Up\u2026",
+      "text": "RAPIDS 0.7 is live! Like the Jeffersons, RAPIDS is improving in many ways. RAPIDS is available more places than ever before, and XGBoost is now easier to use on multiple GPUs. So much to talk about, so let's just jumpin.Big Gains inXGBoo...",
+      "image": "https://cdn-images-1.medium.com/max/1024/1*GxaubH_8eZTsNRV7FBhiyw.png",
+      "date": "Wed, 22 May 2019 23:31:32 GMT",
+      "poster": "Josh Patterson"
+    },
     {
       "mediumLink": "https://medium.com/rapids-ai/using-rapids-with-pytorch-e602da018285?source=rss----2d7ba3077a44---4",
       "title": "Using RAPIDS with Pytorch",
@@ -156,14 +162,6 @@
       "image": "https://cdn-images-1.medium.com/max/1024/1*pXa2tr1z-op8xWhMuQ67-g.jpeg",
       "date": "Thu, 28 Mar 2019 17:45:48 GMT",
       "poster": "Brad Rees"
-    },
-    {
-      "mediumLink": "https://medium.com/rapids-ai/dask-and-the-array-function-protocol-advances-on-nep-18-aa20baef8574?source=rss----2d7ba3077a44---4",
-      "title": "Dask and the __array_function__ protocol: Advances on NEP-18",
-      "text": "To understand what's the end goal of this change, consider the following example:import numpy as np import dask.array as da x = np.random.random((5000, 1000)) d = da.from_array(x, chunks=(1000, 1000)) u, s, v = np.linalg.svd(x)Now consid...",
-      "image": "https://cdn.embedly.com/widgets/media.html?src=https%3A%2F%2Fwww.youtube.com%2Fembed%2FR5CiXti_MWo%3Ffeature%3Doembed&amp;url=http%3A%2F%2Fwww.youtube.com%2Fwatch%3Fv%3DR5CiXti_MWo&amp;image=https%3A%2F%2Fi.ytimg.com%2Fvi%2FR5CiXti_MWo%2Fhqdefault.jpg&amp;key=a19fcc184b9711e1b4764040d3dc5c07&amp;type=text%2Fhtml&amp;schema=youtube",
-      "date": "Mon, 18 Mar 2019 00:00:00 GMT",
-      "poster": "Mike Beaumont"
     }
   ]
 }
