@@ -1,6 +1,44 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1131634443096010754",
+      "screen_name": "rapidsai",
+      "name": "RAPIDS AI",
+      "type": "post",
+      "text": "RAPIDS 0.7 release is out. See new contributions to #GPU-accelerated @XGBoostProject and many updates to the core... https://t.co/dhSJ1VM9YB",
+      "link": [
+        "https://t.co/dhSJ1VM9YB"
+      ],
+      "date": "Thu May 23 18:54:10 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1131551035519115266",
+      "screen_name": "miguelusque",
+      "name": "Miguel Mart\u00ednez",
+      "type": "retweet",
+      "text": "RT @miguelusque: @sperezl @hpcsie @rcuda_ @rapidsai @qfuab It's been great to talk about AI and #nvidia #rapidsai at #hpcadmintech19. Thank...",
+      "link": [],
+      "date": "Thu May 23 13:22:44 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1131550526125027329",
+      "screen_name": "ericmjl",
+      "name": "Eric Ma",
+      "type": "retweet",
+      "text": "RT @ericmjl: \"NVIDIA believes in supporting and contributing back to the XGBoost library and many open source projects.\" YESSSS!!! This is...",
+      "link": [],
+      "date": "Thu May 23 13:20:43 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1131550512216727552",
+      "screen_name": "MurrayData",
+      "name": "John Murray",
+      "type": "retweet",
+      "text": "RT @MurrayData: @datametrician @rapidsai @XGBoostProject @PyTorch @numba_jit @GCPcloud @dask_dev @openucx That's fantastic Josh. I've pulle...",
+      "link": [],
+      "date": "Thu May 23 13:20:39 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1131371405310926849",
       "screen_name": "adbreind",
       "name": "Adam Breindel",
@@ -44,42 +82,6 @@
       "text": "RT @nkoumchatzky: Great to confirm that DL for tabular data can perform at least as well as XGBoost with a rather straightforward model and...",
       "link": [],
       "date": "Wed May 22 19:24:24 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1131279536178511872",
-      "screen_name": "jeremyphoward",
-      "name": "Jeremy Howard",
-      "type": "retweet",
-      "text": "RT @jeremyphoward: It's so great to see the impact of a very strong practitioner like @Even_Oldridge joining a very strong foundational tea...",
-      "link": [],
-      "date": "Wed May 22 19:23:54 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1131262270917500930",
-      "screen_name": "rapidsai",
-      "name": "RAPIDS AI",
-      "type": "post",
-      "text": "@PyTorch @Even_Oldridge @NvidiaAI @cmgreen210 @nkoumchatzky Awww... we\u2019re blushing \u263a\ufe0f more to come in the next releases \ud83d\ude09",
-      "link": [],
-      "date": "Wed May 22 18:15:17 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1131257654918242304",
-      "screen_name": "PyTorch",
-      "name": "PyTorch",
-      "type": "retweet",
-      "text": "RT @PyTorch: @Even_Oldridge @NvidiaAI @rapidsai @cmgreen210 @nkoumchatzky PyTorch &lt;3 Rapids",
-      "link": [],
-      "date": "Wed May 22 17:56:57 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1131255422432813056",
-      "screen_name": "Even_Oldridge",
-      "name": "Even Oldridge",
-      "type": "retweet",
-      "text": "RT @Even_Oldridge: Excited to share some of the work I've been doing at @NvidiaAI on @rapidsai, working with @cmgreen210 and @nkoumchatzky...",
-      "link": [],
-      "date": "Wed May 22 17:48:05 +0000 2019"
     }
   ],
   "medium": [
