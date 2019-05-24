@@ -1,6 +1,15 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1131701607521955840",
+      "screen_name": "keithjkraus",
+      "name": "Keith Kraus",
+      "type": "retweet",
+      "text": "RT @keithjkraus: As always, super proud of the team for making @rapidsai possible. Shoutout to @Thomson_Comer for his awesome work on Multi...",
+      "link": [],
+      "date": "Thu May 23 23:21:03 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1131634443096010754",
       "screen_name": "rapidsai",
       "name": "RAPIDS AI",
@@ -73,15 +82,6 @@
       "text": "RT @AnimaAnandkumar: Without end-to-end pipelines, optimizing a single module is not very meaningful. For #DeepLearning the marriage with #...",
       "link": [],
       "date": "Wed May 22 21:00:26 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1131279661353377792",
-      "screen_name": "nkoumchatzky",
-      "name": "Nicolas Koumchatzky",
-      "type": "retweet",
-      "text": "RT @nkoumchatzky: Great to confirm that DL for tabular data can perform at least as well as XGBoost with a rather straightforward model and...",
-      "link": [],
-      "date": "Wed May 22 19:24:24 +0000 2019"
     }
   ],
   "medium": [
