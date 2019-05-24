@@ -1,6 +1,44 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1131952045689192448",
+      "screen_name": "MurrayData",
+      "name": "John Murray",
+      "type": "retweet",
+      "text": "RT @MurrayData: @alexsingleton @rapidsai @OrdnanceSurvey @geodatascience I completely agree, in fact I would go further and say that @rapid...",
+      "link": [],
+      "date": "Fri May 24 15:56:13 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1131894851006603265",
+      "screen_name": "rapidsai",
+      "name": "RAPIDS AI",
+      "type": "post",
+      "text": "@MurrayData @OrdnanceSurvey You\u2019re welcomed to guest blog on our platform anytime. Great work as always!",
+      "link": [],
+      "date": "Fri May 24 12:08:56 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1131894289703870465",
+      "screen_name": "MurrayData",
+      "name": "John Murray",
+      "type": "retweet",
+      "text": "RT @MurrayData: I'm impressed with @rapidsai 0.7, in particular the improved #cuGraph. I converted @OrdnanceSurvey Open Roads #opendata int...",
+      "link": [],
+      "date": "Fri May 24 12:06:42 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1131894243981778944",
+      "screen_name": "MurrayData",
+      "name": "John Murray",
+      "type": "retweet",
+      "text": "RT @MurrayData: I've published the GB Road Graph @rapidsai notebook with links to data files on Github https://t.co/fIREHYw6WK if you'd lik...",
+      "link": [
+        "https://t.co/fIREHYw6WK"
+      ],
+      "date": "Fri May 24 12:06:32 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1131701607521955840",
       "screen_name": "keithjkraus",
       "name": "Keith Kraus",
@@ -46,42 +84,6 @@
       "text": "RT @MurrayData: @datametrician @rapidsai @XGBoostProject @PyTorch @numba_jit @GCPcloud @dask_dev @openucx That's fantastic Josh. I've pulle...",
       "link": [],
       "date": "Thu May 23 13:20:39 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1131371405310926849",
-      "screen_name": "adbreind",
-      "name": "Adam Breindel",
-      "type": "retweet",
-      "text": "RT @adbreind: Yes! If you haven't tried this out yet, now is the time. Kick the tires for free on Google Colab. And local install \"just wor...",
-      "link": [],
-      "date": "Thu May 23 01:28:57 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1131347939203461120",
-      "screen_name": "sperezl",
-      "name": "Sergi P\u00e9rez Labernia",
-      "type": "retweet",
-      "text": "RT @sperezl: Final del primer d\u00eda #hpcadmintech19 Gran organizaci\u00f3n, conocimiento y un placer de gente  @hpcsie con @rcuda_  @rapidsai  @qf...",
-      "link": [],
-      "date": "Wed May 22 23:55:42 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1131346814223945729",
-      "screen_name": "datametrician",
-      "name": "Joshua Patterson",
-      "type": "retweet",
-      "text": "RT @datametrician: 0.7 is live! @RAPIDSai is moving on up in the best of ways. More bridges fewer walls between RAPIDS &amp; @XGBoostProject, @...",
-      "link": [],
-      "date": "Wed May 22 23:51:14 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1131303829281038336",
-      "screen_name": "AnimaAnandkumar",
-      "name": "Anima Anandkumar",
-      "type": "retweet",
-      "text": "RT @AnimaAnandkumar: Without end-to-end pipelines, optimizing a single module is not very meaningful. For #DeepLearning the marriage with #...",
-      "link": [],
-      "date": "Wed May 22 21:00:26 +0000 2019"
     }
   ],
   "medium": [
