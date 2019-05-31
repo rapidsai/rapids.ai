@@ -88,16 +88,16 @@ Modeled after 10 Minutes to Pandas, this is a short introduction to cuDF that is
 A short introduction to XGBoost with a distributed CUDA DataFrame via Dask-cuDF. **[Go to guide <i class="fas fa-angle-double-right"></i>](https://rapidsai.github.io/projects/cudf/en/0.7.0/dask-xgb-10min.html){: target="_blank"}**
 
 
-## <i class="far fa-bookmark"></i> GDF Cheat Sheet
-{: .section-subtitle-top-1}
-
-A handy PDF reference guide for handling GPU Data Frames (GDF) with cuDF. **[Download PDF <i class="fas fa-angle-double-right"></i>](https://rapids.ai/assets/files/cheatsheet.pdf){: target="_blank"}**
-
-
 ## <i class="far fa-bookmark"></i> Example Notebooks
 {: .section-subtitle-top-1}
 
-A Github repository with examples of XGBoost, cuML demos, cuGraph demos, and more. **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks){: target="_blank"}**
+A Github repository with our introductory examples of XGBoost, cuML demos, cuGraph demos, and more. **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks){: target="_blank"}**
+
+
+## <i class="far fa-bookmark"></i> Example Notebooks Extended
+{: .section-subtitle-top-1}
+
+A second Github repository with our extended collection of notebook examples. **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-extended){: target="_blank"}**
 
 
 
@@ -138,7 +138,7 @@ A Github repository with examples of XGBoost, cuML demos, cuGraph demos, and mor
 {% capture com_left %}
 # RAPIDS Community
 {: .section-title-halfs}
-RAPIDS is committed to being open sourced. We strive for a major release **every 6 weeks** (give or take). Below is a generalized release schedule. Learn more on our **[Road To 1.0 post <i class="fas fa-angle-double-right"></i>](https://medium.com/rapids-ai/the-road-to-1-0-building-for-the-long-haul-657ae1afdfd6){: target="_blank"}**
+RAPIDS is committed to open source. We strive for a major release **every 6 weeks** (give or take). Below is a generalized release schedule. Learn more on our **[Road To 1.0 post <i class="fas fa-angle-double-right"></i>](https://medium.com/rapids-ai/the-road-to-1-0-building-for-the-long-haul-657ae1afdfd6){: target="_blank"}**
 
 ## <i class="far fa-calendar-check"></i> Release Schedule
 <svg id="release-schedule-svg" data-name="release-schedule" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 309.3 64.97">
@@ -152,12 +152,12 @@ RAPIDS is committed to being open sourced. We strive for a major release **every
     <circle class="cls-3" cx="22.46" cy="22.78" r="7.6" />
     <circle class="cls-3" cx="154.12" cy="22.78" r="7.6" />
     <circle class="cls-3" cx="285.78" cy="22.78" r="7.6" />
-    <text class="cls-4" transform="translate(10.28 10.32)">v0.6</text>
-    <text class="cls-4" transform="translate(143.08 10.32)">v0.7</text>
-    <text class="cls-4" transform="translate(274.74 10.32)">v0.8</text>
+    <text class="cls-4" transform="translate(10.28 10.32)">0.60</text>
+    <text class="cls-4" transform="translate(143.08 10.32)">0.70</text>
+    <text class="cls-4" transform="translate(274.74 10.32)">0.80</text>
     <text class="cls-5" transform="translate(0 49.41)">MAR 2019</text>
-    <text class="cls-5" transform="translate(131.13 49.41)">APR 2019</text>
-    <text class="cls-5" transform="translate(263.52 49.41)">MAY 2019</text>
+    <text class="cls-5" transform="translate(131.13 49.41)">MAY 2019</text>
+    <text class="cls-5" transform="translate(263.52 49.41)">JUN 2019</text>
     <text class="cls-5" transform="translate(1.76 60.16)">LEGACY</text>
     <text class="cls-5" transform="translate(135.95 60.16)">STABLE</text>
     <text class="cls-5" transform="translate(265.2 60.16)">NIGHTLY</text>

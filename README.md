@@ -12,7 +12,9 @@ The content of this site is written in .md files and converted to html. Try to a
 
 ### Templates, Includes, and Styles
 
-Most content should use the `default` layout and include the top line page variables (an example can be see on index.md). Layouts use templates in the `_includes` folder. The default layout already includes the nav, header and footer. Using the templates will ensure that your content is **responsive** to various screen sizes and follows the **site design**. Depending on the desired layout, a section heading may be outside or inside of the layout content. Refer to index/about/start/community.md for reference examples. The most useful templates are:
+Most content should use the `default` layout and include the top line page variables (an example can be see on index.md). Layouts use templates in the `_includes` folder. The default layout already includes the nav, header and footer. Using the templates will ensure that your content is **responsive** to various screen sizes and follows the **site design**.
+
+Depending on the desired layout, a section heading may be outside or inside of the layout content. Refer to `index/about/start/community.md` for reference examples. The most useful templates are:
 
 * section-single: 1x1 Row by Cols
 * section-halfs: 1x2 Row by Cols
@@ -21,7 +23,7 @@ Most content should use the `default` layout and include the top line page varia
 * section-double-thirds: 2x3 Row by Cols
 
 #### Sections
-Section content is generally formatted as follows, but be sure to view the html file for the exact capture variable names to pass to the include. Background can be: 'background-white / background-gray / background-purple / background-darkpurple.' Padding-top and padding-bottom can be: 0 / 1 / 2. To get the diagonal background effect, you must include slopecap, for both the top and bottom of a section. Position can be top / bottom and slope can be up / down. Exact formatting might require some tinkering...
+Section content is generally formatted as follows, but be sure to view the html file for the exact capture variable names to pass to the include. Background can be: `background-white / background-gray / background-purple / background-darkpurple.` Padding-top and padding-bottom can be: `0 / 1 / 2`. To get the diagonal background effect, you must include `slopecap`, for both the top and bottom of a section. Position can be `top / bottom` and slope can be `up / down`. Exact formatting might require some tinkering...
 
 ```
 {% capture name_left %}
@@ -53,7 +55,7 @@ CONTENT
 
 ```
 #### Links
-Links should use the following format, with target being unnecessary if the link is within rapids.ai: 
+Links should use the following format, with `_target` being unnecessary if the link is within rapids.ai: 
 ```
 **[NAME <i FONT-AWEOME-ICON"></i>](LINK){: target="_blank"}**
 ```
