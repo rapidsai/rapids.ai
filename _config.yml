@@ -1,6 +1,6 @@
 name: RAPIDS
 title: RAPIDS
-baseurl: "/rapidsai-staging"
+baseurl: ""
 exclude: ['_drafts', 'README.md', '.gitignore', 'CNAME']
 plugins:
   - jekyll-redirect-from
