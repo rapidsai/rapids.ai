@@ -695,6 +695,11 @@ body.short h2 {
     padding-bottom: 30px;
 }
 
+code.tag {
+    background-color: #efefef;
+    padding: 0.25em 0.5em;
+}
+
 
 /* responsive screen breakpoints */
 /* default is above on 1280px extra large */
