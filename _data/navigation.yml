@@ -14,6 +14,10 @@
   name: community
   link: /community.html
 
+- nav: BLOG
+  name: blog
+  link: /blog.html
+
 - nav: DOCS
   name: docs
   link: https://docs.rapids.ai
@@ -21,7 +25,3 @@
 - nav: GITHUB
   name: github
   link: https://github.com/rapidsai
-
-- nav: BLOGS
-  name: blogs
-  link: https://medium.com/rapids-ai
