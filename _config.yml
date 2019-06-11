@@ -4,3 +4,23 @@ baseurl: "/rapidsai-staging"
 exclude: ['_drafts', 'README.md', '.gitignore', 'CNAME']
 plugins:
   - jekyll-redirect-from
+
+collections:
+  authors:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+    values:
+      layout: "default"

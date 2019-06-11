@@ -1,0 +1,18 @@
+---
+layout: short
+---
+<h1>{{ page.name }}</h1>
+<img src="{{ page.photo }}"/>
+<h4>{{ page.position }}</h4>
+<a href="{{ page.medium }}"><i class="fab fa-medium fa-2x"></i></a>&nbsp;
+<a href="{{ page.twitter }}"><i class="fab fa-twitter fa-2x"></i></a>
+
+{{ content }}
+
+<h4>Posts</h4>
+<ul>
+  {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
+  {% for post in filtered_posts %}
+    <li>{{ post.date | date_to_string }} - <a href="{{ post.url }}">{{ post.title }}</a></li>
+  {% endfor %}
+</ul>
