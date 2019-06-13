@@ -71,11 +71,18 @@ h3 {
     margin-bottom: 0em;
 }
 
+.subtitle {
+    font-size: 1.4em;
+    margin-top: -0.7em;
+    line-height: 1.2em;
+}
+
 p {
     color: #666666;
     font-size: 1.1em;
-    line-height: 1.3em;
-    margin-top: 0.4em;
+    line-height: 1.55em;
+    margin-top: 0em;
+    margin-bottom: 1.6em;
 }
 
 strong {
@@ -348,6 +355,11 @@ header {
     padding-bottom: 10em;
 }
 
+.no-tb-margins {
+    margin-bottom: 0em;
+    margin-top: 0em;
+}
+
 .no-margins {
     margin-top: 0;
     margin-bottom: 0;
@@ -443,13 +455,18 @@ a h2:hover, .footer-nav ul li a:hover {
     padding: 0 2em;
 }
 
+.post-text {
+    line-height: 1.2em;
+
+}
+
 .blog-image {
     width: 100%;
     max-height: 170px;
 }
 
 .tweet-text {
-    line-height: 1.1em;
+    line-height: 1.2em;
 }
 
 .tweet-action, .medium-poster {
@@ -561,7 +578,8 @@ footer {
 .footer-help-box .icon {
     display: block;
     margin: 0 auto;
-    padding-bottom: 0.1em;
+    padding-bottom: 0.3em;
+    text-align: center;
 }
 
 
@@ -713,6 +731,7 @@ body.short h2 {
 		font-size: 0.9em;
 	}
 
+
 }
 
 /* 768px med */
@@ -766,6 +785,10 @@ body.short h2 {
 
     .blog-image {
         max-height: inherit;
+    }
+
+    .section-subtitle-top-1 {
+        margin-top: 0em;
     }
 
 
