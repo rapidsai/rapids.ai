@@ -100,8 +100,6 @@ A Github repository with our introductory examples of XGBoost, cuML demos, cuGra
 A second Github repository with our extended collection of notebook examples. **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-extended){: target="_blank"}**
 
 
-
-
 {% endcapture %}
 {% include slopecap.html 
     background="background-gray" 
@@ -136,7 +134,7 @@ A second Github repository with our extended collection of notebook examples. **
 
 
 {% capture com_left %}
-# RAPIDS Community
+# RAPIDS Repositories
 {: .section-title-halfs}
 RAPIDS is committed to open source. We strive for a major release **every 6 weeks** (give or take). Below is a generalized release schedule. Learn more on our **[Road To 1.0 post <i class="fas fa-angle-double-right"></i>](https://medium.com/rapids-ai/the-road-to-1-0-building-for-the-long-haul-657ae1afdfd6){: target="_blank"}**
 
@@ -191,6 +189,7 @@ Whether you are new to RAPIDS, looking to help, or are part of the team, learn a
 ## <i class="fas fa-terminal"></i> cuDF <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cudf/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/master/CHANGELOG.md){: target="_blank"}**
+{: .no-tb-margins }
 
 cuDF is a Python GPU DataFrame library (built on the **[Apache Arrow](http://arrow.apache.org/){: target="_blank"}** columnar memory format) for loading, joining, aggregating, filtering, and otherwise manipulating data all in a **[pandas-like](https://pandas.pydata.org/){: target="_blank"}** API familiar to data scientists.
 
@@ -200,6 +199,7 @@ cuDF is a Python GPU DataFrame library (built on the **[Apache Arrow](http://arr
 ## <i class="fas fa-terminal"></i> cuML <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cuml){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cuml/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuml/blob/master/CHANGELOG.md){: target="_blank"}**
+{: .no-tb-margins }
 
 cuML is a suite of libraries that implement machine learning algorithms and mathematical primitives functions that are compatible with other RAPIDS projects, all in a **[scikit-learn-like](https://scikit-learn.org/stable/index.html){: target="_blank"}** API familiar to data scientists.
 
@@ -210,6 +210,7 @@ cuML is a suite of libraries that implement machine learning algorithms and math
 ## <i class="fas fa-terminal"></i> cuGraph <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cugraph){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cugraph/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cugraph/blob/master/CHANGELOG.md){: target="_blank"}**
+{: .no-tb-margins }
 
 cuGraph is a collection of graph analytics that process data in GDF. cuGraph aims at providing a **[NetworkX-like](https://networkx.github.io/){: target="_blank"}** API familiar to data scientists, so they can use it to easily accelerate their workflows without going into the details of CUDA programming.
 
@@ -219,9 +220,9 @@ cuGraph is a collection of graph analytics that process data in GDF. cuGraph aim
 ## <i class="fas fa-terminal"></i> nvStrings <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/custrings){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/nvstrings/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/custrings/blob/master/CHANGELOG.md){: target="_blank"}**
+{: .no-tb-margins }
 
 nvStrings, the Python bindings for **[cuStrings](https://github.com/rapidsai/custrings){: target="_blank"}**, provides a pandas-like API that will be familiar to data engineers & data scientists, so they can use it to easily accelerate their workflows without going into the details of CUDA programming.
-
 
 {% endcapture %}
 
@@ -229,6 +230,7 @@ nvStrings, the Python bindings for **[cuStrings](https://github.com/rapidsai/cus
 ## <i class="fas fa-terminal"></i> libcudf <span class="lib-tag">LIB</span>
 
 **[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/libcudf/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/master/CHANGELOG.md){: target="_blank"}**
+{: .no-tb-margins }
 
 libcudf is a C/C++ CUDA library for implementing standard dataframe operations. It is part of the cuDF repository. 
 
@@ -238,6 +240,7 @@ libcudf is a C/C++ CUDA library for implementing standard dataframe operations. 
 ## <i class="fas fa-terminal"></i> RMM <span class="lib-tag">LIB</span>
 
 **[GitHub](https://github.com/rapidsai/rmm){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/rmm/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/rmm/blob/master/CHANGELOG.md){: target="_blank"}**
+{: .no-tb-margins }
 
 RAPIDS Memory Manager (RMM) is a central place for all device memory allocations in cuDF (C++ and Python) and other RAPIDS libraries. In addition, it is a replacement allocator for CUDA Device Memory (and CUDA Managed Memory) and a pool allocator to make CUDA device memory allocation / deallocation faster and asynchronous.
 
@@ -261,8 +264,36 @@ RAPIDS Memory Manager (RMM) is a central place for all device memory allocations
 %}
 
 
+# Community Projects
+{: .section-title-full .padding-top-1em}
+{% capture com_left %}
+## <i class="fas fa-code-branch"></i> RAPIDS + Dask
+
+Dask is an open source project providing advanced parallelism for analytics that enables performance at scale. RAPIDS is actively contributing to Dask, and it integrates with both RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. **[Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i>](community.html)**
+{% endcapture %}
+
+{% capture com_mid %}
+## <i class="fas fa-code-branch"></i> RAPIDS + Spark
+
+Going forward, our competitive stakeholder will deliver value to paradigm shifts. Best-in-class platforms are becoming long-term cloud experts. **[Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i>](#)**
+{% endcapture %}
+
+{% capture com_right %}
+## <i class="fas fa-code-branch"></i> RAPIDS + XGBoost
+
+Going forward, our competitive stakeholder will deliver value to paradigm shifts. Best-in-class platforms are becoming long-term cloud experts. **[Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i>](#)**
+{% endcapture %}
+
+{% include section-thirds.html 
+    background="background-white" 
+    padding-top="1em" padding-bottom="3em" 
+    content-left-third=com_left
+    content-middle-third=com_mid
+    content-right-third=com_right
+%}
+
 # Contributors
-{: .section-title-full .padding-top-2em }
+{: .section-title-full}
 {% include contributing-logos.html 
     padding-top="1em" padding-bottom="5em" 
 %}

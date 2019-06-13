@@ -32,9 +32,46 @@ Contributors include anyone who helps improve any of our projects, whether by co
     content-right-half=com_right
 %} 
 
+{% capture proj_left %}
+# Community Projects
+{: .section-title-halfs}
+
+The RAPIDS team is developing, contributing, and collaborating closely with numerous open-source projects including Apache Arrow, Numba, XGBoost, Apache Spark, sci-kit learn, and more. Our goal is to upstream all code contributions to ensure that all the components of the GPU-accelerated data science ecosystem work smoothly together.
+{% endcapture %}
+
+{% capture proj_right %}
+## <i class="fas fa-code-branch"></i> RAPIDS + Dask
+{: .section-subtitle-top-1}
+
+Dask is an open source project providing advanced parallelism for analytics that enables performance at scale. RAPIDS is actively contributing to Dask, and it integrates with both RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. <br> **[Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i>](dask.html)**
+
+## <i class="fas fa-code-branch"></i> RAPIDS + Spark
+
+Going forward, our competitive stakeholder will deliver value to paradigm shifts. Best-in-class platforms are becoming long-term cloud experts. <br> **[Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i>](#)**
+
+## <i class="fas fa-code-branch"></i> RAPIDS + XGBoost
+
+Going forward, our competitive stakeholder will deliver value to paradigm shifts. Best-in-class platforms are becoming long-term cloud experts.<br> **[Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i>](#)**
+{% endcapture %}
+
+{% include section-halfs.html
+    background="background-white" 
+    padding-top="1em" padding-bottom="5em" 
+    content-left-half=proj_left 
+    content-right-half=proj_right
+%} 
+
+
+
 # Contributors
 {: .section-title-full}
 {% include contributing-logos.html 
+    padding-top="1em" padding-bottom="5em" 
+%}
+
+# Open Source
+{: .section-title-full}
+{% include open-source-logos.html 
     padding-top="1em" padding-bottom="10em" 
 %}
 
@@ -46,3 +83,5 @@ Contributors include anyone who helps improve any of our projects, whether by co
 {% include cta-footer-help.html 
    background="background-darkpurple" 
 %}
+
+
