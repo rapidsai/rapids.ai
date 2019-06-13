@@ -1,92 +1,102 @@
 {
   "twitter": [
     {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1131952045689192448",
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1139123062052458497",
+      "screen_name": "franssoa",
+      "name": "Fran\u00e7ois Pacull",
+      "type": "retweet",
+      "text": "RT @franssoa: Re-projecting some geographical coordinates using a UDF with @rapidsai cuDFs or @numba_jit on @GoogleColab. Post is here: htt...",
+      "link": [],
+      "date": "Thu Jun 13 10:51:16 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1138955390811615232",
+      "screen_name": "adbreind",
+      "name": "Adam Breindel",
+      "type": "retweet",
+      "text": "RT @adbreind: Ok this is awesome: turnkey guide to cranking up @rapidsai on multiple nodes and multiple GPUs per node, on GCP: just copy, p...",
+      "link": [],
+      "date": "Wed Jun 12 23:45:00 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1138954750756610048",
+      "screen_name": "blazingdb",
+      "name": "BlazingDB",
+      "type": "retweet",
+      "text": "RT @blazingdb: Hi @rapidsai @gpuoai #BigData friends. We are finishing up our #dev work for distributed query execution for #BlazingSQL! We...",
+      "link": [],
+      "date": "Wed Jun 12 23:42:27 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1138901870372691969",
       "screen_name": "MurrayData",
       "name": "John Murray",
       "type": "retweet",
-      "text": "RT @MurrayData: @alexsingleton @rapidsai @OrdnanceSurvey @geodatascience I completely agree, in fact I would go further and say that @rapid...",
+      "text": "RT @MurrayData: @mrocklin @PASC_Conference @numba_jit @dask_dev @rapidsai @openucx Add cuPy to that list. I am using it, in conjunction wit...",
       "link": [],
-      "date": "Fri May 24 15:56:13 +0000 2019"
+      "date": "Wed Jun 12 20:12:20 +0000 2019"
     },
     {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1131894851006603265",
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1138901792627073024",
+      "screen_name": "mrocklin",
+      "name": "Matthew Rocklin",
+      "type": "retweet",
+      "text": "RT @mrocklin: Slides on four libraries for high performance Python and how they play together, delivered at @PASC_Conference  -  @numba_jit...",
+      "link": [],
+      "date": "Wed Jun 12 20:12:01 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1138898310339555328",
       "screen_name": "rapidsai",
       "name": "RAPIDS AI",
       "type": "post",
-      "text": "@MurrayData @OrdnanceSurvey You\u2019re welcomed to guest blog on our platform anytime. Great work as always!",
-      "link": [],
-      "date": "Fri May 24 12:08:56 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1131894289703870465",
-      "screen_name": "MurrayData",
-      "name": "John Murray",
-      "type": "retweet",
-      "text": "RT @MurrayData: I'm impressed with @rapidsai 0.7, in particular the improved #cuGraph. I converted @OrdnanceSurvey Open Roads #opendata int...",
-      "link": [],
-      "date": "Fri May 24 12:06:42 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1131894243981778944",
-      "screen_name": "MurrayData",
-      "name": "John Murray",
-      "type": "retweet",
-      "text": "RT @MurrayData: I've published the GB Road Graph @rapidsai notebook with links to data files on Github https://t.co/fIREHYw6WK if you'd lik...",
+      "text": "Try @rapidsai early access @dask_dev implementation on @GCPcloud Dataproc today!  Follow our instructions to scale... https://t.co/g0sfulHMWm",
       "link": [
-        "https://t.co/fIREHYw6WK"
+        "https://t.co/g0sfulHMWm"
       ],
-      "date": "Fri May 24 12:06:32 +0000 2019"
+      "date": "Wed Jun 12 19:58:11 +0000 2019"
     },
     {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1131701607521955840",
-      "screen_name": "keithjkraus",
-      "name": "Keith Kraus",
-      "type": "retweet",
-      "text": "RT @keithjkraus: As always, super proud of the team for making @rapidsai possible. Shoutout to @Thomson_Comer for his awesome work on Multi...",
-      "link": [],
-      "date": "Thu May 23 23:21:03 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1131634443096010754",
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1138793078066728960",
       "screen_name": "rapidsai",
       "name": "RAPIDS AI",
       "type": "post",
-      "text": "RAPIDS 0.7 release is out. See new contributions to #GPU-accelerated @XGBoostProject and many updates to the core... https://t.co/dhSJ1VM9YB",
+      "text": "Learn from @mrocklin on how to easily scale your scientific workloads in Python with @rapidsai, @dask_dev, and... https://t.co/NXfxE94fEk",
       "link": [
-        "https://t.co/dhSJ1VM9YB"
+        "https://t.co/NXfxE94fEk"
       ],
-      "date": "Thu May 23 18:54:10 +0000 2019"
+      "date": "Wed Jun 12 13:00:02 +0000 2019"
     },
     {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1131551035519115266",
-      "screen_name": "miguelusque",
-      "name": "Miguel Mart\u00ednez",
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1138692308017303552",
+      "screen_name": "armand_ruiz",
+      "name": "Armand Ruiz",
       "type": "retweet",
-      "text": "RT @miguelusque: @sperezl @hpcsie @rcuda_ @rapidsai @qfuab It's been great to talk about AI and #nvidia #rapidsai at #hpcadmintech19. Thank...",
+      "text": "RT @armand_ruiz: IBM adds AutoAI to Watson Studio to speed up data prep so data scientists can focus on models | ZDNet https://t.co/g2yzeN7...",
       "link": [],
-      "date": "Thu May 23 13:22:44 +0000 2019"
+      "date": "Wed Jun 12 06:19:36 +0000 2019"
     },
     {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1131550526125027329",
-      "screen_name": "ericmjl",
-      "name": "Eric Ma",
-      "type": "retweet",
-      "text": "RT @ericmjl: \"NVIDIA believes in supporting and contributing back to the XGBoost library and many open source projects.\" YESSSS!!! This is...",
-      "link": [],
-      "date": "Thu May 23 13:20:43 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1131550512216727552",
-      "screen_name": "MurrayData",
-      "name": "John Murray",
-      "type": "retweet",
-      "text": "RT @MurrayData: @datametrician @rapidsai @XGBoostProject @PyTorch @numba_jit @GCPcloud @dask_dev @openucx That's fantastic Josh. I've pulle...",
-      "link": [],
-      "date": "Thu May 23 13:20:39 +0000 2019"
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1138506183730487300",
+      "screen_name": "rapidsai",
+      "name": "RAPIDS AI",
+      "type": "post",
+      "text": "Tomorrow at @PASC_Conference, be sure to listen to @mrocklin discuss performance benchmarks and how to overcome the... https://t.co/NBW0wzHZQC",
+      "link": [
+        "https://t.co/NBW0wzHZQC"
+      ],
+      "date": "Tue Jun 11 18:00:01 +0000 2019"
     }
   ],
   "medium": [
+    {
+      "mediumLink": "https://medium.com/rapids-ai/scale-out-rapids-on-google-cloud-dataproc-8a873233258f?source=rss----2d7ba3077a44---4",
+      "title": "Scale out RAPIDS on Google Cloud Dataproc",
+      "text": "In April, we talked about how you can try out RAPIDS for free, on Google Colab, using single NVIDIA Telsa T4 GPUs. But what do you do if your dataset is much larger than GPU memory? You then need to scale out your work to multipleGPUs.At...",
+      "image": "https://cdn-images-1.medium.com/max/1024/1*7zT3ByyHCc1w2SdFS4TqSw.png",
+      "date": "Wed, 12 Jun 2019 18:47:31 GMT",
+      "poster": "Raghav Mani"
+    },
     {
       "mediumLink": "https://medium.com/rapids-ai/rapids-0-7-well-were-moving-on-up-8670ca7bd936?source=rss----2d7ba3077a44---4",
       "title": "RAPIDS 0.7: Well We're Moving On Up\u2026",
@@ -158,14 +168,6 @@
       "image": "https://cdn-images-1.medium.com/max/1024/1*GxaubH_8eZTsNRV7FBhiyw.png",
       "date": "Fri, 29 Mar 2019 17:23:37 GMT",
       "poster": "Josh Patterson"
-    },
-    {
-      "mediumLink": "https://medium.com/rapids-ai/rapids-cugraph-1ab2d9a39ec6?source=rss----2d7ba3077a44---4",
-      "title": "RAPIDS cuGraph",
-      "text": "The Data Scientist has a collection of techniques within their proverbial toolbox. Data engineering, statistical analysis, and machine learning are among the most commonly known. However, there are numerous cases where the focus of the a...",
-      "image": "https://cdn-images-1.medium.com/max/1024/1*pXa2tr1z-op8xWhMuQ67-g.jpeg",
-      "date": "Thu, 28 Mar 2019 17:45:48 GMT",
-      "poster": "Brad Rees"
     }
   ]
 }
