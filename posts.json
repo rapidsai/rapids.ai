@@ -1,6 +1,17 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1139323367876681729",
+      "screen_name": "dask_dev",
+      "name": "Dask",
+      "type": "retweet",
+      "text": "RT @dask_dev: Dask on HPC: What works well and what needs work  A new blogpost by a community of Dask-on-HPC users  https://t.co/RfLjvOHWcC",
+      "link": [
+        "https://t.co/RfLjvOHWcC"
+      ],
+      "date": "Fri Jun 14 00:07:13 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1139123062052458497",
       "screen_name": "franssoa",
       "name": "Fran\u00e7ois Pacull",
@@ -75,17 +86,6 @@
       "text": "RT @armand_ruiz: IBM adds AutoAI to Watson Studio to speed up data prep so data scientists can focus on models | ZDNet https://t.co/g2yzeN7...",
       "link": [],
       "date": "Wed Jun 12 06:19:36 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1138506183730487300",
-      "screen_name": "rapidsai",
-      "name": "RAPIDS AI",
-      "type": "post",
-      "text": "Tomorrow at @PASC_Conference, be sure to listen to @mrocklin discuss performance benchmarks and how to overcome the... https://t.co/NBW0wzHZQC",
-      "link": [
-        "https://t.co/NBW0wzHZQC"
-      ],
-      "date": "Tue Jun 11 18:00:01 +0000 2019"
     }
   ],
   "medium": [
