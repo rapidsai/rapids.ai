@@ -1,6 +1,15 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1139926223201722368",
+      "screen_name": "mrocklin",
+      "name": "Matthew Rocklin",
+      "type": "retweet",
+      "text": "RT @mrocklin: @rapidsai @dask_dev @GCPcloud I'm very glad to see @nvidia and @GCPcloud partner to make @rapidsai + @dask_dev more accessible",
+      "link": [],
+      "date": "Sat Jun 15 16:02:45 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1139323367876681729",
       "screen_name": "dask_dev",
       "name": "Dask",
@@ -77,15 +86,6 @@
         "https://t.co/NXfxE94fEk"
       ],
       "date": "Wed Jun 12 13:00:02 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1138692308017303552",
-      "screen_name": "armand_ruiz",
-      "name": "Armand Ruiz",
-      "type": "retweet",
-      "text": "RT @armand_ruiz: IBM adds AutoAI to Watson Studio to speed up data prep so data scientists can focus on models | ZDNet https://t.co/g2yzeN7...",
-      "link": [],
-      "date": "Wed Jun 12 06:19:36 +0000 2019"
     }
   ],
   "medium": [
