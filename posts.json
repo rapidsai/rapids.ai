@@ -1,6 +1,15 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1140621450392539136",
+      "screen_name": "NVIDIAEU",
+      "name": "NVIDIA Europe",
+      "type": "retweet",
+      "text": "RT @NVIDIAEU: Don't miss out! NVIDIA's Christoph Angerer will talk about '@RAPIDSAI and Data Science on GPUs' on Wednesday 19 June from 12:...",
+      "link": [],
+      "date": "Mon Jun 17 14:05:20 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1139926223201722368",
       "screen_name": "mrocklin",
       "name": "Matthew Rocklin",
@@ -75,17 +84,6 @@
         "https://t.co/g0sfulHMWm"
       ],
       "date": "Wed Jun 12 19:58:11 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1138793078066728960",
-      "screen_name": "rapidsai",
-      "name": "RAPIDS AI",
-      "type": "post",
-      "text": "Learn from @mrocklin on how to easily scale your scientific workloads in Python with @rapidsai, @dask_dev, and... https://t.co/NXfxE94fEk",
-      "link": [
-        "https://t.co/NXfxE94fEk"
-      ],
-      "date": "Wed Jun 12 13:00:02 +0000 2019"
     }
   ],
   "medium": [
