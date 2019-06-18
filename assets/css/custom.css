@@ -767,7 +767,7 @@ body.short h2 {
     }
 
     .blog-image {
-        max-height: inherit;
+        max-height: 130px;
     }
 
 
