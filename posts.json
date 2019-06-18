@@ -1,6 +1,44 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1141053633083117823",
+      "screen_name": "NvidiaAI",
+      "name": "NVIDIA AI",
+      "type": "retweet",
+      "text": "RT @NvidiaAI: Join us for a #webinar on June 26 to learn how @rapidsai provides speedup for STAC-A3 algorithm on #NVIDIA #DGX2 with @numba_...",
+      "link": [],
+      "date": "Tue Jun 18 18:42:40 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1141053604553469953",
+      "screen_name": "blazingdb",
+      "name": "BlazingDB",
+      "type": "retweet",
+      "text": "RT @blazingdb: Everything you need to know about @rapidsai, #BlazingSQL, @Graphistry, #cuDF, #cuML, #cuDNN, #cuGRAPH, #ETL, #MachineLearnin...",
+      "link": [],
+      "date": "Tue Jun 18 18:42:33 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1140980375637889025",
+      "screen_name": "datametrician",
+      "name": "Joshua Patterson",
+      "type": "retweet",
+      "text": "RT @datametrician: Update: Over the weekend, @RAPIDSai on @IBMPowerSystems #PowerAI was upgraded to 0.7. If you have power systems, #conda...",
+      "link": [],
+      "date": "Tue Jun 18 13:51:34 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1140980351944273920",
+      "screen_name": "rblourenco",
+      "name": "Ricardo Louren\u00e7o",
+      "type": "retweet",
+      "text": "RT @rblourenco: The bonding between @dask_dev and GPU capabilities by @rapidsai is quite smooth... https://t.co/BAaiorFWZ1",
+      "link": [
+        "https://t.co/BAaiorFWZ1"
+      ],
+      "date": "Tue Jun 18 13:51:28 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1140621450392539136",
       "screen_name": "NVIDIAEU",
       "name": "NVIDIA Europe",
@@ -46,44 +84,6 @@
       "text": "RT @adbreind: Ok this is awesome: turnkey guide to cranking up @rapidsai on multiple nodes and multiple GPUs per node, on GCP: just copy, p...",
       "link": [],
       "date": "Wed Jun 12 23:45:00 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1138954750756610048",
-      "screen_name": "blazingdb",
-      "name": "BlazingDB",
-      "type": "retweet",
-      "text": "RT @blazingdb: Hi @rapidsai @gpuoai #BigData friends. We are finishing up our #dev work for distributed query execution for #BlazingSQL! We...",
-      "link": [],
-      "date": "Wed Jun 12 23:42:27 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1138901870372691969",
-      "screen_name": "MurrayData",
-      "name": "John Murray",
-      "type": "retweet",
-      "text": "RT @MurrayData: @mrocklin @PASC_Conference @numba_jit @dask_dev @rapidsai @openucx Add cuPy to that list. I am using it, in conjunction wit...",
-      "link": [],
-      "date": "Wed Jun 12 20:12:20 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1138901792627073024",
-      "screen_name": "mrocklin",
-      "name": "Matthew Rocklin",
-      "type": "retweet",
-      "text": "RT @mrocklin: Slides on four libraries for high performance Python and how they play together, delivered at @PASC_Conference  -  @numba_jit...",
-      "link": [],
-      "date": "Wed Jun 12 20:12:01 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1138898310339555328",
-      "screen_name": "rapidsai",
-      "name": "RAPIDS AI",
-      "type": "post",
-      "text": "Try @rapidsai early access @dask_dev implementation on @GCPcloud Dataproc today!  Follow our instructions to scale... https://t.co/g0sfulHMWm",
-      "link": [
-        "https://t.co/g0sfulHMWm"
-      ],
-      "date": "Wed Jun 12 19:58:11 +0000 2019"
     }
   ],
   "medium": [
