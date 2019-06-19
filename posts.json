@@ -1,6 +1,44 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1141334548061577216",
+      "screen_name": "MurrayData",
+      "name": "John Murray",
+      "type": "retweet",
+      "text": "RT @MurrayData: I'll be presenting a talk &amp; demo of @rapidsai #GPU accelerated #geospatial analytics for @geodatascience at 3pm Thu 20 June...",
+      "link": [],
+      "date": "Wed Jun 19 13:18:55 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1141334508186329090",
+      "screen_name": "MurrayData",
+      "name": "John Murray",
+      "type": "retweet",
+      "text": "RT @MurrayData: The resultant table, of 1.7 billion paths, took 50 hours for 2.5 million current and expired postcodes on 2 GV100s. Previou...",
+      "link": [],
+      "date": "Wed Jun 19 13:18:46 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1141334471620386816",
+      "screen_name": "MurrayData",
+      "name": "John Murray",
+      "type": "retweet",
+      "text": "RT @MurrayData: I used @rapidsai, to build a 1km 'walking' graph distance sparse spatial weights matrix of GB postcodes, using @ordnancesur...",
+      "link": [],
+      "date": "Wed Jun 19 13:18:37 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1141329790726807553",
+      "screen_name": "rapidsai",
+      "name": "RAPIDS AI",
+      "type": "post",
+      "text": "Deploying a #datascience cluster used to be difficult. Now you can build your own @NvidiaAI GPU cluster for... https://t.co/GNNmawrqny",
+      "link": [
+        "https://t.co/GNNmawrqny"
+      ],
+      "date": "Wed Jun 19 13:00:01 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1141125448220332037",
       "screen_name": "quansightai",
       "name": "Quansight",
@@ -46,47 +84,17 @@
         "https://t.co/BAaiorFWZ1"
       ],
       "date": "Tue Jun 18 13:51:28 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1140621450392539136",
-      "screen_name": "NVIDIAEU",
-      "name": "NVIDIA Europe",
-      "type": "retweet",
-      "text": "RT @NVIDIAEU: Don't miss out! NVIDIA's Christoph Angerer will talk about '@RAPIDSAI and Data Science on GPUs' on Wednesday 19 June from 12:...",
-      "link": [],
-      "date": "Mon Jun 17 14:05:20 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1139926223201722368",
-      "screen_name": "mrocklin",
-      "name": "Matthew Rocklin",
-      "type": "retweet",
-      "text": "RT @mrocklin: @rapidsai @dask_dev @GCPcloud I'm very glad to see @nvidia and @GCPcloud partner to make @rapidsai + @dask_dev more accessible",
-      "link": [],
-      "date": "Sat Jun 15 16:02:45 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1139323367876681729",
-      "screen_name": "dask_dev",
-      "name": "Dask",
-      "type": "retweet",
-      "text": "RT @dask_dev: Dask on HPC: What works well and what needs work  A new blogpost by a community of Dask-on-HPC users  https://t.co/RfLjvOHWcC",
-      "link": [
-        "https://t.co/RfLjvOHWcC"
-      ],
-      "date": "Fri Jun 14 00:07:13 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1139123062052458497",
-      "screen_name": "franssoa",
-      "name": "Fran\u00e7ois Pacull",
-      "type": "retweet",
-      "text": "RT @franssoa: Re-projecting some geographical coordinates using a UDF with @rapidsai cuDFs or @numba_jit on @GoogleColab. Post is here: htt...",
-      "link": [],
-      "date": "Thu Jun 13 10:51:16 +0000 2019"
     }
   ],
   "medium": [
+    {
+      "mediumLink": "https://medium.com/rapids-ai/10-minutes-to-rapids-cudf-and-dask-cudf-3d16fcb84139?source=rss----2d7ba3077a44---4",
+      "title": "10 Minutes to RAPIDS cuDF and Dask cuDF",
+      "text": "Centered around Apache Arrow DataFrames on the GPU, RAPIDS is designed to enable end-to-end data science and analytics on GPUs. Together, open source libraries like RAPIDS cuDF and Dask let users process tabular data on GPUs at scale wit...",
+      "image": "https://cdn-images-1.medium.com/max/1024/1*tsV3d6XIMsSp8TicLPPm4g.gif",
+      "date": "Wed, 19 Jun 2019 19:06:12 GMT",
+      "poster": "Nick Becker"
+    },
     {
       "mediumLink": "https://medium.com/rapids-ai/scale-out-rapids-on-google-cloud-dataproc-8a873233258f?source=rss----2d7ba3077a44---4",
       "title": "Scale out RAPIDS on Google Cloud Dataproc",
@@ -158,14 +166,6 @@
       "image": "https://cdn-images-1.medium.com/max/850/1*3QNSkwjX6gGJBQUBXVgvZA.jpeg",
       "date": "Fri, 26 Apr 2019 17:17:09 GMT",
       "poster": "Randy Gelhausen"
-    },
-    {
-      "mediumLink": "https://medium.com/rapids-ai/the-road-to-1-0-building-for-the-long-haul-657ae1afdfd6?source=rss----2d7ba3077a44---4",
-      "title": "The Road to 1.0 - Building for the Long Haul",
-      "text": "RAPIDS was everywhere at NVIDIA's GTC 2019 in Silicon Valley. It was great to see so many vendors, partners, and customers showcasing RAPIDS in their booths and presentations. Even the RAPIDS press coverage blew me away. Not that we need...",
-      "image": "https://cdn-images-1.medium.com/max/1024/1*GxaubH_8eZTsNRV7FBhiyw.png",
-      "date": "Fri, 29 Mar 2019 17:23:37 GMT",
-      "poster": "Josh Patterson"
     }
   ]
 }
