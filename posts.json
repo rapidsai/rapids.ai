@@ -1,6 +1,15 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1141125448220332037",
+      "screen_name": "quansightai",
+      "name": "Quansight",
+      "type": "retweet",
+      "text": "RT @quansightai: Announcing the next #OpenSource Directions #webinar for Friday June 28! @condaforge with @__mvn__ and John Kirkham. Excite...",
+      "link": [],
+      "date": "Tue Jun 18 23:28:02 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1141053633083117823",
       "screen_name": "NvidiaAI",
       "name": "NVIDIA AI",
@@ -75,15 +84,6 @@
       "text": "RT @franssoa: Re-projecting some geographical coordinates using a UDF with @rapidsai cuDFs or @numba_jit on @GoogleColab. Post is here: htt...",
       "link": [],
       "date": "Thu Jun 13 10:51:16 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1138955390811615232",
-      "screen_name": "adbreind",
-      "name": "Adam Breindel",
-      "type": "retweet",
-      "text": "RT @adbreind: Ok this is awesome: turnkey guide to cranking up @rapidsai on multiple nodes and multiple GPUs per node, on GCP: just copy, p...",
-      "link": [],
-      "date": "Wed Jun 12 23:45:00 +0000 2019"
     }
   ],
   "medium": [
