@@ -1,6 +1,53 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1141754844019118080",
+      "screen_name": "rapidsai",
+      "name": "RAPIDS AI",
+      "type": "post",
+      "text": "@dask_dev Great work John! Can\u2019t wait for the next blog with GPU support. The visualizations are stunning!",
+      "link": [],
+      "date": "Thu Jun 20 17:09:02 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1141742421002375169",
+      "screen_name": "dask_dev",
+      "name": "Dask",
+      "type": "retweet",
+      "text": "RT @dask_dev: Blogpost on loading large stacks of image data using Dask Array.  https://t.co/K2BgGOSfeZ https://t.co/ZydjQMKDqF",
+      "link": [
+        "https://t.co/K2BgGOSfeZ"
+      ],
+      "date": "Thu Jun 20 16:19:40 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1141742306267152386",
+      "screen_name": "quansightai",
+      "name": "Quansight",
+      "type": "retweet",
+      "text": "RT @quansightai: So excited to have @__mvn__ from @flatironhealth and John Kirkham from @nvidia @rapidsai with us to show off @condaforge....",
+      "link": [],
+      "date": "Thu Jun 20 16:19:13 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1141742171730710529",
+      "screen_name": "robinson_es",
+      "name": "Emily Robinson",
+      "type": "retweet",
+      "text": "RT @robinson_es: .@RikaGorn on how with XGBoost, which combines boosting and ensemble methods, you too can be in the top 1% of Kaggle compe...",
+      "link": [],
+      "date": "Thu Jun 20 16:18:40 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1141717714102366208",
+      "screen_name": "alexsingleton",
+      "name": "Alex Singleton",
+      "type": "retweet",
+      "text": "RT @alexsingleton: We are very lucky to have @MurrayData as a visitor and active @geodatascience lab member; telling us today about his exc...",
+      "link": [],
+      "date": "Thu Jun 20 14:41:29 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1141501099070906368",
       "screen_name": "adbreind",
       "name": "Adam Breindel",
@@ -37,53 +84,6 @@
       "text": "RT @MurrayData: The resultant table, of 1.7 billion paths, took 50 hours for 2.5 million current and expired postcodes on 2 GV100s. Previou...",
       "link": [],
       "date": "Wed Jun 19 13:18:46 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1141334471620386816",
-      "screen_name": "MurrayData",
-      "name": "John Murray",
-      "type": "retweet",
-      "text": "RT @MurrayData: I used @rapidsai, to build a 1km 'walking' graph distance sparse spatial weights matrix of GB postcodes, using @ordnancesur...",
-      "link": [],
-      "date": "Wed Jun 19 13:18:37 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1141329790726807553",
-      "screen_name": "rapidsai",
-      "name": "RAPIDS AI",
-      "type": "post",
-      "text": "Deploying a #datascience cluster used to be difficult. Now you can build your own @NvidiaAI GPU cluster for... https://t.co/GNNmawrqny",
-      "link": [
-        "https://t.co/GNNmawrqny"
-      ],
-      "date": "Wed Jun 19 13:00:01 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1141125448220332037",
-      "screen_name": "quansightai",
-      "name": "Quansight",
-      "type": "retweet",
-      "text": "RT @quansightai: Announcing the next #OpenSource Directions #webinar for Friday June 28! @condaforge with @__mvn__ and John Kirkham. Excite...",
-      "link": [],
-      "date": "Tue Jun 18 23:28:02 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1141053633083117823",
-      "screen_name": "NvidiaAI",
-      "name": "NVIDIA AI",
-      "type": "retweet",
-      "text": "RT @NvidiaAI: Join us for a #webinar on June 26 to learn how @rapidsai provides speedup for STAC-A3 algorithm on #NVIDIA #DGX2 with @numba_...",
-      "link": [],
-      "date": "Tue Jun 18 18:42:40 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1141053604553469953",
-      "screen_name": "blazingdb",
-      "name": "BlazingDB",
-      "type": "retweet",
-      "text": "RT @blazingdb: Everything you need to know about @rapidsai, #BlazingSQL, @Graphistry, #cuDF, #cuML, #cuDNN, #cuGRAPH, #ETL, #MachineLearnin...",
-      "link": [],
-      "date": "Tue Jun 18 18:42:33 +0000 2019"
     }
   ],
   "medium": [
