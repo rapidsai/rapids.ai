@@ -1,6 +1,26 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1141501099070906368",
+      "screen_name": "adbreind",
+      "name": "Adam Breindel",
+      "type": "retweet",
+      "text": "RT @adbreind: Quick start with Dask+cuDF. Wonderfully snappy and lucid writeup. Embedded doc renders better on desktop browser so check it...",
+      "link": [],
+      "date": "Thu Jun 20 00:20:44 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1141465711270879233",
+      "screen_name": "rapidsai",
+      "name": "RAPIDS AI",
+      "type": "post",
+      "text": "Get started with our new #RAPIDSin10 guide on how to use RAPIDS and @dask_dev cuDF for multi-GPU deployment. Same D... https://t.co/4ADa46L48o",
+      "link": [
+        "https://t.co/4ADa46L48o"
+      ],
+      "date": "Wed Jun 19 22:00:07 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1141334548061577216",
       "screen_name": "MurrayData",
       "name": "John Murray",
@@ -64,26 +84,6 @@
       "text": "RT @blazingdb: Everything you need to know about @rapidsai, #BlazingSQL, @Graphistry, #cuDF, #cuML, #cuDNN, #cuGRAPH, #ETL, #MachineLearnin...",
       "link": [],
       "date": "Tue Jun 18 18:42:33 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1140980375637889025",
-      "screen_name": "datametrician",
-      "name": "Joshua Patterson",
-      "type": "retweet",
-      "text": "RT @datametrician: Update: Over the weekend, @RAPIDSai on @IBMPowerSystems #PowerAI was upgraded to 0.7. If you have power systems, #conda...",
-      "link": [],
-      "date": "Tue Jun 18 13:51:34 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1140980351944273920",
-      "screen_name": "rblourenco",
-      "name": "Ricardo Louren\u00e7o",
-      "type": "retweet",
-      "text": "RT @rblourenco: The bonding between @dask_dev and GPU capabilities by @rapidsai is quite smooth... https://t.co/BAaiorFWZ1",
-      "link": [
-        "https://t.co/BAaiorFWZ1"
-      ],
-      "date": "Tue Jun 18 13:51:28 +0000 2019"
     }
   ],
   "medium": [
@@ -125,7 +125,7 @@
       "text": "Like many projects, it has been a struggle for RAPIDS to integrate with the PyPI ecosystem without introducing all sorts of dependency problems for end users. In order to maintain the best user experience, we've come to the conclusion th...",
       "image": "https://cdn-images-1.medium.com/max/805/1*utSxSJl2RD5ujQLVRLHHvg.jpeg",
       "date": "Tue, 21 May 2019 20:01:00 GMT",
-      "poster": "Keith Kraus US"
+      "poster": "Keith Kraus"
     },
     {
       "mediumLink": "https://medium.com/rapids-ai/the-rise-of-notebooks-extended-82d40f8efbef?source=rss----2d7ba3077a44---4",
