@@ -3,13 +3,16 @@ title: "RAPIDS + Dask | RAPIDS"
 og_title: "RAPIDS + Dask"
 og_description: "Learn How to Use Dask with GPUs"
 brand_name: ""
-brand_tagline: "Learn How to Use Dask with GPUs"
+brand_tagline: "RAPIDS + DASK"
 brand_button: "DASK.ORG"
 brand_link: "https://dask.org/"
 layout: default
 ---
 
-# RAPIDS + Dask Project: Scale Python with Ease
+![Dask](https://docs.dask.org/en/latest/_images/dask_horizontal.svg)
+{: .third-image}
+
+# Scale Python with Ease 
 {: .section-title-full}
 
 {% capture intro_content %}
@@ -31,15 +34,16 @@ Pandas, Numpy, and scikit-learn packages are efficient, intuitive, and widely tr
 
 It’s easy to get started with Dask quickly. The project is well supported by many tutorials, quick-start guides, and cheat sheets.
 
-## <i class="fas fa-microphone-alt"></i> Get an Overview
-Listen to the TalkPython podcast **[Parallelizing Computation with Dask](https://talkpython.fm/episodes/show/207/parallelizing-computation-with-dask){: target="_blank"}**.
 
 {% endcapture %}
 
 {% capture start_right %}
-## <i class="fab fa-youtube"></i> See How Dask Works
+## <i class="fas fa-microphone-alt"></i> Get an Overview
 {: .section-subtitle-top-1}
-Watch a presentation from the **[Dask Youtube channel](https://www.youtube.com/playlist?list=PLRtz5iA93T4PQvWuoMnIyEIz1fXiJ5Pri){: target="_blank"}**.
+Listen to the TalkPython podcast **“[Parallelizing Computation with Dask](https://talkpython.fm/episodes/show/207/parallelizing-computation-with-dask){: target="_blank"}.”**
+
+## <i class="fab fa-youtube"></i> See How Dask Works
+Watch presentations from the **[Dask Youtube channel](https://www.youtube.com/playlist?list=PLRtz5iA93T4PQvWuoMnIyEIz1fXiJ5Pri){: target="_blank"}**.
 
 ## <i class="far fa-file-code"></i> Access Dask Docs 
 See the latest **[documentation from Dask](https://docs.dask.org/en/latest/){: target="_blank"}**.
@@ -50,10 +54,37 @@ Explore Dask tutorials on **[Github](https://github.com/dask/dask-tutorial){: ta
 {% endcapture %}
 {% include section-halfs.html 
     background="background-white" 
-    padding-top="0em" padding-bottom="10em" 
+    padding-top="0em" padding-bottom="3em" 
     content-left-half=start_left 
     content-right-half=start_right 
 %} 
+
+{% capture left_spark %}
+# Working with <br> Apache Spark 
+
+Dask collaborates with Apache Spark and its ecosystem. However, there are some basic differences. Spark is mature and all-inclusive.
+
+{% endcapture %}
+{% capture mid_spark %}
+If your use cases are typical ETL + SQL and you’re already using Scala on big data hardware, then Spark is a safe bet. Dask is much lighter weight and easier to integrate into existing code and hardware. If you use Python and associated libraries like NumPy and pandas and want added flexible parallelism, then Dask may be right for you. Read a **[comparison of Spark and Dask](https://docs.dask.org/en/latest/spark.html){: target="_blank"}**.
+{: .section-subtitle-top-1}
+
+{% endcapture %}
+{% capture right_spark %}
+Pandas, Numpy, and scikit-learn packages are efficient, intuitive, and widely trusted—but they weren’t designed to scale. **[Dask](https://dask.org){: target="_blank"}** is an open-source tool that can scale Python packages to multiple machines. Developed by core NumPy, pandas, scikit-learn, Jupyter, and CUDA developers, Dask is freely available and deployed in production across numerous Fortune 500 companies.
+{: .section-subtitle-top-1}
+
+{% endcapture %}
+
+{% include section-thirds.html
+    background="background-white" 
+    padding-top="1em" padding-bottom="10em"
+    banner="banner-row"
+    content-left-third=left_spark
+    content-middle-third=mid_spark
+    content-right-third=right_spark
+%}
+
 
 {% capture yd_header %}
 # Why Use Dask?
@@ -101,19 +132,65 @@ Dask requires no configuration and no setup. Adding even a single machine to com
 Dask can distribute data and computation over multiple GPUs, either in the same system or in a multi-node cluster. Dask integrates with both RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning.
 {: .subtitle}
 
-## <i class="fas fa-wave-square"></i> Dataframe and ETL Integration
+{% endcapture %}
+{% include section-single.html
+    background="background-gray" 
+    padding-top="1em" padding-bottom="0em" 
+    content-single=gpus_single
+%}
+
+
+{% capture gpus_df %}
+## Dataframe and ETL Integration
 The RAPIDS **[cuDF library](https://github.com/rapidsai/cudf){: target="_blank"}** provides a GPU-backed dataframe class that replicates the popular pandas API. It includes extremely high-performance functions to load CSV, JSON, ORC, Parquet and other file formats directly into GPU memory, eliminating one of the key bottlenecks in many data processing tasks. cuDF includes a variety of other functions supporting GPU-accelerated ETL, such as data subsetting, transformations, one-hot encoding, and more. The RAPIDS team maintains a **[dask-cudf library](https://github.com/rapidsai/dask-cudf){: target="_blank"}** that includes helper methods to integrate Dask and cuDF.
 
+{% endcapture %}
+{% capture gpus_df_img %}
+<i class="fas fa-layer-group"></i>{: .dask-icon }
 
-## <i class="fas fa-wave-square"></i> XGBoost Integration
-XGBoost, the popular, open source machine learning library for gradient boosting, now includes integrated support for Dask. Users can partition data across nodes using Dask’s standard data structures, build a DMatrix on each GPU using `xgboost.dask.create_worker_dmatrix`, and then launch training through `xgboost.dask.run`. See the xgboost.dask documentation or the **[Dask+XGBoost GPU example code](https://github.com/dmlc/xgboost/blob/master/demo/dask/dask_gpu_demo.py){: target="_blank"}** for more details. **Note**: This support is currently available in custom builds, and it is expected to be included in the next official release of XGBoost **after 0.90**. New users should check out the **[10 Minutes to Dask-XGBoost guide](https://rapidsai.github.io/projects/cudf/en/0.7.0/dask-xgb-10min.html){: target="_blank"}** to get started quickly.
+{% endcapture %}
+{% include section-onethird-twothird.html
+    background="background-gray" 
+    padding-top="0em" padding-bottom="0em" 
+    content-one-third=gpus_df_img
+    content-two-third=gpus_df
+%}
 
+{% capture gpus_xgb %}
+## XGBoost Integration
+XGBoost, the popular open source machine learning library for gradient boosting, now includes integrated support for Dask. Users can partition data across nodes using Dask’s standard data structures, build a DMatrix on each GPU using `xgboost.dask.create_worker_dmatrix`, and then launch training through `xgboost.dask.run`. See the xgboost.dask documentation or the **[Dask+XGBoost GPU example code](https://github.com/dmlc/xgboost/blob/master/demo/dask/dask_gpu_demo.py){: target="_blank"}** for more details.
 
-## <i class="fas fa-wave-square"></i> Integration With Other Machine Learning Algorithms 
+**Note**: This support is currently available in custom builds, and it is expected to be included in the next official release of XGBoost **after 0.90**. New users should check out the **[10 Minutes to Dask-XGBoost guide](https://rapidsai.github.io/projects/cudf/en/0.7.0/dask-xgb-10min.html){: target="_blank"}** to get started quickly.
+
+{% endcapture %}
+{% capture gpus_xgb_img %}
+<i class="fas fa-bezier-curve"></i>{: .dask-icon }
+
+{% endcapture %}
+{% include section-onethird-twothird.html
+    background="background-gray" 
+    padding-top="0em" padding-bottom="0em" 
+    content-one-third=gpus_xgb_img
+    content-two-third=gpus_xgb
+%}
+{% capture gpus_ml%}
+## Integration With Other Machine Learning Algorithms 
 For other machine learning work on GPU, the **[dask-cuml library](https://github.com/rapidsai/dask-cuml){: target="_blank"}** provides a bridge to the RAPIDS cuML package. RAPIDS cuML implements popular machine learning algorithms, including clustering, dimensionality reduction, and regression approaches, with high performance GPU-based implementations, offering speedups of up to **100x** over CPU-based approaches. cuML replicates the scikit-learn API, so it integrates well with projects like Dask that include scikit-learn support. Currently, dask-cuml supports distributed clustering and regression algorithms, with new algorithms are being added over time.
 
+{% endcapture %}
+{% capture gpus_ml_img %}
+<i class="fas fa-sliders-h"></i>{: .dask-icon }
 
-## <i class="far fa-bookmark"></i> Example Notebooks
+{% endcapture %}
+{% include section-onethird-twothird.html
+    background="background-gray" 
+    padding-top="0em" padding-bottom="0em" 
+    content-one-third=gpus_ml_img
+    content-two-third=gpus_ml
+%}
+
+{% capture gpus_nb %}
+## Example Notebooks
 The RAPIDS Notebooks Extended repository includes several examples with end-to-end examples using Dask for distributed, GPU-accelerated computation. Here’s a few from the collection to get started with. 
 
 <i class="fas fa-caret-right"></i> The Linear Regression with Dask+cuML shows a simple example of how to get started with distributed machine learning. **[Go to notebook <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-extended/blob/a236188a08ba7ec77a55ec48e5a5a1d6e81c9895/tutorials/examples/linear_regression_dask_cuml.ipynb){: target="_blank"}**
@@ -125,24 +202,23 @@ The RAPIDS Notebooks Extended repository includes several examples with end-to-e
 <i class="fas fa-caret-right"></i> The NYC Taxi End-to-End notebook uses trip data to predict New York City taxi fares (a regression problem). **[Go to notebook <i class="fas fa-angle-double-right"></i>](https://github.com/efajardo-nv/rapids-dataproc/blob/master/notebooks/NYCTaxi-E2E.ipynb){: target="_blank"}**
 {: .no-tb-margins }
 
-
-## <i class="fas fa-exclamation-circle"></i> Working with Apache Spark 
-{: .padding-top-3em}
-Dask collaborates with Apache Spark and its ecosystem. However, there are some basic differences. Spark is mature and all-inclusive. If your use cases are typical ETL + SQL and you’re already using Scala on big data hardware, then Spark is a safe bet. Dask is much lighter weight and easier to integrate into existing code and hardware. If you use Python and associated libraries like NumPy and pandas and want added flexible parallelism, then Dask may be right for you. Read a **[comparison of Spark and Dask](https://docs.dask.org/en/latest/spark.html){: target="_blank"}**.
-
+{% endcapture %}
+{% capture gpus_nb_img %}
+<i class="far fa-bookmark"></i>{: .dask-icon }
 
 {% endcapture %}
-{% include section-single.html
+{% include section-onethird-twothird.html
     background="background-gray" 
-    padding-top="1em" padding-bottom="10em" 
-    content-single=gpus_single
+    padding-top="0em" padding-bottom="10em" 
+    content-one-third=gpus_nb_img
+    content-two-third=gpus_nb
 %}
 
 
 {% capture usecase_single %}
 # Use Cases
 
-Dask is widely and routinely used, running on everything from laptops to thousand-machine clusters in-house, on the cloud, and on high-performance computing (HPC) supercomputers. Its ability to process hundreds of terabytes of data efficiently makes it a powerful tool in three key areas. See how Dask is being used across industry. Read stories from other **[Dask users](https://stories.dask.org/en/latest/){: target="_blank"}** and see specific examples of how **[people are using Dask](http://docs.dask.org/en/latest/use-cases.html){: target="_blank"}**.
+Dask is widely and routinely used, running on everything from laptops to thousand-machine clusters in-house, on the cloud, and on high-performance computing (HPC) supercomputers. Its ability to process hundreds of terabytes of data efficiently makes it a powerful tool in three key areas. See how Dask is being used across industry by reading stories from other **[Dask users](https://stories.dask.org/en/latest/){: target="_blank"}** and see specific examples of how **[people are using Dask](http://docs.dask.org/en/latest/use-cases.html){: target="_blank"}**.
 {: .subtitle}
 
 {% endcapture %}
@@ -189,14 +265,14 @@ Many financial institutions have large, complex codebases that encode significan
 
 
 {% capture tik_single%}
-# What Makes Dask Tick?
+# Dask Libraries
 
-Dask provides advanced parallelism for data science, enabling performance at scale for popular Python tools. Below are the key elements of Dask that make it unique. 
+Dask provides advanced parallelism for data science, enabling performance at scale for popular Python tools. Below are the key libraries of Dask that make it unique. 
 {: .subtitle}
 
 {% endcapture %}
 {% capture tik_top_left %}
-## <i class="fas fa-layer-group"></i> User Interfaces
+## <i class="fas fa-dice-d20"></i> User Interfaces
 
 Dask collections, including DataFrame, Array, Delayed, and Futures, provide underlying parallel computing machinery to scale workloads. All come with a purpose-built set of parallel algorithms and programming style. <br> **[Learn more <i class="fas fa-angle-double-right"></i>](https://docs.dask.org/en/latest/user-interfaces.html){: target="_blank"}** 
 

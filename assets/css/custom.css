@@ -15,10 +15,14 @@ section {
 }
 
 pre {
-	background-color: #efefef;
+    background-color: #efefef;
     padding: 1em;
     border-top: 2px solid #720dff;
     white-space: pre-wrap;
+}
+
+code {
+    word-break: break-all;
 }
 
 /* pure font overwrite */
@@ -47,7 +51,10 @@ a:hover {
     transition: all 0.3s ease-in-out;
 }
 
-h1, h2, h3, h4{
+h1,
+h2,
+h3,
+h4 {
     color: #7306ff;
     font-weight: 300;
     letter-spacing: normal;
@@ -86,21 +93,28 @@ p {
 }
 
 strong {
-	font-weight: 600;
+    font-weight: 600;
 }
 
 .full-image {
-	width: 100%;
+    width: 100%;
 }
 
 .half-image {
-	width: 50%;
+    width: 50%;
+}
+
+.third-image {
+    width: 33%;
+    margin: 0 auto;
 }
 
 .flex-center {
-	display: flex;
-	justify-content: center; /* align horizontal */
-	align-items: center; /* align vertical */
+    display: flex;
+    justify-content: center;
+    /* align horizontal */
+    align-items: center;
+    /* align vertical */
 }
 
 
@@ -162,7 +176,7 @@ nav .menu {
 }
 
 #nav-fixed {
-	z-index: 999;
+    z-index: 999;
     top: 0;
     position: fixed;
     width: 100%;
@@ -200,7 +214,8 @@ header {
 /* layout */
 .container-padding {
     width: 100%;
-    max-width: 1280px; /* max width! */
+    max-width: 1280px;
+    /* max width! */
     padding: 0 2em;
     margin: 0 auto;
 }
@@ -285,8 +300,13 @@ header {
     box-shadow: 0px 6px 6px 0px rgba(0, 0, 0, 0.15);
 }
 
+.banner-row {
+    background: url(../images/banner-bg.svg) top left no-repeat;
+    background-size: cover;
+    border-top: 2px solid #720dff;
+}
+
 .section-title-thirds {
-    text-align: center;
     margin-bottom: 0;
 }
 
@@ -300,11 +320,11 @@ header {
 }
 
 .section-subtitle-top-1 {
-	margin-top: 1.5em;
+    margin-top: 1.5em;
 }
 
 .section-subtitle-top-2 {
-	margin-top: 3em;
+    margin-top: 3em;
 }
 
 .padding-top-0em {
@@ -434,14 +454,14 @@ header {
 }
 
 
-
 /* specific */
 .intro-icons {
     width: 40px;
     height: 40px;
 }
 
-a h2:hover, .footer-nav ul li a:hover {
+a h2:hover,
+.footer-nav ul li a:hover {
     color: #9943ff;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -472,18 +492,20 @@ a h2:hover, .footer-nav ul li a:hover {
     line-height: 1.2em;
 }
 
-.tweet-action, .medium-poster {
+.tweet-action,
+.medium-poster {
     color: #ababab;
     font-size: 0.9em;
 }
 
-#release-schedule-svg{
+#release-schedule-svg {
     width: 100%;
     padding-right: 3em;
     padding-top: 1em;
 }
 
-.api-tag, .lib-tag {
+.api-tag,
+.lib-tag {
     font-size: 0.5em;
     border: 1.5px solid #c7a1f5;
     padding: 0.3em 0.4em;
@@ -509,6 +531,15 @@ a h2:hover, .footer-nav ul li a:hover {
 
 .logo-flex a img {
     max-width: 120px;
+}
+
+.dask-icon {
+    text-align: center;
+    width: 100%;
+    font-size: 5em;
+    padding-top: 0.2em;
+    color: #9944ff;
+    text-shadow: 1px 1px 2px #521798;
 }
 
 /* footer */
@@ -550,20 +581,20 @@ footer {
 }
 
 .footer-icon {
-	font-size: 0.8em;
-	margin-left: 0.8em;
-	margin-right: 0.8em;
+    font-size: 0.8em;
+    margin-left: 0.8em;
+    margin-right: 0.8em;
 }
 
 .copy-date {
-	color: #a492c1;
-	width: 100%;
-	text-align: center;
+    color: #a492c1;
+    width: 100%;
+    text-align: center;
 }
 
 .footer-help-section {
-	color: white;
-	display: flex;
+    color: white;
+    display: flex;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
@@ -589,7 +620,7 @@ footer {
 /* buttons */
 a.blue-btn,
 .primary-btn {
-	cursor: pointer;
+    cursor: pointer;
     background: #36c9dd;
     color: #FFF;
     display: inline-block;
@@ -629,8 +660,8 @@ a.blue-btn:hover,
 }
 
 .selector .options .option-label {
-	color: white;
-	width: 6em;
+    color: white;
+    width: 6em;
     text-transform: uppercase;
     font-weight: 600;
     margin-top: 0.6em;
@@ -646,8 +677,8 @@ a.blue-btn:hover,
 }
 
 .selector .options .option .svg-inline--fa {
-	margin-top: 0.2em;
-	padding-left: 0.3em;
+    margin-top: 0.2em;
+    padding-left: 0.3em;
 }
 
 .selector .options .active {
@@ -663,12 +694,12 @@ a.blue-btn:hover,
 }
 
 .cmd {
-	display: flex;
+    display: flex;
 }
 
 .cmd-label {
-	color: white;
-	width: 6em;
+    color: white;
+    width: 6em;
     text-transform: uppercase;
     font-weight: 600;
     margin-top: 2em;
@@ -684,18 +715,28 @@ a.blue-btn:hover,
     display: none;
 }
 
-.noselect, div.option, .primary-btn, a.blue-btn, .primary-btn {
-    -webkit-touch-callout: none; /* iOS Safari */
-    -webkit-user-select: none; /* Safari */
-    -khtml-user-select: none; /* Konqueror HTML */
-    -moz-user-select: none; /* Firefox */
-    -ms-user-select: none; /* Internet Explorer/Edge */
-    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+.noselect,
+div.option,
+.primary-btn,
+a.blue-btn,
+.primary-btn {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 
 .selector-buttons {
-	text-align: center;
-	margin-top: 1em;
+    text-align: center;
+    margin-top: 1em;
 }
 
 
@@ -724,15 +765,15 @@ body.short h2 {
 /* 568px small */
 @media only screen and (max-width: 35.5em) {
 
-	.selector .options .option-label {
-		width: 5em;
-		font-size: 0.6em;
-	    margin-top: 0.5em;
-	}
+    .selector .options .option-label {
+        width: 5em;
+        font-size: 0.6em;
+        margin-top: 0.5em;
+    }
 
-	.selector .options .option {
-		font-size: 0.9em;
-	}
+    .selector .options .option {
+        font-size: 0.9em;
+    }
 
 
 }
@@ -740,13 +781,8 @@ body.short h2 {
 /* 768px med */
 @media only screen and (max-width: 48em) {
 
-    nav .menu {
-        display: initial;
-        cursor: pointer;
-    }
-
-    .show-height {
-        height: 15em;
+    header {
+        min-height: 295px;
     }
 
     nav ul {
@@ -763,6 +799,23 @@ body.short h2 {
         font-weight: 400;
         padding: 0.1em 1em;
         margin: 0;
+    }
+
+    h1 {
+        font-size: 2.5em;
+    }
+
+    .subtitle {
+        font-size: 1.2em;
+    }
+
+    nav .menu {
+        display: initial;
+        cursor: pointer;
+    }
+
+    .show-height {
+        height: 15em;
     }
 
     .pure-u-md-1-3:nth-child(1) {
@@ -794,6 +847,10 @@ body.short h2 {
         margin-top: 0em;
     }
 
+    .third-image {
+        width: 100%;
+    }
+
 
 }
 
@@ -801,8 +858,5 @@ body.short h2 {
 @media only screen and (max-width: 64em)) {
 
 }
-
-
-
 
 
