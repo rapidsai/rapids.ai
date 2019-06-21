@@ -1,6 +1,17 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1142160260553170944",
+      "screen_name": "rapidsai",
+      "name": "RAPIDS AI",
+      "type": "post",
+      "text": "Release code early and often. That's the RAPIDS engineering philosophy. So stay current on latest features with our... https://t.co/nQLMLoedyY",
+      "link": [
+        "https://t.co/nQLMLoedyY"
+      ],
+      "date": "Fri Jun 21 20:00:01 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1141878452779462657",
       "screen_name": "pasha_sh",
       "name": "Pasha",
@@ -77,18 +88,17 @@
       "text": "RT @robinson_es: .@RikaGorn on how with XGBoost, which combines boosting and ensemble methods, you too can be in the top 1% of Kaggle compe...",
       "link": [],
       "date": "Thu Jun 20 16:18:40 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1141717714102366208",
-      "screen_name": "alexsingleton",
-      "name": "Alex Singleton",
-      "type": "retweet",
-      "text": "RT @alexsingleton: We are very lucky to have @MurrayData as a visitor and active @geodatascience lab member; telling us today about his exc...",
-      "link": [],
-      "date": "Thu Jun 20 14:41:29 +0000 2019"
     }
   ],
   "medium": [
+    {
+      "mediumLink": "https://medium.com/rapids-ai/in-the-heat-of-the-nightlies-6ed3be57ac64?source=rss----2d7ba3077a44---4",
+      "title": "In the Heat of the Nightlies",
+      "text": "\u201cRelease code early and often\u201d is a software engineering philosophy that RAPIDS projects take to heart. We try to release about every six weeks or so, partly to keep up the pace of feature development, but also so RAPIDS users don't get ...",
+      "image": "https://cdn-images-1.medium.com/max/1024/0*riSrzL4S8B2sqbcF",
+      "date": "Fri, 21 Jun 2019 19:06:06 GMT",
+      "poster": "Randy Gelhausen"
+    },
     {
       "mediumLink": "https://medium.com/rapids-ai/10-minutes-to-rapids-cudf-and-dask-cudf-3d16fcb84139?source=rss----2d7ba3077a44---4",
       "title": "10 Minutes to RAPIDS cuDF and Dask cuDF",
@@ -160,14 +170,6 @@
       "image": "https://cdn-images-1.medium.com/max/912/1*EpTtZR7fD4-Jn-5zTKulVA.png",
       "date": "Fri, 03 May 2019 17:12:23 GMT",
       "poster": "Brad Rees"
-    },
-    {
-      "mediumLink": "https://medium.com/rapids-ai/run-rapids-on-google-colab-for-free-1617ac6323a8?source=rss----2d7ba3077a44---4",
-      "title": "Run RAPIDS on Google Colab For Free",
-      "text": "Google Colab is a hosted Jupyter-Notebook like service which has long offered free access to GPU instances.This week Colab got even sweeter. The GPUs powering Colab were upgraded to NVIDIA new T4 GPUs. This upgrade unlocks new software p...",
-      "image": "https://cdn-images-1.medium.com/max/850/1*3QNSkwjX6gGJBQUBXVgvZA.jpeg",
-      "date": "Fri, 26 Apr 2019 17:17:09 GMT",
-      "poster": "Randy Gelhausen"
     }
   ]
 }
