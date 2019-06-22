@@ -1,6 +1,45 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1142267206178357248",
+      "screen_name": "ChainerOfficial",
+      "name": "Chainer",
+      "type": "retweet",
+      "text": "RT @ChainerOfficial: Released #Chainer/#CuPy v6.1.0 with some enhancements and bug fixes! https://t.co/VIB0L9YHaT https://t.co/5jjeamlUC6",
+      "link": [
+        "https://t.co/VIB0L9YHaT",
+        "https://t.co/5jjeamlUC6"
+      ],
+      "date": "Sat Jun 22 03:04:58 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1142267192869892097",
+      "screen_name": "ChainerOfficial",
+      "name": "Chainer",
+      "type": "retweet",
+      "text": "RT @ChainerOfficial: Released #Chainer/#CuPy v7.0.0b1 with many new features and enhancements including TabularDataset and backproppable Ch...",
+      "link": [],
+      "date": "Sat Jun 22 03:04:55 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1142251435976986629",
+      "screen_name": "adamlikesai",
+      "name": "Adam Thompson",
+      "type": "retweet",
+      "text": "RT @adamlikesai: I switched to the nightly conda packages for my own development a few weeks ago and haven\u2019t looked back. Can\u2019t beat the fe...",
+      "link": [],
+      "date": "Sat Jun 22 02:02:18 +0000 2019"
+    },
+    {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1142251122045964289",
+      "screen_name": "BrettOl11096261",
+      "name": "Brett Olsen",
+      "type": "retweet",
+      "text": "RT @BrettOl11096261: Don't miss out! NVIDIA's Christoph Angerer will talk about '@RAPIDSAI and Data Science on GPUs' from 12:00-12:30 in Pa...",
+      "link": [],
+      "date": "Sat Jun 22 02:01:04 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1142160260553170944",
       "screen_name": "rapidsai",
       "name": "RAPIDS AI",
@@ -50,51 +89,13 @@
         "https://t.co/fHMGIzpilh"
       ],
       "date": "Thu Jun 20 22:30:55 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1141754844019118080",
-      "screen_name": "rapidsai",
-      "name": "RAPIDS AI",
-      "type": "post",
-      "text": "@dask_dev Great work John! Can\u2019t wait for the next blog with GPU support. The visualizations are stunning!",
-      "link": [],
-      "date": "Thu Jun 20 17:09:02 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1141742421002375169",
-      "screen_name": "dask_dev",
-      "name": "Dask",
-      "type": "retweet",
-      "text": "RT @dask_dev: Blogpost on loading large stacks of image data using Dask Array.  https://t.co/K2BgGOSfeZ https://t.co/ZydjQMKDqF",
-      "link": [
-        "https://t.co/K2BgGOSfeZ"
-      ],
-      "date": "Thu Jun 20 16:19:40 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1141742306267152386",
-      "screen_name": "quansightai",
-      "name": "Quansight",
-      "type": "retweet",
-      "text": "RT @quansightai: So excited to have @__mvn__ from @flatironhealth and John Kirkham from @nvidia @rapidsai with us to show off @condaforge....",
-      "link": [],
-      "date": "Thu Jun 20 16:19:13 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1141742171730710529",
-      "screen_name": "robinson_es",
-      "name": "Emily Robinson",
-      "type": "retweet",
-      "text": "RT @robinson_es: .@RikaGorn on how with XGBoost, which combines boosting and ensemble methods, you too can be in the top 1% of Kaggle compe...",
-      "link": [],
-      "date": "Thu Jun 20 16:18:40 +0000 2019"
     }
   ],
   "medium": [
     {
       "mediumLink": "https://medium.com/rapids-ai/in-the-heat-of-the-nightlies-6ed3be57ac64?source=rss----2d7ba3077a44---4",
-      "title": "In the Heat of the Nightlies",
-      "text": "\u201cRelease code early and often\u201d is a software engineering philosophy that RAPIDS projects take to heart. We try to release about every six weeks or so, partly to keep up the pace of feature development, but also so RAPIDS users don't get ...",
+      "title": "Nightly News: CI produces latest packages",
+      "text": "\u201cRelease code early and often\u201d is a software engineering philosophy that RAPIDS takes to heart. We try to release about every six weeks or so, partly to keep up the pace of feature development, but also so RAPIDS users don't get stuck on...",
       "image": "https://cdn-images-1.medium.com/max/1024/0*riSrzL4S8B2sqbcF",
       "date": "Fri, 21 Jun 2019 19:06:06 GMT",
       "poster": "Randy Gelhausen"
