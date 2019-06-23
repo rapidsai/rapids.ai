@@ -1,6 +1,15 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1142648508132089856",
+      "screen_name": "ericmjl",
+      "name": "Eric Ma",
+      "type": "retweet",
+      "text": "RT @ericmjl: #dask gives me superpowers to operate at the scale of all of our data. If it existed during grad school, I might have finished...",
+      "link": [],
+      "date": "Sun Jun 23 04:20:08 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1142267206178357248",
       "screen_name": "ChainerOfficial",
       "name": "Chainer",
@@ -78,17 +87,6 @@
       "text": "@keithjkraus @java Thank you @ApacheArrow for inspiring everyone to be multilingual!",
       "link": [],
       "date": "Thu Jun 20 22:32:59 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1141835848935182336",
-      "screen_name": "keithjkraus",
-      "name": "Keith Kraus",
-      "type": "retweet",
-      "text": "RT @keithjkraus: With merge of https://t.co/fHMGIzpilh we've started bringing @java bindings to the @rapidsai ecosystem. Awesome work from...",
-      "link": [
-        "https://t.co/fHMGIzpilh"
-      ],
-      "date": "Thu Jun 20 22:30:55 +0000 2019"
     }
   ],
   "medium": [
