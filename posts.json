@@ -91,6 +91,14 @@
   ],
   "medium": [
     {
+      "mediumLink": "https://medium.com/rapids-ai/when-less-is-more-a-brief-story-about-xgboost-feature-engineering-2a6e67b3b4cd?source=rss----2d7ba3077a44---4",
+      "title": "When Less is More: A brief story about XGBoost feature engineering",
+      "text": "When Less is More: A brief story about feature engineering withXGBoostI played a minor role launching RAPIDS on Google Dataproc by refining a model that predicts taxi fare in New York City. Geographic location of passenger pick-ups and d...",
+      "image": "https://cdn-images-1.medium.com/max/1024/1*gG2kfW2HgxLOzVCAdQwMOA.jpeg",
+      "date": "Mon, 24 Jun 2019 21:03:10 GMT",
+      "poster": "Paul Mahler"
+    },
+    {
       "mediumLink": "https://medium.com/rapids-ai/in-the-heat-of-the-nightlies-6ed3be57ac64?source=rss----2d7ba3077a44---4",
       "title": "Nightly News: CI produces latest packages",
       "text": "\u201cRelease code early and often\u201d is a software engineering philosophy that RAPIDS takes to heart. We try to release about every six weeks or so, partly to keep up the pace of feature development, but also so RAPIDS users don't get stuck on...",
@@ -161,14 +169,6 @@
       "image": "https://cdn-images-1.medium.com/max/677/1*oOWTQONjytP3vq_97Svz7w.png",
       "date": "Tue, 07 May 2019 20:37:42 GMT",
       "poster": "Bianca Rhodes US"
-    },
-    {
-      "mediumLink": "https://medium.com/rapids-ai/similarity-in-graphs-jaccard-versus-the-overlap-coefficient-610e083b877d?source=rss----2d7ba3077a44---4",
-      "title": "Similarity in graphs: Jaccard versus the Overlap Coefficient",
-      "text": "There are a wide range of graph applications and algorithms that I hope to discuss through this series of blog posts, all with a bias toward what is in RAPIDS cuGraph. I am assuming that the reader has a basic understanding of graph theo...",
-      "image": "https://cdn-images-1.medium.com/max/912/1*EpTtZR7fD4-Jn-5zTKulVA.png",
-      "date": "Fri, 03 May 2019 17:12:23 GMT",
-      "poster": "Brad Rees"
     }
   ]
 }
