@@ -1,6 +1,15 @@
 {
   "twitter": [
     {
+      "tweetLink": "https://twitter.com/1047296373555519488/status/1142999164302721027",
+      "screen_name": "harrism",
+      "name": "Mark Harris",
+      "type": "retweet",
+      "text": "RT @harrism: With the addition of Java bindings in the upcoming @rapidsai 0.8 release, #cuDF is becoming a colorful project! #CUDA, #cplusp...",
+      "link": [],
+      "date": "Mon Jun 24 03:33:31 +0000 2019"
+    },
+    {
       "tweetLink": "https://twitter.com/1047296373555519488/status/1142648508132089856",
       "screen_name": "ericmjl",
       "name": "Eric Ma",
@@ -78,15 +87,6 @@
         "https://t.co/vo5XnHTHHL"
       ],
       "date": "Fri Jun 21 01:20:03 +0000 2019"
-    },
-    {
-      "tweetLink": "https://twitter.com/1047296373555519488/status/1141836370656337921",
-      "screen_name": "rapidsai",
-      "name": "RAPIDS AI",
-      "type": "post",
-      "text": "@keithjkraus @java Thank you @ApacheArrow for inspiring everyone to be multilingual!",
-      "link": [],
-      "date": "Thu Jun 20 22:32:59 +0000 2019"
     }
   ],
   "medium": [
