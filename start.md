@@ -23,7 +23,7 @@ for column in gdf.columns:
     print(gdf[column].mean())
 ```
 
-## <i class="fas fa-bolt"></i> Try Now In Colaboratory
+## <i class="fas fa-bolt"></i> Try Now In CoLab
 Jump right into a GPU powered RAPIDS notebook with **[Colabratory](https://colab.research.google.com/notebooks/welcome.ipynb){: target="_blank"}** for free. **[Go to example notebook <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
 
 {% endcapture %}

@@ -36,9 +36,11 @@ The RAPIDS team works closely with the Distributed Machine Learning Common (DMLC
 {: .section-title-halfs}
 The project is well supported and documented by many tutorials, quick-start guides, and papers.
 
-## <i class="fas fa-bolt"></i> Try It Now in Google Colaboratory
-Try out XGBoost now, with the basics of cuDF and other RAPIDS libraries, in our online **[XGBoost CoLab notebook](https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y){: target="_blank"}**.
+## <i class="fas fa-bolt"></i> Try It Now in CoLab
+Try out XGBoost now, with the basics of cuDF and other RAPIDS libraries, in our online **[XGBoost Colaboratory notebook](https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y){: target="_blank"}**.
 
+## <i class="far fa-bookmark"></i> Notebook Examples
+To see how XGBoost integrates with cuDF, Dask, and the entire RAPIDS ecosystem, check out these **[RAPIDS notebooks](https://github.com/rapidsai/notebooks-extended){: target="_blank"}** which walk through classification and regression examples.
 
 {% endcapture %}
 {% capture start_right %}
@@ -50,7 +52,12 @@ Access current installation instructions, guides, FAQs, and more in the **[lates
 Take a deep dive into XGBoost’s algorithms with Tianqi Chen and Carlos Guestrin in their **[XGBoost Paper](https://arxiv.org/abs/1603.02754){: target="_blank"}**. 
 
 ## <i class="fas fa-wave-square"></i> Dive into the XGBoost Algorithm
-Learn about the XGBoost algorithms used on GPUs in this **[NVIDIA Developer Blog post](https://devblogs.nvidia.com/gradient-boosting-decision-trees-xgboost-cuda/){: target="_blank"}** by Rory Mitchell, a RAPIDS team member and core XGBoost contributor. He explains more recent performance speedups, including improved compression and multi-GPU support, in his more recent **[follow up post](https://xgboost.ai/2018/07/04/gpu-xgboost-update.html){: target="_blank"}**. 
+
+Learn about the XGBoost algorithms used on GPUs in these blogs from Rory Mitchell, a RAPIDS team member and core XGBoost contributor. <br>
+<i class="fas fa-caret-right"></i> **[Gradient Boosting, Decision Trees and XGBoost with CUDA](https://devblogs.nvidia.com/gradient-boosting-decision-trees-xgboost-cuda/){: target="_blank"}** <br>
+<i class="fas fa-caret-right"></i> **[Updates to the XGBoost GPU algorithms](https://xgboost.ai/2018/07/04/gpu-xgboost-update.html){: target="_blank"}** <br>
+<i class="fas fa-caret-right"></i> **[Bias Variance Decompositions using XGBoost](#){: target="_blank"}** <br>
+
 
 {% endcapture %}
 {% include section-halfs.html 
@@ -74,7 +81,7 @@ XGBoost has integrated support to run across multiple GPUs, which can deliver ev
 
 ## <i class="far fa-chart-bar"></i> Measure Your Performance
 
-You can run GBM benchmarking scripts from this GitHub repository to measure performance on your own system and compare it to various GBM/GBDT implementations.
+You can run GBM benchmarking scripts from this **[GitHub repository](https://github.com/RAMitchell/GBM-Benchmarks){: target="_blank"}** to measure performance on your own system and compare it to various GBM/GBDT implementations.
 
 {% endcapture %}
 {% include slopecap.html 
@@ -112,7 +119,7 @@ To take advantage of multiple GPU-accelerated nodes, you can use XGBoost’s nat
 {% capture deploy_mid %}
 ## <i class="fas fa-expand-arrows-alt"></i> Scale Out with Spark
 
-We are in the process of building out RAPIDS accelerated Apache Spark and will have more details soon.
+We are in the process of building out RAPIDS accelerated Apache Spark and will have more details soon. open source XGBoost4J-Spark
 
 {% endcapture %}
 {% capture deploy_right %}
@@ -147,31 +154,6 @@ XGBoost includes transparent support for training on multiple GPUs. To use multi
 %}
 
 
-{% capture xgbe_left %}
-# RAPIDS + XGBoost
-
-{% endcapture %}
-{% capture xgbe_mid %}
-## <i class="far fa-bookmark"></i> Notebook Examples
-
-To see how XGBoost integrates with cuDF, Dask, and the entire RAPIDS ecosystem, check out the RAPIDS notebooks. 
-{: .section-subtitle-top-1}
-
-{% endcapture %}
-{% capture xgbe_right %}
-Walk through the **[end-to-end mortgage example notebook](https://github.com/rapidsai/notebooks-extended/blob/master/advanced/E2E/mortgage/mortgage_e2e.ipynb){: target="_blank"}** that uses Fannie Mae data to predict mortgage delinquency (a classification problem) and the **[end-to-end NYC taxi notebook](https://github.com/efajardo-nv/rapids-dataproc/blob/master/notebooks/NYCTaxi-E2E.ipynb){: target="_blank"}** that uses trip data to predict New York City taxi fares (a regression problem).
-{: .section-subtitle-top-1}
-
-{% endcapture %}
-{% include section-thirds.html
-    background="background-white" 
-    padding-top="10em" padding-bottom="5em"
-    banner="banner-row"
-    content-left-third=xgbe_left
-    content-middle-third=xgbe_mid
-    content-right-third=xgbe_right
-%}
-
 
 {% capture download_single %}
 # Download the Software Bits 
@@ -202,7 +184,7 @@ Install using conda (the latest RAPIDS release). The RAPIDS conda channel includ
 ## <i class="fab fa-docker"></i> Docker Container
 {: .section-subtitle-top-2}
 
-Install using Docker (the latest RAPIDS release. RAPIDS provides Docker images that include a recent version of GPU-accelerated XGBoost. Just follow the Docker installation instructions on the **[Getting Started](https://rapids.ai/start.html)** page and you can start using XGBoost right away from a notebook or the command line.
+Install using Docker (the latest RAPIDS release). RAPIDS provides Docker images that include a recent version of GPU-accelerated XGBoost. Just follow the Docker installation instructions on the **[Getting Started](https://rapids.ai/start.html)** page and you can start using XGBoost right away from a notebook or the command line.
 
 
 {% endcapture %}
@@ -219,7 +201,7 @@ Install using pip or other methods (the default upstream version).  The default 
 {% endcapture %}
 {% include section-single.html
     background="background-white" 
-    padding-top="3em" padding-bottom="0em" 
+    padding-top="5em" padding-bottom="0em" 
     content-single=download_single
 %}
 {% include section-halfs.html
@@ -251,7 +233,7 @@ Similar configuration options apply to R, Java, and Julia wrappers. The **[XGBoo
 {% capture config_right %}
 ## <i class="fas fa-cogs"></i> Training a Model
 
-When training a model with XGBoost, you have to specify a dictionary of training parameters. If you set the tree_method parameter to gpu_hist, XGBoost will run on your GPU.
+When training a model with XGBoost, you have to specify a dictionary of training parameters. If you set the `tree_method` parameter to `gpu_hist`, XGBoost will run on your GPU.
 
 For example, if your old code in Python looks like:
 ```bash
