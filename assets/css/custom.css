@@ -78,11 +78,6 @@ h3 {
     margin-bottom: 0em;
 }
 
-.subtitle {
-    font-size: 1.4em;
-    margin-top: -0.7em;
-    line-height: 1.2em;
-}
 
 p {
     color: #666666;
@@ -96,17 +91,29 @@ strong {
     font-weight: 600;
 }
 
+.center {
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+}
+
 .full-image {
     width: 100%;
+    margin: 0 auto;
 }
 
 .half-image {
+    position: relative;
+    left: 50%;
     width: 50%;
+    transform: translate(-50%);
 }
 
 .third-image {
+    position: relative;
+    left: 50%;
     width: 33%;
-    margin: 0 auto;
+    transform: translate(-50%);
 }
 
 .flex-center {
@@ -306,6 +313,12 @@ header {
     border-top: 2px solid #720dff;
 }
 
+.subtitle {
+    font-size: 1.4em;
+    line-height: 1.2em;
+    margin-top: -0.7em;
+}
+
 .section-title-thirds {
     margin-bottom: 0;
 }
@@ -316,7 +329,6 @@ header {
 
 .section-title-full {
     text-align: center;
-    margin-bottom: 0;
 }
 
 .section-subtitle-top-1 {
@@ -528,6 +540,13 @@ a h2:hover,
 
 .logo-flex a img {
     max-width: 120px;
+}
+
+.projects-logo {
+    position: relative;
+    left: 50%;
+    width: 300px;
+    transform: translate(-50%)
 }
 
 .dask-icon {
@@ -842,6 +861,10 @@ body.short h2 {
 
     .section-subtitle-top-1 {
         margin-top: 0em;
+    }
+
+    .half-image {
+        width: 100%;
     }
 
     .third-image {
