@@ -71,7 +71,7 @@ for column in gdf.columns:
 ```
 Find more details on our **[get started section <i class="fas fa-angle-double-right"></i>](start.html)**
 
-## <i class="fas fa-bolt"></i> Try Now In Colaboratory
+## <i class="fas fa-bolt"></i> Try Now In CoLab
 Jump right into a GPU powered RAPIDS notebook with **[Colabratory](https://colab.research.google.com/notebooks/welcome.ipynb){: target="_blank"}** for free. **[Go to example notebook <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
 
 {% endcapture %}
@@ -281,7 +281,7 @@ XGBoost is a well-known gradient boosted decision trees (GBDT) machine learning 
 {% capture com_right %}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Spark
 
-The RAPIDS team is working with the community to build a distributed, open source XGBoost + RAPIDS package. More details coming soon. 
+The RAPIDS team is working with the community to build a distributed, open source XGBoost4J-Spark + RAPIDS package. More details coming soon. 
 {% endcapture %}
 
 {% include section-thirds.html 

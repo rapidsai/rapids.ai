@@ -53,7 +53,7 @@ XGBoost is a well-known gradient boosted decision trees (GBDT) machine learning 
 
 ## <i class="fas fa-code-branch"></i> RAPIDS + Spark
 
-The RAPIDS team is working with the community to build a distributed, open source XGBoost + RAPIDS package. More details coming soon. 
+The RAPIDS team is working with the community to build a distributed, open source XGBoost4J-Spark + RAPIDS package. More details coming soon. 
 
 {% endcapture %}
 

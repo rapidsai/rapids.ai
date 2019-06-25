@@ -3,7 +3,7 @@ title: "RAPIDS + Dask | RAPIDS"
 og_title: "RAPIDS + Dask"
 og_description: "Learn How to Use Dask with GPUs"
 brand_name: ""
-brand_tagline: "Scale Python with Dask"
+brand_tagline: "Scale Python with Dask on GPUs"
 brand_button: "DASK.ORG"
 brand_link: "https://dask.org/"
 layout: default
@@ -70,6 +70,8 @@ Dask requires no configuration and no setup. Adding even a single machine to com
 
 It’s easy to get started with Dask quickly. The project is well supported by many tutorials, quick-start guides, and cheat sheets.
 
+## <i class="far fa-star"></i> Working with Apache Spark?
+Dask collaborates with Apache Spark and its ecosystem. However, there are **[some basic differences](https://docs.dask.org/en/latest/spark.html){: target="_blank"}**.
 
 {% endcapture %}
 
@@ -90,37 +92,10 @@ Explore Dask tutorials on **[Github](https://github.com/dask/dask-tutorial){: ta
 {% endcapture %}
 {% include section-halfs.html 
     background="background-white" 
-    padding-top="2em" padding-bottom="5em" 
+    padding-top="1em" padding-bottom="10em" 
     content-left-half=start_left 
     content-right-half=start_right 
 %} 
-
-
-{% capture left_spark %}
-# Working with <br> Apache Spark 
-
-Dask collaborates with Apache Spark and its ecosystem. However, there are **[some basic differences](https://docs.dask.org/en/latest/spark.html){: target="_blank"}**.
-
-{% endcapture %}
-{% capture mid_spark %}
-If your use cases are typical ETL + SQL and you’re already using Scala on big data hardware, then Spark is a safe bet. Dask is much lighter weight and easier to integrate into existing code and hardware. If you use Python and associated libraries like NumPy and pandas and want added flexible parallelism, then Dask may be right for you. Read a **[comparison of Spark and Dask](https://docs.dask.org/en/latest/spark.html){: target="_blank"}**.
-{: .section-subtitle-top-1}
-
-{% endcapture %}
-{% capture right_spark %}
-Pandas, Numpy, and scikit-learn packages are efficient, intuitive, and widely trusted—but they weren’t designed to scale. **[Dask](https://dask.org){: target="_blank"}** is an open-source tool that can scale Python packages to multiple machines. Developed by core NumPy, pandas, scikit-learn, Jupyter, and CUDA developers, Dask is freely available and deployed in production across numerous Fortune 500 companies.
-{: .section-subtitle-top-1}
-
-{% endcapture %}
-
-{% include section-thirds.html
-    background="background-white" 
-    padding-top="1em" padding-bottom="10em"
-    banner="banner-row"
-    content-left-third=left_spark
-    content-middle-third=mid_spark
-    content-right-third=right_spark
-%}
 
 
 {% capture gpus_single %}
