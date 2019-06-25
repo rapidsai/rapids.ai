@@ -32,9 +32,49 @@ Contributors include anyone who helps improve any of our projects, whether by co
     content-right-half=com_right
 %} 
 
+{% capture proj_left %}
+# Community Projects
+{: .section-title-halfs}
+
+The RAPIDS team is developing, contributing, and collaborating closely with numerous open-source projects including Apache Arrow, Numba, XGBoost, Apache Spark, sci-kit learn, and more. Our goal is to upstream all code contributions to ensure that all the components of the GPU-accelerated data science ecosystem work smoothly together.
+{% endcapture %}
+
+{% capture proj_right %}
+## <i class="fas fa-code-branch"></i> RAPIDS + Dask
+{: .section-subtitle-top-1}
+
+Dask is an open source project providing advanced parallelism for analytics that enables performance at scale. RAPIDS is actively contributing to Dask, and it integrates with both RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. <br> **[Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i>](dask.html)**
+
+
+## <i class="fas fa-code-branch"></i> RAPIDS + XGBoost
+
+XGBoost is a well-known gradient boosted decision trees (GBDT) machine learning package used to tackle regression, classification, and ranking problems. The RAPIDS team works closely with the Distributed Machine Learning Common (DMLC) XGBoost organization to upstream code and ensure that all components of the GPU-accelerated analytics ecosystem work smoothly together. <br> **[Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i>](xgboost.html)**
+
+
+## <i class="fas fa-code-branch"></i> RAPIDS + Spark
+
+The RAPIDS team is working with the community to build a distributed, open source XGBoost + RAPIDS package. More details coming soon. 
+
+{% endcapture %}
+
+{% include section-halfs.html
+    background="background-white" 
+    padding-top="1em" padding-bottom="5em" 
+    content-left-half=proj_left 
+    content-right-half=proj_right
+%} 
+
+
+
 # Contributors
 {: .section-title-full}
 {% include contributing-logos.html 
+    padding-top="1em" padding-bottom="5em" 
+%}
+
+# Open Source
+{: .section-title-full}
+{% include open-source-logos.html 
     padding-top="1em" padding-bottom="10em" 
 %}
 
@@ -46,3 +86,5 @@ Contributors include anyone who helps improve any of our projects, whether by co
 {% include cta-footer-help.html 
    background="background-darkpurple" 
 %}
+
+
