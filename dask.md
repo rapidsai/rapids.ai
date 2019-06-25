@@ -3,30 +3,66 @@ title: "RAPIDS + Dask | RAPIDS"
 og_title: "RAPIDS + Dask"
 og_description: "Learn How to Use Dask with GPUs"
 brand_name: ""
-brand_tagline: "RAPIDS + DASK"
+brand_tagline: "Scale Python with Dask"
 brand_button: "DASK.ORG"
 brand_link: "https://dask.org/"
 layout: default
 ---
 
-![Dask](https://docs.dask.org/en/latest/_images/dask_horizontal.svg)
-{: .third-image}
+![Dask](https://docs.dask.org/en/latest/_images/dask_horizontal.svg){: .projects-logo}
 
 # Scale Python with Ease 
 {: .section-title-full}
 
 {% capture intro_content %}
 
-Pandas, Numpy, and scikit-learn packages are efficient, intuitive, and widely trusted—but they weren’t designed to scale. **[Dask](https://dask.org){: target="_blank"}** is an open-source tool that can scale Python packages to multiple machines. Developed by core NumPy, pandas, scikit-learn, Jupyter, and CUDA developers, Dask is freely available and deployed in production across numerous Fortune 500 companies.
+Pandas, Numpy, and scikit-learn packages are efficient, intuitive, and widely trusted—but they weren’t designed to scale. **[Dask](https://dask.org){: target="_blank"}** is an open-source tool that can scale Python packages to multiple machines. Developed by core NumPy, pandas, scikit-learn, Jupyter, Dask is freely available and deployed in production across numerous Fortune 500 companies.
 {: .subtitle}
 
 {% endcapture %}
 
 {% include section-single.html
     background="background-white" 
-    padding-top="1em" padding-bottom="1em" 
+    padding-top="0em" padding-bottom="1em" 
     content-single=intro_content
 %}
+
+
+{% capture yd_header %}
+# Why Use Dask?
+{: .section-title-full}
+
+{% endcapture %}
+{% capture yd_left %}
+## <i class="fas fa-expand-arrows-alt"></i> Scalable
+Code only needs to be written once and then can be deployed locally or to a multi-node cluster using a comfortable Pythonic syntax. No need for code rewrites or retraining.
+
+{% endcapture %}
+{% capture yd_mid %}
+## <i class="far fa-hand-rock"></i> Resilient
+It’s resilient, handling the failure of worker nodes gracefully, and elastic, able to take advantage of new nodes added on the fly.
+
+{% endcapture %}
+{% capture yd_right %}
+## <i class="far fa-check-square"></i> Simple to Implement
+Dask requires no configuration and no setup. Adding even a single machine to computation adds very little cognitive overhead.
+
+{% endcapture %}
+
+{% include section-single.html
+    background="background-white" 
+    padding-top="2em" padding-bottom="0em" 
+    content-single=yd_header
+%}
+{% include section-thirds.html 
+    background="background-white" 
+    padding-top="0em" padding-bottom="5em" 
+    content-left-third=yd_left
+    content-middle-third=yd_mid
+    content-right-third=yd_right
+%}
+
+
 
 {% capture start_left %}
 # Getting Started
@@ -54,15 +90,16 @@ Explore Dask tutorials on **[Github](https://github.com/dask/dask-tutorial){: ta
 {% endcapture %}
 {% include section-halfs.html 
     background="background-white" 
-    padding-top="0em" padding-bottom="3em" 
+    padding-top="2em" padding-bottom="5em" 
     content-left-half=start_left 
     content-right-half=start_right 
 %} 
 
+
 {% capture left_spark %}
 # Working with <br> Apache Spark 
 
-Dask collaborates with Apache Spark and its ecosystem. However, there are some basic differences. Spark is mature and all-inclusive.
+Dask collaborates with Apache Spark and its ecosystem. However, there are **[some basic differences](https://docs.dask.org/en/latest/spark.html){: target="_blank"}**.
 
 {% endcapture %}
 {% capture mid_spark %}
@@ -86,26 +123,11 @@ Pandas, Numpy, and scikit-learn packages are efficient, intuitive, and widely tr
 %}
 
 
-{% capture yd_header %}
-# Why Use Dask?
+{% capture gpus_single %}
+# Dask on GPUs
 
-Here’s a quick glance at how Dask delivers exceptional performance across various Python projects.  
+Dask can distribute data and computation over multiple GPUs, either in the same system or in a multi-node cluster. Dask integrates with both RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning.
 {: .subtitle}
-
-{% endcapture %}
-{% capture yd_left %}
-## <i class="fas fa-expand-arrows-alt"></i> Scalable
-Code only needs to be written once and then can be deployed locally or to a multi-node cluster using a comfortable Pythonic syntax. No need for code rewrites or retraining.
-
-{% endcapture %}
-{% capture yd_mid %}
-## <i class="far fa-hand-rock"></i> Resilient
-It’s resilient, handling the failure of worker nodes gracefully, and elastic, able to take advantage of new nodes added on the fly.
-
-{% endcapture %}
-{% capture yd_right %}
-## <i class="far fa-check-square"></i> Simple to Implement
-Dask requires no configuration and no setup. Adding even a single machine to computation adds very little cognitive overhead.
 
 {% endcapture %}
 {% include slopecap.html 
@@ -115,27 +137,7 @@ Dask requires no configuration and no setup. Adding even a single machine to com
 %}
 {% include section-single.html
     background="background-gray" 
-    padding-top="1em" padding-bottom="0em" 
-    content-single=yd_header
-%}
-{% include section-thirds.html 
-    background="background-gray" 
-    padding-top="0em" padding-bottom="3em" 
-    content-left-third=yd_left
-    content-middle-third=yd_mid
-    content-right-third=yd_right
-%}
-
-{% capture gpus_single %}
-# Dask on GPUs
-
-Dask can distribute data and computation over multiple GPUs, either in the same system or in a multi-node cluster. Dask integrates with both RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning.
-{: .subtitle}
-
-{% endcapture %}
-{% include section-single.html
-    background="background-gray" 
-    padding-top="1em" padding-bottom="0em" 
+    padding-top="5em" padding-bottom="0em" 
     content-single=gpus_single
 %}
 

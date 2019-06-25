@@ -269,19 +269,19 @@ RAPIDS Memory Manager (RMM) is a central place for all device memory allocations
 {% capture com_left %}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Dask
 
-Dask is an open source project providing advanced parallelism for analytics that enables performance at scale. RAPIDS is actively contributing to Dask, and it integrates with both RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. **[Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i>](community.html)**
+Dask is an open source project providing advanced parallelism for analytics that enables performance at scale. RAPIDS is actively contributing to Dask, and it integrates with both RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. **[Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i>](dask.html)**
 {% endcapture %}
 
 {% capture com_mid %}
-## <i class="fas fa-code-branch"></i> RAPIDS + Spark
+## <i class="fas fa-code-branch"></i> RAPIDS + XGBoost
 
-Going forward, our competitive stakeholder will deliver value to paradigm shifts. Best-in-class platforms are becoming long-term cloud experts. **[Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i>](#)**
+XGBoost is a well-known gradient boosted decision trees (GBDT) machine learning package used to tackle regression, classification, and ranking problems. The RAPIDS team works closely with the Distributed Machine Learning Common (DMLC) XGBoost organization to upstream code and ensure that all components of the GPU-accelerated analytics ecosystem work smoothly together. **[Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i>](xgboost.html)**
 {% endcapture %}
 
 {% capture com_right %}
-## <i class="fas fa-code-branch"></i> RAPIDS + XGBoost
+## <i class="fas fa-code-branch"></i> RAPIDS + Spark
 
-Going forward, our competitive stakeholder will deliver value to paradigm shifts. Best-in-class platforms are becoming long-term cloud experts. **[Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i>](#)**
+The RAPIDS team is working with the community to build a distributed, open source XGBoost + RAPIDS package. More details coming soon. 
 {% endcapture %}
 
 {% include section-thirds.html 
