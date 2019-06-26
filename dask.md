@@ -173,7 +173,7 @@ The RAPIDS Notebooks Extended repository includes several examples with end-to-e
 <i class="fas fa-caret-right"></i> The Linear Regression with Dask+cuML shows a simple example of how to get started with distributed machine learning. **[Go to notebook <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-extended/blob/a236188a08ba7ec77a55ec48e5a5a1d6e81c9895/tutorials/examples/linear_regression_dask_cuml.ipynb){: target="_blank"}**
 {: .no-tb-margins }
 
-<i class="fas fa-caret-right"></i> The end-to-end mortgage example notebook uses Fannie Mae data to predict mortgage delinquency (a classification problem). **[Go to notebook <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-extended/blob/master/advanced/E2E/mortgage/mortgage_e2e.ipynb){: target="_blank"}**
+<i class="fas fa-caret-right"></i> The end-to-end mortgage example notebook uses Fannie Mae data to predict mortgage delinquency (a classification problem). **[Go to notebook <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-extended/blob/master/intermediate_notebooks/E2E/mortgage/mortgage_e2e.ipynb){: target="_blank"}**
 {: .no-tb-margins }
 
 <i class="fas fa-caret-right"></i> The NYC Taxi End-to-End notebook uses trip data to predict New York City taxi fares (a regression problem). **[Go to notebook <i class="fas fa-angle-double-right"></i>](https://github.com/efajardo-nv/rapids-dataproc/blob/master/notebooks/NYCTaxi-E2E.ipynb){: target="_blank"}**
