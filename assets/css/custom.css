@@ -214,7 +214,7 @@ nav .menu {
 
 header {
     background: url(../images/header-bg.svg) top center no-repeat;
-    min-height: 370px;
+    min-height: 400px;
     background-size: cover;
 }
 
@@ -254,8 +254,8 @@ header {
     /* chrome behavior */
     z-index: auto;
     width: 100%;
-    height: 7vw;
-    margin-top: 6vw;
+    height: 20vw;
+    margin-top: 4vw;
     -webkit-transform: skewY(-3deg);
     transform: skewY(-3deg);
     -webkit-box-shadow: 0 -2px 2px 0 rgba(0,0,0,0.2);
