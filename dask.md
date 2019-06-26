@@ -9,7 +9,7 @@ brand_link: "https://dask.org/"
 layout: default
 ---
 
-![Dask](https://docs.dask.org/en/latest/_images/dask_horizontal.svg){: .projects-logo}
+![Dask]({{ site.baseurl }}{% link /assets/images/dask.svg %}){: .projects-logo}
 
 # Scale Python with Ease 
 {: .section-title-full}
