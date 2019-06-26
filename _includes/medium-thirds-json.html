@@ -2,7 +2,7 @@
         <div id="medium-list" class="container-padding"></div>
 </section>
 <script>
-$.getJSON("{{ site.baseurl }}/posts.json")
+$.getJSON("https://rapidsai.github.io/site-data/posts.json")
     .done(function(json) {
 
     	var topThree = json.medium.slice(0,3)
