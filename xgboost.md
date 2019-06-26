@@ -25,7 +25,7 @@ The RAPIDS team works closely with the Distributed Machine Learning Common (DMLC
 {% endcapture %}
 
 {% include section-single.html
-    background="background-white" 
+    background="background-white"
     padding-top="0em" padding-bottom="1em" 
     content-single=intro_content
 %}
@@ -48,7 +48,7 @@ To see how XGBoost integrates with cuDF, Dask, and the entire RAPIDS ecosystem, 
 {: .section-subtitle-top-1}
 Access current installation instructions, guides, FAQs, and more in the **[latest documentation](https://xgboost.readthedocs.io/en/latest/){: target="_blank"}**. 
 
-## <i class="far fa-file-alt"></i> Read an XGBoost Paper
+## <i class="far fa-file-alt"></i> Read the original XGBoost paper
 Take a deep dive into XGBoost’s algorithms with Tianqi Chen and Carlos Guestrin in their **[XGBoost Paper](https://arxiv.org/abs/1603.02754){: target="_blank"}**. 
 
 ## <i class="fas fa-wave-square"></i> Dive into the XGBoost Algorithm
@@ -56,7 +56,7 @@ Take a deep dive into XGBoost’s algorithms with Tianqi Chen and Carlos Guestri
 Learn about the XGBoost algorithms used on GPUs in these blogs from Rory Mitchell, a RAPIDS team member and core XGBoost contributor. <br>
 <i class="fas fa-caret-right"></i> **[Gradient Boosting, Decision Trees and XGBoost with CUDA](https://devblogs.nvidia.com/gradient-boosting-decision-trees-xgboost-cuda/){: target="_blank"}** <br>
 <i class="fas fa-caret-right"></i> **[Updates to the XGBoost GPU algorithms](https://xgboost.ai/2018/07/04/gpu-xgboost-update.html){: target="_blank"}** <br>
-<i class="fas fa-caret-right"></i> **[Bias Variance Decompositions using XGBoost](#){: target="_blank"}** <br>
+<i class="fas fa-caret-right"></i> **[Bias Variance Decompositions using XGBoost](https://devglogs.nvidia.com/bias-variance-decompositions-using-xgboost){: target="_blank"}** <br>
 
 
 {% endcapture %}
@@ -119,7 +119,7 @@ To take advantage of multiple GPU-accelerated nodes, you can use XGBoost’s nat
 {% capture deploy_mid %}
 ## <i class="fas fa-expand-arrows-alt"></i> Scale Out with Spark
 
-We are in the process of building out RAPIDS accelerated Apache Spark and will have more details soon. open source XGBoost4J-Spark
+The RAPIDS team is working with the community to build a distributed, open source XGBoost4J-Spark + RAPIDS package. More details coming soon.
 
 {% endcapture %}
 {% capture deploy_right %}
@@ -156,12 +156,12 @@ XGBoost includes transparent support for training on multiple GPUs. To use multi
 
 
 {% capture download_single %}
-# Download the Software Bits 
+# Download the Software
 
-The RAPIDS team is developing GPU enhancements to open-source XGBoost, working closely with the DCML/XGBoost organization to improve the larger ecosystem. Since RAPIDS is iterating ahead of upstream XGBoost releases, some enhancements will be available immediately as RAPIDS-provided installers and source code.
+The RAPIDS team is developing GPU enhancements to open-source XGBoost, working closely with the DCML/XGBoost organization to improve the larger ecosystem. Since RAPIDS is iterating ahead of upstream XGBoost releases, some enhancements will be available earlier from the **[RAPIDS branch](https://github.com/rapidsai/xgboost){: target="_blank"}**, or from RAPIDS-provided installers.
 {: .subtitle}
 
-## Installation Prerequisites
+## Installation Prerequisites for RAPIDS + XGBoost
 
 <i class="fas fa-exclamation-triangle text-purple"></i> CUDA-compatible NVIDIA GPU with the NVIDIA Pascal™, NVIDIA Volta, or NVIDIA Turing™  architecture 
 {: .no-tb-margins }
@@ -174,7 +174,7 @@ The RAPIDS team is developing GPU enhancements to open-source XGBoost, working c
 
 {% endcapture %}
 {% capture download_left %}
-## <i class="fas fa-laptop-code"></i>  Conda Install
+## <i class="fas fa-laptop-code"></i> Conda Install
 
 Install using conda (the latest RAPIDS release). The RAPIDS conda channel includes an XGBoost package built with CUDA 10.0 and Python 3.7. You can install it with:
 ```bash

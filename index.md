@@ -269,13 +269,13 @@ RAPIDS Memory Manager (RMM) is a central place for all device memory allocations
 {% capture com_left %}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Dask
 
-Dask is an open source project providing advanced parallelism for analytics that enables performance at scale. RAPIDS is actively contributing to Dask, and it integrates with both RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. **[Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i>](dask.html)**
+Dask is an open source project providing advanced parallelism for analytics that enables performance at scale. RAPIDS is actively contributing to Dask, and it integrates with both RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. **[Learn more on our Dask page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](dask.html)**
 {% endcapture %}
 
 {% capture com_mid %}
 ## <i class="fas fa-code-branch"></i> RAPIDS + XGBoost
 
-XGBoost is a well-known gradient boosted decision trees (GBDT) machine learning package used to tackle regression, classification, and ranking problems. The RAPIDS team works closely with the Distributed Machine Learning Common (DMLC) XGBoost organization to upstream code and ensure that all components of the GPU-accelerated analytics ecosystem work smoothly together. **[Learn More <i class="fa fa-angle-double-right" aria-hidden="true"></i>](xgboost.html)**
+XGBoost is a well-known gradient boosted decision trees (GBDT) machine learning package used to tackle regression, classification, and ranking problems. The RAPIDS team works closely with the Distributed Machine Learning Common (DMLC) XGBoost organization to upstream code and ensure that all components of the GPU-accelerated analytics ecosystem work smoothly together. **[Learn more on our XGBoost page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](xgboost.html)**
 {% endcapture %}
 
 {% capture com_right %}
