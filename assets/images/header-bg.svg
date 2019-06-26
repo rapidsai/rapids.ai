@@ -1,19 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Generator: Adobe Illustrator 23.0.2, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!-- Generator: Adobe Illustrator 23.0.4, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
 <svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
-	 viewBox="0 0 2560 670" style="enable-background:new 0 0 2560 670;" xml:space="preserve">
+	 viewBox="0 0 1200 370" style="enable-background:new 0 0 1200 370;" xml:space="preserve">
 <style type="text/css">
 	.st0{fill-rule:evenodd;clip-rule:evenodd;fill:#7400FF;}
 	.st1{opacity:0.14;fill-rule:evenodd;clip-rule:evenodd;fill:#FFFFFF;enable-background:new    ;}
 </style>
 <g id="Rectangle_37_copy_7">
-	
-		<image style="overflow:visible;opacity:0.15;" width="2596" height="675" xlink:href="AE783AFF46BBE8C1.png"  transform="matrix(1 0 0 1 -18 -11.3777)">
-	</image>
 	<g>
-		<polygon class="st0" points="0,0.6 2560,0.6 2560,375.9 0,639.6 		"/>
+		<polygon class="st0" points="0,0 1200,0 1200,370 0,370 		"/>
 	</g>
 </g>
-<path class="st1" d="M2560,0.6h-692.5L1566,381.9l108.2,85.7l885.8-91.4V0.6z"/>
-<path class="st1" d="M2560,0.6h-582.3L1614,246.3l143.4,212.3l802.6-82.7V0.6z"/>
+<path class="st1" d="M1200,0.9H875.4L734.1,220l175.4,149.1l290.5-1V0.9z"/>
+<path class="st1" d="M1200,0.9H927L742.3,124.6l167.2,244.5l290.5-1V0.9z"/>
 </svg>

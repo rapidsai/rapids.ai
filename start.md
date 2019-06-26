@@ -23,7 +23,7 @@ for column in gdf.columns:
     print(gdf[column].mean())
 ```
 
-## <i class="fas fa-bolt"></i> Try Now In Colaboratory
+## <i class="fas fa-bolt"></i> Try Now In CoLab
 Jump right into a GPU powered RAPIDS notebook with **[Colabratory](https://colab.research.google.com/notebooks/welcome.ipynb){: target="_blank"}** for free. **[Go to example notebook <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
 
 {% endcapture %}
@@ -40,12 +40,17 @@ We suggest that you take a look at the sample workflow in our Docker container (
 
 ## Prerequisites 
 <i class="fas fa-exclamation-triangle text-purple"></i> NVIDIA Pascal™ GPU architecture or better
+{: .no-tb-margins }
 
 <i class="fas fa-exclamation-triangle text-purple"></i> **[CUDA 9.2](https://developer.nvidia.com/cuda-92-download-archive){: target="_blank"} with driver v396.37+** or **[CUDA 10.0](https://developer.nvidia.com/cuda-10.0-download-archive){: target="_blank"} with driver v410.48+**
+{: .no-tb-margins }
 
 <i class="fas fa-exclamation-triangle text-purple"></i> Ubuntu 16.04 or 18.04 
+{: .no-tb-margins }
 
 <i class="fas fa-exclamation-triangle text-purple"></i> **For Docker Images:** Docker CE v18+ and **[NVIDIA-docker v2+](https://github.com/nvidia/nvidia-docker/wiki/Frequently-Asked-Questions#how-do-i-install-20-if-im-not-using-the-latest-docker-version){: target="_blank"}** 
+{: .no-tb-margins }
+
 {% endcapture %}
 
 {% include section-halfs.html
@@ -133,12 +138,16 @@ Run the following command within the Docker container started from the copied Do
 Notebooks can be found in notebooks directory within the container:
 
 <i class="far fa-folder-open"></i> **`/rapids/notebooks/cuml`** (cuML demos)
+{: .no-tb-margins }
 
 <i class="far fa-folder-open"></i> **`/rapids/notebooks/cugraph`** (cuGraph demos)
+{: .no-tb-margins }
 
 <i class="far fa-folder-open"></i> **`/rapids/notebooks/tutorials`** (DBSCAN tutorial)
+{: .no-tb-margins }
 
 <i class="far fa-folder-open"></i> **`/rapids/notebooks/xgboost`** (XGBoost demo)
+{: .no-tb-margins }
 
 ### Advanced Usage
 
