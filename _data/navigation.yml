@@ -16,7 +16,7 @@
 
 - nav: BLOG
   name: blog
-  link: /blog.html
+  link: https://medium.com/rapids-ai
 
 - nav: DOCS
   name: docs
