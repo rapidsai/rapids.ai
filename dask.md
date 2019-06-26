@@ -200,9 +200,9 @@ Dask is widely and routinely used, running on everything from laptops to thousan
 
 {% endcapture %}
 {% capture uc_left %}
-## <i class="fas fa-briefcase"></i> Business Intelligence (BI)
+## <i class="fas fa-store-alt"></i> Retail
 
-With Dask, data scientists can scale their BI workflows, taking pandas and machine learning workloads to terabytes of data easily and without costly code rewriting. The Dask interface makes it easy and familiar to load in terabytes of tabular data, transform the data with pandas using parallel compute, and pass it off to machine learning–training libraries at scale.
+Data science and devops teams in the retail industry use Dask to scale their pipelines; taking pandas and machine learning workloads to terabytes of data easily. The Dask interface makes it easy to load in terabytes of tabular data, transform the data with libraries like pandas or RAPIDS cuDF using parallel compute, and pass it off to machine learning–training libraries at scale.
 
 {% endcapture %}
 {% capture uc_mid %}
