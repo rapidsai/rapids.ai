@@ -139,9 +139,8 @@ function processClick(options, click, category) {
         $(linux_opts).addClass("disabled");
         $(python_opts).addClass("disabled");
         $(cuda_opts).addClass("disabled");
-    } else {
-        $("#" + selections['method']).addClass("active");
     }
+    $("#" + selections['method']).addClass("active");
     $("#" + selections['pkg']).addClass("active");
     $("#" + selections['linux']).addClass("active");
     $("#" + selections['python']).addClass("active");
