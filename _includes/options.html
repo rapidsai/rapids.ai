@@ -118,7 +118,10 @@ function processClick(options, click, category) {
         $(click).addClass("active");
         selections[category] = click.id;
     }
-    if (selections['method'] == 'docker') {
+    if (selections['method'] == 'conda') {
+        // Handle conda requests
+        $(linux_opts).addClass("disabled");
+    } else if (selections['method'] == 'docker') {
         // Handle docker requests
         $(pkg_opts).addClass("disabled");
         $("#all").removeClass("disabled");
