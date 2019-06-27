@@ -709,6 +709,7 @@ a.blue-btn:hover,
     margin: 0.2em;
     padding: 0.3em;
     cursor: pointer;
+    line-height: 1.5em;
 }
 
 .selector .options .option .svg-inline--fa {
@@ -792,6 +793,11 @@ body.short h2 {
     padding-bottom: 30px;
 }
 
+
+/* font awesome overrides */
+.option i.fas, i.fab {
+    line-height: inherit !important;
+}
 
 /* responsive screen breakpoints */
 /* default is above on 1280px extra large */
