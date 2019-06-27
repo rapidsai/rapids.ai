@@ -17,7 +17,8 @@
                     <div class='option-label'>Packages</div>
                     <div id='cudf' class='option'>cuDF</div>
                     <div id='cuml' class='option'>cuML</div>
-                    <div id='both' class='option'>cuDF & cuML</div>
+                    <div id='cugraph' class='option'>cuGraph</div>
+                    <div id='all' class='option'>All Packages</div>
                 </div>
                 <div class='linux'>
                     <div class='option-label'>Linux</div>
@@ -48,7 +49,7 @@
 </section>
 <script type="text/javascript">
 /* Adopted from https://pytorch.org/assets/quick-start-module.js */
-var pkg = ['cudf', 'cuml', 'both'];
+var pkg = ['cudf', 'cuml', 'cugraph', 'all'];
 var method = ['conda', 'docker', 'source'];
 var release = ['stable', 'nightly'];
 var linux = ['ubuntu1604', 'ubuntu1804', 'centos7'];
@@ -68,7 +69,7 @@ var details = {
 }
 // Set initial choices
 var selections = {
-    pkg: 'both',
+    pkg: 'all',
     method: 'conda',
     release: 'stable',
     linux: 'ubuntu1604',
@@ -120,13 +121,13 @@ function processClick(options, click, category) {
     if (selections['method'] == 'docker') {
         // Handle docker requests
         $(pkg_opts).addClass("disabled");
-        $("#both").removeClass("disabled");
-        $("#both").addClass("active");
-        selections['pkg'] = 'both';
+        $("#all").removeClass("disabled");
+        $("#all").addClass("active");
+        selections['pkg'] = 'all';
     } else if (selections['method'] == 'source') {
         // Handle source requests
-        $("#both").addClass("disabled");
-        if (selections['pkg'] == 'both') {
+        $("#all").addClass("disabled");
+        if (selections['pkg'] == 'all') {
             selections['pkg'] = 'cudf';
         }
         $(linux_opts).removeClass("active");

@@ -114,7 +114,7 @@ For instructions on how to build a development conda environment, see the **[cuD
 ## <i class="far fa-file-code"></i> Build From Source
 {: .section-subtitle-top-2}
 
-Checkout the **[cuDF README](https://github.com/rapidsai/cudf/tree/master#development-setup){: target="_blank"}** or **[cuML README](https://github.com/rapidsai/cuml/tree/master#installing-from-source){: target="_blank"}** for from-source build instructions.
+Checkout the **[cuDF README](https://github.com/rapidsai/cudf/tree/master#development-setup){: target="_blank"}**, **[cuML README](https://github.com/rapidsai/cuml/tree/master#installing-from-source){: target="_blank"}**, or **[cuGraph README](https://github.com/rapidsai/cugraph/tree/master#build-from-source-and-contributing){: target="_blank"}** for from-source build instructions.
 
 ## <i class="fas fa-laptop-code"></i> Where is Pip?
 {: .section-subtitle-top-2}
