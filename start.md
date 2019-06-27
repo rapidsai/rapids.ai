@@ -39,16 +39,19 @@ RAPIDS uses optimized **[NVIDIA CUDA®](https://developer.nvidia.com/cuda-toolki
 We suggest that you take a look at the sample workflow in our Docker container (described below), which illustrates just how straightforward a basic XGBoost model training and testing workflow looks in RAPIDS.
 
 ## Prerequisites 
-<i class="fas fa-exclamation-triangle text-purple"></i> NVIDIA Pascal™ GPU architecture or better
+<i class="fas fa-microchip text-purple"></i> **GPU:** NVIDIA Pascal™ architecture or better; [compute capability](https://developer.nvidia.com/cuda-gpus) 6.0+
 {: .no-tb-margins }
 
-<i class="fas fa-exclamation-triangle text-purple"></i> **[CUDA 9.2](https://developer.nvidia.com/cuda-92-download-archive){: target="_blank"} with driver v396.37+** or **[CUDA 10.0](https://developer.nvidia.com/cuda-10.0-download-archive){: target="_blank"} with driver v410.48+**
+<i class="fas fa-download text-purple"></i> **CUDA:** **[9.2](https://developer.nvidia.com/cuda-92-download-archive){: target="_blank"} with driver v396.37+** or **[10.0](https://developer.nvidia.com/cuda-10.0-download-archive){: target="_blank"} with driver v410.48+**
 {: .no-tb-margins }
 
-<i class="fas fa-exclamation-triangle text-purple"></i> Ubuntu 16.04 or 18.04 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-exclamation-circle text-pink"></i> CUDA 10.1 is *not supported in v0.8*, support will be added soon
 {: .no-tb-margins }
 
-<i class="fas fa-exclamation-triangle text-purple"></i> **For Docker Images:** Docker CE v18+ and **[NVIDIA-docker v2+](https://github.com/nvidia/nvidia-docker/wiki/Frequently-Asked-Questions#how-do-i-install-20-if-im-not-using-the-latest-docker-version){: target="_blank"}** 
+<i class="fas fa-desktop text-purple"></i> **Supported OS:** Ubuntu 16.04/18.04 & CentOS 7 with gcc 5.4 & 7.3
+{: .no-tb-margins }
+
+<i class="fab fa-docker text-purple"></i> **Docker Requirements:** Docker CE v18+ and **[NVIDIA-docker v2+](https://github.com/nvidia/nvidia-docker/wiki/Frequently-Asked-Questions#how-do-i-install-20-if-im-not-using-the-latest-docker-version){: target="_blank"}** 
 {: .no-tb-margins }
 
 {% endcapture %}
