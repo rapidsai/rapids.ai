@@ -56,7 +56,7 @@ Take a deep dive into XGBoost’s algorithms with Tianqi Chen and Carlos Guestri
 Learn about the XGBoost algorithms used on GPUs in these blogs from Rory Mitchell, a RAPIDS team member and core XGBoost contributor. <br>
 <i class="fas fa-caret-right"></i> **[Gradient Boosting, Decision Trees and XGBoost with CUDA](https://devblogs.nvidia.com/gradient-boosting-decision-trees-xgboost-cuda/){: target="_blank"}** <br>
 <i class="fas fa-caret-right"></i> **[Updates to the XGBoost GPU algorithms](https://xgboost.ai/2018/07/04/gpu-xgboost-update.html){: target="_blank"}** <br>
-<i class="fas fa-caret-right"></i> **[Bias Variance Decompositions using XGBoost](https://devglogs.nvidia.com/bias-variance-decompositions-using-xgboost){: target="_blank"}** <br>
+<i class="fas fa-caret-right"></i> **[Bias Variance Decompositions using XGBoost](https://devblogs.nvidia.com/bias-variance-decompositions-using-xgboost/){: target="_blank"}** <br>
 
 
 {% endcapture %}
