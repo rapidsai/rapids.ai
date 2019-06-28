@@ -2,7 +2,7 @@
     <div id="tweet-list" class="container-padding"> </div>
 </section>
 <script>
-$.getJSON("{{ site.baseurl }}/posts.json")
+$.getJSON("{{ site.postsurl }}")
     .done(function(json) {
 
     	var topThree = json.twitter.slice(0,3)

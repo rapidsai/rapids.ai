@@ -7,6 +7,7 @@ brand_tagline: "Open GPU Data Science"
 brand_button: "GET STARTED"
 brand_link: "start.html"
 layout: default
+name: index
 ---
 
 # GPU DATA SCIENCE

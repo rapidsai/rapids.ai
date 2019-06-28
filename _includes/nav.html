@@ -5,7 +5,7 @@
   <ul>
   {% for item in site.data.navigation %}
     {% unless item.link contains 'http' %}
-        <li class="{% if page.url contains item.name %}active{% endif %}"><a href="{{ item.link | prepend: site.baseurl }}">{{ item.nav }}</a></li>
+        <li class="{% if page.url contains item.link %}active{% elsif page.name contains item.name %}active{% endif %}"><a href="{{ item.link | prepend: site.baseurl }}">{{ item.nav }}</a></li>
     {% else %}
         <li><a href="{{ item.link }}" target="_blank">{{ item.nav }}</a></li>
     {% endunless %}

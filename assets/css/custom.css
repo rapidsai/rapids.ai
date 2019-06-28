@@ -214,7 +214,7 @@ nav .menu {
 
 header {
     background: url(../images/header-bg.svg) top center no-repeat;
-    min-height: 370px;
+    min-height: 400px;
     background-size: cover;
 }
 
@@ -254,8 +254,8 @@ header {
     /* chrome behavior */
     z-index: auto;
     width: 100%;
-    height: 7vw;
-    margin-top: 6vw;
+    height: 20vw;
+    margin-top: 4vw;
     -webkit-transform: skewY(-3deg);
     transform: skewY(-3deg);
     -webkit-box-shadow: 0 -2px 2px 0 rgba(0,0,0,0.2);
@@ -509,8 +509,11 @@ a h2:hover,
 }
 
 .blog-image {
-    width: 100%;
     max-height: 170px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
 }
 
 .tweet-text {
@@ -706,6 +709,7 @@ a.blue-btn:hover,
     margin: 0.2em;
     padding: 0.3em;
     cursor: pointer;
+    line-height: 1.5em;
 }
 
 .selector .options .option .svg-inline--fa {
@@ -795,6 +799,11 @@ code.tag {
 }
 
 
+/* font awesome overrides */
+.option i.fas, i.fab {
+    line-height: inherit !important;
+}
+
 /* responsive screen breakpoints */
 /* default is above on 1280px extra large */
 /* based on https://purecss.io/grids/ */
@@ -877,7 +886,19 @@ code.tag {
     }
 
     .blog-image {
-        max-height: inherit;
+        max-height: 130px;
+    }
+
+    .section-subtitle-top-1 {
+        margin-top: 0em;
+    }
+
+    .half-image {
+        width: 100%;
+    }
+
+    .third-image {
+        width: 100%;
     }
 
     .section-subtitle-top-1 {

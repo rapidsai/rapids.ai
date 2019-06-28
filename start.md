@@ -39,16 +39,19 @@ RAPIDS uses optimized **[NVIDIA CUDA®](https://developer.nvidia.com/cuda-toolki
 We suggest that you take a look at the sample workflow in our Docker container (described below), which illustrates just how straightforward a basic XGBoost model training and testing workflow looks in RAPIDS.
 
 ## Prerequisites 
-<i class="fas fa-exclamation-triangle text-purple"></i> NVIDIA Pascal™ GPU architecture or better
+<i class="fas fa-microchip text-purple"></i> **GPU:** NVIDIA Pascal™ or better with [compute capability](https://developer.nvidia.com/cuda-gpus) 6.0+
 {: .no-tb-margins }
 
-<i class="fas fa-exclamation-triangle text-purple"></i> **[CUDA 9.2](https://developer.nvidia.com/cuda-92-download-archive){: target="_blank"} with driver v396.37+** or **[CUDA 10.0](https://developer.nvidia.com/cuda-10.0-download-archive){: target="_blank"} with driver v410.48+**
+<i class="fas fa-desktop text-purple"></i> **Supported OS:** Ubuntu 16.04/18.04 or CentOS 7 with gcc 5.4 & 7.3
 {: .no-tb-margins }
 
-<i class="fas fa-exclamation-triangle text-purple"></i> Ubuntu 16.04 or 18.04 
+<i class="fab fa-docker text-purple"></i> **Docker Prereqs:** Docker CE v18+ and **[NVIDIA-docker v2+](https://github.com/nvidia/nvidia-docker/wiki/Frequently-Asked-Questions#how-do-i-install-20-if-im-not-using-the-latest-docker-version){: target="_blank"}** 
 {: .no-tb-margins }
 
-<i class="fas fa-exclamation-triangle text-purple"></i> **For Docker Images:** Docker CE v18+ and **[NVIDIA-docker v2+](https://github.com/nvidia/nvidia-docker/wiki/Frequently-Asked-Questions#how-do-i-install-20-if-im-not-using-the-latest-docker-version){: target="_blank"}** 
+<i class="fas fa-download text-purple"></i> **CUDA:** **[9.2](https://developer.nvidia.com/cuda-92-download-archive){: target="_blank"} with driver v396.37+** or **[10.0](https://developer.nvidia.com/cuda-10.0-download-archive){: target="_blank"} with driver v410.48+**
+{: .no-tb-margins }
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-exclamation-circle text-pink"></i> CUDA 10.1 is *not supported in v0.8*, support will be added soon
 {: .no-tb-margins }
 
 {% endcapture %}
@@ -111,7 +114,7 @@ For instructions on how to build a development conda environment, see the **[cuD
 ## <i class="far fa-file-code"></i> Build From Source
 {: .section-subtitle-top-2}
 
-Checkout the **[cuDF README](https://github.com/rapidsai/cudf/tree/master#development-setup){: target="_blank"}** or **[cuML README](https://github.com/rapidsai/cuml/tree/master#installing-from-source){: target="_blank"}** for from-source build instructions.
+Checkout the **[cuDF README](https://github.com/rapidsai/cudf/tree/master#development-setup){: target="_blank"}**, **[cuML README](https://github.com/rapidsai/cuml/tree/master#installing-from-source){: target="_blank"}**, or **[cuGraph README](https://github.com/rapidsai/cugraph/tree/master#build-from-source-and-contributing){: target="_blank"}** for from-source build instructions.
 
 ## <i class="fas fa-laptop-code"></i> Where is Pip?
 {: .section-subtitle-top-2}
