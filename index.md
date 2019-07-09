@@ -151,9 +151,9 @@ RAPIDS is committed to open source. We strive for a major release **every 6 week
     <circle class="cls-3" cx="22.46" cy="22.78" r="7.6" />
     <circle class="cls-3" cx="154.12" cy="22.78" r="7.6" />
     <circle class="cls-3" cx="285.78" cy="22.78" r="7.6" />
-    <text class="cls-4" transform="translate(10.28 10.32)">0.70</text>
-    <text class="cls-4" transform="translate(143.08 10.32)">0.80</text>
-    <text class="cls-4" transform="translate(274.74 10.32)">0.90</text>
+    <text class="cls-4" transform="translate(10.28 10.32)">&nbsp;0.7</text>
+    <text class="cls-4" transform="translate(143.08 10.32)">&nbsp;0.8</text>
+    <text class="cls-4" transform="translate(274.74 10.32)">&nbsp;0.9</text>
     <text class="cls-5" transform="translate(0 49.41)">MAY 2019</text>
     <text class="cls-5" transform="translate(131.13 49.41)">JUN 2019</text>
     <text class="cls-5" transform="translate(263.52 49.41)">AUG 2019</text>
