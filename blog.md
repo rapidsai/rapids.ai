@@ -1,42 +1,36 @@
 ---
-title: Blog | RAPIDS
+title: "Blog | RAPIDS"
 og_title: "RAPIDS Blog"
-og_description: "RAPIDS is a suite of software libraries for executing end-to-end data science & analytics pipelines entirely on GPUs."
-brand_name: "BLOG"
-brand_tagline: "Open GPU Data Science"
+og_description: "Read the Latest News and Announcements on Our RAPIDS Blog"
+tagline: "Read Our Latest News"
 layout: short
 ---
+{% include tag-list-sorted.html %}
 
-## Latest Blog Posts
-
-<div class="features-row">
-  <ul>
-  {% for category in site.categories %}
-    {% if category[0] == "blog" %}
-      {% for post in category[1] %}
-        <li>
-          <h3><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h3>
-          <p>{{ post.date | date_to_string }}
-          {% assign author = site.authors | where: 'short_name', post.author | first %}
-          {% if author %}
-           - <a href="{{ author.url }}">{{ author.name }}</a>
-          {% else %}
-           - {{ post.author }}
-          {% endif %}
-          </p>
-          <p>{{ post.excerpt }}</p>
-          <p><a href="{{ site.baseurl }}{{ post.url }}">Read more...</a></p>
-        </li>
-        {% assign mod = forloop.index | modulo: 3 %}
-        {% if mod == 0 %}
-          </ul></div><div class="features-row"><ul>
-        {% endif %}
-      {% endfor %}
-    {% endif %}
-  {% endfor %}
-  </ul>
-</div>
-
-## Find posts by tags
+<section class="blog-container container-padding">
+{% for category in site.categories %}
+  {% if category[0] == "blog" %}
+    {% for post in category[1] %}
+      <div class="blog-preview-item">
+          <h1><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a></h1>
+          <div class="post-excerpt">{{ post.excerpt }}</div>
+          <a class="post-read-more" href="{{ site.baseurl }}{{ post.url }}">Read More <i class="fas fa-angle-double-right"></i></a>
+          <div class="posts-date"> <i class="far fa-calendar"></i> {{ post.date | date_to_string }} </div>
+          <div class="posts-author">
+            {% assign authorlist = post.author | split: ", " %}
+            {% for person in authorlist %}
+              {% assign author = site.authors | where: 'short_name', person | first %}
+              {% if author %}
+                 <i class="fas fa-pen"></i> <a href="{{ site.baseurl }}{{ author.url }}">{{ author.name }}</a> &nbsp;
+              {% else %}
+                <i class="fas fa-pen"></i> {{ person }} &nbsp;
+              {% endif %}
+            {% endfor %}
+          </div>
+      </div>
+    {% endfor %}
+  {% endif %}
+{% endfor %}
+</section>
 
 {% include tag-list.html %}

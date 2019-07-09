@@ -1,6 +1,7 @@
 ---
 layout: tag
-title: "Tag: data-science"
+title: "RAPIDS: data-science"
+tagline: "Read Our Latest News"
 tag: data-science
 robots: noindex
 ---

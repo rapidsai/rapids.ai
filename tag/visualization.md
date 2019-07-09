@@ -1,6 +1,7 @@
 ---
 layout: tag
-title: "Tag: visualization"
+title: "RAPIDS: visualization"
+tagline: "Read Our Latest News"
 tag: visualization
 robots: noindex
 ---

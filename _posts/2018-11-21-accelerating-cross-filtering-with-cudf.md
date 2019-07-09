@@ -3,7 +3,7 @@ layout: post
 og_title: "RAPIDS Blog"
 og_description: "Read the latest news and announcements on our RAPIDS Blog"
 title: "Accelerating Cross Filtering with cuDF"
-tagline: "Read Our Latest News"
+tagline: "Read Our Latest News and Announcements"
 categories: [blog]
 tags: data-science rapids cudf visualization data-visualization
 author: aenemark
@@ -13,7 +13,7 @@ excerpt_separator: <!--more-->
 {% capture url %} {{ site.baseurl }}/assets/images/blog/cuXfilter-yell.png {% endcapture %}
 {% include post-image.html 
 	image-url=url
-	caption=""
+	caption="cuXfilter talks data science"
 	alt="cuXfilter" 
 	link="" 
 %}

@@ -1,6 +1,7 @@
 ---
 layout: tag
-title: "Tag: cudf"
+title: "RAPIDS: cudf"
+tagline: "Read Our Latest News"
 tag: cudf
 robots: noindex
 ---

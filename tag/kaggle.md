@@ -1,6 +1,7 @@
 ---
 layout: tag
-title: "Tag: kaggle"
+title: "RAPIDS: kaggle"
+tagline: "Read Our Latest News"
 tag: kaggle
 robots: noindex
 ---

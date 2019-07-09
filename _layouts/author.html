@@ -1,18 +1,21 @@
 ---
 layout: short
 ---
-<h1>{{ page.name }}</h1>
-<img src="{{ page.photo }}"/>
-<h4>{{ page.position }}</h4>
-<a href="{{ page.medium }}"><i class="fab fa-medium fa-2x"></i></a>&nbsp;
-<a href="{{ page.twitter }}"><i class="fab fa-twitter fa-2x"></i></a>
-
-{{ content }}
-
-<h4>Posts</h4>
-<ul>
-  {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
-  {% for post in filtered_posts %}
-    <li>{{ post.date | date_to_string }} - <a href="{{ post.url }}">{{ post.title }}</a></li>
-  {% endfor %}
-</ul>
+<section class="author-container">
+	<img class="author-image" src="{{ page.photo }}"/>
+	<div class="author-meta">
+		<h1 class="author-name">{{ page.name }}</h1>
+		<div class="author-title">{{ page.position }}</div>
+		<div class="author-desc">{{ content }}</div>
+		<div class="author-soc">
+			<a href="{{ page.medium }}" title="medium"><i class="fab fa-medium"></i></a>
+			<a href="{{ page.twitter }}" title="twitter"><i class="fab fa-twitter"></i></a>
+		</div>
+		<div class="author-posts">
+		  {% assign filtered_posts = site.posts | where: 'author', page.short_name %}
+		  {% for post in filtered_posts %}
+		   	<div class="author-posts-item"> <i class="far fa-file-alt"></i> {{ post.date | date_to_string }}  <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> </div>
+		  {% endfor %}
+		</div>
+	</div>
+</section>

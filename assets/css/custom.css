@@ -79,9 +79,10 @@ h3 {
 }
 
 
-p {
+p, ol, ul {
     color: #666666;
     font-size: 1.1em;
+    letter-spacing: normal;
     line-height: 1.55em;
     margin-top: 0em;
     margin-bottom: 1.6em;
@@ -193,12 +194,19 @@ nav .menu {
     box-shadow: 4px 1px 11px rgba(0, 0, 0, 0.20);
 }
 
+header {
+    background: url(../images/header-bg.svg) top center no-repeat;
+    min-height: 400px;
+    background-size: cover;
+}
+
 .header-branding {
     text-align: center;
-    padding-top: 5em;
+    padding-top: 6em;
 }
 
 .header-tagline {
+    text-transform: inherit;
     font-size: 2em;
     text-align: center;
     font-weight: 400;
@@ -212,10 +220,10 @@ nav .menu {
     margin: 0 auto;
 }
 
-header {
+.header-short {
     background: url(../images/header-bg.svg) top center no-repeat;
-    min-height: 400px;
-    background-size: cover;
+    min-height: 230px;
+    background-size: cover;  
 }
 
 /* layout */
@@ -775,6 +783,167 @@ a.blue-btn,
     margin-top: 1em;
 }
 
+/* blog posts */
+.blog-container h1, .posts-container h1 {
+    margin-bottom: 0.1em;
+    padding-top: 0.5em;
+    border-top: 2px solid #7306ff;
+}
+
+.blog-preview-item {
+    margin-top: 1em;
+    margin-bottom: 3em;
+    vertical-align: top;
+    width: 32%;
+    display: inline-block;
+}
+
+.blog-preview-item h1 {
+    font-size: 1.6em;
+}
+
+.blog-preview-item:nth-child(1n+0) {
+    padding-right: 1em;
+}
+
+.blog-preview-item:nth-child(2n+0) {
+    padding-left: 1em;
+    padding-right: 1em;
+}
+
+.blog-preview-item:nth-child(3n+0) {
+    padding-right: 0em;
+}
+
+.posts-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0em 1em;
+}
+
+.posts-tag {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    margin-top: 2em;
+    text-align: center;
+}
+
+.post-tag-item {
+    display: inline-block;
+    color: #7400ff;
+    font-weight: 600;
+    font-size: 0.9em;
+    border: 1.5px solid #7400ff;
+    padding: 0.25em 0.4em 0.3em 0.4em;
+    border-radius: 0.8em;
+    margin: 0.2em;
+}
+
+.post-tag-item:hover {
+    border-color: #ffb500;
+    color: #ffb500
+}
+
+.posts-container h2, .posts-container h3, .posts-container h4 {
+    margin-top: 3em;
+}
+
+.post-excerpt {
+    margin-top: 0em;
+    margin-bottom: 0em;
+}
+
+.post-read-more {
+    display: inline-block;
+    font-size: 1em;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
+
+.posts-date {
+    font-size: 1em;
+    color: #ababab;
+}
+
+.posts-author {
+    font-size: 1em;
+    color: #ababab;
+    margin-bottom: 0.5em;
+}
+
+.posts-image-container {
+    width: 100%
+}
+
+.posts-image {
+    width: 100%
+}
+
+.posts-image-caption {
+    text-align: center;
+    color: gray;
+    font-size: 1.2em;
+    margin-bottom: 1em;
+}
+
+
+/* author */
+.author-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 0em 1em;
+}
+
+.author-image {
+    width: 145px;
+    height: 145px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.author-meta {
+    min-height: 30em;
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 1em;
+}
+
+.author-name {
+    margin-top: 0em;
+    font-size: 2em;
+}
+
+.author-title {
+    font-size: 1.4em;
+    color: #ababab;
+    margin-top: -1em;
+}
+
+
+.author-desc {
+    color: #666666;
+}
+
+.author-soc {
+    font-size: 1.6em;
+}
+
+.author-posts {
+    font-size: 1em;
+    color: #ababab;
+    margin-top: 1.6em;
+    margin-bottom: 0.5em;
+}
+
+.author-posts-item {
+    margin-bottom: 0.5em;
+}
+
 
 /* _layout/short.html */
 header.short {
@@ -913,6 +1082,33 @@ code.tag {
         width: 100%;
     }
 
+    /* blog */
+    .blog-preview-item {
+        width: 100%;
+    }
+
+    .blog-preview-item:nth-child(1n+0) {
+        padding-right: 0em
+    }
+
+    .blog-preview-item:nth-child(2n+0) {
+        padding-left: 0em;
+        padding-right: 0em;
+    }
+
+    .blog-preview-item:nth-child(3n+0) {
+        padding-right: 0em;
+    }
+
+    /* author */
+    .author-image {
+        width: 100%;
+        height: auto;
+    }
+
+    .author-meta {
+        padding-left: 0em;
+    }
 
 }
 

@@ -1,6 +1,7 @@
 ---
 layout: tag
-title: "Tag: astronomy"
+title: "RAPIDS: astronomy"
+tagline: "Read Our Latest News"
 tag: astronomy
 robots: noindex
 ---

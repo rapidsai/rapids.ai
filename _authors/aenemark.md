@@ -1,6 +1,7 @@
 ---
-short_name: allan
+short_name: aenemark
 title: "Allan Enemark"
+tagline: "Author Profile"
 name: "Allan Enemark"
 position: "RAPIDS Design & Viz Lead"
 twitter: "https://twitter.com/exactlyAllan"
