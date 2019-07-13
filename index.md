@@ -20,7 +20,7 @@ The RAPIDS suite of open source software libraries gives you the freedom to exec
 
 {% capture about_top_middle %}
 ## <i class="fas fa-expand-arrows-alt"></i> Scale Out on GPUS
-Seamlessly scale from GPU workstations to multi-GPU servers and multi-node clusters with Dask. **[Learn more about Dask <i class="fas fa-angle-double-right"></i>](https://dask.org/){: target="_blank"}**
+Seamlessly scale from GPU workstations to multi-GPU servers and multi-node clusters with Dask. **[Learn more about Dask <i class="fas fa-angle-double-right"></i>](dask.html)**
 {% endcapture %}
 
 {% capture about_top_right %}
@@ -35,12 +35,12 @@ Increase machine learning model accuracy by iterating on models faster and deplo
 
 {% capture about_bottom_middle %}
 ## <i class="far fa-clock"></i> Reduced Training Time
-Drastically improve your productivity with more interactive data science.
+Drastically improve your productivity with more interactive data science. **[Learn more about XGBoost <i class="fas fa-angle-double-right"></i>](xgboost.html)**
 {% endcapture %}
 
 {% capture about_bottom_right %}
 ## <i class="fas fa-code-branch"></i> Open Source
-RAPIDS is an open source project. Supported by NVIDIA, it also relies on numba, apache arrow, and many more open source projects . **[Learn more <i class="fas fa-angle-double-right"></i>](community.html)**
+RAPIDS is an open source project. Supported by NVIDIA, it also relies on numba, apache arrow, and many more open source projects. **[Learn more <i class="fas fa-angle-double-right"></i>](community.html)**
 {% endcapture %}
 
 {% include section-double-thirds.html 
@@ -151,9 +151,9 @@ RAPIDS is committed to open source. We strive for a major release **every 6 week
     <circle class="cls-3" cx="22.46" cy="22.78" r="7.6" />
     <circle class="cls-3" cx="154.12" cy="22.78" r="7.6" />
     <circle class="cls-3" cx="285.78" cy="22.78" r="7.6" />
-    <text class="cls-4" transform="translate(10.28 10.32)">0.70</text>
-    <text class="cls-4" transform="translate(143.08 10.32)">0.80</text>
-    <text class="cls-4" transform="translate(274.74 10.32)">0.90</text>
+    <text class="cls-4" transform="translate(10.28 10.32)">0.7</text>
+    <text class="cls-4" transform="translate(143.08 10.32)">0.8</text>
+    <text class="cls-4" transform="translate(274.74 10.32)">0.9</text>
     <text class="cls-5" transform="translate(0 49.41)">MAY 2019</text>
     <text class="cls-5" transform="translate(131.13 49.41)">JUN 2019</text>
     <text class="cls-5" transform="translate(263.52 49.41)">AUG 2019</text>
@@ -276,7 +276,7 @@ Dask is an open source project providing advanced parallelism for analytics that
 {% capture com_mid %}
 ## <i class="fas fa-code-branch"></i> RAPIDS + XGBoost
 
-XGBoost is a well-known gradient boosted decision trees (GBDT) machine learning package used to tackle regression, classification, and ranking problems. The RAPIDS team works closely with the Distributed Machine Learning Common (DMLC) XGBoost organization to upstream code and ensure that all components of the GPU-accelerated analytics ecosystem work smoothly together. **[Learn more on our XGBoost page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](xgboost.html)**
+XGBoost is a well-known gradient boosted decision trees (GBDT) machine learning package used to tackle regression, classification, and ranking problems. The RAPIDS team works closely with the Distributed Machine Learning Common (DMLC) XGBoost organization to upstream code and ensure that all components of the GPU-accelerated analytics ecosystem work together. **[Learn more on our XGBoost page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](xgboost.html)**
 {% endcapture %}
 
 {% capture com_right %}
