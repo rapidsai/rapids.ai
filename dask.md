@@ -203,7 +203,7 @@ Dask is widely and routinely used, running on everything from laptops to thousan
 {% capture uc_left %}
 ## <i class="fas fa-store-alt"></i> Retail
 
-Data science and devops teams in the retail industry use Dask to scale their pipelines; taking pandas and machine learning workloads to terabytes of data easily. The Dask interface makes it easy to load in terabytes of tabular data, transform the data with libraries like pandas or RAPIDS cuDF using parallel compute, and pass it off to machine learning–training libraries at scale.
+Data science and devops teams in the retail industry use Dask to scale their pipelines; taking pandas and machine learning workloads to terabytes of data easily. The Dask interface makes it easy to load in terabytes of tabular data, transform the data with libraries like pandas or RAPIDS cuDF using parallel compute, and pass it off to machine learning–training libraries at scale. See how **[one major retailer](https://www.youtube.com/watch?v=OQjko2H7xec&feature=youtu.be){: target="_blank"}** is using RAPIDS and Dask to generate more accurate forecasting models.
 
 {% endcapture %}
 {% capture uc_mid %}
