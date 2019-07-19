@@ -86,7 +86,7 @@ Modeled after 10 Minutes to Pandas, this is a short introduction to cuDF that is
 ## <i class="far fa-bookmark"></i> 10 Minutes to Dask-XGBoost
 {: .section-subtitle-top-1}
 
-A short introduction to XGBoost with a distributed CUDA DataFrame via Dask-cuDF. **[Go to guide <i class="fas fa-angle-double-right"></i>](https://rapidsai.github.io/projects/cudf/en/0.7.0/dask-xgb-10min.html){: target="_blank"}**
+A short introduction to XGBoost with a distributed CUDA DataFrame via Dask-cuDF. **[Go to guide <i class="fas fa-angle-double-right"></i>](https://rapidsai.github.io/projects/cudf/en/latest/dask-xgb-10min.html){: target="_blank"}**
 
 
 ## <i class="far fa-bookmark"></i> Example Notebooks
@@ -151,9 +151,9 @@ RAPIDS is committed to open source. We strive for a major release **every 6 week
     <circle class="cls-3" cx="22.46" cy="22.78" r="7.6" />
     <circle class="cls-3" cx="154.12" cy="22.78" r="7.6" />
     <circle class="cls-3" cx="285.78" cy="22.78" r="7.6" />
-    <text class="cls-4" transform="translate(10.28 10.32)">0.7</text>
-    <text class="cls-4" transform="translate(143.08 10.32)">0.8</text>
-    <text class="cls-4" transform="translate(274.74 10.32)">0.9</text>
+    <text class="cls-4" transform="translate(10.28 10.32)">&nbsp;0.7</text>
+    <text class="cls-4" transform="translate(143.08 10.32)">&nbsp;0.8</text>
+    <text class="cls-4" transform="translate(274.74 10.32)">&nbsp;0.9</text>
     <text class="cls-5" transform="translate(0 49.41)">MAY 2019</text>
     <text class="cls-5" transform="translate(131.13 49.41)">JUN 2019</text>
     <text class="cls-5" transform="translate(263.52 49.41)">AUG 2019</text>
