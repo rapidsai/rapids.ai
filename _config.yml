@@ -9,6 +9,8 @@ plugins:
 collections:
   authors:
     output: true
+  posts:
+    output: true
 
 defaults:
   - scope:
