@@ -9,16 +9,13 @@ tags: machine-learning gpu nvidia kaggle astronomy
 author: aenemark, mwendt, Bob Ross
 excerpt_separator: <!--more-->
 ---
-{% include post-image.html 
-	image-url="https://cdn-images-1.medium.com/max/1600/1*oeustFcjTXUVPCXM6qe9Pw.png" 
-	caption="" 
-	link="" 
-%}
+
+![intro](https://cdn-images-1.medium.com/max/1600/1*oeustFcjTXUVPCXM6qe9Pw.png)
 
 Classification of astronomical sources in the night sky is important for understanding the universe. It helps us understand the properties of what makes up celestial systems from our solar system to the most distant galaxy and everything in between.<!--more--> The **[Photometric LSST Astronomical Time-Series Classification Challenge (PLAsTiCC)](https://www.kaggle.com/c/PLAsTiCC-2018)** wanted to revolutionize the field by automatically classify 10–100x faster than previous methods and provided Kagglers a great dataset for solving this Kaggle problem using machine learning. I am honored to represent [RAPIDS.ai](https://rapids.ai) for this competition and ended up with **[8th place out of 1094](https://www.kaggle.com/c/PLAsTiCC-2018/leaderboard) teams**! My solution achieved an up to **140x speedup for ETL and 25x end-to-end speedup over the CPU solution**. Here is the story how we make sense of the universe in a RAPIDS way 🚀.
 
 <script src="https://gist.github.com/daxiongshu/57d079b8233bcfa25787ca70649cd11a.js"></script>
-> If you just dive into the code, here is the [full rapids demo notebook and source code link](https://github.com/daxiongshu/notebooks/tree/kaggle/kaggle)
+If you just dive into the code, here is the [full rapids demo notebook and source code link](https://github.com/daxiongshu/notebooks/tree/kaggle/kaggle)
 
 ## Background
 
@@ -29,12 +26,9 @@ In this Kaggle challenge, a training data set of 7000 objects and a test data se
 1. time series of observations of the objects, or so called light curves,
 2. meta features that do not vary over time.
 
-{% include post-image.html 
-	image-url="https://cdn-images-1.medium.com/max/1600/1*35YAp_KSqDNrVfBU51xbMg.png" 
-	caption="The light curve time series by LSST of object 615 with all six passbands."
-	alt="Light Curve time series" 
-	link="" 
-%}
+![Light Curve time series](https://cdn-images-1.medium.com/max/1600/1*35YAp_KSqDNrVfBU51xbMg.png)
+*The light curve time series by LSST of object 615 with all six passbands.*
+
 
 The light curve time series is the most critical information for solving the puzzle. There are some common challenges with time series classification, like:
 
@@ -43,12 +37,8 @@ The light curve time series is the most critical information for solving the puz
 
 ## Solution Overview
 
-{% include post-image.html 
-	image-url="https://cdn-images-1.medium.com/max/1600/1*tv0fuN-usAsQLJzTj1zSLQ.png" 
-	caption="Solution Overview"
-	alt="sky"
-	link="" 
-%}
+![sky](https://cdn-images-1.medium.com/max/1600/1*tv0fuN-usAsQLJzTj1zSLQ.png)
+*Solution Overview*
 
 An all-GPU solution is implemented with Rapids.ai libraries and tensorflow:
 
@@ -66,7 +56,12 @@ RAPIDS’ cudf is crucial to efficient feature engineering and feature selection
 
 The GPU based cudf achieves amazing speedup compared to the CPU based pandas. In general, it is at least **10x faster** for reading data and groupby aggregation. For the best case, **groupby and aggregation with *skew*** function, cudf achieves **120x~140x speedup!!** Although the *skew* function is not supported directly by cudf, I implemented a workaround with cudf’s *[apply_grouped](https://github.com/rapidsai/cudf/blob/fcccb51a2d5e0764a4461ae46f3bc0fd885dee43/python/cudf/tests/test_groupby.py#L206)* primitives and *numba* to write GPU kernel functions.
 
-<script src="https://gist.github.com/daxiongshu/fd59a85590357b98f223532c18fab280.js"></script>
+```python
+got = df.groupby('object_id').apply_grouped(compute_skew,
+                              incols=['flux'],
+                              outcols={'skew_flux': np.float64}
+                              tpb=32)
+```
 
 The *apply_grouped* method launches one kernel, *compute_skew* in this case, for each group in parallel. In other words, all we need to implement is *[compute_skew](https://github.com/daxiongshu/notebooks/blob/kaggle/kaggle/cudf_workaround.py#L66)* and everything else is taken care of by cudf. This is a great example that showcases both the performance and the flexibility of cudf.
 
@@ -80,14 +75,8 @@ With the solid feature engineering, I created several good base models that can 
 
 Stacking is a non-linear ensemble technique where new features are generated from the base models’ predictions in a cross validation manner.
 
-
-{% include post-image.html 
-	image-url="https://cdn-images-1.medium.com/max/1600/1*HTCRhhqGOWhZ0KFYdLJqiQ.jpeg" 
-	caption="Image from Kazanova’s stacknet blog"
-	alt="Kazanova’s stacknet blog" 
-	link="http://blog.kaggle.com/2017/06/15/stacking-made-easy-an-introduction-to-stacknet-by-competitions-grandmaster-marios-michailidis-kazanova/" 
-%}
-
+![Kazanova’s stacknet blog](https://cdn-images-1.medium.com/max/1600/1*HTCRhhqGOWhZ0KFYdLJqiQ.jpeg)
+*[Image from Kazanova’s stacknet blog](http://blog.kaggle.com/2017/06/15/stacking-made-easy-an-introduction-to-stacknet-by-competitions-grandmaster-marios-michailidis-kazanova/)*
 
 [Self-training](https://en.wikipedia.org/wiki/Semi-supervised_learning) is a semi-supervised technique where the predictions are used as pseudo labels. Different from stacking, self-training can train the unlabelled test data with pseudo labels, which essentially augment the training data. In this competition, the size of test data is 500x of training data so self-training can be very effective. Specifically, I built a bidirectional RNN to learn from the raw light curve time series directly with self-training so that it can complement the manually crafted features by cudf. All the test data are used for training the RNN and all the original training data are just used for validation and early stopping. In this way, we enforce the RNN to learn a middle ground that can fit the pseudo labels of test data and true labels of training data simultaneously. The loop of feature engineering, stacking and self training is repeated until the holdout validation accuracy converged. More details about stacking and self-training can be found at my [kaggle post](https://www.kaggle.com/c/PLAsTiCC-2018/discussion/75012).
 
@@ -102,6 +91,7 @@ Rapids is so fast and powerful that sometimes I forgot it is only three months o
 ## Conclusion
 
 This competition is a fantastic learning process for me. Without any astronomical background, I achieved amazing results through systematic iterative trial and error. And it is not possible without the lightspeed [rapids.ai](https://rapids.ai) library. This reminds me why I love machine learning in the first place: with enough data, the *right library*, and massive computing power, the model can be (almost) as good as any domain experts 😃.
+
 
 
 

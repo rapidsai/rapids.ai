@@ -1,8 +1,0 @@
-<div class="posts-image-container">
-	<img class="posts-image" src="{{ include.image-url }}" alt="{{ include.alt }}">
-	{% if include.link !="" %}
-		<div class="posts-image-caption"><a class="posts-caption-link" href="{{ include.link }}" target="_blank" >{{ include.caption }}</a></div>
-	{% else %}
-		<div class="posts-image-caption">{{ include.caption }}</div>
-	{% endif %}
-</div>

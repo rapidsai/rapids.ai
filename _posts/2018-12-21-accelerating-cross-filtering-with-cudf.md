@@ -10,13 +10,7 @@ author: aenemark
 thumbnail_location: assets/images/blog/cuXfilter-yell-thumb.png
 excerpt_separator: <!--more-->
 ---
-{% capture url %} {{ site.baseurl }}/assets/images/blog/cuXfilter-yell.png {% endcapture %}
-{% include post-image.html 
-	image-url=url
-	caption=""
-	alt="cuXfilter" 
-	link="" 
-%}
+![cuxfilter]({{ site.baseurl }}/assets/images/blog/cuXfilter-yell.png)
 
 
 RAPIDS is all about enabling data scientists with enterprise grade tools and GPU performance. Visualization being a key component in a data scientist’s toolbox, we are naturally working on ways to accelerate that experience.<!--more-->

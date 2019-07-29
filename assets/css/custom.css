@@ -874,18 +874,19 @@ a.blue-btn,
     margin-bottom: 0.5em;
 }
 
-.posts-image-container {
-    width: 100%
+.posts-container img {
+    width: 100%;
 }
 
-.posts-image {
-    width: 100%
+.post-excerpt img {
+    width: 100%;
 }
 
-.posts-image-caption {
+.posts-container img + em {
+    display: inline-block;
+    width: 100%;
     text-align: center;
     color: gray;
-    font-size: 1.2em;
     margin-bottom: 1em;
 }
 
