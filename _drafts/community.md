@@ -62,7 +62,7 @@ layout: default
                 <img src="{{ site.baseurl }}{% link /assets/images/anaconda.png %}" alt="anaconda">
             </div>
             <div class="contributing-logo">
-                <img src="{{ site.baseurl }}{% link /assets/images/blazingdb.png %}" alt="blazingdb">
+                <img src="{{ site.baseurl }}{% link /assets/images/blazingsql.png %}" alt="blazingsql">
             </div>
             <div class="contributing-logo">
                 <img src="{{ site.baseurl }}{% link /assets/images/Gunrock_Color.png %}" alt="gunrock">

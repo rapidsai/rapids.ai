@@ -40,8 +40,14 @@ The RAPIDS team is developing, contributing, and collaborating closely with nume
 {% endcapture %}
 
 {% capture proj_right %}
-## <i class="fas fa-code-branch"></i> RAPIDS + Dask
+
+## <i class="fas fa-code-branch"></i> RAPIDS + BlazingSQL
 {: .section-subtitle-top-1}
+
+BlazingSQL is an open source project providing distributed SQL for analytics that enables the integration of enterprise data at scale. RAPIDS is actively contributing to BlazingSQL, and it integrates with RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. <br> **[Learn more on our blazingSQL page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](blazingsql.html)**
+
+
+## <i class="fas fa-code-branch"></i> RAPIDS + Dask
 
 Dask is an open source project providing advanced parallelism for analytics that enables performance at scale. RAPIDS is actively contributing to Dask, and it integrates with both RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. <br> **[Learn more on our Dask page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](dask.html)**
 
