@@ -29,7 +29,7 @@ BlazingSQL is an incredibly fast distributed SQL engine on GPUs. BlazingSQL enab
 {% capture benefit_left %}
 
 ## <i class="fas fa-sort-amount-up-alt"></i> ETL at Scale
-Distributed architecture scales to thousands of GPUs. 
+Distributed architecture scale to dozens of GPUs. 
 <br>
 <!-- **[Read Blog <i class="fas fa-angle-double-right"></i>](https://blog.blazingdb.com/)**-->
 {: .padding-bottom-4em}
