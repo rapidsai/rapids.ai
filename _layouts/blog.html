@@ -43,7 +43,7 @@
   {% include head-adobe-analytics.html %}
 </head>
 <body>
-<header>
+<header class="header-short">
   <div id="nav-fixed" class="position-fixed">
     {% include nav.html %}
   </div>
@@ -51,10 +51,9 @@
     <div class="header-logo">
       <a href="{{ site.baseurl }}"><img src="{{ site.baseurl }}{% link /assets/images/rapids-logo.svg %}" alt="RAPIDS logo"></a>
     </div>
-    <h1 class="header-tagline">{{ page.brand_tagline }}</h1>
-    <a href="{{ page.brand_link }}" class="blue-btn">{{ page.brand_button }}</a>
+    <div class="blog-tagline">{% include tag-list.html %}</div>
   </div>
-  <div class="slopecap-header"></div>
+
 </header>
 
 {{ content }}

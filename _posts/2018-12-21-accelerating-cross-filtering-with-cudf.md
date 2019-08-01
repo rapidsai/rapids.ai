@@ -1,15 +1,17 @@
 ---
 layout: post
+og_title: "RAPIDS Blog"
+og_description: "Read the latest news and announcements on our RAPIDS Blog"
 title: "Accelerating Cross Filtering with cuDF"
+tagline: "Read Our Latest News"
 categories: [blog]
-tags: ['data science','rapids','cudf','visualization','data visualization']
-author: Allan Enemark
+tags: data-science rapids cudf visualization data-visualization
+author: aenemark
+thumbnail_location: assets/images/blog/cuXfilter-yell-thumb.png
 excerpt_separator: <!--more-->
-brand_name: "BLOG"
-brand_tagline: "Open GPU Data Science"
 ---
+![cuxfilter]({{ site.baseurl }}/assets/images/blog/cuXfilter-yell.png)
 
-> ![Sample Pic](https://cdn-images-1.medium.com/max/1600/1*wJsInVArmvRiNsaSImSEPg.png)
 
 RAPIDS is all about enabling data scientists with enterprise grade tools and GPU performance. Visualization being a key component in a data scientist’s toolbox, we are naturally working on ways to accelerate that experience.<!--more-->
 

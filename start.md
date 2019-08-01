@@ -39,7 +39,7 @@ RAPIDS uses optimized **[NVIDIA CUDA®](https://developer.nvidia.com/cuda-toolki
 We suggest that you take a look at the sample workflow in our Docker container (described below), which illustrates just how straightforward a basic XGBoost model training and testing workflow looks in RAPIDS.
 
 ## Prerequisites 
-<i class="fas fa-microchip text-purple"></i> **GPU:** NVIDIA Pascal™ or better with [compute capability](https://developer.nvidia.com/cuda-gpus) 6.0+
+<i class="fas fa-microchip text-purple"></i> **GPU:** NVIDIA Pascal™ or better with **[compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 6.0+
 {: .no-tb-margins }
 
 <i class="fas fa-desktop text-purple"></i> **Supported OS:** Ubuntu 16.04/18.04 or CentOS 7 with gcc 5.4 & 7.3
