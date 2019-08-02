@@ -9,8 +9,6 @@ thumbnail: https://cdn-images-1.medium.com/max/1600/1*oeustFcjTXUVPCXM6qe9Pw.png
 layout: post
 ---
 
-![intro](https://cdn-images-1.medium.com/max/1600/1*oeustFcjTXUVPCXM6qe9Pw.png)
-
 Classification of astronomical sources in the night sky is important for understanding the universe. It helps us understand the properties of what makes up celestial systems from our solar system to the most distant galaxy and everything in between.<!--more--> The **[Photometric LSST Astronomical Time-Series Classification Challenge (PLAsTiCC)](https://www.kaggle.com/c/PLAsTiCC-2018)** wanted to revolutionize the field by automatically classify 10–100x faster than previous methods and provided Kagglers a great dataset for solving this Kaggle problem using machine learning. I am honored to represent [RAPIDS.ai](https://rapids.ai) for this competition and ended up with **[8th place out of 1094](https://www.kaggle.com/c/PLAsTiCC-2018/leaderboard) teams**! My solution achieved an up to **140x speedup for ETL and 25x end-to-end speedup over the CPU solution**. Here is the story how we make sense of the universe in a RAPIDS way 🚀.
 
 <script src="https://gist.github.com/daxiongshu/57d079b8233bcfa25787ca70649cd11a.js"></script>
