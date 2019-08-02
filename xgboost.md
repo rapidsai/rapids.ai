@@ -1,11 +1,9 @@
 ---
-title: "RAPIDS + XGBoost | RAPIDS"
-og_title: "RAPIDS + XGBoost"
-og_description: "Learn How to Deploy XGBoost on GPUs"
-brand_name: ""
-brand_tagline: "Learn How to Deploy XGBoost on GPUs"
-brand_button: "XGBOOST.IO"
-brand_link: "https://xgboost.readthedocs.io"
+title: "RAPIDS + XGBoost"
+description: "Learn How to Deploy XGBoost on GPUs"
+tagline: "Deploy XGBoost on GPUs"
+button_text: "XGBOOST.IO"
+button_link: "https://xgboost.readthedocs.io"
 layout: default
 ---
 

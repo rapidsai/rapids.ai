@@ -1,11 +1,9 @@
 ---
-title: "RAPIDS + Spark | RAPIDS"
-og_title: "RAPIDS + Spark"
-og_description: "Learn How to use Spark on GPUs"
-brand_name: ""
-brand_tagline: "Learn How to use Spark on GPUs"
-brand_button: "SPARK.APACHE.ORG"
-brand_link: "https://spark.apache.org/"
+title: "RAPIDS + Spark"
+description: "Learn How to use Spark on GPUs"
+tagline: "Use Spark on GPUs"
+button_text: "SPARK.APACHE.ORG"
+button_link: "https://spark.apache.org/"
 layout: default
 ---
 

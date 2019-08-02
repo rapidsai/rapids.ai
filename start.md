@@ -1,13 +1,11 @@
 ---
-title: "Technical Documentation, Docker Container | RAPIDS"
-og_title: "RAPIDS Getting Started"
-og_description: "Get started with RAPIDS using conda, docker, pip, or from source builds."
-brand_name: ""
-brand_tagline: "Try RAPIDS Now"
-brand_button: "LAUNCH IN COLAB"
-brand_link: "https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y#forceEdit=true&offline=true&sandboxMode=true"
+title: "Getting Started"
+description: "Get started with RAPIDS using conda, docker, or from source builds."
+tagline: "Try RAPIDS Now"
+button_text: "LAUNCH IN COLAB"
+button_link: "https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y#forceEdit=true&offline=true&sandboxMode=true"
 layout: default
-redirect_from: "/documentation.html"
+redirect_from: "/documentation.html" # redirect from old page to ensure existing links still work
 ---
 
 {% capture start_left %}

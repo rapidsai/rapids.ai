@@ -1,10 +1,14 @@
 ---
+title: "Blog Posts by Tag"
+description: "Explore RAPIDS blog posts sorted by tags"
+tagline: "Explore Our Blogs"
 layout: short
-title: Blog Posts by Tag | RAPIDS
-brand_name: BLOG
 permalink: /tag/
 ---
 
-Click on a tag to see relevant list of posts.
-
 {% include tag-list.html %}
+
+## Most Recent Blogs
+{: .posts-tag}
+
+{% include blogs-recent.html %}

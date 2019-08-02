@@ -211,7 +211,7 @@ header {
     text-align: center;
     font-weight: 400;
     color: #ffffff;
-    margin-top: 0;
+    margin-top: 0.25em;
     margin-bottom: 0.5em;
 }
 
@@ -878,7 +878,7 @@ a.blue-btn,
     width: 100%;
 }
 
-.post-excerpt img {
+.post-thumbnail img {
     width: 100%;
 }
 

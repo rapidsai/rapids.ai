@@ -1,11 +1,9 @@
 ---
-title: "RAPIDS + Dask | RAPIDS"
-og_title: "RAPIDS + Dask"
-og_description: "Learn How to Use Dask with GPUs"
-brand_name: ""
-brand_tagline: "Scale Python with Dask on GPUs"
-brand_button: "DASK.ORG"
-brand_link: "https://dask.org/"
+title: "RAPIDS + Dask"
+description: "Learn How to Use Dask with GPUs"
+tagline: "Scale Python with Dask on GPUs"
+button_text: "DASK.ORG"
+button_link: "https://dask.org/"
 layout: default
 ---
 
