@@ -1,7 +1,6 @@
 ---
-title: "Blog | RAPIDS"
-og_title: "RAPIDS Blog"
-og_description: "Read the Latest News and Announcements on Our RAPIDS Blog"
+title: "Blog"
+description: "Read the Latest News and Announcements on Our RAPIDS Blog"
 tagline: "Read Our Latest News"
 layout: short
 ---

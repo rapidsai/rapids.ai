@@ -1,7 +1,8 @@
 ---
+title: "Blog Posts by Tag"
+description: "Explore RAPIDS blog posts sorted by tags"
+tagline: "Explore Our Blogs"
 layout: short
-title: Blog Posts by Tag | RAPIDS
-brand_name: BLOG
 permalink: /tag/
 ---
 
