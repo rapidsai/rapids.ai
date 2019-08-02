@@ -6,6 +6,9 @@ layout: short
 permalink: /tag/
 ---
 
-Click on a tag to see relevant list of posts.
-
 {% include tag-list.html %}
+
+## Most Recent Blogs
+{: .posts-tag}
+
+{% include blogs-recent.html %}
