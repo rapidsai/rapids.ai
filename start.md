@@ -1,7 +1,6 @@
 ---
-title: "Technical Documentation, Docker Container | RAPIDS"
-og_title: "RAPIDS Getting Started"
-og_description: "Get started with RAPIDS using conda, docker, pip, or from source builds."
+title: "Getting Started"
+description: "Get started with RAPIDS using conda, docker, or from source builds."
 brand_name: ""
 brand_tagline: "Try RAPIDS Now"
 brand_button: "LAUNCH IN COLAB"

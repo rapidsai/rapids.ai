@@ -1,13 +1,11 @@
 ---
-title: "Open GPU Data Science | RAPIDS"
-og_title: "RAPIDS: A Data Science & Analytics Pipeline Accelerator"
-og_description: "A suite of software libraries for executing end-to-end data science completely on GPUs"
-brand_name: ""
-brand_tagline: "Open GPU Data Science"
-brand_button: "GET STARTED"
-brand_link: "start.html"
+title: "Open GPU Data Science"
+description: "A suite of software libraries for executing end-to-end data science completely on GPUs"
+tagline: "Open GPU Data Science"
+button_text: "GET STARTED"
+button_link: "start.html"
 layout: default
-name: index
+name: index # added to fix issue with nav bar not highlighting index page
 ---
 
 # GPU DATA SCIENCE
