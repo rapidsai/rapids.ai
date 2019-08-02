@@ -1,7 +1,8 @@
 ---
 layout: tag
-title: "RAPIDS: cudf"
-tagline: "Read Our Latest News"
+title: "'cudf' Tagged Blog Posts"
+description: "Explore RAPIDS blog posts tagged 'cudf'"
+tagline: "Explore Our Blogs"
 tag: cudf
 robots: noindex
 ---
