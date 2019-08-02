@@ -1,14 +1,12 @@
 ---
-layout: post
-og_title: "RAPIDS Blog"
-og_description: "Read the latest news and announcements on our RAPIDS Blog"
 title: "Accelerating Cross Filtering with cuDF"
+description: "RAPIDS is all about enabling data scientists with enterprise grade tools and GPU performance. Visualization being a key component in a data scientist’s toolbox, we are naturally working on ways to accelerate that experience."
 tagline: "Read Our Latest News"
 categories: [blog]
 tags: data-science rapids cudf visualization data-visualization
 author: aenemark
-thumbnail_location: assets/images/blog/cuXfilter-yell-thumb.png
-excerpt_separator: <!--more-->
+thumbnail: /assets/images/blog/cuXfilter-yell-thumb.png
+layout: post
 ---
 ![cuxfilter]({{ site.baseurl }}/assets/images/blog/cuXfilter-yell.png)
 

@@ -1,13 +1,12 @@
 ---
-layout: post
-og_title: "RAPIDS Blog"
-og_description: "Read the latest news and announcements on our RAPIDS Blog"
 title: "Make Sense of the Universe with Rapids.ai"
-tagline: "Read Our Latest News and Announcements"
+description: "Classification of astronomical sources in the night sky is important for understanding the universe. It helps us understand the properties of what makes up celestial systems from our solar system to the most distant galaxy and everything in between."
+tagline: "Read Our Latest News"
 categories: [blog]
 tags: machine-learning gpu nvidia kaggle astronomy
 author: aenemark, mwendt, Bob Ross
-excerpt_separator: <!--more-->
+thumbnail: https://cdn-images-1.medium.com/max/1600/1*oeustFcjTXUVPCXM6qe9Pw.png
+layout: post
 ---
 
 ![intro](https://cdn-images-1.medium.com/max/1600/1*oeustFcjTXUVPCXM6qe9Pw.png)
