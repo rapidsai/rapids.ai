@@ -48,7 +48,14 @@ if not os.path.exists(tag_dir):
 for tag in total_tags:
     tag_filename = tag_dir + tag + '.md'
     f = open(tag_filename, 'a')
-    write_str = '---\nlayout: tag\ntitle: \"RAPIDS: ' + tag + '\"\ntagline: \"Read Our Latest News\"\ntag: ' + tag + '\nrobots: noindex\n---\n'
+    write_str = '---\n' + \
+                'layout: tag\n' + \
+                'title: \"\'' + tag + '\' Tagged Blog Posts\"\n' + \
+                'description: \"Explore RAPIDS blog posts tagged \'' + tag + '\'\"\n' + \
+                'tagline: \"Explore Our Blogs\"\n' + \
+                'tag: ' + tag + '\n' + \
+                'robots: noindex\n' + \
+                '---\n'
     f.write(write_str)
     f.close()
 print("Tags generated, count", total_tags.__len__())
