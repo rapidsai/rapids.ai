@@ -62,7 +62,7 @@ h4 {
 }
 
 h1 {
-    font-size: 2.5em;
+    font-size: 3em;
     text-transform: uppercase;
     margin-bottom: 0.5em;
 }
@@ -370,8 +370,16 @@ header {
     padding-top: 3em;
 }
 
+.padding-top-4em {
+    padding-top: 3em;
+}
+
 .padding-top-5em {
     padding-top: 5em;
+}
+
+.padding-top-6em {
+    padding-top: 6em;
 }
 
 .padding-top-10em {
@@ -400,6 +408,10 @@ header {
 
 .padding-bottom-5em {
     padding-bottom: 5em;
+}
+
+.padding-bottom-6em {
+    padding-bottom: 6em;
 }
 
 .padding-bottom-10em {
@@ -457,10 +469,6 @@ header {
 
 .background-orange {
     background-color: #ffb500;
-}
-
-.background-blazingsql {
-    background-color: #e9f4f4;;
 }
 
 .text-white {
@@ -607,16 +615,6 @@ a h2:hover,
     padding-top: 0.2em;
     color: #9944ff;
     text-shadow: 1px 1px 2px #521798;
-}
-.btn-blazingsql-demo{
-    display: inline-block;
-    font-size: 1.5em;
-    margin: 0.2em 0em;
-    padding: 5px 25px;
-    background-color: #7400ff;
-    border-radius: 100px;
-    color: #FFF;
-    text-decoration: none;
 }
 .image-blazingsql-benefits{
     position: relative;
@@ -949,7 +947,7 @@ body.short h2 {
         position: relative;
         left: 50%;
         width: 270px;
-        margin: 2.1em 0em 0.3em 0em;
+        margin: 2em 0em;
         transform: translate(-50%)
     }
     .image-blazingsql-benefits{
