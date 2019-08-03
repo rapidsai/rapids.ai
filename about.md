@@ -35,13 +35,11 @@ Our focus on Python allows RAPIDS to play well with most data science visualizat
 {% endcapture %}
 
 {% capture about_bottom_left %}
-<img class="half-image" src="{{ site.baseurl }}{% link /assets/images/EaseVsPerformance.svg %}" alt="ease">
-{: .flex-center}
+<img class="half-image-center" src="{{ site.baseurl }}{% link /assets/images/EaseVsPerformance.svg %}" alt="ease">
 {% endcapture %}
 
 {% capture about_bottom_right %}
-<img class="full-image" src="{{ site.baseurl }}{% link /assets/images/rapids-end-to-end-performance-chart-oss-page-r4.svg %}" alt="performance">
-{: .flex-center}
+<img class="full-image-center" src="{{ site.baseurl }}{% link /assets/images/rapids-end-to-end-performance-chart-oss-page-r4.svg %}" alt="performance">
 {% endcapture %}
 
 {% include section-double-halfs.html

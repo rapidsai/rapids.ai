@@ -22,7 +22,7 @@ Depending on the desired layout, a section heading may be outside or inside of t
 * section-thirds: 1x3 Row by Cols
 * section-double-thirds: 2x3 Row by Cols
 * section-onethird-twothird: 1x2 Row by Cols (1/3 2/3)
-* section-thwothird-onethird: 1x2 Row by Cols (2/3 1/3)
+* section-twothird-onethird: 1x2 Row by Cols (2/3 1/3)
 
 #### Sections
 Section content is generally formatted as follows, but be sure to view the html file for the exact capture variable names to pass to the include. Background can be: `background-white / background-gray / background-purple / background-darkpurple.` Padding-top and padding-bottom can be: `0 / 1 / 2`. To get the diagonal background effect, you must include `slopecap`, for both the top and bottom of a section. Position can be `top / bottom` and slope can be `up / down`. Section-thirds has a Banner option that can be: blank or `banner-row`. Exact formatting might require some tinkering...
@@ -82,7 +82,9 @@ These examples are made possible by the new Jekyll site and can either be used i
 
 Will create these as issues in the future, but wanted to capture where we are at the moment.
 
-- [ ] Finish site blog to mirror Medium
+- [ ] Add featured section in blogs
+- [ ] Add pagination to blogs
+- [ ] Port over blogs
 
 
 ## Contributing
