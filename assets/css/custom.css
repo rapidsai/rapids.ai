@@ -338,7 +338,6 @@ header {
 .subtitle {
     font-size: 1.4em;
     line-height: 1.2em;
-    margin-top: -0.7em;
 }
 
 .section-title-thirds {
@@ -379,8 +378,16 @@ header {
     padding-top: 3em;
 }
 
+.padding-top-4em {
+    padding-top: 3em;
+}
+
 .padding-top-5em {
     padding-top: 5em;
+}
+
+.padding-top-6em {
+    padding-top: 6em;
 }
 
 .padding-top-10em {
@@ -403,12 +410,23 @@ header {
     padding-bottom: 3em;
 }
 
+.padding-bottom-4em {
+    padding-bottom: 4em;
+}
+
 .padding-bottom-5em {
     padding-bottom: 5em;
 }
 
+.padding-bottom-6em {
+    padding-bottom: 6em;
+}
+
 .padding-bottom-10em {
     padding-bottom: 10em;
+}
+.margin-top-0em{
+    margin-top: 0em;
 }
 
 .no-tb-margins {
@@ -469,6 +487,10 @@ header {
     color: #ababab;
 }
 
+.text-dark {
+    color: #666666;
+}
+
 .text-purple {
     color: #9943ff;
 }
@@ -487,6 +509,10 @@ header {
 
 .text-pink {
     color: #d216d2;
+}
+
+.text-hade {
+    color: #309287;
 }
 
 
@@ -576,6 +602,14 @@ a h2:hover,
     transform: translate(-50%)
 }
 
+.projects-logo-bsql {
+    position: relative;
+    left: 50%;
+    width: 400px;
+    transform: translate(-50%)
+}
+
+
 .dask-icon {
     text-align: center;
     width: 100%;
@@ -583,6 +617,20 @@ a h2:hover,
     padding-top: 0.2em;
     color: #9944ff;
     text-shadow: 1px 1px 2px #521798;
+}
+.blazingsql-icon {
+    text-align: center;
+    width: 100%;
+    font-size: 5em;
+    padding-top: 0.2em;
+    color: #9944ff;
+    text-shadow: 1px 1px 2px #521798;
+}
+.image-blazingsql-benefits{
+    position: relative;
+    left: 50%;
+    max-width: 320px;
+    transform: translate(-50%)
 }
 
 /* footer */
@@ -1018,7 +1066,9 @@ code.tag {
     }
 
     h1 {
-        font-size: 2.5em;
+        font-size: 1.9em;
+        line-height: 1em;
+        margin: 0.5em 0em 0.5em 0em;
     }
 
     .subtitle {
@@ -1071,18 +1121,6 @@ code.tag {
         width: 100%;
     }
 
-    .section-subtitle-top-1 {
-        margin-top: 0em;
-    }
-
-    .half-image {
-        width: 100%;
-    }
-
-    .third-image {
-        width: 100%;
-    }
-
     /* blog */
     .blog-preview-item {
         width: 100%;
@@ -1109,6 +1147,16 @@ code.tag {
 
     .author-meta {
         padding-left: 0em;
+    }
+
+    /* projects */
+    
+    .projects-logo-bsql {
+        position: relative;
+        left: 50%;
+        width: 270px;
+        margin: 2em 0em;
+        transform: translate(-50%)
     }
 
 }
