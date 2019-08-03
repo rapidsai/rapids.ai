@@ -1,11 +1,9 @@
 ---
-title: "RAPIDS + BlazingSQL | RAPIDS"
-og_title: "RAPIDS + BlazingSQL"
-og_description: "Blazing Fast SQL on RAPIDS"
-brand_name: ""
-brand_tagline: "Blazing Fast SQL on RAPIDS"
-brand_button: "BLAZINGSQL.COM"
-brand_link: "https://blazingsql.com/"
+title: "RAPIDS + BlazingSQL"
+description: "Blazing Fast SQL on RAPIDS with BlazingSQL"
+tagline: "Blazing Fast SQL on RAPIDS"
+button_text: "BLAZINGSQL.COM"
+button_link: "https://blazingsql.com/"
 layout: default
 ---
 
@@ -77,7 +75,7 @@ The fastest way to get up and running is with Google Colab, a free web-based int
 ## <i class="fab fa-readme"></i> Learn More
 {: .section-subtitle-top-1}
 
-Learn more about Colab, our Docker Container, and getting started. **[More info on BlazingSQL <i class="fas fa-angle-double-right"></i>](https://www.blazingsql.com/getstarted){: target="_blank"}**
+Learn more about Colab, our Docker Container, and getting started. **[More on BlazingSQL <i class="fas fa-angle-double-right"></i>](https://www.blazingsql.com/getstarted){: target="_blank"}**
 
 ## <i class="far fa-file-code"></i> Access BlazingSQL Docs
 See the latest **[documentation from BlazingSQL <i class="fas fa-angle-double-right"></i>](https://docs.blazingdb.com/docs){: target="_blank"}**
