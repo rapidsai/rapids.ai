@@ -1,13 +1,11 @@
 ---
-title: "Technical Documentation, Docker Container | RAPIDS"
-og_title: "RAPIDS Getting Started"
-og_description: "Get started with RAPIDS using conda, docker, pip, or from source builds."
-brand_name: ""
-brand_tagline: "Try RAPIDS Now"
-brand_button: "LAUNCH IN COLAB"
-brand_link: "https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y#forceEdit=true&offline=true&sandboxMode=true"
+title: "Getting Started"
+description: "Get started with RAPIDS using conda, docker, or from source builds."
+tagline: "Try RAPIDS Now"
+button_text: "LAUNCH IN COLAB"
+button_link: "https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y#forceEdit=true&offline=true&sandboxMode=true"
 layout: default
-redirect_from: "/documentation.html"
+redirect_from: "/documentation.html" # redirect from old page to ensure existing links still work
 ---
 
 {% capture start_left %}
@@ -39,7 +37,7 @@ RAPIDS uses optimized **[NVIDIA CUDA®](https://developer.nvidia.com/cuda-toolki
 We suggest that you take a look at the sample workflow in our Docker container (described below), which illustrates just how straightforward a basic XGBoost model training and testing workflow looks in RAPIDS.
 
 ## Prerequisites 
-<i class="fas fa-microchip text-purple"></i> **GPU:** NVIDIA Pascal™ or better with [compute capability](https://developer.nvidia.com/cuda-gpus) 6.0+
+<i class="fas fa-microchip text-purple"></i> **GPU:** NVIDIA Pascal™ or better with **[compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 6.0+
 {: .no-tb-margins }
 
 <i class="fas fa-desktop text-purple"></i> **Supported OS:** Ubuntu 16.04/18.04 or CentOS 7 with gcc 5.4 & 7.3

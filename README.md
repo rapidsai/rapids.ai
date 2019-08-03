@@ -66,7 +66,7 @@ Links should use the following format, with `_target` being unnecessary if the l
 Font Awesome Icons are fun, but use them accordingly. They are one of the few exceptions to including in line HTML. See the [free gallery here](https://fontawesome.com/icons?d=gallery&m=free).
 
 #### Twitter and Medium 
-Twitter and Medium sections content are updated from the local `post.json` file, which is updated a few times a day with an external job. 
+Twitter and Medium sections content are updated from the `post.json` file posted the `postsurl` repo specified in `_config.yml`, which is updated a few times a day with an external job. 
 
 
 ### Experimental feature examples

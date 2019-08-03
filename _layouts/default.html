@@ -2,13 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="description" content="{{ page.og_description }}">
+  <meta name="description" content="{{ page.description }}">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <meta property="fb:app_id" content="1679326302390196"/>
-  <meta property="og:title" content="{{ page.og_title }}"/>
+  <meta property="og:title" content="{{ page.title }} | RAPIDS"/>
   <meta property="og:type" content="Website"/>
-  <meta property="og:description" content="{{ page.og_description }}"/>
+  <meta property="og:description" content="{{ page.description }}"/>
   <meta name="og:site_name" content="RAPIDS"/>
   <meta property="og:image" content="{{ site.baseurl }}{% link /assets/images/og_image.png %}"/>
   <meta property="og:image:secure_url" content="{{ site.baseurl }}{% link /assets/images/og_image.png %}"/>
@@ -18,13 +18,13 @@
   <meta property="og:image:alt" content="RAPIDS Logo"/>
 
   <meta name="twitter:site" content="https://twitter.com/rapidsai"/>
-  <meta name="twitter:card" content="{{ page.og_title }}"/>
+  <meta name="twitter:card" content="{{ page.title }} | RAPIDS"/>
   <meta name="twitter:image" content="{{ site.baseurl }}{% link /assets/images/og_image.png %}"/>
   <meta name="twitter:creator" content="@RAPIDSAI"/>
-  <meta name="twitter:title" content="{{ page.og_title }}"/>
-  <meta name="twitter:description" content="{{ page.og_description }}"/>
+  <meta name="twitter:title" content="{{ page.title }} | RAPIDS"/>
+  <meta name="twitter:description" content="{{ page.description }}"/>
 
-  <title>{{ page.title }}</title>
+  <title>{{ page.title }} | RAPIDS</title>
 
   <link rel='shortcut icon' type='image/x-icon' href='{{ site.baseurl }}{% link /assets/favicon.ico %}' />
 
@@ -51,8 +51,8 @@
     <div class="header-logo">
       <a href="{{ site.baseurl }}"><img src="{{ site.baseurl }}{% link /assets/images/rapids-logo.svg %}" alt="RAPIDS logo"></a>
     </div>
-    <h4 class="header-tagline">{{ page.brand_tagline }}</h4>
-    <a href="{{ page.brand_link }}" class="blue-btn">{{ page.brand_button }}</a>
+    <h1 class="header-tagline">{{ page.tagline }}</h1>
+    <a href="{{ page.button_link }}" class="blue-btn">{{ page.button_text }}</a>
   </div>
   <div class="slopecap-header"></div>
 </header>

@@ -1,15 +1,14 @@
 ---
-title: "RAPIDS + Dask | RAPIDS"
-og_title: "RAPIDS + Dask"
-og_description: "Learn How to Use Dask with GPUs"
-brand_name: ""
-brand_tagline: "Scale Python with Dask on GPUs"
-brand_button: "DASK.ORG"
-brand_link: "https://dask.org/"
+title: "RAPIDS + Dask"
+description: "Learn How to Use Dask with GPUs"
+tagline: "Scale Python with Dask on GPUs"
+button_text: "DASK.ORG"
+button_link: "https://dask.org/"
 layout: default
 ---
 
 ![Dask]({{ site.baseurl }}{% link /assets/images/dask.svg %}){: .projects-logo}
+
 
 # Scale Python with Ease 
 {: .section-title-full}
@@ -137,7 +136,7 @@ The RAPIDS **[cuDF library](https://github.com/rapidsai/cudf){: target="_blank"}
 ## XGBoost Integration
 XGBoost, the popular open source machine learning library for gradient boosting, now includes integrated support for Dask. Users can partition data across nodes using Dask’s standard data structures, build a DMatrix on each GPU using `xgboost.dask.create_worker_dmatrix`, and then launch training through `xgboost.dask.run`. See the xgboost.dask documentation or the **[Dask+XGBoost GPU example code](https://github.com/dmlc/xgboost/blob/master/demo/dask/dask_gpu_demo.py){: target="_blank"}** for more details.
 
-**Note**: This support is currently available in custom builds, and it is expected to be included in the next official release of XGBoost **after 0.90**. New users should check out the **[10 Minutes to Dask-XGBoost guide](https://rapidsai.github.io/projects/cudf/en/0.7.0/dask-xgb-10min.html){: target="_blank"}** to get started quickly.
+**Note**: This support is currently available in custom builds, and it is expected to be included in the next official release of XGBoost **after 0.90**. New users should check out the **[10 Minutes to Dask-XGBoost guide](https://rapidsai.github.io/projects/cudf/en/latest/dask-xgb-10min.html){: target="_blank"}** to get started quickly.
 
 {% endcapture %}
 {% capture gpus_xgb_img %}
@@ -202,7 +201,7 @@ Dask is widely and routinely used, running on everything from laptops to thousan
 {% capture uc_left %}
 ## <i class="fas fa-store-alt"></i> Retail
 
-Data science and devops teams in the retail industry use Dask to scale their pipelines; taking pandas and machine learning workloads to terabytes of data easily. The Dask interface makes it easy to load in terabytes of tabular data, transform the data with libraries like pandas or RAPIDS cuDF using parallel compute, and pass it off to machine learning–training libraries at scale.
+Data science and devops teams in the retail industry use Dask to scale their pipelines; taking pandas and machine learning workloads to terabytes of data easily. The Dask interface makes it easy to load in terabytes of tabular data, transform the data with libraries like pandas or RAPIDS cuDF using parallel compute, and pass it off to machine learning–training libraries at scale. See how **[one major retailer](https://www.youtube.com/watch?v=OQjko2H7xec&feature=youtu.be){: target="_blank"}** is using RAPIDS and Dask to generate more accurate forecasting models.
 
 {% endcapture %}
 {% capture uc_mid %}

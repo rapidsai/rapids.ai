@@ -1,11 +1,9 @@
 ---
-title: "RAPIDS Developer and Contributor Community | RAPIDS"
-og_title: "RAPIDS Developer and Contributor Community"
-og_description: "Learn how to become a RAPIDS adopter, contributor and more. Start contributing today!"
-brand_name: ""
-brand_tagline: "Learn How To Contribute To RAPIDS"
-brand_button: "CONTRIBUTE"
-brand_link: "https://github.com/rapidsai"
+title: "RAPIDS Developer and Contributor Community"
+description: "Learn how to become a RAPIDS adopter, contributor and more. Start contributing today!"
+tagline: "Learn How To Contribute To RAPIDS"
+button_text: "CONTRIBUTE"
+button_link: "https://github.com/rapidsai"
 layout: default
 ---
 
@@ -14,15 +12,28 @@ layout: default
 {: .section-title-halfs}
 
 RAPIDS is for everyone: users, adopters, and contributors. If you’re a data scientist, researcher, engineer, or developer using pandas, Dask, scikit-learn, or Spark on CPUs, our **[RAPIDS projects](https://github.com/rapidsai){: target="_blank"}** are almost drop in replacements that can speed up your end-to-end workflow up to 50x.
-{% endcapture %}
 
-{% capture com_right %}
 ## <i class="fas fa-code"></i> Open Source
 {: .section-subtitle-top-1}
 RAPIDS is open sourced under the Apache 2.0 license and is intended to be improved and extended upon by help from the community. While significant time and effort have been invested into making the platform to date, we need active contributors to help build its future.
+{% endcapture %}
 
-## <i class="fab fa-github"></i> Become a Contributor
-Contributors include anyone who helps improve any of our projects, whether by contributing code or reporting issues. We particularly love hearing about how you have used RAPIDS, so give us a mention on **[Twitter](https://twitter.com/rapidsai){: target="_blank"}**. So **[get started](start.html)** with RAPIDS, fork our repositories from GitHub, start building, and open a pull request. You can also join us on **[Google Groups](https://groups.google.com/forum/#!forum/rapidsai){: target="_blank"}** or **[Slack](https://join.slack.com/t/rapids-goai/shared_invite/enQtMjE0Njg5NDQ1MDQxLTViZWFiYTY5MDA4NWY3OWViODg0YWM1MGQ1NzgzNTQwOWI1YjE3NGFlOTVhYjQzYWQ4YjI4NzljYzhiOGZmMGM){: target="_blank"}** to ask questions and let us know what you're working on, too.
+{% capture com_right %}
+## <i class="fas fa-users"></i> Community Onboarding
+{: .section-subtitle-top-1}
+
+Anyone can join our community and contribute to to RAPIDS in a five step onboarding process:
+
+> **<i class="fas fa-download text-purple"></i> 1. Install** RAPIDS using **[Docker or Conda](https://rapids.ai/start.html#get-rapids){: target="_blank"}**, or try it instantly in **[Colabratory](https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**.
+
+> **<i class="far fa-comments text-purple"></i>  2. Join** our community conversations on **[Twitter](https://twitter.com/rapidsai){: target="_blank"}**, **[Google Groups](https://groups.google.com/forum/#!forum/rapidsai){: target="_blank"}**, and **[Slack](https://join.slack.com/t/rapids-goai/shared_invite/enQtMjE0Njg5NDQ1MDQxLTViZWFiYTY5MDA4NWY3OWViODg0YWM1MGQ1NzgzNTQwOWI1YjE3NGFlOTVhYjQzYWQ4YjI4NzljYzhiOGZmMGM){: target="_blank"}**.
+
+> **<i class="fas fa-search text-purple"></i> 3. Explore** our **[docs](https://docs.rapids.ai/){: target="_blank"}**, **[walk through videos](https://www.youtube.com/channel/UCsoi4wfweA3I5FsPgyQnnqw?view_as=subscriber){: target="_blank"}**, **[blog posts](https://medium.com/rapids-ai){: target="_blank"}**, **[tutorial notebooks](https://github.com/rapidsai/notebooks-extended#getting-started-notebooks){: target="_blank"}**, and our **[examples workflows](https://github.com/rapidsai/notebooks-extended#intermediate-notebooks){: target="_blank"}**.
+
+> **<i class="fas fa-hammer text-purple"></i> 4. Build** your own RAPIDS powered data science workflows.
+
+> **<i class="fab fa-github text-purple"></i> 5. Contribute** back by **[reviewing our contribution guidelines](https://docs.rapids.ai/contributing)**, **[filing issues or submitting pull requests](https://github.com/rapidsai){: target="_blank"}**, and don't forget to ask and answer questions on **[Stack Overflow](https://stackoverflow.com/tags/rapids){: target="_blank"}**.
+
 {% endcapture %}
 
 {% include section-halfs.html
@@ -69,7 +80,6 @@ The RAPIDS team is working with the community to build a distributed, open sourc
     content-left-half=proj_left 
     content-right-half=proj_right
 %} 
-
 
 
 # Contributors
