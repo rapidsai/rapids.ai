@@ -57,9 +57,9 @@ Our focus on Python allows RAPIDS to play well with most data science visualizat
     slope="up"
 %}
 {% include cta-footer.html 
-name="Learn more about Data Science on GPUs with RAPIDS" 
-tagline=""
-button="LEARN MORE"
-link="https://medium.com/rapids-ai"
+	name="Learn more about Data Science on GPUs with RAPIDS" 
+	tagline=""
+	button="LEARN MORE"
+	link="https://medium.com/rapids-ai"
 %}
 
