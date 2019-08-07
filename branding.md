@@ -36,7 +36,8 @@ An easy to use RAPIDS theme for Jupyter Notebooks.
 from IPython.core.display import HTML
 import urllib.request
 response = urllib.request.urlopen('https://rapids.ai/assets/files/custom.css')
-HTML(response.read().decode("utf-8"))
+CSSstyle = '<style>' + response.read().decode("utf-8") + ' </style>'
+HTML(CSSstyle)
 ```
 <!-- from https://gist.github.com/rlabbe/0a88151bbf3b4198151f -->
 
