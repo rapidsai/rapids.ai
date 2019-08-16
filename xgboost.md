@@ -38,7 +38,7 @@ The project is well supported and documented by many tutorials, quick-start guid
 Try out XGBoost now, with the basics of cuDF and other RAPIDS libraries, in our online **[XGBoost Colaboratory notebook](https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y){: target="_blank"}**.
 
 ## <i class="far fa-bookmark"></i> Notebook Examples
-To see how XGBoost integrates with cuDF, Dask, and the entire RAPIDS ecosystem, check out these **[RAPIDS notebooks](https://github.com/rapidsai/notebooks-extended){: target="_blank"}** which walk through classification and regression examples.
+To see how XGBoost integrates with cuDF, Dask, and the entire RAPIDS ecosystem, check out these **[RAPIDS notebooks](https://github.com/rapidsai/notebooks-contrib){: target="_blank"}** which walk through classification and regression examples.
 
 {% endcapture %}
 {% capture start_right %}

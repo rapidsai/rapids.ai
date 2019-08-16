@@ -28,7 +28,7 @@ Anyone can join our community and contribute to to RAPIDS in a five step onboard
 
 > **<i class="far fa-comments text-purple"></i>  2. Join** our community conversations on **[Twitter](https://twitter.com/rapidsai){: target="_blank"}**, **[Google Groups](https://groups.google.com/forum/#!forum/rapidsai){: target="_blank"}**, and **[Slack](https://join.slack.com/t/rapids-goai/shared_invite/enQtMjE0Njg5NDQ1MDQxLTViZWFiYTY5MDA4NWY3OWViODg0YWM1MGQ1NzgzNTQwOWI1YjE3NGFlOTVhYjQzYWQ4YjI4NzljYzhiOGZmMGM){: target="_blank"}**.
 
-> **<i class="fas fa-search text-purple"></i> 3. Explore** our **[docs](https://docs.rapids.ai/){: target="_blank"}**, **[walk through videos](https://www.youtube.com/channel/UCsoi4wfweA3I5FsPgyQnnqw?view_as=subscriber){: target="_blank"}**, **[blog posts](https://medium.com/rapids-ai){: target="_blank"}**, **[tutorial notebooks](https://github.com/rapidsai/notebooks-extended#getting-started-notebooks){: target="_blank"}**, and our **[examples workflows](https://github.com/rapidsai/notebooks-extended#intermediate-notebooks){: target="_blank"}**.
+> **<i class="fas fa-search text-purple"></i> 3. Explore** our **[docs](https://docs.rapids.ai/){: target="_blank"}**, **[walk through videos](https://www.youtube.com/channel/UCsoi4wfweA3I5FsPgyQnnqw?view_as=subscriber){: target="_blank"}**, **[blog posts](https://medium.com/rapids-ai){: target="_blank"}**, **[tutorial notebooks](https://github.com/rapidsai/notebooks-contrib#getting-started-notebooks){: target="_blank"}**, and our **[examples workflows](https://github.com/rapidsai/notebooks-contrib#intermediate-notebooks){: target="_blank"}**.
 
 > **<i class="fas fa-hammer text-purple"></i> 4. Build** your own RAPIDS powered data science workflows.
 

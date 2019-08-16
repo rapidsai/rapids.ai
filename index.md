@@ -96,7 +96,7 @@ A Github repository with our introductory examples of XGBoost, cuML demos, cuGra
 ## <i class="far fa-bookmark"></i> Example Notebooks Extended
 {: .section-subtitle-top-1}
 
-A second Github repository with our extended collection of notebook examples. **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-extended){: target="_blank"}**
+A second Github repository with our extended collection of notebook examples. **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-contrib){: target="_blank"}**
 
 
 {% endcapture %}
