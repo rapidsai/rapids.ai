@@ -96,7 +96,7 @@ A Github repository with our introductory examples of XGBoost, cuML demos, cuGra
 ## <i class="far fa-bookmark"></i> Example Notebooks Extended
 {: .section-subtitle-top-1}
 
-A second Github repository with our extended collection of notebook examples. **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-extended){: target="_blank"}**
+A second Github repository with our extended collection of notebook examples. **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-contrib){: target="_blank"}**
 
 
 {% endcapture %}
@@ -265,30 +265,39 @@ RAPIDS Memory Manager (RMM) is a central place for all device memory allocations
 
 # Community Projects
 {: .section-title-full .padding-top-1em}
-{% capture com_left %}
+
+{% capture com_top_left %}
+## <i class="fas fa-code-branch"></i> RAPIDS + BlazingSQL
+
+BlazingSQL is an open source project providing distributed SQL for analytics that enables the integration of enterprise data at scale. RAPIDS is actively contributing to BlazingSQL, and it integrates with RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. **[Learn more on our BlazingSQL page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](blazingsql.html)**
+{% endcapture %}
+
+{% capture com_top_right %}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Dask
 
 Dask is an open source project providing advanced parallelism for analytics that enables performance at scale. RAPIDS is actively contributing to Dask, and it integrates with both RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. **[Learn more on our Dask page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](dask.html)**
 {% endcapture %}
 
-{% capture com_mid %}
+{% capture com_bottom_left %}
 ## <i class="fas fa-code-branch"></i> RAPIDS + XGBoost
 
 XGBoost is a well-known gradient boosted decision trees (GBDT) machine learning package used to tackle regression, classification, and ranking problems. The RAPIDS team works closely with the Distributed Machine Learning Common (DMLC) XGBoost organization to upstream code and ensure that all components of the GPU-accelerated analytics ecosystem work together. **[Learn more on our XGBoost page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](xgboost.html)**
 {% endcapture %}
 
-{% capture com_right %}
+{% capture com_bottom_right %}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Spark
 
 The RAPIDS team is working with the community to build a distributed, open source XGBoost4J-Spark + RAPIDS package. More details coming soon. 
 {% endcapture %}
 
-{% include section-thirds.html 
+
+{% include section-double-halfs.html 
     background="background-white" 
     padding-top="1em" padding-bottom="3em" 
-    content-left-third=com_left
-    content-middle-third=com_mid
-    content-right-third=com_right
+    content-top-left-half=com_top_left
+    content-top-right-half=com_top_right
+    content-bottom-left-half=com_bottom_left
+    content-bottom-right-half=com_bottom_right
 %}
 
 # Contributors
