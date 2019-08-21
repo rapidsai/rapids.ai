@@ -28,8 +28,8 @@
                 </div>
                 <div class='release'>
                     <div class='option-label'>Release</div>
-                    <div id='stable' class='option'>Stable (0.8)</div>
-                    <div id='nightly' class='option'>Nightly (0.9a)</div>
+                    <div id='stable' class='option'>Stable (0.9)</div>
+                    <div id='nightly' class='option'>Nightly (0.10a)</div>
                 </div>
                 <div class='pkg'>
                     <div class='option-label'>Packages</div>
@@ -68,7 +68,7 @@
 <script type="text/javascript">
 /* Adopted from https://pytorch.org/assets/quick-start-module.js */
 var pkg = ['cudf', 'cuml', 'cugraph', 'all'];
-var method = ['conda', 'docker', 'source'];
+var method = ['conda', 'docker', 'source', 'dev'];
 var release = ['stable', 'nightly'];
 var linux = ['ubuntu1604', 'ubuntu1804', 'centos7'];
 var python = ['py36', 'py37'];
@@ -144,6 +144,10 @@ function processClick(options, click, category) {
         $(pkg_opts).addClass("disabled");
         $("#all").removeClass("disabled");
         $("#all").addClass("active");
+        $("#py37").addClass("disabled");
+        if (selections['python'] == 'py37') {
+            selections['python'] = 'py36';
+        }
         selections['pkg'] = 'all';
     } else if (selections['method'] == 'source') {
         // Handle source requests
@@ -157,7 +161,13 @@ function processClick(options, click, category) {
         $(linux_opts).addClass("disabled");
         $(python_opts).addClass("disabled");
         $(cuda_opts).addClass("disabled");
-    }
+    } else if (selections['method'] == 'dev') {
+        // Handle dev requests
+        $(pkg_opts).addClass("disabled");
+        $("#all").removeClass("disabled");
+        $("#all").addClass("active");
+        selections['pkg'] = 'all';
+    } 
     $("#" + selections['method']).addClass("active");
     $("#" + selections['pkg']).addClass("active");
     $("#" + selections['linux']).addClass("active");
