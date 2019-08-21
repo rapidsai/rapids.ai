@@ -154,7 +154,7 @@ RAPIDS is committed to open source. We strive for a **[6 week release schedule](
     <text class="cls-4" transform="translate(274.74 10.32)">&nbsp;0.10</text>
     <text class="cls-5" transform="translate(0 49.41)">JUN 2019</text>
     <text class="cls-5" transform="translate(131.13 49.41)">AUG 2019</text>
-    <text class="cls-5" transform="translate(263.52 49.41)">SEP 2019</text>
+    <text class="cls-5" transform="translate(263.52 49.41)">OCT 2019</text>
     <text class="cls-5" transform="translate(1.76 60.16)">LEGACY</text>
     <text class="cls-5" transform="translate(135.95 60.16)">STABLE</text>
     <text class="cls-5" transform="translate(265.2 60.16)">NIGHTLY</text>
