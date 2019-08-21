@@ -777,6 +777,24 @@ a.blue-btn:hover,
     line-height: 1.5em;
 }
 
+.selector .options .option-blank {
+    color: white;
+    flex: 1 1;
+    margin: 0.2em;
+    padding: 0.3em;
+    cursor: none;
+    line-height: 1.5em;
+}
+
+.selector .options .option-blank span {
+    margin: auto;
+}
+
+i.fa-down-6 {
+    position: relative;
+    top: 6px;
+}
+
 .selector .options .option .svg-inline--fa {
     margin-top: 0.2em;
     padding-left: 0.3em;
@@ -784,6 +802,12 @@ a.blue-btn:hover,
 
 .selector .options .active {
     background: #36c9dd;
+    font-weight: 600;
+    color: #424242;
+}
+
+.selector .options .active.advanced {
+    background: #ffb500;
     font-weight: 600;
     color: #424242;
 }
@@ -1044,7 +1068,7 @@ code.tag {
         margin-top: 0.5em;
     }
 
-    .selector .options .option {
+    .selector .options .option .option-blank {
         font-size: 0.9em;
     }
 
