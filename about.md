@@ -24,10 +24,10 @@ RAPIDS had its start from the **[Apache Arrow](https://arrow.apache.org/){: targ
 ## Libraries and APIs Overview
 {: .section-subtitle-top-1}
 
-Some RAPIDS projects include **[cuDF](https://github.com/rapidsai/cudf){: target="_blank"}**, a pandas-like dataframe manipulation library; **[cuML](https://github.com/rapidsai/cuml){: target="_blank"}**, a collection of machine learning libraries that will provide GPU versions of algorithms available in scikit-learn; **[cuGraph](https://github.com/rapidsai/cugraph){: target="_blank"}**, a network-X like API that seamlessly integrate into the RAPIDS data science platform. Development follows a 6 week release schedule, so new features and libraries are always on the way. 
+Some RAPIDS projects include **[cuDF](https://github.com/rapidsai/cudf){: target="_blank"}**, a pandas-like dataframe manipulation library; **[cuML](https://github.com/rapidsai/cuml){: target="_blank"}**, a collection of machine learning libraries that will provide GPU versions of algorithms available in scikit-learn; **[cuGraph](https://github.com/rapidsai/cugraph){: target="_blank"}**, a NetworkX-like accelerated graph analytics library. Development follows a **[6 week release schedule](https://docs.rapids.ai/maintainers)**, so new features and libraries are always on the way. 
 
 ## Integration With Deep Learning Libraries
-RAPIDS provides native array_interface support. This means data stored in Apache Arrow can be seamlessly pushed to deep learning frameworks that accept array_interface such as **[PyTorch](https://github.com/pytorch/pytorch){: target="_blank"}** and **[Chainer](https://github.com/chainer){: target="_blank"}**, or work with **[DLPack](https://github.com/dmlc/dlpack){: target="_blank"}** and **[MXNet](https://github.com/apache/incubator-mxnet){: target="_blank"}**. 
+RAPIDS provides native `array_interface` support. This means data stored in Apache Arrow can be seamlessly pushed to deep learning frameworks that accept `array_interface` or work with **[DLPack](https://github.com/dmlc/dlpack){: target="_blank"}**, such as **[Chainer](https://github.com/chainer){: target="_blank"}**, **[MXNet](https://github.com/apache/incubator-mxnet){: target="_blank"}**, and **[PyTorch](https://github.com/pytorch/pytorch){: target="_blank"}**. 
 
 
 ## Visualization
@@ -35,11 +35,11 @@ Our focus on Python allows RAPIDS to play well with most data science visualizat
 {% endcapture %}
 
 {% capture about_bottom_left %}
-<img class="half-image-center" src="{{ site.baseurl }}{% link /assets/images/EaseVsPerformance.svg %}" alt="ease">
+![RAPIDS ease]({{ site.baseurl }}{% link /assets/images/EaseVsPerformance.svg %}){: .half-image-center}
 {% endcapture %}
 
 {% capture about_bottom_right %}
-<img class="full-image-center" src="{{ site.baseurl }}{% link /assets/images/rapids-end-to-end-performance-chart-oss-page-r4.svg %}" alt="performance">
+![RAPIDS performance]({{ site.baseurl }}{% link /assets/images/rapids-end-to-end-performance-chart-oss-page-r4.svg %}){: .full-image-center}
 {% endcapture %}
 
 {% include section-double-halfs.html

@@ -170,6 +170,7 @@ nav ul li {
 }
 
 nav ul li a {
+    font-size: 0.95em;
     text-decoration: none;
     color: #FFF;
 }
@@ -621,8 +622,8 @@ a h2:hover,
 .dask-icon {
     text-align: center;
     width: 100%;
-    font-size: 5em;
-    padding-top: 0.2em;
+    font-size: 3em;
+    padding-top: 0.5em;
     color: #9944ff;
     text-shadow: 1px 1px 2px #521798;
 }
@@ -1077,6 +1078,10 @@ code.tag {
         font-size: 1.9em;
         line-height: 1em;
         margin: 0.5em 0em 0.5em 0em;
+    }
+
+    .header-branding {
+         padding-top: 4em;
     }
 
     .subtitle {

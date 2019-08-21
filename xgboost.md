@@ -7,7 +7,7 @@ button_link: "https://xgboost.readthedocs.io"
 layout: default
 ---
 
-![Spark]({{ site.baseurl }}{% link /assets/images/xgboost_logo_sorta.svg %}){: .projects-logo}
+![xgboost]({{ site.baseurl }}{% link /assets/images/xgboost_logo_sorta.svg %}){: .projects-logo}
 
 # Seamless Acceleration at Scale
 {: .section-title-full}
@@ -70,7 +70,7 @@ Learn about the XGBoost algorithms used on GPUs in these blogs from Rory Mitchel
 
 {% endcapture %}
 {% capture metric_left %}
-![Spark]({{ site.baseurl }}{% link /assets/images/XGboost-benchmark.png %}){: .full-image}
+![xgboost]({{ site.baseurl }}{% link /assets/images/XGboost-benchmark.png %}){: .full-image-center}
 {% endcapture %}
 {% capture metric_right %}
 ## <i class="fas fa-microchip"></i> Benchmarks Comparing CPUs and GPUs

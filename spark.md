@@ -9,7 +9,7 @@ layout: default
 
 ![Spark](https://spark.apache.org/images/spark-logo-trademark.png){: .projects-logo}
 
-# Seamless Acceleration at Scale
+# Spark
 {: .section-title-full}
 
 ## More details coming soon.
