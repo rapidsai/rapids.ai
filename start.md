@@ -49,7 +49,7 @@ We suggest that you take a look at the sample workflow in our Docker container (
 <i class="fas fa-download text-purple"></i> **CUDA:** **[9.2](https://developer.nvidia.com/cuda-92-download-archive){: target="_blank"} with driver v396.37+** or **[10.0](https://developer.nvidia.com/cuda-10.0-download-archive){: target="_blank"} with driver v410.48+**
 {: .no-tb-margins }
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-exclamation-circle text-pink"></i> CUDA 10.1 is *not supported in v0.8*, support will be added soon
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-exclamation-circle text-pink"></i> CUDA 10.1 is *not supported in v0.9*, support will be added soon
 {: .no-tb-margins }
 
 {% endcapture %}
