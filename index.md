@@ -133,32 +133,9 @@ A second Github repository with our extended collection of notebook examples. <b
 
 
 {% capture com_left %}
-# RAPIDS Repositories
+# RAPID Development
 {: .section-title-halfs}
-RAPIDS is committed to open source. We strive for a **[6 week release schedule](https://docs.rapids.ai/maintainers){: target="_blank"}**, below is a generalized release schedule. Learn more on our **[Road To 1.0 post <i class="fas fa-angle-double-right"></i>](https://medium.com/rapids-ai/the-road-to-1-0-building-for-the-long-haul-657ae1afdfd6){: target="_blank"}**
-
-## <i class="far fa-calendar-check"></i> Release Schedule
-<svg id="release-schedule-svg" data-name="release-schedule" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 309.3 64.97">
-    <defs>
-        <style> .cls-1, .cls-2 {fill: none; stroke: #e0e0e0; stroke-miterlimit: 10; stroke-width: 3px; } .cls-2 {stroke-dasharray: 5.98 5.98; } .cls-3, .cls-4, .cls-5 {fill: #fff; } .cls-4 {font-size: 12px; font-family: Helvetica; font-weight: 700; } .cls-5 {font-size: 10px; font-family: Helvetica; } .cls-6 {letter-spacing: -0.07em; } .cls-7 {letter-spacing: -0.02em; } </style> </defs>
-    <title>Release-Schedule</title>
-    <line class="cls-1" x1="22.46" y1="22.78" x2="154.12" y2="22.78" />
-    <line class="cls-1" x1="153.75" y1="22.78" x2="156.75" y2="22.78" />
-    <line class="cls-2" x1="162.74" y1="22.78" x2="279.42" y2="22.78" />
-    <line class="cls-1" x1="282.41" y1="22.78" x2="285.41" y2="22.78" />
-    <circle class="cls-3" cx="22.46" cy="22.78" r="7.6" />
-    <circle class="cls-3" cx="154.12" cy="22.78" r="7.6" />
-    <circle class="cls-3" cx="285.78" cy="22.78" r="7.6" />
-    <text class="cls-4" transform="translate(10.28 10.32)">&nbsp;{{ site.data.releases.legacy-version }}</text>
-    <text class="cls-4" transform="translate(143.08 10.32)">&nbsp;{{ site.data.releases.stable-version }}</text>
-    <text class="cls-4" transform="translate(270.74 10.32)">&nbsp;{{ site.data.releases.nightly-version }}</text>
-    <text class="cls-5" transform="translate(0 49.41)">{{ site.data.releases.legacy-date }}</text>
-    <text class="cls-5" transform="translate(131.13 49.41)">{{ site.data.releases.stable-date }}</text>
-    <text class="cls-5" transform="translate(263.52 49.41)">{{ site.data.releases.nightly-date }}</text>
-    <text class="cls-5" transform="translate(1.76 60.16)">LEGACY</text>
-    <text class="cls-5" transform="translate(135.95 60.16)">STABLE</text>
-    <text class="cls-5" transform="translate(265.2 60.16)">NIGHTLY</text>
-</svg>
+RAPIDS is committed to open source. We strive for a **[6 week release schedule](https://docs.rapids.ai/maintainers){: target="_blank"}**, below is a generalized schedule with some featured items of the release. Learn more on our **[Road To 1.0 post <i class="fas fa-angle-double-right"></i>](https://medium.com/rapids-ai/the-road-to-1-0-building-for-the-long-haul-657ae1afdfd6){: target="_blank"}**
 {% endcapture %}
 
 {% capture com_right %}
@@ -182,6 +159,12 @@ Whether you are new to RAPIDS, looking to help, or are part of the team, learn a
     content-left-half=com_left 
     content-right-half=com_right 
 %} 
+
+
+{% include roadmap-featured-json.html
+    background="background-purple"
+    padding-top="3em" padding-bottom="1em" 
+%}
 
 
 {% capture lib_top_left %}

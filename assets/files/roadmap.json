@@ -1,0 +1,466 @@
+{
+    "legacy":
+    {
+        "ver": "v0.7",
+        "release": "Jun 2019"
+    },
+    "stable":
+    {
+        "ver": "v0.8",
+        "release": "SEP 2019"
+    },
+    "nightly":
+    {
+        "ver": "v0.9",
+        "release": "OCT 2019"
+    },
+    "v0.7": [
+
+    ],
+    "v0.8": [
+    {
+        "id": 479840134,
+        "name": "Major refactoring of Python APIs to be more NetworkX-like",
+        "desc": "",
+        "tags": [
+            "cuGraph"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 479839886,
+        "name": "SSSP updated to return predecessor, similar to BFS",
+        "desc": "",
+        "tags": [
+            "cuGraph", "cuSpatial", "cuDF"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 479839712,
+        "name": "Renumbering",
+        "desc": "",
+        "tags": [
+            "cuGraph"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 479839176,
+        "name": "Single-GPU analytics: Weakly Connected Components",
+        "desc": "",
+        "tags": [
+            "cuGraph"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 479838771,
+        "name": "Train & test split utility for cuDF data frames",
+        "desc": "",
+        "tags": [
+            "cuML"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 479838580,
+        "name": "Pickling support for most models",
+        "desc": "",
+        "tags": [
+            "cuML", "cuDF"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 479838197,
+        "name": "Experimental support for Random Forests (for classification) - support will expand to regression and higher performance in 0.9",
+        "desc": "",
+        "tags": [
+            "cuML", "cuDF"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 479837063,
+        "name": "Added Logistic Regression to existing ElasticNet, Ridge, Lasso, and OLS models",
+        "desc": "",
+        "tags": [
+            "cuML"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 479836625,
+        "name": "ava API for cuDF that leverages GPU-accelerated implementations in libcudf",
+        "desc": "",
+        "tags": [
+            "cuDF"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 479835619,
+        "name": "Logical operators (AND, OR, NOT) support",
+        "desc": "",
+        "tags": [
+            "cuDF"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 479835311,
+        "name": "Access a group of rows and columns by labels or a boolean array similar to pandas series.loc",
+        "desc": "",
+        "tags": [
+            "cuDF"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 479835021,
+        "name": "Support to drop duplicate rows removed, optionally only considering certain columns",
+        "desc": "",
+        "tags": [
+            "cuIO"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 479834723,
+        "name": "Rolling window operations with Series.rolling and DataFrame.rolling methods",
+        "desc": "",
+        "tags": [
+            "cuDF"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 479834459,
+        "name": "Support for stripe selection in ORC reader",
+        "desc": "",
+        "tags": [
+            "cuDF",
+            "cuIO"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 479833987,
+        "name": "GPU-accelerated JSON reader",
+        "desc": "",
+        "tags": [
+            "cuDF",
+            "cuIO"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 474773364,
+        "name": "Personal PageRank",
+        "desc": "",
+        "tags": [
+            "cuGraph"
+        ],
+        "support": "snsg",
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 474773206,
+        "name": "Weakly Connected Components",
+        "desc": "",
+        "tags": [
+            "bug fix"
+        ],
+        "support": "snsg",
+        "isPriority": true,
+        "isPrivate": false
+    }],
+    "v0.9": [
+    {
+        "id": 477619339,
+        "name": "MNMG DBSCAN",
+        "desc": "Description...",
+        "tags": [
+            "cuML"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 477618703,
+        "name": "MNMG K-NN FAISS version",
+        "desc": "Description..",
+        "tags": [
+            "cuML"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 477618420,
+        "name": "Launching MPI from Dask",
+        "desc": "Description ...",
+        "tags": [
+            "cuML"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 477617486,
+        "name": "SG Arima",
+        "desc": "Description here...",
+        "tags": [
+            "bug Fix"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 477617269,
+        "name": "SG SVM",
+        "desc": "Description here...",
+        "tags": [
+            "cuML"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 477617045,
+        "name": "SNMG PCA",
+        "desc": "Description here..",
+        "tags": [
+            "cuML"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 477616558,
+        "name": "SG Holt-Winters",
+        "desc": "SC Holt... description...",
+        "tags": [
+            "cuML", "cuDF", "cuGraph", "bug fix", "enhancement"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 477616275,
+        "name": "V1 Tree Inferencing",
+        "desc": "Tree Inferencing desciption...",
+        "tags": [
+            "cuML"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 477616057,
+        "name": "MNMG K-means off MLPrims",
+        "desc": "MNMG. K-means description...",
+        "tags": [
+            "cuML"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 477615558,
+        "name": "MNMG Random Forest off MLPrims MNMG K-means off MLPrims",
+        "desc": "MNMG ... descrption",
+        "tags": [
+            "cuML"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 477615196,
+        "name": "Dask-cuML launch NCCL2-UCX",
+        "desc": "Dask-cuML launch NCCL2-UCX",
+        "tags": [
+            "cuML",
+            "dask"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 477579659,
+        "name": "Python UDF passed to binary ops, apply_map, rolling window",
+        "desc": "Python UDF passed to binary ops, apply_map",
+        "tags": [
+            "cuDF"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 477579408,
+        "name": "Better Timestamp",
+        "desc": "Better Timestamp\r\n",
+        "tags": [
+            "cuDF"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 477578959,
+        "name": "Rolling Window ",
+        "desc": "Rolling Window (cuDF)\r\n",
+        "tags": [
+            "cuDF"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 477578643,
+        "name": "UCX v2 Dask-cuDF (NVLink/NVSwitch)",
+        "desc": "UCX v2 Dask-cuDF (NVLink/NVSwitch)\r\n\r\n",
+        "tags": [
+            "cuDF",
+            "dask"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 477571022,
+        "name": "Multi GPU Graph Degree",
+        "desc": "MG Graph Degree",
+        "tags": [
+            "cuGraph"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 477570588,
+        "name": "Multi-GPU Pagerank",
+        "desc": "",
+        "tags": [
+            "cuGraph"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 477569803,
+        "name": "SG Strongly Connected Components",
+        "desc": "SG Strongly Connected Components\r\n",
+        "tags": [
+            "cuGraph"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 477568577,
+        "name": "Option in ORC reader to return TIMESTAMP & DATE fields as GDF_TIMESTAMP & GDF_DATE32",
+        "desc": "Added option in ORC reader to return TIMESTAMP and DATE fields as GDF_TIMESTAMP and GDF_DATE32, respectively, instead of mapping them to GDF_DATE64.",
+        "tags": [
+            "cuIO"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 475749501,
+        "name": "GPU-accelerated AVRO reader",
+        "desc": "GPU accelerated cuIO reader for \u2018Avro\u2019 files.",
+        "tags": [
+            "cuIO"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 475740303,
+        "name": "Memory buffer support for ORC and Parquet readers",
+        "desc": "Added memory buffer input support to ORC and Parquet readers.  Previously they only accepted file names to specify input.",
+        "tags": [
+            "cuIO"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 474778226,
+        "name": "Support for parsing hexadecimal numbers in CSV reader",
+        "desc": "Added support for parsing hexadecimal numbers in CSV reader.  By specifying dtype=hex/hex64/hex32 users can request to parse numbers with base-16.  The corresponding returned numbers will be GDF_INT64/GDF_INT64/GDF_INT32.",
+        "tags": [
+            "cuIO"
+        ],
+        "support": null,
+        "isPriority": true,
+        "isPrivate": false
+    },
+    {
+        "id": 474773529,
+        "name": "Strongly Connected Components",
+        "desc": "**SAMPLE**\r\nExpanding upon Weakly Connected Components released in v0.8, this allows users to...",
+        "tags": [
+            "cuGraph"
+        ],
+        "support": "snsg",
+        "isPriority": true,
+        "isPrivate": false
+    }]
+}

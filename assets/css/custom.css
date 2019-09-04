@@ -3,6 +3,7 @@
  * Utilizing https://purecss.io/grids/
 */
 
+/* __________________________________________________________________ */
 /* general */
 body {
     font-family: 'Open Sans', sans-serif;
@@ -133,7 +134,7 @@ strong {
     /* align vertical */
 }
 
-
+/* __________________________________________________________________ */
 /* header and nav */
 
 nav .nav-logo img {
@@ -235,7 +236,8 @@ header {
     background-size: cover;  
 }
 
-/* layout */
+/* __________________________________________________________________ */
+/* general layout */
 .container-padding {
     width: 100%;
     max-width: 1280px;
@@ -359,6 +361,7 @@ header {
 
 .section-title-full {
     text-align: center;
+    width: 100%;
     /* slope z-index chrome */
     position: relative;
 }
@@ -450,6 +453,8 @@ header {
     margin-right: 0;
 }
 
+
+/* __________________________________________________________________ */
 /* color helpers */
 .background-darkpurple {
     background-color: #7400ff;
@@ -524,13 +529,10 @@ header {
     color: #309287;
 }
 
+/* __________________________________________________________________ */
+/* specific layout */
 
-/* specific */
-.intro-icons {
-    width: 40px;
-    height: 40px;
-}
-
+/* footer */
 a h2:hover,
 .footer-nav ul li a:hover {
     color: #9943ff;
@@ -540,6 +542,7 @@ a h2:hover,
     transition: all 0.3s ease-in-out;
 }
 
+/* news */
 .posts-section-title {
     width: 100%;
     max-width: 1280px;
@@ -569,10 +572,48 @@ a h2:hover,
     font-size: 0.9em;
 }
 
-#release-schedule-svg {
-    width: 100%;
-    padding-right: 3em;
+/* repos */
+.roadmap-ver {
+    color: white;
+    font-size: 2.4em;
+    text-align: center;
+    margin-top: -2.5em;
+}
+
+.roadmap-ver-title {
+    font-size: 0.55em;
+    text-transform: uppercase;
+}
+
+.roadmap-list {
+    color: white;
+    margin-top: 2em;
+}
+
+.roadmap-list li {
+    list-style: none;
+    margin-bottom: 1.6em;
+    line-height: 1.4em;
+}
+
+.roadmap-vline {
+    border-top: 3px solid white;
     padding-top: 1em;
+}
+
+.roadmap-vdash {
+    border-top: 3px dashed white;
+    padding-top: 1em;
+}
+
+.roadmap-tag {
+    display: inline-block;
+    font-size: 0.7em;
+    border: 1.5px solid #c7a1f5;
+    padding: 0em 0.5em;
+    border-radius: 0.8em;
+    margin-right: 0.5em;
+    font-weight: 600;
 }
 
 .api-tag,
@@ -586,6 +627,7 @@ a h2:hover,
     margin-left: 1em;
 }
 
+/* logo garden */
 .container-logo-flex {
     display: flex;
     flex-wrap: wrap;
@@ -604,6 +646,7 @@ a h2:hover,
     max-width: 120px;
 }
 
+/* community projects */
 .projects-logo {
     position: relative;
     left: 50%;
@@ -618,7 +661,6 @@ a h2:hover,
     transform: translate(-50%)
 }
 
-
 .dask-icon {
     text-align: center;
     width: 100%;
@@ -627,6 +669,7 @@ a h2:hover,
     color: #9944ff;
     text-shadow: 1px 1px 2px #521798;
 }
+
 .blazingsql-icon {
     text-align: center;
     width: 100%;
@@ -635,6 +678,7 @@ a h2:hover,
     color: #9944ff;
     text-shadow: 1px 1px 2px #521798;
 }
+
 .image-blazingsql-benefits{
     position: relative;
     left: 50%;
@@ -642,6 +686,7 @@ a h2:hover,
     transform: translate(-50%)
 }
 
+/* __________________________________________________________________ */
 /* footer */
 .footer-cta-main {
     color: white;
@@ -716,7 +761,7 @@ footer {
     text-align: center;
 }
 
-
+/* __________________________________________________________________ */
 /* buttons */
 a.blue-btn,
 .primary-btn {
@@ -746,6 +791,7 @@ a.blue-btn:hover,
 
 }
 
+/* __________________________________________________________________ */
 /* install options selector */
 /* new selector */
 
@@ -864,6 +910,7 @@ a.blue-btn,
     margin-top: 1em;
 }
 
+/* __________________________________________________________________ */
 /* blog posts */
 .blog-container h1, .posts-container h1 {
     margin-bottom: 0.1em;
@@ -971,7 +1018,7 @@ a.blue-btn,
     margin-bottom: 1em;
 }
 
-
+/* __________________________________________________________________ */
 /* author */
 .author-container {
     position: relative;
@@ -1026,7 +1073,7 @@ a.blue-btn,
     margin-bottom: 0.5em;
 }
 
-
+/* __________________________________________________________________ */
 /* _layout/short.html */
 header.short {
     background: url(../images/header-bg.svg) top center no-repeat;
@@ -1055,6 +1102,9 @@ code.tag {
     line-height: inherit !important;
 }
 
+
+
+/* __________________________________________________________________ */
 /* responsive screen breakpoints */
 /* default is above on 1280px extra large */
 /* based on https://purecss.io/grids/ */
@@ -1164,6 +1214,16 @@ code.tag {
   
     .section-subtitle-top-1 {
         margin-top: 0em;
+    }
+
+    .roadmap-ver {
+        font-size: 2em;
+        margin-top: 0em;
+    }
+
+    .roadmap-list {
+        margin-top: 0.5em;
+        margin-bottom: 4em;
     }
 
     /* blog */
