@@ -184,7 +184,7 @@ Whether you are new to RAPIDS, looking to help, or are part of the team, learn a
 %} 
 
 
-{% capture lib_top_left %}
+{% capture lib1_left %}
 ## <i class="fas fa-terminal"></i> cuDF <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cudf/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/master/CHANGELOG.md){: target="_blank"}**
@@ -194,7 +194,7 @@ cuDF is a Python GPU DataFrame library (built on the **[Apache Arrow](http://arr
 
 {% endcapture %}
 
-{% capture lib_top_middle %}
+{% capture lib1_middle %}
 ## <i class="fas fa-terminal"></i> cuML <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cuml){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cuml/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuml/blob/master/CHANGELOG.md){: target="_blank"}**
@@ -202,10 +202,10 @@ cuDF is a Python GPU DataFrame library (built on the **[Apache Arrow](http://arr
 
 cuML is a suite of libraries that implement machine learning algorithms and mathematical primitives functions that are compatible with other RAPIDS projects, all in a **[scikit-learn-like](https://scikit-learn.org/stable/index.html){: target="_blank"}** API familiar to data scientists.
 
-
 {% endcapture %}
 
-{% capture lib_top_right %}
+
+{% capture lib1_right %}
 ## <i class="fas fa-terminal"></i> cuGraph <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cugraph){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cugraph/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cugraph/blob/master/CHANGELOG.md){: target="_blank"}**
@@ -215,7 +215,18 @@ cuGraph is a GPU accelerated graph analytics library, with functionality like **
 
 {% endcapture %}
 
-{% capture lib_bottom_left %}
+{% capture lib2_left %}
+## <i class="fas fa-terminal"></i> cuSpatial <span class="api-tag">API</span>
+
+**[GitHub](https://github.com/rapidsai/cuspatial){: target="_blank"}** **/** **[Docs](#){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuspatial/blob/master/CHANGELOG.md){: target="_blank"}**
+{: .no-tb-margins }
+
+cuSpatial is an efficient C++ library accelerated on GPUs using NVIDIA CUDA and cuDF. It includes Python bindings to enable use by the data science community. cuSpatial provides significant GPU-acceleration to common spatial and spatiotemporal operations such as point-in-polygon tests, distances between trajectories, and trajectory clustering when compared to CPU-based implementations. 
+
+{% endcapture %}
+
+
+{% capture lib2_middle %}
 ## <i class="fas fa-terminal"></i> nvStrings <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/custrings){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/nvstrings/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/custrings/blob/master/CHANGELOG.md){: target="_blank"}**
@@ -225,7 +236,13 @@ nvStrings, the Python bindings for **[cuStrings](https://github.com/rapidsai/cus
 
 {% endcapture %}
 
-{% capture lib_bottom_middle %}
+
+{% capture lib2_right %}
+<!-- blank -->
+{% endcapture %}
+
+
+{% capture lib3_left %}
 ## <i class="fas fa-terminal"></i> libcudf <span class="lib-tag">LIB</span>
 
 **[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/libcudf/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/master/CHANGELOG.md){: target="_blank"}**
@@ -235,7 +252,8 @@ libcudf is a C/C++ CUDA library for implementing standard dataframe operations. 
 
 {% endcapture %}
 
-{% capture lib_bottom_right %}
+
+{% capture lib3_middle%}
 ## <i class="fas fa-terminal"></i> RMM <span class="lib-tag">LIB</span>
 
 **[GitHub](https://github.com/rapidsai/rmm){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/rmm/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/rmm/blob/master/CHANGELOG.md){: target="_blank"}**
@@ -243,19 +261,36 @@ libcudf is a C/C++ CUDA library for implementing standard dataframe operations. 
 
 RAPIDS Memory Manager (RMM) is a central place for all device memory allocations in cuDF (C++ and Python) and other RAPIDS libraries. In addition, it is a replacement allocator for CUDA Device Memory (and CUDA Managed Memory) and a pool allocator to make CUDA device memory allocation / deallocation faster and asynchronous.
 
-
 {% endcapture %}
 
-{% include section-double-thirds.html 
+
+{% capture lib3_right %}
+<!-- blank -->
+{% endcapture %}
+
+
+{% include section-thirds.html 
     background="background-purple" 
-    padding-top="1em" padding-bottom="3em" 
-    content-top-left-third=lib_top_left 
-    content-top-middle-third=lib_top_middle 
-    content-top-right-third=lib_top_right 
-    content-bottom-left-third=lib_bottom_left 
-    content-bottom-middle-third=lib_bottom_middle 
-    content-bottom-right-third=lib_bottom_right 
+    padding-top="0em" padding-bottom="3em" 
+    content-left-third=lib1_left 
+    content-middle-third=lib1_middle 
+    content-right-third=lib1_right 
 %}
+{% include section-thirds.html 
+    background="background-purple" 
+    padding-top="0em" padding-bottom="0em" 
+    content-left-third=lib2_left 
+    content-middle-third=lib2_middle 
+    content-right-third=lib2_right 
+%}
+{% include section-thirds.html 
+    background="background-purple" 
+    padding-top="0em" padding-bottom="3em" 
+    content-left-third=lib3_left 
+    content-middle-third=lib3_middle 
+    content-right-third=lib3_right 
+%}
+
 {% include slopecap.html 
     background="background-purple" 
     position="bottom" 
