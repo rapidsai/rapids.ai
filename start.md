@@ -3,7 +3,7 @@ title: "Getting Started"
 description: "Get started with RAPIDS using conda, docker, or from source builds."
 tagline: "Try RAPIDS Now"
 button_text: "LAUNCH IN COLAB"
-button_link: "https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y#forceEdit=true&offline=true&sandboxMode=true"
+button_link: "https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true"
 layout: default
 redirect_from: "/documentation.html" # redirect from old page to ensure existing links still work
 ---
