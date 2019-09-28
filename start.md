@@ -3,7 +3,7 @@ title: "Getting Started"
 description: "Get started with RAPIDS using conda, docker, or from source builds."
 tagline: "Try RAPIDS Now"
 button_text: "LAUNCH IN COLAB"
-button_link: "https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y#forceEdit=true&offline=true&sandboxMode=true"
+button_link: "https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true"
 layout: default
 redirect_from: "/documentation.html" # redirect from old page to ensure existing links still work
 ---
@@ -22,7 +22,7 @@ for column in gdf.columns:
 ```
 
 ## <i class="fas fa-bolt"></i> Try Now In CoLab
-Jump right into a GPU powered RAPIDS notebook with **[Colabratory](https://colab.research.google.com/notebooks/welcome.ipynb){: target="_blank"}** for free. **[Go to example notebook <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
+Jump right into a GPU powered RAPIDS notebook with **[Colabratory](https://colab.research.google.com/notebooks/welcome.ipynb){: target="_blank"}** for free. **[Go to example notebook <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
 
 {% endcapture %}
 
@@ -172,7 +172,7 @@ See the **[RAPIDS Container README](https://hub.docker.com/r/rapidsai/rapidsai){
 {% include cta-footer.html 
 name="TRY RAPIDS NOW" 
 button="LAUNCH IN COLAB"
-link="https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y#forceEdit=true&offline=true&sandboxMode=true"
+link="https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true"
 %}
 
 
