@@ -126,7 +126,7 @@ Refer to our **[RAPIDS 0.7 Release Drops PIP Packages — and sticks with Co
 {% capture use_right %}
 ## <i class="fab fa-docker"></i> Docker Container
 
-Run the following command within the Docker container started from the copied Docker command above to launch the notebook server.
+The copied Docker command above should auto-run a notebook server. If it does not, run the following command within the Docker container to launch the notebook server.
 
 **NOTE:** This will run **[JupyterLab](https://jupyterlab.readthedocs.io/en/stable/){: target="_blank"}** on your host machine at port 8888.
 
