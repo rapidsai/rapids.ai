@@ -194,7 +194,7 @@ cuDF is a Python GPU DataFrame library (built on the **[Apache Arrow](http://arr
 
 {% endcapture %}
 
-{% capture lib1_middle %}
+{% capture lib1_right %}
 ## <i class="fas fa-terminal"></i> cuML <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cuml){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cuml/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuml/blob/master/CHANGELOG.md){: target="_blank"}**
@@ -205,7 +205,9 @@ cuML is a suite of libraries that implement machine learning algorithms and math
 {% endcapture %}
 
 
-{% capture lib1_right %}
+
+
+{% capture lib2_left %}
 ## <i class="fas fa-terminal"></i> cuGraph <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cugraph){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cugraph/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cugraph/blob/master/CHANGELOG.md){: target="_blank"}**
@@ -215,18 +217,20 @@ cuGraph is a GPU accelerated graph analytics library, with functionality like **
 
 {% endcapture %}
 
-{% capture lib2_left %}
+{% capture lib2_right %}
 ## <i class="fas fa-terminal"></i> cuSpatial <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cuspatial){: target="_blank"}** **/** **[Docs](#){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuspatial/blob/master/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
 
-cuSpatial is an efficient C++ library accelerated on GPUs using NVIDIA CUDA and cuDF. It includes Python bindings to enable use by the data science community. cuSpatial provides significant GPU-acceleration to common spatial and spatiotemporal operations such as point-in-polygon tests, distances between trajectories, and trajectory clustering when compared to CPU-based implementations. 
+cuSpatial is an efficient C++ library accelerated on GPUs with Python bindings to enable use by the data science community. cuSpatial provides significant GPU-acceleration to common spatial and spatiotemporal operations such as point-in-polygon tests, distances between trajectories, and trajectory clustering when compared to CPU-based implementations. 
 
 {% endcapture %}
 
 
-{% capture lib2_middle %}
+
+
+{% capture lib3_left %}
 ## <i class="fas fa-terminal"></i> nvStrings <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/custrings){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/nvstrings/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/custrings/blob/master/CHANGELOG.md){: target="_blank"}**
@@ -236,13 +240,7 @@ nvStrings, the Python bindings for **[cuStrings](https://github.com/rapidsai/cus
 
 {% endcapture %}
 
-
-{% capture lib2_right %}
-<!-- blank -->
-{% endcapture %}
-
-
-{% capture lib3_left %}
+{% capture lib3_middle %}
 ## <i class="fas fa-terminal"></i> libcudf <span class="lib-tag">LIB</span>
 
 **[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/libcudf/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/master/CHANGELOG.md){: target="_blank"}**
@@ -252,8 +250,7 @@ libcudf is a C/C++ CUDA library for implementing standard dataframe operations. 
 
 {% endcapture %}
 
-
-{% capture lib3_middle%}
+{% capture lib3_right %}
 ## <i class="fas fa-terminal"></i> RMM <span class="lib-tag">LIB</span>
 
 **[GitHub](https://github.com/rapidsai/rmm){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/rmm/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/rmm/blob/master/CHANGELOG.md){: target="_blank"}**
@@ -264,28 +261,21 @@ RAPIDS Memory Manager (RMM) is a central place for all device memory allocations
 {% endcapture %}
 
 
-{% capture lib3_right %}
-<!-- blank -->
-{% endcapture %}
-
-
-{% include section-thirds.html 
+{% include section-halfs.html 
     background="background-purple" 
     padding-top="0em" padding-bottom="3em" 
-    content-left-third=lib1_left 
-    content-middle-third=lib1_middle 
-    content-right-third=lib1_right 
+    content-left-half=lib1_left 
+    content-right-half=lib1_right 
+%}
+{% include section-halfs.html 
+    background="background-purple" 
+    padding-top="0em" padding-bottom="3em" 
+    content-left-half=lib2_left
+    content-right-half=lib2_right 
 %}
 {% include section-thirds.html 
     background="background-purple" 
-    padding-top="0em" padding-bottom="0em" 
-    content-left-third=lib2_left 
-    content-middle-third=lib2_middle 
-    content-right-third=lib2_right 
-%}
-{% include section-thirds.html 
-    background="background-purple" 
-    padding-top="0em" padding-bottom="3em" 
+    padding-top="0em" padding-bottom="5em" 
     content-left-third=lib3_left 
     content-middle-third=lib3_middle 
     content-right-third=lib3_right 
