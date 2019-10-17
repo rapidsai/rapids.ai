@@ -33,10 +33,11 @@
                 </div>
                 <div class='pkg'>
                     <div class='option-label'>Packages</div>
+                    <div id='all' class='option'>All Packages</div>
                     <div id='cudf' class='option'>cuDF</div>
                     <div id='cuml' class='option'>cuML</div>
                     <div id='cugraph' class='option'>cuGraph</div>
-                    <div id='all' class='option'>All Packages</div>
+                    <div id='cuspatial' class='option'>cuSpatial</div>
                 </div>
                 <div class='linux'>
                     <div class='option-label'>Linux</div>
@@ -67,7 +68,7 @@
 </section>
 <script type="text/javascript">
 /* Adopted from https://pytorch.org/assets/quick-start-module.js */
-var pkg = ['cudf', 'cuml', 'cugraph', 'all'];
+var pkg = ['cudf', 'cuml', 'cugraph', 'cuspatial', 'all'];
 var method = ['conda', 'docker', 'source', 'dev'];
 var release = ['stable', 'nightly'];
 var linux = ['ubuntu1604', 'ubuntu1804', 'centos7'];
