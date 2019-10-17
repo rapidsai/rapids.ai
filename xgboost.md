@@ -161,23 +161,29 @@ The RAPIDS team is developing GPU enhancements to open-source XGBoost, working c
 
 ## Installation Prerequisites for RAPIDS + XGBoost
 
-<i class="fas fa-exclamation-triangle text-purple"></i> CUDA-compatible NVIDIA GPU with the NVIDIA Pascal™, NVIDIA Volta, or NVIDIA Turing™  architecture 
+## Prerequisites 
+<i class="fas fa-microchip text-purple"></i> **GPU:** NVIDIA Pascal™ or better with **[compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 6.0+
 {: .no-tb-margins }
 
-<i class="fas fa-exclamation-triangle text-purple"></i> NVIDIA CUDA Toolkit version **[CUDA 9.2](https://developer.nvidia.com/cuda-92-download-archive){: target="_blank"} with driver v396.37+** or **[CUDA 10.0](https://developer.nvidia.com/cuda-10.0-download-archive){: target="_blank"} with driver v410.48+** 
+<i class="fas fa-download text-purple"></i> **CUDA & NVIDIA Drivers:** One of the following supported versions:
 {: .no-tb-margins }
 
-<i class="fas fa-exclamation-triangle text-purple"></i> The latest RAPIDS package, which can be downloaded and installed one of these ways: 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-check-circle text-purple"></i> [9.2](https://developer.nvidia.com/cuda-92-download-archive){: target="_blank"} & v396.37+ &nbsp; <i class="fas fa-check-circle text-purple"></i> [10.0](https://developer.nvidia.com/cuda-10.0-download-archive){: target="_blank"} & v410.48+ &nbsp; <i class="fas fa-check-circle text-purple"></i> [10.1.2](https://developer.nvidia.com/cuda-downloads){: target="_blank"} & v418.87+
+{: .no-tb-margins }
+
+<i class="fas fa-box-open text-purple"></i> The latest RAPIDS package, which can be downloaded and installed one of these ways: 
 {: .no-tb-margins }
 
 {% endcapture %}
 {% capture download_left %}
 ## <i class="fas fa-laptop-code"></i> Conda Install
 
-Install using conda (the latest RAPIDS release). The RAPIDS conda channel includes an XGBoost package built with CUDA 10.0 and Python 3.7. You can install it with:
+Install using conda (the latest RAPIDS release). The RAPIDS conda channel includes an XGBoost package built with CUDA 9.2/10.0/10.1 and Python 3.6/3.7 versions. You can install it with:
 ```bash
-> conda install -c defaults -c nvidia -c rapidsai -c rapidsai/label/xgboost xgboost
+> conda install -c rapidsai -c nvidia -c conda-forge \
+        rapids-xgboost cudatoolkit=10.0
 ```
+Replacing `10.0` in `cudatoolkit=10.0` will install the desired CUDA version. If you wish to override the python version installed, add `python=3.6` or `python=3.7` to the install command.
 
 ## <i class="fab fa-docker"></i> Docker Container
 {: .section-subtitle-top-2}
