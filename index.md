@@ -233,10 +233,10 @@ cuSpatial is an efficient C++ library accelerated on GPUs with Python bindings t
 {% capture lib3_left %}
 ## <i class="fas fa-terminal"></i> nvStrings <span class="api-tag">API</span>
 
-**[GitHub](https://github.com/rapidsai/custrings){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/nvstrings/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/custrings/blob/master/CHANGELOG.md){: target="_blank"}**
+**[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/nvstrings/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/master/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
 
-nvStrings, the Python bindings for **[cuStrings](https://github.com/rapidsai/custrings){: target="_blank"}**, provides a pandas-like API that will be familiar to data engineers & data scientists, so they can use it to easily accelerate their workflows without going into the details of CUDA programming.
+nvStrings, the Python bindings for **[cuStrings](https://github.com/rapidsai/cudf){: target="_blank"}**, provides a pandas-like API that will be familiar to data engineers & data scientists, so they can use it to easily accelerate their workflows without going into the details of CUDA programming.
 
 {% endcapture %}
 
