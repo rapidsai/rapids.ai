@@ -123,9 +123,10 @@ The RAPIDS team is working with the community to build a distributed, open sourc
 {% capture deploy_right %}
 ## <i class="fas fa-desktop"></i> Use a Single Machine
 
-XGBoost includes transparent support for training on multiple GPUs. To use multiple GPUs on a single node, set the `n_gpus` parameter to the number of GPUs you wish to use or set it to `-1` to use all available GPUs. 
+With [Dask-CUDA](https://github.com/rapidsai/dask-cuda), running across multiple GPUs on a single machine is easy. Two lines of code can spin up a LocalCUDACluster and parallelize ETL as well as training. See the [Dask-CUDA docs](https://github.com/rapidsai/dask-cuda) for more details.
 
-**Note:** over time, this approach will be deprecated in favor of the more scalable Dask and Spark approaches.
+**NOTE:** Older versions of XGBoost supported a thread-based "single-node, multi-GPU" pattern with the `n_gpus` parameters. This parameter is now deprecated, and we encourage all users to shift to Dask or Spark for more scalable and maintainable multi-GPU training.
+
 
 {% endcapture %}
 {% include slopecap.html 
@@ -200,7 +201,7 @@ Install using pip or other methods (the default upstream version).  The default 
 > pip install xgboost
 ```
 
-**Note:** the pip packages and source installation methods will not include some of the more recent contributions, such as cuDF integration, which are still being incorporated into the mainline XGBoost codebase.
+**NOTE:** The pip packages and source installation methods currently install XGBoost version 0.90, which will not include some of the more recent contributions, such as cuDF integration. Those contributions have been integrated to the master branch of XGBoost and will appear in pip packages starting in version 1.0.
 
 {% endcapture %}
 {% include section-single.html
