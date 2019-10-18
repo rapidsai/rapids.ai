@@ -43,7 +43,7 @@ We suggest that you take a look at the sample workflow in our Docker container (
 <i class="fas fa-desktop text-purple"></i> **Supported OS:** Ubuntu 16.04/18.04 or CentOS 7 with gcc 5.4 & 7.3
 {: .no-tb-margins }
 
-<i class="fab fa-docker text-purple"></i> **Docker Prereqs:** Docker CE v18+ and **[NVIDIA-docker v2+](https://github.com/nvidia/nvidia-docker/wiki/Frequently-Asked-Questions#how-do-i-install-20-if-im-not-using-the-latest-docker-version){: target="_blank"}** 
+<i class="fab fa-docker text-purple"></i> **Docker:** Docker CE v19.03+ and **[nvidia-container-toolkit](https://github.com/NVIDIA/nvidia-docker#quickstart){: target="_blank"}** 
 {: .no-tb-margins }
 
 <i class="fas fa-download text-purple"></i> **CUDA & NVIDIA Drivers:** One of the following supported versions:
@@ -128,10 +128,16 @@ Refer to our **[RAPIDS 0.7 Release Drops PIP Packages — and sticks with Co
 
 The copied Docker command above should auto-run a notebook server. If it does not, run the following command within the Docker container to launch the notebook server.
 
+```bash
+bash /rapids/notebooks/utils/start-jupyter.sh
+```
+
 **NOTE:** This will run **[JupyterLab](https://jupyterlab.readthedocs.io/en/stable/){: target="_blank"}** on your host machine at port 8888.
 
+### Legacy Docker Users
+Docker CE v18 & [nvidia-docker2](https://github.com/NVIDIA/nvidia-docker/wiki/Installation-(version-2.0)) users will need to replace the following for compatibility:
 ```bash
-(rapids) root@container:/rapids/notebooks# bash utils/start-jupyter.sh
+'docker run --gpus all' with 'docker run --runtime=nvidia'
 ```
 
 ### Use JupyterLab to Explore the Notebooks
