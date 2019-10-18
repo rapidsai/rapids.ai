@@ -220,7 +220,7 @@ cuGraph is a GPU accelerated graph analytics library, with functionality like **
 {% capture lib2_right %}
 ## <i class="fas fa-terminal"></i> cuSpatial <span class="api-tag">API</span>
 
-**[GitHub](https://github.com/rapidsai/cuspatial){: target="_blank"}** **/** **[Docs](#){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuspatial/blob/master/CHANGELOG.md){: target="_blank"}**
+**[GitHub](https://github.com/rapidsai/cuspatial){: target="_blank"}** **/** **[Docs](https://github.com/rapidsai/cuspatial){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuspatial/blob/master/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
 
 cuSpatial is an efficient C++ library accelerated on GPUs with Python bindings to enable use by the data science community. cuSpatial provides significant GPU-acceleration to common spatial and spatiotemporal operations such as point-in-polygon tests, distances between trajectories, and trajectory clustering when compared to CPU-based implementations. 
