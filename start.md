@@ -46,6 +46,9 @@ We suggest that you take a look at the sample workflow in our Docker container (
 <i class="fab fa-docker text-purple"></i> **Docker:** Docker CE v19.03+ and **[nvidia-container-toolkit](https://github.com/NVIDIA/nvidia-docker#quickstart){: target="_blank"}** 
 {: .no-tb-margins }
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-history text-purple"></i> [Legacy Support](#-docker-container) - Docker CE v17-18 and [nvidia-docker2](https://github.com/NVIDIA/nvidia-docker/wiki/Installation-(version-2.0)){: target="_blank"}
+{: .no-tb-margins }
+
 <i class="fas fa-download text-purple"></i> **CUDA & NVIDIA Drivers:** One of the following supported versions:
 {: .no-tb-margins }
 
