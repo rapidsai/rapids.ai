@@ -160,18 +160,14 @@ Whether you are new to RAPIDS, looking to help, or are part of the team, learn a
     content-right-half=com_right 
 %} 
 
-
-<<<<<<< HEAD
 {% include roadmap-featured-json.html
     background="background-purple"
     padding-top="3em" padding-bottom="1em" 
 %}
 
 
-{% capture lib_top_left %}
-=======
 {% capture lib1_left %}
->>>>>>> master
+
 ## <i class="fas fa-terminal"></i> cuDF <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cudf/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/master/CHANGELOG.md){: target="_blank"}**
