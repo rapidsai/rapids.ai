@@ -7,7 +7,7 @@ button_link: "https://spark.apache.org/"
 layout: default
 ---
 
-![Spark](https://spark.apache.org/images/spark-logo-trademark.png){: .projects-logo}
+![Apache Spark](https://spark.apache.org/images/spark-logo-trademark.png){: .projects-logo}
 
 # Spark
 {: .section-title-full}
