@@ -836,6 +836,11 @@ a.blue-btn:hover,
     margin: auto;
 }
 
+i.fa-up-6 {
+    position: relative;
+    top: -6px;
+}
+
 i.fa-down-6 {
     position: relative;
     top: 6px;

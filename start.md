@@ -3,7 +3,7 @@ title: "Getting Started"
 description: "Get started with RAPIDS using conda, docker, or from source builds."
 tagline: "Try RAPIDS Now"
 button_text: "LAUNCH IN COLAB"
-button_link: "https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y#forceEdit=true&offline=true&sandboxMode=true"
+button_link: "https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true"
 layout: default
 redirect_from: "/documentation.html" # redirect from old page to ensure existing links still work
 ---
@@ -22,7 +22,7 @@ for column in gdf.columns:
 ```
 
 ## <i class="fas fa-bolt"></i> Try Now In CoLab
-Jump right into a GPU powered RAPIDS notebook with **[Colabratory](https://colab.research.google.com/notebooks/welcome.ipynb){: target="_blank"}** for free. **[Go to example notebook <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
+Jump right into a GPU powered RAPIDS notebook with **[Colabratory](https://colab.research.google.com/notebooks/welcome.ipynb){: target="_blank"}** for free. **[Go to example notebook <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
 
 {% endcapture %}
 
@@ -43,13 +43,16 @@ We suggest that you take a look at the sample workflow in our Docker container (
 <i class="fas fa-desktop text-purple"></i> **Supported OS:** Ubuntu 16.04/18.04 or CentOS 7 with gcc 5.4 & 7.3
 {: .no-tb-margins }
 
-<i class="fab fa-docker text-purple"></i> **Docker Prereqs:** Docker CE v18+ and **[NVIDIA-docker v2+](https://github.com/nvidia/nvidia-docker/wiki/Frequently-Asked-Questions#how-do-i-install-20-if-im-not-using-the-latest-docker-version){: target="_blank"}** 
+<i class="fab fa-docker text-purple"></i> **Docker:** Docker CE v19.03+ and **[nvidia-container-toolkit](https://github.com/NVIDIA/nvidia-docker#quickstart){: target="_blank"}** 
 {: .no-tb-margins }
 
-<i class="fas fa-download text-purple"></i> **CUDA:** **[9.2](https://developer.nvidia.com/cuda-92-download-archive){: target="_blank"} with driver v396.37+** or **[10.0](https://developer.nvidia.com/cuda-10.0-download-archive){: target="_blank"} with driver v410.48+**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-history text-purple"></i> [Legacy Support](#-docker-container) - Docker CE v17-18 and [nvidia-docker2](https://github.com/NVIDIA/nvidia-docker/wiki/Installation-(version-2.0)){: target="_blank"}
 {: .no-tb-margins }
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-exclamation-circle text-pink"></i> CUDA 10.1 is *not supported in v0.9*, support will be added soon
+<i class="fas fa-download text-purple"></i> **CUDA & NVIDIA Drivers:** One of the following supported versions:
+{: .no-tb-margins }
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-check-circle text-purple"></i> [9.2](https://developer.nvidia.com/cuda-92-download-archive){: target="_blank"} & v396.37+ &nbsp; <i class="fas fa-check-circle text-purple"></i> [10.0](https://developer.nvidia.com/cuda-10.0-download-archive){: target="_blank"} & v410.48+ &nbsp; <i class="fas fa-check-circle text-purple"></i> [10.1.2](https://developer.nvidia.com/cuda-downloads){: target="_blank"} & v418.87+
 {: .no-tb-margins }
 
 {% endcapture %}
@@ -67,7 +70,7 @@ We suggest that you take a look at the sample workflow in our Docker container (
 # RAPIDS Release Selector
 {: .section-title-full}
 
-RAPIDS is available as conda packages, docker images, and from source builds. Use the tool below to select your preferred method, packages, and environment to install RAPIDS. Certain combinations may not be possible and are dimmed automatically. Be sure you've met the required **[prerequisites above](#req)** and see the **[details blow](#details)**. 
+RAPIDS is available as conda packages, docker images, and from source builds. Use the tool below to select your preferred method, packages, and environment to install RAPIDS. Certain combinations may not be possible and are dimmed automatically. Be sure you've met the required **[prerequisites above](#req)** and see the **[details below](#details)**. 
 {% endcapture %}
 
 {% include slopecap.html 
@@ -126,12 +129,18 @@ Refer to our **[RAPIDS 0.7 Release Drops PIP Packages — and sticks with Co
 {% capture use_right %}
 ## <i class="fab fa-docker"></i> Docker Container
 
-Run the following command within the Docker container started from the copied Docker command above to launch the notebook server.
+The copied Docker command above should auto-run a notebook server. If it does not, run the following command within the Docker container to launch the notebook server.
+
+```bash
+bash /rapids/notebooks/utils/start-jupyter.sh
+```
 
 **NOTE:** This will run **[JupyterLab](https://jupyterlab.readthedocs.io/en/stable/){: target="_blank"}** on your host machine at port 8888.
 
+### Legacy Docker Users
+Docker CE v18 & [nvidia-docker2](https://github.com/NVIDIA/nvidia-docker/wiki/Installation-(version-2.0)) users will need to replace the following for compatibility:
 ```bash
-(rapids) root@container:/rapids/notebooks# bash utils/start-jupyter.sh
+'docker run --gpus all' with 'docker run --runtime=nvidia'
 ```
 
 ### Use JupyterLab to Explore the Notebooks
@@ -152,7 +161,7 @@ Notebooks can be found in notebooks directory within the container:
 
 ### Advanced Usage
 
-See the **[RAPIDS Container README](https://hub.docker.com/r/rapidsai/rapidsai){: target="_blank"}** page for more information about using custom datasets. **[Docker Hub](https://hub.docker.com/r/rapidsai/rapidsai/){: target="_blank"}** and **[NVIDIA GPU Cloud](https://ngc.nvidia.com/catalog/containers/nvidia%2Frapidsai%2Frapidsai){: target="_blank"}** host RAPIDS containers with full list of available **[tags](https://hub.docker.com/r/rapidsai/rapidsai#full-tag-list){: target="_blank"}**.
+See the **[RAPIDS Container README](https://hub.docker.com/r/rapidsai/rapidsai){: target="_blank"}** page for more information about using custom datasets. **[Docker Hub](https://hub.docker.com/r/rapidsai/rapidsai/){: target="_blank"}** and **[NVIDIA GPU Cloud](https://ngc.nvidia.com/catalog/containers/nvidia:rapidsai:rapidsai){: target="_blank"}** host RAPIDS containers with full list of available **[tags](https://hub.docker.com/r/rapidsai/rapidsai#full-tag-list){: target="_blank"}**.
 
 {% endcapture %}
 
@@ -172,7 +181,7 @@ See the **[RAPIDS Container README](https://hub.docker.com/r/rapidsai/rapidsai){
 {% include cta-footer.html 
 name="TRY RAPIDS NOW" 
 button="LAUNCH IN COLAB"
-link="https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y#forceEdit=true&offline=true&sandboxMode=true"
+link="https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true"
 %}
 
 

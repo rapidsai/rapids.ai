@@ -123,9 +123,10 @@ The RAPIDS team is working with the community to build a distributed, open sourc
 {% capture deploy_right %}
 ## <i class="fas fa-desktop"></i> Use a Single Machine
 
-XGBoost includes transparent support for training on multiple GPUs. To use multiple GPUs on a single node, set the `n_gpus` parameter to the number of GPUs you wish to use or set it to `-1` to use all available GPUs. 
+With [Dask-CUDA](https://github.com/rapidsai/dask-cuda), running across multiple GPUs on a single machine is easy. Two lines of code can spin up a LocalCUDACluster and parallelize ETL as well as training. See the [Dask-CUDA docs](https://github.com/rapidsai/dask-cuda) for more details.
 
-**Note:** over time, this approach will be deprecated in favor of the more scalable Dask and Spark approaches.
+**NOTE:** Older versions of XGBoost supported a thread-based "single-node, multi-GPU" pattern with the `n_gpus` parameters. This parameter is now deprecated, and we encourage all users to shift to Dask or Spark for more scalable and maintainable multi-GPU training.
+
 
 {% endcapture %}
 {% include slopecap.html 
@@ -161,23 +162,29 @@ The RAPIDS team is developing GPU enhancements to open-source XGBoost, working c
 
 ## Installation Prerequisites for RAPIDS + XGBoost
 
-<i class="fas fa-exclamation-triangle text-purple"></i> CUDA-compatible NVIDIA GPU with the NVIDIA Pascal™, NVIDIA Volta, or NVIDIA Turing™  architecture 
+## Prerequisites 
+<i class="fas fa-microchip text-purple"></i> **GPU:** NVIDIA Pascal™ or better with **[compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 6.0+
 {: .no-tb-margins }
 
-<i class="fas fa-exclamation-triangle text-purple"></i> NVIDIA CUDA Toolkit version **[CUDA 9.2](https://developer.nvidia.com/cuda-92-download-archive){: target="_blank"} with driver v396.37+** or **[CUDA 10.0](https://developer.nvidia.com/cuda-10.0-download-archive){: target="_blank"} with driver v410.48+** 
+<i class="fas fa-download text-purple"></i> **CUDA & NVIDIA Drivers:** One of the following supported versions:
 {: .no-tb-margins }
 
-<i class="fas fa-exclamation-triangle text-purple"></i> The latest RAPIDS package, which can be downloaded and installed one of these ways: 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-check-circle text-purple"></i> [9.2](https://developer.nvidia.com/cuda-92-download-archive){: target="_blank"} & v396.37+ &nbsp; <i class="fas fa-check-circle text-purple"></i> [10.0](https://developer.nvidia.com/cuda-10.0-download-archive){: target="_blank"} & v410.48+ &nbsp; <i class="fas fa-check-circle text-purple"></i> [10.1.2](https://developer.nvidia.com/cuda-downloads){: target="_blank"} & v418.87+
+{: .no-tb-margins }
+
+<i class="fas fa-box-open text-purple"></i> The latest RAPIDS package, which can be downloaded and installed one of these ways: 
 {: .no-tb-margins }
 
 {% endcapture %}
 {% capture download_left %}
 ## <i class="fas fa-laptop-code"></i> Conda Install
 
-Install using conda (the latest RAPIDS release). The RAPIDS conda channel includes an XGBoost package built with CUDA 10.0 and Python 3.7. You can install it with:
+Install using conda (the latest RAPIDS release). The RAPIDS conda channel includes an XGBoost package built with CUDA 9.2/10.0/10.1 and Python 3.6/3.7 versions. You can install it with:
 ```bash
-> conda install -c defaults -c nvidia -c rapidsai -c rapidsai/label/xgboost xgboost
+> conda install -c rapidsai -c nvidia -c conda-forge \
+        rapids-xgboost cudatoolkit=10.0
 ```
+Replacing `10.0` in `cudatoolkit=10.0` will install the desired CUDA version. If you wish to override the python version installed, add `python=3.6` or `python=3.7` to the install command.
 
 ## <i class="fab fa-docker"></i> Docker Container
 {: .section-subtitle-top-2}
@@ -194,7 +201,7 @@ Install using pip or other methods (the default upstream version).  The default 
 > pip install xgboost
 ```
 
-**Note:** the pip packages and source installation methods will not include some of the more recent contributions, such as cuDF integration, which are still being incorporated into the mainline XGBoost codebase.
+**NOTE:** The pip packages and source installation methods currently install XGBoost version 0.90, which will not include some of the more recent contributions, such as cuDF integration. Those contributions have been integrated to the master branch of XGBoost and will appear in pip packages starting in version 1.0.
 
 {% endcapture %}
 {% include section-single.html
