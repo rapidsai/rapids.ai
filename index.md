@@ -312,7 +312,9 @@ XGBoost is a well-known gradient boosted decision trees (GBDT) machine learning 
 {% capture com_bottom_right %}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Spark
 
-The RAPIDS team is working with the community to build a distributed, open source XGBoost4J-Spark + RAPIDS package. More details coming soon. 
+Coming soon: NVIDIA will be bringing RAPIDS to Apache Spark.
+<br> **[Learn more on our blog post <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://medium.com/rapids-ai/nvidia-gpus-and-apache-spark-one-step-closer-2d99e37ac8fd){: target="_blank"}**
+
 {% endcapture %}
 
 
