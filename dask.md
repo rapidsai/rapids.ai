@@ -118,7 +118,7 @@ Dask can distribute data and computation over multiple GPUs, either in the same 
 
 {% capture gpus_df %}
 ## Dataframe and ETL Integration
-The RAPIDS **[cuDF library](https://github.com/rapidsai/cudf){: target="_blank"}** provides a GPU-backed dataframe class that replicates the popular pandas API. It includes extremely high-performance functions to load CSV, JSON, ORC, Parquet and other file formats directly into GPU memory, eliminating one of the key bottlenecks in many data processing tasks. cuDF includes a variety of other functions supporting GPU-accelerated ETL, such as data subsetting, transformations, one-hot encoding, and more. The RAPIDS team maintains a **[dask-cudf library](https://github.com/rapidsai/dask-cudf){: target="_blank"}** that includes helper methods to integrate Dask and cuDF.
+The RAPIDS **[cuDF library](https://github.com/rapidsai/cudf){: target="_blank"}** provides a GPU-backed dataframe class that replicates the popular pandas API. It includes extremely high-performance functions to load CSV, JSON, ORC, Parquet and other file formats directly into GPU memory, eliminating one of the key bottlenecks in many data processing tasks. cuDF includes a variety of other functions supporting GPU-accelerated ETL, such as data subsetting, transformations, one-hot encoding, and more. The RAPIDS team maintains a **[dask-cudf library](https://github.com/rapidsai/cudf/tree/master/python/dask_cudf){: target="_blank"}** that includes helper methods to use Dask and cuDF.
 
 {% endcapture %}
 {% capture gpus_df_img %}
@@ -134,9 +134,9 @@ The RAPIDS **[cuDF library](https://github.com/rapidsai/cudf){: target="_blank"}
 
 {% capture gpus_xgb %}
 ## XGBoost Integration
-XGBoost, the popular open source machine learning library for gradient boosting, now includes integrated support for Dask. Users can partition data across nodes using Dask’s standard data structures, build a DMatrix on each GPU using `xgboost.dask.create_worker_dmatrix`, and then launch training through `xgboost.dask.run`. See the xgboost.dask documentation or the **[Dask+XGBoost GPU example code](https://github.com/dmlc/xgboost/blob/master/demo/dask/dask_gpu_demo.py){: target="_blank"}** for more details.
+XGBoost, the popular open source machine learning library for gradient boosting, now includes integrated support for Dask. Users can partition data across nodes using Dask’s standard data structures, build a DMatrix on each GPU using `xgboost.dask.create_worker_dmatrix`, and then launch training through `xgboost.dask.run`. See the xgboost.dask documentation or the **[Dask+XGBoost GPU example code](https://github.com/dmlc/xgboost/tree/master/demo/dask){: target="_blank"}** for more details.
 
-**Note**: This support is currently available in custom builds, and it is expected to be included in the next official release of XGBoost **after 0.90**. New users should check out the **[10 Minutes to Dask-XGBoost guide](https://rapidsai.github.io/projects/cudf/en/{{ site.data.releases.stable-docs }}/dask-xgb-10min.html){: target="_blank"}** to get started quickly.
+**Note**: This support is currently available in custom builds, and it is to be included in the next official release of XGBoost **after 0.90**. New users should check out the **[10 Minutes to Dask-XGBoost guide](https://rapidsai.github.io/projects/cudf/en/{{ site.data.releases.stable-docs }}/dask-xgb-10min.html){: target="_blank"}** to get started quickly.
 
 {% endcapture %}
 {% capture gpus_xgb_img %}
@@ -151,7 +151,7 @@ XGBoost, the popular open source machine learning library for gradient boosting,
 %}
 {% capture gpus_ml%}
 ## Integration With Other Machine Learning Algorithms 
-For other machine learning work on GPU, the **[dask-cuml library](https://github.com/rapidsai/dask-cuml){: target="_blank"}** provides a bridge to the RAPIDS cuML package. RAPIDS cuML implements popular machine learning algorithms, including clustering, dimensionality reduction, and regression approaches, with high performance GPU-based implementations, offering speedups of up to **100x** over CPU-based approaches. cuML replicates the scikit-learn API, so it integrates well with projects like Dask that include scikit-learn support. Currently, dask-cuml supports distributed clustering and regression algorithms, with new algorithms are being added over time.
+For other machine learning work on GPU, the **[cuML library](https://github.com/rapidsai/cuml/tree/master/python/cuml/dask){: target="_blank"}** provides a access to the RAPIDS cuML package with Dask. RAPIDS cuML implements popular machine learning algorithms, including clustering, dimensionality reduction, and regression approaches, with high performance GPU-based implementations, offering speedups of up to **100x** over CPU-based approaches. cuML replicates the scikit-learn API, so it integrates well with projects like Dask that include scikit-learn support. Currently, dask-cuml supports distributed clustering and regression algorithms, with new algorithms are being added over time.
 
 {% endcapture %}
 {% capture gpus_ml_img %}
@@ -169,10 +169,14 @@ For other machine learning work on GPU, the **[dask-cuml library](https://github
 ## Example Notebooks
 The RAPIDS Notebooks Extended repository includes several examples with end-to-end examples using Dask for distributed, GPU-accelerated computation. Here’s a few from the collection to get started with. 
 
-<i class="fas fa-caret-right"></i> The Linear Regression with Dask+cuML shows a simple example of how to get started with distributed machine learning. **[Go to notebook <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-contrib/blob/a236188a08ba7ec77a55ec48e5a5a1d6e81c9895/tutorials/examples/linear_regression_dask_cuml.ipynb){: target="_blank"}**
+
+<i class="fas fa-caret-right"></i> The Introductino to Dask shows how to get started with Dask using basic Python primitives like integers and strings. **[Go to notebook <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-contrib/blob/master/getting_started_notebooks/basics/Getting_Started_with_Dask.ipynb){: target="_blank"}**
 {: .no-tb-margins }
 
-<i class="fas fa-caret-right"></i> The end-to-end mortgage example notebook uses Fannie Mae data to predict mortgage delinquency (a classification problem). **[Go to notebook <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-contrib/blob/master/intermediate_notebooks/E2E/mortgage/mortgage_e2e.ipynb){: target="_blank"}**
+<i class="fas fa-caret-right"></i> Introduction to XGBoost with RAPIDS shows the acceleration one can gain by using GPUs with XGBoost in RAPIDS. **[Go to notebook <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks/blob/master/xgboost/XGBoost_Demo.ipynb){: target="_blank"}**
+{: .no-tb-margins }
+
+<i class="fas fa-caret-right"></i> The Linear Regression with Dask+cuML shows a simple example of how to get started with distributed machine learning. **[Go to notebook <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-contrib/blob/a236188a08ba7ec77a55ec48e5a5a1d6e81c9895/tutorials/examples/linear_regression_dask_cuml.ipynb){: target="_blank"}**
 {: .no-tb-margins }
 
 <i class="fas fa-caret-right"></i> The NYC Taxi End-to-End notebook uses trip data to predict New York City taxi fares (a regression problem). **[Go to notebook <i class="fas fa-angle-double-right"></i>](https://github.com/efajardo-nv/rapids-dataproc/blob/master/notebooks/NYCTaxi-E2E.ipynb){: target="_blank"}**
@@ -194,17 +198,12 @@ The RAPIDS Notebooks Extended repository includes several examples with end-to-e
 {% capture usecase_single %}
 # Use Cases
 
-Dask is widely and routinely used, running on everything from laptops to thousand-machine clusters in-house, on the cloud, and on high-performance computing (HPC) supercomputers. Its ability to process hundreds of terabytes of data efficiently makes it a powerful tool in three key areas. See how Dask is being used across industry by reading stories from other **[Dask users](https://stories.dask.org/en/latest/){: target="_blank"}** and see specific examples of how **[people are using Dask](http://docs.dask.org/en/latest/use-cases.html){: target="_blank"}**.
+Dask is widely and routinely used, running on everything from laptops to thousand-machine clusters in-house, on the cloud, and on high-performance computing (HPC) supercomputers. Its ability to process hundreds of terabytes of data efficiently makes it a powerful tool in three key areas. See how Dask is being used across industry by reading stories from other **[Dask users](https://stories.dask.org/en/latest/){: target="_blank"}** and see specific examples of how **[people are using Dask](https://stories.dask.org/en/latest/){: target="_blank"}**.
 {: .subtitle}
 
 {% endcapture %}
+
 {% capture uc_left %}
-## <i class="fas fa-store-alt"></i> Retail
-
-Data science and devops teams in the retail industry use Dask to scale their pipelines; taking pandas and machine learning workloads to terabytes of data easily. The Dask interface makes it easy to load in terabytes of tabular data, transform the data with libraries like pandas or RAPIDS cuDF using parallel compute, and pass it off to machine learning–training libraries at scale. See how **[one major retailer](https://www.youtube.com/watch?v=OQjko2H7xec&feature=youtu.be){: target="_blank"}** is using RAPIDS and Dask to generate more accurate forecasting models.
-
-{% endcapture %}
-{% capture uc_mid %}
 ## <i class="fas fa-server"></i> HPC
 
 Dask makes it easy to quickly analyze large, multi-dimensional datasets. It provides the same interactivity and ease of development as a system like Spark but is much more aligned to scientific processing, with native code execution, direct integration with systems like SLURM and PBS, and data models that fit multi-dimensional and spatial workloads. It’s also well tuned for high-performance networks and accelerator hardware.
@@ -213,6 +212,17 @@ Dask makes it easy to quickly analyze large, multi-dimensional datasets. It prov
 {% capture uc_right %}
 ## <i class="fas fa-hand-holding-usd"></i> Financial Services
 Many financial institutions have large, complex codebases that encode significant business logic, but they now need parallelism. Their systems are more complex than just “a big pandas dataframe” or “a big NumPy array.” These groups use Dask’s lower-level APIs (Delayed, Futures) to add task scheduling and parallelism as a lightweight way to scale out their systems without costly rewrites.
+
+{% endcapture %}
+{% capture uc_2_left %}
+## <i class="fas fa-store-alt"></i> Retail
+
+Data science and devops teams in the retail industry use Dask to scale their pipelines; taking pandas and machine learning workloads to terabytes of data easily. The Dask interface makes it easy to load in terabytes of tabular data, transform the data with libraries like pandas or RAPIDS cuDF using parallel compute, and pass it off to machine learning–training libraries at scale. One major retailer is using RAPIDS and Dask to generate more accurate forecasting models. **[See how in this video <i class="fas fa-angle-double-right"></i>](https://www.youtube.com/watch?v=OQjko2H7xec&feature=youtu.be){: target="_blank"}**
+
+{% endcapture %}
+{% capture uc_2_right %}
+## <i class="fas fa-network-wired"></i> Cyber Security
+Today’s cybersecurity challenges are data science and engineering challenges. A traditional Security Operations Center (SOC) relies on heuristics and manual triage of alerts, and the amount of logs being generated and kept is increasing while the percentage of those logs used is reducing due to staffing shortages. RAPIDS and CLX provide accelerated workflows and I/O for these use cases, targeting acceleration from the cybersecurity primitive level (e.g., IPv4 and DNS) all the way through end-to-end use case examples and flexible, non-regex log parsing. Learn more about CLX and how to get started with cybersecurity applications of RAPIDS. **[Learn more at this repository <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/clx){: target="_blank"}**
 
 {% endcapture %}
 {% include slopecap.html 
@@ -225,12 +235,17 @@ Many financial institutions have large, complex codebases that encode significan
     padding-top="5em" padding-bottom="0em" 
     content-single=usecase_single
 %}
-{% include section-thirds.html 
+{% include section-halfs.html 
+    background="background-purple" 
+    padding-top="0em" padding-bottom="0em" 
+    content-left-half=uc_left
+    content-right-half=uc_right
+%}
+{% include section-halfs.html 
     background="background-purple" 
     padding-top="0em" padding-bottom="5em" 
-    content-left-third=uc_left
-    content-middle-third=uc_mid
-    content-right-third=uc_right
+    content-left-half=uc_2_left
+    content-right-half=uc_2_right
 %}
 {% include slopecap.html 
     background="background-purple" 
