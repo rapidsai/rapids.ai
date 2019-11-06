@@ -123,7 +123,7 @@ The RAPIDS team is working with the community to build a distributed, open sourc
 {% capture deploy_right %}
 ## <i class="fas fa-desktop"></i> Use a Single Machine
 
-With [Dask-CUDA](https://github.com/rapidsai/dask-cuda), running across multiple GPUs on a single machine is easy. Two lines of code can spin up a LocalCUDACluster and parallelize ETL as well as training. See the [Dask-CUDA docs](https://github.com/rapidsai/dask-cuda) for more details.
+With **[Dask-CUDA](https://github.com/rapidsai/dask-cuda){: target="_blank"}**, running across multiple GPUs on a single machine is easy. Two lines of code can spin up a LocalCUDACluster and parallelize ETL as well as training. See the **[Dask-CUDA docs](https://github.com/rapidsai/dask-cuda){: target="_blank"}** for more details.
 
 **NOTE:** Older versions of XGBoost supported a thread-based "single-node, multi-GPU" pattern with the `n_gpus` parameters. This parameter is now deprecated, and we encourage all users to shift to Dask or Spark for more scalable and maintainable multi-GPU training.
 
