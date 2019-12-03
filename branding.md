@@ -1,7 +1,7 @@
 ---
-title: "RAPIDS Branding"
+title: "RAPIDS Branding and Guides"
 description: "RAPIDS logos, style guides, and brand guidelines"
-tagline: "RAPIDS Branding"
+tagline: "Branding and Guides"
 button_text: "LEARN MORE"
 button_link: "https://rapids.ai/about.html"
 layout: default
@@ -13,16 +13,29 @@ layout: default
 {: .section-title-halfs}
 This page contains useful guides, assets, **[fonts](https://fonts.google.com/specimen/Open+Sans){: target="_blank"}**, and themes to help you style RAPIDS communications consistently and clearly. 
 
+## <i class="far fa-bookmark"></i> RAPIDS Citation Guide
+If you use RAPIDS in a publication, please use citations in the following format (BibTeX entry for LaTeX):
+```tex
+@Manual{,
+  title = {RAPIDS: Collection of Libraries for End to End GPU Data Science},
+  author = {{RAPIDS Development Team}},
+  year = {2018},
+  url = {https://rapids.ai},
+}
+```
+{: .padding-bottom-3em }
+
+
 ## <i class="fas fa-book"></i> RAPIDS Style Guide
 A concise visual guide on the colors, fonts, and layouts to best apply the RAPIDS style. 
 {: .no-tb-margins }
 **[Get style guide PDF <i class="fas fa-angle-double-right"></i>]({{ site.baseurl }}{% link /assets/files/rapids-style-guide-2019-r8-web.pdf %}){: target="_blank"}** 
+{: .padding-bottom-3em }
 
 ## <i class="fab fa-css3"></i> RAPIDS Jupyter Notebook Theme
 An easy to use RAPIDS theme for Jupyter Notebooks.
 {: .no-tb-margins }
 **[Get theme 'custom.css' <i class="fas fa-angle-double-right"></i>]({{ site.baseurl }}{% link /assets/files/custom.css %}){: target="_blank"}**
-
 
 <img class="half-image-center" src="{{ site.baseurl }}{% link /assets/images/RAPIDStheme.png %}" alt="RAPIDS notebook theme">
 
@@ -49,17 +62,21 @@ HTML(CSSstyle)
 High resolution SVG files, right click to save.
 <img class="half-image" src="{{ site.baseurl }}{% link /assets/images/RAPIDS-logo-purple.svg %}" alt="RAPIDS logo svg">
 <img class="half-image" src="{{ site.baseurl }}{% link /assets/images/RAPIDS-logo-white.svg %}" alt="RAPIDS logo svg">
+{: .padding-bottom-3em }
 
 
 ## <i class="far fa-file-image"></i> PNG Logos
 High resolution PNG files, right click to save.
 <img class="half-image" src="{{ site.baseurl }}{% link /assets/images/RAPIDS-logo-purple.png %}" alt="RAPIDS logo png">
 <img class="half-image" src="{{ site.baseurl }}{% link /assets/images/RAPIDS-logo-white.png %}" alt="RAPIDS logo png">
+{: .padding-bottom-3em }
 
 
 ## <i class="far fa-image"></i> Background
 High resolution background SVG file, right click to save.
 <img class="full-image" src="{{ site.baseurl }}{% link /assets/images/header-bg.svg %}" alt="RAPIDS motif">
+{: .padding-bottom-3em }
+
 
 ## <i class="fas fa-palette"></i> Color Values
 RAPIDS colors for easy reference.
