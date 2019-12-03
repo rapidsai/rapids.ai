@@ -138,27 +138,65 @@ A second Github repository with our extended collection of notebook examples. <b
 RAPIDS is committed to open source. We strive for a **[6 week release schedule](https://docs.rapids.ai/maintainers){: target="_blank"}**, below is a generalized release schedule. Learn more on our **[Road To 1.0 post <i class="fas fa-angle-double-right"></i>](https://medium.com/rapids-ai/the-road-to-1-0-building-for-the-long-haul-657ae1afdfd6){: target="_blank"}**
 
 ## <i class="far fa-calendar-check"></i> Release Schedule
-<svg id="release-schedule-svg" data-name="release-schedule" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 309.3 64.97">
+<svg id="Release" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 108">
     <defs>
-        <style> .cls-1, .cls-2 {fill: none; stroke: #e0e0e0; stroke-miterlimit: 10; stroke-width: 3px; } .cls-2 {stroke-dasharray: 5.98 5.98; } .cls-3, .cls-4, .cls-5 {fill: #fff; } .cls-4 {font-size: 12px; font-family: Helvetica; font-weight: 700; } .cls-5 {font-size: 10px; font-family: Helvetica; } .cls-6 {letter-spacing: -0.07em; } .cls-7 {letter-spacing: -0.02em; } </style> </defs>
-    <title>Release-Schedule</title>
-    <line class="cls-1" x1="22.46" y1="22.78" x2="154.12" y2="22.78" />
-    <line class="cls-1" x1="153.75" y1="22.78" x2="156.75" y2="22.78" />
-    <line class="cls-2" x1="162.74" y1="22.78" x2="279.42" y2="22.78" />
-    <line class="cls-1" x1="282.41" y1="22.78" x2="285.41" y2="22.78" />
-    <circle class="cls-3" cx="22.46" cy="22.78" r="7.6" />
-    <circle class="cls-3" cx="154.12" cy="22.78" r="7.6" />
-    <circle class="cls-3" cx="285.78" cy="22.78" r="7.6" />
-    <text class="cls-4" transform="translate(10.28 10.32)">&nbsp;{{ site.data.releases.legacy-version }}</text>
-    <text class="cls-4" transform="translate(143.08 10.32)">&nbsp;{{ site.data.releases.stable-version }}</text>
-    <text class="cls-4" transform="translate(270.74 10.32)">&nbsp;{{ site.data.releases.nightly-version }}</text>
-    <text class="cls-5" transform="translate(0 49.41)">{{ site.data.releases.legacy-date }}</text>
-    <text class="cls-5" transform="translate(131.13 49.41)">{{ site.data.releases.stable-date }}</text>
-    <text class="cls-5" transform="translate(263.52 49.41)">{{ site.data.releases.nightly-date }}</text>
-    <text class="cls-5" transform="translate(1.76 60.16)">LEGACY</text>
-    <text class="cls-5" transform="translate(135.95 60.16)">STABLE</text>
-    <text class="cls-5" transform="translate(265.2 60.16)">NIGHTLY</text>
+        <style>
+        .cls-1,
+        .cls-2 {
+            fill: none;
+            stroke: #e0e0e0;
+            stroke-width: 3px;
+        }
+        .cls-1,
+        .cls-2,
+        .cls-3 {
+            stroke-miterlimit: 10;
+        }
+
+        .cls-2 {
+            stroke-dasharray: 10.11 10.11;
+        }
+
+        .cls-3,
+        .cls-4 {
+            fill: #fff;
+        }
+
+        .cls-3 {
+            stroke: #9943ff;
+            stroke-width: 2px;
+        }
+        .cls-4 {
+            font-size: 16px;
+            font-family: Helvetica;
+        }
+        .cls-7 {
+            fill: #fff;
+            font-weight: bold;
+            font-size: 25px;
+        }
+
+        </style>
+    </defs>
+    <title>Release Schedule</title>
+    <line class="cls-1" x1="37.36" y1="62.02" x2="320.24" y2="62.02" />
+    <line class="cls-1" x1="320.24" y1="62.02" x2="325.24" y2="62.02" />
+    <line class="cls-2" x1="335.35" y1="62.02" x2="593.08" y2="62.02" />
+    <line class="cls-1" x1="598.13" y1="62.02" x2="603.13" y2="62.02" />
+    <circle class="cls-3" cx="37.36" cy="62.02" r="16.61" />
+    <circle class="cls-3" cx="320.24" cy="62.02" r="16.61" />
+    <circle class="cls-3" cx="603.13" cy="62.02" r="16.61" />
+    <text class="cls-4" transform="translate(0 100.00)"> AUG 2019 </text>
+    <text class="cls-4" transform="translate(283.48 100.00)"> OCT 2019 </text>
+    <text class="cls-4" transform="translate(566.22 100.00)"> DEC 2019 </text>
+    <text class="cls-4" transform="translate(7.00 12.00)"> LEGACY </text>
+    <text class="cls-4" transform="translate(292.00 12.00)"> STABLE </text>
+    <text class="cls-4" transform="translate(571.00 12.00)"> NIGHTLY </text>
+    <text class="cls-7" transform="translate(16.00 38.00)"> 0.9 </text>
+    <text class="cls-7" transform="translate(297.00 38.00)"> 0.10 </text>
+    <text class="cls-7" transform="translate(581.00 38.00)"> 0.11 </text>
 </svg>
+{: .padding-top-1em .padding-bottom-2em }
 {% endcapture %}
 
 {% capture com_right %}
