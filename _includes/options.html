@@ -161,10 +161,6 @@ function processClick(options, click, category) {
         $(pkg_opts).addClass("disabled");
         $("#all").removeClass("disabled");
         $("#all").addClass("active");
-        $("#py37").addClass("disabled");
-        if (selections['python'] == 'py37') {
-            selections['python'] = 'py36';
-        }
         selections['pkg'] = 'all';
     } else if (selections['method'] == 'source') {
         // Handle source requests
