@@ -186,15 +186,15 @@ RAPIDS is committed to open source. We strive for a **[6 week release schedule](
     <circle class="cls-3" cx="37.36" cy="62.02" r="16.61" />
     <circle class="cls-3" cx="320.24" cy="62.02" r="16.61" />
     <circle class="cls-3" cx="603.13" cy="62.02" r="16.61" />
-    <text class="cls-4" transform="translate(0 100.00)"> AUG 2019 </text>
-    <text class="cls-4" transform="translate(283.48 100.00)"> OCT 2019 </text>
-    <text class="cls-4" transform="translate(566.22 100.00)"> DEC 2019 </text>
+    <text class="cls-4" transform="translate(0 100.00)"> {{ site.data.releases.legacy-date }} </text>
+    <text class="cls-4" transform="translate(283.48 100.00)"> {{ site.data.releases.stable-date }} </text>
+    <text class="cls-4" transform="translate(566.22 100.00)"> {{ site.data.releases.nightly-date }} </text>
     <text class="cls-4" transform="translate(7.00 12.00)"> LEGACY </text>
     <text class="cls-4" transform="translate(292.00 12.00)"> STABLE </text>
     <text class="cls-4" transform="translate(571.00 12.00)"> NIGHTLY </text>
-    <text class="cls-7" transform="translate(16.00 38.00)"> 0.9 </text>
-    <text class="cls-7" transform="translate(297.00 38.00)"> 0.10 </text>
-    <text class="cls-7" transform="translate(581.00 38.00)"> 0.11 </text>
+    <text class="cls-7" transform="translate(16.00 38.00)"> {{ site.data.releases.legacy-version }} </text>
+    <text class="cls-7" transform="translate(297.00 38.00)"> {{ site.data.releases.stable-version }} </text>
+    <text class="cls-7" transform="translate(581.00 38.00)"> {{ site.data.releases.nightly-version }} </text>
 </svg>
 {: .padding-top-1em .padding-bottom-2em }
 {% endcapture %}
