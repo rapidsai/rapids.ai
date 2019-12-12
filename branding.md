@@ -18,7 +18,7 @@ If you use RAPIDS in a publication, please use citations in the following format
 ```tex
 @Manual{,
   title = {RAPIDS: Collection of Libraries for End to End GPU Data Science},
-  author = {{RAPIDS Development Team}},
+  author = {RAPIDS Development Team},
   year = {2018},
   url = {https://rapids.ai},
 }
