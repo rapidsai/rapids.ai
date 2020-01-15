@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Learn How to Use Dask with GPUs">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="fb:app_id" content="1679326302390196"/>
+  <meta property="og:title" content="RAPIDS + Dask | RAPIDS"/>
+  <meta property="og:type" content="Website"/>
+  <meta property="og:description" content="Learn How to Use Dask with GPUs"/>
+  <meta name="og:site_name" content="RAPIDS"/>
+  <meta property="og:image" content="/rapidsai-staging/assets/images/og_image.png"/>
+  <meta property="og:image:secure_url" content="/rapidsai-staging/assets/images/og_image.png"/>
+  <meta property="og:image:type" content="image/jpeg"/>
+  <meta property="og:image:width" content="400"/>
+  <meta property="og:image:height" content="300"/>
+  <meta property="og:image:alt" content="RAPIDS Logo"/>
+
+  <meta name="twitter:site" content="https://twitter.com/rapidsai"/>
+  <meta name="twitter:card" content="RAPIDS + Dask | RAPIDS"/>
+  <meta name="twitter:image" content="/rapidsai-staging/assets/images/og_image.png"/>
+  <meta name="twitter:creator" content="@RAPIDSAI"/>
+  <meta name="twitter:title" content="RAPIDS + Dask | RAPIDS"/>
+  <meta name="twitter:description" content="Learn How to Use Dask with GPUs"/>
+
+  <title>RAPIDS + Dask | RAPIDS</title>
+
+  <link rel='shortcut icon' type='image/x-icon' href='/rapidsai-staging/assets/favicon.ico' />
+
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+  <!--
+  <link rel="stylesheet" type="text/css" href="/rapidsai-staging/assets/css/style.css">
+  -->
+  <link rel="stylesheet" type="text/css" href="/rapidsai-staging/assets/css/highlight.css">
+  <link rel="stylesheet" type="text/css" href="/rapidsai-staging/assets/css/custom.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1690513e32.js"></script> 
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="//assets.adobedtm.com/b92787824f2e0e9b68dc2e993f9bd995339fe417/satelliteLib-30c8ffcc8ece089156fd5590fbcf390ffc296f51.js"></script>
+</head>
+<body>
+<header>
+  <div id="nav-fixed" class="position-fixed">
+    <nav>
+  <a class="nav-logo" href="/rapidsai-staging/index.html"><img src="/rapidsai-staging/assets/images/rapids-logo.svg" alt="RAPIDS logo"></a>
+  <div class="menu">&#9776;</div>
+  <ul>
+  
+    
+        <li class=""><a href="/rapidsai-staging/index.html">HOME</a></li>
+    
+  
+    
+        <li class=""><a href="/rapidsai-staging/about.html">ABOUT</a></li>
+    
+  
+    
+        <li class=""><a href="/rapidsai-staging/start.html">GET STARTED</a></li>
+    
+  
+    
+        <li class=""><a href="/rapidsai-staging/community.html">COMMUNITY</a></li>
+    
+  
+    
+        <li><a href="https://medium.com/rapids-ai" target="_blank">BLOG</a></li>
+    
+  
+    
+        <li><a href="https://docs.rapids.ai" target="_blank">DOCS</a></li>
+    
+  
+    
+        <li><a href="https://github.com/rapidsai" target="_blank">GITHUB</a></li>
+    
+  
+  </ul>
+  <script>
+    $('nav .menu').click(function(){ $('nav ul').toggleClass('show-height') })
+  </script>
+</nav>
+  </div>
+  <div class="header-branding">
+    <div class="header-logo">
+      <a href="/rapidsai-staging"><img src="/rapidsai-staging/assets/images/rapids-logo.svg" alt="RAPIDS logo"></a>
+    </div>
+    <h1 class="header-tagline">Scale Python with Dask on GPUs</h1>
+    <a href="https://dask.org/" class="blue-btn">DASK.ORG</a>
+  </div>
+  <div class="slopecap-header"></div>
+</header>
+
+<p><img src="/rapidsai-staging/assets/images/dask.svg" alt="Dask" class="projects-logo" /></p>
+
+<h1 class="section-title-full" id="scale-python-with-ease">Scale Python with Ease</h1>
+
+<section class="pure-g background-white padding-top-0em padding-bottom-1em">
+    <div class="container-padding">
+        <div class="pure-u-1"> 
+<p class="subtitle">Pandas, Numpy, and scikit-learn packages are efficient, intuitive, and widely trusted—but they weren’t designed to scale. <strong><a href="https://dask.org" target="_blank">Dask</a></strong> is an open-source tool that can scale Python packages to multiple machines. Developed by core NumPy, pandas, scikit-learn, Jupyter, Dask is freely available and deployed in production across numerous Fortune 500 companies.</p>
+
+ </div>
+    </div>
+</section>
+
+<section class="pure-g background-white padding-top-2em padding-bottom-0em">
+    <div class="container-padding">
+        <div class="pure-u-1"> 
+<h1 class="section-title-full" id="why-use-dask">Why Use Dask?</h1>
+
+ </div>
+    </div>
+</section>
+<section class="pure-g background-white padding-top-0em padding-bottom-5em ">
+    <div class="container-padding ">
+        <div class="pure-u-1 pure-u-md-1-3"> 
+<h2 id="-scalable"><i class="fas fa-expand-arrows-alt"></i> Scalable</h2>
+<p>Code only needs to be written once and then can be deployed locally or to a multi-node cluster using a comfortable Pythonic syntax. No need for code rewrites or retraining.</p>
+
+ </div>
+        <div class="pure-u-1 pure-u-md-1-3"> 
+<h2 id="-resilient"><i class="far fa-hand-rock"></i> Resilient</h2>
+<p>It’s resilient, handling the failure of worker nodes gracefully, and elastic, able to take advantage of new nodes added on the fly.</p>
+
+ </div>
+        <div class="pure-u-1 pure-u-md-1-3"> 
+<h2 id="-simple-to-implement"><i class="far fa-check-square"></i> Simple to Implement</h2>
+<p>Dask requires no configuration and no setup. Adding even a single machine to computation adds very little cognitive overhead.</p>
+
+ </div>
+    </div>
+</section>
+
+<section class="pure-g background-white padding-top-1em padding-bottom-10em">
+    <div class="container-padding">
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h1 class="section-title-halfs" id="getting-started">Getting Started</h1>
+
+<p>It’s easy to get started with Dask quickly. The project is well supported by many tutorials, quick-start guides, and cheat sheets.</p>
+
+<h2 id="-working-with-apache-spark"><i class="far fa-star"></i> Working with Apache Spark?</h2>
+<p>Dask collaborates with Apache Spark and its ecosystem. However, there are <strong><a href="https://docs.dask.org/en/latest/spark.html" target="_blank">some basic differences</a></strong>.</p>
+
+ </div>
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 class="section-subtitle-top-1" id="-get-an-overview"><i class="fas fa-microphone-alt"></i> Get an Overview</h2>
+<p>Listen to the TalkPython podcast <strong>“<a href="https://talkpython.fm/episodes/show/207/parallelizing-computation-with-dask" target="_blank">Parallelizing Computation with Dask</a>.”</strong></p>
+
+<h2 id="-see-how-dask-works"><i class="fab fa-youtube"></i> See How Dask Works</h2>
+<p>Watch presentations from the <strong><a href="https://www.youtube.com/playlist?list=PLRtz5iA93T4PQvWuoMnIyEIz1fXiJ5Pri" target="_blank">Dask Youtube channel</a></strong>.</p>
+
+<h2 id="-access-dask-docs"><i class="far fa-file-code"></i> Access Dask Docs</h2>
+<p>See the latest <strong><a href="https://docs.dask.org/en/latest/" target="_blank">documentation from Dask</a></strong>.</p>
+
+<h2 id="-check-out-dask-tutorials"><i class="far fa-file-code"></i> Check Out Dask Tutorials</h2>
+<p>Explore Dask tutorials on <strong><a href="https://github.com/dask/dask-tutorial" target="_blank">Github</a></strong>, see Dask code examples on <strong><a href="https://examples.dask.org" target="_blank">dask.org</a></strong> and <strong><a href="https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab" target="_blank">Binder</a></strong>.</p>
+
+ </div>
+    </div>
+</section>
+
+<div class="slopecap-top-down background-gray"></div>
+<section class="pure-g background-gray padding-top-5em padding-bottom-0em">
+    <div class="container-padding">
+        <div class="pure-u-1"> 
+<h1 id="dask-on-gpus">Dask on GPUs</h1>
+
+<p class="subtitle">Dask can distribute data and computation over multiple GPUs, either in the same system or in a multi-node cluster. Dask integrates with both RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning.</p>
+
+ </div>
+    </div>
+</section>
+
+<section class="pure-g background-gray padding-top-0em padding-bottom-0em">
+    <div class="container-padding">
+        <div class="pure-u-1 pure-u-md-1-3"> 
+<p><i class="fas fa-layer-group dask-icon"></i></p>
+
+ </div>
+        <div class="pure-u-1 pure-u-md-2-3"> 
+<h2 id="dataframe-and-etl-integration">Dataframe and ETL Integration</h2>
+<p>The RAPIDS <strong><a href="https://github.com/rapidsai/cudf" target="_blank">cuDF library</a></strong> provides a GPU-backed dataframe class that replicates the popular pandas API. It includes extremely high-performance functions to load CSV, JSON, ORC, Parquet and other file formats directly into GPU memory, eliminating one of the key bottlenecks in many data processing tasks. cuDF includes a variety of other functions supporting GPU-accelerated ETL, such as data subsetting, transformations, one-hot encoding, and more. The RAPIDS team maintains a <strong><a href="https://github.com/rapidsai/cudf/tree/master/python/dask_cudf" target="_blank">dask-cudf library</a></strong> that includes helper methods to use Dask and cuDF.</p>
+
+ </div>
+    </div>
+</section>
+
+<section class="pure-g background-gray padding-top-0em padding-bottom-0em">
+    <div class="container-padding">
+        <div class="pure-u-1 pure-u-md-1-3"> 
+<p><i class="fas fa-bezier-curve dask-icon"></i></p>
+
+ </div>
+        <div class="pure-u-1 pure-u-md-2-3"> 
+<h2 id="xgboost-integration">XGBoost Integration</h2>
+<p>XGBoost, the popular open source machine learning library for gradient boosting, now includes integrated support for Dask. Users can partition data across nodes using Dask’s standard data structures, build a DMatrix on each GPU using <code class="language-plaintext highlighter-rouge">xgboost.dask.create_worker_dmatrix</code>, and then launch training through <code class="language-plaintext highlighter-rouge">xgboost.dask.run</code>. See the xgboost.dask documentation or the <strong><a href="https://github.com/dmlc/xgboost/tree/master/demo/dask" target="_blank">Dask+XGBoost GPU example code</a></strong> for more details.</p>
+
+<p><strong>Note</strong>: This support is currently available in custom builds, and it is to be included in the next official release of XGBoost <strong>after 0.90</strong>. New users should check out the <strong><a href="https://rapidsai.github.io/projects/cudf/en/0.11.0/dask-xgb-10min.html" target="_blank">10 Minutes to Dask-XGBoost guide</a></strong> to get started quickly.</p>
+
+ </div>
+    </div>
+</section>
+
+<section class="pure-g background-gray padding-top-0em padding-bottom-0em">
+    <div class="container-padding">
+        <div class="pure-u-1 pure-u-md-1-3"> 
+<p><i class="fas fa-sliders-h dask-icon"></i></p>
+
+ </div>
+        <div class="pure-u-1 pure-u-md-2-3"> 
+<h2 id="integration-with-other-machine-learning-algorithms">Integration With Other Machine Learning Algorithms</h2>
+<p>For other machine learning work on GPU, the <strong><a href="https://github.com/rapidsai/cuml/tree/master/python/cuml/dask" target="_blank">cuML library</a></strong> provides a access to the RAPIDS cuML package with Dask. RAPIDS cuML implements popular machine learning algorithms, including clustering, dimensionality reduction, and regression approaches, with high performance GPU-based implementations, offering speedups of up to <strong>100x</strong> over CPU-based approaches. cuML replicates the scikit-learn API, so it integrates well with projects like Dask that include scikit-learn support. Currently, dask-cuml supports distributed clustering and regression algorithms, with new algorithms are being added over time.</p>
+
+ </div>
+    </div>
+</section>
+
+<section class="pure-g background-gray padding-top-0em padding-bottom-10em">
+    <div class="container-padding">
+        <div class="pure-u-1 pure-u-md-1-3"> 
+<p><i class="far fa-bookmark dask-icon"></i></p>
+
+ </div>
+        <div class="pure-u-1 pure-u-md-2-3"> 
+<h2 id="example-notebooks">Example Notebooks</h2>
+<p>The RAPIDS Notebooks Extended repository includes several examples with end-to-end examples using Dask for distributed, GPU-accelerated computation. Here’s a few from the collection to get started with.</p>
+
+<p class="no-tb-margins"><i class="fas fa-caret-right"></i> The Introductino to Dask shows how to get started with Dask using basic Python primitives like integers and strings. <strong><a href="https://github.com/rapidsai/notebooks-contrib/blob/master/getting_started_notebooks/basics/Getting_Started_with_Dask.ipynb" target="_blank">Go to notebook <i class="fas fa-angle-double-right"></i></a></strong></p>
+
+<p class="no-tb-margins"><i class="fas fa-caret-right"></i> Introduction to XGBoost with RAPIDS shows the acceleration one can gain by using GPUs with XGBoost in RAPIDS. <strong><a href="https://github.com/rapidsai/notebooks/blob/master/xgboost/XGBoost_Demo.ipynb" target="_blank">Go to notebook <i class="fas fa-angle-double-right"></i></a></strong></p>
+
+<p class="no-tb-margins"><i class="fas fa-caret-right"></i> The Linear Regression with Dask+cuML shows a simple example of how to get started with distributed machine learning. <strong><a href="https://github.com/rapidsai/notebooks-contrib/blob/a236188a08ba7ec77a55ec48e5a5a1d6e81c9895/tutorials/examples/linear_regression_dask_cuml.ipynb" target="_blank">Go to notebook <i class="fas fa-angle-double-right"></i></a></strong></p>
+
+<p class="no-tb-margins"><i class="fas fa-caret-right"></i> The NYC Taxi End-to-End notebook uses trip data to predict New York City taxi fares (a regression problem). <strong><a href="https://github.com/efajardo-nv/rapids-dataproc/blob/master/notebooks/NYCTaxi-E2E.ipynb" target="_blank">Go to notebook <i class="fas fa-angle-double-right"></i></a></strong></p>
+
+ </div>
+    </div>
+</section>
+
+<div class="slopecap-top-up background-purple"></div>
+<section class="pure-g background-purple padding-top-5em padding-bottom-0em">
+    <div class="container-padding">
+        <div class="pure-u-1"> 
+<h1 id="use-cases">Use Cases</h1>
+
+<p class="subtitle">Dask is widely and routinely used, running on everything from laptops to thousand-machine clusters in-house, on the cloud, and on high-performance computing (HPC) supercomputers. Its ability to process hundreds of terabytes of data efficiently makes it a powerful tool in three key areas. See how Dask is being used across industry by reading stories from other <strong><a href="https://stories.dask.org/en/latest/" target="_blank">Dask users</a></strong> and see specific examples of how <strong><a href="https://stories.dask.org/en/latest/" target="_blank">people are using Dask</a></strong>.</p>
+
+ </div>
+    </div>
+</section>
+<section class="pure-g background-purple padding-top-0em padding-bottom-0em">
+    <div class="container-padding">
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 id="-hpc"><i class="fas fa-server"></i> HPC</h2>
+
+<p>Dask makes it easy to quickly analyze large, multi-dimensional datasets. It provides the same interactivity and ease of development as a system like Spark but is much more aligned to scientific processing, with native code execution, direct integration with systems like SLURM and PBS, and data models that fit multi-dimensional and spatial workloads. It’s also well tuned for high-performance networks and accelerator hardware.</p>
+
+ </div>
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 id="-financial-services"><i class="fas fa-hand-holding-usd"></i> Financial Services</h2>
+<p>Many financial institutions have large, complex codebases that encode significant business logic, but they now need parallelism. Their systems are more complex than just “a big pandas dataframe” or “a big NumPy array.” These groups use Dask’s lower-level APIs (Delayed, Futures) to add task scheduling and parallelism as a lightweight way to scale out their systems without costly rewrites.</p>
+
+ </div>
+    </div>
+</section>
+<section class="pure-g background-purple padding-top-0em padding-bottom-5em">
+    <div class="container-padding">
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 id="-retail"><i class="fas fa-store-alt"></i> Retail</h2>
+
+<p>Data science and devops teams in the retail industry use Dask to scale their pipelines; taking pandas and machine learning workloads to terabytes of data easily. The Dask interface makes it easy to load in terabytes of tabular data, transform the data with libraries like pandas or RAPIDS cuDF using parallel compute, and pass it off to machine learning–training libraries at scale. One major retailer is using RAPIDS and Dask to generate more accurate forecasting models. <strong><a href="https://www.youtube.com/watch?v=OQjko2H7xec&amp;feature=youtu.be" target="_blank">See how in this video <i class="fas fa-angle-double-right"></i></a></strong></p>
+
+ </div>
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 id="-cyber-security"><i class="fas fa-network-wired"></i> Cyber Security</h2>
+<p>Today’s cybersecurity challenges are data science and engineering challenges. A traditional Security Operations Center (SOC) relies on heuristics and manual triage of alerts, and the amount of logs being generated and kept is increasing while the percentage of those logs used is reducing due to staffing shortages. RAPIDS and CLX provide accelerated workflows and I/O for these use cases, targeting acceleration from the cybersecurity primitive level (e.g., IPv4 and DNS) all the way through end-to-end use case examples and flexible, non-regex log parsing. Learn more about CLX and how to get started with cybersecurity applications of RAPIDS. <strong><a href="https://github.com/rapidsai/clx" target="_blank">Learn more at this repository <i class="fas fa-angle-double-right"></i></a></strong></p>
+
+ </div>
+    </div>
+</section>
+<div class="slopecap-bottom-down background-purple"></div>
+
+<section class="pure-g background-white padding-top-5em padding-bottom-0em">
+    <div class="container-padding">
+        <div class="pure-u-1"> 
+<h1 id="dask-libraries">Dask Libraries</h1>
+
+<p class="subtitle">Dask provides advanced parallelism for data science, enabling performance at scale for popular Python tools. Below are the key libraries of Dask that make it unique.</p>
+
+ </div>
+    </div>
+</section>
+
+<section class="background-white padding-top-0em padding-bottom-10em">
+ 	<div class="pure-g">
+	    <div class="container-padding">
+	        <div class="pure-u-1 pure-u-md-1-3"> 
+<h2 id="-user-interfaces"><i class="fas fa-dice-d20"></i> User Interfaces</h2>
+
+<p>Dask collections, including DataFrame, Array, Delayed, and Futures, provide underlying parallel computing machinery to scale workloads. All come with a purpose-built set of parallel algorithms and programming style. <br /> <strong><a href="https://docs.dask.org/en/latest/user-interfaces.html" target="_blank">Learn more <i class="fas fa-angle-double-right"></i></a></strong></p>
+
+ </div>
+	        <div class="pure-u-1 pure-u-md-1-3"> 
+<h2 id="--machine-learning"><i class="fas fa-wave-square"></i>  Machine Learning</h2>
+
+<p>Dask-ML provides scalable machine learning in Python using Dask with popular machine learning libraries, such as scikit-learn. <br /> <strong><a href="https://ml.dask.org" target="_blank">Learn more <i class="fas fa-angle-double-right"></i></a></strong></p>
+ </div>
+	        <div class="pure-u-1 pure-u-md-1-3"> 
+<h2 id="-parallel-execution"><i class="fas fa-random"></i> Parallel Execution</h2>
+
+<p>Dask uses task graphs to optimize and execute work in parallel. After Dask generates task graphs, it executes them on parallel hardware with a distributed task scheduler. <br /> <strong><a href="https://docs.dask.org/en/latest/scheduling.html" target="_blank">Learn more <i class="fas fa-angle-double-right"></i></a></strong></p>
+
+ </div>
+	    </div>
+	</div>
+	<div class="pure-g">
+	    <div class="container-padding">
+	        <div class="pure-u-1 pure-u-md-1-3"> 
+<h2 id="-deployment"><i class="fas fa-cloud-upload-alt"></i> Deployment</h2>
+
+<p>Dask integrates into existing cluster management tooling like Kubernetes and YARN (Hadoop/Spark) and HPC schedulers like SLURM, PBS, and LSF to enable scalable workloads to evolve, reducing the burst workloads of computations by 10X.<br /> <strong><a href="http://docs.dask.org/en/latest/setup.html" target="_blank">Learn more <i class="fas fa-angle-double-right"></i></a></strong></p>
+
+ </div>
+	        <div class="pure-u-1 pure-u-md-1-3"> 
+<h2 id="-visual-interactivity"><i class="fas fa-chart-line"></i> Visual Interactivity</h2>
+<p>The Dask interactive dashboard gives real-time feedback during computations, pointing users to hot spots in their code. This helps them use their hardware more effectively to customize load balancing, communications, thread-level profiling, and more. <br /> <strong><a href="http://docs.dask.org/en/latest/understanding-performance.html" target="_blank">Learn more <i class="fas fa-angle-double-right"></i></a></strong></p>
+
+ </div>
+	        <div class="pure-u-1 pure-u-md-1-3"> 
+ </div>
+	    </div>
+	</div>
+</section>
+
+<div class="slopecap-top-up background-darkpurple"></div>
+<section class="pure-g background-darkpurple padding-top-1em padding-bottom-0em">
+    <div class="container-padding">
+        <div class="pure-u-1"> 
+<h1 class="section-title-full text-white" id="get-started-with-dask">Get Started with Dask</h1>
+
+ </div>
+    </div>
+</section>
+
+<section class="background-darkpurple">
+    <div class="container-padding">
+        <div class="footer-help-section">
+            <div class="footer-help-box">
+                <i class="fab fa-github fa-3x icon"></i>
+                <a href="https://github.com/dask" target="_blank" class="primary-btn">Dask Github</a>
+            </div>
+            <div class="footer-help-box">
+                <i class="fab fa-twitter fa-3x icon"></i>
+                <a href="https://twitter.com/dask_dev" target="_blank" class="primary-btn">Dask Twitter</a>
+            </div>
+            <div class="footer-help-box">
+                <i class="fas fa-blog fa-3x icon"></i>
+                <a href="https://blog.dask.org" target="_blank" class="primary-btn">Dask Working Notes </a>
+            </div>
+            <div class="footer-help-box">
+                <i class="fab fa-stack-overflow fa-3x icon"></i>
+                <a href="https://stackoverflow.com/questions/tagged/dask" target="_blank" class="primary-btn">Dask Stack Overflow</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<footer>
+    <a href="/rapidsai-staging/"><img class="footer-logo" src="/rapidsai-staging/assets/images/footer-logo.svg" alt="rapids"></a>
+    <div class="copy-date">© 2020 RAPIDS</div>
+    <div class="footer-nav">
+        <ul>
+            <li><a href="/rapidsai-staging/about.html">ABOUT</a></li>
+            <li><a href="/rapidsai-staging/start.html">GET STARTED</a></li>
+            <li><a href="/rapidsai-staging/community.html">COMMUNITY</a></li>
+            <li><a href="https://github.com/rapidsai" target="_blank">GITHUB</a></li>
+            <li><a href="https://medium.com/rapids-ai" target="_blank">BLOG</a></li>
+            <li>
+                <br>
+                <a href="/rapidsai-staging/branding.html">BRANDING AND GUIDES</a>
+            </li>
+            <li>
+                <br>
+                <a class="footer-icon" href="mailto:RAPIDSai@googlegroups.com"><i class="fas fa-envelope fa-2x dark-purple-font"></i></a>
+                <a class="footer-icon" href="https://twitter.com/rapidsai" target="_blank"><i class="fab fa-twitter fa-2x dark-purple-font"></i></a>
+                <a class="footer-icon" href="https://join.slack.com/t/rapids-goai/shared_invite/enQtMjE0Njg5NDQ1MDQxLTJiN2FkNTFkYmQ2YjY1OGI4NTc5Y2NlODQ3ZDdiODEwYmRiNTFhMzNlNTU5ZWJhZjA3NTg4NDZkMThkNTkxMGQ" target="_blank"><i class="fab fa-slack fa-2x dark-purple-font"></i></a>
+                <a class="footer-icon" href="https://stackoverflow.com/tags/rapids" target="_blank"><i class="fab fa-stack-overflow fa-2x dark-purple-font"></i></a>
+            </li>
+        </ul>
+    </div>
+</footer>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127041178-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-127041178-1');
+</script>
+
+<script type="text/javascript">
+	if(typeof _satellite == "object")
+		_satellite.pageBottom();
+	else console.log("Adobe Analytics Likely AdBlocked. ");
+</script>
+</body>
+</html> 

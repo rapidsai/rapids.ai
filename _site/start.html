@@ -1,0 +1,1078 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Get started with RAPIDS using conda, docker, or from source builds.">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="fb:app_id" content="1679326302390196"/>
+  <meta property="og:title" content="Getting Started | RAPIDS"/>
+  <meta property="og:type" content="Website"/>
+  <meta property="og:description" content="Get started with RAPIDS using conda, docker, or from source builds."/>
+  <meta name="og:site_name" content="RAPIDS"/>
+  <meta property="og:image" content="/rapidsai-staging/assets/images/og_image.png"/>
+  <meta property="og:image:secure_url" content="/rapidsai-staging/assets/images/og_image.png"/>
+  <meta property="og:image:type" content="image/jpeg"/>
+  <meta property="og:image:width" content="400"/>
+  <meta property="og:image:height" content="300"/>
+  <meta property="og:image:alt" content="RAPIDS Logo"/>
+
+  <meta name="twitter:site" content="https://twitter.com/rapidsai"/>
+  <meta name="twitter:card" content="Getting Started | RAPIDS"/>
+  <meta name="twitter:image" content="/rapidsai-staging/assets/images/og_image.png"/>
+  <meta name="twitter:creator" content="@RAPIDSAI"/>
+  <meta name="twitter:title" content="Getting Started | RAPIDS"/>
+  <meta name="twitter:description" content="Get started with RAPIDS using conda, docker, or from source builds."/>
+
+  <title>Getting Started | RAPIDS</title>
+
+  <link rel='shortcut icon' type='image/x-icon' href='/rapidsai-staging/assets/favicon.ico' />
+
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+  <!--
+  <link rel="stylesheet" type="text/css" href="/rapidsai-staging/assets/css/style.css">
+  -->
+  <link rel="stylesheet" type="text/css" href="/rapidsai-staging/assets/css/highlight.css">
+  <link rel="stylesheet" type="text/css" href="/rapidsai-staging/assets/css/custom.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1690513e32.js"></script> 
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="//assets.adobedtm.com/b92787824f2e0e9b68dc2e993f9bd995339fe417/satelliteLib-30c8ffcc8ece089156fd5590fbcf390ffc296f51.js"></script>
+</head>
+<body>
+<header>
+  <div id="nav-fixed" class="position-fixed">
+    <nav>
+  <a class="nav-logo" href="/rapidsai-staging/index.html"><img src="/rapidsai-staging/assets/images/rapids-logo.svg" alt="RAPIDS logo"></a>
+  <div class="menu">&#9776;</div>
+  <ul>
+  
+    
+        <li class=""><a href="/rapidsai-staging/index.html">HOME</a></li>
+    
+  
+    
+        <li class=""><a href="/rapidsai-staging/about.html">ABOUT</a></li>
+    
+  
+    
+        <li class="active"><a href="/rapidsai-staging/start.html">GET STARTED</a></li>
+    
+  
+    
+        <li class=""><a href="/rapidsai-staging/community.html">COMMUNITY</a></li>
+    
+  
+    
+        <li><a href="https://medium.com/rapids-ai" target="_blank">BLOG</a></li>
+    
+  
+    
+        <li><a href="https://docs.rapids.ai" target="_blank">DOCS</a></li>
+    
+  
+    
+        <li><a href="https://github.com/rapidsai" target="_blank">GITHUB</a></li>
+    
+  
+  </ul>
+  <script>
+    $('nav .menu').click(function(){ $('nav ul').toggleClass('show-height') })
+  </script>
+</nav>
+  </div>
+  <div class="header-branding">
+    <div class="header-logo">
+      <a href="/rapidsai-staging"><img src="/rapidsai-staging/assets/images/rapids-logo.svg" alt="RAPIDS logo"></a>
+    </div>
+    <h1 class="header-tagline">Try RAPIDS Now</h1>
+    <a href="https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true" class="blue-btn">LAUNCH IN COLAB</a>
+  </div>
+  <div class="slopecap-header"></div>
+</header>
+
+
+<div id="req"></div>
+
+<section class="pure-g background-white padding-top-1em padding-bottom-10em">
+    <div class="container-padding">
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h1 class="section-title-halfs" id="getting-started">Getting Started</h1>
+
+<p>The RAPIDS data science framework includes a collection of libraries for executing end-to-end data science pipelines completely in the GPU. It is designed to have a familiar look and feel to data scientists working in Python. Here’s a code snippet where we read in a CSV file and output some descriptive statistics:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">cudf</span>
+<span class="n">gdf</span> <span class="o">=</span> <span class="n">cudf</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s">'path/to/file.csv'</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">column</span> <span class="ow">in</span> <span class="n">gdf</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">gdf</span><span class="p">[</span><span class="n">column</span><span class="p">]</span><span class="o">.</span><span class="n">mean</span><span class="p">())</span>
+</code></pre></div></div>
+
+<h2 id="-try-now-in-colab"><i class="fas fa-bolt"></i> Try Now In CoLab</h2>
+<p>Jump right into a GPU powered RAPIDS notebook with <strong><a href="https://colab.research.google.com/notebooks/welcome.ipynb" target="_blank">Colabratory</a></strong> for free. <strong><a href="https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&amp;offline=true&amp;sandboxMode=true" target="_blank">Go to example notebook <i class="fas fa-angle-double-right"></i></a></strong></p>
+
+ </div>
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 class="section-subtitle-top-1" id="gpu-powered-data-science">GPU Powered Data Science</h2>
+
+<p>RAPIDS uses optimized <strong><a href="https://developer.nvidia.com/cuda-toolkit" target="_blank">NVIDIA CUDA®</a></strong> primitives and high-bandwidth GPU memory to accelerate data preparation and machine learning. The goal of RAPIDS is not only to accelerate the individual parts of the typical data science workflow, but to accelerate the complete end-to-end workflow.</p>
+
+<p>We suggest that you take a look at the sample workflow in our Docker container (described below), which illustrates just how straightforward a basic XGBoost model training and testing workflow looks in RAPIDS.</p>
+
+<h2 id="prerequisites">Prerequisites</h2>
+<p class="no-tb-margins"><i class="fas fa-microchip text-purple"></i> <strong>GPU:</strong> NVIDIA Pascal™ or better with <strong><a href="https://developer.nvidia.com/cuda-gpus" target="_blank">compute capability</a></strong> 6.0+</p>
+
+<p class="no-tb-margins"><i class="fas fa-desktop text-purple"></i> <strong>Supported OS:</strong> Ubuntu 16.04/18.04 or CentOS 7 with gcc 5.4 &amp; 7.3</p>
+
+<p class="no-tb-margins"><i class="fab fa-docker text-purple"></i> <strong>Docker:</strong> Docker CE v19.03+ and <strong><a href="https://github.com/NVIDIA/nvidia-docker#quickstart" target="_blank">nvidia-container-toolkit</a></strong></p>
+
+<p class="no-tb-margins">     <i class="fas fa-history text-purple"></i> <a href="#-docker-container">Legacy Support</a> - Docker CE v17-18 and <a href="https://github.com/NVIDIA/nvidia-docker/wiki/Installation-(version-2.0)" target="_blank">nvidia-docker2</a></p>
+
+<p class="no-tb-margins"><i class="fas fa-download text-purple"></i> <strong>CUDA &amp; NVIDIA Drivers:</strong> One of the following supported versions:</p>
+
+<p class="no-tb-margins">     <i class="fas fa-check-circle text-purple"></i> <a href="https://developer.nvidia.com/cuda-92-download-archive" target="_blank">9.2</a> &amp; v396.37+   <i class="fas fa-check-circle text-purple"></i> <a href="https://developer.nvidia.com/cuda-10.0-download-archive" target="_blank">10.0</a> &amp; v410.48+   <i class="fas fa-check-circle text-purple"></i> <a href="https://developer.nvidia.com/cuda-10.1-download-archive-update2" target="_blank">10.1.2</a> &amp; v418.87+</p>
+
+ </div>
+    </div>
+</section>
+
+<div id="get-rapids"></div>
+
+<div class="slopecap-top-down background-purple"></div>
+<section class="pure-g background-purple padding-top-1em padding-bottom-1em">
+    <div class="container-padding">
+        <div class="pure-u-1"> 
+<h1 class="section-title-full" id="rapids-release-selector">RAPIDS Release Selector</h1>
+
+<p>RAPIDS is available as conda packages, docker images, and from source builds. Use the tool below to select your preferred method, packages, and environment to install RAPIDS. Certain combinations may not be possible and are dimmed automatically. Be sure you’ve met the required <strong><a href="#req">prerequisites above</a></strong> and see the <strong><a href="#details">details below</a></strong>.</p>
+ </div>
+    </div>
+</section>
+<section class="background-purple padding-top-1em padding-bottom-1em">
+    <div class="container-padding">
+        <div class="selector ">
+            <div class="options">
+                <div class="preferred">
+                    <div class="option-label">&nbsp;</div>
+                    <div class="option-blank">
+                        <span>
+                            <i class="fas fa-level-up-alt fa-rotate-180 fa-down-6"></i>&nbsp;&nbsp;
+                            <i class="fas fa-check-square text-blue"></i>&nbsp;Preferred&nbsp;&nbsp;
+                            <i class="fas fa-level-down-alt fa-down-6"></i>
+                        </span>
+                    </div>
+                    <div class="option-blank">
+                        <span>
+                            <i class="fas fa-level-up-alt fa-rotate-180 fa-down-6"></i>&nbsp;&nbsp;
+                            <i class="fas fa-flask text-orange"></i>&nbsp;Advanced&nbsp;&nbsp;
+                            <i class="fas fa-level-down-alt fa-down-6"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="method padding-bottom-1em">
+                    <div class="option-label">Method</div>
+                    <div id="conda" class="option" title="Conda install">Conda&nbsp;&nbsp;<i class="fas fa-box-open"></i></div>
+                    <div id="docker" class="option" title="Docker image with example notebooks">Docker + Examples&nbsp;&nbsp;<i class="fab fa-docker"></i></div>
+                    <div id="dev" class="option advanced" title="Docker image with developer tools and from source build environment ">Docker + Dev Env&nbsp;&nbsp;<i class="fab fa-docker"></i></div>
+                    <div id="source" class="option advanced" title="From source build">Source&nbsp;&nbsp;<i class="fas fa-cogs"></i></div>
+                </div>
+                <div class="release">
+                    <div class="option-label">Release</div>
+                    <div id="stable" class="option">Stable (0.11)</div>
+                    <div id="nightly" class="option">Nightly (0.12a)</div>
+                </div>
+                <div class="pkg">
+                    <div class="option-label">Packages</div>
+                    <div id="all" class="option">All Packages</div>
+                    <div id="cudf" class="option">cuDF</div>
+                    <div id="cuml" class="option">cuML</div>
+                    <div id="cugraph" class="option">cuGraph</div>
+                    <div id="cuspatial" class="option">cuSpatial</div>
+                </div>
+                <div class="linux">
+                    <div class="option-label">Linux</div>
+                    <div id="ubuntu1604" class="option">Ubuntu 16.04</div>
+                    <div id="ubuntu1804" class="option">Ubuntu 18.04</div>
+                    <div id="centos7" class="option">CentOS 7</div>
+                </div>
+                <div class="python">
+                    <div class="option-label">Python</div>
+                    <div id="py36" class="option">Python 3.6</div>
+                    <div id="py37" class="option">Python 3.7</div>
+                </div>
+                <div class="cuda">
+                    <div class="option-label">CUDA</div>
+                    <div id="cuda92" class="option">CUDA 9.2</div>
+                    <div id="cuda100" class="option">CUDA 10.0</div>
+                    <div id="cuda101" class="option">CUDA 10.1.2</div>
+                </div>
+                <div class="preferred">
+                    <div class="option-label">&nbsp;</div>
+                    <div class="option-blank">
+                        <span>
+                            <i class="fas fa-level-down-alt fa-rotate-180 fa-up-6"></i>&nbsp;
+                            <i class="fas fa-exclamation-triangle text-orange"></i>&nbsp;Deprecated
+                        </span>
+                    </div>
+                    <div class="option-blank">
+                        <span>&nbsp;</span>
+                    </div>
+                    <div class="option-blank">
+                        <span>&nbsp;</span>
+                    </div>
+                </div>
+            </div>
+            <div class="cmd">
+                <div class="cmd-label">Command</div>
+                <div id="command" class="cmd-box"><div class="highlight"><pre class="highlight"><code><span class="gh"># Javascript is needed for this tool to run, please make sure it is enabled</span></code></pre></div></div>
+            </div>
+        </div>
+        <div class="selector-buttons">
+            <a id="copy-command" onclick="CopyToClipboard(&quot;command-code&quot;)" class="primary-btn">COPY COMMAND <i class="fas fa-clipboard"></i></a>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+/* Adopted from https://pytorch.org/assets/quick-start-module.js */
+var pkg = ['cudf', 'cuml', 'cugraph', 'cuspatial', 'all'];
+var method = ['conda', 'docker', 'source', 'dev'];
+var release = ['stable', 'nightly'];
+var linux = ['ubuntu1604', 'ubuntu1804', 'centos7'];
+var python = ['py36', 'py37'];
+var cuda = ['cuda92', 'cuda100', 'cuda101'];
+var pkg_opts = $(".pkg > .option");
+var method_opts = $(".method > .option");
+var release_opts = $(".release > .option");
+var linux_opts = $(".linux > .option");
+var python_opts = $(".python > .option");
+var cuda_opts = $(".cuda > .option");
+var details = {
+    conda: 'conda-install',
+    docker: 'docker-container',
+    pip: 'pip-install',
+    source: 'build-from-source'
+}
+// Set initial choices
+var selections = {
+    pkg: 'all',
+    method: 'conda',
+    release: 'stable',
+    linux: 'ubuntu1604',
+    python: 'py36',
+    cuda: 'cuda100'
+};
+pkg_opts.on("click", function() {
+    processClick(pkg_opts, this, "pkg");
+});
+method_opts.on("click", function() {
+    processClick(method_opts, this, "method");
+});
+release_opts.on("click", function() {
+    processClick(release_opts, this, "release");
+});
+linux_opts.on("click", function() {
+    processClick(linux_opts, this, "linux");
+});
+python_opts.on("click", function() {
+    processClick(python_opts, this, "python");
+});
+cuda_opts.on("click", function() {
+    processClick(cuda_opts, this, "cuda");
+});
+// Initialize on start
+$(function() {
+    processClick();
+});
+
+function processClick(options, click, category) {
+    // reset all
+    $(pkg_opts).removeClass("disabled");
+    $(release_opts).removeClass("disabled");
+    $(linux_opts).removeClass("disabled");
+    $(python_opts).removeClass("disabled");
+    $(cuda_opts).removeClass("disabled");
+    $(pkg_opts).removeClass("active");
+    $(release_opts).removeClass("active");
+    $(linux_opts).removeClass("active");
+    $(python_opts).removeClass("active");
+    $(cuda_opts).removeClass("active");
+    var prev_linux = selections['linux'];
+    var prev_release = selections['release'];
+    if (options && click && category) {
+        $(options).removeClass("active");
+        $(click).addClass("active");
+        selections[category] = click.id;
+    }
+    if (selections['method'] == 'conda') {
+        // Handle conda requests
+        $(linux_opts).addClass("disabled");
+    } else if (selections['method'] == 'docker') {
+        // Handle docker requests
+        $(pkg_opts).addClass("disabled");
+        $("#all").removeClass("disabled");
+        $("#all").addClass("active");
+        selections['pkg'] = 'all';
+    } else if (selections['method'] == 'source') {
+        // Handle source requests
+        $("#all").addClass("disabled");
+        if (selections['pkg'] == 'all') {
+            selections['pkg'] = 'cudf';
+        }
+        $(linux_opts).removeClass("active");
+        $(python_opts).removeClass("active");
+        $(cuda_opts).removeClass("active");
+        $(linux_opts).addClass("disabled");
+        $(python_opts).addClass("disabled");
+        $(cuda_opts).addClass("disabled");
+    } else if (selections['method'] == 'dev') {
+        // Handle dev requests
+        $(pkg_opts).addClass("disabled");
+        $("#all").removeClass("disabled");
+        $("#all").addClass("active");
+        selections['pkg'] = 'all';
+    } 
+    $("#" + selections['method']).addClass("active");
+    $("#" + selections['pkg']).addClass("active");
+    $("#" + selections['linux']).addClass("active");
+    $("#" + selections['python']).addClass("active");
+    $("#" + selections['cuda']).addClass("active");
+    $("#" + selections['release']).addClass("active");
+
+    showCommand();
+}
+
+function getSelections() {
+    if (selections['method'] == 'source') {
+        return "" + selections['release'] + "-" + selections['pkg'] + "-" + selections['method'];
+    } else {
+        return "" + selections['release'] + "-" + selections['pkg'] + "-" + selections['method'] + "-" + selections['linux'] + "-" + selections['python'] + "-" + selections['cuda'];
+    }
+}
+
+function showCommand() {
+    var key = getSelections();
+    var command = $("." + key).html();
+    var anchor = details[selections['method']];
+    var txt = ("" + selections['method'] + " details").toUpperCase();
+    $("#command").html(command);
+    $("#command > div > pre > code ").attr("id", "command-code")
+}
+
+function CopyToClipboard(containerid) {
+    if (document.selection) { //IE
+        var range = document.body.createTextRange();
+        range.moveToElementText(document.getElementById(containerid));
+        range.select();
+        document.execCommand("copy");
+    } else if (window.getSelection) { //others
+        var range = document.createRange();
+        range.selectNode(document.getElementById(containerid));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        document.execCommand("copy");
+    }
+}
+</script>
+
+<!--
+    START - STABLE commands
+-->
+<!-- dev - ubuntu 16.04 -->
+<div class="language-bash stable-all-dev-ubuntu1604-py36-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev:0.11-cuda9.2-devel-ubuntu16.04-py3.6
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev:0.11-cuda9.2-devel-ubuntu16.04-py3.6
+</code></pre></div></div>
+<div class="language-bash stable-all-dev-ubuntu1604-py37-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev:0.11-cuda9.2-devel-ubuntu16.04-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev:0.11-cuda9.2-devel-ubuntu16.04-py3.7
+</code></pre></div></div>
+<div class="language-bash stable-all-dev-ubuntu1604-py36-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev:0.11-cuda10.0-devel-ubuntu16.04-py3.6
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev:0.11-cuda10.0-devel-ubuntu16.04-py3.6
+</code></pre></div></div>
+<div class="language-bash stable-all-dev-ubuntu1604-py37-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev:0.11-cuda10.0-devel-ubuntu16.04-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev:0.11-cuda10.0-devel-ubuntu16.04-py3.7
+</code></pre></div></div>
+<div class="language-bash stable-all-dev-ubuntu1604-py36-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev:0.11-cuda10.1-devel-ubuntu16.04-py3.6
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev:0.11-cuda10.1-devel-ubuntu16.04-py3.6
+</code></pre></div></div>
+<div class="language-bash stable-all-dev-ubuntu1604-py37-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev:0.11-cuda10.1-devel-ubuntu16.04-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev:0.11-cuda10.1-devel-ubuntu16.04-py3.7
+</code></pre></div></div>
+<!-- dev - ubuntu 18.04 -->
+<div class="language-bash stable-all-dev-ubuntu1804-py36-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev:0.11-cuda9.2-devel-ubuntu18.04-py3.6
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev:0.11-cuda9.2-devel-ubuntu18.04-py3.6
+</code></pre></div></div>
+<div class="language-bash stable-all-dev-ubuntu1804-py37-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev:0.11-cuda9.2-devel-ubuntu18.04-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev:0.11-cuda9.2-devel-ubuntu18.04-py3.7
+</code></pre></div></div>
+<div class="language-bash stable-all-dev-ubuntu1804-py36-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev:0.11-cuda10.0-devel-ubuntu18.04-py3.6
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev:0.11-cuda10.0-devel-ubuntu18.04-py3.6
+</code></pre></div></div>
+<div class="language-bash stable-all-dev-ubuntu1804-py37-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev:0.11-cuda10.0-devel-ubuntu18.04-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev:0.11-cuda10.0-devel-ubuntu18.04-py3.7
+</code></pre></div></div>
+<div class="language-bash stable-all-dev-ubuntu1804-py36-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev:0.11-cuda10.1-devel-ubuntu18.04-py3.6
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev:0.11-cuda10.1-devel-ubuntu18.04-py3.6
+</code></pre></div></div>
+<div class="language-bash stable-all-dev-ubuntu1804-py37-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev:0.11-cuda10.1-devel-ubuntu18.04-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev:0.11-cuda10.1-devel-ubuntu18.04-py3.7
+</code></pre></div></div>
+<!-- dev - centos 7 -->
+<div class="language-bash stable-all-dev-centos7-py36-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev:0.11-cuda9.2-devel-centos7-py3.6
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev:0.11-cuda9.2-devel-centos7-py3.6
+</code></pre></div></div>
+<div class="language-bash stable-all-dev-centos7-py37-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev:0.11-cuda9.2-devel-centos7-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev:0.11-cuda9.2-devel-centos7-py3.7
+</code></pre></div></div>
+<div class="language-bash stable-all-dev-centos7-py36-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev:0.11-cuda10.0-devel-centos7-py3.6
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev:0.11-cuda10.0-devel-centos7-py3.6
+</code></pre></div></div>
+<div class="language-bash stable-all-dev-centos7-py37-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev:0.11-cuda10.0-devel-centos7-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev:0.11-cuda10.0-devel-centos7-py3.7
+</code></pre></div></div>
+<div class="language-bash stable-all-dev-centos7-py36-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev:0.11-cuda10.1-devel-centos7-py3.6
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev:0.11-cuda10.1-devel-centos7-py3.6
+</code></pre></div></div>
+<div class="language-bash stable-all-dev-centos7-py37-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev:0.11-cuda10.1-devel-centos7-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev:0.11-cuda10.1-devel-centos7-py3.7
+</code></pre></div></div>
+<!-- docker - ubuntu 16.04 -->
+<div class="language-bash stable-all-docker-ubuntu1604-py36-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai:cuda9.2-runtime-ubuntu16.04
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai:cuda9.2-runtime-ubuntu16.04
+</code></pre></div></div>
+<div class="language-bash stable-all-docker-ubuntu1604-py37-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai:cuda9.2-runtime-ubuntu16.04-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai:cuda9.2-runtime-ubuntu16.04-py3.7
+</code></pre></div></div>
+<div class="language-bash stable-all-docker-ubuntu1604-py36-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai:cuda10.0-runtime-ubuntu16.04
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai:cuda10.0-runtime-ubuntu16.04
+</code></pre></div></div>
+<div class="language-bash stable-all-docker-ubuntu1604-py37-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai:cuda10.0-runtime-ubuntu16.04-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai:cuda10.0-runtime-ubuntu16.04-py3.7
+</code></pre></div></div>
+<div class="language-bash stable-all-docker-ubuntu1604-py36-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai:cuda10.1-runtime-ubuntu16.04
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai:cuda10.1-runtime-ubuntu16.04
+</code></pre></div></div>
+<div class="language-bash stable-all-docker-ubuntu1604-py37-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai:cuda10.1-runtime-ubuntu16.04-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai:cuda10.1-runtime-ubuntu16.04-py3.7
+</code></pre></div></div>
+<!-- docker - ubuntu 18.04 -->
+<div class="language-bash stable-all-docker-ubuntu1804-py36-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai:cuda9.2-runtime-ubuntu18.04
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai:cuda9.2-runtime-ubuntu18.04
+</code></pre></div></div>
+<div class="language-bash stable-all-docker-ubuntu1804-py37-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai:cuda9.2-runtime-ubuntu18.04-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai:cuda9.2-runtime-ubuntu18.04-py3.7
+</code></pre></div></div>
+<div class="language-bash stable-all-docker-ubuntu1804-py36-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai:cuda10.0-runtime-ubuntu18.04
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai:cuda10.0-runtime-ubuntu18.04
+</code></pre></div></div>
+<div class="language-bash stable-all-docker-ubuntu1804-py37-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai:cuda10.0-runtime-ubuntu18.04-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai:cuda10.0-runtime-ubuntu18.04-py3.7
+</code></pre></div></div>
+<div class="language-bash stable-all-docker-ubuntu1804-py36-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai:cuda10.1-runtime-ubuntu18.04
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai:cuda10.1-runtime-ubuntu18.04
+</code></pre></div></div>
+<div class="language-bash stable-all-docker-ubuntu1804-py37-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai:cuda10.1-runtime-ubuntu18.04-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai:cuda10.1-runtime-ubuntu18.04-py3.7
+</code></pre></div></div>
+<!-- docker - centos 7 -->
+<div class="language-bash stable-all-docker-centos7-py36-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai:cuda9.2-runtime-centos7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai:cuda9.2-runtime-centos7
+</code></pre></div></div>
+<div class="language-bash stable-all-docker-centos7-py37-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai:cuda9.2-runtime-centos7-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai:cuda9.2-runtime-centos7-py3.7
+</code></pre></div></div>
+<div class="language-bash stable-all-docker-centos7-py36-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai:cuda10.0-runtime-centos7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai:cuda10.0-runtime-centos7
+</code></pre></div></div>
+<div class="language-bash stable-all-docker-centos7-py37-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai:cuda10.0-runtime-centos7-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai:cuda10.0-runtime-centos7-py3.7
+</code></pre></div></div>
+<div class="language-bash stable-all-docker-centos7-py36-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai:cuda10.1-runtime-centos7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai:cuda10.1-runtime-centos7
+</code></pre></div></div>
+<div class="language-bash stable-all-docker-centos7-py37-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai:cuda10.1-runtime-centos7-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai:cuda10.1-runtime-centos7-py3.7
+</code></pre></div></div>
+<!-- source -->
+<div class="stable-cudf-source hidden">
+    <pre># See <a href="https://github.com/rapidsai/cudf/tree/master#buildinstall-from-source" _target="blank">cuDF README</a> for build instructions</pre>
+</div>
+<div class="stable-cuml-source hidden">
+    <pre># See <a href="https://github.com/rapidsai/cuml/tree/master#buildinstall-from-source" _target="blank">cuML README</a> for build instructions</pre>
+</div>
+<div class="stable-cugraph-source hidden">
+    <pre># See <a href="https://github.com/rapidsai/cugraph/tree/master#build-from-source-and-contributing" _target="blank">cuGraph README</a> for build instructions</pre>
+</div>
+<div class="stable-cuspatial-source hidden">
+    <pre># See <a href="https://github.com/rapidsai/cuspatial/tree/master#clone-build-and-install-cuspatial" _target="blank">cuSpatial README</a> for build instructions</pre>
+</div>
+<!-- conda cuda92 -->
+<div class="language-bash stable-cudf-conda-ubuntu1604-py36-cuda92 stable-cudf-conda-ubuntu1804-py36-cuda92 stable-cudf-conda-centos7-py36-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cudf</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>9.2
+</code></pre></div></div>
+
+<div class="language-bash stable-cudf-conda-ubuntu1604-py37-cuda92 stable-cudf-conda-ubuntu1804-py37-cuda92 stable-cudf-conda-centos7-py37-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cudf</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>9.2
+</code></pre></div></div>
+
+<div class="language-bash stable-cuml-conda-ubuntu1604-py36-cuda92 stable-cuml-conda-ubuntu1804-py36-cuda92 stable-cuml-conda-centos7-py36-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cuml</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>9.2
+</code></pre></div></div>
+
+<div class="language-bash stable-cuml-conda-ubuntu1604-py37-cuda92 stable-cuml-conda-ubuntu1804-py37-cuda92 stable-cuml-conda-centos7-py37-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cuml</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>9.2
+</code></pre></div></div>
+
+<div class="language-bash stable-cugraph-conda-ubuntu1604-py36-cuda92 stable-cugraph-conda-ubuntu1804-py36-cuda92 stable-cugraph-conda-centos7-py36-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cugraph</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>9.2
+</code></pre></div></div>
+
+<div class="language-bash stable-cugraph-conda-ubuntu1604-py37-cuda92 stable-cugraph-conda-ubuntu1804-py37-cuda92 stable-cugraph-conda-centos7-py37-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cugraph</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>9.2
+</code></pre></div></div>
+
+<div class="language-bash stable-cuspatial-conda-ubuntu1604-py36-cuda92 stable-cuspatial-conda-ubuntu1804-py36-cuda92 stable-cuspatial-conda-centos7-py36-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cuspatial</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>9.2
+</code></pre></div></div>
+
+<div class="language-bash stable-cuspatial-conda-ubuntu1604-py37-cuda92 stable-cuspatial-conda-ubuntu1804-py37-cuda92 stable-cuspatial-conda-centos7-py37-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cuspatial</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>9.2
+</code></pre></div></div>
+
+<div class="language-bash stable-all-conda-ubuntu1604-py36-cuda92 stable-all-conda-ubuntu1804-py36-cuda92 stable-all-conda-centos7-py36-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">rapids</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>9.2
+</code></pre></div></div>
+
+<div class="language-bash stable-all-conda-ubuntu1604-py37-cuda92 stable-all-conda-ubuntu1804-py37-cuda92 stable-all-conda-centos7-py37-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">rapids</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>9.2
+</code></pre></div></div>
+
+<!-- conda cuda100 -->
+<div class="language-bash stable-cudf-conda-ubuntu1604-py36-cuda100 stable-cudf-conda-ubuntu1804-py36-cuda100 stable-cudf-conda-centos7-py36-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cudf</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>10.0
+</code></pre></div></div>
+
+<div class="language-bash stable-cudf-conda-ubuntu1604-py37-cuda100 stable-cudf-conda-ubuntu1804-py37-cuda100 stable-cudf-conda-centos7-py37-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cudf</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>10.0
+</code></pre></div></div>
+
+<div class="language-bash stable-cuml-conda-ubuntu1604-py36-cuda100 stable-cuml-conda-ubuntu1804-py36-cuda100 stable-cuml-conda-centos7-py36-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cuml</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>10.0
+</code></pre></div></div>
+
+<div class="language-bash stable-cuml-conda-ubuntu1604-py37-cuda100 stable-cuml-conda-ubuntu1804-py37-cuda100 stable-cuml-conda-centos7-py37-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cuml</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>10.0
+</code></pre></div></div>
+
+<div class="language-bash stable-cugraph-conda-ubuntu1604-py36-cuda100 stable-cugraph-conda-ubuntu1804-py36-cuda100 stable-cugraph-conda-centos7-py36-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cugraph</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>10.0
+</code></pre></div></div>
+
+<div class="language-bash stable-cugraph-conda-ubuntu1604-py37-cuda100 stable-cugraph-conda-ubuntu1804-py37-cuda100 stable-cugraph-conda-centos7-py37-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cugraph</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>10.0
+</code></pre></div></div>
+
+<div class="language-bash stable-cuspatial-conda-ubuntu1604-py36-cuda100 stable-cuspatial-conda-ubuntu1804-py36-cuda100 stable-cuspatial-conda-centos7-py36-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cuspatial</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>10.0
+</code></pre></div></div>
+
+<div class="language-bash stable-cuspatial-conda-ubuntu1604-py37-cuda100 stable-cuspatial-conda-ubuntu1804-py37-cuda100 stable-cuspatial-conda-centos7-py37-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cuspatial</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>10.0
+</code></pre></div></div>
+
+<div class="language-bash stable-all-conda-ubuntu1604-py36-cuda100 stable-all-conda-ubuntu1804-py36-cuda100 stable-all-conda-centos7-py36-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">rapids</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.6
+</code></pre></div></div>
+
+<div class="language-bash stable-all-conda-ubuntu1604-py37-cuda100 stable-all-conda-ubuntu1804-py37-cuda100 stable-all-conda-centos7-py37-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">rapids</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.7
+</code></pre></div></div>
+
+<!-- conda cuda101 -->
+<div class="language-bash stable-cudf-conda-ubuntu1604-py36-cuda101 stable-cudf-conda-ubuntu1804-py36-cuda101 stable-cudf-conda-centos7-py36-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cudf</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>10.1
+</code></pre></div></div>
+
+<div class="language-bash stable-cudf-conda-ubuntu1604-py37-cuda101 stable-cudf-conda-ubuntu1804-py37-cuda101 stable-cudf-conda-centos7-py37-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cudf</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>10.1
+</code></pre></div></div>
+
+<div class="language-bash stable-cuml-conda-ubuntu1604-py36-cuda101 stable-cuml-conda-ubuntu1804-py36-cuda101 stable-cuml-conda-centos7-py36-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cuml</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>10.1
+</code></pre></div></div>
+
+<div class="language-bash stable-cuml-conda-ubuntu1604-py37-cuda101 stable-cuml-conda-ubuntu1804-py37-cuda101 stable-cuml-conda-centos7-py37-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cuml</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>10.1
+</code></pre></div></div>
+
+<div class="language-bash stable-cugraph-conda-ubuntu1604-py36-cuda101 stable-cugraph-conda-ubuntu1804-py36-cuda101 stable-cugraph-conda-centos7-py36-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cugraph</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>10.1
+</code></pre></div></div>
+
+<div class="language-bash stable-cugraph-conda-ubuntu1604-py37-cuda101 stable-cugraph-conda-ubuntu1804-py37-cuda101 stable-cugraph-conda-centos7-py37-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cugraph</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>10.1
+</code></pre></div></div>
+
+<div class="language-bash stable-cuspatial-conda-ubuntu1604-py36-cuda101 stable-cuspatial-conda-ubuntu1804-py36-cuda101 stable-cuspatial-conda-centos7-py36-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cuspatial</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>10.1
+</code></pre></div></div>
+
+<div class="language-bash stable-cuspatial-conda-ubuntu1604-py37-cuda101 stable-cuspatial-conda-ubuntu1804-py37-cuda101 stable-cuspatial-conda-centos7-py37-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cuspatial</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>10.1
+</code></pre></div></div>
+
+<div class="language-bash stable-all-conda-ubuntu1604-py36-cuda101 stable-all-conda-ubuntu1804-py36-cuda101 stable-all-conda-centos7-py36-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">rapids</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>10.1
+</code></pre></div></div>
+
+<div class="language-bash stable-all-conda-ubuntu1604-py37-cuda101 stable-all-conda-ubuntu1804-py37-cuda101 stable-all-conda-centos7-py37-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">rapids</span><span class="o">=</span>0.11 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>10.1
+</code></pre></div></div>
+<!--
+    END - STABLE commands
+-->
+<!--
+    START - NIGHTLY commands
+-->
+<!-- dev - ubuntu 16.04 -->
+<div class="language-bash nightly-all-dev-ubuntu1604-py36-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev-nightly:0.12-cuda9.2-devel-ubuntu16.04-py3.6
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev-nightly:0.12-cuda9.2-devel-ubuntu16.04-py3.6
+</code></pre></div></div>
+<div class="language-bash nightly-all-dev-ubuntu1604-py37-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev-nightly:0.12-cuda9.2-devel-ubuntu16.04-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev-nightly:0.12-cuda9.2-devel-ubuntu16.04-py3.7
+</code></pre></div></div>
+<div class="language-bash nightly-all-dev-ubuntu1604-py36-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev-nightly:0.12-cuda10.0-devel-ubuntu16.04-py3.6
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev-nightly:0.12-cuda10.0-devel-ubuntu16.04-py3.6
+</code></pre></div></div>
+<div class="language-bash nightly-all-dev-ubuntu1604-py37-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev-nightly:0.12-cuda10.0-devel-ubuntu16.04-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev-nightly:0.12-cuda10.0-devel-ubuntu16.04-py3.7
+</code></pre></div></div>
+<div class="language-bash nightly-all-dev-ubuntu1604-py36-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev-nightly:0.12-cuda10.1-devel-ubuntu16.04-py3.6
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev-nightly:0.12-cuda10.1-devel-ubuntu16.04-py3.6
+</code></pre></div></div>
+<div class="language-bash nightly-all-dev-ubuntu1604-py37-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev-nightly:0.12-cuda10.1-devel-ubuntu16.04-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev-nightly:0.12-cuda10.1-devel-ubuntu16.04-py3.7
+</code></pre></div></div>
+<!-- dev - ubuntu 18.04 -->
+<div class="language-bash nightly-all-dev-ubuntu1804-py36-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev-nightly:0.12-cuda9.2-devel-ubuntu18.04-py3.6
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev-nightly:0.12-cuda9.2-devel-ubuntu18.04-py3.6
+</code></pre></div></div>
+<div class="language-bash nightly-all-dev-ubuntu1804-py37-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev-nightly:0.12-cuda9.2-devel-ubuntu18.04-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev-nightly:0.12-cuda9.2-devel-ubuntu18.04-py3.7
+</code></pre></div></div>
+<div class="language-bash nightly-all-dev-ubuntu1804-py36-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev-nightly:0.12-cuda10.0-devel-ubuntu18.04-py3.6
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev-nightly:0.12-cuda10.0-devel-ubuntu18.04-py3.6
+</code></pre></div></div>
+<div class="language-bash nightly-all-dev-ubuntu1804-py37-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev-nightly:0.12-cuda10.0-devel-ubuntu18.04-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev-nightly:0.12-cuda10.0-devel-ubuntu18.04-py3.7
+</code></pre></div></div>
+<div class="language-bash nightly-all-dev-ubuntu1804-py36-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev-nightly:0.12-cuda10.1-devel-ubuntu18.04-py3.6
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev-nightly:0.12-cuda10.1-devel-ubuntu18.04-py3.6
+</code></pre></div></div>
+<div class="language-bash nightly-all-dev-ubuntu1804-py37-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev-nightly:0.12-cuda10.1-devel-ubuntu18.04-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev-nightly:0.12-cuda10.1-devel-ubuntu18.04-py3.7
+</code></pre></div></div>
+<!-- dev - centos 7 -->
+<div class="language-bash nightly-all-dev-centos7-py36-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev-nightly:0.12-cuda9.2-devel-centos7-py3.6
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev-nightly:0.12-cuda9.2-devel-centos7-py3.6
+</code></pre></div></div>
+<div class="language-bash nightly-all-dev-centos7-py37-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev-nightly:0.12-cuda9.2-devel-centos7-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev-nightly:0.12-cuda9.2-devel-centos7-py3.7
+</code></pre></div></div>
+<div class="language-bash nightly-all-dev-centos7-py36-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev-nightly:0.12-cuda10.0-devel-centos7-py3.6
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev-nightly:0.12-cuda10.0-devel-centos7-py3.6
+</code></pre></div></div>
+<div class="language-bash nightly-all-dev-centos7-py37-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev-nightly:0.12-cuda10.0-devel-centos7-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev-nightly:0.12-cuda10.0-devel-centos7-py3.7
+</code></pre></div></div>
+<div class="language-bash nightly-all-dev-centos7-py36-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev-nightly:0.12-cuda10.1-devel-centos7-py3.6
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev-nightly:0.12-cuda10.1-devel-centos7-py3.6
+</code></pre></div></div>
+<div class="language-bash nightly-all-dev-centos7-py37-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-dev-nightly:0.12-cuda10.1-devel-centos7-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-dev-nightly:0.12-cuda10.1-devel-centos7-py3.7
+</code></pre></div></div>
+<!-- docker - ubuntu 16.04 -->
+<div class="language-bash nightly-all-docker-ubuntu1604-py36-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-nightly:cuda9.2-runtime-ubuntu16.04
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-nightly:cuda9.2-runtime-ubuntu16.04
+</code></pre></div></div>
+<div class="language-bash nightly-all-docker-ubuntu1604-py37-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-nightly:cuda9.2-runtime-ubuntu16.04-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-nightly:cuda9.2-runtime-ubuntu16.04-py3.7
+</code></pre></div></div>
+<div class="language-bash nightly-all-docker-ubuntu1604-py36-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-nightly:cuda10.0-runtime-ubuntu16.04
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-nightly:cuda10.0-runtime-ubuntu16.04
+</code></pre></div></div>
+<div class="language-bash nightly-all-docker-ubuntu1604-py37-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-nightly:cuda10.0-runtime-ubuntu16.04-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-nightly:cuda10.0-runtime-ubuntu16.04-py3.7
+</code></pre></div></div>
+<div class="language-bash nightly-all-docker-ubuntu1604-py36-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-nightly:cuda10.1-runtime-ubuntu16.04
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-nightly:cuda10.1-runtime-ubuntu16.04
+</code></pre></div></div>
+<div class="language-bash nightly-all-docker-ubuntu1604-py37-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-nightly:cuda10.1-runtime-ubuntu16.04-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-nightly:cuda10.1-runtime-ubuntu16.04-py3.7
+</code></pre></div></div>
+<!-- docker - ubuntu 18.04 -->
+<div class="language-bash nightly-all-docker-ubuntu1804-py36-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-nightly:cuda9.2-runtime-ubuntu18.04
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-nightly:cuda9.2-runtime-ubuntu18.04
+</code></pre></div></div>
+<div class="language-bash nightly-all-docker-ubuntu1804-py37-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-nightly:cuda9.2-runtime-ubuntu18.04-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-nightly:cuda9.2-runtime-ubuntu18.04-py3.7
+</code></pre></div></div>
+<div class="language-bash nightly-all-docker-ubuntu1804-py36-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-nightly:cuda10.0-runtime-ubuntu18.04
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-nightly:cuda10.0-runtime-ubuntu18.04
+</code></pre></div></div>
+<div class="language-bash nightly-all-docker-ubuntu1804-py37-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-nightly:cuda10.0-runtime-ubuntu18.04-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-nightly:cuda10.0-runtime-ubuntu18.04-py3.7
+</code></pre></div></div>
+<div class="language-bash nightly-all-docker-ubuntu1804-py36-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-nightly:cuda10.1-runtime-ubuntu18.04
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-nightly:cuda10.1-runtime-ubuntu18.04
+</code></pre></div></div>
+<div class="language-bash nightly-all-docker-ubuntu1804-py37-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-nightly:cuda10.1-runtime-ubuntu18.04-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-nightly:cuda10.1-runtime-ubuntu18.04-py3.7
+</code></pre></div></div>
+<!-- docker - centos 7 -->
+<div class="language-bash nightly-all-docker-centos7-py36-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-nightly:cuda9.2-runtime-centos7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-nightly:cuda9.2-runtime-centos7
+</code></pre></div></div>
+<div class="language-bash nightly-all-docker-centos7-py37-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-nightly:cuda9.2-runtime-centos7-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-nightly:cuda9.2-runtime-centos7-py3.7
+</code></pre></div></div>
+<div class="language-bash nightly-all-docker-centos7-py36-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-nightly:cuda10.0-runtime-centos7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-nightly:cuda10.0-runtime-centos7
+</code></pre></div></div>
+<div class="language-bash nightly-all-docker-centos7-py37-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-nightly:cuda10.0-runtime-centos7-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-nightly:cuda10.0-runtime-centos7-py3.7
+</code></pre></div></div>
+<div class="language-bash nightly-all-docker-centos7-py36-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-nightly:cuda10.1-runtime-centos7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-nightly:cuda10.1-runtime-centos7
+</code></pre></div></div>
+<div class="language-bash nightly-all-docker-centos7-py37-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>docker pull rapidsai/rapidsai-nightly:cuda10.1-runtime-centos7-py3.7
+docker run <span class="nt">--gpus</span> all <span class="nt">--rm</span> <span class="nt">-it</span> <span class="nt">-p</span> 8888:8888 <span class="nt">-p</span> 8787:8787 <span class="nt">-p</span> 8786:8786 <span class="se">\</span>
+    rapidsai/rapidsai-nightly:cuda10.1-runtime-centos7-py3.7
+</code></pre></div></div>
+<!-- source -->
+<div class="nightly-cudf-source hidden">
+    <pre># See <a href="https://github.com/rapidsai/cudf#buildinstall-from-source" _target="blank">cuDF README</a> for build instructions</pre>
+</div>
+<div class="nightly-cuml-source hidden">
+    <pre># See <a href="https://github.com/rapidsai/cuml#buildinstall-from-source" _target="blank">cuML README</a> for build instructions</pre>
+</div>
+<div class="nightly-cugraph-source hidden">
+    <pre># See <a href="https://github.com/rapidsai/cugraph#build-from-source-and-contributing" _target="blank">cuGraph README</a> for build instructions</pre>
+</div>
+<div class="nightly-cuspatial-source hidden">
+    <pre># See <a href="https://github.com/rapidsai/cuspatial#clone-build-and-install-cuspatial" _target="blank">cuSpatial README</a> for build instructions</pre>
+</div>
+<!-- conda cuda92 -->
+<div class="language-bash nightly-cudf-conda-ubuntu1604-py36-cuda92 nightly-cudf-conda-ubuntu1804-py36-cuda92 nightly-cudf-conda-centos7-py36-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cudf</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>9.2
+</code></pre></div></div>
+
+<div class="language-bash nightly-cudf-conda-ubuntu1604-py37-cuda92 nightly-cudf-conda-ubuntu1804-py37-cuda92 nightly-cudf-conda-centos7-py37-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cudf</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>9.2
+</code></pre></div></div>
+
+<div class="language-bash nightly-cuml-conda-ubuntu1604-py36-cuda92 nightly-cuml-conda-ubuntu1804-py36-cuda92 nightly-cuml-conda-centos7-py36-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cuml</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>9.2
+</code></pre></div></div>
+
+<div class="language-bash nightly-cuml-conda-ubuntu1604-py37-cuda92 nightly-cuml-conda-ubuntu1804-py37-cuda92 nightly-cuml-conda-centos7-py37-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cuml</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>9.2
+</code></pre></div></div>
+
+<div class="language-bash nightly-cugraph-conda-ubuntu1604-py36-cuda92 nightly-cugraph-conda-ubuntu1804-py36-cuda92 nightly-cugraph-conda-centos7-py36-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cugraph</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>9.2
+</code></pre></div></div>
+
+<div class="language-bash nightly-cugraph-conda-ubuntu1604-py37-cuda92 nightly-cugraph-conda-ubuntu1804-py37-cuda92 nightly-cugraph-conda-centos7-py37-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cugraph</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>9.2
+</code></pre></div></div>
+
+<div class="language-bash nightly-cuspatial-conda-ubuntu1604-py36-cuda92 nightly-cuspatial-conda-ubuntu1804-py36-cuda92 nightly-cuspatial-conda-centos7-py36-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cuspatial</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>9.2
+</code></pre></div></div>
+
+<div class="language-bash nightly-cuspatial-conda-ubuntu1604-py37-cuda92 nightly-cuspatial-conda-ubuntu1804-py37-cuda92 nightly-cuspatial-conda-centos7-py37-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cuspatial</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>9.2
+</code></pre></div></div>
+
+<div class="language-bash nightly-all-conda-ubuntu1604-py36-cuda92 nightly-all-conda-ubuntu1804-py36-cuda92 nightly-all-conda-centos7-py36-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">rapids</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>9.2
+</code></pre></div></div>
+
+<div class="language-bash nightly-all-conda-ubuntu1604-py37-cuda92 nightly-all-conda-ubuntu1804-py37-cuda92 nightly-all-conda-centos7-py37-cuda92 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">rapids</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>9.2
+</code></pre></div></div>
+
+<!-- conda cuda100 -->
+<div class="language-bash nightly-cudf-conda-ubuntu1604-py36-cuda100 nightly-cudf-conda-ubuntu1804-py36-cuda100 nightly-cudf-conda-centos7-py36-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cudf</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>10.0
+</code></pre></div></div>
+
+<div class="language-bash nightly-cudf-conda-ubuntu1604-py37-cuda100 nightly-cudf-conda-ubuntu1804-py37-cuda100 nightly-cudf-conda-centos7-py37-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cudf</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>10.0
+</code></pre></div></div>
+
+<div class="language-bash nightly-cuml-conda-ubuntu1604-py36-cuda100 nightly-cuml-conda-ubuntu1804-py36-cuda100 nightly-cuml-conda-centos7-py36-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cuml</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>10.0
+</code></pre></div></div>
+
+<div class="language-bash nightly-cuml-conda-ubuntu1604-py37-cuda100 nightly-cuml-conda-ubuntu1804-py37-cuda100 nightly-cuml-conda-centos7-py37-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cuml</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>10.0
+</code></pre></div></div>
+
+<div class="language-bash nightly-cugraph-conda-ubuntu1604-py36-cuda100 nightly-cugraph-conda-ubuntu1804-py36-cuda100 nightly-cugraph-conda-centos7-py36-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cugraph</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>10.0
+</code></pre></div></div>
+
+<div class="language-bash nightly-cugraph-conda-ubuntu1604-py37-cuda100 nightly-cugraph-conda-ubuntu1804-py37-cuda100 nightly-cugraph-conda-centos7-py37-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cugraph</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>10.0
+</code></pre></div></div>
+
+<div class="language-bash nightly-cuspatial-conda-ubuntu1604-py36-cuda100 nightly-cuspatial-conda-ubuntu1804-py36-cuda100 nightly-cuspatial-conda-centos7-py36-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cuspatial</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>10.0
+</code></pre></div></div>
+
+<div class="language-bash nightly-cuspatial-conda-ubuntu1604-py37-cuda100 nightly-cuspatial-conda-ubuntu1804-py37-cuda100 nightly-cuspatial-conda-centos7-py37-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cuspatial</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>10.0
+</code></pre></div></div>
+
+<div class="language-bash nightly-all-conda-ubuntu1604-py36-cuda100 nightly-all-conda-ubuntu1804-py36-cuda100 nightly-all-conda-centos7-py36-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">rapids</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.6
+</code></pre></div></div>
+
+<div class="language-bash nightly-all-conda-ubuntu1604-py37-cuda100 nightly-all-conda-ubuntu1804-py37-cuda100 nightly-all-conda-centos7-py37-cuda100 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">rapids</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.7
+</code></pre></div></div>
+
+<!-- conda cuda101 -->
+<div class="language-bash nightly-cudf-conda-ubuntu1604-py36-cuda101 nightly-cudf-conda-ubuntu1804-py36-cuda101 nightly-cudf-conda-centos7-py36-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cudf</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>10.1
+</code></pre></div></div>
+
+<div class="language-bash nightly-cudf-conda-ubuntu1604-py37-cuda101 nightly-cudf-conda-ubuntu1804-py37-cuda101 nightly-cudf-conda-centos7-py37-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cudf</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>10.1
+</code></pre></div></div>
+
+<div class="language-bash nightly-cuml-conda-ubuntu1604-py36-cuda101 nightly-cuml-conda-ubuntu1804-py36-cuda101 nightly-cuml-conda-centos7-py36-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cuml</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>10.1
+</code></pre></div></div>
+
+<div class="language-bash nightly-cuml-conda-ubuntu1604-py37-cuda101 nightly-cuml-conda-ubuntu1804-py37-cuda101 nightly-cuml-conda-centos7-py37-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cuml</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>10.1
+</code></pre></div></div>
+
+<div class="language-bash nightly-cugraph-conda-ubuntu1604-py36-cuda101 nightly-cugraph-conda-ubuntu1804-py36-cuda101 nightly-cugraph-conda-centos7-py36-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cugraph</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>10.1
+</code></pre></div></div>
+
+<div class="language-bash nightly-cugraph-conda-ubuntu1604-py37-cuda101 nightly-cugraph-conda-ubuntu1804-py37-cuda101 nightly-cugraph-conda-centos7-py37-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cugraph</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>10.1
+</code></pre></div></div>
+
+<div class="language-bash nightly-cuspatial-conda-ubuntu1604-py36-cuda101 nightly-cuspatial-conda-ubuntu1804-py36-cuda101 nightly-cuspatial-conda-centos7-py36-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cuspatial</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>10.1
+</code></pre></div></div>
+
+<div class="language-bash nightly-cuspatial-conda-ubuntu1604-py37-cuda101 nightly-cuspatial-conda-ubuntu1804-py37-cuda101 nightly-cuspatial-conda-centos7-py37-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">cuspatial</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>10.1
+</code></pre></div></div>
+
+<div class="language-bash nightly-all-conda-ubuntu1604-py36-cuda101 nightly-all-conda-ubuntu1804-py36-cuda101 nightly-all-conda-centos7-py36-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">rapids</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.6 <span class="nv">cudatoolkit</span><span class="o">=</span>10.1
+</code></pre></div></div>
+
+<div class="language-bash nightly-all-conda-ubuntu1604-py37-cuda101 nightly-all-conda-ubuntu1804-py37-cuda101 nightly-all-conda-centos7-py37-cuda101 hidden highlighter-rouge"><div class="highlight"><pre class="highlight"><code>conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai-nightly <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+    <span class="nt">-c</span> defaults <span class="nv">rapids</span><span class="o">=</span>0.12 <span class="nv">python</span><span class="o">=</span>3.7 <span class="nv">cudatoolkit</span><span class="o">=</span>10.1
+</code></pre></div></div>
+<!--
+    END - NIGHTLY commands
+-->
+
+<section class="pure-g background-purple padding-top-0em padding-bottom-3em">
+    <div class="container-padding">
+        <div class="pure-u-1"> 
+<h2 class="section-title-full" id="details-below--">details below <br /> <i class="fas fa-chevron-down"></i></h2>
+
+ </div>
+    </div>
+</section>
+<div class="slopecap-bottom-up background-purple"></div>
+
+<div id="details"></div>
+
+<section class="pure-g background-gray padding-top-5em padding-bottom-10em">
+    <div class="container-padding">
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 id="-conda-install"><i class="fas fa-laptop-code"></i> Conda Install</h2>
+<p>You can get a minimal conda installation with <strong><a href="https://conda.io/miniconda.html" target="_blank">Miniconda</a></strong> or get the full installation with <strong><a href="https://www.anaconda.com/download" target="_blank">Anaconda</a></strong>.</p>
+
+<p>For instructions on how to build a development conda environment, see the <strong><a href="https://github.com/rapidsai/cudf/blob/master/README.md#conda" target="_blank">cuDF README</a></strong> for more information. Also refer to the <strong><a href="https://github.com/rapidsai/cuml/blob/master/README.md#conda" target="_blank">cuML README</a></strong> for conda install instructions for cuML.</p>
+
+<h2 class="section-subtitle-top-2" id="-build-from-source"><i class="far fa-file-code"></i> Build From Source</h2>
+
+<p>Checkout the <strong><a href="https://github.com/rapidsai/cudf/tree/master#development-setup" target="_blank">cuDF README</a></strong>, <strong><a href="https://github.com/rapidsai/cuml/tree/master#installing-from-source" target="_blank">cuML README</a></strong>, or <strong><a href="https://github.com/rapidsai/cugraph/tree/master#build-from-source-and-contributing" target="_blank">cuGraph README</a></strong> for from-source build instructions.</p>
+
+<h2 class="section-subtitle-top-2" id="-where-is-pip"><i class="fas fa-laptop-code"></i> Where is Pip?</h2>
+
+<p>Refer to our <strong><a href="https://medium.com/rapids-ai/rapids-0-7-release-drops-pip-packages-47fc966e9472" target="_blank">RAPIDS 0.7 Release Drops PIP Packages — and sticks with Conda</a></strong> post for details on why we no longer support PIP installs.</p>
+
+ </div>
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 id="-docker-container"><i class="fab fa-docker"></i> Docker Container</h2>
+
+<p>The copied Docker command above should auto-run a notebook server. If it does not, run the following command within the Docker container to launch the notebook server.</p>
+
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code>bash /rapids/notebooks/utils/start-jupyter.sh
+</code></pre></div></div>
+
+<p><strong>NOTE:</strong> This will run <strong><a href="https://jupyterlab.readthedocs.io/en/stable/" target="_blank">JupyterLab</a></strong> on your host machine at port 8888.</p>
+
+<h3 id="legacy-docker-users">Legacy Docker Users</h3>
+<p>Docker CE v18 &amp; <a href="https://github.com/NVIDIA/nvidia-docker/wiki/Installation-(version-2.0)">nvidia-docker2</a> users will need to replace the following for compatibility:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="s1">'docker run --gpus all'</span> with <span class="s1">'docker run --runtime=nvidia'</span>
+</code></pre></div></div>
+
+<h3 id="use-jupyterlab-to-explore-the-notebooks">Use JupyterLab to Explore the Notebooks</h3>
+
+<p>Notebooks can be found in notebooks directory within the container:</p>
+
+<p class="no-tb-margins"><i class="far fa-folder-open"></i> <strong><code class="language-plaintext highlighter-rouge">/rapids/notebooks/cuml</code></strong> (cuML demos)</p>
+
+<p class="no-tb-margins"><i class="far fa-folder-open"></i> <strong><code class="language-plaintext highlighter-rouge">/rapids/notebooks/cugraph</code></strong> (cuGraph demos)</p>
+
+<p class="no-tb-margins"><i class="far fa-folder-open"></i> <strong><code class="language-plaintext highlighter-rouge">/rapids/notebooks/tutorials</code></strong> (DBSCAN tutorial)</p>
+
+<p class="no-tb-margins"><i class="far fa-folder-open"></i> <strong><code class="language-plaintext highlighter-rouge">/rapids/notebooks/xgboost</code></strong> (XGBoost demo)</p>
+
+<h3 id="advanced-usage">Advanced Usage</h3>
+
+<p>See the <strong><a href="https://hub.docker.com/r/rapidsai/rapidsai" target="_blank">RAPIDS Container README</a></strong> page for more information about using custom datasets. <strong><a href="https://hub.docker.com/r/rapidsai/rapidsai/" target="_blank">Docker Hub</a></strong> and <strong><a href="https://ngc.nvidia.com/catalog/containers/nvidia:rapidsai:rapidsai" target="_blank">NVIDIA GPU Cloud</a></strong> host RAPIDS containers with full list of available <strong><a href="https://hub.docker.com/r/rapidsai/rapidsai#full-tag-list" target="_blank">tags</a></strong>.</p>
+
+ </div>
+    </div>
+</section>
+
+<div class="slopecap-top-up background-darkpurple"></div>
+<section class="footer-cta-main">
+    <h2>TRY RAPIDS NOW</h2>
+    
+    
+      <a href="https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&amp;offline=true&amp;sandboxMode=true" class="blue-btn">
+    
+      LAUNCH IN COLAB</a>
+</section>
+
+
+
+<footer>
+    <a href="/rapidsai-staging/"><img class="footer-logo" src="/rapidsai-staging/assets/images/footer-logo.svg" alt="rapids"></a>
+    <div class="copy-date">© 2020 RAPIDS</div>
+    <div class="footer-nav">
+        <ul>
+            <li><a href="/rapidsai-staging/about.html">ABOUT</a></li>
+            <li><a href="/rapidsai-staging/start.html">GET STARTED</a></li>
+            <li><a href="/rapidsai-staging/community.html">COMMUNITY</a></li>
+            <li><a href="https://github.com/rapidsai" target="_blank">GITHUB</a></li>
+            <li><a href="https://medium.com/rapids-ai" target="_blank">BLOG</a></li>
+            <li>
+                <br>
+                <a href="/rapidsai-staging/branding.html">BRANDING AND GUIDES</a>
+            </li>
+            <li>
+                <br>
+                <a class="footer-icon" href="mailto:RAPIDSai@googlegroups.com"><i class="fas fa-envelope fa-2x dark-purple-font"></i></a>
+                <a class="footer-icon" href="https://twitter.com/rapidsai" target="_blank"><i class="fab fa-twitter fa-2x dark-purple-font"></i></a>
+                <a class="footer-icon" href="https://join.slack.com/t/rapids-goai/shared_invite/enQtMjE0Njg5NDQ1MDQxLTJiN2FkNTFkYmQ2YjY1OGI4NTc5Y2NlODQ3ZDdiODEwYmRiNTFhMzNlNTU5ZWJhZjA3NTg4NDZkMThkNTkxMGQ" target="_blank"><i class="fab fa-slack fa-2x dark-purple-font"></i></a>
+                <a class="footer-icon" href="https://stackoverflow.com/tags/rapids" target="_blank"><i class="fab fa-stack-overflow fa-2x dark-purple-font"></i></a>
+            </li>
+        </ul>
+    </div>
+</footer>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127041178-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-127041178-1');
+</script>
+
+<script type="text/javascript">
+	if(typeof _satellite == "object")
+		_satellite.pageBottom();
+	else console.log("Adobe Analytics Likely AdBlocked. ");
+</script>
+</body>
+</html> 

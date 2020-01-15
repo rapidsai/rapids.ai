@@ -66,7 +66,7 @@ It’s easy to get started with BlazingSQL + RAPIDS
 {: .subtitle}
 
 ## <i class="fas fa-bolt"></i> Try Now In Colab
-The fastest way to get up and running is with Google Colab, a free web-based interface similar to a Jupyter Notebook that lets you quickly run BlazingSQL + RAPIDS on T4 GPUs. **[Try now in Colabratory <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/drive/1r7S15Ie33yRw8cmET7_bjCpvjJiDOdub#scrollTo=14GwxmLsTV_p){: target="_blank"}**
+The fastest way to get up and running is with Google Colab, a free web-based interface similar to a Jupyter Notebook that lets you quickly run BlazingSQL + RAPIDS on T4 GPUs. **[Try now in Colaboratory <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/github/BlazingDB/bsql-demos/blob/master/colab_notebooks/blazingsql_demo.ipynb){: target="_blank"}**
 
 
 {% endcapture %}
@@ -109,7 +109,7 @@ Get started with **[BlazingSQL](https://blazingsql.com/getstarted){: target="_bl
 ## <i class="far fa-hand-point-down"></i> Getting Started Demo
 Walk through the process for getting BlazingSQL and cuDF running. Then go through a basic ETL process and query.
 
-**[GET STARTED](https://colab.research.google.com/drive/1r7S15Ie33yRw8cmET7_bjCpvjJiDOdub#scrollTo=14GwxmLsTV_p){: target="_blank" .primary-button .blue-btn}**
+**[GET STARTED](https://colab.research.google.com/github/BlazingDB/bsql-demos/blob/master/colab_notebooks/blazingsql_demo.ipynb){: target="_blank" .primary-button .blue-btn}**
 
 {% endcapture %}
 
@@ -117,17 +117,17 @@ Walk through the process for getting BlazingSQL and cuDF running. Then go throug
 ## <i class="far fa-file-code"></i> Federated Query Demo
 {: .section-subtitle-top-1}
 
-In a single query, join an Apache Parquet Gilem a CSV, and a GPU DataFrame (GDF) in GPU memory. **[Try now in Colabratory <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/drive/1W_kk0n2KyiUpvdCvPfAqUI_BmISGLI_P){: target="_blank"}**
+In a single query, join an Apache Parquet Gilem a CSV, and a GPU DataFrame (GDF) in GPU memory. **[Try now in Colaboratory <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/github/BlazingDB/bsql-demos/blob/master/colab_notebooks/federated_query_demo.ipynb){: target="_blank"}**
 
-## <i class="far fa-file-code"></i> Netflow Demo
+## <i class="far fa-file-code"></i> Graphistry Netflow Demo
 {: .section-subtitle-top-1}
-Query 65M rows of network security data (netflow) with BlazingSQL. **[Try now in Colabratory <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/drive/1RYOYthqxUl922LYMAuNneKgmWB8YGTKB){: target="_blank"}**
+Query 65M rows of network security data (netflow) with BlazingSQL. **[Try now in Colaboratory <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/github/BlazingDB/bsql-demos/blob/master/colab_notebooks/graphistry_netflow_demo.ipynb){: target="_blank"}**
 
 ## <i class="far fa-file-code"></i> Taxi Demo
-Train a linear regression model with cuML on 55 million rows of public NYC Taxi Data loaded with BlazingSQL. **[Try now in Colabratory <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/drive/1yrml5FhQd7VHwcvpUql1LspjCjKg8u0w){: target="_blank"}**
+Train a linear regression model with cuML on 55 million rows of public NYC Taxi Data loaded with BlazingSQL. **[Try now in Colaboratory <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/drive/1yrml5FhQd7VHwcvpUql1LspjCjKg8u0w){: target="_blank"}**
 
 ## <i class="far fa-file-code"></i> BlazingSQL vs Apache Spark Demo
-Analyze 20 million rows of net flow data. Compare BlazingSQL and Apache Spark timings for the same workload. **[Try now in Colabratory <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/drive/1EbPE9FwFur7fE2054BH9s23Kd0FiUgGo#scrollTo=kJyD4oSbugE0){: target="_blank"}**
+Analyze 20 million rows of net flow data. Compare BlazingSQL and Apache Spark timings for the same workload. **[Try now in Colaboratory <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/github/BlazingDB/bsql-demos/blob/master/colab_notebooks/vs_pyspark_netflow.ipynb){: target="_blank"}**
 
 {% endcapture %}
 {% include section-halfs.html 

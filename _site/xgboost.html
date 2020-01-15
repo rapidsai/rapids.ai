@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="description" content="Learn How to Deploy XGBoost on GPUs">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta property="fb:app_id" content="1679326302390196"/>
+  <meta property="og:title" content="RAPIDS + XGBoost | RAPIDS"/>
+  <meta property="og:type" content="Website"/>
+  <meta property="og:description" content="Learn How to Deploy XGBoost on GPUs"/>
+  <meta name="og:site_name" content="RAPIDS"/>
+  <meta property="og:image" content="/rapidsai-staging/assets/images/og_image.png"/>
+  <meta property="og:image:secure_url" content="/rapidsai-staging/assets/images/og_image.png"/>
+  <meta property="og:image:type" content="image/jpeg"/>
+  <meta property="og:image:width" content="400"/>
+  <meta property="og:image:height" content="300"/>
+  <meta property="og:image:alt" content="RAPIDS Logo"/>
+
+  <meta name="twitter:site" content="https://twitter.com/rapidsai"/>
+  <meta name="twitter:card" content="RAPIDS + XGBoost | RAPIDS"/>
+  <meta name="twitter:image" content="/rapidsai-staging/assets/images/og_image.png"/>
+  <meta name="twitter:creator" content="@RAPIDSAI"/>
+  <meta name="twitter:title" content="RAPIDS + XGBoost | RAPIDS"/>
+  <meta name="twitter:description" content="Learn How to Deploy XGBoost on GPUs"/>
+
+  <title>RAPIDS + XGBoost | RAPIDS</title>
+
+  <link rel='shortcut icon' type='image/x-icon' href='/rapidsai-staging/assets/favicon.ico' />
+
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/base-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-min.css">
+  <link rel="stylesheet" href="https://unpkg.com/purecss@1.0.0/build/grids-responsive-min.css">
+  <!--
+  <link rel="stylesheet" type="text/css" href="/rapidsai-staging/assets/css/style.css">
+  -->
+  <link rel="stylesheet" type="text/css" href="/rapidsai-staging/assets/css/highlight.css">
+  <link rel="stylesheet" type="text/css" href="/rapidsai-staging/assets/css/custom.css">
+
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700" rel="stylesheet">
+  <script src="https://kit.fontawesome.com/1690513e32.js"></script> 
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  <script src="//assets.adobedtm.com/b92787824f2e0e9b68dc2e993f9bd995339fe417/satelliteLib-30c8ffcc8ece089156fd5590fbcf390ffc296f51.js"></script>
+</head>
+<body>
+<header>
+  <div id="nav-fixed" class="position-fixed">
+    <nav>
+  <a class="nav-logo" href="/rapidsai-staging/index.html"><img src="/rapidsai-staging/assets/images/rapids-logo.svg" alt="RAPIDS logo"></a>
+  <div class="menu">&#9776;</div>
+  <ul>
+  
+    
+        <li class=""><a href="/rapidsai-staging/index.html">HOME</a></li>
+    
+  
+    
+        <li class=""><a href="/rapidsai-staging/about.html">ABOUT</a></li>
+    
+  
+    
+        <li class=""><a href="/rapidsai-staging/start.html">GET STARTED</a></li>
+    
+  
+    
+        <li class=""><a href="/rapidsai-staging/community.html">COMMUNITY</a></li>
+    
+  
+    
+        <li><a href="https://medium.com/rapids-ai" target="_blank">BLOG</a></li>
+    
+  
+    
+        <li><a href="https://docs.rapids.ai" target="_blank">DOCS</a></li>
+    
+  
+    
+        <li><a href="https://github.com/rapidsai" target="_blank">GITHUB</a></li>
+    
+  
+  </ul>
+  <script>
+    $('nav .menu').click(function(){ $('nav ul').toggleClass('show-height') })
+  </script>
+</nav>
+  </div>
+  <div class="header-branding">
+    <div class="header-logo">
+      <a href="/rapidsai-staging"><img src="/rapidsai-staging/assets/images/rapids-logo.svg" alt="RAPIDS logo"></a>
+    </div>
+    <h1 class="header-tagline">Deploy XGBoost on GPUs</h1>
+    <a href="https://xgboost.readthedocs.io" class="blue-btn">XGBOOST.IO</a>
+  </div>
+  <div class="slopecap-header"></div>
+</header>
+
+<p><img src="/rapidsai-staging/assets/images/xgboost_logo_sorta.svg" alt="xgboost" class="projects-logo" /></p>
+
+<h1 class="section-title-full" id="seamless-acceleration-at-scale">Seamless Acceleration at Scale</h1>
+
+<section class="pure-g background-white padding-top-0em padding-bottom-1em">
+    <div class="container-padding">
+        <div class="pure-u-1"> 
+<p class="subtitle">XGBoost is a well-known gradient boosted decision trees (GBDT) machine learning package used to tackle regression, classification, and ranking problems. It’s written in C++ and NVIDIA CUDA® with wrappers for Python, R, Java, Julia, and several other popular languages. XGBoost now includes seamless, drop-in GPU acceleration, which significantly speeds up model training and improves accuracy for better predictions.</p>
+
+<p class="subtitle">The RAPIDS team works closely with the Distributed Machine Learning Common (DMLC) XGBoost organization to upstream code and ensure that all components of the GPU-accelerated analytics ecosystem work smoothly together.</p>
+
+ </div>
+    </div>
+</section>
+
+<section class="pure-g background-white padding-top-3em padding-bottom-10em">
+    <div class="container-padding">
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h1 class="section-title-halfs" id="getting-started">Getting Started</h1>
+<p>The project is well supported and documented by many tutorials, quick-start guides, and papers.</p>
+
+<h2 id="-try-it-now-in-colab"><i class="fas fa-bolt"></i> Try It Now in CoLab</h2>
+<p>Try out XGBoost now, with the basics of cuDF and other RAPIDS libraries, in our online <strong><a href="https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y" target="_blank">XGBoost Colaboratory notebook</a></strong>.</p>
+
+<h2 id="-notebook-examples"><i class="far fa-bookmark"></i> Notebook Examples</h2>
+<p>To see how XGBoost integrates with cuDF, Dask, and the entire RAPIDS ecosystem, check out these <strong><a href="https://github.com/rapidsai/notebooks-contrib" target="_blank">RAPIDS notebooks</a></strong> which walk through classification and regression examples.</p>
+
+ </div>
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 class="section-subtitle-top-1" id="-see-the-latest-docs"><i class="far fa-file-code"></i> See the Latest Docs</h2>
+<p>Access current installation instructions, guides, FAQs, and more in the <strong><a href="https://xgboost.readthedocs.io/en/latest/" target="_blank">latest documentation</a></strong>.</p>
+
+<h2 id="-read-the-original-xgboost-paper"><i class="far fa-file-alt"></i> Read the original XGBoost paper</h2>
+<p>Take a deep dive into XGBoost’s algorithms with Tianqi Chen and Carlos Guestrin in their <strong><a href="https://arxiv.org/abs/1603.02754" target="_blank">XGBoost Paper</a></strong>.</p>
+
+<h2 id="-dive-into-the-xgboost-algorithm"><i class="fas fa-wave-square"></i> Dive into the XGBoost Algorithm</h2>
+
+<p>Learn about the XGBoost algorithms used on GPUs in these blogs from Rory Mitchell, a RAPIDS team member and core XGBoost contributor. <br />
+<i class="fas fa-caret-right"></i> <strong><a href="https://devblogs.nvidia.com/gradient-boosting-decision-trees-xgboost-cuda/" target="_blank">Gradient Boosting, Decision Trees and XGBoost with CUDA</a></strong> <br />
+<i class="fas fa-caret-right"></i> <strong><a href="https://xgboost.ai/2018/07/04/gpu-xgboost-update.html" target="_blank">Updates to the XGBoost GPU algorithms</a></strong> <br />
+<i class="fas fa-caret-right"></i> <strong><a href="https://devblogs.nvidia.com/bias-variance-decompositions-using-xgboost/" target="_blank">Bias Variance Decompositions using XGBoost</a></strong> <br /></p>
+
+ </div>
+    </div>
+</section>
+
+<div class="slopecap-top-down background-gray"></div>
+<section class="pure-g background-gray padding-top-5em padding-bottom-1em">
+    <div class="container-padding">
+        <div class="pure-u-1"> 
+<h1 id="maximize-xgboost-performance-on-gpus">Maximize XGBoost Performance on GPUs</h1>
+
+ </div>
+    </div>
+</section>
+<section class="pure-g background-gray padding-top-0em padding-bottom-10em">
+    <div class="container-padding">
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<p><img src="/rapidsai-staging/assets/images/XGboost-benchmark.png" alt="xgboost" class="full-image-center" /></p>
+ </div>
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 id="-benchmarks-comparing-cpus-and-gpus"><i class="fas fa-microchip"></i> Benchmarks Comparing CPUs and GPUs</h2>
+
+<p>XGBoost has integrated support to run across multiple GPUs, which can deliver even more significant performance improvements. For the 113-million-row airline dataset used in the gradient boosting machines (GBM) benchmarks suite, eight NVIDIA® Tesla® V100 GPUs completed training in 42.6 seconds, compared to over 39 minutes on eight CPUs—a 54.9X speedup.</p>
+
+<h2 id="-measure-your-performance"><i class="far fa-chart-bar"></i> Measure Your Performance</h2>
+
+<p>You can run GBM benchmarking scripts from this <strong><a href="https://github.com/RAMitchell/GBM-Benchmarks" target="_blank">GitHub repository</a></strong> to measure performance on your own system and compare it to various GBM/GBDT implementations.</p>
+
+ </div>
+    </div>
+</section>
+
+<div class="slopecap-top-up background-purple"></div>
+<section class="pure-g background-purple padding-top-5em padding-bottom-0em">
+    <div class="container-padding">
+        <div class="pure-u-1"> 
+<h1 id="deploying-distributed-xgboost-at-scale">Deploying Distributed XGBoost at Scale</h1>
+
+<p class="subtitle">It’s easy to work across multiple GPUs and multiple nodes with distributed Dask and Apache Spark.</p>
+
+ </div>
+    </div>
+</section>
+<section class="pure-g background-purple padding-top-0em padding-bottom-10em ">
+    <div class="container-padding ">
+        <div class="pure-u-1 pure-u-md-1-3"> 
+<h2 id="-scale-out-with-dask"><i class="fas fa-expand-arrows-alt"></i> Scale Out with Dask</h2>
+
+<p>To take advantage of multiple GPU-accelerated nodes, you can use XGBoost’s native Dask integration. This distributes data, builds DMatrix objects, and sets up cross-node communication to run XGBoost training on a cluster. The <strong><a href="https://github.com/dmlc/xgboost/tree/master/demo/dask" target="_blank">official XGBoost repository</a></strong> includes simple examples with distributed Dask and also more detailed <strong><a href="https://xgboost.readthedocs.io/en/latest/python/python_api.html#dask-api" target="_blank">API documentation</a></strong>.</p>
+ </div>
+        <div class="pure-u-1 pure-u-md-1-3"> 
+<h2 id="-scale-out-with-spark"><i class="fas fa-expand-arrows-alt"></i> Scale Out with Spark</h2>
+
+<p>The RAPIDS team is working with the community to build a distributed, open source XGBoost4J-Spark + RAPIDS package. More details coming soon.</p>
+
+ </div>
+        <div class="pure-u-1 pure-u-md-1-3"> 
+<h2 id="-use-a-single-machine"><i class="fas fa-desktop"></i> Use a Single Machine</h2>
+
+<p>With <strong><a href="https://github.com/rapidsai/dask-cuda" target="_blank">Dask-CUDA</a></strong>, running across multiple GPUs on a single machine is easy. Two lines of code can spin up a LocalCUDACluster and parallelize ETL as well as training. See the <strong><a href="https://github.com/rapidsai/dask-cuda" target="_blank">Dask-CUDA docs</a></strong> for more details.</p>
+
+<p><strong>NOTE:</strong> Older versions of XGBoost supported a thread-based “single-node, multi-GPU” pattern with the <code class="language-plaintext highlighter-rouge">n_gpus</code> parameters. This parameter is now deprecated, and we encourage all users to shift to Dask or Spark for more scalable and maintainable multi-GPU training.</p>
+
+ </div>
+    </div>
+</section>
+<div class="slopecap-bottom-down background-purple"></div>
+
+<section class="pure-g background-white padding-top-5em padding-bottom-0em">
+    <div class="container-padding">
+        <div class="pure-u-1"> 
+<h1 id="download-the-software">Download the Software</h1>
+
+<p class="subtitle">The RAPIDS team is developing GPU enhancements to open-source XGBoost, working closely with the DCML/XGBoost organization to improve the larger ecosystem. Since RAPIDS is iterating ahead of upstream XGBoost releases, some enhancements will be available earlier from the <strong><a href="https://github.com/rapidsai/xgboost" target="_blank">RAPIDS branch</a></strong>, or from RAPIDS-provided installers.</p>
+
+<h2 id="installation-prerequisites-for-rapids--xgboost">Installation Prerequisites for RAPIDS + XGBoost</h2>
+
+<h2 id="prerequisites">Prerequisites</h2>
+<p class="no-tb-margins"><i class="fas fa-microchip text-purple"></i> <strong>GPU:</strong> NVIDIA Pascal™ or better with <strong><a href="https://developer.nvidia.com/cuda-gpus" target="_blank">compute capability</a></strong> 6.0+</p>
+
+<p class="no-tb-margins"><i class="fas fa-download text-purple"></i> <strong>CUDA &amp; NVIDIA Drivers:</strong> One of the following supported versions:</p>
+
+<p class="no-tb-margins">     <i class="fas fa-check-circle text-purple"></i> <a href="https://developer.nvidia.com/cuda-92-download-archive" target="_blank">9.2</a> &amp; v396.37+   <i class="fas fa-check-circle text-purple"></i> <a href="https://developer.nvidia.com/cuda-10.0-download-archive" target="_blank">10.0</a> &amp; v410.48+   <i class="fas fa-check-circle text-purple"></i> <a href="https://developer.nvidia.com/cuda-downloads" target="_blank">10.1.2</a> &amp; v418.87+</p>
+
+<p class="no-tb-margins"><i class="fas fa-box-open text-purple"></i> The latest RAPIDS package, which can be downloaded and installed one of these ways:</p>
+
+ </div>
+    </div>
+</section>
+<section class="pure-g background-white padding-top-3em padding-bottom-2em">
+    <div class="container-padding">
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 id="-conda-install"><i class="fas fa-laptop-code"></i> Conda Install</h2>
+
+<p>Install using conda (the latest RAPIDS release). The RAPIDS conda channel includes an XGBoost package built with CUDA 9.2/10.0/10.1 and Python 3.6/3.7 versions. You can install it with:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> conda <span class="nb">install</span> <span class="nt">-c</span> rapidsai <span class="nt">-c</span> nvidia <span class="nt">-c</span> conda-forge <span class="se">\</span>
+        rapids-xgboost <span class="nv">cudatoolkit</span><span class="o">=</span>10.0
+</code></pre></div></div>
+<p>Replacing <code class="language-plaintext highlighter-rouge">10.0</code> in <code class="language-plaintext highlighter-rouge">cudatoolkit=10.0</code> will install the desired CUDA version. If you wish to override the python version installed, add <code class="language-plaintext highlighter-rouge">python=3.6</code> or <code class="language-plaintext highlighter-rouge">python=3.7</code> to the install command.</p>
+
+<h2 class="section-subtitle-top-2" id="-docker-container"><i class="fab fa-docker"></i> Docker Container</h2>
+
+<p>Install using Docker (the latest RAPIDS release). RAPIDS provides Docker images that include a recent version of GPU-accelerated XGBoost. Just follow the Docker installation instructions on the <strong><a href="https://rapids.ai/start.html">Getting Started</a></strong> page and you can start using XGBoost right away from a notebook or the command line.</p>
+
+ </div>
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 id="-pip-install-or-other-methods"><i class="fas fa-laptop-code"></i> PIP Install or Other Methods</h2>
+
+<p>Install using pip or other methods (the default upstream version).  The default open-source XGBoost packages already include GPU support. Follow the XGBoost instructions to install from source or use:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> pip <span class="nb">install </span>xgboost
+</code></pre></div></div>
+
+<p><strong>NOTE:</strong> The pip packages and source installation methods currently install XGBoost version 0.90, which will not include some of the more recent contributions, such as cuDF integration. Those contributions have been integrated to the master branch of XGBoost and will appear in pip packages starting in version 1.0.</p>
+
+ </div>
+    </div>
+</section>
+
+<section class="pure-g background-white padding-top-2em padding-bottom-0em">
+    <div class="container-padding">
+        <div class="pure-u-1"> 
+<h1 id="configuring-your-code-for-gpus">Configuring Your Code for GPUs</h1>
+
+<p class="subtitle">With only a few minor code changes, you’ll be training models on a supercharged XGBoost.</p>
+
+ </div>
+    </div>
+</section>
+<section class="pure-g background-white padding-top-0em padding-bottom-5em">
+    <div class="container-padding">
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 id="-the-best-place-to-start"><i class="fas fa-play"></i> The Best Place to Start</h2>
+
+<p>If you haven’t developed your model yet, the best place to start is <strong><a href="https://xgboost.readthedocs.io/en/latest/get_started.html" target="_blank">XGBoost’s Getting Started documentation</a></strong>. If you have an existing code to train models on CPU, converting it to run on GPUs is simple.</p>
+
+<h2 class="section-subtitle-top-2" id="-more-reference-materials"><i class="far fa-file-code"></i> More Reference Materials</h2>
+
+<p>Similar configuration options apply to R, Java, and Julia wrappers. The <strong><a href="https://xgboost.readthedocs.io/en/latest/index.html" target="_blank">XGBoost Documentation</a></strong> and <strong><a href="https://xgboost.readthedocs.io/en/latest/gpu/index.html" target="_blank">XGBoost GPU Support</a></strong> pages contain much more information on configuring and running models and on GPU-specific options and algorithms.</p>
+
+ </div>
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 id="-training-a-model"><i class="fas fa-cogs"></i> Training a Model</h2>
+
+<p>When training a model with XGBoost, you have to specify a dictionary of training parameters. If you set the <code class="language-plaintext highlighter-rouge">tree_method</code> parameter to <code class="language-plaintext highlighter-rouge">gpu_hist</code>, XGBoost will run on your GPU.</p>
+
+<p>For example, if your old code in Python looks like:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> params <span class="o">=</span> <span class="o">{</span><span class="s1">'max_depth'</span>: 3, <span class="s1">'learning_rate'</span>: 0.1<span class="o">}</span>
+<span class="o">&gt;</span> dtrain <span class="o">=</span> xgb.DMatrix<span class="o">(</span>X, y<span class="o">)</span>
+<span class="o">&gt;</span> xgb.train<span class="o">(</span>params, dtrain<span class="o">)</span>
+</code></pre></div></div>
+<p>Change it to:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> params <span class="o">=</span> <span class="o">{</span>‘tree_method’: ‘gpu_hist’, <span class="s1">'max_depth'</span>: 3, 
+<span class="s1">'learning_rate'</span>: 0.1<span class="o">}</span>
+<span class="o">&gt;</span> dtrain <span class="o">=</span> xgb.DMatrix<span class="o">(</span>X, y<span class="o">)</span>
+<span class="o">&gt;</span> xgb.train<span class="o">(</span>params, dtrain<span class="o">)</span>
+</code></pre></div></div>
+
+ </div>
+    </div>
+</section>
+
+<section class="pure-g background-white padding-top-2em padding-bottom-0em">
+    <div class="container-padding">
+        <div class="pure-u-1"> 
+<h1 id="bridging-dataframes-with-xgboost-dmatrix">Bridging DataFrames with XGBoost DMatrix</h1>
+
+<p class="subtitle">The RAPIDS team is contributing to the XGBoost project and integrating new features to better optimize GPU performance.</p>
+
+ </div>
+    </div>
+</section>
+<section class="pure-g background-white padding-top-0sem padding-bottom-10em">
+    <div class="container-padding">
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 id="-xgboost-dmatrix"><i class="fas fa-border-none"></i> XGBoost DMatrix</h2>
+
+<p>The RAPIDS project is developing a seamless bridge between cuDF DataFrames, the primary data structure in RAPIDS, and DMatrix, XGBoost’s data structure. You can get the <strong><a href="https://github.com/dmlc/xgboost/pull/3997" target="_blank">latest updates</a></strong> in this pull request on GitHub. While this patch is being integrated upstream, early adopters using the RAPIDS conda packages or Docker images can already build DMatrix objects directly from cuDF DataFrames.</p>
+
+ </div>
+        <div class="pure-u-1 pure-u-md-1-2"> 
+<h2 id="-how-to-create-a-dmatrix"><i class="fas fa-border-none"></i> How to Create a DMatrix</h2>
+
+<p>To create a DMatrix from a cuDF DataFrame, just pass the data frames to the constructor:</p>
+<div class="language-bash highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="o">&gt;</span> import xgboost as xgb
+<span class="o">&gt;</span> train_X_cudf <span class="o">=</span> cudf.DataFrame<span class="o">(</span>...<span class="o">)</span>
+<span class="o">&gt;</span> train_y_cudf <span class="o">=</span> cudf.Series<span class="o">(</span>...<span class="o">)</span>
+<span class="o">&gt;</span> dmatrix <span class="o">=</span> xgb.DMatrix<span class="o">(</span>train_X_cudf, <span class="nv">label</span><span class="o">=</span>train_y_cudf<span class="o">)</span>
+</code></pre></div></div>
+
+<p>The package will automatically convert from cuDF’s format to XGBoost’s DMatrix format, keeping the data on GPU memory.</p>
+
+ </div>
+    </div>
+</section>
+
+<div class="slopecap-top-up background-darkpurple"></div>
+<section class="pure-g background-darkpurple padding-top-1em padding-bottom-0em">
+    <div class="container-padding">
+        <div class="pure-u-1"> 
+<h1 class="section-title-full text-white" id="get-started-with-dask">Get Started with Dask</h1>
+
+ </div>
+    </div>
+</section>
+
+<section class="background-darkpurple">
+    <div class="container-padding">
+        <div class="footer-help-section">
+            <div class="footer-help-box">
+                <i class="fab fa-github fa-3x icon"></i>
+                <a href="https://github.com/dmlc/xgboost" target="_blank" class="primary-btn">XGBoost Github</a>
+            </div>
+            <div class="footer-help-box">
+                <i class="fab fa-twitter fa-3x icon"></i>
+                <a href="https://twitter.com/xgboostproject" target="_blank" class="primary-btn">XGBoost Twitter</a>
+            </div>
+            <div class="footer-help-box">
+                <i class="fas fa-file-code fa-3x icon"></i>
+                <a href="https://xgboost.readthedocs.io/en/latest/#" target="_blank" class="primary-btn">XGBoost Docs</a>
+            </div>
+            <div class="footer-help-box">
+                <i class="fab fa-stack-overflow fa-3x icon"></i>
+                <a href="https://stackoverflow.com/questions/tagged/xgboost" target="_blank" class="primary-btn">XGBoost Stack Overflow</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<footer>
+    <a href="/rapidsai-staging/"><img class="footer-logo" src="/rapidsai-staging/assets/images/footer-logo.svg" alt="rapids"></a>
+    <div class="copy-date">© 2020 RAPIDS</div>
+    <div class="footer-nav">
+        <ul>
+            <li><a href="/rapidsai-staging/about.html">ABOUT</a></li>
+            <li><a href="/rapidsai-staging/start.html">GET STARTED</a></li>
+            <li><a href="/rapidsai-staging/community.html">COMMUNITY</a></li>
+            <li><a href="https://github.com/rapidsai" target="_blank">GITHUB</a></li>
+            <li><a href="https://medium.com/rapids-ai" target="_blank">BLOG</a></li>
+            <li>
+                <br>
+                <a href="/rapidsai-staging/branding.html">BRANDING AND GUIDES</a>
+            </li>
+            <li>
+                <br>
+                <a class="footer-icon" href="mailto:RAPIDSai@googlegroups.com"><i class="fas fa-envelope fa-2x dark-purple-font"></i></a>
+                <a class="footer-icon" href="https://twitter.com/rapidsai" target="_blank"><i class="fab fa-twitter fa-2x dark-purple-font"></i></a>
+                <a class="footer-icon" href="https://join.slack.com/t/rapids-goai/shared_invite/enQtMjE0Njg5NDQ1MDQxLTJiN2FkNTFkYmQ2YjY1OGI4NTc5Y2NlODQ3ZDdiODEwYmRiNTFhMzNlNTU5ZWJhZjA3NTg4NDZkMThkNTkxMGQ" target="_blank"><i class="fab fa-slack fa-2x dark-purple-font"></i></a>
+                <a class="footer-icon" href="https://stackoverflow.com/tags/rapids" target="_blank"><i class="fab fa-stack-overflow fa-2x dark-purple-font"></i></a>
+            </li>
+        </ul>
+    </div>
+</footer>
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-127041178-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-127041178-1');
+</script>
+
+<script type="text/javascript">
+	if(typeof _satellite == "object")
+		_satellite.pageBottom();
+	else console.log("Adobe Analytics Likely AdBlocked. ");
+</script>
+</body>
+</html> 
