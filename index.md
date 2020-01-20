@@ -135,7 +135,8 @@ A second Github repository with our extended collection of notebook examples. <b
 {% capture com_left %}
 # RAPID Development
 {: .section-title-halfs}
-RAPIDS is committed to open source. We strive for a **[6 week release schedule](https://docs.rapids.ai/maintainers){: target="_blank"}**, below is a generalized schedule with some featured items of the release. Learn more on our **[Road To 1.0 post <i class="fas fa-angle-double-right"></i>](https://medium.com/rapids-ai/the-road-to-1-0-building-for-the-long-haul-657ae1afdfd6){: target="_blank"}**
+
+RAPIDS is committed to open source. We strive for a **[6 week release schedule](https://docs.rapids.ai/maintainers){: target="_blank"}**, below is a generalized schedule with some highlighted items of the release. Learn more on our **[Road To 1.0 post <i class="fas fa-angle-double-right"></i>](https://medium.com/rapids-ai/the-road-to-1-0-building-for-the-long-haul-657ae1afdfd6){: target="_blank"}**
 {% endcapture %}
 
 {% capture com_right %}
@@ -155,12 +156,12 @@ Whether you are new to RAPIDS, looking to help, or are part of the team, learn a
 %}
 {% include section-halfs.html 
     background="background-purple" 
-    padding-top="5em" padding-bottom="5em" 
+    padding-top="5em" padding-bottom="6em" 
     content-left-half=com_left 
     content-right-half=com_right 
 %} 
 
-{% include roadmap-featured-json.html
+{% include roadmap-highlighted-json.html
     background="background-purple"
     padding-top="3em" padding-bottom="1em" 
 %}
@@ -176,8 +177,16 @@ Whether you are new to RAPIDS, looking to help, or are part of the team, learn a
 cuDF is a Python GPU DataFrame library (built on the **[Apache Arrow](http://arrow.apache.org/){: target="_blank"}** columnar memory format) for loading, joining, aggregating, filtering, and otherwise manipulating data all in a **[pandas-like](https://pandas.pydata.org/){: target="_blank"}** API familiar to data scientists.
 
 {% endcapture %}
-
 {% capture lib1_right %}
+## <i class="fas fa-terminal"></i> libcudf <span class="lib-tag">LIB</span>
+
+**[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/libcudf/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/master/CHANGELOG.md){: target="_blank"}**
+{: .no-tb-margins }
+
+libcudf is a C/C++ CUDA library for implementing standard dataframe operations. It is part of the cuDF repository. 
+
+{% endcapture %}
+{% capture lib2_left %}
 ## <i class="fas fa-terminal"></i> cuML <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cuml){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cuml/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuml/blob/master/CHANGELOG.md){: target="_blank"}**
@@ -187,10 +196,7 @@ cuML is a suite of libraries that implement machine learning algorithms and math
 
 {% endcapture %}
 
-
-
-
-{% capture lib2_left %}
+{% capture lib2_right %}
 ## <i class="fas fa-terminal"></i> cuGraph <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cugraph){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cugraph/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cugraph/blob/master/CHANGELOG.md){: target="_blank"}**
@@ -199,8 +205,7 @@ cuML is a suite of libraries that implement machine learning algorithms and math
 cuGraph is a GPU accelerated graph analytics library, with functionality like **[NetworkX](https://networkx.github.io/){: target="_blank"}**, which is seamlessly integrated into the RAPIDS data science platform.
 
 {% endcapture %}
-
-{% capture lib2_right %}
+{% capture lib3_left %}
 ## <i class="fas fa-terminal"></i> cuSpatial <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cuspatial){: target="_blank"}** **/** **[Docs](https://github.com/rapidsai/cuspatial){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuspatial/blob/master/CHANGELOG.md){: target="_blank"}**
@@ -209,11 +214,7 @@ cuGraph is a GPU accelerated graph analytics library, with functionality like **
 cuSpatial is an efficient C++ library accelerated on GPUs with Python bindings to enable use by the data science community. cuSpatial provides significant GPU-acceleration to common spatial and spatiotemporal operations such as point-in-polygon tests, distances between trajectories, and trajectory clustering when compared to CPU-based implementations. 
 
 {% endcapture %}
-
-
-
-
-{% capture lib3_left %}
+{% capture lib3_right %}
 ## <i class="fas fa-terminal"></i> nvStrings <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/nvstrings/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/master/CHANGELOG.md){: target="_blank"}**
@@ -222,18 +223,7 @@ cuSpatial is an efficient C++ library accelerated on GPUs with Python bindings t
 nvStrings, the Python bindings for **[cuStrings](https://github.com/rapidsai/cudf){: target="_blank"}**, provides a pandas-like API that will be familiar to data engineers & data scientists, so they can use it to easily accelerate their workflows without going into the details of CUDA programming.
 
 {% endcapture %}
-
-{% capture lib3_middle %}
-## <i class="fas fa-terminal"></i> libcudf <span class="lib-tag">LIB</span>
-
-**[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/libcudf/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/master/CHANGELOG.md){: target="_blank"}**
-{: .no-tb-margins }
-
-libcudf is a C/C++ CUDA library for implementing standard dataframe operations. It is part of the cuDF repository. 
-
-{% endcapture %}
-
-{% capture lib3_right %}
+{% capture lib4_left %}
 ## <i class="fas fa-terminal"></i> RMM <span class="lib-tag">LIB</span>
 
 **[GitHub](https://github.com/rapidsai/rmm){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/rmm/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/rmm/blob/master/CHANGELOG.md){: target="_blank"}**
@@ -242,28 +232,32 @@ libcudf is a C/C++ CUDA library for implementing standard dataframe operations. 
 RAPIDS Memory Manager (RMM) is a central place for all device memory allocations in cuDF (C++ and Python) and other RAPIDS libraries. In addition, it is a replacement allocator for CUDA Device Memory (and CUDA Managed Memory) and a pool allocator to make CUDA device memory allocation / deallocation faster and asynchronous.
 
 {% endcapture %}
-
+{% capture lib4_right %} {% endcapture %}
 
 {% include section-halfs.html 
     background="background-purple" 
-    padding-top="0em" padding-bottom="3em" 
+    padding-top="0em" padding-bottom="1em" 
     content-left-half=lib1_left 
     content-right-half=lib1_right 
 %}
 {% include section-halfs.html 
     background="background-purple" 
-    padding-top="0em" padding-bottom="3em" 
+    padding-top="0em" padding-bottom="1em" 
     content-left-half=lib2_left
     content-right-half=lib2_right 
 %}
-{% include section-thirds.html 
+{% include section-halfs.html 
     background="background-purple" 
-    padding-top="0em" padding-bottom="5em" 
-    content-left-third=lib3_left 
-    content-middle-third=lib3_middle 
-    content-right-third=lib3_right 
+    padding-top="0em" padding-bottom="1em" 
+    content-left-half=lib3_left
+    content-right-half=lib3_right 
 %}
-
+{% include section-halfs.html 
+    background="background-purple" 
+    padding-top="0em" padding-bottom="6em" 
+    content-left-half=lib4_left
+    content-right-half=lib4_right 
+%}
 {% include slopecap.html 
     background="background-purple" 
     position="bottom" 
@@ -295,7 +289,9 @@ XGBoost is a well-known gradient boosted decision trees (GBDT) machine learning 
 {% capture com_bottom_right %}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Spark
 
-The RAPIDS team is working with the community to build a distributed, open source XGBoost4J-Spark + RAPIDS package. More details coming soon. 
+Coming soon: NVIDIA will be bringing RAPIDS to Apache Spark.
+<br> **[Learn more on our blog post <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://medium.com/rapids-ai/nvidia-gpus-and-apache-spark-one-step-closer-2d99e37ac8fd){: target="_blank"}**
+
 {% endcapture %}
 
 

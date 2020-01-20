@@ -1,0 +1,79 @@
+{
+   "legacy": "v0.11",
+   "stable": "v0.12",
+   "nightly": "v0.13",
+   "labels": [
+      "community",
+      "ucx",
+      "clx",
+      "NVDashboard",
+      "dask",
+      "cuDF",
+      "cuML",
+      "dataShader",
+      "cuGraph",
+      "cuIO"
+   ],
+   "projects": [
+      {
+         "title": "community",
+         "legacy": [],
+         "stable": [],
+         "nightly": []
+      },
+      {
+         "title": "ucx",
+         "legacy": [],
+         "stable": [],
+         "nightly": []
+      },
+      {
+         "title": "clx",
+         "legacy": [],
+         "stable": [],
+         "nightly": []
+      },
+      {
+         "title": "NVDashboard",
+         "legacy": [],
+         "stable": [],
+         "nightly": []
+      },
+      {
+         "title": "dask",
+         "legacy": [],
+         "stable": [],
+         "nightly": []
+      },
+      {
+         "title": "cuDF",
+         "legacy": [],
+         "stable": [],
+         "nightly": []
+      },
+      {
+         "title": "cuML",
+         "legacy": [],
+         "stable": [],
+         "nightly": []
+      },
+      {
+         "title": "dataShader",
+         "legacy": [],
+         "stable": [],
+         "nightly": []
+      },
+      {
+         "title": "cuGraph",
+         "legacy": [],
+         "stable": [],
+         "nightly": []
+      },
+      {
+         "title": "cuIO",
+         "legacy": [],
+         "stable": [],
+         "nightly": []
+      }
+   ]
+}

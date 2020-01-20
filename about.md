@@ -15,14 +15,16 @@ The RAPIDS suite of open source software libraries and APIs gives you the abilit
 
 RAPIDS also focuses on common data preparation tasks for analytics and data science. This includes a familiar dataframe API that integrates with a variety of machine learning algorithms for end-to-end pipeline accelerations without paying typical serialization costs. RAPIDS also includes support for multi-node, multi-GPU deployments, enabling vastly accelerated processing and training on much larger dataset sizes.
 
-## Apache Arrow
-RAPIDS had its start from the **[Apache Arrow](https://arrow.apache.org/){: target="_blank"}** and **[GoAi](http://gpuopenanalytics.com){: target="_blank"}** projects based on a columnar, in-memory data structure that delivers efficient and fast data interchange with flexibility to support complex data models.
+For RAPIDS logos, themes, branding, and other guides, take a look at our **[Branding and Guides page](branding.html)**.
 
 {% endcapture %}
 
 {% capture about_top_right %}
-## Libraries and APIs Overview
+## Apache Arrow
 {: .section-subtitle-top-1}
+RAPIDS had its start from the **[Apache Arrow](https://arrow.apache.org/){: target="_blank"}** and **[GoAi](http://gpuopenanalytics.com){: target="_blank"}** projects based on a columnar, in-memory data structure that delivers efficient and fast data interchange with flexibility to support complex data models.
+
+## Libraries and APIs Overview
 
 Some RAPIDS projects include **[cuDF](https://github.com/rapidsai/cudf){: target="_blank"}**, a pandas-like dataframe manipulation library; **[cuML](https://github.com/rapidsai/cuml){: target="_blank"}**, a collection of machine learning libraries that will provide GPU versions of algorithms available in scikit-learn; **[cuGraph](https://github.com/rapidsai/cugraph){: target="_blank"}**, a NetworkX-like accelerated graph analytics library. Development follows a **[6 week release schedule](https://docs.rapids.ai/maintainers)**, so new features and libraries are always on the way. 
 

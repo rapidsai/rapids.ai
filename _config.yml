@@ -2,7 +2,8 @@ name: RAPIDS
 title: RAPIDS
 baseurl: "/rapidsai-staging"
 postsurl: "https://rapidsai.github.io/site-data/posts.json"
-roadmapurl: "assets/files/roadmap.json"
+roadmapurl: "assets/files/public-roadmap.json"
+roadmaphiurl: "assets/files/public-highlighted-roadmap.json"
 exclude: ['_drafts', 'README.md', '.gitignore', 'CNAME']
 plugins:
   - jekyll-redirect-from
