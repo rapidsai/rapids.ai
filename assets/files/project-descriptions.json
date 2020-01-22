@@ -1,0 +1,82 @@
+{
+    "rapids":
+    {
+    	"title": "RAPIDS",
+    	"type": "",
+    	"description": "The RAPIDS suite of open source software libraries and APIs gives you the ability to execute end-to-end data science and analytics pipelines entirely on GPUs.",
+    	"github": "https://github.com/rapidsai",
+    	"docs": "https://docs.rapids.ai/",
+    	"changelog": "",
+    	"roadmap": "https://rapids.ai/roadmap.html"
+    }, 
+    "cudf":
+    {
+        "title": "cuDF",
+        "type": "API",
+        "description": "cuDF is a Python GPU DataFrame library (built on the Apache Arrow columnar memory format) for loading, joining, aggregating, filtering, and otherwise manipulating data all in a pandas-like API familiar to data scientists.",
+        "github": "https://github.com/rapidsai/cudf",
+        "docs": "https://docs.rapids.ai/api/cudf/stable/",
+        "changelog": "https://github.com/rapidsai/cudf/blob/master/CHANGELOG.md",
+        "roadmap": "https://rapids.ai/roadmap.html#cudf"
+    },
+    "libcudf":
+    {
+        "title": "libcudf",
+        "type": "LIB",
+        "description": "libcudf is a C/C++ CUDA library for implementing standard dataframe operations. It is part of the cuDF repository.",
+        "github": "https://github.com/rapidsai/cudf",
+        "docs": "https://docs.rapids.ai/api/libcudf/stable/",
+        "changelog": "https://github.com/rapidsai/cudf/blob/master/CHANGELOG.md",
+        "roadmap": "https://rapids.ai/roadmap.html#libcudf"
+    }, 
+    "cuml":
+    {
+        "title": "cuML",
+        "type": "API",
+        "description": "cuML is a suite of libraries that implement machine learning algorithms and mathematical primitives functions that are compatible with other RAPIDS projects, all in a scikit-learn-like API familiar to data scientists.",
+        "github": "https://github.com/rapidsai/cuml",
+        "docs": "https://docs.rapids.ai/api/cuml/stable/",
+        "changelog": "https://github.com/rapidsai/cuml/blob/master/CHANGELOG.md",
+        "roadmap": "https://rapids.ai/roadmap.html#cuml"
+    },         
+    "cugraph":
+    {
+        "title": "cuGraph",
+        "type": "API",
+        "description": "cuGraph is a GPU accelerated graph analytics library, with functionality like NetworkX, which is seamlessly integrated into the RAPIDS data science platform.",
+        "github": "https://github.com/rapidsai/cugraph",
+        "docs": "https://docs.rapids.ai/api/cugraph/stable/",
+        "changelog": "https://github.com/rapidsai/cugraph/blob/master/CHANGELOG.md",
+        "roadmap": "https://rapids.ai/roadmap.html#cugraph"
+    },    
+    "cuspatial":
+    {
+        "title": "cuSpatial",
+        "type": "API",
+        "description": "cuSpatial is an efficient C++ library accelerated on GPUs with Python bindings to enable use by the data science community. cuSpatial provides significant GPU-acceleration to common spatial and spatiotemporal operations such as point-in-polygon tests, distances between trajectories, and trajectory clustering when compared to CPU-based implementations.",
+        "github": "https://github.com/rapidsai/cuspatial",
+        "docs": "https://github.com/rapidsai/cuspatial",
+        "changelog": "https://github.com/rapidsai/cuspatial/blob/master/CHANGELOG.md",
+        "roadmap": "https://rapids.ai/roadmap.html#cuspatial"
+    },
+    "nvStrings":
+    {
+        "title": "nvStrings",
+        "type": "API",
+        "description": "nvStrings, the Python bindings for cuStrings, provides a pandas-like API that will be familiar to data engineers & data scientists, so they can use it to easily accelerate their workflows without going into the details of CUDA programming.",
+        "github": "https://github.com/rapidsai/cudf",
+        "docs": "https://docs.rapids.ai/api/nvstrings/stable/",
+        "changelog": "https://github.com/rapidsai/cudf/blob/master/CHANGELOG.md",
+        "roadmap": "https://rapids.ai/roadmap.html#nvstrings"
+    },
+    "rmm":
+    {
+        "title": "rmm",
+        "type": "LIB",
+        "description": "RAPIDS Memory Manager (RMM) is a central place for all device memory allocations in cuDF (C++ and Python) and other RAPIDS libraries. In addition, it is a replacement allocator for CUDA Device Memory (and CUDA Managed Memory) and a pool allocator to make CUDA device memory allocation / deallocation faster and asynchronous.",
+        "github": "https://github.com/rapidsai/rmm",
+        "docs": "https://docs.rapids.ai/api/rmm/stable/",
+        "changelog": "https://github.com/rapidsai/rmm/blob/master/CHANGELOG.md",
+        "roadmap": "https://rapids.ai/roadmap.html#rmm"
+    }
+}

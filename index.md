@@ -156,12 +156,13 @@ Whether you are new to RAPIDS, looking to help, or are part of the team, learn a
 %}
 {% include section-halfs.html 
     background="background-purple" 
-    padding-top="5em" padding-bottom="6em" 
+    padding-top="5em" padding-bottom="4em" 
     content-left-half=com_left 
     content-right-half=com_right 
 %} 
 
-{% include roadmap-highlighted-json.html
+{% include roadmap-json.html
+    homepage="true"
     background="background-purple"
     padding-top="3em" padding-bottom="1em" 
 %}

@@ -1,0 +1,47 @@
+<section class="pure-g {{ include.background }} padding-top-{{ include.padding-top }} padding-bottom-{{ include.padding-bottom }} ">
+    <div class="container-padding" id="project-desc">
+        <!-- loaded from json -->
+    </div>
+</section>
+
+<script>
+
+    // descriptions
+    $.getJSON("{{ site.repodesc }}")
+        .done(function(json) {
+        	
+        	buildDesc(json)
+
+        	// event listener for href change
+		    $(window).on('hashchange', function(event) {
+				buildDesc(json)
+			});
+          
+        })
+        .fail(function(jqxhr, textStatus, error) {
+            console.log("descriptions JSON request Failed: ", textStatus, error);
+        });
+
+        function buildDesc(json){
+
+	       	// get href params
+		    let url = window.location.href
+		    let params = url.split("#")
+		    let project = params[1]
+
+		    if(project === undefined){
+		    	project = "rapids"
+		    } else {
+		    	project = project.toLowerCase();
+		    }
+		    
+		    if (json[project] === undefined){
+		    	project = "rapids"
+		    } 
+
+		    console.log("json-", project, json[project])
+
+        	$('#project-desc').html('<h2>'+json[project].title+'</h2><p>' + json[project].description + '</p>') 
+        }
+
+</script>
