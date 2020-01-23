@@ -1,10 +1,10 @@
 {
-   "legacy": "0.11",
-   "legacydate": "Dec 2019",
-   "stable": "0.12",
-   "stabledate": "Jan 2020",
-   "nightly": "0.13",
-   "nightlydate":"Feb 2020",
+   "stable": "0.11",
+   "stabledate": "Dec 2019",
+   "nightly": "0.12",
+   "nightlydate": "Jan 2020",
+   "future": "0.13",
+   "futuredate": "Mar 2020",
    "labels": [
       "community",
       "ucx",
@@ -15,33 +15,29 @@
       "cuML",
       "dataShader",
       "cuGraph",
-      "cuIO",
-      "priority"
+      "cuIO"
    ],
    "projects": {
-      "legacy": [
+      "stable": [
          {
             "title": "Beta version of UCX-Py",
             "description": "Beta version of UCX-Py is available via conda or RAPIDS Nightlies. RAPIDS has been working with the UCX library for high-performance networking, using technologies like Infiniband and NVIDIA NVLink, and connecting this to Python.",
             "labels": [
                "community",
                "ucx",
-               "priority",
+               "Priority",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/138",
-            "priority": true
+            "link": "https://github.com/rapidsai/roadmap/issues/138"
          },
          {
             "title": "clx - cybert",
             "description": "cyBERT, an ongoing experiment to train and optimize transformer networks for the task of flexibly and robustly parsing logs of heterogeneous cybersecurity data.",
             "labels": [
                "clx",
-               "priority",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/137",
-            "priority": true
+            "link": "https://github.com/rapidsai/roadmap/issues/137"
          },
          {
             "title": "CLX repo",
@@ -50,8 +46,7 @@
                "clx",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/136",
-            "priority": true
+            "link": "https://github.com/rapidsai/roadmap/issues/136"
          },
          {
             "title": "NVDashboard",
@@ -60,8 +55,7 @@
                "NVDashboard",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/111",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/111"
          },
          {
             "title": "Dask Cloud Provider",
@@ -70,8 +64,7 @@
                "dask",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/110",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/110"
          },
          {
             "title": "Improved dashboarding in Dask",
@@ -81,8 +74,7 @@
                "dask",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/109",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/109"
          },
          {
             "title": "Dask core intra-file parallelism",
@@ -93,8 +85,7 @@
                "dask",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/108",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/108"
          },
          {
             "title": "Dask-cuDF exposes dropna capabilities for groupby operations",
@@ -105,8 +96,7 @@
                "dask",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/107",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/107"
          },
          {
             "title": "Dask core merges/joins",
@@ -115,8 +105,7 @@
                "dask",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/106",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/106"
          },
          {
             "title": "Random Forest Enhancements",
@@ -125,8 +114,7 @@
                "cuML",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/105",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/105"
          },
          {
             "title": "Dask-cudf improvements with ORC file readers/writers",
@@ -135,13 +123,9 @@
                "community",
                "cuDF",
                "dask",
-               "coIO",
-               "cuSignal",
-               "priority",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/104",
-            "priority": true
+            "link": "https://github.com/rapidsai/roadmap/issues/104"
          },
          {
             "title": "Added additional MultiIndex support",
@@ -150,18 +134,17 @@
                "cuDF",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/103",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/103"
          },
          {
             "title": "Tighter CuPy integration",
             "description": "Tighter CuPy integration.",
             "labels": [
                "cuDF",
+               "Priority",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/102",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/102"
          },
          {
             "title": "DataFrame covariance and correlation",
@@ -172,8 +155,7 @@
                "dask",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/101",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/101"
          },
          {
             "title": "Groupby standard deviation",
@@ -182,8 +164,7 @@
                "cuDF",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/100",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/100"
          },
          {
             "title": "Row-wise reduction and scan operations",
@@ -192,8 +173,7 @@
                "cuDF",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/98",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/98"
          },
          {
             "title": "DataFrame level typecasting",
@@ -202,8 +182,7 @@
                "cuDF",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/97",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/97"
          },
          {
             "title": "Inplace support for drop and reset_index",
@@ -212,8 +191,7 @@
                "cuDF",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/96",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/96"
          },
          {
             "title": "UCX NVLink/Switch in Dask-cuDF",
@@ -222,8 +200,7 @@
                "dask",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/93",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/93"
          },
          {
             "title": "Sparse tree Forest Inference Library (FIL)",
@@ -232,8 +209,7 @@
                "cuML",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/80",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/80"
          },
          {
             "title": "Refactor to support column data types",
@@ -242,8 +218,7 @@
                "cuDF",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/78",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/78"
          },
          {
             "title": "RAPIDS cuDatashader - GPU-accelerated version",
@@ -252,8 +227,7 @@
                "dataShader",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/73",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/73"
          },
          {
             "title": "cuDF Refactoring",
@@ -262,8 +236,7 @@
                "cuGraph",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/70",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/70"
          },
          {
             "title": "ARIMA",
@@ -272,19 +245,16 @@
                "cuML",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/69",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/69"
          },
          {
             "title": "MNMG tSVD",
             "description": "Multi-Node / Multi-GPU (MNMG) dimensionality reduction algorithm Truncated Singular Value Decomposition (tSVD) added to cuML.",
             "labels": [
                "cuML",
-               "priority",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/66",
-            "priority": true
+            "link": "https://github.com/rapidsai/roadmap/issues/66"
          },
          {
             "title": "MNMG PCA",
@@ -293,52 +263,48 @@
                "cuML",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/65",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/65"
          },
          {
             "title": "Native HDFS support in cuDF",
             "description": "Support for native HDFS",
             "labels": [
                "cuDF",
+               "Priority",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/62",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/62"
          },
          {
             "title": "libcudf string integration",
             "description": "Added a new native strings column type which is supported throughout the library.",
             "labels": [
                "cuDF",
+               "Priority",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/60",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/60"
          }
       ],
-      "stable": [
+      "nightly": [
          {
             "title": "MNMG OLS + Ridge",
             "description": "MNMG OLS + Ridge",
             "labels": [
                "cuML",
-               "priority",
+               "Priority",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/143",
-            "priority": true
+            "link": "https://github.com/rapidsai/roadmap/issues/143"
          },
          {
             "title": "cuIO Zarr",
             "description": "cuIO Zarr",
             "labels": [
                "cuIO",
-               "priority",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/142",
-            "priority": true
+            "link": "https://github.com/rapidsai/roadmap/issues/142"
          },
          {
             "title": "ASSP (cuGraph)",
@@ -347,8 +313,7 @@
                "cuGraph",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/141",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/141"
          },
          {
             "title": "MG BFS (cuGraph)",
@@ -357,19 +322,16 @@
                "cuGraph",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/140",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/140"
          },
          {
             "title": "Multi-column Renumbering (cuGraph)",
             "description": "Multi-column Renumbering",
             "labels": [
                "cuGraph",
-               "priority",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/90",
-            "priority": true
+            "link": "https://github.com/rapidsai/roadmap/issues/90"
          },
          {
             "title": "MNMG Naive Bayes",
@@ -378,8 +340,7 @@
                "cuML",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/89",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/89"
          },
          {
             "title": "Support wide+deep RF without OOM",
@@ -388,19 +349,17 @@
                "cuML",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/88",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/88"
          },
          {
             "title": "Support vector regression ",
             "description": "Support vector regression",
             "labels": [
                "cuML",
-               "priority",
+               "Priority",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/87",
-            "priority": true
+            "link": "https://github.com/rapidsai/roadmap/issues/87"
          },
          {
             "title": "Datashader integrated into cuxfilter",
@@ -408,8 +367,7 @@
             "labels": [
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/85",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/85"
          },
          {
             "title": "Refactoring (cugraph)",
@@ -418,17 +376,16 @@
                "cuGraph",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/81",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/81"
          },
          {
             "title": "CSP Integration",
             "description": "CSP Integration",
             "labels": [
+               "Priority",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/76",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/76"
          },
          {
             "title": "RAPIDS-core - common build infra separation",
@@ -436,19 +393,16 @@
             "labels": [
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/72",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/72"
          },
          {
             "title": "Expanded Graph Types",
             "description": "Expanded Graph Types",
             "labels": [
                "cuGraph",
-               "priority",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/71",
-            "priority": true
+            "link": "https://github.com/rapidsai/roadmap/issues/71"
          },
          {
             "title": "GPUDirect Storage Optimization v2",
@@ -457,8 +411,7 @@
                "cuIO",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/64",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/64"
          },
          {
             "title": "cuIO <> DL Optimizations",
@@ -467,8 +420,7 @@
                "cuIO",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/63",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/63"
          },
          {
             "title": "Expanded GroupBy Aggregations",
@@ -477,21 +429,19 @@
                "cuDF",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/61",
-            "priority": false
+            "link": "https://github.com/rapidsai/roadmap/issues/61"
          }
       ],
-      "nightly": [
+      "future": [
          {
             "title": "MNMG DBSCAN",
             "description": "Placeholder text...",
             "labels": [
                "cuML",
-               "priority",
+               "Priority",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/42",
-            "priority": true
+            "link": "https://github.com/rapidsai/roadmap/issues/42"
          }
       ]
    }

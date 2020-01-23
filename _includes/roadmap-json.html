@@ -15,6 +15,16 @@ if (!{{ include.homepage }}) {
 
             // event listener for href change
             $(window).on('hashchange', function(event) {
+                let url = window.location.href
+                let params = url.split("#")
+                params.shift()
+
+                if(params[0] === undefined){
+                    params[0] = "Show All"
+                }
+
+                $("#nav-title").html(params[0])
+
                 buildRoadmap(json)
             });
         })
@@ -41,7 +51,15 @@ function buildNav(list) {
         return ('<a href="roadmap.html#' + d + '" class="roadmap-nav-item" >' + d + '</a>')
     }).join('')
 
-    $('#roadmap').prepend('<div class="roadmap-nav">' + nav + '<a href="roadmap.html" class="roadmap-nav-item" > Show All</a></div>')
+    let url = window.location.href
+    let params = url.split("#")
+    params.shift()
+
+    if(params[0] === undefined){
+        params[0] = "Show All"
+    }
+
+    $('#roadmap').prepend('<div class="roadmap-nav">' + nav + '<a href="roadmap.html" class="roadmap-nav-item"><i class="fas fa-list"></i> Show All</a> <div id="nav-title" class="roadmap-nav-title">'+ params[0] +'</div> </div>')
 
 }
 
@@ -55,29 +73,41 @@ function buildRoadmap(json) {
     // default shows all via "Public"
     let filter = "Public"
 
-    // set filter parameters
-    if(params[0] != undefined){
+    // get filter parameters
+    if (params[0] != undefined) {
         filter = params[0]
     }
 
-    if({{ include.homepage }}){
-        filter = "priority"
-    } 
+    // if homepage only priorities 
+    if ({{ include.homepage }}) {
+        filter = "Priority"
+    }
 
-    console.log(filter, params)
+    var stable = buildLists(json.stable, json.projects.stable, filter)
+    var nightly = buildLists(json.nightly, json.projects.nightly, filter)
+    var future = buildLists(json.future, json.projects.future, filter)
 
-    // legacy
-    var legacy = ''
-    var legacyVer = json.legacy
+    //clear
+    $('#roadmap-list').html("")
 
-    if (legacyVer === undefined || json.projects.legacy.length === 0) {
-        legacy = '<li><i class="fas fa-ban"></i> Nothing Hilighted </li>'
+    $('#roadmap-list').append('<div class="pure-u-1 pure-u-md-1-3 roadmap-vline"> <div class="roadmap-ver">' + json.stable + '<div class="roadmap-ver-title"> stable - ' + json.stabledate + '</div> </div> <ul class="roadmap-list">' + stable + '<br> <a class="roadmap-link" href="roadmap.html"> <i class="fas fa-list"></i> Show All </a> </ul></div>')
+    $('#roadmap-list').append('<div class="pure-u-1 pure-u-md-1-3 roadmap-vdash"> <div class="roadmap-ver">' + json.nightly + '<div class="roadmap-ver-title"> nightly - ' + json.nightlydate + '</div> </div> <ul class="roadmap-list">' + nightly + '<br> <a class="roadmap-link" href="roadmap.html"> <i class="fas fa-list"></i> Show All </a> </ul></div>')
+    $('#roadmap-list').append('<div class="pure-u-1 pure-u-md-1-3 roadmap-vdot"> <div class="roadmap-ver">' + json.future + '<div class="roadmap-ver-title"> future - ' + json.futuredate + '</div> </div> <ul class="roadmap-list">' + future + '<br> <a class="roadmap-link" href="roadmap.html"> <i class="fas fa-list"></i> Show All </a> </ul></div>')
+
+
+}
+
+function buildLists(ver, data, filter) {
+    let list = ''
+
+    if (ver === undefined || data.length === 0) {
+        list = '<li><i class="fas fa-ban"></i> Nothing Hilighted </li>'
     } else {
-        legacy = json.projects.legacy.map(function(d, i) {
+        list = data.map(function(d, i) {
 
             if (d.labels.includes(filter)) {
                 var tags = d.labels.map(function(e, j) {
-                    if(e != 'Public'){
+                    if (e != 'Public') {
                         return ('<a href="roadmap.html#' + e + '" class="roadmap-tag">' + e + '</a>')
                     }
                 }).join('')
@@ -86,55 +116,9 @@ function buildRoadmap(json) {
             }
 
         }).join('')
+
     }
 
-    // stable
-    var stable = ''
-    var stableVer = json.stable
-    if (stableVer === undefined || json.projects.stable.length === 0) {
-        stable = '<li><i class="fas fa-ban"></i> Nothing Hilighted </li>'
-    } else {
-        stable = json.projects.stable.map(function(d, i) {
-
-            if (d.labels.includes(filter)) {
-                var tags = d.labels.map(function(e, j) {
-                    if(e != 'Public'){
-                        return ('<a href="roadmap.html#' + e + '" class="roadmap-tag">' + e + '</a>')
-                    }
-                }).join('')
-
-                return ('<li>' + tags + '<div class="roadmap-list-title">' + d.title + '</div> <p class="roadmap-list-text">' + d.description + '</p> </li>')
-            }
-        }).join('')
-    }
-
-    // nightly
-    var nightly = ''
-    var nightlyVer = json.nightly
-    if (nightlyVer === undefined || json.projects.nightly.length === 0) {
-        nightly = '<li><i class="fas fa-ban"></i> Nothing Hilighted </li>'
-    } else {
-        nightly = json.projects.nightly.map(function(d, i) {
-
-            if (d.labels.includes(filter)) {
-                var tags = d.labels.map(function(e, j) {
-                     if(e != 'Public'){
-                        return ('<a href="/roadmap.html#' + e + '" class="roadmap-tag">' + e + '</a>')
-                    }
-                }).join('')
-
-                return ('<li>' + tags + '<div class="roadmap-list-title">' + d.title + '</div> <p class="roadmap-list-text">' + d.description + '</p> </li>')
-            }
-        }).join('')
-    }
-
-    //clear
-    $('#roadmap-list').html("")
-    
-    $('#roadmap-list').append('<div class="pure-u-1 pure-u-md-1-3 roadmap-vline"> <div class="roadmap-ver">' + legacyVer + '<div class="roadmap-ver-title"> legacy - ' + json.legacydate + '</div> </div> <ul class="roadmap-list">' + legacy + '<br> <a class="roadmap-link" href="roadmap.html"> Show All <i class="fas fa-angle-double-right"></i> </a> </ul></div>')
-    $('#roadmap-list').append('<div class="pure-u-1 pure-u-md-1-3 roadmap-vline"> <div class="roadmap-ver">' + stableVer + '<div class="roadmap-ver-title"> stable - ' + json.stabledate + '</div> </div> <ul class="roadmap-list">' + stable + '<br> <a class="roadmap-link" href="roadmap.html"> Show All <i class="fas fa-angle-double-right"></i> </a> </ul></div>')
-    $('#roadmap-list').append('<div class="pure-u-1 pure-u-md-1-3 roadmap-vdash"> <div class="roadmap-ver">' + nightlyVer + '<div class="roadmap-ver-title"> nightly - ' + json.nightlydate + '</div> </div> <ul class="roadmap-list">' + nightly + '<br> <a class="roadmap-link" href="roadmap.html"> Show All <i class="fas fa-angle-double-right"></i> </a> </ul></div>')
-
-
+    return list
 }
 </script>

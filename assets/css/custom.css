@@ -80,7 +80,9 @@ h3 {
 }
 
 
-p, ol, ul {
+p,
+ol,
+ul {
     color: #666666;
     font-size: 1.1em;
     letter-spacing: normal;
@@ -233,7 +235,7 @@ header {
 .header-short {
     background: url(../images/header-bg.svg) top center no-repeat;
     min-height: 230px;
-    background-size: cover;  
+    background-size: cover;
 }
 
 /* __________________________________________________________________ */
@@ -277,8 +279,8 @@ header {
     margin-top: 4vw;
     -webkit-transform: skewY(-3deg);
     transform: skewY(-3deg);
-    -webkit-box-shadow: 0 -2px 2px 0 rgba(0,0,0,0.2);
-    box-shadow: 0 -2px 2px 0 rgba(0,0,0,0.2);
+    -webkit-box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 -2px 2px 0 rgba(0, 0, 0, 0.2);
 }
 
 .slopecap-top-down {
@@ -437,7 +439,8 @@ header {
 .padding-bottom-10em {
     padding-bottom: 10em;
 }
-.margin-top-0em{
+
+.margin-top-0em {
     margin-top: 0em;
 }
 
@@ -581,16 +584,23 @@ a h2:hover,
 }
 
 .roadmap-vline {
-    border-top: 3px solid white;
+    border-top: 2px solid white;
     margin-top: 3em;
     padding-top: 1em;
 }
 
 .roadmap-vdash {
-    border-top: 3px dashed white;
+    border-top: 2px dashed white;
     margin-top: 3em;
     padding-top: 1em;
 }
+
+.roadmap-vdot {
+    border-top: 2px dotted white;
+    margin-top: 3em;
+    padding-top: 1em;
+}
+
 .roadmap-ver-title {
     font-size: 0.55em;
     text-transform: uppercase;
@@ -628,8 +638,8 @@ a h2:hover,
 
 .roadmap-link {
     font-weight: bold;
-    text-align: center;
     display: block;
+    padding-left: 0.8em;
 }
 
 .roadmap-nav {
@@ -637,16 +647,23 @@ a h2:hover,
     letter-spacing: normal;
     text-align: center;
     color: white;
-    margin-bottom: 4em;
+}
+
+.roadmap-nav-title {
+    font-size: 2.5em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .roadmap-nav-item {
     color: white;
     display: inline-block;
     border: 1.5px solid #b177f7;
-    padding: 0em 0.5em;
+    padding: 0.1em 0.5em;
     border-radius: 0.8em;
-    margin-right: 0.5em;
+    margin: 0.4em;
     font-weight: 600;
     cursor: pointer;
 }
@@ -714,7 +731,7 @@ a h2:hover,
     text-shadow: 1px 1px 2px #521798;
 }
 
-.image-blazingsql-benefits{
+.image-blazingsql-benefits {
     position: relative;
     left: 50%;
     max-width: 320px;
@@ -952,7 +969,8 @@ a.blue-btn,
 
 /* __________________________________________________________________ */
 /* blog posts */
-.blog-container h1, .posts-container h1 {
+.blog-container h1,
+.posts-container h1 {
     margin-bottom: 0.1em;
     padding-top: 0.5em;
     border-top: 2px solid #7306ff;
@@ -1015,7 +1033,9 @@ a.blue-btn,
     color: #ffb500
 }
 
-.posts-container h2, .posts-container h3, .posts-container h4 {
+.posts-container h2,
+.posts-container h3,
+.posts-container h4 {
     margin-top: 3em;
 }
 
@@ -1050,7 +1070,7 @@ a.blue-btn,
     width: 100%;
 }
 
-.posts-container img + em {
+.posts-container img+em {
     display: inline-block;
     width: 100%;
     text-align: center;
@@ -1138,7 +1158,8 @@ code.tag {
 
 
 /* font awesome overrides */
-.option i.fas, i.fab {
+.option i.fas,
+i.fab {
     line-height: inherit !important;
 }
 
@@ -1195,7 +1216,7 @@ code.tag {
     }
 
     .header-branding {
-         padding-top: 4em;
+        padding-top: 4em;
     }
 
     .subtitle {
@@ -1240,18 +1261,20 @@ code.tag {
         margin-top: 0em;
     }
 
-    .half-image-center, .half-image {
+    .half-image-center,
+    .half-image {
         width: 100%;
         left: 0%;
         transform: translate(0%);
     }
 
-    .third-image-center, .third-image {
+    .third-image-center,
+    .third-image {
         width: 100%;
         left: 0%;
         transform: translate(0%);
     }
-  
+
     .section-subtitle-top-1 {
         margin-top: 0em;
     }
@@ -1263,7 +1286,16 @@ code.tag {
 
     .roadmap-list {
         margin-top: 0.5em;
-        margin-bottom: 4em;
+        margin-bottom: 2em;
+        padding-left: 0em;
+    }
+
+    .roadmap-list li {
+        padding-left: 0em;
+    }
+
+    .roadmap-link {
+        padding-left: 0em;
     }
 
     /* blog */
@@ -1295,7 +1327,7 @@ code.tag {
     }
 
     /* projects */
-    
+
     .projects-logo-bsql {
         position: relative;
         left: 50%;
@@ -1307,8 +1339,4 @@ code.tag {
 }
 
 /* 1024 large */
-@media only screen and (max-width: 64em)) {
-
-}
-
-
+@media only screen and (max-width: 64em)) {}
