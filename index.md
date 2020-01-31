@@ -286,7 +286,15 @@ nvStrings, the Python bindings for **[cuStrings](https://github.com/rapidsai/cud
 RAPIDS Memory Manager (RMM) is a central place for all device memory allocations in cuDF (C++ and Python) and other RAPIDS libraries. In addition, it is a replacement allocator for CUDA Device Memory (and CUDA Managed Memory) and a pool allocator to make CUDA device memory allocation / deallocation faster and asynchronous.
 
 {% endcapture %}
-{% capture lib4_right %} {% endcapture %}
+{% capture lib4_right %} 
+## <i class="fas fa-terminal"></i> cuxfilter <span class="api-tag">API</span>
+
+**[GitHub](https://github.com/rapidsai/cuxfilter){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cuxfilter/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuxfilter/blob/master/CHANGELOG.md){: target="_blank"}**
+{: .no-tb-margins }
+
+cuxfilter is a framework to connect web visualizations to GPU accelerated crossfiltering. Inspired by the javascript version of the **[original](https://github.com/crossfilter/crossfilter){: target="_blank"}**, it enables interactive and super fast multi-dimensional filtering of 100 million+ row tabular datasets via **[cuDF](https://github.com/rapidsai/cudf){: target="_blank"}**.
+
+{% endcapture %}
 
 {% include section-halfs.html 
     background="background-purple" 
@@ -389,4 +397,3 @@ Coming soon: NVIDIA will be bringing RAPIDS to Apache Spark.
     button="GET STARTED"
     link="start.html"
 %}
-
