@@ -21,10 +21,10 @@
                 </div>
                 <div class='method padding-bottom-1em'>
                     <div class='option-label'>Method</div>
-                    <div id='conda' class='option' title="Conda install">Conda&nbsp;&nbsp;<i class="fas fa-box-open"></i></div>
-                    <div id='docker' class='option' title="Docker image with example notebooks">Docker + Examples&nbsp;&nbsp;<i class="fab fa-docker"></i></div>
-                    <div id='dev' class='option advanced' title="Docker image with developer tools and from source build environment ">Docker + Dev Env&nbsp;&nbsp;<i class="fab fa-docker"></i></div>
-                    <div id='source' class='option advanced' title="From source build">Source&nbsp;&nbsp;<i class="fas fa-cogs"></i></div>
+                    <div id='conda' class='option' title="Conda install">Conda&nbsp;&nbsp;<i class="fas fa-box-open"></i><span class='context'><i class="fas fa-check-square text-blue"></i>&nbsp;Preferred Install Method</span></div>
+                    <div id='docker' class='option' title="Docker image with example notebooks">Docker + Examples&nbsp;&nbsp;<i class="fab fa-docker"></i><span class='context'><i class="fas fa-check-square text-blue"></i>&nbsp;Preferred Install Method</span></div>
+                    <div id='dev' class='option advanced' title="Docker image with developer tools and from source build environment ">Docker + Dev Env&nbsp;&nbsp;<i class="fab fa-docker"></i><span class='context'><i class="fas fa-flask text-orange"></i>&nbsp;Advanced Install Method</span></div>
+                    <div id='source' class='option advanced' title="From source build">Source&nbsp;&nbsp;<i class="fas fa-cogs"></i><span class='context'><i class="fas fa-flask text-orange"></i>&nbsp;Advanced Install Method</span></div>
                 </div>
                 <div class='release'>
                     <div class='option-label'>Release</div>
@@ -52,16 +52,17 @@
                 </div>
                 <div class='cuda'>
                     <div class='option-label'>CUDA</div>
-                    <div id='cuda92' class='option'>CUDA 9.2</div>
+                    <div id='cuda92' class='option'>CUDA 9.2<span class='context'><i class="fas fa-exclamation-triangle text-orange"></i>&nbsp;Only in 0.12</span></div>
                     <div id='cuda100' class='option'>CUDA 10.0</div>
                     <div id='cuda101' class='option'>CUDA 10.1.2</div>
+                    <div id='cuda102' class='option disabled'>CUDA 10.2<span class='context'><i class="fas fa-info-circle text-blue"></i>&nbsp;Coming in 0.13</span></div>
                 </div>
                 <div class='preferred'>
                     <div class='option-label'>&nbsp;</div>
                     <div class='option-blank'>
                         <span>
                             <i class="fas fa-level-down-alt fa-rotate-180 fa-up-6"></i>&nbsp;
-                            <i class="fas fa-exclamation-triangle text-orange"></i>&nbsp;Deprecated
+                            <i class="fas fa-exclamation-triangle text-orange"></i>&nbsp;Only in 0.12
                         </span>
                     </div>
                     <div class='option-blank'>
@@ -69,6 +70,12 @@
                     </div>
                     <div class='option-blank'>
                         <span>&nbsp;</span>
+                    </div>
+                    <div class='option-blank'>
+                        <span>
+                            <i class="fas fa-level-down-alt fa-rotate-180 fa-up-6"></i>&nbsp;
+                            <i class="fas fa-info-circle text-blue"></i>&nbsp;Coming in 0.13
+                        </span>
                     </div>
                 </div>
             </div>
