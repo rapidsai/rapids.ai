@@ -188,7 +188,7 @@ RAPIDS is committed to open source. We strive for a **[6 week release schedule](
     <circle class="cls-3" cx="603.13" cy="62.02" r="16.61" />
     <text class="cls-4" transform="translate(0 100.00)"> {{ site.data.releases.legacy-date }} </text>
     <text class="cls-4" transform="translate(283.48 100.00)"> {{ site.data.releases.stable-date }} </text>
-    <text class="cls-4" transform="translate(566.22 100.00)"> {{ site.data.releases.nightly-date }} </text>
+    <text class="cls-4" transform="translate(564.22 100.00)"> {{ site.data.releases.nightly-date }} </text>
     <text class="cls-4" transform="translate(7.00 12.00)"> LEGACY </text>
     <text class="cls-4" transform="translate(292.00 12.00)"> STABLE </text>
     <text class="cls-4" transform="translate(571.00 12.00)"> NIGHTLY </text>
@@ -268,7 +268,24 @@ cuGraph is a GPU accelerated graph analytics library, with functionality like **
 cuSpatial is an efficient C++ library accelerated on GPUs with Python bindings to enable use by the data science community. cuSpatial provides significant GPU-acceleration to common spatial and spatiotemporal operations such as point-in-polygon tests, distances between trajectories, and trajectory clustering when compared to CPU-based implementations. 
 
 {% endcapture %}
-{% capture lib3_right %}
+{% capture lib3_right %} 
+## <i class="fas fa-terminal"></i> cuxfilter <span class="api-tag">API</span>
+
+**[GitHub](https://github.com/rapidsai/cuxfilter){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cuxfilter/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuxfilter/blob/master/CHANGELOG.md){: target="_blank"}**
+{: .no-tb-margins }
+
+cuxfilter is a framework to connect web visualizations to GPU accelerated crossfiltering. Inspired by the javascript version of the **[original](https://github.com/crossfilter/crossfilter){: target="_blank"}**, it enables interactive and super fast multi-dimensional filtering of 100 million+ row tabular datasets via **[cuDF](https://github.com/rapidsai/cudf){: target="_blank"}**.
+
+{% endcapture %}
+{% capture lib4_left %} 
+## <i class="fas fa-terminal"></i> CLX <span class="api-tag">API</span>
+
+**[GitHub](https://github.com/rapidsai/clx){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/clx/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/clx/blob/master/CHANGELOG.md){: target="_blank"}**
+{: .no-tb-margins }
+
+Cyber Log Accelerators (CLX), also pronounced "clicks", provides a collection of RAPIDS examples for security analysts, data scientists, and engineers to quickly get started applying RAPIDS and GPU acceleration to real-world cybersecurity use cases.
+{% endcapture %}
+{% capture lib4_right %}
 ## <i class="fas fa-terminal"></i> nvStrings <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/nvstrings/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/master/CHANGELOG.md){: target="_blank"}**
@@ -277,7 +294,7 @@ cuSpatial is an efficient C++ library accelerated on GPUs with Python bindings t
 nvStrings, the Python bindings for **[cuStrings](https://github.com/rapidsai/cudf){: target="_blank"}**, provides a pandas-like API that will be familiar to data engineers & data scientists, so they can use it to easily accelerate their workflows without going into the details of CUDA programming.
 
 {% endcapture %}
-{% capture lib4_left %}
+{% capture lib5_left %}
 ## <i class="fas fa-terminal"></i> RMM <span class="lib-tag">LIB</span>
 
 **[GitHub](https://github.com/rapidsai/rmm){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/rmm/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/rmm/blob/master/CHANGELOG.md){: target="_blank"}**
@@ -286,7 +303,6 @@ nvStrings, the Python bindings for **[cuStrings](https://github.com/rapidsai/cud
 RAPIDS Memory Manager (RMM) is a central place for all device memory allocations in cuDF (C++ and Python) and other RAPIDS libraries. In addition, it is a replacement allocator for CUDA Device Memory (and CUDA Managed Memory) and a pool allocator to make CUDA device memory allocation / deallocation faster and asynchronous.
 
 {% endcapture %}
-{% capture lib4_right %} {% endcapture %}
 
 {% include section-halfs.html 
     background="background-purple" 
@@ -308,9 +324,15 @@ RAPIDS Memory Manager (RMM) is a central place for all device memory allocations
 %}
 {% include section-halfs.html 
     background="background-purple" 
-    padding-top="0em" padding-bottom="6em" 
+    padding-top="0em" padding-bottom="1em" 
     content-left-half=lib4_left
     content-right-half=lib4_right 
+%}
+{% include section-halfs.html 
+    background="background-purple" 
+    padding-top="0em" padding-bottom="6em" 
+    content-left-half=lib5_left
+    content-right-half=""
 %}
 {% include slopecap.html 
     background="background-purple" 
@@ -389,4 +411,3 @@ Coming soon: NVIDIA will be bringing RAPIDS to Apache Spark.
     button="GET STARTED"
     link="start.html"
 %}
-
