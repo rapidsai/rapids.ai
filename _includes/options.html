@@ -98,7 +98,7 @@ var method = ['conda', 'docker', 'source', 'dev'];
 var release = ['stable', 'nightly'];
 var linux = ['ubuntu1604', 'ubuntu1804', 'centos7'];
 var python = ['py36', 'py37'];
-var cuda = ['cuda92', 'cuda100', 'cuda101'];
+var cuda = ['cuda92', 'cuda100', 'cuda101', 'cuda102'];
 var pkg_opts = $(".pkg > .option");
 var method_opts = $(".method > .option");
 var release_opts = $(".release > .option");
@@ -196,7 +196,8 @@ function processClick(options, click, category) {
     $("#" + selections['python']).addClass("active");
     $("#" + selections['cuda']).addClass("active");
     $("#" + selections['release']).addClass("active");
-
+    // Always disable 10.2 for now
+    $("#cuda102").addClass("disabled");
     showCommand();
 }
 
