@@ -868,6 +868,14 @@ a.blue-btn,
     margin-top: 1em;
 }
 
+.selector .context {
+    display: none;
+}
+
+.selector .option.active .fas {
+    color: #3c3c3c;
+}
+
 /* blog posts */
 .blog-container h1, .posts-container h1 {
     margin-bottom: 0.1em;
@@ -1066,16 +1074,10 @@ code.tag {
 /* 568px small */
 @media only screen and (max-width: 35.5em) {
 
-    .selector .options .option-label {
-        width: 5em;
-        font-size: 0.8em;
-        margin-top: 0.5em;
-    }
+    /* selector */
 
-    .selector .cmd .cmd-label {
+    .selector .options .option-label, .selector .cmd .cmd-label {
         width: 5em;
-        font-size: 0.8em;
-        margin-top: 1.5em;
     }
 
     .selector .options .option, .selector .options .option-blank  {
@@ -1097,6 +1099,13 @@ code.tag {
     .selector pre {
         padding: 0.5em;
         font-size: 0.7em;
+    }
+
+    .selector .context {
+        display: block;
+        font-size: 0.9em;
+        font-weight: 600;
+        padding-left: 1.5em;
     }
 }
 
@@ -1232,7 +1241,7 @@ code.tag {
     /* selector */
 
     .selector .options .option-label {
-        width: 6em;
+        width: 5.5em;
         font-size: 0.8em;
         margin-top: 0.5em;
     }
@@ -1243,15 +1252,26 @@ code.tag {
         margin-top: 1.5em;
     }
 
+    .cmd-box {
+        cursor: text;
+        overflow: auto;
+        width: calc(100%-6em);
+    }
+
     .selector .options .option, .selector .options .option-blank, .selector pre  {
-        font-size: 0.8em;
+        font-size: 0.8em !important;
     }
 
 }
 
 /* 1024 large */
-@media only screen and (max-width: 64em)) {
+@media only screen and (max-width: 64em) {
 
+    /* selector */
+
+    .selector .options .option, .selector .options .option-blank, .selector pre  {
+        font-size: 0.9em;
+    }
 }
 
 
