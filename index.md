@@ -188,7 +188,7 @@ RAPIDS is committed to open source. We strive for a **[6 week release schedule](
     <circle class="cls-3" cx="603.13" cy="62.02" r="16.61" />
     <text class="cls-4" transform="translate(0 100.00)"> {{ site.data.releases.legacy-date }} </text>
     <text class="cls-4" transform="translate(283.48 100.00)"> {{ site.data.releases.stable-date }} </text>
-    <text class="cls-4" transform="translate(566.22 100.00)"> {{ site.data.releases.nightly-date }} </text>
+    <text class="cls-4" transform="translate(564.22 100.00)"> {{ site.data.releases.nightly-date }} </text>
     <text class="cls-4" transform="translate(7.00 12.00)"> LEGACY </text>
     <text class="cls-4" transform="translate(292.00 12.00)"> STABLE </text>
     <text class="cls-4" transform="translate(571.00 12.00)"> NIGHTLY </text>
