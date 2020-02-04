@@ -295,6 +295,14 @@ RAPIDS Memory Manager (RMM) is a central place for all device memory allocations
 cuxfilter is a framework to connect web visualizations to GPU accelerated crossfiltering. Inspired by the javascript version of the **[original](https://github.com/crossfilter/crossfilter){: target="_blank"}**, it enables interactive and super fast multi-dimensional filtering of 100 million+ row tabular datasets via **[cuDF](https://github.com/rapidsai/cudf){: target="_blank"}**.
 
 {% endcapture %}
+{% capture lib5_left %} 
+## <i class="fas fa-terminal"></i> CLX <span class="api-tag">API</span>
+
+**[GitHub](https://github.com/rapidsai/clx){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/clx/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/clx/blob/master/CHANGELOG.md){: target="_blank"}**
+{: .no-tb-margins }
+
+Cyber Log Accelerators (CLX), also pronounced "clicks", provides a collection of RAPIDS examples for security analysts, data scientists, and engineers to quickly get started applying RAPIDS and GPU acceleration to real-world cybersecurity use cases.
+{% endcapture %}
 
 {% include section-halfs.html 
     background="background-purple" 
@@ -316,9 +324,15 @@ cuxfilter is a framework to connect web visualizations to GPU accelerated crossf
 %}
 {% include section-halfs.html 
     background="background-purple" 
-    padding-top="0em" padding-bottom="6em" 
+    padding-top="0em" padding-bottom="1em" 
     content-left-half=lib4_left
     content-right-half=lib4_right 
+%}
+{% include section-halfs.html 
+    background="background-purple" 
+    padding-top="0em" padding-bottom="6em" 
+    content-left-half=lib5_left
+    content-right-half=""
 %}
 {% include slopecap.html 
     background="background-purple" 
