@@ -155,6 +155,7 @@ function processClick(options, click, category) {
     $(linux_opts).removeClass("active");
     $(python_opts).removeClass("active");
     $(cuda_opts).removeClass("active");
+    var prev_cuda = selections['cuda'];
     var prev_linux = selections['linux'];
     var prev_release = selections['release'];
     if (options && click && category) {
@@ -194,18 +195,23 @@ function processClick(options, click, category) {
         // Handle release requests for cuda 9.2 which we dropped support in nightly
         $("#cuda92").addClass("disabled");
         if (selections['cuda'] == 'cuda92') {
-            selections['cuda'] = 'cuda100';
+            selections['cuda'] = (prev_cuda != 'cuda92') ? prev_cuda : 'cuda100';
         }
         $(cuda_opts).removeClass("active");
     }
+    if (selections['cuda'] == 'cuda102') {
+        // Handle clicks on cuda 10.2
+        selections['cuda'] = (prev_cuda != 'cuda92') ? prev_cuda : 'cuda100';
+    }
+    // Always disable 10.2 for now
+    $("#cuda102").addClass("disabled");
+
     $("#" + selections['method']).addClass("active");
     $("#" + selections['pkg']).addClass("active");
     $("#" + selections['linux']).addClass("active");
     $("#" + selections['python']).addClass("active");
     $("#" + selections['cuda']).addClass("active");
     $("#" + selections['release']).addClass("active");
-    // Always disable 10.2 for now
-    $("#cuda102").addClass("disabled");
     showCommand();
 }
 
