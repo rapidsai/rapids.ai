@@ -189,7 +189,15 @@ function processClick(options, click, category) {
         $("#all").removeClass("disabled");
         $("#all").addClass("active");
         selections['pkg'] = 'all';
-    } 
+    }
+    if (selections['release'] == 'nightly') {
+        // Handle release requests for cuda 9.2 which we dropped support in nightly
+        $("#cuda92").addClass("disabled");
+        if (selections['cuda'] == 'cuda92') {
+            selections['cuda'] = 'cuda100';
+        }
+        $(cuda_opts).removeClass("active");
+    }
     $("#" + selections['method']).addClass("active");
     $("#" + selections['pkg']).addClass("active");
     $("#" + selections['linux']).addClass("active");
