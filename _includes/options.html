@@ -80,6 +80,17 @@
                         </span>
                     </div>
                 </div>
+                <div class='note'>
+                    <div class='option-label'>&nbsp;</div>
+                    <div class='option-blank'>
+                        <span id='cuxfilter-conda-note' class='hidden'>
+                            <i class="fas fa-bullhorn text-blue"></i>&nbsp;<b>NOTE:</b> <code>cuxfilter</code> is <b>not</b> installed with <code>rapids</code>, it must be installed separately. Click on <code>"cuxfilter"</code> above to install.
+                        </span>
+                        <span id='cuxfilter-docker-note' class='hidden'>
+                            <i class="fas fa-bullhorn text-blue"></i>&nbsp;<b>NOTE:</b> <code>cuxfilter</code> is <b>not</b> included in this container, it is available in the <code>runtime</code> container. Click on <code>"Docker + Examples"</code> above to download.
+                        </span>
+                    </div>
+                </div>
             </div>
             <div class='cmd'>
                 <div class='cmd-label'>Command</div>
@@ -163,9 +174,17 @@ function processClick(options, click, category) {
         $(click).addClass("active");
         selections[category] = click.id;
     }
+
+    // Hide cuxfilter notes
+    $("#cuxfilter-conda-note").addClass("hidden");
+    $("#cuxfilter-docker-note").addClass("hidden");
+
     if (selections['method'] == 'conda') {
         // Handle conda requests
         $(linux_opts).addClass("disabled");
+        if (selections['pkg'] == 'all') {
+            $("#cuxfilter-conda-note").removeClass("hidden");
+        }
     } else if (selections['method'] == 'docker') {
         // Handle docker requests
         $(pkg_opts).addClass("disabled");
@@ -190,6 +209,9 @@ function processClick(options, click, category) {
         $("#all").removeClass("disabled");
         $("#all").addClass("active");
         selections['pkg'] = 'all';
+        if (selections['pkg'] == 'all') {
+            $("#cuxfilter-docker-note").removeClass("hidden");
+        }
     }
     if (selections['release'] == 'nightly') {
         // Handle release requests for cuda 9.2 which we dropped support in nightly
