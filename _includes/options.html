@@ -39,7 +39,6 @@
                     <div id='cugraph' class='option'>cuGraph</div>
                     <div id='cuspatial' class='option'>cuSpatial</div>
                     <div id='cuxfilter' class='option'>cuxfilter</div>
-                    <div id='clx' class='option'>CLX</div>
                 </div>
                 <div class='linux'>
                     <div class='option-label'>Linux</div>
@@ -104,7 +103,7 @@
 </section>
 <script type="text/javascript">
 /* Adopted from https://pytorch.org/assets/quick-start-module.js */
-var pkg = ['cudf', 'cuml', 'cugraph', 'cuspatial', 'cuxfilter', 'clx', 'all'];
+var pkg = ['cudf', 'cuml', 'cugraph', 'cuspatial', 'cuxfilter', 'all'];
 var method = ['conda', 'docker', 'source', 'dev'];
 var release = ['stable', 'nightly'];
 var linux = ['ubuntu1604', 'ubuntu1804', 'centos7'];
@@ -510,9 +509,6 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 <div class="stable-cuxfilter-source hidden">
     <pre># See <a href="https://github.com/rapidsai/cuxfilter/tree/master#installation" _target="blank">cuxfilter README</a> for build instructions</pre>
 </div>
-<div class="stable-clx-source hidden">
-    <pre># See <a href="https://github.com/rapidsai/clx/tree/master#installation" _target="blank">CLX README</a> for build instructions</pre>
-</div>
 <!-- conda cuda92 -->
 ```bash
 conda install -c rapidsai -c nvidia -c conda-forge \
@@ -573,18 +569,6 @@ conda install -c rapidsai -c nvidia -c conda-forge \
     -c defaults cuxfilter=0.12 python=3.7 cudatoolkit=9.2
 ```
 {: .stable-cuxfilter-conda-ubuntu1604-py37-cuda92 .stable-cuxfilter-conda-ubuntu1804-py37-cuda92 .stable-cuxfilter-conda-centos7-py37-cuda92 .hidden }
-
-```bash
-conda install -c rapidsai -c nvidia -c conda-forge \
-    -c defaults clx=0.12 python=3.6 cudatoolkit=9.2
-```
-{: .stable-clx-conda-ubuntu1604-py36-cuda92 .stable-clx-conda-ubuntu1804-py36-cuda92 .stable-clx-conda-centos7-py36-cuda92 .hidden }
-
-```bash
-conda install -c rapidsai -c nvidia -c conda-forge \
-    -c defaults clx=0.12 python=3.7 cudatoolkit=9.2
-```
-{: .stable-clx-conda-ubuntu1604-py37-cuda92 .stable-clx-conda-ubuntu1804-py37-cuda92 .stable-clx-conda-centos7-py37-cuda92 .hidden }
 
 ```bash
 conda install -c rapidsai -c nvidia -c conda-forge \
@@ -1011,9 +995,6 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 <div class="nightly-cuxfilter-source hidden">
     <pre># See <a href="https://github.com/rapidsai/cuxfilter#installation" _target="blank">cuxfilter README</a> for build instructions</pre>
 </div>
-<div class="nightly-clx-source hidden">
-    <pre># See <a href="https://github.com/rapidsai/clx#installation" _target="blank">CLX README</a> for build instructions</pre>
-</div>
 <!-- conda cuda102 -->
 ```bash
 conda install -c rapidsai-nightly -c nvidia -c conda-forge \
@@ -1074,18 +1055,6 @@ conda install -c rapidsai-nightly -c nvidia -c conda-forge \
     -c defaults cuxfilter=0.13 python=3.7 cudatoolkit=10.2
 ```
 {: .nightly-cuxfilter-conda-ubuntu1604-py37-cuda102 .nightly-cuxfilter-conda-ubuntu1804-py37-cuda102 .nightly-cuxfilter-conda-centos7-py37-cuda102 .hidden }
-
-```bash
-conda install -c rapidsai-nightly -c nvidia -c conda-forge \
-    -c defaults clx=0.13 python=3.6 cudatoolkit=10.2
-```
-{: .nightly-clx-conda-ubuntu1604-py36-cuda102 .nightly-clx-conda-ubuntu1804-py36-cuda102 .nightly-clx-conda-centos7-py36-cuda102 .hidden }
-
-```bash
-conda install -c rapidsai-nightly -c nvidia -c conda-forge \
-    -c defaults clx=0.13 python=3.7 cudatoolkit=10.2
-```
-{: .nightly-clx-conda-ubuntu1604-py37-cuda102 .nightly-clx-conda-ubuntu1804-py37-cuda102 .nightly-clx-conda-centos7-py37-cuda102 .hidden }
 
 ```bash
 conda install -c rapidsai-nightly -c nvidia -c conda-forge \
