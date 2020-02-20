@@ -12,8 +12,8 @@ name: index # added to fix issue with nav bar not highlighting index page
 {: .section-title-full }
 
 {% capture about_top_left %}
-## <i class="fas fa-info"></i> Accelerated Data Science
-The RAPIDS suite of open source software libraries gives you the freedom to execute end-to-end data science and analytics pipelines entirely on GPUs. <br> **[Learn more <i class="fas fa-angle-double-right"></i>](about.html)**
+## <i class="fas fa-info-circle"></i> Accelerated Data Science
+The RAPIDS suite of open source software libraries gives you the freedom to execute end-to-end data science and analytics pipelines entirely on GPUs. <br> **[Learn more about RAPIDS <i class="fas fa-angle-double-right"></i>](about.html)**
 {% endcapture %}
 
 {% capture about_top_middle %}
@@ -23,22 +23,22 @@ Seamlessly scale from GPU workstations to multi-GPU servers and multi-node clust
 
 {% capture about_top_right %}
 ## <i class="fab fa-python"></i> Python Integration
-Accelerate your Python data science toolchain with minimal code changes and no new tools to learn.
+Accelerate your Python data science toolchain with minimal code changes and no new tools to learn. <br> **[Learn more about our libraries <i class="fas fa-angle-double-right"></i>](#libraries)**
 {% endcapture %}
 
 {% capture about_bottom_left %}
 ## <i class="fas fa-bullseye"></i> Top Model Accuracy
-Increase machine learning model accuracy by iterating on models faster and deploying them more frequently.
+Increase machine learning model accuracy by iterating on models faster and deploying them more frequently. <br> **[Learn more about deployment <i class="fas fa-angle-double-right"></i>](start.html)**
 {% endcapture %}
 
 {% capture about_bottom_middle %}
 ## <i class="far fa-clock"></i> Reduced Training Time
-Drastically improve your productivity with more interactive data science. <br> **[Learn more about XGBoost <i class="fas fa-angle-double-right"></i>](xgboost.html)**
+Drastically improve your productivity with more interactive data science tools like XGBoost. <br> **[Learn more about XGBoost <i class="fas fa-angle-double-right"></i>](xgboost.html)**
 {% endcapture %}
 
 {% capture about_bottom_right %}
 ## <i class="fas fa-code-branch"></i> Open Source
-RAPIDS is an open source project. Supported by NVIDIA, it also relies on numba, apache arrow, and many more open source projects. <br> **[Learn more <i class="fas fa-angle-double-right"></i>](community.html)**
+RAPIDS is an open source project. Supported by NVIDIA, it also relies on numba, apache arrow, and many more open source projects. <br> **[Learn more about our projects <i class="fas fa-angle-double-right"></i>](community.html)**
 {% endcapture %}
 
 {% include section-double-thirds.html 
@@ -200,7 +200,7 @@ RAPIDS is committed to open source. We strive for a **[6 week release schedule](
 {% endcapture %}
 
 {% capture com_right %}
-## <i class="fas fa-code"></i> RAPIDS APIS and Libraries
+## <i class="fas fa-code" id="libraries"></i> RAPIDS APIS and Libraries
 {: .section-subtitle-top-1}
 
 RAPIDS is open source licensed under Apache 2.0, spanning multiple projects that range from GPU dataframes to GPU accelerated ML algorithms. Its also provides native `array_interface` support, allowing Apache Arrow data to be pushed to deep learning frameworks. <br> **[Learn more <i class="fas fa-angle-double-right"></i>](about.html)**
