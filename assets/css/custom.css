@@ -772,7 +772,6 @@ a.blue-btn:hover,
     flex: 1 1;
     margin: 0.2em;
     padding: 0.3em;
-    cursor: none;
     line-height: 1.5em;
 }
 

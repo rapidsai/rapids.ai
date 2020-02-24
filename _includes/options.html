@@ -3,28 +3,24 @@
         <div class='selector '>
             <div class='options'>
                 <div class='preferred'>
-                    <div class='option-label'>&nbsp;</div>
+                    <div class='option-label'></div>
                     <div class='option-blank'>
                         <span>
-                            <i class="fas fa-level-up-alt fa-rotate-180 fa-down-6"></i>&nbsp;&nbsp;
-                            <i class="fas fa-check-square text-blue"></i>&nbsp;Preferred&nbsp;&nbsp;
-                            <i class="fas fa-level-down-alt fa-down-6"></i>
+                            <i class="fas fa-level-up-alt fa-rotate-180 fa-down-6"></i> <i class="fas fa-check-square text-blue"></i> Preferred <i class="fas fa-level-down-alt fa-down-6"></i>
                         </span>
                     </div>
                     <div class='option-blank'>
                         <span>
-                            <i class="fas fa-level-up-alt fa-rotate-180 fa-down-6"></i>&nbsp;&nbsp;
-                            <i class="fas fa-flask text-orange"></i>&nbsp;Advanced&nbsp;&nbsp;
-                            <i class="fas fa-level-down-alt fa-down-6"></i>
+                            <i class="fas fa-level-up-alt fa-rotate-180 fa-down-6"></i> <i class="fas fa-flask text-orange"></i> Advanced <i class="fas fa-level-down-alt fa-down-6"></i>
                         </span>
                     </div>
                 </div>
                 <div class='method padding-bottom-1em'>
                     <div class='option-label'>Method</div>
-                    <div id='conda' class='option' title="Conda install">Conda&nbsp;&nbsp;<i class="fas fa-box-open"></i><span class='context'><i class="fas fa-check-square text-blue"></i>&nbsp;Preferred Install Method</span></div>
-                    <div id='docker' class='option' title="Docker image with example notebooks">Docker + Examples&nbsp;&nbsp;<i class="fab fa-docker"></i><span class='context'><i class="fas fa-check-square text-blue"></i>&nbsp;Preferred Install Method</span></div>
-                    <div id='dev' class='option advanced' title="Docker image with developer tools and from source build environment ">Docker + Dev Env&nbsp;&nbsp;<i class="fab fa-docker"></i><span class='context'><i class="fas fa-flask text-orange"></i>&nbsp;Advanced Install Method</span></div>
-                    <div id='source' class='option advanced' title="From source build">Source&nbsp;&nbsp;<i class="fas fa-cogs"></i><span class='context'><i class="fas fa-flask text-orange"></i>&nbsp;Advanced Install Method</span></div>
+                    <div id='conda' class='option' title="Conda install">Conda <i class="fas fa-box-open"></i> <span class='context'> <i class="fas fa-check-square text-blue"></i> Preferred Install Method</span></div>
+                    <div id='docker' class='option' title="Docker image with example notebooks">Docker + Examples <i class="fab fa-docker"></i><span class='context'> <i class="fas fa-check-square text-blue"></i> Preferred Install Method</span></div>
+                    <div id='dev' class='option advanced' title="Docker image with developer tools and from source build environment ">Docker + Dev Env <i class="fab fa-docker"></i> <span class='context'> <i class="fas fa-flask text-orange"></i> Advanced Install Method</span></div>
+                    <div id='source' class='option advanced' title="From source build">Source <i class="fas fa-cogs"></i><span class='context'> <i class="fas fa-flask text-orange"></i> Advanced Install Method</span></div>
                 </div>
                 <div class='release'>
                     <div class='option-label'>Release</div>
@@ -53,40 +49,34 @@
                 </div>
                 <div class='cuda'>
                     <div class='option-label'>CUDA</div>
-                    <div id='cuda92' class='option'>CUDA 9.2<span class='context'><i class="fas fa-exclamation-triangle text-orange"></i>&nbsp;Only in 0.12</span></div>
+                    <div id='cuda92' class='option'>CUDA 9.2<span class='context'><i class="fas fa-exclamation-triangle text-orange"></i> Only in 0.12</span></div>
                     <div id='cuda100' class='option'>CUDA 10.0</div>
                     <div id='cuda101' class='option'>CUDA 10.1.2</div>
-                    <div id='cuda102' class='option disabled'>CUDA 10.2<span class='context'><i class="fas fa-info-circle text-blue"></i>&nbsp;Coming soon</span></div>
+                    <div id='cuda102' class='option disabled'>CUDA 10.2<span class='context'><i class="fas fa-info-circle text-blue"></i> Coming soon</span></div>
                 </div>
                 <div class='preferred'>
-                    <div class='option-label'>&nbsp;</div>
+                    <div class='option-label'></div>
                     <div class='option-blank'>
                         <span>
-                            <i class="fas fa-level-down-alt fa-rotate-180 fa-up-6"></i>&nbsp;
-                            <i class="fas fa-exclamation-triangle text-orange"></i>&nbsp;Only in 0.12
+                            <i class="fas fa-level-down-alt fa-rotate-180 fa-up-6"></i> <i class="fas fa-exclamation-triangle text-orange"></i> Only in 0.12
                         </span>
                     </div>
-                    <div class='option-blank'>
-                        <span>&nbsp;</span>
-                    </div>
-                    <div class='option-blank'>
-                        <span>&nbsp;</span>
-                    </div>
+                    <div class='option-blank'></div>
+                    <div class='option-blank'></div>
                     <div class='option-blank'>
                         <span>
-                            <i class="fas fa-level-down-alt fa-rotate-180 fa-up-6"></i>&nbsp;
-                            <i class="fas fa-info-circle text-blue"></i>&nbsp;Coming soon
+                            <i class="fas fa-level-down-alt fa-rotate-180 fa-up-6"></i> <i class="fas fa-info-circle text-blue"></i> Coming soon
                         </span>
                     </div>
                 </div>
                 <div class='note'>
-                    <div class='option-label'>&nbsp;</div>
+                    <div class='option-label'></div>
                     <div class='option-blank'>
                         <span id='cuxfilter-conda-note' class='hidden'>
-                            <i class="fas fa-bullhorn text-blue"></i>&nbsp;<b>NOTE:</b> <code>cuxfilter</code> is <b>not</b> installed with <code>rapids</code>, it must be installed separately. Click on <code>"cuxfilter"</code> above to install.
+                            <i class="fas fa-bullhorn text-blue"></i> <b>NOTE:</b> <code>cuxfilter</code> is <b>not</b> installed with <code>rapids</code>, it must be installed separately. Click on <code>"cuxfilter"</code> above to install.
                         </span>
                         <span id='cuxfilter-docker-note' class='hidden'>
-                            <i class="fas fa-bullhorn text-blue"></i>&nbsp;<b>NOTE:</b> <code>cuxfilter</code> is <b>not</b> included in this container, it is available in the <code>runtime</code> container. Click on <code>"Docker + Examples"</code> above to download.
+                            <i class="fas fa-bullhorn text-blue"></i> <b>NOTE:</b> <code>cuxfilter</code> is <b>not</b> included in this container, it is available in the <code>runtime</code> container. Click on <code>"Docker + Examples"</code> above to download.
                         </span>
                     </div>
                 </div>
