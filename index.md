@@ -8,7 +8,7 @@ layout: default
 name: index # added to fix issue with nav bar not highlighting index page
 ---
 
-# GPU DATA SCIENCE
+# GPU DATA SCIENCE - FTW!
 {: .section-title-full }
 
 {% capture about_top_left %}
