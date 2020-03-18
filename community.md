@@ -17,7 +17,7 @@ The RAPIDS team is developing, contributing, and collaborating closely with nume
 
 {% include section-single.html
     background="white" 
-    padding-top="0em" padding-bottom="0em" 
+    padding-top="0em" padding-bottom="5em" 
     content-single=com_content
 %}
 
@@ -28,7 +28,6 @@ The RAPIDS team is developing, contributing, and collaborating closely with nume
 BlazingSQL is an open source project providing distributed SQL for analytics that enables the integration of enterprise data at scale. RAPIDS is actively contributing to BlazingSQL, and it integrates with RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. <br> **[Learn more on our BlazingSQL page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](blazingsql.html)**
 
 {% endcapture %}
-
 {% capture com_mid_top %}
 ![Dask]({{ site.baseurl }}{% link /assets/images/dask.svg %}){: .half-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Dask
@@ -36,7 +35,6 @@ BlazingSQL is an open source project providing distributed SQL for analytics tha
 Dask is an open source project providing advanced parallelism for analytics that enables performance at scale. RAPIDS is actively contributing to Dask, and it integrates with both RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. <br> **[Learn more on our Dask page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](dask.html)**
 
 {% endcapture %}
-
 {% capture com_right_top %}
 ![xgboost]({{ site.baseurl }}{% link /assets/images/xgboost_logo_sorta.svg %}){: .half-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + XGBoost
@@ -46,29 +44,68 @@ XGBoost is a well-known gradient boosted decision trees (GBDT) machine learning 
 {% endcapture %}
 
 {% capture com_left_bottom %}
- 
+![Plotly]({{ site.baseurl }}{% link /assets/images/plotly-logo.svg %}){: .half-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + Plot.ly
+
+Content text goes here. <br> **[Learn more on our Plot.ly page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](plotly.html)**
+
 {% endcapture %}
 {% capture com_mid_bottom %}
+![Ray]({{ site.baseurl }}{% link /assets/images/ray-logo.png %}){: .half-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + CSPs
+
+Content text goes here. <br> **[Learn more on our Ray page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](ray.html)**
+
+{% endcapture %}
+{% capture com_right_bottom %}
+ ![CSPS]({{ site.baseurl }}{% link /assets/images/placeholder-image.png %}){: .half-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + CSPs
+
+Content text goes here. <br> **[Learn more on our CSP page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](csp.html)**
+
+{% endcapture %}
+
+
+{% capture prj_left %}
 ![spark]({{ site.baseurl }}{% link /assets/images/spark-logo-trademark.png %}){: .half-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Spark
 
-Coming soon: NVIDIA will be bringing RAPIDS to Apache Spark.
+NVIDIA will be bringing RAPIDS to Apache Spark.
 <br> **[Learn more on our blog post <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://medium.com/rapids-ai/nvidia-gpus-and-apache-spark-one-step-closer-2d99e37ac8fd){: target="_blank"}**
+
 {% endcapture %}
-{% capture com_mid_right %}
- 
+
+{% capture prj_mid %}
+![TPC]({{ site.baseurl }}{% link /assets/images/tpc-reg.gif %}){: .half-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS TPCx-BB Benchmark
+
+Content text goes here. <br> **[Learn more on our TPCx-BB page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](TPCx-BB.html)**
+
 {% endcapture %}
+
+{% capture prj_right %}
+
+{% endcapture %}
+
 
 {% include section-double-thirds.html
     background="background-white" 
-    padding-top="1em" padding-bottom="s5em" 
+    padding-top="1em" padding-bottom="0em" 
     content-top-left-third=com_left_top
     content-top-middle-third=com_mid_top
     content-top-right-third=com_right_top
     content-bottom-left-third=com_left_bottom
     content-bottom-middle-third=com_mid_bottom
     content-bottom-right-third=com_right_bottom
-%} 
+%}
+{% include section-thirds.html 
+    background="background-white" 
+    padding-top="1em" padding-bottom="5em" 
+    content-left-third=prj_left
+    content-middle-third=prj_mid
+    content-right-third=prj_right
+%}
+
 
 
 
