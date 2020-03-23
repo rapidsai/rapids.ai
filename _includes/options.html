@@ -210,9 +210,10 @@ function processClick(options, click, category) {
         }
         $(cuda_opts).removeClass("active");
     } else if (selections['release'] == 'stable') {
-        // Handle clicks on cuda 10.2
-        selections['cuda'] = (prev_cuda != 'cuda102') ? prev_cuda : 'cuda100';
         $("#cuda102").addClass("disabled");
+        if (selections['cuda'] == 'cuda102') {
+            selections['cuda'] = (prev_cuda != 'cuda102') ? prev_cuda : 'cuda100';
+        }
         $(cuda_opts).removeClass("active");
     }    
 
