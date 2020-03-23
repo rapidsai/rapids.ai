@@ -65,7 +65,7 @@
                     <div class='option-blank'></div>
                     <div class='option-blank'>
                         <span>
-                            <i class="fas fa-level-down-alt fa-rotate-180 fa-up-6"></i> <i class="fas fa-info-circle text-blue"></i> Coming soon
+                            <i class="fas fa-level-down-alt fa-rotate-180 fa-up-6"></i> <i class="fas fa-info-circle text-blue"></i> Only in 0.13a
                         </span>
                     </div>
                 </div>
@@ -209,13 +209,12 @@ function processClick(options, click, category) {
             selections['cuda'] = (prev_cuda != 'cuda92') ? prev_cuda : 'cuda100';
         }
         $(cuda_opts).removeClass("active");
-    }
-    if (selections['cuda'] == 'cuda102') {
+    } else if (selections['release'] == 'stable') {
         // Handle clicks on cuda 10.2
-        selections['cuda'] = (prev_cuda != 'cuda92') ? prev_cuda : 'cuda100';
-    }
-    // Always disable 10.2 for now
-    $("#cuda102").addClass("disabled");
+        selections['cuda'] = (prev_cuda != 'cuda102') ? prev_cuda : 'cuda100';
+        $("#cuda102").addClass("disabled");
+        $(cuda_opts).removeClass("active");
+    }    
 
     $("#" + selections['method']).addClass("active");
     $("#" + selections['pkg']).addClass("active");
