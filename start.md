@@ -55,7 +55,7 @@ We suggest that you take a look at the sample workflow in our Docker container (
 <i class="fas fa-download text-purple"></i> **CUDA & NVIDIA Drivers:** One of the following supported versions:
 {: .no-tb-margins }
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-check-circle text-purple"></i> [9.2](https://developer.nvidia.com/cuda-92-download-archive){: target="_blank"} & v396.37+ &nbsp; <i class="fas fa-check-circle text-purple"></i> [10.0](https://developer.nvidia.com/cuda-10.0-download-archive){: target="_blank"} & v410.48+ &nbsp; <i class="fas fa-check-circle text-purple"></i> [10.1.2](https://developer.nvidia.com/cuda-10.1-download-archive-update2){: target="_blank"} & v418.87+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-check-circle text-purple"></i> [10.0](https://developer.nvidia.com/cuda-10.0-download-archive){: target="_blank"} & v410.48+ &nbsp; <i class="fas fa-check-circle text-purple"></i> [10.1.2](https://developer.nvidia.com/cuda-10.1-download-archive-update2){: target="_blank"} & v418.87+ &nbsp; <i class="fas fa-check-circle text-purple"></i> [10.2](https://developer.nvidia.com/cuda-downloads){: target="_blank"} & v440.33+ &nbsp; 
 {: .no-tb-margins }
 
 {% endcapture %}
