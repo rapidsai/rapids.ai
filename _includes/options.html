@@ -49,25 +49,15 @@
                 </div>
                 <div class='cuda'>
                     <div class='option-label'>CUDA</div>
-                    <div id='cuda92' class='option'>CUDA 9.2<span class='context'><i class="fas fa-exclamation-triangle text-orange"></i> Only in 0.12</span></div>
                     <div id='cuda100' class='option'>CUDA 10.0</div>
                     <div id='cuda101' class='option'>CUDA 10.1.2</div>
-                    <div id='cuda102' class='option'>CUDA 10.2<span class='context'><i class="fas fa-exclamation-triangle text-orange"></i> Only in 0.13a</span></div>
+                    <div id='cuda102' class='option'>CUDA 10.2</div>
                 </div>
                 <div class='preferred'>
                     <div class='option-label'></div>
-                    <div class='option-blank'>
-                        <span>
-                            <i class="fas fa-level-down-alt fa-rotate-180 fa-up-6"></i> <i class="fas fa-exclamation-triangle text-orange"></i> Only in 0.12
-                        </span>
-                    </div>
                     <div class='option-blank'></div>
                     <div class='option-blank'></div>
-                    <div class='option-blank'>
-                        <span>
-                            <i class="fas fa-level-down-alt fa-rotate-180 fa-up-6"></i> <i class="fas fa-exclamation-triangle text-orange"></i> Only in 0.13a
-                        </span>
-                    </div>
+                    <div class='option-blank'></div>
                 </div>
                 <div class='note'>
                     <div class='option-label'></div>
@@ -98,7 +88,7 @@ var method = ['conda', 'docker', 'source', 'dev'];
 var release = ['stable', 'nightly'];
 var linux = ['ubuntu1604', 'ubuntu1804', 'centos7'];
 var python = ['py36', 'py37'];
-var cuda = ['cuda92', 'cuda100', 'cuda101', 'cuda102'];
+var cuda = ['cuda100', 'cuda101', 'cuda102'];
 var pkg_opts = $(".pkg > .option");
 var method_opts = $(".method > .option");
 var release_opts = $(".release > .option");
@@ -202,20 +192,6 @@ function processClick(options, click, category) {
             $("#cuxfilter-docker-note").removeClass("hidden");
         }
     }
-    if (selections['release'] == 'nightly') {
-        // Handle release requests for cuda 9.2 which we dropped support in nightly
-        $("#cuda92").addClass("disabled");
-        if (selections['cuda'] == 'cuda92') {
-            selections['cuda'] = (prev_cuda != 'cuda92') ? prev_cuda : 'cuda100';
-        }
-        $(cuda_opts).removeClass("active");
-    } else if (selections['release'] == 'stable') {
-        $("#cuda102").addClass("disabled");
-        if (selections['cuda'] == 'cuda102') {
-            selections['cuda'] = (prev_cuda != 'cuda102') ? prev_cuda : 'cuda100';
-        }
-        $(cuda_opts).removeClass("active");
-    }    
 
     $("#" + selections['method']).addClass("active");
     $("#" + selections['pkg']).addClass("active");
