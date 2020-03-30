@@ -40,7 +40,10 @@ We suggest that you take a look at the sample workflow in our Docker container (
 <i class="fas fa-microchip text-purple"></i> **GPU:** NVIDIA Pascal™ or better with **[compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 6.0+
 {: .no-tb-margins }
 
-<i class="fas fa-desktop text-purple"></i> **Supported OS:** Ubuntu 16.04/18.04 or CentOS 7 with gcc 5.4 & 7.3
+<i class="fas fa-desktop text-purple"></i> **OS:** Ubuntu 16.04 & <code>gcc</code> 5.4 OR Ubuntu 18.04/CentOS 7 & <code>gcc</code> 7.3
+{: .no-tb-margins }
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-info-circle text-purple"></i> RHEL 7 support is provided through CentOS 7 builds/installs
 {: .no-tb-margins }
 
 <i class="fab fa-docker text-purple"></i> **Docker:** Docker CE v19.03+ and **[nvidia-container-toolkit](https://github.com/NVIDIA/nvidia-docker#quickstart){: target="_blank"}** 
