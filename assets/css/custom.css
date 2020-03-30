@@ -779,6 +779,11 @@ a.blue-btn:hover,
     margin: auto;
 }
 
+.selector .options .note .option-blank {
+    padding: 0 1em;
+    text-align: center;
+}
+
 i.fa-up-6 {
     position: relative;
     top: -6px;
@@ -1250,6 +1255,11 @@ code.tag {
 
     .selector .options .option, .selector .options .option-blank, .selector pre  {
         font-size: 0.8em !important;
+    }
+
+    .selector .options .note .option-blank {
+        padding: 0 1em;
+        text-align: center;
     }
 
 }

@@ -41,6 +41,7 @@
                     <div id='ubuntu1604' class='option'>Ubuntu 16.04</div>
                     <div id='ubuntu1804' class='option'>Ubuntu 18.04</div>
                     <div id='centos7' class='option'>CentOS 7</div>
+                    <div id='rhel7' class='option'>RHEL 7&nbsp;<i class="fas fa-info-circle"></i></div>
                 </div>
                 <div class='python'>
                     <div class='option-label'>Python</div>
@@ -62,11 +63,11 @@
                 <div class='note'>
                     <div class='option-label'></div>
                     <div class='option-blank'>
-                        <span id='cuxfilter-conda-note' class='hidden'>
-                            <i class="fas fa-bullhorn text-blue"></i> <b>NOTE:</b> <code>cuxfilter</code> is <b>not</b> installed with <code>rapids</code>, it must be installed separately. Click on <code>"cuxfilter"</code> above to install.
+                        <span id='rhel7-conda-note' class='hidden option-note'>
+                            <i class="fas fa-info-circle text-orange"></i> <b>NOTE:</b> RHEL 7 <code>conda</code> support is provided by builds and tests on CentOS 7. The same <code>conda</code> install methods should work with <code>gcc >=7.3</code> and the correct NVIDIA and CUDA drivers.
                         </span>
-                        <span id='cuxfilter-docker-note' class='hidden'>
-                            <i class="fas fa-bullhorn text-blue"></i> <b>NOTE:</b> <code>cuxfilter</code> is <b>not</b> included in this container, it is available in the <code>runtime</code> container. Click on <code>"Docker + Examples"</code> above to download.
+                        <span id='rhel7-source-note' class='hidden option-note'>
+                            <i class="fas fa-info-circle text-orange"></i> <b>NOTE:</b> RHEL 7 from source build support is provided by following the build instructions for CentOS 7. The same methods should work with <code>gcc >=7.3</code> and the correct NVIDIA and CUDA drivers.
                         </span>
                     </div>
                 </div>
@@ -86,7 +87,7 @@
 var pkg = ['cudf', 'cuml', 'cugraph', 'cuspatial', 'cuxfilter', 'all'];
 var method = ['conda', 'docker', 'source', 'dev'];
 var release = ['stable', 'nightly'];
-var linux = ['ubuntu1604', 'ubuntu1804', 'centos7'];
+var linux = ['ubuntu1604', 'ubuntu1804', 'centos7', 'rhel7'];
 var python = ['py36', 'py37'];
 var cuda = ['cuda100', 'cuda101', 'cuda102'];
 var pkg_opts = $(".pkg > .option");
@@ -155,17 +156,23 @@ function processClick(options, click, category) {
     }
 
     // Hide cuxfilter notes
-    $("#cuxfilter-conda-note").addClass("hidden");
-    $("#cuxfilter-docker-note").addClass("hidden");
+    $("#rhel7-conda-note").addClass("hidden");
+    $("#rhel7-source-note").addClass("hidden");
 
     if (selections['method'] == 'conda') {
         // Handle conda requests
-        $(linux_opts).addClass("disabled");
-        if (selections['pkg'] == 'all') {
-            $("#cuxfilter-conda-note").removeClass("hidden");
+        if (selections['linux'] == 'rhel7') {
+            // Display RHEL note
+            $("#rhel7-conda-note").removeClass("hidden");
+        } else {
+            $("#ubuntu1604, #ubuntu1804, #centos7").addClass("active");
         }
     } else if (selections['method'] == 'docker') {
         // Handle docker requests
+        if (selections['linux'] == 'rhel7') {
+            selections['linux'] = 'centos7';
+        }
+        $("#rhel7").addClass("disabled");
         $(pkg_opts).addClass("disabled");
         $("#all").removeClass("disabled");
         $("#all").addClass("active");
@@ -176,21 +183,26 @@ function processClick(options, click, category) {
         if (selections['pkg'] == 'all') {
             selections['pkg'] = 'cudf';
         }
-        $(linux_opts).removeClass("active");
+        if (selections['linux'] == 'rhel7') {
+            // Display RHEL note
+            $("#rhel7-source-note").removeClass("hidden");
+        } else {
+            $("#ubuntu1604, #ubuntu1804, #centos7").addClass("active");
+        }
         $(python_opts).removeClass("active");
         $(cuda_opts).removeClass("active");
-        $(linux_opts).addClass("disabled");
         $(python_opts).addClass("disabled");
         $(cuda_opts).addClass("disabled");
     } else if (selections['method'] == 'dev') {
         // Handle dev requests
+        if (selections['linux'] == 'rhel7') {
+            selections['linux'] = 'centos7';
+        }
+        $("#rhel7").addClass("disabled");
         $(pkg_opts).addClass("disabled");
         $("#all").removeClass("disabled");
         $("#all").addClass("active");
         selections['pkg'] = 'all';
-        if (selections['pkg'] == 'all') {
-            $("#cuxfilter-docker-note").removeClass("hidden");
-        }
     }
 
     $("#" + selections['method']).addClass("active");
