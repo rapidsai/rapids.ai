@@ -156,9 +156,6 @@ Notebooks can be found in notebooks directory within the container:
 <i class="far fa-folder-open"></i> **`/rapids/notebooks/cugraph`** (cuGraph demos)
 {: .no-tb-margins }
 
-<i class="far fa-folder-open"></i> **`/rapids/notebooks/tutorials`** (DBSCAN tutorial)
-{: .no-tb-margins }
-
 <i class="far fa-folder-open"></i> **`/rapids/notebooks/xgboost`** (XGBoost demo)
 {: .no-tb-margins }
 
