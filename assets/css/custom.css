@@ -767,6 +767,14 @@ a.blue-btn:hover,
     line-height: 1.5em;
 }
 
+.selector .options .option:hover, .selector .options .option.active:hover {
+    background: #ffb500;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
 .selector .options .option-blank {
     color: white;
     flex: 1 1;
@@ -812,7 +820,7 @@ i.fa-down-6 {
 }
 
 .selector .options .disabled {
-    background: #a785e7;
+    background: #a785e7 !important;
     color: #706880;
     cursor: not-allowed;
 }
