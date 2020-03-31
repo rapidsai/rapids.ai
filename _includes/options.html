@@ -33,6 +33,7 @@
                     <div id='cudf' class='option'>cuDF</div>
                     <div id='cuml' class='option'>cuML</div>
                     <div id='cugraph' class='option'>cuGraph</div>
+                    <div id='cusignal' class='option'>cuSignal</div>
                     <div id='cuspatial' class='option'>cuSpatial</div>
                     <div id='cuxfilter' class='option'>cuxfilter</div>
                 </div>
@@ -84,7 +85,7 @@
 </section>
 <script type="text/javascript">
 /* Adopted from https://pytorch.org/assets/quick-start-module.js */
-var pkg = ['cudf', 'cuml', 'cugraph', 'cuspatial', 'cuxfilter', 'all'];
+var pkg = ['cudf', 'cuml', 'cugraph', 'cusignal', 'cuspatial', 'cuxfilter', 'all'];
 var method = ['conda', 'docker', 'source', 'dev'];
 var release = ['stable', 'nightly'];
 var linux = ['ubuntu1604', 'ubuntu1804', 'centos7', 'rhel7'];
@@ -481,6 +482,9 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 <div class="stable-cugraph-source hidden">
     <pre># See <a href="https://github.com/rapidsai/cugraph/tree/master#build-from-source-and-contributing" _target="blank">cuGraph README</a> for build instructions</pre>
 </div>
+<div class="stable-cusignal-source hidden">
+    <pre># See <a href="https://github.com/rapidsai/cusignal/tree/master#dependencies" _target="blank">cuSignal README</a> for build instructions</pre>
+</div>
 <div class="stable-cuspatial-source hidden">
     <pre># See <a href="https://github.com/rapidsai/cuspatial/tree/master#clone-build-and-install-cuspatial" _target="blank">cuSpatial README</a> for build instructions</pre>
 </div>
@@ -523,6 +527,18 @@ conda install -c rapidsai -c nvidia -c conda-forge \
     -c defaults cugraph=0.13 python=3.7 cudatoolkit=10.2
 ```
 {: .stable-cugraph-conda-ubuntu1604-py37-cuda102 .stable-cugraph-conda-ubuntu1804-py37-cuda102 .stable-cugraph-conda-centos7-py37-cuda102 .hidden }
+
+```bash
+conda install -c rapidsai -c nvidia -c conda-forge \
+    -c defaults cusignal=0.13 python=3.6 cudatoolkit=10.2
+```
+{: .stable-cusignal-conda-ubuntu1604-py36-cuda102 .stable-cusignal-conda-ubuntu1804-py36-cuda102 .stable-cusignal-conda-centos7-py36-cuda102 .hidden }
+
+```bash
+conda install -c rapidsai -c nvidia -c conda-forge \
+    -c defaults cusignal=0.13 python=3.7 cudatoolkit=10.2
+```
+{: .stable-cusignal-conda-ubuntu1604-py37-cuda102 .stable-cusignal-conda-ubuntu1804-py37-cuda102 .stable-cusignal-conda-centos7-py37-cuda102 .hidden }
 
 ```bash
 conda install -c rapidsai -c nvidia -c conda-forge \
@@ -596,6 +612,18 @@ conda install -c rapidsai -c nvidia -c conda-forge \
     -c defaults cugraph=0.13 python=3.7 cudatoolkit=10.0
 ```
 {: .stable-cugraph-conda-ubuntu1604-py37-cuda100 .stable-cugraph-conda-ubuntu1804-py37-cuda100 .stable-cugraph-conda-centos7-py37-cuda100 .hidden }
+
+```bash
+conda install -c rapidsai -c nvidia -c conda-forge \
+    -c defaults cusignal=0.13 python=3.6 cudatoolkit=10.0
+```
+{: .stable-cusignal-conda-ubuntu1604-py36-cuda100 .stable-cusignal-conda-ubuntu1804-py36-cuda100 .stable-cusignal-conda-centos7-py36-cuda100 .hidden }
+
+```bash
+conda install -c rapidsai -c nvidia -c conda-forge \
+    -c defaults cusignal=0.13 python=3.7 cudatoolkit=10.0
+```
+{: .stable-cusignal-conda-ubuntu1604-py37-cuda100 .stable-cusignal-conda-ubuntu1804-py37-cuda100 .stable-cusignal-conda-centos7-py37-cuda100 .hidden }
 
 ```bash
 conda install -c rapidsai -c nvidia -c conda-forge \
@@ -681,6 +709,18 @@ conda install -c rapidsai -c nvidia -c conda-forge \
     -c defaults cugraph=0.13 python=3.7 cudatoolkit=10.1
 ```
 {: .stable-cugraph-conda-ubuntu1604-py37-cuda101 .stable-cugraph-conda-ubuntu1804-py37-cuda101 .stable-cugraph-conda-centos7-py37-cuda101 .hidden }
+
+```bash
+conda install -c rapidsai -c nvidia -c conda-forge \
+    -c defaults cusignal=0.13 python=3.6 cudatoolkit=10.1
+```
+{: .stable-cusignal-conda-ubuntu1604-py36-cuda101 .stable-cusignal-conda-ubuntu1804-py36-cuda101 .stable-cusignal-conda-centos7-py36-cuda101 .hidden }
+
+```bash
+conda install -c rapidsai -c nvidia -c conda-forge \
+    -c defaults cusignal=0.13 python=3.7 cudatoolkit=10.1
+```
+{: .stable-cusignal-conda-ubuntu1604-py37-cuda101 .stable-cusignal-conda-ubuntu1804-py37-cuda101 .stable-cusignal-conda-centos7-py37-cuda101 .hidden }
 
 ```bash
 conda install -c rapidsai -c nvidia -c conda-forge \
@@ -967,6 +1007,9 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 <div class="nightly-cugraph-source hidden">
     <pre># See <a href="https://github.com/rapidsai/cugraph#build-from-source-and-contributing" _target="blank">cuGraph README</a> for build instructions</pre>
 </div>
+<div class="stable-cusignal-source hidden">
+    <pre># See <a href="https://github.com/rapidsai/cusignal#dependencies" _target="blank">cuSignal README</a> for build instructions</pre>
+</div>
 <div class="nightly-cuspatial-source hidden">
     <pre># See <a href="https://github.com/rapidsai/cuspatial#clone-build-and-install-cuspatial" _target="blank">cuSpatial README</a> for build instructions</pre>
 </div>
@@ -1009,6 +1052,18 @@ conda install -c rapidsai-nightly -c nvidia -c conda-forge \
     -c defaults cugraph=0.14 python=3.7 cudatoolkit=10.2
 ```
 {: .nightly-cugraph-conda-ubuntu1604-py37-cuda102 .nightly-cugraph-conda-ubuntu1804-py37-cuda102 .nightly-cugraph-conda-centos7-py37-cuda102 .hidden }
+
+```bash
+conda install -c rapidsai-nightly -c nvidia -c conda-forge \
+    -c defaults cusignal=0.14 python=3.6 cudatoolkit=10.2
+```
+{: .nightly-cusignal-conda-ubuntu1604-py36-cuda102 .nightly-cusignal-conda-ubuntu1804-py36-cuda102 .nightly-cusignal-conda-centos7-py36-cuda102 .hidden }
+
+```bash
+conda install -c rapidsai-nightly -c nvidia -c conda-forge \
+    -c defaults cusignal=0.14 python=3.7 cudatoolkit=10.2
+```
+{: .nightly-cusignal-conda-ubuntu1604-py37-cuda102 .nightly-cusignal-conda-ubuntu1804-py37-cuda102 .nightly-cusignal-conda-centos7-py37-cuda102 .hidden }
 
 ```bash
 conda install -c rapidsai-nightly -c nvidia -c conda-forge \
@@ -1082,6 +1137,18 @@ conda install -c rapidsai-nightly -c nvidia -c conda-forge \
     -c defaults cugraph=0.14 python=3.7 cudatoolkit=10.0
 ```
 {: .nightly-cugraph-conda-ubuntu1604-py37-cuda100 .nightly-cugraph-conda-ubuntu1804-py37-cuda100 .nightly-cugraph-conda-centos7-py37-cuda100 .hidden }
+
+```bash
+conda install -c rapidsai-nightly -c nvidia -c conda-forge \
+    -c defaults cusignal=0.14 python=3.6 cudatoolkit=10.0
+```
+{: .nightly-cusignal-conda-ubuntu1604-py36-cuda100 .nightly-cusignal-conda-ubuntu1804-py36-cuda100 .nightly-cusignal-conda-centos7-py36-cuda100 .hidden }
+
+```bash
+conda install -c rapidsai-nightly -c nvidia -c conda-forge \
+    -c defaults cusignal=0.14 python=3.7 cudatoolkit=10.0
+```
+{: .nightly-cusignal-conda-ubuntu1604-py37-cuda100 .nightly-cusignal-conda-ubuntu1804-py37-cuda100 .nightly-cusignal-conda-centos7-py37-cuda100 .hidden }
 
 ```bash
 conda install -c rapidsai-nightly -c nvidia -c conda-forge \
@@ -1167,6 +1234,18 @@ conda install -c rapidsai-nightly -c nvidia -c conda-forge \
     -c defaults cugraph=0.14 python=3.7 cudatoolkit=10.1
 ```
 {: .nightly-cugraph-conda-ubuntu1604-py37-cuda101 .nightly-cugraph-conda-ubuntu1804-py37-cuda101 .nightly-cugraph-conda-centos7-py37-cuda101 .hidden }
+
+```bash
+conda install -c rapidsai-nightly -c nvidia -c conda-forge \
+    -c defaults cusignal=0.14 python=3.6 cudatoolkit=10.0
+```
+{: .nightly-cusignal-conda-ubuntu1604-py36-cuda101 .nightly-cusignal-conda-ubuntu1804-py36-cuda101 .nightly-cusignal-conda-centos7-py36-cuda101 .hidden }
+
+```bash
+conda install -c rapidsai-nightly -c nvidia -c conda-forge \
+    -c defaults cusignal=0.14 python=3.7 cudatoolkit=10.0
+```
+{: .nightly-cusignal-conda-ubuntu1604-py37-cuda101 .nightly-cusignal-conda-ubuntu1804-py37-cuda101 .nightly-cusignal-conda-centos7-py37-cuda101 .hidden }
 
 ```bash
 conda install -c rapidsai-nightly -c nvidia -c conda-forge \
