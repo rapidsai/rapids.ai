@@ -775,6 +775,12 @@ a.blue-btn:hover,
     transition: all 0.3s ease-in-out;
 }
 
+.selector .options .note code {
+    background: #e3e3e3;
+    color: #000000;
+    padding: 0.2em;
+}
+
 .selector .options .option-blank {
     color: white;
     flex: 1 1;
