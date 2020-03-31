@@ -65,10 +65,16 @@
                     <div class='option-label'></div>
                     <div class='option-blank'>
                         <span id='rhel7-conda-note' class='hidden option-note'>
-                            <i class="fas fa-info-circle text-orange"></i> <b>NOTE:</b> RHEL 7 <code>conda</code> support is provided by builds and tests on CentOS 7.<br/>The same <code>conda</code> install methods should work with <code>gcc >=7.3</code> and the correct NVIDIA and CUDA drivers.
+                            <i class="fas fa-exclamation-triangle text-orange"></i> <b>NOTE:</b> RHEL 7 <code>conda</code> support is provided by builds and tests on CentOS 7.<br/>The same <code>conda</code> install methods should work with <code>gcc >=7.3</code> and the correct NVIDIA and CUDA drivers.
                         </span>
                         <span id='rhel7-source-note' class='hidden option-note'>
-                            <i class="fas fa-info-circle text-orange"></i> <b>NOTE:</b> RHEL 7 from source build support is provided by following the build instructions for CentOS 7.<br/>The same methods should work with <code>gcc >=7.3</code> and the correct NVIDIA and CUDA drivers.
+                            <i class="fas fa-exclamation-triangle text-orange"></i> <b>NOTE:</b> RHEL 7 from source build support is provided by following the build instructions for CentOS 7.<br/>The same methods should work with <code>gcc >=7.3</code> and the correct NVIDIA and CUDA drivers.
+                        </span>
+                        <span id='linux-conda-note' class='hidden option-note'>
+                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> Ubuntu 16.04/18.04 & CentOS 7 use the same <code>conda install</code> commands.
+                        </span>
+                        <span id='linux-source-note' class='hidden option-note'>
+                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> Ubuntu 16.04/18.04 & CentOS 7 use the same from source build instructions.
                         </span>
                     </div>
                 </div>
@@ -156,9 +162,11 @@ function processClick(options, click, category) {
         selections[category] = click.id;
     }
 
-    // Hide cuxfilter notes
+    // Hide linux/rhel notes
     $("#rhel7-conda-note").addClass("hidden");
     $("#rhel7-source-note").addClass("hidden");
+    $("#linux-conda-note").addClass("hidden");
+    $("#linux-source-note").addClass("hidden");
 
     if (selections['method'] == 'conda') {
         // Handle conda requests
@@ -166,7 +174,8 @@ function processClick(options, click, category) {
             // Display RHEL note
             $("#rhel7-conda-note").removeClass("hidden");
         } else {
-            $("#ubuntu1604, #ubuntu1804, #centos7").addClass("active");
+            // Display linux note
+            $("#linux-conda-note").removeClass("hidden");
         }
     } else if (selections['method'] == 'docker') {
         // Handle docker requests
@@ -188,7 +197,8 @@ function processClick(options, click, category) {
             // Display RHEL note
             $("#rhel7-source-note").removeClass("hidden");
         } else {
-            $("#ubuntu1604, #ubuntu1804, #centos7").addClass("active");
+            // Display linux note
+            $("#linux-source-note").removeClass("hidden");
         }
         $(python_opts).removeClass("active");
         $(cuda_opts).removeClass("active");
