@@ -765,6 +765,7 @@ a.blue-btn:hover,
     padding: 0.3em;
     cursor: pointer;
     line-height: 1.5em;
+    box-shadow: 2px 2px 2px rgba(10, 10, 10, 0.4);
 }
 
 .selector .options .option:hover, .selector .options .option.active:hover {
