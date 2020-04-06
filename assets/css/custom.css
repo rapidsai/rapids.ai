@@ -19,11 +19,10 @@ pre {
     background-color: #efefef;
     padding: 1em;
     border-top: 2px solid #720dff;
-    white-space: pre-wrap;
 }
 
 code {
-    word-break: break-all;
+    word-break: break-word;
 }
 
 /* pure font overwrite */
@@ -851,6 +850,19 @@ a.blue-btn:hover,
     width: 100%;
 }
 
+.selector-buttons {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.selector .context {
+    display: none;
+}
+
+.selector .option.active .fas {
+    color: #3c3c3c;
+}
+
 .selector .options div {
     display: flex;
     flex-direction: row;
@@ -873,6 +885,21 @@ a.blue-btn:hover,
     padding: 0.3em;
     cursor: pointer;
     line-height: 1.5em;
+    box-shadow: 2px 2px 2px rgba(10, 10, 10, 0.4);
+}
+
+.selector .options .option:hover, .selector .options .option.active:hover {
+    background: #ffb500;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.selector .options .note code {
+    background: #e3e3e3;
+    color: #000000;
+    padding: 0.2em;
 }
 
 .selector .options .option-blank {
@@ -880,12 +907,16 @@ a.blue-btn:hover,
     flex: 1 1;
     margin: 0.2em;
     padding: 0.3em;
-    cursor: none;
     line-height: 1.5em;
 }
 
 .selector .options .option-blank span {
     margin: auto;
+}
+
+.selector .options .note .option-blank {
+    padding: 0 1em;
+    text-align: center;
 }
 
 i.fa-up-6 {
@@ -896,6 +927,18 @@ i.fa-up-6 {
 i.fa-down-6 {
     position: relative;
     top: 6px;
+}
+.selector-buttons {
+    text-align: center;
+    margin-top: 1em;
+}
+
+.selector .context {
+    display: none;
+}
+
+.selector .option.active .fas {
+    color: #3c3c3c;
 }
 
 .selector .options .option .svg-inline--fa {
@@ -916,7 +959,7 @@ i.fa-down-6 {
 }
 
 .selector .options .disabled {
-    background: #a785e7;
+    background: #a785e7 !important;
     color: #706880;
     cursor: not-allowed;
 }
@@ -962,10 +1005,6 @@ a.blue-btn,
     /* Non-prefixed version, currently supported by Chrome and Opera */
 }
 
-.selector-buttons {
-    text-align: center;
-    margin-top: 1em;
-}
 
 /* __________________________________________________________________ */
 /* blog posts */
@@ -1173,17 +1212,39 @@ i.fab {
 /* 568px small */
 @media only screen and (max-width: 35.5em) {
 
-    .selector .options .option-label {
+    /* selector */
+
+    .selector .options .option-label, .selector .cmd .cmd-label {
         width: 5em;
-        font-size: 0.6em;
-        margin-top: 0.5em;
     }
 
-    .selector .options .option .option-blank {
+    .selector .options .option, .selector .options .option-blank  {
+        font-size: 0.8em;
+    }
+
+    .selector .options div, .selector .cmd {
+        display: flow-root;
+    }
+
+    .selector .cmd-box {
+        width: 100% !important;
+    }
+
+    .selector .preferred {
+        display: none !important;
+    }
+
+    .selector pre {
+        padding: 0.5em;
+        font-size: 0.7em;
+    }
+
+    .selector .context {
+        display: block;
         font-size: 0.9em;
+        font-weight: 600;
+        padding-left: 1.5em;
     }
-
-
 }
 
 /* 768px med */
@@ -1336,7 +1397,44 @@ i.fab {
         transform: translate(-50%)
     }
 
+    /* selector */
+
+    .selector .options .option-label {
+        width: 5.5em;
+        font-size: 0.8em;
+        margin-top: 0.5em;
+    }
+
+    .selector .cmd .cmd-label {
+        width: 6em;
+        font-size: 0.8em;
+        margin-top: 1.5em;
+    }
+
+    .cmd-box {
+        cursor: text;
+        overflow: auto;
+        width: calc(100%-6em);
+    }
+
+    .selector .options .option, .selector .options .option-blank, .selector pre  {
+        font-size: 0.8em !important;
+    }
+
+    .selector .options .note .option-blank {
+        padding: 0 1em;
+        text-align: center;
+    }
+
 }
 
 /* 1024 large */
-@media only screen and (max-width: 64em)) {}
+@media only screen and (max-width: 64em) {
+
+    /* selector */
+
+    .selector .options .option, .selector .options .option-blank, .selector pre  {
+        font-size: 0.9em;
+    }
+}
+

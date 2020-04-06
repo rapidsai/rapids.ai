@@ -12,8 +12,8 @@ name: index # added to fix issue with nav bar not highlighting index page
 {: .section-title-full }
 
 {% capture about_top_left %}
-## <i class="fas fa-info"></i> Accelerated Data Science
-The RAPIDS suite of open source software libraries gives you the freedom to execute end-to-end data science and analytics pipelines entirely on GPUs. <br> **[Learn more <i class="fas fa-angle-double-right"></i>](about.html)**
+## <i class="fas fa-info-circle"></i> Accelerated Data Science
+The RAPIDS suite of open source software libraries gives you the freedom to execute end-to-end data science and analytics pipelines entirely on GPUs. <br> **[Learn more about RAPIDS <i class="fas fa-angle-double-right"></i>](about.html)**
 {% endcapture %}
 
 {% capture about_top_middle %}
@@ -23,22 +23,22 @@ Seamlessly scale from GPU workstations to multi-GPU servers and multi-node clust
 
 {% capture about_top_right %}
 ## <i class="fab fa-python"></i> Python Integration
-Accelerate your Python data science toolchain with minimal code changes and no new tools to learn.
+Accelerate your Python data science toolchain with minimal code changes and no new tools to learn. <br> **[Learn more about our libraries <i class="fas fa-angle-double-right"></i>](#libraries)**
 {% endcapture %}
 
 {% capture about_bottom_left %}
 ## <i class="fas fa-bullseye"></i> Top Model Accuracy
-Increase machine learning model accuracy by iterating on models faster and deploying them more frequently.
+Increase machine learning model accuracy by iterating on models faster and deploying them more frequently. <br> **[Learn more about deployment <i class="fas fa-angle-double-right"></i>](start.html)**
 {% endcapture %}
 
 {% capture about_bottom_middle %}
 ## <i class="far fa-clock"></i> Reduced Training Time
-Drastically improve your productivity with more interactive data science. <br> **[Learn more about XGBoost <i class="fas fa-angle-double-right"></i>](xgboost.html)**
+Drastically improve your productivity with more interactive data science tools like XGBoost. <br> **[Learn more about XGBoost <i class="fas fa-angle-double-right"></i>](xgboost.html)**
 {% endcapture %}
 
 {% capture about_bottom_right %}
 ## <i class="fas fa-code-branch"></i> Open Source
-RAPIDS is an open source project. Supported by NVIDIA, it also relies on numba, apache arrow, and many more open source projects. <br> **[Learn more <i class="fas fa-angle-double-right"></i>](community.html)**
+RAPIDS is an open source project. Supported by NVIDIA, it also relies on numba, apache arrow, and many more open source projects. <br> **[Learn more about our projects <i class="fas fa-angle-double-right"></i>](community.html)**
 {% endcapture %}
 
 {% include section-double-thirds.html 
@@ -135,12 +135,12 @@ A second Github repository with our extended collection of notebook examples. <b
 {% capture com_left %}
 # RAPID Development
 {: .section-title-halfs}
-
 RAPIDS is committed to open source. We strive for a **[6 week release schedule](https://docs.rapids.ai/maintainers){: target="_blank"}**, below is a generalized schedule with some highlighted items of the release. Learn more on our **[Road To 1.0 post <i class="fas fa-angle-double-right"></i>](https://medium.com/rapids-ai/the-road-to-1-0-building-for-the-long-haul-657ae1afdfd6){: target="_blank"}**
+
 {% endcapture %}
 
 {% capture com_right %}
-## <i class="fas fa-code"></i> RAPIDS APIS and Libraries
+## <i class="fas fa-code" id="libraries"></i> RAPIDS APIS and Libraries
 {: .section-subtitle-top-1}
 
 RAPIDS is open source licensed under Apache 2.0, spanning multiple projects that range from GPU dataframes to GPU accelerated ML algorithms. Its also provides native `array_interface` support, allowing Apache Arrow data to be pushed to deep learning frameworks. <br> **[Learn more <i class="fas fa-angle-double-right"></i>](about.html)**
@@ -206,7 +206,16 @@ cuML is a suite of libraries that implement machine learning algorithms and math
 cuGraph is a GPU accelerated graph analytics library, with functionality like **[NetworkX](https://networkx.github.io/){: target="_blank"}**, which is seamlessly integrated into the RAPIDS data science platform.
 
 {% endcapture %}
-{% capture lib3_left %}
+{% capture lib3_left %} 
+## <i class="fas fa-terminal"></i> cuSginal <span class="api-tag">API</span>
+
+**[GitHub](https://github.com/rapidsai/cusignal){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cusignal/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cusignal/blob/master/CHANGELOG.md){: target="_blank"}**
+{: .no-tb-margins }
+
+cuSignal is a GPU accelerated signal processing library built around a **[SciPy Signal-like](https://docs.scipy.org/doc/scipy/reference/signal.html){: target="_blank"}** API, CuPy, and custom Numba and CuPy CUDA kernels. cuSignal is written exclusively in Python and demonstrates GPU speeds without a C++ software layer.
+
+{% endcapture %}
+{% capture lib3_right %}
 ## <i class="fas fa-terminal"></i> cuSpatial <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cuspatial){: target="_blank"}** **/** **[Docs](https://github.com/rapidsai/cuspatial){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuspatial/blob/master/CHANGELOG.md){: target="_blank"}**
@@ -215,7 +224,24 @@ cuGraph is a GPU accelerated graph analytics library, with functionality like **
 cuSpatial is an efficient C++ library accelerated on GPUs with Python bindings to enable use by the data science community. cuSpatial provides significant GPU-acceleration to common spatial and spatiotemporal operations such as point-in-polygon tests, distances between trajectories, and trajectory clustering when compared to CPU-based implementations. 
 
 {% endcapture %}
-{% capture lib3_right %}
+{% capture lib4_left %} 
+## <i class="fas fa-terminal"></i> cuxfilter <span class="api-tag">API</span>
+
+**[GitHub](https://github.com/rapidsai/cuxfilter){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cuxfilter/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuxfilter/blob/master/CHANGELOG.md){: target="_blank"}**
+{: .no-tb-margins }
+
+cuxfilter is a framework to connect web visualizations to GPU accelerated crossfiltering. Inspired by the javascript version of the **[original](https://github.com/crossfilter/crossfilter){: target="_blank"}**, it enables interactive and super fast multi-dimensional filtering of 100 million+ row tabular datasets via **[cuDF](https://github.com/rapidsai/cudf){: target="_blank"}**.
+
+{% endcapture %}
+{% capture lib4_right %} 
+## <i class="fas fa-terminal"></i> CLX <span class="api-tag">API</span>
+
+**[GitHub](https://github.com/rapidsai/clx){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/clx/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/clx/blob/master/CHANGELOG.md){: target="_blank"}**
+{: .no-tb-margins }
+
+Cyber Log Accelerators (CLX), also pronounced "clicks", provides a collection of RAPIDS examples for security analysts, data scientists, and engineers to quickly get started applying RAPIDS and GPU acceleration to real-world cybersecurity use cases.
+{% endcapture %}
+{% capture lib5_left %}
 ## <i class="fas fa-terminal"></i> nvStrings <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/nvstrings/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/master/CHANGELOG.md){: target="_blank"}**
@@ -224,7 +250,7 @@ cuSpatial is an efficient C++ library accelerated on GPUs with Python bindings t
 nvStrings, the Python bindings for **[cuStrings](https://github.com/rapidsai/cudf){: target="_blank"}**, provides a pandas-like API that will be familiar to data engineers & data scientists, so they can use it to easily accelerate their workflows without going into the details of CUDA programming.
 
 {% endcapture %}
-{% capture lib4_left %}
+{% capture lib5_right %}
 ## <i class="fas fa-terminal"></i> RMM <span class="lib-tag">LIB</span>
 
 **[GitHub](https://github.com/rapidsai/rmm){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/rmm/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/rmm/blob/master/CHANGELOG.md){: target="_blank"}**
@@ -233,7 +259,6 @@ nvStrings, the Python bindings for **[cuStrings](https://github.com/rapidsai/cud
 RAPIDS Memory Manager (RMM) is a central place for all device memory allocations in cuDF (C++ and Python) and other RAPIDS libraries. In addition, it is a replacement allocator for CUDA Device Memory (and CUDA Managed Memory) and a pool allocator to make CUDA device memory allocation / deallocation faster and asynchronous.
 
 {% endcapture %}
-{% capture lib4_right %} {% endcapture %}
 
 {% include section-halfs.html 
     background="background-purple" 
@@ -255,9 +280,15 @@ RAPIDS Memory Manager (RMM) is a central place for all device memory allocations
 %}
 {% include section-halfs.html 
     background="background-purple" 
-    padding-top="0em" padding-bottom="6em" 
+    padding-top="0em" padding-bottom="1em" 
     content-left-half=lib4_left
     content-right-half=lib4_right 
+%}
+{% include section-halfs.html 
+    background="background-purple" 
+    padding-top="0em" padding-bottom="6em" 
+    content-left-half=lib5_left
+    content-right-half=lib5_right
 %}
 {% include slopecap.html 
     background="background-purple" 
@@ -336,4 +367,3 @@ Coming soon: NVIDIA will be bringing RAPIDS to Apache Spark.
     button="GET STARTED"
     link="start.html"
 %}
-
