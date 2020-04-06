@@ -765,6 +765,21 @@ a.blue-btn:hover,
     padding: 0.3em;
     cursor: pointer;
     line-height: 1.5em;
+    box-shadow: 2px 2px 2px rgba(10, 10, 10, 0.4);
+}
+
+.selector .options .option:hover, .selector .options .option.active:hover {
+    background: #ffb500;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.selector .options .note code {
+    background: #e3e3e3;
+    color: #000000;
+    padding: 0.2em;
 }
 
 .selector .options .option-blank {
@@ -777,6 +792,11 @@ a.blue-btn:hover,
 
 .selector .options .option-blank span {
     margin: auto;
+}
+
+.selector .options .note .option-blank {
+    padding: 0 1em;
+    text-align: center;
 }
 
 i.fa-up-6 {
@@ -807,7 +827,7 @@ i.fa-down-6 {
 }
 
 .selector .options .disabled {
-    background: #a785e7;
+    background: #a785e7 !important;
     color: #706880;
     cursor: not-allowed;
 }
@@ -1250,6 +1270,11 @@ code.tag {
 
     .selector .options .option, .selector .options .option-blank, .selector pre  {
         font-size: 0.8em !important;
+    }
+
+    .selector .options .note .option-blank {
+        padding: 0 1em;
+        text-align: center;
     }
 
 }
