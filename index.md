@@ -167,8 +167,8 @@ RAPIDS is committed to open source. We strive for a **[6 week release schedule](
             stroke-width: 2px;
         }
         .cls-4 {
-            font-size: 16px;
-            font-family: Helvetica;
+            font-size: 15px;
+            font-family: sans-serif, Helvetica;
         }
         .cls-7 {
             fill: #fff;
