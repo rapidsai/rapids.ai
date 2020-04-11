@@ -135,7 +135,7 @@ Refer to our **[RAPIDS 0.7 Release Drops PIP Packages — and sticks with Co
 The copied Docker command above should auto-run a notebook server. If it does not, run the following command within the Docker container to launch the notebook server.
 
 ```bash
-bash /rapids/notebooks/utils/start-jupyter.sh
+bash /rapids/utils/start-jupyter.sh
 ```
 
 **NOTE:** This will run **[JupyterLab](https://jupyterlab.readthedocs.io/en/stable/){: target="_blank"}** on your host machine at port 8888.
