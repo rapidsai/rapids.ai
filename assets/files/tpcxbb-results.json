@@ -1,0 +1,157 @@
+{
+	"TCB": [
+		{
+			"query": "Q-1",
+			"rapids": 100,
+      "huawei": 20,
+      "description": "To build and train recommender systems, it is typical in retail and eCommerce industries to build data science pipelines for prediction. A workflow may use a basketing technique to determine which products are most frequently to be grouped together in a single sale. To run this query, a data scientist loads structured, transactional data into a table, performs data pre-processing like pairing, sorting, and grouping data to create a report. The pairs can later be grouped into clusters to provide recommendations.",
+      "workflows": ["Reccomenders", "Basketing"],
+      "link": "https://github.com/rapidsai/tpcx-bb/blob/master/tpcx-bb1.3.1/rapids-queries/q01/tpcx-bb-query-01.ipynb"
+		},
+		{
+			"query": "Q-2",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-3",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-4",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-5",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-6",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-7",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-8",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-9",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-10",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-11",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-12",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-13",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-14",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-15",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-16",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-17",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-18",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-19",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-20",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-21",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-22",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-23",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-24",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-25",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-26",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-27",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-28",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-29",
+			"rapids": 100,
+			"huawei": 20
+		},
+		{
+			"query": "Q-30",
+			"rapids": 100,
+			"huawei": 20
+		}
+	]
+}

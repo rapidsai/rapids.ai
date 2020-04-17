@@ -1,14 +1,12 @@
 ---
-title: "RAPIDS + TCP-XBB"
+title: "RAPIDS + TPC-XBB"
 description: "Learn How RAPIDS Performs on TPCx-BB"
 tagline: "Benchmarking RAPIDS with TPCx-BB"
 button_text: "TPC.org"
 button_link: "http://www.tpc.org/tpcx-bb/default.asp"
 layout: default
 ---
-
 ![TPCxbb]({{ site.baseurl }}{% link /assets/images/tpc-reg.gif %}){: .projects-logo}
-
 
 # TPCx-BB Benchmark Performance of RAPIDS
 {: .section-title-full}
@@ -25,6 +23,8 @@ Pandas, Numpy, and scikit-learn packages are efficient, intuitive, and widely tr
     padding-top="0em" padding-bottom="1em" 
     content-single=intro_content
 %}
+
+<div id="barChart"></div>
 
 
 {% capture yd_header %}
@@ -225,64 +225,42 @@ Today’s cybersecurity challenges are data science and engineering challenges. 
     slope="down" 
 %}
 
+<!-- Query Details Sections 30x -->
+<section class="background-white padding-top-2em padding-bottom-2em">
+    <div class="pure-g">
+       <div class="container-padding">
+           <div class="pure-u-1 pure-u-md-1-3">
+               <h4 class="query-title">Query 01</h4>
+               <div id="Q-1" class="query-num"></div>
+                
+               <p class="query-desc">To build and train recommender systems, it is typical in retail and eCommerce industries to build data science pipelines for prediction. A workflow may use a basketing technique to determine which products are most frequently to be grouped together in a single sale. To run this query, a data scientist loads structured, transactional data into a table, performs data pre-processing like pairing, sorting, and grouping data to create a report. The pairs can later be grouped into clusters to provide recommendations.  </p>
+                
+                <p class="query-wf">Reccomenders | Basketing</p>
+                <a href="https://github.com/rapidsai/tpcx-bb/blob/master/tpcx-bb1.3.1/rapids-queries/q01/tpcx-bb-query-01.ipynb" taget="_blank" class="query-link">Source Code</a>
+           </div>
+           <div class="pure-u-1 pure-u-md-1-3">
+            <h4 class="query-title">Query 01</h4>
+            <div id="Q-1" class="query-num"></div>
+             
+            <p class="query-desc">When implementing a “viewed together” sort of online store streaming data, a data scientist working in eCommerce may choose to session the dataset to find common product clusters during a given timeframe. This involves reconstructing a user’s browsing session to create a virtual timestamp and determine if the given product was viewed during that session. </p>
+             
+             <p class="query-wf">Sessioning</p>
+             <a href="https://github.com/rapidsai/tpcx-bb/blob/master/tpcx-bb1.3.1/rapids-queries/q02/tpcx-bb-query-02.ipynb" taget="_blank" class="query-link">Source Code</a>
+           </div>
+           <div class="pure-u-1 pure-u-md-1-3">
+            <h4 class="query-title">Query 01</h4>
+            <div id="Q-1" class="query-num"></div>
+             
+            <p class="query-desc">To build and train recommender systems, it is typical in retail and eCommerce industries to build data science pipelines for prediction. A workflow may use a basketing technique to determine which products are most frequently to be grouped together in a single sale. To run this query, a data scientist loads structured, transactional data into a table, performs data pre-processing like pairing, sorting, and grouping data to create a report. The pairs can later be grouped into clusters to provide recommendations.  </p>
+             
+             <p class="query-wf">Reccomenders | Basketing</p>
+             <a href="https://github.com/rapidsai/tpcx-bb/blob/master/tpcx-bb1.3.1/rapids-queries/q01/tpcx-bb-query-01.ipynb" taget="_blank" class="query-link">Source Code</a>
+           </div>
+       </div>
+   </div>
 
+</section>
 
-{% capture tik_single%}
-# Dask Libraries
-
-Dask provides advanced parallelism for data science, enabling performance at scale for popular Python tools. Below are the key libraries of Dask that make it unique. 
-{: .subtitle}
-
-{% endcapture %}
-{% capture tik_top_left %}
-## <i class="fas fa-dice-d20"></i> User Interfaces
-
-Dask collections, including DataFrame, Array, Delayed, and Futures, provide underlying parallel computing machinery to scale workloads. All come with a purpose-built set of parallel algorithms and programming style. <br> **[Learn more <i class="fas fa-angle-double-right"></i>](https://docs.dask.org/en/latest/user-interfaces.html){: target="_blank"}** 
-
-{% endcapture %}
-
-{% capture tik_top_mid %}
-## <i class="fas fa-wave-square"></i>  Machine Learning
-
-Dask-ML provides scalable machine learning in Python using Dask with popular machine learning libraries, such as scikit-learn. <br> **[Learn more <i class="fas fa-angle-double-right"></i>](https://ml.dask.org){: target="_blank"}** 
-{% endcapture %}
-{% capture tik_top_right %}
-## <i class="fas fa-random"></i> Parallel Execution
-
-Dask uses task graphs to optimize and execute work in parallel. After Dask generates task graphs, it executes them on parallel hardware with a distributed task scheduler. <br> **[Learn more <i class="fas fa-angle-double-right"></i>](https://docs.dask.org/en/latest/scheduling.html){: target="_blank"}** 
-
-{% endcapture %}
-
-{% capture tik_bottom_left %}
-## <i class="fas fa-cloud-upload-alt"></i> Deployment
-
-Dask integrates into existing cluster management tooling like Kubernetes and YARN (Hadoop/Spark) and HPC schedulers like SLURM, PBS, and LSF to enable scalable workloads to evolve, reducing the burst workloads of computations by 10X.<br> **[Learn more <i class="fas fa-angle-double-right"></i>](http://docs.dask.org/en/latest/setup.html){: target="_blank"}** 
-
-{% endcapture %}
-
-{% capture tik_bottom_mid %}
-## <i class="fas fa-chart-line"></i> Visual Interactivity
-The Dask interactive dashboard gives real-time feedback during computations, pointing users to hot spots in their code. This helps them use their hardware more effectively to customize load balancing, communications, thread-level profiling, and more. <br> **[Learn more <i class="fas fa-angle-double-right"></i>](http://docs.dask.org/en/latest/understanding-performance.html){: target="_blank"}** 
-
-{% endcapture %}
-{% capture tik_bottom_right %}
- 
-{% endcapture %}
-{% include section-single.html
-    background="background-white" 
-    padding-top="5em" padding-bottom="0em" 
-    content-single=tik_single
-%}
-{% include section-double-thirds.html 
-    background="background-white" 
-    padding-top="0em" padding-bottom="10em" 
-    content-top-left-third=tik_top_left 
-    content-top-middle-third=tik_top_mid
-    content-top-right-third=tik_top_right 
-    content-bottom-left-third=tik_bottom_left 
-    content-bottom-middle-third=tik_bottom_mid
-    content-bottom-right-third=tik_bottom_right 
-%}
 
 {% capture end_bottom %}
 # Get Started with Dask
@@ -304,3 +282,132 @@ The Dask interactive dashboard gives real-time feedback during computations, poi
    background="background-darkpurple" 
 %}
 
+
+<!-- Bar Chart Results -->
+<script src="https://d3js.org/d3.v5.min.js"></script>
+<script>
+    /* grouped bar chart based on https://observablehq.com/@d3/grouped-bar-chart */
+    filepath = 'assets/files/tpcxbb-results.json'
+    d3.json(filepath).then(function(data) {
+        console.log(data);
+        
+        buildBar(data.TCB, '#barChart')
+        
+        /* resize */
+        window.addEventListener("resize", ()=>{
+            
+            buildBar(data.TCB, '#barChart')
+
+        });
+
+    });
+
+    function buildDetails (data){
+        // format
+    }
+
+    function buildBar (data, id){
+       
+        width = $(id).width();
+        height = 300;
+        margin = ({top: 20, right: 60, bottom: 20, left: 60})
+    
+        keys = ['rapids','huawei']
+        groupKey = 'query'
+
+        yAxis = g => g
+            .attr("transform", `translate(${margin.left},0)`)
+            .call(d3.axisRight(y)
+                .tickSize(width - margin.left - margin.right))
+            .call(g => g.select(".domain").remove())
+            .call(g => g.selectAll(".tick:not(:first-of-type) line")
+                .attr("stroke-opacity", 0.15)
+                .attr("stroke-dasharray", "2,2"))
+            .call(g => g.selectAll(".tick text")
+                .attr("x", -20)
+                .attr("dy", -4))
+
+
+        xAxis = g => g
+            .attr("transform", `translate(0,${height - margin.bottom})`)
+            .call(d3.axisBottom(x0).tickSizeOuter(0))
+            .call(g => g.select(".domain").remove())
+
+        color = d3.scaleOrdinal()
+            .range(["#98abc5", "#8a89a6"])
+
+        y = d3.scaleLinear()
+            .domain([0, d3.max(data, d => d3.max(keys, key => d[key])) + 10]).nice()
+            .rangeRound([height - margin.bottom, margin.top])
+        
+        x0 = d3.scaleBand()
+            .domain(data.map(d => d[groupKey]))
+            .rangeRound([margin.left, width - margin.right])
+            .paddingInner(0.3)
+
+        x1 = d3.scaleBand()
+            .domain(keys)
+            .rangeRound([0, x0.bandwidth()])
+            .padding(0.1)
+
+        legend = svg => {
+            const g = svg
+                .attr("transform", `translate(${width},0)`)
+                .attr("text-anchor", "end")
+                .attr("font-family", "sans-serif")
+                .attr("font-size", 10)
+                .selectAll("g")
+                .data(color.domain().slice().reverse())
+                .join("g")
+                .attr("transform", (d, i) => `translate(0,${i * 20})`);
+
+            g.append("rect")
+                .attr("x", -19)
+                .attr("width", 19)
+                .attr("height", 19)
+                .attr("fill", color);
+
+            g.append("text")
+                .attr("x", -24)
+                .attr("y", 9.5)
+                .attr("dy", "0.35em")
+                .text(d => d);
+            }
+            
+            /* lazy clear */
+            d3.select(id).html("")
+
+            svg = d3.select(id).append("svg")
+                .attr("width", width + margin.left + margin.right)
+                .attr("height", height + margin.top + margin.bottom)
+
+            svg.append("g")
+                    .selectAll("g")
+                    .data(data)
+                    .join("g")
+                    .attr("transform", d => `translate(${x0(d[groupKey])},0)`)
+                    .selectAll("rect")
+                    .data(d => keys.map(key => ({key, value: d[key], query: d.query})))
+                    .join("rect")
+                    .attr("x", d => x1(d.key))
+                    .attr("y", d => y(d.value))
+                    .attr("width", x1.bandwidth())
+                    .attr("height", d => y(0) - y(d.value))
+                    .attr("fill", d => color(d.key))
+                    .on("click",(d)=>{
+                        window.location.href='#'+d.query
+                    })
+
+                svg.append("g")
+                    .call(xAxis);
+
+                svg.append("g")
+                    .call(yAxis); 
+
+                svg.append("g")
+                    .call(legend);
+        
+    }
+
+
+</script>
