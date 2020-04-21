@@ -52,16 +52,16 @@ Content text goes here. <br> **[Learn more on our Plot.ly page <i class="fa fa-a
 {% endcapture %}
 {% capture com_mid_bottom %}
 ![Ray]({{ site.baseurl }}{% link /assets/images/ray-logo.png %}){: .half-image-center}
-## <i class="fas fa-code-branch"></i> RAPIDS + CSPs
+## <i class="fas fa-code-branch"></i> RAPIDS + HPO
 
-Content text goes here. <br> **[Learn more on our Ray page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](ray.html)**
+Content text goes here. <br> **[Learn more on our HPO page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](hpo.html)**
 
 {% endcapture %}
 {% capture com_right_bottom %}
- ![CSPS]({{ site.baseurl }}{% link /assets/images/placeholder-image.png %}){: .half-image-center}
-## <i class="fas fa-code-branch"></i> RAPIDS + CSPs
+![TPC]({{ site.baseurl }}{% link /assets/images/tpc-reg.gif %}){: .half-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS TPCx-BB Benchmark
 
-Content text goes here. <br> **[Learn more on our CSP page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](csp.html)**
+Content text goes here. <br> **[Learn more on our TPCx-BB page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](TPCx-BB.html)**
 
 {% endcapture %}
 
@@ -76,10 +76,6 @@ NVIDIA will be bringing RAPIDS to Apache Spark.
 {% endcapture %}
 
 {% capture prj_mid %}
-![TPC]({{ site.baseurl }}{% link /assets/images/tpc-reg.gif %}){: .half-image-center}
-## <i class="fas fa-code-branch"></i> RAPIDS TPCx-BB Benchmark
-
-Content text goes here. <br> **[Learn more on our TPCx-BB page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](TPCx-BB.html)**
 
 {% endcapture %}
 

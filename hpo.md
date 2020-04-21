@@ -1,17 +1,19 @@
 ---
-title: "RAPIDS + Ray"
-description: "Learn How to Use RAPIDS with Ray"
-tagline: "Use RAPIDS with content service providers"
-button_text: "Ray"
+title: "RAPIDS + HPO"
+description: "Learn How to Use RAPIDS with HPO"
+tagline: "Use RAPIDS with Hyper Parameter Optimization"
+button_text: "Get Started"
 button_link: "#"
 layout: default
 ---
 
-![Placeholder]({{ site.baseurl }}{% link /assets/images/ray-logo.png %}){: .projects-logo}
+![Placeholder]({{ site.baseurl }}{% link /assets/images/placeholder-image.png %}){: .projects-logo}
 
 
-# Use RAPIDS with Ray
+# Use RAPIDS with HPO
 {: .section-title-full}
+
+( RAY and Hyper Parameter Optimization )
 
 {% capture intro_content %}
 
@@ -28,7 +30,7 @@ Collaboratively administrate empowered markets via plug-and-play networks. Dynam
 
 
 {% capture yd_header %}
-# Title for Ray
+# Title for HPO
 {: .section-title-full}
 
 {% endcapture %}
@@ -100,7 +102,7 @@ Efficiently unleash cross-media information without cross-media value. **[Check 
 
 
 {% capture end_bottom %}
-# Get Started with Ray
+# Get Started with HPO
 {: .section-title-full .text-white}
 
 {% endcapture %}

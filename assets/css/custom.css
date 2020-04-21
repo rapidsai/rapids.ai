@@ -632,6 +632,11 @@ a h2:hover,
     transform: translate(-50%)
 }
 
+/* tpc barcharts */
+svg rect {
+    cursor: pointer;
+}
+
 /* footer */
 .footer-cta-main {
     color: white;
