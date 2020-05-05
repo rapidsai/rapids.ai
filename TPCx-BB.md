@@ -232,7 +232,7 @@ RAPIDS running on 18 NVIDIA DGX (144 GPUs) achieve a XX performance speedup acro
 {% endcapture %}
 {% include section-single.html
     background="background-white" 
-    padding-top="5em" padding-bottom="5em" 
+    padding-top="5em" padding-bottom="10em" 
     content-single=comp_single
 %}
 
@@ -398,6 +398,10 @@ The 30 queries represent fundamental data science workflows, in this case for a 
     slope="up" 
 %}
 
+<section id="query-details" class="background-white padding-top-10em padding-bottom-10em">
+
+</section>
+
 <!-- Query Details Sections 30x -->
 <section class="background-white padding-top-10em padding-bottom-10em">
     <div class="pure-g">
@@ -443,7 +447,7 @@ The 30 queries represent fundamental data science workflows, in this case for a 
 {% include slopecap.html 
     background="background-darkpurple" 
     position="top" 
-    slope="up" 
+    slope="down" 
 %}
 {% include section-single.html
     background="background-darkpurple" 
@@ -469,6 +473,8 @@ The 30 queries represent fundamental data science workflows, in this case for a 
         buildBar(data.TCB, '#results-1')
         buildBar(data.TCB, '#results-2')
         buildBar(data.TCB, '#results-3')
+
+        buildDetails(data.TCB)
         
         /* resize */
         window.addEventListener("resize", ()=>{
@@ -482,7 +488,34 @@ The 30 queries represent fundamental data science workflows, in this case for a 
     });
 
     function buildDetails (data){
-        // format
+
+        var test = data.map((d,i)=>{
+            console.log(i)
+
+            let n = 0
+
+            if( i % 3 == 0){
+                n = 'Row'
+
+            } else {
+                n = 'Item'
+            }
+
+
+            var test = `<div>
+                        <h1>test{`+ n +`}</h1>
+                        <p>text text</p>
+                        <div>more</div>
+                    </div>`
+            
+            return test
+
+        })
+        console.log(test)
+
+        $("#query-details").html(test)
+
+
     }
 
     function buildBar (data, id){
