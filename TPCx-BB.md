@@ -22,6 +22,7 @@ layout: default
 
 {% capture intro-content-right %}
 ## Why the Benchmark Matters
+{: .section-title-halfs}
 
 A modern data center also requires an investment in state-of-the-art storage, networking, orchestration, and accelerated software to meet the future demands of AI. Read about this vision here: **[Life After Hadoop blog.](https://towardsdatascience.com/life-after-hadoop-getting-data-science-to-work-for-your-business-c9ab6605733f){: target="_blank"}**
 
@@ -43,6 +44,22 @@ More efficient compute is required for at-scale data science in the enterprise. 
 
 {% endcapture %}
 
+{% capture sf1000-left %}
+## Why SF1000 Matters
+{: .section-title-halfs}
+
+SF1000 marks crossing over to what was once called “Big Data,” with a total data size of 1 TB.  These are tasks that take specialized infrastructure to execute, and the ability to draw actionable information out of data sets of this size on demand is relatively recent. It also suggests an organization of a size where data is increasingly critical to operating at optimal capacity. This is often when analysts will begin trading sophistication for performance. 
+
+{% endcapture %}
+
+{% capture sf10000-right %}
+## Why SF10000 Matters More
+{: .section-title-halfs}
+
+SF10000, a total data size of 10 TB, will present a considerable infrastructure challenge. Organizations with analytics tasks so large will also critically need to make data-driven decisions. However, minor iterations on queries become costly. Many analyses will collapse under their own weight and be infeasible to execute. And data this large will represent substantial investments in human capital and infrastructure to manage. 
+
+{% endcapture %}
+
 {% include section-halfs.html
     background="background-white" 
     padding-top="0em" padding-bottom="3em" 
@@ -51,12 +68,17 @@ More efficient compute is required for at-scale data science in the enterprise. 
 %}
 {% include section-thirds.html 
     background="background-white" 
-    padding-top="0em" padding-bottom="10em" 
+    padding-top="0em" padding-bottom="3em" 
     content-left-third=in_left
     content-middle-third=in_mid
     content-right-third=in_right
 %}
-
+{% include section-halfs.html
+    background="background-white" 
+    padding-top="0em" padding-bottom="5em" 
+    content-left-half=sf1000-left
+    content-right-half=sf10000-right
+%}
 
 {% capture start_single %}
 # RAPIDS TPCxBB Results
@@ -91,8 +113,15 @@ Scaling production level data. **[Learn more with our whitepaper <i class="fas f
     padding-top="3em" padding-bottom="0em" 
     content-single=start_single
 %}
-{% include section-thirds.html 
-    background="background-white" 
+
+<section class="padding-top-5em padding-bottom-5em background-gray">
+    <div class="container-padding">
+        <div id="results-1" class="full-image-center"></div>
+    </div>
+</section>
+
+{% include section-thirds.html  
+    background="background-gray" 
     padding-top="0em" padding-bottom="0em" 
     content-left-third=start_left
     content-middle-third=start_mid
@@ -102,17 +131,17 @@ Scaling production level data. **[Learn more with our whitepaper <i class="fas f
 {% capture contrib_single %}
 # Help Contribute
 
-The RAPIDS TPCx-BB benchmark is an active project and open collaboration with numerous RAPIDS community partners. These results are not possible without the RAPIDS ecosystem. While the initial results show significant improvements across all 30 queries, there are further optimizations and performance improvements to address **[Find out more about open issues <i class="fas fa-angle-double-right"></i>](#){: target="_blank"}** 
-{: .subtitle}
+The RAPIDS TPCx-BB benchmark is an active project and open collaboration with numerous RAPIDS community partners. These results are not possible without the RAPIDS ecosystem.
+{: .subtitle} 
 
 {% endcapture %}
 {% include section-single.html
     background="background-gray" 
-    padding-top="5em" padding-bottom="0em" 
+    padding-top="3em" padding-bottom="0em" 
     content-single=contrib_single
 %}
 
-<section class="container-logo-flex padding-top-0em padding-bottom-10em">
+<section class="container-logo-flex padding-top-0em padding-bottom-0em background-gray">
     <div class="logo-flex">
         <a href="https://arrow.apache.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/apache-arrow_Color.png %}" alt="Apache Arrow"> </a>
     </div>
@@ -136,83 +165,121 @@ The RAPIDS TPCx-BB benchmark is an active project and open collaboration with nu
     </div>
 </section>
 
+{% capture contribers_single %}
+While the initial results show significant improvements across all 30 queries, there are further optimizations and performance improvements to address.
+{: .subtitle} 
 
-{% capture dc_single %}
-# Data Center TCO 
+{% endcapture %}
+{% capture contrib_left %}
+## BlazingSQL
 
-Multiple compute, communication, networking, and storage accelerated hardware and software are integrated and optimized to achieve top benchmark performance. This combination of massively parallel compute ability, paired with lightning fast IO, network capabilities, and storage make the solution ideal for scale-out data science workloads.
-{: .subtitle}
+The team at BSQL has made monumental efforts to build out the SQL portions of the TPCxBB workflows involving SQL.
 
-[ TCO graphic? ]
+Help Contribute **[Learn more on GitHub <i class="fas fa-angle-double-right"></i>](#){: target="_blank"}**  
+Help Contribute **[Learn more on GitHub <i class="fas fa-angle-double-right"></i>](#){: target="_blank"}**  
 
 {% endcapture %}
 
-{% capture dc_left %}
-## <i class="far fa-microchip"></i> Compute
-The benchmark was run on a cluster of **[18 NVIDIA DGX-1s](https://www.nvidia.com/en-us/data-center/dgx-1/){: target="_blank"}** , each with **[8 NVIDIA V100 32GB GPUs](https://www.nvidia.com/en-us/data-center/v100/){: target="_blank"}**  with **[NVLink interconnect](https://www.nvidia.com/en-us/data-center/nvlink/){: target="_blank"}** .
+{% capture contrib_mid %}
+## Dask
+
+There are numerous open issues and requests to the Dask community to help speed up scheduling overhead and improve latencies. 
+
+Help Contribute **[Learn more on GitHub <i class="fas fa-angle-double-right"></i>](#){: target="_blank"}**  
+Help Contribute **[Learn more on GitHub <i class="fas fa-angle-double-right"></i>](#){: target="_blank"}**  
 
 {% endcapture %}
 
-{% capture dc_mid %}
-## <i class="far fa-network-wired"></i> Networking
-The massive compute ability of these nodes necessitated a high speed network and IO solution to keep data fed to each GPU and maximize GPU utilization. This was accomplished via 4x Infiniband 100Gb/s adapters per node connected through a **[Mellanox CS7520 switch](https://www.mellanox.com/products/infiniband-switches/CS7500){: target="_blank"}**.
+{% capture contrib_right %}
+## UCX 
+
+Content content content.
+
+Help Contribute **[Learn more on GitHub <i class="fas fa-angle-double-right"></i>](#){: target="_blank"}**  
+Help Contribute **[Learn more on GitHub <i class="fas fa-angle-double-right"></i>](#){: target="_blank"}**  
 
 {% endcapture %}
 
-{% capture dc_right %}
-## <i class="fal fa-database"></i> Storage
-High speed storage provided by [DESCRIBE WEKA] and MAGNUM GPU Direct storage.
+{% include section-single.html
+    background="background-gray" 
+    padding-top="0em" padding-bottom="0em" 
+    content-single=contribers_single
+%}
+{% include section-thirds.html 
+    background="background-gray" 
+    padding-top="0em" padding-bottom="5em" 
+    content-left-third=contrib_left
+    content-middle-third=contrib_mid
+    content-right-third=contrib_right
+%}
+{% include slopecap.html 
+    background="background-gray" 
+    position="bottom" 
+    slope="up" 
+%}
+
+
+{% capture perf_single %}
+# Squeezing Every Last Drop of Perf
+
+RAPIDS running on 18 NVIDIA DGX (144 GPUs) achieve a XX performance speedup across all TPCxBB queries over the top benchmark submission from Dell running Hortonworks on a cluster with 19 CPU-based nodes. This is one reason why Fortune 500s (including Walmart, Capital One, and Best Buy) are using the RAPIDS accelerator stack in at-scale production today. The RAPIDS accelerator software stack looks something like this
+
+[ Network Arch Graphic ] 
+
+{% endcapture %}
+{% include section-single.html
+    background="background-white" 
+    padding-top="5em" padding-bottom="10em" 
+    content-single=perf_single
+%}
+
+
+{% capture next_single %}
+# Next Steps and Future Work 
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua
 
 {% endcapture %}
 
-{% capture table_single %}
+{% capture next_left %}
+## IB, RDMA in Mellanox NICs
 
-| System Information                          | Dell PowerEdge R730/R730xd | NVIDIA DGX-1 (Max P)|
-|:--------------------------------------------|:-------------------|:-------------------|
-| Total System Cost                           | 439,187 USD       |
-| Performance                                 | 495.28 BBQpm@SF10000 |
-| Price/Performance                           | 886.75 USD per BBQpm@SF10000 |
-| TPC-Energy Metric                           | Not reported |
-| Availability Date                           | 05/13/17 |
-| DBMS Software (Big Data Software Framework) | Cloudera for Apache Hadoop (CDH) 5.9.0 |
-| Operating System                            | Red Hat Enterprise Linux Server 7.2 |
-| **Server Specific Information**             | Dell              | NVIDIA            |
-| CPU Type                                    | Intel Xeon E5 - 2690 v4 - 2.6 GHz |
-| Node Count                                  | 13 |
-| Total # of Processors                       | 26 |
-| Total # of Cores                            | 360 |                  
-| Total # of Threads                          |     |           
-| Cluster                                     | yes |           
-| Concurrent Streams                          | 2   |               
-| Storage Ratio                               | 36.08 |               
-| Memory Ratio                                | 3     |    
-| Load Test Time                              | 1.10 Hours  |                 
-| Power Test Time                             | 14.75 Hours |                  
-| Throughput Test Time                        | 24.64 Hours |             
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+
+{% endcapture %}
+
+{% capture next_mid %}
+## Ampere
+NCCL2 (NVIDIA collective communication library)
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
+
+{% endcapture %}
+
+{% capture next_right %}
+## Magnum I/O, GDS
+OpenUCX (an open-source point to point communication framework)
+
+Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat
 
 {% endcapture %}
 
 {% include slopecap.html 
     background="background-purple" 
     position="top" 
-    slope="up" 
+    slope="down" 
 %}
 {% include section-single.html
     background="background-purple" 
     padding-top="5em" padding-bottom="0em" 
-    content-single=dc_single
+    content-single=next_single
 %}
 {% include section-thirds.html 
     background="background-purple" 
-    padding-top="0em" padding-bottom="0em" 
-    content-left-third=dc_left
-    content-middle-third=dc_mid
-    content-right-third=dc_right
-%}
-{% include section-single.html
-    background="background-purple" 
     padding-top="5em" padding-bottom="10em" 
-    content-single=table_single
+    content-left-third=next_left
+    content-middle-third=next_mid
+    content-right-third=next_right
 %}
 {% include slopecap.html 
     background="background-purple" 
@@ -220,159 +287,52 @@ High speed storage provided by [DESCRIBE WEKA] and MAGNUM GPU Direct storage.
     slope="down" 
 %}
 
-<!-- compute -->
-{% capture comp_single %}
-# Squeezing Every Last Drop of Perf
-
-## COMPUTE
-RAPIDS running on 18 NVIDIA DGX (144 GPUs) achieve a XX performance speedup across all TPCxBB queries over the top benchmark submission from Dell running Hortonworks on a cluster with 19 CPU-based nodes. This is one reason why Fortune 500s (including Walmart, Capital One, and Best Buy) are using the RAPIDS accelerator stack in at-scale production today. The RAPIDS accelerator software stack looks something like this
-
-[ Graphic ] 
-
-{% endcapture %}
-{% include section-single.html
-    background="background-white" 
-    padding-top="5em" padding-bottom="10em" 
-    content-single=comp_single
-%}
-
-<!-- network results -->
-{% capture net_single %}
-## Networking 
-Infiniband and Remote Direct Memory Access (RDMA) allow GPUs to communicate directly with each other, across nodes, at up to 100Gb/s. The benefits of RDMA is critical for large, complex ETL workloads and ML training, providing up to a 20x benefit for distributed joins over PCIe GPU on systems without it. The RAPIDS TPCx-BB submission uses the latest compute and networking advances, including: 
-
-{% endcapture %}
-
-{% capture net_left %}
-## RDMA
-RDMA in Mellanox NICs
-
-{% endcapture %}
-
-{% capture net_mid %}
-## NCCL2
-NCCL2 (NVIDIA collective communication library)
-
-{% endcapture %}
-
-{% capture net_right %}
-## OpenUCX
-OpenUCX (an open-source point to point communication framework)
-
-{% endcapture %}
-
-{% capture netmore_single %}
-This improved networking and communication helps achieve an XXX performance increase over CPU-based communications with XXX networking.
-
-{% endcapture %}
-{% include section-single.html
-    background="background-white" 
-    padding-top="5em" padding-bottom="0em" 
-    content-single=net_single
-%}
-
-<section class="container-logo-flex padding-top-5em padding-bottom-5em">
-    <div id="results-1" class="full-image-center"></div>
-</section>
-
-{% include section-single.html
-    background="background-white" 
-    padding-top="5em" padding-bottom="0em" 
-    content-single=netmore_single
-%}
-<section class="container-logo-flex padding-top-5em padding-bottom-5em">
-    <div id="results-2" class="full-image-center"></div>
-</section>
-
-{% include section-thirds.html 
-    background="background-white" 
-    padding-top="5em" padding-bottom="5em" 
-    content-left-third=net_left
-    content-middle-third=net_mid
-    content-right-third=net_right
-%}
-
-<!-- storage results -->
-{% capture store_single %}
-#  Storage
-
-Legacy architectures placed a “bounce buffer” in the CPU’s system memory between storage and GPU computing, where copies of data would be used to keep applications on GPUs fed. GPUDirect Storage allows both NVMe and NVMe over Fabric (NVMe-oF) to read and write data directly to the GPU, bypassing the CPU and system memory. 
-{: .subtitle}
-
-{% endcapture %}
-
-{% capture store_left %}
-## Fully Utilizes GPU
-With GPUDirect Storage, the GPU not only becomes the fastest computing element, but also the one with the highest I/O bandwidth.
-
-{% endcapture %}
-
-{% capture store_mid %}
-## Free System Resources
-Now that all of the computation happens on the GPU, this frees up the CPU and system memory for other tasks.
-{% endcapture %}
-
-{% capture store_right %}
-## Improves System Capacity
-GPU Direct Storage unifies GPUs and NVMe to improve system capacity to petabyte scale and achieves a TPCx-BB benchmark result of XXX.
-
-{% endcapture %}
-
-{% include section-single.html
-    background="background-white" 
-    padding-top="5em" padding-bottom="0em" 
-    content-single=store_single
-%}
-
-<section class="container-logo-flex padding-top-5em padding-bottom-5em">
-    <div id="results-3" class="full-image-center"></div>
-</section>
-
-{% include section-thirds.html 
-    background="background-white" 
-    padding-top="5em" padding-bottom="5em" 
-    content-left-third=store_left
-    content-middle-third=store_mid
-    content-right-third=store_right
-%}
-
 
 <!-- workflows -->
 {% capture wf_single %}
+<div id="workflow"></div>
 # Detailed Performance Benchmarks by Workflow by Query
 
-The 30 queries represent fundamental data science workflows, in this case for a retailer with a brick and mortar and online presence. Common workflows include Big Data analytics use cases like basketing, sessionizing, inventory management, price analysis, sales analysis, recommendation systems, customer segmentation, and sentiment analysis. 
+The 30 queries represent fundamental data science workflows, in this case for a retailer with a brick and mortar and online presence. Common workflows include Big Data analytics use cases like basketing, sessionizing, inventory management, price analysis, sales analysis, recommendation systems, customer segmentation, and sentiment analysis. **[Find documentation, code, and readme here](https://github.com/rapidsai/tpcx-bb/tree/master/tpcx-bb1.3.1/rapids-queries){: target="_blank"}** . 
 {: .subtitle}
 
 {% endcapture %}
 
 {% capture wf_left %}
 ## <i class="far fa-funnel-dollar"></i> Recommenders
-[Query 1](#Q-1), [Query 20](#Q-20), [Query 30](#Q-30)
+Systems that recommend goods to customers that customers are likely to buy, typically on a website: 
+[Query 1](#Q1), [Query 5](#Q5), [Query 25](#Q25), [Query 29](#Q29).
 
 ## <i class="far fa-browser"></i> Sessionizing
-[Query 1](#Q-1), [Query 20](#Q-20), [Query 30](#Q-30)
+How a certain kind of customer interacts with a website during a visit; what their browsing/shopping behavior looks like:
+[Query 2](#Q2), [Query 3](#Q3), [Query 4](#Q4).
 
 ## <i class="far fa-cart-arrow-down"></i> Basketing
-[Query 1](#Q-1), [Query 20](#Q-20), [Query 30](#Q-30)
+How are items purchased together, do goods appear in similar “baskets” (customer orders):
+[Query 1](#Q1), [Query 30](#Q30)
 
 ## <i class="far fa-barcode-alt"></i> Price Analysis
-[Query 1](#Q-1), [Query 20](#Q-20), [Query 30](#Q-30)
+How customer behavior changes in response to changes in price:
+[Query 16](#Q16), [Query 17](#Q17), [Query 22](#Q22), [Query 23](#Q23), [Query 24](#Q24).
 
 {% endcapture %}
 
 {% capture wf_right %}
 ## <i class="fal fa-analytics"></i> Sales Analysis
-[Query 1](#Q-1), [Query 20](#Q-20), [Query 30](#Q-30)
+Things that impact sales beyond price:
+[Query 8](#Q8), [Query 9](#Q9), [Query 12](#Q12), [Query 13](#Q13), [Query 14](#Q14), [Query 15](#Q15), [Query 21](#Q21).
 
 ## <i class="far fa-chalkboard-teacher"></i> Customer Segmentation
-[Query 1](#Q-1), [Query 20](#Q-20), [Query 30](#Q-30)
+Methods of grouping customers together based on some set of shared characteristics:
+[Query 6](#Q6), [Query 7](#Q7), [Query 20](#Q20), [Query 26](#Q26)
 
-## <i class="fas fa-warehouse-alt"></i> Inventory Management
-[Query 1](#Q-1), [Query 20](#Q-20), [Query 30](#Q-30)
+## <i class="fas fa-warehouse-alt"></i> Competitive Analysis
+Identifying weaknesses and strengths of competition to improve efforts within the company:
+[Query 1](#Q27).
 
 ## <i class="far fa-comments"></i> Sentiment Analysis
-[Query 1](#Q-1), [Query 20](#Q-20), [Query 30](#Q-30)
+Methods for analyzing text to predict if the text is positive or negative:
+[Query 10](#Q10), [Query 11](#Q11), [Query 18](#Q18), [Query 19](#Q19), [Query 28](#Q28).
 
 {% endcapture %}
 
@@ -383,12 +343,12 @@ The 30 queries represent fundamental data science workflows, in this case for a 
 %}
 {% include section-single.html
     background="background-gray" 
-    padding-top="5em" padding-bottom="0em" 
+    padding-top="10em" padding-bottom="0em" 
     content-single=wf_single
 %}
 {% include section-halfs.html 
     background="background-gray" 
-    padding-top="5em" padding-bottom="10em" 
+    padding-top="0em" padding-bottom="5em" 
     content-left-half=wf_left 
     content-right-half=wf_right 
 %} 
@@ -398,45 +358,8 @@ The 30 queries represent fundamental data science workflows, in this case for a 
     slope="up" 
 %}
 
-<section id="query-details" class="background-white padding-top-10em padding-bottom-10em">
-
-</section>
-
-<!-- Query Details Sections 30x -->
-<section class="background-white padding-top-10em padding-bottom-10em">
-    <div class="pure-g">
-       <div class="container-padding">
-           <div class="pure-u-1 pure-u-md-1-3">
-               <h3 class="query-title">Query 01</h3>
-               <div id="Q-10" class="query-num">100 | 50</div>
-                
-               <p class="query-desc">To build and train recommender systems, it is typical in retail and eCommerce industries to build data science pipelines for prediction. A workflow may use a basketing technique to determine which products are most frequently to be grouped together in a single sale. To run this query, a data scientist loads structured, transactional data into a table, performs data pre-processing like pairing, sorting, and grouping data to create a report. The pairs can later be grouped into clusters to provide recommendations.  </p>
-                
-                <p class="query-wf">Reccomenders | Basketing</p>
-                <a href="https://github.com/rapidsai/tpcx-bb/blob/master/tpcx-bb1.3.1/rapids-queries/q01/tpcx-bb-query-01.ipynb" taget="_blank" class="query-link">Source Code</a>
-           </div>
-           <div class="pure-u-1 pure-u-md-1-3">
-            <h3 class="query-title">Query 01</h3>
-            <div id="Q-20" class="query-num">100 | 50</div>
-             
-            <p class="query-desc">When implementing a “viewed together” sort of online store streaming data, a data scientist working in eCommerce may choose to session the dataset to find common product clusters during a given timeframe. This involves reconstructing a user’s browsing session to create a virtual timestamp and determine if the given product was viewed during that session. </p>
-             
-             <p class="query-wf">Sessioning</p>
-             <a href="https://github.com/rapidsai/tpcx-bb/blob/master/tpcx-bb1.3.1/rapids-queries/q02/tpcx-bb-query-02.ipynb" taget="_blank" class="query-link">Source Code</a>
-           </div>
-           <div class="pure-u-1 pure-u-md-1-3">
-            <h3 class="query-title">Query 01</h3>
-            <div id="Q-30" class="query-num">100 | 50</div>
-             
-            <p class="query-desc">To build and train recommender systems, it is typical in retail and eCommerce industries to build data science pipelines for prediction. A workflow may use a basketing technique to determine which products are most frequently to be grouped together in a single sale. To run this query, a data scientist loads structured, transactional data into a table, performs data pre-processing like pairing, sorting, and grouping data to create a report. The pairs can later be grouped into clusters to provide recommendations.  </p>
-             
-             <p class="query-wf">Reccomenders | Basketing</p>
-             <a href="https://github.com/rapidsai/tpcx-bb/blob/master/tpcx-bb1.3.1/rapids-queries/q01/tpcx-bb-query-01.ipynb" taget="_blank" class="query-link">Source Code</a>
-           </div>
-       </div>
-   </div>
-
-</section>
+<!-- Query Details Sections 30x Generated -->
+<section id="query-details" class="background-white padding-top-10em padding-bottom-10em"></section>
 
 {% capture end_bottom %}
 # See the Acceleration Yourself
@@ -468,20 +391,14 @@ The 30 queries represent fundamental data science workflows, in this case for a 
     /* grouped bar chart based on https://observablehq.com/@d3/grouped-bar-chart */
     filepath = 'assets/files/tpcxbb-results.json'
     d3.json(filepath).then(function(data) {
-        console.log(data);
         
-        buildBar(data.TCB, '#results-1')
-        buildBar(data.TCB, '#results-2')
-        buildBar(data.TCB, '#results-3')
-
-        buildDetails(data.TCB)
+        buildBar(data.TPCxbb, '#results-1')
+        buildDetails(data.TPCxbb)
         
         /* resize */
         window.addEventListener("resize", ()=>{
             
-            buildBar(data.TCB, '#results-1')
-            buildBar(data.TCB, '#results-2')
-            buildBar(data.TCB, '#results-3')
+            buildBar(data.TPCxbb, '#results-1')
 
         });
 
@@ -489,32 +406,31 @@ The 30 queries represent fundamental data science workflows, in this case for a 
 
     function buildDetails (data){
 
-        var test = data.map((d,i)=>{
-            console.log(i)
+        /* build query details */
+        /* in set of 3 because div tag kept auto closing? */
+        var content = []
 
-            let n = 0
+        for(let i=0; i<=data.length-3; i+=3){
+ 
+            var r1 = data[i]
+            var r2 = data[i+1]
+            var r3 = data[i+2]  
 
-            if( i % 3 == 0){
-                n = 'Row'
+            content.push(
+            '<div class="pure-g"><div class="container-padding">'
+            +
+            '<div class="pure-u-1 pure-u-md-1-3"> <div id="'+ r1.query +'" class="query-margin"></div> <h3 class="query-title"><i class="fal fa-analytics"></i> '+ r1.query +'</h3> <a href="#workflow" class="query-wf">'+ r1.workflows.toString() +'</a> <div class="query-num-container"> <div class="query-num">'+ r1.rapids +'<div class="query-subtitle-rapids">RAPIDS</div></div><div class="query-num">'+ r1.huawei +'<div class="query-subtitle-comp">Hueiwai</div></div></div> <p class="query-desc">'+ r1.description +'</p><a class="query-source" href="'+ r1.link +'">Get Source Code on Github <i class="fas fa-angle-double-right"></i></a></div>'
+            +   
+            '<div class="pure-u-1 pure-u-md-1-3"> <div id="'+ r2.query +'" class="query-margin"></div> <h3 class="query-title"><i class="fal fa-analytics"></i> '+ r2.query +'</h3> <a href="#workflow" class="query-wf">'+ r2.workflows.toString() +'</a> <div class="query-num-container"> <div class="query-num">'+ r2.rapids +'<div class="query-subtitle-rapids">RAPIDS</div></div><div class="query-num">'+ r2.huawei +'<div class="query-subtitle-comp">Hueiwai</div></div></div> <p class="query-desc">'+ r2.description +'</p><a class="query-source" href="'+ r2.link +'">Get Source Code on Github <i class="fas fa-angle-double-right"></i></a></div>'
+            +
+            '<div class="pure-u-1 pure-u-md-1-3"> <div id="'+ r3.query +'" class="query-margin"></div> <h3 class="query-title"><i class="fal fa-analytics"></i> '+ r3.query +'</h3> <a href="#workflow" class="query-wf">'+ r3.workflows.toString() +'</a> <div class="query-num-container"> <div class="query-num">'+ r3.rapids +'<div class="query-subtitle-rapids">RAPIDS</div></div><div class="query-num">'+ r3.huawei +'<div class="query-subtitle-comp">Hueiwai</div></div></div> <p class="query-desc">'+ r3.description +'</p><a class="query-source" href="'+ r3.link +'">Get Source Code on Github <i class="fas fa-angle-double-right"></i></a></div>'
+            +
+            '</div></div>')
+        
+        }
 
-            } else {
-                n = 'Item'
-            }
-
-
-            var test = `<div>
-                        <h1>test{`+ n +`}</h1>
-                        <p>text text</p>
-                        <div>more</div>
-                    </div>`
-            
-            return test
-
-        })
-        console.log(test)
-
-        $("#query-details").html(test)
-
+        /* append to dom */
+        $('#query-details').html(content)
 
     }
 
@@ -544,9 +460,14 @@ The 30 queries represent fundamental data science workflows, in this case for a 
             .attr("transform", `translate(0,${height - margin.bottom})`)
             .call(d3.axisBottom(x0).tickSizeOuter(0))
             .call(g => g.select(".domain").remove())
+            .call(g => g.selectAll("text")
+                .attr("dx", 10)
+                .attr("dy", -7)
+                .attr("transform", "rotate(90)")
+                .style("text-anchor", "start"))
 
         color = d3.scaleOrdinal()
-            .range(["#98abc5", "#8a89a6"])
+            .range(["#7306ff", "#ee7e56"])
 
         y = d3.scaleLinear()
             .domain([0, d3.max(data, d => d3.max(keys, key => d[key])) + 10]).nice()
@@ -560,7 +481,7 @@ The 30 queries represent fundamental data science workflows, in this case for a 
         x1 = d3.scaleBand()
             .domain(keys)
             .rangeRound([0, x0.bandwidth()])
-            .padding(0.1)
+            .padding(0.05)
 
         legend = svg => {
             const g = svg

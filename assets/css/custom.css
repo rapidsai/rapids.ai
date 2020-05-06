@@ -632,10 +632,60 @@ a h2:hover,
     transform: translate(-50%)
 }
 
-/* tpc barcharts */
+/* TPC barcharts */
 svg rect {
     cursor: pointer;
 }
+
+.query-margin {
+    margin-bottom: 4em;
+}
+
+.query-title {
+    font-weight: bold;
+}
+
+a.query-wf {
+    display: block;
+    padding-top: 0.3em;
+    font-weight: bold;
+    color: #36c9dd;
+    border-bottom: 1px dotted #36c9dd;
+}
+
+.query-num-container {
+    width: 100%;
+}
+
+.query-num {
+    color: #222;
+    text-align: center;
+    font-size: 1.8em;
+    display: inline-block;
+    padding: 0.5em 0.5em 0.5em 0em;
+}
+
+.query-subtitle-rapids {
+    font-size: 0.5em;
+    text-align: center;
+    color: purple;
+}
+
+.query-subtitle-comp {
+    font-size: 0.5em;
+    text-align: center;
+    color: gray;
+}
+
+.query-desc {
+    font-size: 0.9em;
+}
+
+.query-source {
+    font-weight: bold;
+    font-size: 0.8em;
+}
+
 
 /* footer */
 .footer-cta-main {

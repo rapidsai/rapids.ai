@@ -1,7 +1,7 @@
 ---
-title: "RAPIDS + Plot.ly"
-description: "Learn How to Use RAPIDS with Plot.ly"
-tagline: "Use RAPIDS with Plot.ly"
+title: "RAPIDS + Plot.ly Dash"
+description: "Learn How to Use RAPIDS with Plot.ly Dash"
+tagline: "Use RAPIDS with Plot.ly Dash"
 button_text: "Plot.ly"
 button_link: "#"
 layout: default
