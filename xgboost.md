@@ -35,7 +35,7 @@ The RAPIDS team works closely with the Distributed Machine Learning Common (DMLC
 The project is well supported and documented by many tutorials, quick-start guides, and papers.
 
 ## <i class="fas fa-bolt"></i> Try It Now in CoLab
-Try out XGBoost now, with the basics of cuDF and other RAPIDS libraries, in our online **[XGBoost Colaboratory notebook](https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y){: target="_blank"}**.
+Try out XGBoost now, with the basics of cuDF and other RAPIDS libraries, in our online **[XGBoost Colaboratory notebook](https://colab.research.google.com/drive/1xnTpVS194BJ0pOPuxN4GOmypdu2RvwdH){: target="_blank"}**.
 
 ## <i class="far fa-bookmark"></i> Notebook Examples
 To see how XGBoost integrates with cuDF, Dask, and the entire RAPIDS ecosystem, check out these **[RAPIDS notebooks](https://github.com/rapidsai/notebooks-contrib){: target="_blank"}** which walk through classification and regression examples.
