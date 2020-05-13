@@ -45,33 +45,29 @@ XGBoost is a well-known gradient boosted decision trees (GBDT) machine learning 
 
 {% capture com_left_bottom %}
 ![Plotly]({{ site.baseurl }}{% link /assets/images/plotly-logo.svg %}){: .half-image-center}
-## <i class="fas fa-code-branch"></i> RAPIDS + Plot.ly
+## <i class="fas fa-code-branch"></i> RAPIDS + Plotly Dash
 
-Content text goes here. <br> **[Learn more on our Plot.ly page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](plotly.html)**
+Plotly’s Dash enables Data Science teams to focus on the data and models, while producing and sharing enterprise-ready analytic apps that sit on top of RAPIDS-accelerated Python dataframes. <br> **[Learn more on our Plotly page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](plotly.html)**
 
 {% endcapture %}
 {% capture com_mid_bottom %}
-![Ray]({{ site.baseurl }}{% link /assets/images/ray-logo.png %}){: .half-image-center}
+![HPO]({{ site.baseurl }}{% link /assets/images/csp+hpo.jpg %}){: .half-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + HPO
 
-Content text goes here. <br> **[Learn more on our HPO page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](hpo.html)**
+Accelerate Hyperparameter Optimization (HPO) in the Cloud. The RAPIDS team works closely with major cloud providers and open source hyperparameter optimization solutions to ensure smooth integration and high performance, regardless of your deployment platform. <br> **[Learn more on our HPO page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](hpo.html)**
 
 {% endcapture %}
 {% capture com_right_bottom %}
-![TPC]({{ site.baseurl }}{% link /assets/images/tpc-reg.gif %}){: .half-image-center}
-## <i class="fas fa-code-branch"></i> RAPIDS TPCx-BB Benchmark
-
-Content text goes here. <br> **[Learn more on our TPCx-BB page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](TPCx-BB.html)**
-
-{% endcapture %}
-
-
-{% capture prj_left %}
 ![spark]({{ site.baseurl }}{% link /assets/images/spark-logo-trademark.png %}){: .half-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Spark
 
 NVIDIA will be bringing RAPIDS to Apache Spark.
 <br> **[Learn more on our blog post <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://medium.com/rapids-ai/nvidia-gpus-and-apache-spark-one-step-closer-2d99e37ac8fd){: target="_blank"}**
+
+{% endcapture %}
+
+
+{% capture prj_left %}
 
 {% endcapture %}
 
