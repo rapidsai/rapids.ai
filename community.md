@@ -51,7 +51,7 @@ Plotly’s Dash enables Data Science teams to focus on the data and models, whil
 
 {% endcapture %}
 {% capture com_mid_bottom %}
-![HPO]({{ site.baseurl }}{% link /assets/images/csp+hpo.jpg %}){: .half-image-center}
+![HPO]({{ site.baseurl }}{% link /assets/images/csp+hpo.png %}){: .half-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + HPO
 
 Accelerate Hyperparameter Optimization (HPO) in the Cloud. The RAPIDS team works closely with major cloud providers and open source hyperparameter optimization solutions to ensure smooth integration and high performance, regardless of your deployment platform. <br> **[Learn more on our HPO page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](hpo.html)**

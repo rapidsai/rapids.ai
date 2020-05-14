@@ -117,6 +117,13 @@ strong {
     transform: translate(-75%);
 }
 
+.half-image-center-full {
+    position: relative;
+    left: 50%;
+    width: 50%;
+    transform: translate(-50%);
+}
+
 .third-image-center {
     position: relative;
     left: 33%;

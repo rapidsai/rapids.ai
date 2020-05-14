@@ -7,7 +7,7 @@ button_link: "#"
 layout: default
 ---
 
-![Placeholder]({{ site.baseurl }}{% link /assets/images/placeholder-image.png %}){: .projects-logo}
+![RAPIDS CSP HPO]({{ site.baseurl }}{% link /assets/images/csp+hpo.png %}){: .projects-logo}
 
 
 # Accelerate Hyperparameter Optimization in the Cloud
@@ -18,6 +18,8 @@ layout: default
 Machine learning models can have dozens of options, or “hyperparameters,” that make the difference between a great model and an inaccurate one. Accelerated machine learning models in RAPIDS give you the flexibility to use hyperparameter optimization (HPO) experiments to explore all of these options to find the most accurate possible model for your problem. The acceleration of GPUs lets data scientists iterate through hundreds or thousands of variants over a lunch break, even for complex models and large datasets.
 {: .subtitle}
 
+
+![RAPIDS CSP HPO]({{ site.baseurl }}{% link /assets/images/HPO-space.png %}){: .half-image-center-full}
 {% endcapture %}
 
 {% include section-single.html
@@ -33,18 +35,18 @@ Machine learning models can have dozens of options, or “hyperparameters,” th
 
 {% endcapture %}
 {% capture yd_left %}
-## <i class="fas fa-expand-arrows-alt"></i> Title
-Efficiently unleash cross-media information without cross-media value.
+## <i class="fal fa-boxes-alt"></i> Smooth Integration
+RAPIDS matches popular PyData APIs, making it an easy drop-in for legacy workloads built on Pandas and scikit-learn.
 
 {% endcapture %}
 {% capture yd_mid %}
-## <i class="far fa-hand-rock"></i> Title
-Efficiently unleash cross-media information without cross-media value.
+## <i class="fal fa-tachometer-fast"></i> High Performance
+With GPU acceleration, RAPIDS models can train 40x faster than CPU equivalents, enabling more experimentation in less time.
 
 {% endcapture %}
 {% capture yd_right %}
-## <i class="far fa-check-square"></i> Title
-Efficiently unleash cross-media information without cross-media value.
+## <i class="fal fa-cloud-upload"></i> Deploy on Any Platform
+The RAPIDS team works closely with major cloud providers and open source hyperparameter optimization solutions to provide code samples so you can get started with HPO in minutes on the cloud of your choice.
 
 {% endcapture %}
 
@@ -67,35 +69,62 @@ Efficiently unleash cross-media information without cross-media value.
 # Getting Started
 {: .section-title-halfs}
 
-Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits. 
+RAPIDS supports hyperparameter optimization solutions based on AWS Sagemaker, Azure ML, Google Cloud AI, Dask ML, and Ray Tune frameworks, so you can easily integrate with whichever framework you use today.
 
-## <i class="far fa-star"></i> General Title
-Collaboratively administrate empowered markets via plug-and-play networks. Dynamically procrastinate B2C users after installed base benefits.  **[Some basic differences](#){: target="_blank"}**.
+
+## <i class="fad fa-terminal"></i> Get the HPO example code
+
+Our GitHub repo contains helper code, sample notebooks, and step-by-step instructions to get you up and running on each HPO platform. **[See our README <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/cloud-ml-examples){: target="_blank"}**
 
 {% endcapture %}
 
 {% capture start_right %}
-## <i class="fas fa-file-code"></i> Get an Overview
+## <i class="far fa-code-merge"></i> Clone the Repo
 {: .section-subtitle-top-1}
-Efficiently unleash cross-media information without cross-media value. **[Check it out](#){: target="_blank"}.**
 
-## <i class="fab fa-youtube"></i> See How It Works
-Efficiently unleash cross-media information without cross-media value. **[Check it out](#){: target="_blank"}.**
+Start by cloning the open-source cloud-ml-examples repository from RAPIDSai GitHub.
+ **[See our Repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/cloud-ml-examples){: target="_blank"}**
 
-## <i class="far fa-file-code"></i> Access Docs 
-Efficiently unleash cross-media information without cross-media value. **[Check it out](#){: target="_blank"}.**
+## <i class="far fa-bookmark"></i> Notebook examples
+The repo will walk you through step-by-step instructions for a sample hyperparameter optimization job. To start running your experiments with HPO, navigate to the directory for your framework or CSP, and check out the README.md file there.  **[Walk Through The Notebooks <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/cloud-ml-examples){: target="_blank"}**
+
+{% endcapture %}
+
+{% capture chart_single %}
+# Minimize Cost, Accelerat Turnaround
+
+{% endcapture %}
+
+{% capture chart_right %}
+![100 job cost]({{ site.baseurl }}{% link /assets/images/100-Job Random Forest Airline Model HPO Cost.png %}){: .full-image-center}
+
+{% endcapture %}
+
+{% capture chart_left %}
+![100 job runtime]({{ site.baseurl }}{% link /assets/images/100-Job Random Forest Airline Model HPO Runtime.png %}){: .full-image-center}
 
 {% endcapture %}
 {% include slopecap.html 
-    background="background-gray" 
+    background="background-purple" 
     position="top" 
     slope="down" 
 %}
 {% include section-halfs.html 
-    background="background-gray" 
-    padding-top="5em" padding-bottom="10em" 
+    background="background-purple" 
+    padding-top="5em" padding-bottom="0em" 
     content-left-half=start_left 
     content-right-half=start_right 
+%} 
+{% include section-single.html
+    background="background-purple" 
+    padding-top="0em" padding-bottom="0em" 
+    content-single=chart_single
+%}
+{% include section-halfs.html 
+    background="background-purple" 
+    padding-top="5em" padding-bottom="10em" 
+    content-left-half=chart_left 
+    content-right-half=chart_right 
 %} 
 
 
@@ -106,66 +135,47 @@ It’s easy to work in the cloud of your choice to find the best quality model.
 
 {% endcapture %}
 {% capture cl_left_top %}
-## <i class="fab fa-google"></i> Google Cloud
-Azure ML, AWS Sagemaker, and Google AI hyperparameter optimization services free users from the details of managing their own infrastructure. Launch a job from a RAPIDS sample notebook, and the platform will automatically scale up and launch as many instances as you need to complete the experiments quickly. From a centralized interface, you can manage your jobs, view results, and find the best model to deploy.
+## <i class="fas fa-cloud"></i> RAPIDS on Cloud Machine Learning Services
+Azure ML, AWS Sagemaker, and Google Cloud AI hyperparameter optimization services free users from the details of managing their own infrastructure. Launch a job from a RAPIDS sample notebook, and the platform will automatically scale up and launch as many instances as you need to complete the experiments quickly. From a centralized interface, you can manage your jobs, view results, and find the best model to deploy.
 
-{% endcapture %}
+![azure ml]({{ site.baseurl }}{% link /assets/images/azure-ml.png %}){: .half-image-center}
 
-{% capture cl_left_mid %}
-## <i class="fab fa-google"></i> Google Cloud
-Azure ML, AWS Sagemaker, and Google AI hyperparameter optimization services free users from the details of managing their own infrastructure. Launch a job from a RAPIDS sample notebook, and the platform will automatically scale up and launch as many instances as you need to complete the experiments quickly. From a centralized interface, you can manage your jobs, view results, and find the best model to deploy.
+![amazon sagemaker]({{ site.baseurl }}{% link /assets/images/amazon-sagemaker.png %}){: .half-image-center}
 
-{% endcapture %}
+![google cloud]({{ site.baseurl }}{% link /assets/images/google-cloud.png %}){: .half-image-center}
 
-{% capture cl_left_bottom %}
-/
+
 {% endcapture %}
 
 {% capture cl_right_top %}
-## <i class="fab fa-google"></i> Google Cloud
-Azure ML, AWS Sagemaker, and Google AI hyperparameter optimization services free users from the details of managing their own infrastructure. Launch a job from a RAPIDS sample notebook, and the platform will automatically scale up and launch as many instances as you need to complete the experiments quickly. From a centralized interface, you can manage your jobs, view results, and find the best model to deploy.
+## <i class="fas fa-clouds"></i> Bring Your Own Cloud
+Whether running a cluster on-prem, or managing instances in a public cloud, RAPIDS integrates with HPO platforms that can run on your infrastructure. RayTune and Dask-ML both provide cloud-neutral platforms for hyperparameter optimization. RayTune combines the scalable Ray platform with state-of-the-art HPO algorithms, including PBT, Vizier’s stopping rule, and more. Dask-ML HPO offers GPU-aware caching of intermediate datasets and a familiar, Pythonic API. Both can benefit from high-performance estimators from RAPIDS.
 
-{% endcapture %}
+![ray tune]({{ site.baseurl }}{% link /assets/images/ray-tune.png %}){: .third-image-center}
 
-{% capture cl_right_mid %}
-## <i class="fab fa-google"></i> Google Cloud
-Azure ML, AWS Sagemaker, and Google AI hyperparameter optimization services free users from the details of managing their own infrastructure. Launch a job from a RAPIDS sample notebook, and the platform will automatically scale up and launch as many instances as you need to complete the experiments quickly. From a centralized interface, you can manage your jobs, view results, and find the best model to deploy.
 
-{% endcapture %}
+![dask]({{ site.baseurl }}{% link /assets/images/dask_logo.png %}){: .third-image-center}
 
-{% capture cl_right_bottom %}
-/
+
 {% endcapture %}
 
 {% include slopecap.html 
-    background="background-purple" 
+    background="background-white" 
     position="top" 
     slope="up" 
 %}
-
 {% include section-single.html
-    background="background-purple" 
-    padding-top="5em" padding-bottom="0em" 
+    background="background-white" 
+    padding-top="10em" padding-bottom="0em" 
     content-single=cl_single
 %}
 {% include section-halfs.html 
-    background="background-purple" 
-    padding-top="3em" padding-bottom="0em" 
+    background="background-white" 
+    padding-top="3em" padding-bottom="10em" 
     content-left-half=cl_left_top
     content-right-half=cl_right_top
 %}
-{% include section-halfs.html 
-    background="background-purple" 
-    padding-top="3em" padding-bottom="0em" 
-    content-left-half=cl_left_mid
-    content-right-half=cl_right_mid
-%}
-{% include section-halfs.html 
-    background="background-purple" 
-    padding-top="3em" padding-bottom="10em" 
-    content-left-half=cl_left_bottom
-    content-right-half=cl_right_bottom
-%}
+
 
 {% capture end_bottom %}
 # Get Started with Hyperopt
@@ -182,6 +192,6 @@ Azure ML, AWS Sagemaker, and Google AI hyperparameter optimization services free
     padding-top="0em" padding-bottom="0em" 
     content-single=end_bottom
 %}
-{% include cta-footer-plotly.html 
+{% include cta-footer-hpo.html 
    background="background-darkpurple" 
 %}
