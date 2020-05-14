@@ -1,6 +1,6 @@
 ---
 title: "RAPIDS + HPO"
-description: "Learn How to Use RAPIDS with HPO"
+description: "Learn How to Use RAPIDS with HPO in the Cloud"
 tagline: "Use RAPIDS with Hyper Parameter Optimization"
 button_text: "Get Started"
 button_link: "#"
