@@ -7,9 +7,9 @@ button_link: "https://dash.plotly.com/"
 layout: default
 ---
 
-![Placeholder]({{ site.baseurl }}{% link /assets/images/plotly-logo.svg %}){: .projects-logo}
+![Placeholder]({{ site.baseurl }}{% link /assets/images/Plotly_Dash_logo.png %}){: .projects-logo}
 
-# Put A.I. and M.L. in the hands of users
+# Put AI and ML <br> in the hands of business users
 {: .section-title-full}
 
 {% capture intro_content %}
@@ -68,24 +68,27 @@ Dash links interactive UI controls and displays, like sliders, dropdown menus, a
 Get started with Dash by checking out our example gallery and comprehensive documentation.
 
 ## <i class="fas fa-laptop-code"></i> Install Dash
-Install Dash via pip or conda **[Find details here <i class="fas fa-angle-double-right"></i>](https://dash-gallery.plotly.host/Portal/){: target="_blank"}**.
+Install Dash via pip or conda **[Find details here](https://dash.plotly.com/installation){: target="_blank"}**.
 
 ## <i class="far fa-binoculars"></i> Get an Overview
-Read our **[1.0 launch article from 2019](https://medium.com/plotly/welcoming-dash-1-0-0-f3af4b84bae){: target="_blank"}** or rewind back to 2017 for the **[essay that kicked everything off](https://medium.com/plotly/introducing-dash-5ecf7191b503){: target="_blank"}**.
+Read our **[1.0 launch article](https://medium.com/plotly/welcoming-dash-1-0-0-f3af4b84bae){: target="_blank"}** from 2019 or rewind back to 2017 for the **[essay that kicked everything off](https://medium.com/plotly/introducing-dash-5ecf7191b503){: target="_blank"}**.
 
-## <i class="far fa-book-open"></i> Read Our Tutorial
-The **[Dash tutorial](https://dash.plotly.com/){: target="_blank"}** walks you through how to create an app, from layout to callbacks.
+## <i class="fad fa-analytics"></i> Check out the Gallery
+See what’s possible with Dash at **[our App Gallery](https://dash-gallery.plotly.host/Portal/){: target="_blank"}**.
 
 {% endcapture %}
 
 {% capture start_right %}
-## <i class="fad fa-comments"></i> Show and Tell
+## <i class="far fa-book-open"></i> Read Our Tutorial
 {: .section-subtitle-top-1}
-Members of the Dash community share what they’ve build in our **[Community Forum](https://community.plotly.com/tag/show-and-tell){: target="_blank"}**
+The **[Dash tutorial](https://dash.plotly.com/){: target="_blank"}** walks you through how to create an app, from layout to callbacks.
+
+## <i class="fad fa-comments"></i> Show and Tell
+Members of the Dash community share what they’ve build in our **[Community Forum](https://community.plotly.com/tag/show-and-tell){: target="_blank"}**.
 
 
 ## <i class="fab fa-medium"></i> Articles
-Read our comprehensive list of **[ articles more on Medium](https://medium.com/plotly){: target="_blank"}** or view some of the highlighted articles below: 
+Read our comprehensive list of **[ articles and more on Medium](https://medium.com/plotly){: target="_blank"}**, or view some of the highlighted articles below: 
 
 <i class="fas fa-caret-right"></i> **[Pattern-Matching Callbacks in Dash](https://medium.com/plotly/pattern-matching-callbacks-in-dash-9014eee99858){: target="_blank"}**
 
@@ -122,26 +125,26 @@ Dash is a web application framework that provides pure Python abstraction around
 {% endcapture %}
 
 {% capture cl_left_mid %}
-## <i class="fad fa-terminal"></i> Dash Core Components
-Dash ships with supercharged components for interactive user interfaces. A core set of components, written and maintained by the Dash team, is available in the dash-core-components library. <br> **[Learn More <i class="fas fa-angle-double-right"></i>](https://dash.plotly.com/dash-core-components){: target="_blank"}**
-
-{% endcapture %}
-
-{% capture cl_left_bottom %}
 ## <i class="fad fa-terminal"></i> Dash DataTable
 Dash DataTable is an interactive table component designed for viewing, editing, and exploring large datasets. DataTable is rendered with standard, semantic HTML <table/> markup, which makes it accessible, responsive, and easy to style. <br> **[Learn More <i class="fas fa-angle-double-right"></i>](https://dash.plotly.com/datatable){: target="_blank"}**
 
 {% endcapture %}
 
+{% capture cl_left_bottom %}
+## <i class="fad fa-terminal"></i> Dash DAQ
+Dash DAQ comprises a robust set of controls that make it simpler to integrate data acquisition and controls into your Dash applications. <br> **[Learn More <i class="fas fa-angle-double-right"></i>](https://dash.plotly.com/dash-daq){: target="_blank"}**
+
+{% endcapture %}
+
 {% capture cl_right_top %}
-## <i class="fad fa-terminal"></i> Dash Bio
-Dash Bio is a suite of bioinformatics components that make it simpler to analyze and visualize bioinformatics data and interact with them in a Dash application. <br> **[Learn More <i class="fas fa-angle-double-right"></i>](https://dash.plotly.com/dash-bio){: target="_blank"}**
+## <i class="fad fa-terminal"></i> Dash Core Components
+Dash ships with supercharged components for interactive user interfaces. A core set of components, written and maintained by the Dash team, is available in the dash-core-components library. <br> **[Learn More <i class="fas fa-angle-double-right"></i>](https://dash.plotly.com/dash-core-components){: target="_blank"}**
 
 {% endcapture %}
 
 {% capture cl_right_mid %}
-## <i class="fad fa-terminal"></i> Dash DAQ
-Dash DAQ comprises a robust set of controls that make it simpler to integrate data acquisition and controls into your Dash applications. <br> **[Learn More <i class="fas fa-angle-double-right"></i>](https://dash.plotly.com/dash-daq){: target="_blank"}**
+## <i class="fad fa-terminal"></i> Dash Bio
+Dash Bio is a suite of bioinformatics components that make it simpler to analyze and visualize bioinformatics data and interact with them in a Dash application. <br> **[Learn More <i class="fas fa-angle-double-right"></i>](https://dash.plotly.com/dash-bio){: target="_blank"}**
 
 {% endcapture %}
 

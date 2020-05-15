@@ -7,7 +7,7 @@ button_link: "https://github.com/rapidsai"
 layout: default
 ---
 {% capture com_content %}
-# Community Projects
+# Community and Projects
 {: .section-title-full }
 
 The RAPIDS team is developing, contributing, and collaborating closely with numerous open-source projects including Apache Arrow, Numba, XGBoost, Apache Spark, scikit-learn, and more. Our goal is to upstream all code contributions to ensure that all the components of the GPU-accelerated data science ecosystem work smoothly together.
@@ -22,21 +22,21 @@ The RAPIDS team is developing, contributing, and collaborating closely with nume
 %}
 
 {% capture com_left_top %}
-![BLAZINGSQL]({{ site.baseurl }}{% link /assets/images/blazingsql.png %}){: .half-image-center}
+![BLAZINGSQL]({{ site.baseurl }}{% link /assets/images/blazingsql.png %}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + BlazingSQL
 
 BlazingSQL is an open source project providing distributed SQL for analytics that enables the integration of enterprise data at scale. RAPIDS is actively contributing to BlazingSQL, and it integrates with RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. <br> **[Learn more on our BlazingSQL page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](blazingsql.html)**
 
 {% endcapture %}
 {% capture com_mid_top %}
-![Dask]({{ site.baseurl }}{% link /assets/images/dask.svg %}){: .half-image-center}
+![Dask]({{ site.baseurl }}{% link /assets/images/dask.svg %}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Dask
 
 Dask is an open source project providing advanced parallelism for analytics that enables performance at scale. RAPIDS is actively contributing to Dask, and it integrates with both RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. <br> **[Learn more on our Dask page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](dask.html)**
 
 {% endcapture %}
 {% capture com_right_top %}
-![xgboost]({{ site.baseurl }}{% link /assets/images/xgboost_logo_sorta.svg %}){: .half-image-center}
+![xgboost]({{ site.baseurl }}{% link /assets/images/xgboost_logo_sorta.svg %}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + XGBoost
 
 XGBoost is a well-known gradient boosted decision trees (GBDT) machine learning package used to tackle regression, classification, and ranking problems. The RAPIDS team works closely with the Distributed Machine Learning Common (DMLC) XGBoost organization to upstream code and ensure that all components of the GPU-accelerated analytics ecosystem work smoothly together. <br> **[Learn more on our XGBoost page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](xgboost.html)**
@@ -44,21 +44,22 @@ XGBoost is a well-known gradient boosted decision trees (GBDT) machine learning 
 {% endcapture %}
 
 {% capture com_left_bottom %}
-![Plotly]({{ site.baseurl }}{% link /assets/images/plotly-logo.svg %}){: .half-image-center}
+![Plotly]({{ site.baseurl }}{% link /assets/images/Plotly_Dash_logo.png %}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Plotly Dash
 
 Plotly’s Dash enables Data Science teams to focus on the data and models, while producing and sharing enterprise-ready analytic apps that sit on top of RAPIDS-accelerated Python dataframes. <br> **[Learn more on our Plotly page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](plotly.html)**
 
 {% endcapture %}
+
 {% capture com_mid_bottom %}
-![HPO]({{ site.baseurl }}{% link /assets/images/csp+hpo.png %}){: .half-image-center}
+![HPO]({{ site.baseurl }}{% link /assets/images/csp+hpo.png %}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + HPO
 
 Accelerate Hyperparameter Optimization (HPO) in the Cloud. The RAPIDS team works closely with major cloud providers and open source hyperparameter optimization solutions to ensure smooth integration and high performance, regardless of your deployment platform. <br> **[Learn more on our HPO page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](hpo.html)**
 
 {% endcapture %}
 {% capture com_right_bottom %}
-![spark]({{ site.baseurl }}{% link /assets/images/spark-logo-trademark.png %}){: .half-image-center}
+![spark]({{ site.baseurl }}{% link /assets/images/spark-logo-trademark.png %}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Spark
 
 NVIDIA will be bringing RAPIDS to Apache Spark.

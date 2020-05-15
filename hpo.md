@@ -3,14 +3,14 @@ title: "RAPIDS + HPO"
 description: "Learn How to Use RAPIDS with HPO in the Cloud"
 tagline: "Use RAPIDS with Hyper Parameter Optimization"
 button_text: "Get Started"
-button_link: "#"
+button_link: "https://github.com/rapidsai/cloud-ml-examples/"
 layout: default
 ---
 
 ![RAPIDS CSP HPO]({{ site.baseurl }}{% link /assets/images/csp+hpo.png %}){: .projects-logo}
 
 
-# Accelerate Hyperparameter Optimization in the Cloud
+# Accelerate Hyperparameter Optimization <br> in the Cloud
 {: .section-title-full}
 
 {% capture intro_content %}
@@ -19,12 +19,12 @@ Machine learning models can have dozens of options, or “hyperparameters,” th
 {: .subtitle}
 
 
-![RAPIDS CSP HPO]({{ site.baseurl }}{% link /assets/images/HPO-space.png %}){: .half-image-center-full}
+![RAPIDS CSP HPO]({{ site.baseurl }}{% link /assets/images/HPO-space.png %}){: .center}
 {% endcapture %}
 
 {% include section-single.html
     background="background-white" 
-    padding-top="0em" padding-bottom="1em" 
+    padding-top="0em" padding-bottom="3em" 
     content-single=intro_content
 %}
 
@@ -91,19 +91,13 @@ The repo will walk you through step-by-step instructions for a sample hyperparam
 {% endcapture %}
 
 {% capture chart_single %}
-# Minimize Cost, Accelerat Turnaround
+# Minimize Cost, Accelerate Turnaround
+{: .section-title-full}
+
+![100 job cost]({{ site.baseurl }}{% link /assets/images/100-Job HPO.png %}){: .full-image-center}
 
 {% endcapture %}
 
-{% capture chart_right %}
-![100 job cost]({{ site.baseurl }}{% link /assets/images/100-Job Random Forest Airline Model HPO Cost.png %}){: .full-image-center}
-
-{% endcapture %}
-
-{% capture chart_left %}
-![100 job runtime]({{ site.baseurl }}{% link /assets/images/100-Job Random Forest Airline Model HPO Runtime.png %}){: .full-image-center}
-
-{% endcapture %}
 {% include slopecap.html 
     background="background-purple" 
     position="top" 
@@ -117,15 +111,10 @@ The repo will walk you through step-by-step instructions for a sample hyperparam
 %} 
 {% include section-single.html
     background="background-purple" 
-    padding-top="0em" padding-bottom="0em" 
+    padding-top="0em" padding-bottom="10em" 
     content-single=chart_single
 %}
-{% include section-halfs.html 
-    background="background-purple" 
-    padding-top="5em" padding-bottom="10em" 
-    content-left-half=chart_left 
-    content-right-half=chart_right 
-%} 
+
 
 
 {% capture cl_single%}
@@ -135,7 +124,7 @@ It’s easy to work in the cloud of your choice to find the best quality model.
 
 {% endcapture %}
 {% capture cl_left_top %}
-## <i class="fas fa-cloud"></i> RAPIDS on Cloud Machine Learning Services
+## <i class="fas fa-cloud"></i> RAPIDS on Cloud <br> Machine Learning Services
 Azure ML, AWS Sagemaker, and Google Cloud AI hyperparameter optimization services free users from the details of managing their own infrastructure. Launch a job from a RAPIDS sample notebook, and the platform will automatically scale up and launch as many instances as you need to complete the experiments quickly. From a centralized interface, you can manage your jobs, view results, and find the best model to deploy.
 
 ![azure ml]({{ site.baseurl }}{% link /assets/images/azure-ml.png %}){: .half-image-center}
@@ -148,7 +137,7 @@ Azure ML, AWS Sagemaker, and Google Cloud AI hyperparameter optimization service
 {% endcapture %}
 
 {% capture cl_right_top %}
-## <i class="fas fa-clouds"></i> Bring Your Own Cloud
+## <i class="fas fa-clouds"></i> Bring Your Own Cloud <br> On-Prem or Public
 Whether running a cluster on-prem, or managing instances in a public cloud, RAPIDS integrates with HPO platforms that can run on your infrastructure. RayTune and Dask-ML both provide cloud-neutral platforms for hyperparameter optimization. RayTune combines the scalable Ray platform with state-of-the-art HPO algorithms, including PBT, Vizier’s stopping rule, and more. Dask-ML HPO offers GPU-aware caching of intermediate datasets and a familiar, Pythonic API. Both can benefit from high-performance estimators from RAPIDS.
 
 ![ray tune]({{ site.baseurl }}{% link /assets/images/ray-tune.png %}){: .third-image-center}
@@ -166,12 +155,12 @@ Whether running a cluster on-prem, or managing instances in a public cloud, RAPI
 %}
 {% include section-single.html
     background="background-white" 
-    padding-top="10em" padding-bottom="0em" 
+    padding-top="5em" padding-bottom="0em" 
     content-single=cl_single
 %}
 {% include section-halfs.html 
     background="background-white" 
-    padding-top="3em" padding-bottom="10em" 
+    padding-top="0em" padding-bottom="10em" 
     content-left-half=cl_left_top
     content-right-half=cl_right_top
 %}

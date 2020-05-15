@@ -14,7 +14,7 @@ layout: default
 This page contains useful guides, assets, **[fonts](https://fonts.google.com/specimen/Open+Sans){: target="_blank"}**, and themes to help you style RAPIDS communications consistently and clearly. 
 
 ## <i class="far fa-bookmark"></i> RAPIDS Citation Guide
-If you use RAPIDS in a publication, please use citations in the following format (BibTeX entry for LaTeX):
+We welcome **[citations](citations.html)**! If you use RAPIDS in a publication, please use citations in the following format (BibTeX entry for LaTeX):
 ```tex
 @Manual{,
   title = {RAPIDS: Collection of Libraries for End to End GPU Data Science},
