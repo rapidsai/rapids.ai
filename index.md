@@ -432,21 +432,21 @@ Accelerate Hyperparameter Optimization (HPO) in the Cloud. The RAPIDS team works
 # Contributors
 {: .section-title-full}
 {% include contributing-logos.html 
-    padding-top="1em" padding-bottom="5em" 
+    padding-top="0em" padding-bottom="5em" 
 %}
 
 
 # Adopters
 {: .section-title-full}
 {% include adopter-logos.html 
-    padding-top="1em" padding-bottom="5em" 
+    padding-top="0em" padding-bottom="5em" 
 %}
 
 
 # Open Source
 {: .section-title-full}
 {% include open-source-logos.html 
-    padding-top="1em" padding-bottom="10em" 
+    padding-top="0em" padding-bottom="10em" 
 %}
 
 {% include slopecap.html 
