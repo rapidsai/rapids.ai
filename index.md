@@ -94,10 +94,10 @@ A short introduction to XGBoost with a distributed CUDA DataFrame via Dask-cuDF.
 A Github repository with our introductory examples of XGBoost, cuML demos, cuGraph demos, and more. <br> **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks){: target="_blank"}**
 
 
-## <i class="far fa-bookmark"></i> Example Notebooks Extended
+## <i class="far fa-bookmark"></i> Example Community Notebooks 
 {: .section-subtitle-top-1}
 
-A second Github repository with our extended collection of notebook examples. <br> **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-contrib){: target="_blank"}**
+A second Github repository with our extended collection of community contributed notebook examples. <br> **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-contrib){: target="_blank"}**
 
 
 {% endcapture %}
@@ -168,8 +168,8 @@ RAPIDS is committed to open source. We strive for a **[6 week release schedule](
             stroke-width: 2px;
         }
         .cls-4 {
-            font-size: 16px;
-            font-family: Helvetica;
+            font-size: 15px;
+            font-family: sans-serif, Helvetica;
         }
         .cls-7 {
             fill: #fff;
