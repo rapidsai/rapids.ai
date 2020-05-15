@@ -118,7 +118,8 @@ The repo will walk you through step-by-step instructions for a sample hyperparam
 
 
 {% capture cl_single%}
-# Run your experiments with HPO 
+# Run your experiments with HPO
+ 
 It’s easy to work in the cloud of your choice to find the best quality model.
 {: .subtitle}
 
@@ -127,24 +128,11 @@ It’s easy to work in the cloud of your choice to find the best quality model.
 ## <i class="fas fa-cloud"></i> RAPIDS on Cloud <br> Machine Learning Services
 Azure ML, AWS Sagemaker, and Google Cloud AI hyperparameter optimization services free users from the details of managing their own infrastructure. Launch a job from a RAPIDS sample notebook, and the platform will automatically scale up and launch as many instances as you need to complete the experiments quickly. From a centralized interface, you can manage your jobs, view results, and find the best model to deploy.
 
-![azure ml]({{ site.baseurl }}{% link /assets/images/azure-ml.png %}){: .half-image-center}
-
-![amazon sagemaker]({{ site.baseurl }}{% link /assets/images/amazon-sagemaker.png %}){: .half-image-center}
-
-![google cloud]({{ site.baseurl }}{% link /assets/images/google-cloud.png %}){: .half-image-center}
-
-
 {% endcapture %}
 
 {% capture cl_right_top %}
 ## <i class="fas fa-clouds"></i> Bring Your Own Cloud <br> On-Prem or Public
 Whether running a cluster on-prem, or managing instances in a public cloud, RAPIDS integrates with HPO platforms that can run on your infrastructure. RayTune and Dask-ML both provide cloud-neutral platforms for hyperparameter optimization. RayTune combines the scalable Ray platform with state-of-the-art HPO algorithms, including PBT, Vizier’s stopping rule, and more. Dask-ML HPO offers GPU-aware caching of intermediate datasets and a familiar, Pythonic API. Both can benefit from high-performance estimators from RAPIDS.
-
-![ray tune]({{ site.baseurl }}{% link /assets/images/ray-tune.png %}){: .third-image-center}
-
-
-![dask]({{ site.baseurl }}{% link /assets/images/dask_logo.png %}){: .third-image-center}
-
 
 {% endcapture %}
 
@@ -160,10 +148,28 @@ Whether running a cluster on-prem, or managing instances in a public cloud, RAPI
 %}
 {% include section-halfs.html 
     background="background-white" 
-    padding-top="0em" padding-bottom="10em" 
+    padding-top="0em" padding-bottom="0em" 
     content-left-half=cl_left_top
     content-right-half=cl_right_top
 %}
+
+<section class="container-logo-flex padding-top-1em padding-bottom-10em">
+    <div class="logo-flex">
+       <a href="https://aws.amazon.com/sagemaker/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/amazon-sagemaker.png %}" alt="amazon sagemaker"> </a>
+    </div>
+    <div class="logo-flex">
+       <a href="https://azure.microsoft.com/en-us/services/machine-learning/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/azure-ml.png %}" alt="azure ml"> </a>
+    </div>
+    <div class="logo-flex">
+       <a href="https://cloud.google.com/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/google-cloud.png %}" alt="google cloud"> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://dask.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/dask_logo_icon.png %}" alt="Dask"> </a>
+    </div>
+    <div class="logo-flex">
+       <a href="https://docs.ray.io/en/latest/tune.html" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/ray-tune.png %}" alt="ray tune"> </a>
+    </div>
+</section>
 
 
 {% capture end_bottom %}
