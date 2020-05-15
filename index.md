@@ -12,33 +12,34 @@ name: index # added to fix issue with nav bar not highlighting index page
 {: .section-title-full }
 
 {% capture about_top_left %}
-## <i class="fas fa-info-circle"></i> Accelerated Data Science
-The RAPIDS suite of open source software libraries gives you the freedom to execute end-to-end data science and analytics pipelines entirely on GPUs. <br> **[Learn more about RAPIDS <i class="fas fa-angle-double-right"></i>](about.html)**
+## <i class="fal fa-info-circle"></i> Accelerated Data Science
+The RAPIDS suite of open source software libraries gives you the freedom to execute end-to-end data science and analytics pipelines entirely on GPUs. <br> **[Learn about RAPIDS <i class="fas fa-angle-double-right"></i>](about.html)**
 {% endcapture %}
 
 {% capture about_top_middle %}
-## <i class="fas fa-expand-arrows-alt"></i> Scale Out on GPUS
-Seamlessly scale from GPU workstations to multi-GPU servers and multi-node clusters with Dask. <br> **[Learn more about Dask <i class="fas fa-angle-double-right"></i>](dask.html)**
+## <i class="fal fa-expand-arrows-alt"></i> Scale Out on GPUS
+Seamlessly scale from GPU workstations to multi-GPU servers and multi-node clusters with Dask. <br> **[Learn about Dask <i class="fas fa-angle-double-right"></i>](dask.html)**
 {% endcapture %}
 
 {% capture about_top_right %}
 ## <i class="fab fa-python"></i> Python Integration
-Accelerate your Python data science toolchain with minimal code changes and no new tools to learn. <br> **[Learn more about our libraries <i class="fas fa-angle-double-right"></i>](#libraries)**
+Accelerate your Python data science toolchain with minimal code changes and no new tools to learn. <br> **[Learn about our libraries <i class="fas fa-angle-double-right"></i>](#libraries)**
 {% endcapture %}
 
 {% capture about_bottom_left %}
-## <i class="fas fa-bullseye"></i> Top Model Accuracy
-Increase machine learning model accuracy by iterating on models faster and deploying them more frequently. <br> **[Learn more about deployment <i class="fas fa-angle-double-right"></i>](start.html)**
+## <i class="fal fa-bullseye"></i> Top Model Accuracy
+Increase machine learning model accuracy by iterating on models faster and deploying them more frequently. <br> **[Learn about RAPIDS for model optimization <i class="fas fa-angle-double-right"></i>](hpo.html)**
 {% endcapture %}
 
 {% capture about_bottom_middle %}
-## <i class="far fa-clock"></i> Reduced Training Time
-Drastically improve your productivity with more interactive data science tools like XGBoost. <br> **[Learn more about XGBoost <i class="fas fa-angle-double-right"></i>](xgboost.html)**
+## <i class="fal fa-clock"></i> Reduced Training Time
+Drastically improve your productivity with more interactive data science tools like XGBoost. <br> **[Learn about XGBoost <i class="fas fa-angle-double-right"></i>](xgboost.html)**
+<br> **[Learn about accelerated ML with cuML <i class="fas fa-angle-double-right"></i>](https://docs.rapids.ai/api/cuml/stable/){: target="_blank"}**
 {% endcapture %}
 
 {% capture about_bottom_right %}
 ## <i class="fas fa-code-branch"></i> Open Source
-RAPIDS is an open source project. Supported by NVIDIA, it also relies on numba, apache arrow, and many more open source projects. <br> **[Learn more about our projects <i class="fas fa-angle-double-right"></i>](community.html)**
+RAPIDS is an open source project. Supported by NVIDIA, it also relies on numba, apache arrow, and many more open source projects. <br> **[Learn about our projects <i class="fas fa-angle-double-right"></i>](community.html)**
 {% endcapture %}
 
 {% include section-double-thirds.html 
@@ -223,7 +224,7 @@ Whether you are new to RAPIDS, looking to help, or are part of the team, learn a
 
 
 {% capture lib1_left %}
-## <i class="fas fa-terminal"></i> cuDF <span class="api-tag">API</span>
+## <i class="fad fa-terminal"></i> cuDF <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cudf/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/master/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
@@ -232,7 +233,7 @@ cuDF is a Python GPU DataFrame library (built on the **[Apache Arrow](http://arr
 
 {% endcapture %}
 {% capture lib1_right %}
-## <i class="fas fa-terminal"></i> libcudf <span class="lib-tag">LIB</span>
+## <i class="fad fa-terminal"></i> libcudf <span class="lib-tag">LIB</span>
 
 **[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/libcudf/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/master/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
@@ -241,7 +242,7 @@ libcudf is a C/C++ CUDA library for implementing standard dataframe operations. 
 
 {% endcapture %}
 {% capture lib2_left %}
-## <i class="fas fa-terminal"></i> cuML <span class="api-tag">API</span>
+## <i class="fad fa-terminal"></i> cuML <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cuml){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cuml/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuml/blob/master/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
@@ -251,7 +252,7 @@ cuML is a suite of libraries that implement machine learning algorithms and math
 {% endcapture %}
 
 {% capture lib2_right %}
-## <i class="fas fa-terminal"></i> cuGraph <span class="api-tag">API</span>
+## <i class="fad fa-terminal"></i> cuGraph <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cugraph){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cugraph/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cugraph/blob/master/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
@@ -260,7 +261,7 @@ cuGraph is a GPU accelerated graph analytics library, with functionality like **
 
 {% endcapture %}
 {% capture lib3_left %} 
-## <i class="fas fa-terminal"></i> cuSginal <span class="api-tag">API</span>
+## <i class="fad fa-terminal"></i> cuSginal <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cusignal){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cusignal/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cusignal/blob/master/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
@@ -269,7 +270,7 @@ cuSignal is a GPU accelerated signal processing library built around a **[SciPy 
 
 {% endcapture %}
 {% capture lib3_right %}
-## <i class="fas fa-terminal"></i> cuSpatial <span class="api-tag">API</span>
+## <i class="fad fa-terminal"></i> cuSpatial <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cuspatial){: target="_blank"}** **/** **[Docs](https://github.com/rapidsai/cuspatial){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuspatial/blob/master/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
@@ -278,7 +279,7 @@ cuSpatial is an efficient C++ library accelerated on GPUs with Python bindings t
 
 {% endcapture %}
 {% capture lib4_left %} 
-## <i class="fas fa-terminal"></i> cuxfilter <span class="api-tag">API</span>
+## <i class="fad fa-terminal"></i> cuxfilter <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cuxfilter){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cuxfilter/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuxfilter/blob/master/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
@@ -287,7 +288,7 @@ cuxfilter is a framework to connect web visualizations to GPU accelerated crossf
 
 {% endcapture %}
 {% capture lib4_right %} 
-## <i class="fas fa-terminal"></i> CLX <span class="api-tag">API</span>
+## <i class="fad fa-terminal"></i> CLX <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/clx){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/clx/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/clx/blob/master/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
@@ -295,7 +296,7 @@ cuxfilter is a framework to connect web visualizations to GPU accelerated crossf
 Cyber Log Accelerators (CLX), also pronounced "clicks", provides a collection of RAPIDS examples for security analysts, data scientists, and engineers to quickly get started applying RAPIDS and GPU acceleration to real-world cybersecurity use cases.
 {% endcapture %}
 {% capture lib5_left %}
-## <i class="fas fa-terminal"></i> nvStrings <span class="api-tag">API</span>
+## <i class="fad fa-terminal"></i> nvStrings <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/nvstrings/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/master/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
@@ -304,7 +305,7 @@ nvStrings, the Python bindings for **[cuStrings](https://github.com/rapidsai/cud
 
 {% endcapture %}
 {% capture lib5_right %}
-## <i class="fas fa-terminal"></i> RMM <span class="lib-tag">LIB</span>
+## <i class="fad fa-terminal"></i> RMM <span class="lib-tag">LIB</span>
 
 **[GitHub](https://github.com/rapidsai/rmm){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/rmm/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/rmm/blob/master/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
@@ -350,63 +351,102 @@ RAPIDS Memory Manager (RMM) is a central place for all device memory allocations
 %}
 
 
-# Community Projects
+# Community and Projects
 {: .section-title-full .padding-top-1em}
 
 {% capture com_top_left %}
+![BLAZINGSQL]({{ site.baseurl }}{% link /assets/images/blazingsql.png %}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + BlazingSQL
 
 BlazingSQL is an open source project providing distributed SQL for analytics that enables the integration of enterprise data at scale. RAPIDS is actively contributing to BlazingSQL, and it integrates with RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. <br> **[Learn more on our BlazingSQL page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](blazingsql.html)**
+
 {% endcapture %}
 
 {% capture com_top_right %}
+![Dask]({{ site.baseurl }}{% link /assets/images/dask.svg %}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Dask
 
 Dask is an open source project providing advanced parallelism for analytics that enables performance at scale. RAPIDS is actively contributing to Dask, and it integrates with both RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. <br> **[Learn more on our Dask page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](dask.html)**
+
 {% endcapture %}
 
 {% capture com_bottom_left %}
+![xgboost]({{ site.baseurl }}{% link /assets/images/xgboost_logo_sorta.svg %}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + XGBoost
 
 XGBoost is a well-known gradient boosted decision trees (GBDT) machine learning package used to tackle regression, classification, and ranking problems. The RAPIDS team works closely with the Distributed Machine Learning Common (DMLC) XGBoost organization to upstream code and ensure that all components of the GPU-accelerated analytics ecosystem work together. <br> **[Learn more on our XGBoost page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](xgboost.html)**
+
 {% endcapture %}
 
 {% capture com_bottom_right %}
+![spark]({{ site.baseurl }}{% link /assets/images/spark-logo-trademark.png %}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Spark
 
-Coming soon: NVIDIA will be bringing RAPIDS to Apache Spark.
+NVIDIA will be bringing RAPIDS to Apache Spark.
 <br> **[Learn more on our blog post <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://medium.com/rapids-ai/nvidia-gpus-and-apache-spark-one-step-closer-2d99e37ac8fd){: target="_blank"}**
+
+{% endcapture %}
+
+{% capture com2_top_left %}
+![Plotly]({{ site.baseurl }}{% link /assets/images/Plotly_Dash_logo.png %}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + Plotly Dash
+
+Plotly’s Dash enables Data Science teams to focus on the data and models, while producing and sharing enterprise-ready analytic apps that sit on top of RAPIDS-accelerated Python dataframes. <br> **[Learn more on our Plotly page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](plotly.html)**
+
+{% endcapture %}
+
+{% capture com2_top_right %}
+![HPO]({{ site.baseurl }}{% link /assets/images/csp+hpo.png %}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + HPO
+
+Accelerate Hyperparameter Optimization (HPO) in the Cloud. The RAPIDS team works closely with major cloud providers and open source hyperparameter optimization solutions to ensure smooth integration and high performance, regardless of your deployment platform. <br> **[Learn more on our HPO page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](hpo.html)**
+
+{% endcapture %}
+
+{% capture com2_bottom_left %}
+
+{% endcapture %}
+
+{% capture com2_bottom_right %}
 
 {% endcapture %}
 
 
 {% include section-double-halfs.html 
     background="background-white" 
-    padding-top="1em" padding-bottom="3em" 
+    padding-top="1em" padding-bottom="0em" 
     content-top-left-half=com_top_left
     content-top-right-half=com_top_right
     content-bottom-left-half=com_bottom_left
     content-bottom-right-half=com_bottom_right
 %}
+{% include section-double-halfs.html 
+    background="background-white" 
+    padding-top="0m" padding-bottom="3em" 
+    content-top-left-half=com2_top_left
+    content-top-right-half=com2_top_right
+    content-bottom-left-half=com2_bottom_left
+    content-bottom-right-half=com2_bottom_right
+%}
 
 # Contributors
 {: .section-title-full}
 {% include contributing-logos.html 
-    padding-top="1em" padding-bottom="5em" 
+    padding-top="0em" padding-bottom="5em" 
 %}
 
 
 # Adopters
 {: .section-title-full}
 {% include adopter-logos.html 
-    padding-top="1em" padding-bottom="5em" 
+    padding-top="0em" padding-bottom="5em" 
 %}
 
 
 # Open Source
 {: .section-title-full}
 {% include open-source-logos.html 
-    padding-top="1em" padding-bottom="10em" 
+    padding-top="0em" padding-bottom="10em" 
 %}
 
 {% include slopecap.html 
