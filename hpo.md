@@ -30,13 +30,13 @@ Machine learning models can have dozens of options, or “hyperparameters,” th
 
 
 {% capture yd_header %}
-# Benifits With RAPIDS
+# Benefits With RAPIDS
 {: .section-title-full}
 
 {% endcapture %}
 {% capture yd_left %}
 ## <i class="fal fa-boxes-alt"></i> Smooth Integration
-RAPIDS matches popular PyData APIs, making it an easy drop-in for legacy workloads built on Pandas and scikit-learn.
+RAPIDS matches popular PyData APIs, making it an easy drop-in for existing workloads built on Pandas and scikit-learn.
 
 {% endcapture %}
 {% capture yd_mid %}
