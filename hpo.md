@@ -18,13 +18,15 @@ layout: default
 Machine learning models can have dozens of options, or “hyperparameters,” that make the difference between a great model and an inaccurate one. Accelerated machine learning models in RAPIDS give you the flexibility to use hyperparameter optimization (HPO) experiments to explore all of these options to find the most accurate possible model for your problem. The acceleration of GPUs lets data scientists iterate through hundreds or thousands of variants over a lunch break, even for complex models and large datasets.
 {: .subtitle}
 
+## RAPIDS Integration into Cloud / Distributed Frameworks
+{: .section-title-full}
 
 ![RAPIDS CSP HPO]({{ site.baseurl }}{% link /assets/images/HPO-space.png %}){: .center}
 {% endcapture %}
 
 {% include section-single.html
     background="background-white" 
-    padding-top="0em" padding-bottom="3em" 
+    padding-top="3em" padding-bottom="1em" 
     content-single=intro_content
 %}
 
