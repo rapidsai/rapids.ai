@@ -65,8 +65,8 @@ BlazingSQL is built on the GPU DataFrame, a shared memory model that enables lib
 It’s easy to get started with BlazingSQL + RAPIDS
 {: .subtitle}
 
-## <i class="fas fa-bolt"></i> Try Now In Colab
-The fastest way to get up and running is with Google Colab, a free web-based interface similar to a Jupyter Notebook that lets you quickly run BlazingSQL + RAPIDS on T4 GPUs. **[Try now in Colaboratory <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/github/BlazingDB/bsql-demos/blob/master/colab_notebooks/blazingsql_demo.ipynb){: target="_blank"}**
+## <i class="fas fa-bolt"></i> Try Now In BlazingSQL Notebooks
+Managed Jupyter environments, so data scientists can scale Python and leverage RAPIDS in the cloud. No setup required.<br>**[Try free on BlazingSQL Notebooks <i class="fas fa-angle-double-right"></i>](https://app.blazingsql.com/){: target="_blank"}**
 
 
 {% endcapture %}
@@ -75,7 +75,7 @@ The fastest way to get up and running is with Google Colab, a free web-based int
 ## <i class="fab fa-readme"></i> Learn More
 {: .section-subtitle-top-1}
 
-Learn more about Colab, our Docker Container, and getting started. **[More on BlazingSQL <i class="fas fa-angle-double-right"></i>](https://www.blazingsql.com/getstarted){: target="_blank"}**
+Learn more about BlazingSQL Notebooks and getting started.<br>**[More on BlazingSQL <i class="fas fa-angle-double-right"></i>](https://www.blazingsql.com/notebooks){: target="_blank"}**
 
 ## <i class="far fa-file-code"></i> Access BlazingSQL Docs
 See the latest **[documentation from BlazingSQL <i class="fas fa-angle-double-right"></i>](https://docs.blazingdb.com/docs){: target="_blank"}**
@@ -103,31 +103,31 @@ See the latest **[documentation from BlazingSQL <i class="fas fa-angle-double-ri
 {% capture start_left %}
 # BlazingSQL Demos
 
-Get started with **[BlazingSQL](https://blazingsql.com/getstarted){: target="_blank"}** + **[RAPIDS](https://rapids.ai/start.html){: target="_blank"}** and try all the demos free on Google CoLab. 
+Get started with **[BlazingSQL Notebooks](https://app.blazingsql.com/){: target="_blank"}** + **[RAPIDS](https://rapids.ai/start.html){: target="_blank"}** and try all the demos free on BlazingSQL Notebooks. 
 {: .subtitle}
 
 ## <i class="far fa-hand-point-down"></i> Getting Started Demo
 Walk through the process for getting BlazingSQL and cuDF running. Then go through a basic ETL process and query.
 
-**[GET STARTED](https://colab.research.google.com/github/BlazingDB/bsql-demos/blob/master/colab_notebooks/blazingsql_demo.ipynb){: target="_blank" .primary-button .blue-btn}**
+**[LOG IN](https://app.blazingsql.com/){: target="_blank" .primary-button .blue-btn}**
 
 {% endcapture %}
 
 {% capture start_right %}
-## <i class="far fa-file-code"></i> Federated Query Demo
+## <i class="far fa-file-code"></i> Welcome Notebook
 {: .section-subtitle-top-1}
 
-In a single query, join an Apache Parquet Gilem a CSV, and a GPU DataFrame (GDF) in GPU memory. **[Try now in Colaboratory <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/github/BlazingDB/bsql-demos/blob/master/colab_notebooks/federated_query_demo.ipynb){: target="_blank"}**
+An introduction to BlazingSQL Notebooks and the GPU Data Science Ecosystem. **[Try it <i class="fas fa-angle-double-right"></i>](https://app.blazingsql.com/jupyter/user-redirect/lab/workspaces/auto-b/tree/Welcome_to_BlazingSQL_Notebooks/welcome.ipynb){: target="_blank"}**
 
-## <i class="far fa-file-code"></i> Graphistry Netflow Demo
+## <i class="far fa-file-code"></i> The Dataframe
 {: .section-subtitle-top-1}
-Query 65M rows of network security data (netflow) with BlazingSQL. **[Try now in Colaboratory <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/github/BlazingDB/bsql-demos/blob/master/colab_notebooks/graphistry_netflow_demo.ipynb){: target="_blank"}**
+Learn how to use BlazingSQL and cuDF to create GPU DataFrames with SQL and Pandas-like APIs. **[Try it <i class="fas fa-angle-double-right"></i>](https://app.blazingsql.com/jupyter/user-redirect/lab/workspaces/auto-b/tree/Welcome_to_BlazingSQL_Notebooks/intro_notebooks/the_dataframe.ipynb){: target="_blank"}**
 
-## <i class="far fa-file-code"></i> Taxi Demo
-Train a linear regression model with cuML on 55 million rows of public NYC Taxi Data loaded with BlazingSQL. **[Try now in Colaboratory <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/drive/1yrml5FhQd7VHwcvpUql1LspjCjKg8u0w){: target="_blank"}**
+## <i class="far fa-file-code"></i> Data Visualization
+Plug in your favorite Python visualization packages, or use GPU accelerated visualization tools to render millions of rows in a flash. **[Try it <i class="fas fa-angle-double-right"></i>](https://app.blazingsql.com/jupyter/user-redirect/lab/workspaces/auto-b/tree/Welcome_to_BlazingSQL_Notebooks/intro_notebooks/data_visualization.ipynb){: target="_blank"}**
 
-## <i class="far fa-file-code"></i> BlazingSQL vs Apache Spark Demo
-Analyze 20 million rows of net flow data. Compare BlazingSQL and Apache Spark timings for the same workload. **[Try now in Colaboratory <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/github/BlazingDB/bsql-demos/blob/master/colab_notebooks/vs_pyspark_netflow.ipynb){: target="_blank"}**
+## <i class="far fa-file-code"></i> Machine Learning
+Learn about cuML, mirrored after the Scikit-Learn API, it offers GPU accelerated machine learning on GPU DataFrames. **[Try it <i class="fas fa-angle-double-right"></i>](https://app.blazingsql.com/jupyter/user-redirect/lab/workspaces/auto-b/tree/Welcome_to_BlazingSQL_Notebooks/intro_notebooks/machine_learning.ipynb){: target="_blank"}**
 
 {% endcapture %}
 {% include section-halfs.html 
