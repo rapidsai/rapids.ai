@@ -5,8 +5,7 @@ tagline: "Roadmap Schedule"
 layout: short
 ---
 
-{% include roadmap-json.html
+{% include roadmap-page-json.html
     homepage="false"
-    background="background-purple"
     padding-top="3em" padding-bottom="1em" 
 %}
