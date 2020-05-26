@@ -1,447 +1,413 @@
 {
-   "stable": "0.11",
-   "stabledate": "Dec 2019",
-   "nightly": "0.12",
-   "nightlydate": "Jan 2020",
-   "future": "0.13",
-   "futuredate": "Mar 2020",
+   "stable": "0.13",
+   "stabledate": "Mar 2020",
+   "nightly": "0.14",
+   "nightlydate": "Jun 2020",
+   "future": "0.15",
+   "futuredate": "Aug 2020",
    "labels": [
-      "community",
-      "ucx",
-      "clx",
-      "NVDashboard",
-      "dask",
-      "cuDF",
+      "poc",
       "cuML",
-      "dataShader",
+      "cuIO",
+      "cuDF",
+      "libcudf",
       "cuGraph",
-      "cuIO"
+      "gpuCI",
+      "RMM",
+      "ucx"
    ],
    "projects": {
       "stable": [
          {
-            "title": "Beta version of UCX-Py",
-            "description": "Beta version of UCX-Py is available via conda or RAPIDS Nightlies. RAPIDS has been working with the UCX library for high-performance networking, using technologies like Infiniband and NVIDIA NVLink, and connecting this to Python.",
+            "title": "RAPIDS Kepler.gl PoC v2",
+            "description": "Proof of Concept - Extend kepler.gl functionality to very large datasets on GPU memory, without browser limitations.",
             "labels": [
-               "community",
-               "ucx",
-               "Priority",
+               "poc",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/138"
+            "link": "https://github.com/rapidsai/roadmap/issues/167"
          },
          {
-            "title": "clx - cybert",
-            "description": "cyBERT, an ongoing experiment to train and optimize transformer networks for the task of flexibly and robustly parsing logs of heterogeneous cybersecurity data.",
-            "labels": [
-               "clx",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/137"
-         },
-         {
-            "title": "CLX repo",
-            "description": "Cyber Log Accelerators contains pre-built use cases that demonstrate RAPIDS functionality specifically built for security analysts and infosec data scientists, integration components with the SIEM, I/O and workflow wrappers, and accelerated primitive operations for IPv4 and DNS data types.",
-            "labels": [
-               "clx",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/136"
-         },
-         {
-            "title": "NVDashboard",
-            "description": "NVDashboard allows users to graphically monitor system metrics, fully integrated into your notebook experience",
-            "labels": [
-               "NVDashboard",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/111"
-         },
-         {
-            "title": "Dask Cloud Provider",
-            "description": "The Dask Cloud Provider library gives users the ability to confidently create Dask clusters on various cloud provider services using familiar Dask APIs.",
-            "labels": [
-               "dask",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/110"
-         },
-         {
-            "title": "Improved dashboarding in Dask",
-            "description": "Dask has improved dashboarding and profiling tools, including new endpoints to measure bandwidth per data type and per worker",
-            "labels": [
-               "community",
-               "dask",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/109"
-         },
-         {
-            "title": "Dask core intra-file parallelism",
-            "description": "Dask core has intra-file parallelism using row groups that are exposed to Dask-cudf",
-            "labels": [
-               "community",
-               "cuDF",
-               "dask",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/108"
-         },
-         {
-            "title": "Dask-cuDF exposes dropna capabilities for groupby operations",
-            "description": "Dask-cudf has also exposed dropna capabilities for groupby operations",
-            "labels": [
-               "community",
-               "cuDF",
-               "dask",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/107"
-         },
-         {
-            "title": "Dask core merges/joins",
-            "description": "Switching from custom merge/join algorithms to Dask core for merges and joins.",
-            "labels": [
-               "dask",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/106"
-         },
-         {
-            "title": "Random Forest Enhancements",
-            "description": "Random Forest models can now be persisted with standard Python pickling, making them easier to deploy.",
+            "title": "Customizable output types",
+            "description": "New framework for cuML estimators to return user-specified output types (e.g. numpy outputs to match scikit-learn style or GPU array outputs for maximal performance.)",
             "labels": [
                "cuML",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/105"
+            "link": "https://github.com/rapidsai/roadmap/issues/162"
          },
          {
-            "title": "Dask-cudf improvements with ORC file readers/writers",
-            "description": "Dask-cudf improvements with ORC file readers/writers",
-            "labels": [
-               "community",
-               "cuDF",
-               "dask",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/104"
-         },
-         {
-            "title": "Added additional MultiIndex support",
-            "description": "Added additional MultiIndex support",
-            "labels": [
-               "cuDF",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/103"
-         },
-         {
-            "title": "Tighter CuPy integration",
-            "description": "Tighter CuPy integration.",
-            "labels": [
-               "cuDF",
-               "Priority",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/102"
-         },
-         {
-            "title": "DataFrame covariance and correlation",
-            "description": "DataFrame covariance and correlation support.",
-            "labels": [
-               "community",
-               "cuDF",
-               "dask",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/101"
-         },
-         {
-            "title": "Groupby standard deviation",
-            "description": "Groupby standard deviation support.",
-            "labels": [
-               "cuDF",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/100"
-         },
-         {
-            "title": "Row-wise reduction and scan operations",
-            "description": "Support for row-wise reduction and scan operations",
-            "labels": [
-               "cuDF",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/98"
-         },
-         {
-            "title": "DataFrame level typecasting",
-            "description": "DataFrame level typecasting",
-            "labels": [
-               "cuDF",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/97"
-         },
-         {
-            "title": "Inplace support for drop and reset_index",
-            "description": "Inplace support for drop and reset_index",
-            "labels": [
-               "cuDF",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/96"
-         },
-         {
-            "title": "UCX NVLink/Switch in Dask-cuDF",
-            "description": "RAPIDS has been working with the UCX library for high-performance networking and  using technologies like Infiniband and NVIDIA NVLink and connecting this to Python",
-            "labels": [
-               "dask",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/93"
-         },
-         {
-            "title": "Sparse tree Forest Inference Library (FIL)",
-            "description": "The Forest Inferencing Library (FIL) now supports sparse tree storage, so even very deep trees can fit in GPU RAM. FIL can import trained models from scikit-learn\u2019s RandomForest module as well as those from XGBoost, cuML, and LightGB.",
+            "title": "MNMG Naive Bayes",
+            "description": "Naive Bayes classifiers, supporting multi-node, multi-gpu scaling",
             "labels": [
                "cuML",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/80"
+            "link": "https://github.com/rapidsai/roadmap/issues/161"
          },
          {
-            "title": "Refactor to support column data types",
-            "description": "Porting all of the cuDF algorithms over to use new core column and data structures (some of this work continues in 0.12)",
-            "labels": [
-               "cuDF",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/78"
-         },
-         {
-            "title": "RAPIDS cuDatashader - GPU-accelerated version",
-            "description": "cuDataShader is a port of PyViz's Datashader using GPU CUDA technology to enable up to 50x acceleration in visualization render times",
-            "labels": [
-               "dataShader",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/73"
-         },
-         {
-            "title": "cuDF Refactoring",
-            "description": "CuGraph redesign includes the addition of a new graph class to capture the type of graph: Directed (DiGraph) or Undirected (Graph). The current set of graph algorithms is also being refactored to use the new graph types and to throw helpful errors if an invalid graph type is used (e.g., weakly connected components only accepts a DiGraph).",
-            "labels": [
-               "cuGraph",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/70"
-         },
-         {
-            "title": "ARIMA",
-            "description": "First experimental release of Auto-Regressive Integrated Moving Average (ARIMA)",
+            "title": "Seasonal ARIMA",
+            "description": "Support for seasonality in Auto Regressive Moving Average time series models.",
             "labels": [
                "cuML",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/69"
+            "link": "https://github.com/rapidsai/roadmap/issues/160"
          },
          {
-            "title": "MNMG tSVD",
-            "description": "Multi-Node / Multi-GPU (MNMG) dimensionality reduction algorithm Truncated Singular Value Decomposition (tSVD) added to cuML.",
+            "title": "MNMG Linear/Ridge/Lasso regression",
+            "description": "Multi-node, multi-GPU support for popular linear models, including OLS, Ridge, and Lasso regression.",
             "labels": [
                "cuML",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/66"
+            "link": "https://github.com/rapidsai/roadmap/issues/158"
          },
          {
-            "title": "MNMG PCA",
-            "description": "Multi-Node / Multi-GPU (MNMG) dimensionality reduction algorithm Principal Components Analysis (PCA) added to cuML.",
+            "title": "ORC writer statistics support ",
+            "description": "ORC writer statistics support",
             "labels": [
-               "cuML",
+               "cuIO",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/65"
+            "link": "https://github.com/rapidsai/roadmap/issues/156"
          },
          {
-            "title": "Native HDFS support in cuDF",
-            "description": "Support for native HDFS",
-            "labels": [
-               "cuDF",
-               "Priority",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/62"
-         },
-         {
-            "title": "libcudf string integration",
-            "description": "Added a new native strings column type which is supported throughout the library.",
+            "title": "Decimal fixed point (initial 64-bit type design)",
+            "description": "Define new fixed-point data type and columns & port algorithms to operate on them.",
             "labels": [
                "cuDF",
-               "Priority",
+               "libcudf",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/60"
+            "link": "https://github.com/rapidsai/roadmap/issues/153"
+         },
+         {
+            "title": "Dictionary columns (initial design)",
+            "description": "Define new dictionary (aka categorical) column type & port algorithms to operate on them.",
+            "labels": [
+               "cuDF",
+               "libcudf",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/152"
+         },
+         {
+            "title": "Python bindings for new APIs",
+            "description": "Python bindings for new APIs",
+            "labels": [
+               "cuDF",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/151"
+         },
+         {
+            "title": "Finish libcudf++ refactor",
+            "description": "Refactor all of libcudf to use new base column/table types",
+            "labels": [
+               "cuDF",
+               "libcudf",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/150"
          }
       ],
       "nightly": [
          {
-            "title": "MNMG OLS + Ridge",
-            "description": "MNMG OLS + Ridge",
-            "labels": [
-               "cuML",
-               "Priority",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/143"
-         },
-         {
-            "title": "cuIO Zarr",
-            "description": "cuIO Zarr",
-            "labels": [
-               "cuIO",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/142"
-         },
-         {
-            "title": "ASSP (cuGraph)",
-            "description": "ASSP (cuGraph)",
+            "title": "Betweenness Centrality",
+            "description": "public description goes here",
             "labels": [
                "cuGraph",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/141"
+            "link": "https://github.com/rapidsai/roadmap/issues/189"
          },
          {
-            "title": "MG BFS (cuGraph)",
-            "description": "MG BFS (cuGraph)",
+            "title": "ForceAtlas2 ",
+            "description": "Used by visualization tool and it define the (x,y) screen coordinates to place items\r\nHugo (intern) is working this and we are seeing a 3x speed-up over state-of-the-art",
             "labels": [
                "cuGraph",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/140"
+            "link": "https://github.com/rapidsai/roadmap/issues/178"
          },
          {
-            "title": "Multi-column Renumbering (cuGraph)",
-            "description": "Multi-column Renumbering",
+            "title": "Remove legacy code",
+            "description": "Finishing up the libcudf API refactor we internally call \"libcudf++\" and dropping all legacy APIs that were previously deprecated.",
             "labels": [
-               "cuGraph",
+               "libcudf",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/90"
+            "link": "https://github.com/rapidsai/roadmap/issues/176"
          },
          {
-            "title": "MNMG Naive Bayes",
-            "description": "MultinomialNB, sparsity support, MNMG",
-            "labels": [
-               "cuML",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/89"
-         },
-         {
-            "title": "Support wide+deep RF without OOM",
-            "description": "Support wide+deep RF without OOM",
-            "labels": [
-               "cuML",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/88"
-         },
-         {
-            "title": "Support vector regression ",
-            "description": "Support vector regression",
-            "labels": [
-               "cuML",
-               "Priority",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/87"
-         },
-         {
-            "title": "Datashader integrated into cuxfilter",
-            "description": "Datashader integrated into cuxfilter",
-            "labels": [
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/85"
-         },
-         {
-            "title": "Refactoring (cugraph)",
-            "description": "Refactoring",
-            "labels": [
-               "cuGraph",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/81"
-         },
-         {
-            "title": "CSP Integration",
-            "description": "CSP Integration",
-            "labels": [
-               "Priority",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/76"
-         },
-         {
-            "title": "RAPIDS-core - common build infra separation",
-            "description": "RAPIDS-core - common build infra separation",
-            "labels": [
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/72"
-         },
-         {
-            "title": "Expanded Graph Types",
-            "description": "Expanded Graph Types",
-            "labels": [
-               "cuGraph",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/71"
-         },
-         {
-            "title": "GPUDirect Storage Optimization v2",
-            "description": "GPUDirect Storage Optimization v2",
-            "labels": [
-               "cuIO",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/64"
-         },
-         {
-            "title": "cuIO <> DL Optimizations",
-            "description": "cuIO <> DL Optimizations",
-            "labels": [
-               "cuIO",
-               "Public"
-            ],
-            "link": "https://github.com/rapidsai/roadmap/issues/63"
-         },
-         {
-            "title": "Expanded GroupBy Aggregations",
-            "description": "Expanded GroupBy Aggregations",
+            "title": "Documentation C++/Python",
+            "description": "Improving C++ and Python API and usage documentation.",
             "labels": [
                "cuDF",
+               "cuGraph",
+               "cuML",
+               "libcudf",
                "Public"
             ],
-            "link": "https://github.com/rapidsai/roadmap/issues/61"
-         }
-      ],
-      "future": [
+            "link": "https://github.com/rapidsai/roadmap/issues/175"
+         },
+         {
+            "title": "Expanding CI/CD",
+            "description": "public description goes here",
+            "labels": [
+               "gpuCI",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/174"
+         },
+         {
+            "title": "Performance Regression Testing",
+            "description": "public description goes here",
+            "labels": [
+               "cuGraph",
+               "cuML",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/173"
+         },
+         {
+            "title": "Bug Squashing",
+            "description": "The RAPIDS team is spending significant time during the 0.14 release cycle on eliminating known bugs and paying down technical debt.",
+            "labels": [
+               "cuDF",
+               "cuGraph",
+               "cuML",
+               "libcudf",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/172"
+         },
+         {
+            "title": "Community Outreach",
+            "description": "public description goes here",
+            "labels": [
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/171"
+         },
          {
             "title": "MNMG DBSCAN",
             "description": "Placeholder text...",
             "labels": [
                "cuML",
-               "Priority",
                "Public"
             ],
             "link": "https://github.com/rapidsai/roadmap/issues/42"
+         }
+      ],
+      "future": [
+         {
+            "title": "Read / write partitioned Parquet directories",
+            "description": "Support reading and writing partitioned Parquet datasets efficiently via cuDF.",
+            "labels": [
+               "cuIO",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/197"
+         },
+         {
+            "title": "Read vector of ORC/Parquet files into single table",
+            "description": "It's common to need to process a large number of small parquet or ORC files generated from somewhere else, where a single file isn't capable of saturating a GPU effectively. We should allow passing a vector of files into a single `read_parquet` or `read_orc` call to expose more parallelism to the GPU to more effectively use it.",
+            "labels": [
+               "cuIO",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/196"
+         },
+         {
+            "title": "Custom Python distance/loss funcs",
+            "description": "public description goes here",
+            "labels": [
+               "cuML",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/194"
+         },
+         {
+            "title": "Matrix factorization",
+            "description": "public description goes here",
+            "labels": [
+               "cuML",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/193"
+         },
+         {
+            "title": "Multi-class forest inference",
+            "description": "public description goes here",
+            "labels": [
+               "cuML",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/192"
+         },
+         {
+            "title": "MNMG DBSCAN (v1)",
+            "description": "public description goes here",
+            "labels": [
+               "cuML",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/191"
+         },
+         {
+            "title": "MNMG UMAP (Parallel transform, serial fit)",
+            "description": "Simplified support for transforming a large dataset via UMAP. Fitting occurs on the data for one GPU, but transform can support many GPUs in parallel.",
+            "labels": [
+               "cuML",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/190"
+         },
+         {
+            "title": "MG Renumbering",
+            "description": "public description goes here",
+            "labels": [
+               "cuGraph",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/188"
+         },
+         {
+            "title": "MG WCC",
+            "description": "public description goes here",
+            "labels": [
+               "cuGraph",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/187"
+         },
+         {
+            "title": "MG BFS",
+            "description": "public description goes here",
+            "labels": [
+               "cuGraph",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/186"
+         },
+         {
+            "title": "Inequality Joins",
+            "description": "Support joins where the join condition is an inequality.",
+            "labels": [
+               "cuDF",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/185"
+         },
+         {
+            "title": "Expanded groupby aggregations",
+            "description": "Expand and complete the set of supported aggregations for groupby.",
+            "labels": [
+               "cuDF",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/184"
+         },
+         {
+            "title": "Decimal fixed point column type",
+            "description": "Adding support for columns of 64-bit fixed-point decimal values, and support for these in cuDF algorithms.",
+            "labels": [
+               "cuDF",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/183"
+         },
+         {
+            "title": "Dictionary columns (broad integration)",
+            "description": "Integrating Dictionary columns into cuDF algorithms.",
+            "labels": [
+               "cuDF",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/182"
+         },
+         {
+            "title": "Nested type columns (lists)",
+            "description": "Add support for a `List` datatype which allows for each element in a column to be a vector of another type of elements.",
+            "labels": [
+               "cuDF",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/181"
+         },
+         {
+            "title": "UCX-Py v2",
+            "description": "- Split UCX-Py into two packages: https://github.com/rapidsai/ucx-py/issues/429\r\n- Upstream UCX-Py to OpenUCX\r\n- More MNMG testings",
+            "labels": [
+               "ucx",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/180"
+         },
+         {
+            "title": "Hungarian Algorithm",
+            "description": "The Hungarian method is a combinatorial optimization algorithm that solves the assignment problem in polynomial time and which anticipated later primal-dual methods.",
+            "labels": [
+               "cuGraph",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/177"
+         },
+         {
+            "title": "Subgraph Matching (Gunrock)",
+            "description": "public description goes here",
+            "labels": [
+               "cuGraph",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/166"
+         },
+         {
+            "title": "Leiden Algorithm",
+            "description": "Variation of the Louvain algorithm that addresses many of the issues found in Louvain.",
+            "labels": [
+               "cuGraph",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/164"
+         },
+         {
+            "title": "MNMG PageRank",
+            "description": "Implement the PageRank algorithm to run across multiple nodes.   V1 will create a OPG version of the analytic, then benchmark and tune it",
+            "labels": [
+               "cuGraph",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/163"
+         },
+         {
+            "title": "MNMG Logistic Regression",
+            "description": "Dask-ML enhancements and examples to allow GPU-accelerated multi-node, multi-GPU logistic regression.",
+            "labels": [
+               "cuML",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/159"
+         },
+         {
+            "title": "Kafka Data Source",
+            "description": "Support Kafka as a data source for reading data into cuDF.",
+            "labels": [
+               "cuIO",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/157"
+         },
+         {
+            "title": "GPUDirect Storage optimization v1",
+            "description": "Initial optimization work in utilizing GPUDirect Storage in cuIO parquet and ORC readers",
+            "labels": [
+               "cuIO",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/154"
          }
       ]
    }
