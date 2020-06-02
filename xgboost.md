@@ -35,7 +35,7 @@ The RAPIDS team works closely with the Distributed Machine Learning Common (DMLC
 The project is well supported and documented by many tutorials, quick-start guides, and papers.
 
 ## <i class="fas fa-bolt"></i> Try It Now in CoLab
-Try out XGBoost now, with the basics of cuDF and other RAPIDS libraries, in our online **[XGBoost Colaboratory notebook](https://colab.research.google.com/drive/1XTKHiIcvyL5nuldx0HSL_dUa8yopzy_Y){: target="_blank"}**.
+Try out XGBoost now, with the basics of cuDF and other RAPIDS libraries, in our online **[XGBoost Colaboratory notebook](https://colab.research.google.com/drive/1xnTpVS194BJ0pOPuxN4GOmypdu2RvwdH){: target="_blank"}**.
 
 ## <i class="far fa-bookmark"></i> Notebook Examples
 To see how XGBoost integrates with cuDF, Dask, and the entire RAPIDS ecosystem, check out these **[RAPIDS notebooks](https://github.com/rapidsai/notebooks-contrib){: target="_blank"}** which walk through classification and regression examples.
@@ -112,7 +112,7 @@ It’s easy to work across multiple GPUs and multiple nodes with distributed Das
 {% capture deploy_left %}
 ## <i class="fas fa-expand-arrows-alt"></i> Scale Out with Dask
 
-To take advantage of multiple GPU-accelerated nodes, you can use XGBoost’s native Dask integration. This distributes data, builds DMatrix objects, and sets up cross-node communication to run XGBoost training on a cluster. The **[official XGBoost repository](https://github.com/dmlc/xgboost/tree/master/demo/dask){: target="_blank"}** includes simple examples with distributed Dask and also more detailed **[API documentation](https://xgboost.readthedocs.io/en/latest/python/python_api.html#dask-api){: target="_blank"}**.
+To take advantage of multiple GPU-accelerated nodes, you can use XGBoost’s native Dask integration. This distributes data, builds DMatrix objects, and sets up cross-node communication to run XGBoost training on a cluster.  This **[blog post](https://medium.com/rapids-ai/a-new-official-dask-api-for-xgboost-e8b10f3d1eb7)** covers the XGBoost Dask API in more detail, including usage and performance. The **[official XGBoost repository](https://github.com/dmlc/xgboost/tree/master/demo/dask){: target="_blank"}** includes simple examples with distributed Dask and also more detailed **[API documentation](https://xgboost.readthedocs.io/en/latest/python/python_api.html#dask-api){: target="_blank"}**.
 {% endcapture %}
 {% capture deploy_mid %}
 ## <i class="fas fa-expand-arrows-alt"></i> Scale Out with Spark
@@ -179,12 +179,11 @@ The RAPIDS team is developing GPU enhancements to open-source XGBoost, working c
 {% capture download_left %}
 ## <i class="fas fa-laptop-code"></i> Conda Install
 
-Install using conda (the latest RAPIDS release). The RAPIDS conda channel includes an XGBoost package built with CUDA 9.2/10.0/10.1 and Python 3.6/3.7 versions. You can install it with:
+The default RAPIDS conda metapackage includes a recent snapshot of XGBoost by default. This package is released on the same schedule as other RAPIDS packages and tested for full compatibility. You can install it with:
 ```bash
-> conda install -c rapidsai -c nvidia -c conda-forge \
-        rapids-xgboost cudatoolkit=10.0
+conda install -c rapidsai -c nvidia -c conda-forge \
+    -c defaults rapids=0.12 python=3.7
 ```
-Replacing `10.0` in `cudatoolkit=10.0` will install the desired CUDA version. If you wish to override the python version installed, add `python=3.6` or `python=3.7` to the install command.
 
 ## <i class="fab fa-docker"></i> Docker Container
 {: .section-subtitle-top-2}
@@ -196,12 +195,13 @@ Install using Docker (the latest RAPIDS release). RAPIDS provides Docker images 
 {% capture download_right %}
 ## <i class="fas fa-laptop-code"></i> PIP Install or Other Methods
 
-Install using pip or other methods (the default upstream version).  The default open-source XGBoost packages already include GPU support. Follow the XGBoost instructions to install from source or use:
+Install using pip or other methods (the default upstream version). The default open-source XGBoost packages already include GPU support, Dask integration, and the ability to load data from a cuDF DataFrame. Follow the XGBoost instructions to install from source or use:
+
 ```bash
-> pip install xgboost
+pip install xgboost
 ```
 
-**NOTE:** The pip packages and source installation methods currently install XGBoost version 0.90, which will not include some of the more recent contributions, such as cuDF integration. Those contributions have been integrated to the master branch of XGBoost and will appear in pip packages starting in version 1.0.
+**NOTE:** Full RAPIDS integration first appeared in release 1.0 of XGBoost. Older pip packages will not include cuDF support.
 
 {% endcapture %}
 {% include section-single.html
@@ -242,16 +242,16 @@ When training a model with XGBoost, you have to specify a dictionary of training
 
 For example, if your old code in Python looks like:
 ```bash
-> params = {'max_depth': 3, 'learning_rate': 0.1}
-> dtrain = xgb.DMatrix(X, y)
-> xgb.train(params, dtrain)
+params = {'max_depth': 3, 'learning_rate': 0.1}
+dtrain = xgb.DMatrix(X, y)
+xgb.train(params, dtrain)
 ```
 Change it to:
 ```bash
-> params = {‘tree_method’: ‘gpu_hist’, 'max_depth': 3, 
+params = {‘tree_method’: ‘gpu_hist’, 'max_depth': 3, 
 'learning_rate': 0.1}
-> dtrain = xgb.DMatrix(X, y)
-> xgb.train(params, dtrain)
+dtrain = xgb.DMatrix(X, y)
+xgb.train(params, dtrain)
 ```
 
 {% endcapture %}
@@ -279,7 +279,7 @@ The RAPIDS team is contributing to the XGBoost project and integrating new featu
 {% capture df_left %}
 ## <i class="fas fa-border-none"></i> XGBoost DMatrix
 
-The RAPIDS project is developing a seamless bridge between cuDF DataFrames, the primary data structure in RAPIDS, and DMatrix, XGBoost’s data structure. You can get the **[latest updates](https://github.com/dmlc/xgboost/pull/3997){: target="_blank"}** in this pull request on GitHub. While this patch is being integrated upstream, early adopters using the RAPIDS conda packages or Docker images can already build DMatrix objects directly from cuDF DataFrames.
+The RAPIDS project has developed a seamless bridge between cuDF DataFrames, the primary data structure in RAPIDS, and DMatrix, XGBoost’s data structure. The DMatrix will be built from the GPU dataframe with no need to copy data through host memory. Starting in XGBoost 1.0, GPU data from cuPy and any other GPU array library with support for the `__cuda_array_interface__ API` can also be used directly to build a DMatrix.
 
 {% endcapture %}
 {% capture df_right %}
@@ -287,10 +287,10 @@ The RAPIDS project is developing a seamless bridge between cuDF DataFrames, the 
 
 To create a DMatrix from a cuDF DataFrame, just pass the data frames to the constructor:
 ```bash
-> import xgboost as xgb
-> train_X_cudf = cudf.DataFrame(...)
-> train_y_cudf = cudf.Series(...)
-> dmatrix = xgb.DMatrix(train_X_cudf, label=train_y_cudf)
+import xgboost as xgb
+train_X_cudf = cudf.DataFrame(...)
+train_y_cudf = cudf.Series(...)
+dmatrix = xgb.DMatrix(train_X_cudf, label=train_y_cudf)
 ```
 
 The package will automatically convert from cuDF’s format to XGBoost’s DMatrix format, keeping the data on GPU memory.
@@ -311,7 +311,7 @@ The package will automatically convert from cuDF’s format to XGBoost’s DMatr
 
 
 {% capture end_bottom %}
-# Get Started with Dask
+# Get Started with XGBoost
 {: .section-title-full .text-white}
 
 {% endcapture %}

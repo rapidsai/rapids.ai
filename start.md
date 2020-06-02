@@ -40,7 +40,10 @@ We suggest that you take a look at the sample workflow in our Docker container (
 <i class="fas fa-microchip text-purple"></i> **GPU:** NVIDIA Pascal™ or better with **[compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 6.0+
 {: .no-tb-margins }
 
-<i class="fas fa-desktop text-purple"></i> **Supported OS:** Ubuntu 16.04/18.04 or CentOS 7 with gcc 5.4 & 7.3
+<i class="fas fa-desktop text-purple"></i> **OS:** Ubuntu 16.04 & <code>gcc</code> 5.4 OR Ubuntu 18.04/CentOS 7 & <code>gcc</code> 7.3
+{: .no-tb-margins }
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-info-circle text-purple"></i> RHEL 7 support is provided through CentOS 7 builds/installs
 {: .no-tb-margins }
 
 <i class="fab fa-docker text-purple"></i> **Docker:** Docker CE v19.03+ and **[nvidia-container-toolkit](https://github.com/NVIDIA/nvidia-docker#quickstart){: target="_blank"}** 
@@ -52,7 +55,7 @@ We suggest that you take a look at the sample workflow in our Docker container (
 <i class="fas fa-download text-purple"></i> **CUDA & NVIDIA Drivers:** One of the following supported versions:
 {: .no-tb-margins }
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-check-circle text-purple"></i> [9.2](https://developer.nvidia.com/cuda-92-download-archive){: target="_blank"} & v396.37+ &nbsp; <i class="fas fa-check-circle text-purple"></i> [10.0](https://developer.nvidia.com/cuda-10.0-download-archive){: target="_blank"} & v410.48+ &nbsp; <i class="fas fa-check-circle text-purple"></i> [10.1.2](https://developer.nvidia.com/cuda-10.1-download-archive-update2){: target="_blank"} & v418.87+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-check-circle text-purple"></i> [10.0](https://developer.nvidia.com/cuda-10.0-download-archive){: target="_blank"} & v410.48+ &nbsp; <i class="fas fa-check-circle text-purple"></i> [10.1.2](https://developer.nvidia.com/cuda-10.1-download-archive-update2){: target="_blank"} & v418.87+ &nbsp; <i class="fas fa-check-circle text-purple"></i> [10.2](https://developer.nvidia.com/cuda-downloads){: target="_blank"} & v440.33+ &nbsp; 
 {: .no-tb-margins }
 
 {% endcapture %}
@@ -132,7 +135,7 @@ Refer to our **[RAPIDS 0.7 Release Drops PIP Packages — and sticks with Co
 The copied Docker command above should auto-run a notebook server. If it does not, run the following command within the Docker container to launch the notebook server.
 
 ```bash
-bash /rapids/notebooks/utils/start-jupyter.sh
+bash /rapids/utils/start-jupyter.sh
 ```
 
 **NOTE:** This will run **[JupyterLab](https://jupyterlab.readthedocs.io/en/stable/){: target="_blank"}** on your host machine at port 8888.
@@ -151,9 +154,6 @@ Notebooks can be found in notebooks directory within the container:
 {: .no-tb-margins }
 
 <i class="far fa-folder-open"></i> **`/rapids/notebooks/cugraph`** (cuGraph demos)
-{: .no-tb-margins }
-
-<i class="far fa-folder-open"></i> **`/rapids/notebooks/tutorials`** (DBSCAN tutorial)
 {: .no-tb-margins }
 
 <i class="far fa-folder-open"></i> **`/rapids/notebooks/xgboost`** (XGBoost demo)
