@@ -1,10 +1,10 @@
 {
-   "stable": "0.13",
-   "stabledate": "Mar 2020",
-   "nightly": "0.14",
-   "nightlydate": "Jun 2020",
-   "future": "0.15",
-   "futuredate": "Aug 2020",
+   "legacy": "0.13",
+   "legacydate": "Mar 2020",
+   "stable": "0.14",
+   "stabledate": "Jun 2020",
+   "nightly": "0.15",
+   "nightlydate": "Aug 2020",
    "labels": [
       "poc",
       "cuML",
@@ -14,10 +14,12 @@
       "cuGraph",
       "gpuCI",
       "RMM",
+      "cuSpatial",
+      "cuXfilter",
       "ucx"
    ],
    "projects": {
-      "stable": [
+      "legacy": [
          {
             "title": "RAPIDS Kepler.gl PoC v2",
             "description": "Proof of Concept - Extend kepler.gl functionality to very large datasets on GPU memory, without browser limitations.",
@@ -112,7 +114,7 @@
             "link": "https://github.com/rapidsai/roadmap/issues/150"
          }
       ],
-      "nightly": [
+      "stable": [
          {
             "title": "Betweenness Centrality",
             "description": "public description goes here",
@@ -201,7 +203,63 @@
             "link": "https://github.com/rapidsai/roadmap/issues/42"
          }
       ],
-      "future": [
+      "nightly": [
+         {
+            "title": "MNMG ElasticNet and Lassso",
+            "description": "add description here",
+            "labels": [
+               "cuML",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/205"
+         },
+         {
+            "title": "Expanded preprocessing, scikit-learn compatible normalizers, etc.",
+            "description": "add description here",
+            "labels": [
+               "cuML",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/204"
+         },
+         {
+            "title": "Auto ARIMA",
+            "description": "add description here",
+            "labels": [
+               "cuML",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/203"
+         },
+         {
+            "title": "Expanded preprocessing for traditional NLP - OHE, CountVectorizer, TfIdf",
+            "description": "SG and MNMG versions of common data prep steps - one hot encoding, various vectorizers. Tokenization is based on nvstrings and has some limitations relative to scikit-learn tokenizers.",
+            "labels": [
+               "cuML",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/202"
+         },
+         {
+            "title": "Unsigned Integer Types",
+            "description": "Expand column type support to include UINT8, UINT16, UINT32 and UINT64.",
+            "labels": [
+               "cuDF",
+               "libcudf",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/199"
+         },
+         {
+            "title": "Duration / Calendar Type",
+            "description": "Add support for a duration data type for columns that are the result of arithmetic or statistics on timestamp columns.",
+            "labels": [
+               "cuDF",
+               "libcudf",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/198"
+         },
          {
             "title": "Read / write partitioned Parquet directories",
             "description": "Support reading and writing partitioned Parquet datasets efficiently via cuDF.",
@@ -219,6 +277,16 @@
                "Public"
             ],
             "link": "https://github.com/rapidsai/roadmap/issues/196"
+         },
+         {
+            "title": "RAPIDS-core - common build infra separation",
+            "description": "public description goes here",
+            "labels": [
+               "cuDF",
+               "libcudf",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/195"
          },
          {
             "title": "Custom Python distance/loss funcs",
@@ -408,6 +476,32 @@
                "Public"
             ],
             "link": "https://github.com/rapidsai/roadmap/issues/154"
+         },
+         {
+            "title": "cuXfilter refactored ",
+            "description": "cuXfilter has been completely refactored to make it much simpler to install and create cross-filtered dashboards, all from a python notebook!",
+            "labels": [
+               "cuXfilter",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/145"
+         },
+         {
+            "title": "cuHornet",
+            "description": "A copy of Hornet from Georgia Tech was brought into RAPIDS a few months ago and has been refactored and renamed to cuHornet. The first two cuHornet algorithms being made available are Katz centrality and K-Cores, along with the core number function.",
+            "labels": [
+               "cuGraph",
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/134"
+         },
+         {
+            "title": "Row-wise reduction and scan operations",
+            "description": "public description goes here",
+            "labels": [
+               "Public"
+            ],
+            "link": "https://github.com/rapidsai/roadmap/issues/99"
          }
       ]
    }

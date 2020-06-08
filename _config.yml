@@ -2,7 +2,7 @@ name: RAPIDS
 title: RAPIDS
 baseurl: "/rapidsai-staging"
 postsurl: "https://rapidsai.github.io/site-data/posts.json"
-roadmapurl: "assets/files/public.json"
+roadmapurl: "https://rapidsai.github.io/site-data/public.json"
 repodesc: "assets/files/project-descriptions.json"
 exclude: ['_drafts', 'README.md', '.gitignore', 'CNAME']
 plugins:
