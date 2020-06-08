@@ -83,16 +83,27 @@ function buildRoadmap(json) {
         filter = "Priority"
     }
 
-    var stable = buildLists(json.stable, json.projects.stable, filter)
-    var nightly = buildLists(json.nightly, json.projects.nightly, filter)
-    var future = buildLists(json.future, json.projects.future, filter)
+    // FIXME @mike-wendt - temp hack to use existing json layout
+    var stable_ver = json.legacy
+    var nighlty_ver = json.stable
+    var future_ver = json.nightly
+    var stable_date = json.legacydate
+    var nightly_date = json.stabledate
+    var future_date = json.nightlydate
+    var stable_epics = json.projects.legacy
+    var nightly_epics = json.projects.stable
+    var future_epics = json.projects.nightly
+
+    var stable = buildLists(stable_ver, stable_epics, filter)
+    var nightly = buildLists(nighlty_ver, nightly_epics, filter)
+    var future = buildLists(future_ver, future_epics, filter)
 
     //clear
     $('#roadmap-list').html("")
 
-    $('#roadmap-list').append('<div class="pure-u-1 pure-u-md-1-3 roadmap-vline-home"> <div class="roadmap-ver-home">' + json.stable + '<div class="roadmap-ver-title-home"> stable - ' + json.stabledate + '</div> </div> <ul class="roadmap-list">' + stable + '<br> <a class="roadmap-link" href="roadmap.html"> <i class="fas fa-list"></i> Show All </a> </ul></div>')
-    $('#roadmap-list').append('<div class="pure-u-1 pure-u-md-1-3 roadmap-vdash-home"> <div class="roadmap-ver-home">' + json.nightly + '<div class="roadmap-ver-title-home"> nightly - ' + json.nightlydate + '</div> </div> <ul class="roadmap-list">' + nightly + '<br> <a class="roadmap-link" href="roadmap.html"> <i class="fas fa-list"></i> Show All </a> </ul></div>')
-    $('#roadmap-list').append('<div class="pure-u-1 pure-u-md-1-3 roadmap-vdot-home"> <div class="roadmap-ver-home">ON DECK<div class="roadmap-ver-title-home"> FUTURE RELEASES </div> </div> <ul class="roadmap-list">' + future + '<br> <a class="roadmap-link" href="roadmap.html"> <i class="fas fa-list"></i> Show All </a> </ul></div>')
+    $('#roadmap-list').append('<div class="pure-u-1 pure-u-md-1-3 roadmap-vline-home"> <div class="roadmap-ver-home">' + stable_ver + '<div class="roadmap-ver-title-home"> stable - ' + stable_date + '</div> </div> <ul class="roadmap-list">' + stable + ' </ul></div>')
+    $('#roadmap-list').append('<div class="pure-u-1 pure-u-md-1-3 roadmap-vdash-home"> <div class="roadmap-ver-home">' + nighlty_ver + '<div class="roadmap-ver-title-home"> nightly - ' + nightly_date + '</div> </div> <ul class="roadmap-list">' + nightly + ' </ul></div>')
+    $('#roadmap-list').append('<div class="pure-u-1 pure-u-md-1-3 roadmap-vdot-home"> <div class="roadmap-ver-home"> ON DECK <div class="roadmap-ver-title-home"> FUTURE RELEASES </div> </div> <ul class="roadmap-list">' + future + ' </ul></div>')
 
 
 }
@@ -119,6 +130,15 @@ function buildLists(ver, data, filter) {
 
     }
 
+    // check for empty list
+    if (list == '' && filter == "Public") {
+        list = '<li><p class="roadmap-list-text"><i class="fas fa-ban"></i> No Matching Items </p></li>'
+    } else if (list == '' && filter == "Priority") {
+        list = '<li><p class="roadmap-list-text"><i class="fas fa-ban"></i> Nothing Hilighted </p></li>'
+    } else {
+        // add show all link
+        list += '<br> <a class="roadmap-link" href="roadmap.html"> <i class="fas fa-list"></i> Show All </a>'
+    }
     return list
 }
 </script>
