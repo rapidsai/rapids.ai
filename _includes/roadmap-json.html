@@ -18,12 +18,12 @@ $.getJSON("{{ site.roadmapurl }}")
         buildRoadmap(json);
         if ({{ include.homepage }}) return;
 
-        buildNav(json.labels)
+        buildNav(json.labels);
 
         // event listener for href change
         $(window).on('hashchange', function(event) {
             buildRoadmap(json);
-            buildNav(json.labels)
+            buildNav(json.labels);
         });
     })
     .fail(function(jqxhr, textStatus, error) {
