@@ -1,129 +1,125 @@
+{% unless include.homepage %}
+<section id="roadmap-nav" class="pure-g background-white padding-top-2em padding-bottom-2em ">
+    <!-- nav loaded from json -->
+</section>
+<div class="slopecap-horizontal background-gray"></div>
+{% endunless %}
 <section id="roadmap" class="pure-g {{ include.background }} padding-top-{{ include.padding-top }} padding-bottom-{{ include.padding-bottom }} ">
     <div id="roadmap-list" class="container-padding roadmap-bottom-line">
         <!-- loaded from json -->
     </div>
 </section>
 <script>
-if (!{{ include.homepage }}) {
+var publicLabel = 'Public';
 
-    // roadmap 
-    $.getJSON("{{ site.roadmapurl }}")
-        .done(function(json) {
+$.getJSON("{{ site.roadmapurl }}")
+    .done(function(json) {
 
+        buildRoadmap(json);
+        if ({{ include.homepage }}) return;
+
+        buildNav(json.labels)
+
+        // event listener for href change
+        $(window).on('hashchange', function(event) {
+            buildRoadmap(json);
             buildNav(json.labels)
-            buildRoadmap(json)
-
-            // event listener for href change
-            $(window).on('hashchange', function(event) {
-                let url = window.location.href
-                let params = url.split("#")
-                params.shift()
-
-                if(params[0] === undefined){
-                    params[0] = "Show All"
-                }
-
-                $("#nav-title").html(params[0])
-
-                buildRoadmap(json)
-            });
-        })
-        .fail(function(jqxhr, textStatus, error) {
-            console.log("Roadmap JSON request Failed: ", textStatus, error);
         });
+    })
+    .fail(function(jqxhr, textStatus, error) {
+        console.log("Roadmap JSON request Failed: ", textStatus, error);
+    });
 
-} else {
-    // home page build roadmap only with prioritiy 
-    $.getJSON("{{ site.roadmapurl }}")
-        .done(function(json) {
 
-            buildRoadmap(json)
-        })
-        .fail(function(jqxhr, textStatus, error) {
-            console.log("Roadmap JSON request Failed: ", textStatus, error);
-        });
-
+function removeAllFiltersHandler (e) {
+    e.preventDefault(); // prevent page reload
+    history.pushState(null, "", window.location.pathname); // manually change path
+    window.dispatchEvent(new Event('hashchange')); // hashChange isn't automatically called on pushState
 }
 
-function buildNav(list) {
+function getCurrentFilter() {
+    var filter = publicLabel;
 
-    var nav = list.map(function(d, i) {
-        return ('<a href="roadmap.html#' + d + '" class="roadmap-nav-item" id=><i class="fas fa-tag"></i> ' + d + '</a>')
-    }).join('')
-
-    let url = window.location.href
-    let params = url.split("#")
-    params.shift()
-
-    if(params[0] === undefined){
-        params[0] = "Show All"
+    // get URL Hash parameters
+    var url = window.location.href;
+    var params = url.split("#");
+    params.shift();
+    if (params[0]) {
+        filter = params[0];
     }
 
-    $('#roadmap').prepend('<div class="roadmap-nav"><a href="roadmap.html" class="roadmap-nav-item"><i class="fas fa-list"></i> Show All</a>' + nav + ' </div>')
+    // if homepage only priorities
+    if ({{ include.homepage }}) {
+        filter = "Priority";
+    }
+    return filter;
+}
+
+function buildNav(labels) {
+    var filter = getCurrentFilter();
+
+    var navItems = ['Show All'].concat(labels).map(function(label) {
+        var labelIsShowAll = label === 'Show All';
+        var selected = filter === label || (filter === publicLabel && labelIsShowAll);
+        var classes = selected ? 'roadmap-nav-item selected' : 'roadmap-nav-item';
+        var hrefHash = labelIsShowAll ? '' : ('#' + label);
+        var faIcon = labelIsShowAll ? 'list' : 'tag';
+        var clickHandler = labelIsShowAll ? 'onclick="removeAllFiltersHandler(event)"' : '';
+
+        return ('<a href="roadmap.html' + hrefHash + '" class="' + classes + '"' + clickHandler + '>' +
+                    '<i class="fas fa-' + faIcon + '"></i> ' + label +
+                '</a>');
+    })
+
+    $('#roadmap-nav').html("");
+    $('#roadmap-nav').prepend('<div class="roadmap-nav">' + navItems.join('') + ' </div>');
 
 }
 
 function buildRoadmap(json) {
 
-    // get href params
-    let url = window.location.href
-    let params = url.split("#")
-    params.shift()
-
-    // default shows all via "Public"
-    let filter = "Public"
-
-    // get filter parameters
-    if (params[0] != undefined) {
-        filter = params[0]
-    }
-
-    // if homepage only priorities 
-    if ({{ include.homepage }}) {
-        filter = "Priority"
-    }
+    var filter = getCurrentFilter();
+    var css_modifier = {{ include.homepage }} ? "--home" : "";
 
     // FIXME @mike-wendt - temp hack to use existing json layout
-    var stable_ver = json.legacy
-    var nighlty_ver = json.stable
-    var future_ver = json.nightly
-    var stable_date = json.legacydate
-    var nightly_date = json.stabledate
-    var future_date = json.nightlydate
-    var stable_epics = json.projects.legacy
-    var nightly_epics = json.projects.stable
-    var future_epics = json.projects.nightly
+    var stable_ver = json.legacy;
+    var nighlty_ver = json.stable;
+    var future_ver = json.nightly;
+    var stable_date = json.legacydate;
+    var nightly_date = json.stabledate;
+    var future_date = json.nightlydate;
+    var stable_epics = json.projects.legacy;
+    var nightly_epics = json.projects.stable;
+    var future_epics = json.projects.nightly;
 
-    var stable = buildLists(stable_ver, stable_epics, filter)
-    var nightly = buildLists(nighlty_ver, nightly_epics, filter)
-    var future = buildLists(future_ver, future_epics, filter)
+    var stable = buildLists(stable_ver, stable_epics, filter);
+    var nightly = buildLists(nighlty_ver, nightly_epics, filter);
+    var future = buildLists(future_ver, future_epics, filter);
 
     //clear
-    $('#roadmap-list').html("")
+    $('#roadmap-list').html("");
 
-    $('#roadmap-list').append('<div class="pure-u-1 pure-u-md-1-3 roadmap-vline-home"> <div class="roadmap-ver-home">' + stable_ver + '<div class="roadmap-ver-title-home"> stable - ' + stable_date + '</div> </div> <ul class="roadmap-list">' + stable + ' </ul></div>')
-    $('#roadmap-list').append('<div class="pure-u-1 pure-u-md-1-3 roadmap-vdash-home"> <div class="roadmap-ver-home">' + nighlty_ver + '<div class="roadmap-ver-title-home"> nightly - ' + nightly_date + '</div> </div> <ul class="roadmap-list">' + nightly + ' </ul></div>')
-    $('#roadmap-list').append('<div class="pure-u-1 pure-u-md-1-3 roadmap-vdot-home"> <div class="roadmap-ver-home"> ON DECK <div class="roadmap-ver-title-home"> FUTURE RELEASES </div> </div> <ul class="roadmap-list">' + future + ' </ul></div>')
-
-
+    $('#roadmap-list').append('<div class="pure-u-1 pure-u-md-1-3 roadmap-vline' + css_modifier + '"> <div class="roadmap-ver' + css_modifier + '">' + stable_ver + '<div class="roadmap-ver-title' + css_modifier + '"> stable - ' + stable_date + '</div> </div> <ul class="roadmap-list">' + stable + ' </ul></div>');
+    $('#roadmap-list').append('<div class="pure-u-1 pure-u-md-1-3 roadmap-vdash' + css_modifier + '"> <div class="roadmap-ver' + css_modifier + '">' + nighlty_ver + '<div class="roadmap-ver-title' + css_modifier + '"> nightly - ' + nightly_date + '</div> </div> <ul class="roadmap-list">' + nightly + ' </ul></div>');
+    $('#roadmap-list').append('<div class="pure-u-1 pure-u-md-1-3 roadmap-vdot' + css_modifier + '"> <div class="roadmap-ver' + css_modifier + '"> ON DECK <div class="roadmap-ver-title' + css_modifier + '"> FUTURE RELEASES </div> </div> <ul class="roadmap-list">' + future + ' </ul></div>');
 }
 
 function buildLists(ver, data, filter) {
-    let list = ''
+    var list = '';
 
     if (ver === undefined || data.length === 0) {
-        list = '<li><i class="fas fa-ban"></i> Nothing Hilighted </li>'
+        list = '<li><i class="fas fa-ban"></i> Nothing Hilighted </li>';
     } else {
-        list = data.map(function(d, i) {
+        list = data.map(function(issue) {
 
-            if (d.labels.includes(filter)) {
-                var tags = d.labels.map(function(e, j) {
-                    if (e != 'Public') {
-                        return ('<a href="roadmap.html#' + e + '" class="roadmap-tag">' + e + '</a>')
+            if (issue.labels.includes(filter)) {
+                var tags = issue.labels.map(function(label) {
+                    if (label != publicLabel) {
+                        return ('<a href="roadmap.html#' + label + '" class="roadmap-tag">' + label + '</a>');
                     }
                 }).join('')
 
-                return ('<li>' + tags + '<div class="roadmap-list-title">' + d.title + '</div> <p class="roadmap-list-text">' + d.description + '</p></li>')
+                return ('<li>' + tags + '<div class="roadmap-list-title">' + issue.title + '</div> <p class="roadmap-list-text">' + issue.description + '</p></li>');
             }
 
         }).join('')
@@ -131,14 +127,14 @@ function buildLists(ver, data, filter) {
     }
 
     // check for empty list
-    if (list == '' && filter == "Public") {
-        list = '<li><p class="roadmap-list-text"><i class="fas fa-ban"></i> No Matching Items </p></li>'
+    if (list == '' && filter == publicLabel) {
+        list = '<li><p class="roadmap-list-text"><i class="fas fa-ban"></i> No Matching Items </p></li>';
     } else if (list == '' && filter == "Priority") {
-        list = '<li><p class="roadmap-list-text"><i class="fas fa-ban"></i> Nothing Hilighted </p></li>'
+        list = '<li><p class="roadmap-list-text"><i class="fas fa-ban"></i> Nothing Hilighted </p></li>';
     } else {
         // add show all link
-        list += '<br> <a class="roadmap-link" href="roadmap.html"> <i class="fas fa-list"></i> Show All </a>'
+        list += '<br> <a class="roadmap-link" href="roadmap.html" onclick="removeAllFiltersHandler(event)"> <i class="fas fa-list"></i> Show All </a>';
     }
-    return list
+    return list;
 }
 </script>

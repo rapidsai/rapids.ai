@@ -588,66 +588,66 @@ a h2:hover,
 }
 
 /* repos */
-.roadmap-ver-home {
-    color: white;
-    font-size: 2.4em;
-    text-align: center;
-    margin-top: -2.5em;
-}
-
-.roadmap-vline-home {
-    border-top: 2px solid white;
-    margin-top: 3em;
-    padding-top: 1em;
-}
-
-.roadmap-vdash-home {
-    border-top: 2px dashed white;
-    margin-top: 3em;
-    padding-top: 1em;
-}
-
-.roadmap-vdot-home {
-    border-top: 2px dotted white;
-    margin-top: 3em;
-    padding-top: 1em;
-}
-
-.roadmap-ver-title-home {
-    font-size: 0.55em;
-    text-transform: uppercase;
-    color: white;
-}
-
-.roadmap-ver {
+.roadmap-ver,
+.roadmap-ver--home {
     color: #7400ff;
     font-size: 2.4em;
     text-align: center;
     margin-top: -2.5em;
 }
 
-.roadmap-vline {
-    border-top: 2px solid #b177f7;
+.roadmap-ver--home {
+    color: white;
+}
+
+.roadmap-vline,
+.roadmap-vline--home {
+    border-top-width: 2px;
+    border-top-style: solid;
+    border-top-color: #b177f7;
     margin-top: 3em;
     padding-top: 1em;
 }
 
-.roadmap-vdash {
-    border-top: 2px dashed #b177f7;
+.roadmap-vline--home {
+    border-top-color: white;
+}
+
+.roadmap-vdash,
+.roadmap-vdash--home {
+    border-top-width: 2px;
+    border-top-style: dashed;
+    border-top-color: #b177f7;
     margin-top: 3em;
     padding-top: 1em;
 }
 
-.roadmap-vdot {
-    border-top: 2px dotted #b177f7;
+.roadmap-vdash--home {
+    border-top-color: white;
+}
+
+.roadmap-vdot,
+.roadmap-vdot--home {
+    border-top-width: 2px;
+    border-top-style: dotted;
+    border-top-color: #b177f7;
     margin-top: 3em;
     padding-top: 1em;
 }
 
-.roadmap-ver-title {
+.roadmap-vdot--home {
+    border-top-color: white;
+}
+
+.roadmap-ver-title,
+.roadmap-ver-title--home {
     font-size: 0.55em;
     text-transform: uppercase;
     color: #7400ff;
+}
+
+.roadmap-ver-title--home {
+    color: white;
 }
 
 .roadmap-list-title {
@@ -695,15 +695,6 @@ a h2:hover,
     color: #7400ff;
 }
 
-.roadmap-nav-title {
-    font-size: 2em;
-    text-align: center;
-    text-transform: uppercase;
-    margin-top: 1em;
-    margin-bottom: 1em;
-    color: #7400ff;
-}
-
 .roadmap-nav-item {
     color: white;
     display: inline-block;
@@ -715,6 +706,10 @@ a h2:hover,
     cursor: pointer;
     background-color: #b177f7;
     font-size: 0.9em;
+}
+
+.roadmap-nav-item.selected {
+    color: red;
 }
 
 .api-tag,
