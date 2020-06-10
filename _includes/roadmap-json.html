@@ -11,6 +11,7 @@
 </section>
 <script>
 var publicLabel = 'Public';
+var pagePath = window.location.pathname;
 
 $.getJSON("{{ site.roadmapurl }}")
     .done(function(json) {
@@ -33,7 +34,7 @@ $.getJSON("{{ site.roadmapurl }}")
 
 function removeAllFiltersHandler (e) {
     e.preventDefault(); // prevent page reload
-    history.pushState(null, "", window.location.pathname); // manually change path
+    history.pushState(null, "", pagePath); // manually change path
     window.dispatchEvent(new Event('hashchange')); // hashChange isn't automatically called on pushState
 }
 
@@ -66,7 +67,7 @@ function buildNav(labels) {
         var faIcon = labelIsShowAll ? 'list' : 'tag';
         var clickHandler = labelIsShowAll ? 'onclick="removeAllFiltersHandler(event)"' : '';
 
-        return ('<a href="roadmap.html' + hrefHash + '" class="' + classes + '"' + clickHandler + '>' +
+        return ('<a href="' + pagePath + hrefHash + '" class="' + classes + '"' + clickHandler + '>' +
                     '<i class="fas fa-' + faIcon + '"></i> ' + label +
                 '</a>');
     })
@@ -115,7 +116,7 @@ function buildLists(ver, data, filter) {
             if (issue.labels.includes(filter)) {
                 var tags = issue.labels.map(function(label) {
                     if (label != publicLabel) {
-                        return ('<a href="roadmap.html#' + label + '" class="roadmap-tag">' + label + '</a>');
+                        return ('<a href="' + pagePath + '#' + label + '" class="roadmap-tag">' + label + '</a>');
                     }
                 }).join('')
 
@@ -133,7 +134,7 @@ function buildLists(ver, data, filter) {
         list = '<li><p class="roadmap-list-text"><i class="fas fa-ban"></i> Nothing Hilighted </p></li>';
     } else {
         // add show all link
-        list += '<br> <a class="roadmap-link" href="roadmap.html" onclick="removeAllFiltersHandler(event)"> <i class="fas fa-list"></i> Show All </a>';
+        list += '<br> <a class="roadmap-link" href="#" onclick="removeAllFiltersHandler(event)"> <i class="fas fa-list"></i> Show All </a>';
     }
     return list;
 }
