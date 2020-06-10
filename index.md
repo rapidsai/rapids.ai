@@ -164,7 +164,6 @@ Whether you are new to RAPIDS, looking to help, or are part of the team, learn a
 {% include roadmap-json.html
     homepage=true
     background="background-purple"
-    padding-top="3em" padding-bottom="1em"
 %}
 
 

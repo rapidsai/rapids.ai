@@ -8,5 +8,4 @@ layout: short
 {% include roadmap-json.html
     homepage=false
     background="background-gray"
-    padding-top="3em" padding-bottom="1em"
 %}
