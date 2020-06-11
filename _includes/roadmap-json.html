@@ -127,15 +127,15 @@ function buildLists(ver, data, filter) {
 
     }
 
-    // check for empty list
-    if (list == '' && filter == publicLabel) {
-        list = '<li><p class="roadmap-list-text"><i class="fas fa-ban"></i> No Matching Items </p></li>';
-    } else if (list == '' && filter == "Priority") {
-        list = '<li><p class="roadmap-list-text"><i class="fas fa-ban"></i> Nothing Hilighted </p></li>';
-    } else {
-        // add show all link
-        list += '<br> <a class="roadmap-link" href="#" onclick="removeAllFiltersHandler(event)"> <i class="fas fa-list"></i> Show All </a>';
+    if (list == '') {
+        var noItemsMsg = {{ include.homepage }} ? "Nothing Hilighted" : "No Matching Items" ;
+        return list = '<li><p class="roadmap-list-text"><i class="fas fa-ban"></i> ' + noItemsMsg + ' </p></li>';
     }
+
+    if (filter !== publicLabel) {
+        return list += '<br> <a class="roadmap-link" href="#" onclick="removeAllFiltersHandler(event)"> <i class="fas fa-list"></i> Show All </a>';
+    }
+
     return list;
 }
 </script>
