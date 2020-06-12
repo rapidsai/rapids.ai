@@ -1,4 +1,4 @@
-/* 
+/*
  * RAPIDS Site - Custom CSS for Jekyll Site
  * Utilizing https://purecss.io/grids/
 */
@@ -588,6 +588,10 @@ a h2:hover,
 }
 
 /* repos */
+.roadmap-container {
+    min-height: 1000px;
+}
+
 .roadmap-ver,
 .roadmap-ver--home {
     color: #7400ff;
@@ -709,7 +713,7 @@ a h2:hover,
 }
 
 .roadmap-nav-item.selected {
-    color: red;
+    color: #ffb500;
 }
 
 .api-tag,
@@ -1483,4 +1487,3 @@ i.fab {
         font-size: 0.9em;
     }
 }
-

@@ -4,13 +4,14 @@
 </section>
 <div class="slopecap-horizontal background-gray"></div>
 {% endunless %}
-<section id="roadmap" class="pure-g {{ include.background }} padding-top-3em padding-bottom-1em ">
+<section id="roadmap" class="pure-g {{ include.background }} padding-top-3em padding-bottom-1em {% unless include.homepage %}roadmap-container{% endunless %}">
     <div id="roadmap-list" class="container-padding roadmap-bottom-line">
         <!-- loaded from json -->
     </div>
 </section>
 <script>
 var publicLabel = 'Public';
+var priorityLabel = 'Priority';
 var pagePath = window.location.pathname;
 
 $.getJSON("{{ site.roadmapurl }}")
@@ -51,7 +52,7 @@ function getCurrentFilter() {
 
     // if homepage only priorities
     if ({{ include.homepage }}) {
-        filter = "Priority";
+        filter = priorityLabel;
     }
     return filter;
 }
@@ -129,11 +130,11 @@ function buildLists(ver, data, filter) {
 
     if (list == '') {
         var noItemsMsg = {{ include.homepage }} ? "Nothing Hilighted" : "No Matching Items" ;
-        return list = '<li><p class="roadmap-list-text"><i class="fas fa-ban"></i> ' + noItemsMsg + ' </p></li>';
+        list = '<li><p class="roadmap-list-text"><i class="fas fa-ban"></i> ' + noItemsMsg + ' </p></li>';
     }
 
-    if (filter !== publicLabel) {
-        return list += '<br> <a class="roadmap-link" href="#" onclick="removeAllFiltersHandler(event)"> <i class="fas fa-list"></i> Show All </a>';
+    if (!(filter === publicLabel || filter === priorityLabel)) {
+        list += '<br> <a class="roadmap-link" href="#" onclick="removeAllFiltersHandler(event)"> <i class="fas fa-list"></i> Show All </a>';
     }
 
     return list;
