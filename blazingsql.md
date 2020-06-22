@@ -12,14 +12,14 @@ layout: default
 # Blazing fast SQL on Rapids
 {: .section-title-full}
 {% capture intro_content %}
-BlazingSQL is an incredibly fast distributed SQL engine on GPUs. BlazingSQL enables data scientists to easily connect large-scale data lakes to GPU-accelerated analytics. With a few lines of code, you can directly query raw file formats such as CSV and Apache Parquet inside Data Lakes like HDSF and AWS S3, and directly pipe the results into GPU memory. 
+BlazingSQL is an incredibly fast distributed SQL engine on GPUs. BlazingSQL enables data scientists to easily connect large-scale data lakes to GPU-accelerated analytics. With a few lines of code, you can directly query raw file formats such as CSV and Apache Parquet inside Data Lakes like HDFS and AWS S3, and directly pipe the results into GPU memory. 
 {: .subtitle .pading-top-0em .margin-top-0em}
 
 {% endcapture %}
 
 {% capture benefit_left %}
 ## <i class="fas fa-sort-amount-up-alt"></i> ETL at Scale
-Distributed architecture scales to thousands of GPUs. Relative performance improvements  of engine continue to increase with scale of cluster.
+Distributed architecture scales to thousands of GPUs. Relative performance improvements of the engine continue to increase with scale of cluster.
 
 {% endcapture %}
 
@@ -32,7 +32,7 @@ BlazingSQL currently runs ETL 20x faster than an Apache Spark cluster at price p
 {% capture benefit_right %}
 
 ## <i class="fas fa-code-branch"></i> Built on RAPIDS
-BlazingSQL is built on the GPU DataFrame, a shared memory model that enables libraries in the  RAPIDS AI ecosystem to seamlessly interoperate with each other. **[Read more on our blog <i class="fas fa-angle-double-right"></i>](https://blog.blazingdb.com/blazingsql-part-1-the-gpu-dataframe-gdf-and-cudf-in-rapids-ai-96ec15102240){: target="_blank"}**
+BlazingSQL is built on the GPU DataFrame, a shared memory model that enables libraries in the RAPIDS AI ecosystem to seamlessly interoperate with each other. **[Read more on our blog <i class="fas fa-angle-double-right"></i>](https://blog.blazingdb.com/blazingsql-part-1-the-gpu-dataframe-gdf-and-cudf-in-rapids-ai-96ec15102240){: target="_blank"}**
 
 {% endcapture %}
 
@@ -127,7 +127,7 @@ Learn how to use BlazingSQL and cuDF to create GPU DataFrames with SQL and Panda
 Plug in your favorite Python visualization packages, or use GPU accelerated visualization tools to render millions of rows in a flash. **[Try it <i class="fas fa-angle-double-right"></i>](https://app.blazingsql.com/jupyter/user-redirect/lab/workspaces/auto-b/tree/Welcome_to_BlazingSQL_Notebooks/intro_notebooks/data_visualization.ipynb){: target="_blank"}**
 
 ## <i class="far fa-file-code"></i> Machine Learning
-Learn about cuML, mirrored after the Scikit-Learn API, it offers GPU accelerated machine learning on GPU DataFrames. **[Try it <i class="fas fa-angle-double-right"></i>](https://app.blazingsql.com/jupyter/user-redirect/lab/workspaces/auto-b/tree/Welcome_to_BlazingSQL_Notebooks/intro_notebooks/machine_learning.ipynb){: target="_blank"}**
+Learn about cuML, mirrored after the Scikit-Learn API, which offers GPU accelerated machine learning on GPU DataFrames. **[Try it <i class="fas fa-angle-double-right"></i>](https://app.blazingsql.com/jupyter/user-redirect/lab/workspaces/auto-b/tree/Welcome_to_BlazingSQL_Notebooks/intro_notebooks/machine_learning.ipynb){: target="_blank"}**
 
 {% endcapture %}
 {% include section-halfs.html 
