@@ -261,7 +261,7 @@ cuGraph is a GPU accelerated graph analytics library, with functionality like **
 
 {% endcapture %}
 {% capture lib3_left %} 
-## <i class="fad fa-terminal"></i> cuSginal <span class="api-tag">API</span>
+## <i class="fad fa-terminal"></i> cuSignal <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cusignal){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cusignal/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cusignal/blob/master/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
