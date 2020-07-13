@@ -171,6 +171,7 @@ function processClick(options, click, category) {
     $(cuda_opts).removeClass("active");
     var prev_cuda = selections['cuda'];
     var prev_linux = selections['linux'];
+    var prev_python = selections['python'];
     var prev_release = selections['release'];
     if (options && click && category) {
         $(options).removeClass("active");
@@ -243,6 +244,16 @@ function processClick(options, click, category) {
         }
         $("#cuda100").addClass("disabled");
         $("#py36").addClass("disabled");
+    }
+
+    // Handle clicks on disabled CUDA/Python
+    if (selections['cuda'] == 'cuda110') {
+        $("#cuda110").removeClass("active");
+        selections['cuda'] = prev_cuda;
+    }
+    if (selections['python'] == 'py38') {
+        $("#py38").removeClass("active");
+        selections['python'] = prev_python;
     }
 
     $("#" + selections['method']).addClass("active");
