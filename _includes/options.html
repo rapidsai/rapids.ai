@@ -238,9 +238,11 @@ function processClick(options, click, category) {
         // Change selections to new defaults and then disable
         if (selections['cuda'] == 'cuda100') {
             selections['cuda'] = 'cuda101';
+            $("#cuda100").removeClass("active");
         }
         if (selections['python'] == 'py36') {
             selections['python'] = 'py37';
+            $("#py36").removeClass("active");
         }
         $("#cuda100").addClass("disabled");
         $("#py36").addClass("disabled");
