@@ -113,12 +113,12 @@ RAPIDS is available as conda packages, docker images, and from source builds. Us
 ## <i class="fas fa-laptop-code"></i> Conda Install
 You can get a minimal conda installation with **[Miniconda](https://conda.io/miniconda.html){: target="_blank"}** or get the full installation with **[Anaconda](https://www.anaconda.com/download){: target="_blank"}**.
 
-For instructions on how to build a development conda environment, see the **[cuDF README](https://github.com/rapidsai/cudf/blob/master/README.md#conda){: target="_blank"}** for more information. Also refer to the **[cuML README](https://github.com/rapidsai/cuml/blob/master/README.md#conda){: target="_blank"}** for conda install instructions for cuML.
+For instructions on how to build a development conda environment, see the **[cuDF README](https://github.com/rapidsai/cudf/blob/main/README.md#conda){: target="_blank"}** for more information. Also refer to the **[cuML README](https://github.com/rapidsai/cuml/blob/main/README.md#conda){: target="_blank"}** for conda install instructions for cuML.
 
 ## <i class="far fa-file-code"></i> Build From Source
 {: .section-subtitle-top-2}
 
-Checkout the **[cuDF README](https://github.com/rapidsai/cudf/tree/master#development-setup){: target="_blank"}**, **[cuML README](https://github.com/rapidsai/cuml/tree/master#installing-from-source){: target="_blank"}**, or **[cuGraph README](https://github.com/rapidsai/cugraph/tree/master#build-from-source-and-contributing){: target="_blank"}** for from-source build instructions.
+Checkout the **[cuDF README](https://github.com/rapidsai/cudf/tree/main#development-setup){: target="_blank"}**, **[cuML README](https://github.com/rapidsai/cuml/tree/main#installing-from-source){: target="_blank"}**, or **[cuGraph README](https://github.com/rapidsai/cugraph/tree/main#build-from-source-and-contributing){: target="_blank"}** for from-source build instructions.
 
 ## <i class="fas fa-laptop-code"></i> Where is Pip?
 {: .section-subtitle-top-2}
@@ -183,5 +183,3 @@ name="TRY RAPIDS NOW"
 button="LAUNCH IN COLAB"
 link="https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true"
 %}
-
-

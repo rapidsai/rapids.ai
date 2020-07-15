@@ -118,7 +118,7 @@ Dask can distribute data and computation over multiple GPUs, either in the same 
 
 {% capture gpus_df %}
 ## <i class="fas fa-layer-group"></i> Dataframe and ETL Integration
-The RAPIDS **[cuDF library](https://github.com/rapidsai/cudf){: target="_blank"}** provides a GPU-backed dataframe class that replicates the popular pandas API. It includes extremely high-performance functions to load CSV, JSON, ORC, Parquet and other file formats directly into GPU memory, eliminating one of the key bottlenecks in many data processing tasks. cuDF includes a variety of other functions supporting GPU-accelerated ETL, such as data subsetting, transformations, one-hot encoding, and more. The RAPIDS team maintains a **[dask-cudf library](https://github.com/rapidsai/cudf/tree/master/python/dask_cudf){: target="_blank"}** that includes helper methods to use Dask and cuDF.
+The RAPIDS **[cuDF library](https://github.com/rapidsai/cudf){: target="_blank"}** provides a GPU-backed dataframe class that replicates the popular pandas API. It includes extremely high-performance functions to load CSV, JSON, ORC, Parquet and other file formats directly into GPU memory, eliminating one of the key bottlenecks in many data processing tasks. cuDF includes a variety of other functions supporting GPU-accelerated ETL, such as data subsetting, transformations, one-hot encoding, and more. The RAPIDS team maintains a **[dask-cudf library](https://github.com/rapidsai/cudf/tree/main/python/dask_cudf){: target="_blank"}** that includes helper methods to use Dask and cuDF.
 {% endcapture %}
 
 {% capture gpus_xgb %}
@@ -137,7 +137,7 @@ New users should check out our **[XGBoost page](https://rapids.ai/xgboost.html){
 
 {% capture gpus_ml%}
 ## <i class="fas fa-sliders-h"></i> Integration With Other ML Algorithms 
-For other machine learning work on GPU, the **[cuML library](https://github.com/rapidsai/cuml/tree/master/python/cuml/dask){: target="_blank"}** provides a access to the RAPIDS cuML package with Dask. RAPIDS cuML implements popular machine learning algorithms, including clustering, dimensionality reduction, and regression approaches, with high performance GPU-based implementations, offering speedups of up to **100x** over CPU-based approaches. cuML replicates the scikit-learn API, so it integrates well with projects like Dask that include scikit-learn support. Currently, dask-cuml supports distributed clustering and regression algorithms, with new algorithms are being added over time.
+For other machine learning work on GPU, the **[cuML library](https://github.com/rapidsai/cuml/tree/main/python/cuml/dask){: target="_blank"}** provides a access to the RAPIDS cuML package with Dask. RAPIDS cuML implements popular machine learning algorithms, including clustering, dimensionality reduction, and regression approaches, with high performance GPU-based implementations, offering speedups of up to **100x** over CPU-based approaches. cuML replicates the scikit-learn API, so it integrates well with projects like Dask that include scikit-learn support. Currently, dask-cuml supports distributed clustering and regression algorithms, with new algorithms are being added over time.
 {% endcapture %}
 
 {% capture gpus_nb %}
@@ -145,10 +145,10 @@ For other machine learning work on GPU, the **[cuML library](https://github.com/
 The RAPIDS Notebooks Extended repository includes several examples with end-to-end examples using Dask for distributed, GPU-accelerated computation. Here’s a few from the collection to get started with. 
 
 
-<i class="fas fa-caret-right"></i> The Introductino to Dask shows how to get started with Dask using basic Python primitives like integers and strings. **[Go to notebook <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-contrib/blob/master/getting_started_notebooks/basics/Getting_Started_with_Dask.ipynb){: target="_blank"}**
+<i class="fas fa-caret-right"></i> The Introductino to Dask shows how to get started with Dask using basic Python primitives like integers and strings. **[Go to notebook <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-contrib/blob/main/getting_started_notebooks/basics/Getting_Started_with_Dask.ipynb){: target="_blank"}**
 {: .no-tb-margins }
 
-<i class="fas fa-caret-right"></i> Introduction to XGBoost with RAPIDS shows the acceleration one can gain by using GPUs with XGBoost in RAPIDS. **[Go to notebook <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks/blob/master/xgboost/XGBoost_Demo.ipynb){: target="_blank"}**
+<i class="fas fa-caret-right"></i> Introduction to XGBoost with RAPIDS shows the acceleration one can gain by using GPUs with XGBoost in RAPIDS. **[Go to notebook <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks/blob/main/xgboost/XGBoost_Demo.ipynb){: target="_blank"}**
 {: .no-tb-margins }
 
 <i class="fas fa-caret-right"></i> The Linear Regression with Dask+cuML shows a simple example of how to get started with distributed machine learning. **[Go to notebook <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-contrib/blob/a236188a08ba7ec77a55ec48e5a5a1d6e81c9895/tutorials/examples/linear_regression_dask_cuml.ipynb){: target="_blank"}**
@@ -303,4 +303,3 @@ The Dask interactive dashboard gives real-time feedback during computations, poi
 {% include cta-footer-dask.html 
    background="background-darkpurple" 
 %}
-
