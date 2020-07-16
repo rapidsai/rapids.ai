@@ -67,7 +67,7 @@ Read how straightforward it is to integrate RAPIDS libraries like cuDF with a Pl
 {% capture rpd_mid %}
 ## <i class="fal fa-analytics"></i> Example Apps
 
-Explore the code for the **[Plotly Dash + RAPIDS 2010 Census Visualization](https://github.com/rapidsai/plotly-dash-rapids-census-demo/tree/master){: target="_blank"}** and its **[Covid-19 Branch](https://github.com/rapidsai/plotly-dash-rapids-census-demo/tree/covid-19){: target="_blank"}** on GitHub. 
+Explore the code for the **[Plotly Dash + RAPIDS 2010 Census Visualization](https://github.com/rapidsai/plotly-dash-rapids-census-demo/tree/main){: target="_blank"}** and its **[Covid-19 Branch](https://github.com/rapidsai/plotly-dash-rapids-census-demo/tree/covid-19){: target="_blank"}** on GitHub. 
 
 {% endcapture %}
 
@@ -244,5 +244,3 @@ Dash Cytoscape is a graph visualization component for creating easily customizab
 {% include cta-footer-plotly.html 
    background="background-darkpurple" 
 %}
-
-
