@@ -864,12 +864,12 @@ a.blue-btn:hover,
 }
 
 .selector .options .option-notice {
-    color: #424242;;
+    color: #e0e0e0;
     flex: 1 1;
     margin: 0.2em;
     padding: 0.3em;
     line-height: 1.5em;
-    background: #ffb500;
+    background: #424242;
 }
 
 .selector .options .option-notice span {

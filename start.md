@@ -40,9 +40,10 @@ We suggest that you take a look at the sample workflow in our Docker container (
 <i class="fas fa-microchip text-purple"></i> **GPU:** NVIDIA Pascal™ or better with **[compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 6.0+
 {: .no-tb-margins }
 
-<i class="fas fa-desktop text-purple"></i> **OS:** Ubuntu 16.04 & <code>gcc</code> 5.4 OR Ubuntu 18.04/CentOS 7 & <code>gcc</code> 7.3
+<i class="fas fa-desktop text-purple"></i> **OS:** Ubuntu 16.04/18.04 or CentOS 7 with <code>gcc/++</code> 7.5+
 {: .no-tb-margins }
 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-bullhorn text-purple"></i> See [RSN 1](https://docs.rapids.ai/notices/rsn0001) for details on our recent update to <code>gcc/++</code> 7.5<br/>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-info-circle text-purple"></i> RHEL 7 support is provided through CentOS 7 builds/installs
 {: .no-tb-margins }
 
@@ -55,7 +56,7 @@ We suggest that you take a look at the sample workflow in our Docker container (
 <i class="fas fa-download text-purple"></i> **CUDA & NVIDIA Drivers:** One of the following supported versions:
 {: .no-tb-margins }
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-check-circle text-purple"></i> [10.0](https://developer.nvidia.com/cuda-10.0-download-archive){: target="_blank"} & v410.48+ &nbsp; <i class="fas fa-check-circle text-purple"></i> [10.1.2](https://developer.nvidia.com/cuda-10.1-download-archive-update2){: target="_blank"} & v418.87+ &nbsp; <i class="fas fa-check-circle text-purple"></i> [10.2](https://developer.nvidia.com/cuda-downloads){: target="_blank"} & v440.33+ &nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-check-circle text-purple"></i> [10.0](https://developer.nvidia.com/cuda-10.0-download-archive){: target="_blank"} & v410.48+ &nbsp; <i class="fas fa-check-circle text-purple"></i> [10.1.2](https://developer.nvidia.com/cuda-10.1-download-archive-update2){: target="_blank"} & v418.87+ &nbsp; <i class="fas fa-check-circle text-purple"></i> [10.2](https://developer.nvidia.com/cuda-10.2-download-archive){: target="_blank"} & v440.33+ &nbsp; 
 {: .no-tb-margins }
 
 {% endcapture %}
