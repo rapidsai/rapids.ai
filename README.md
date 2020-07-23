@@ -1,10 +1,10 @@
-# [STAGING] RAPIDS.ai Jekyll Site
+# [PROD] RAPIDS.ai Jekyll Site
 
 ## Overview
 
-This is a STAGING repo for all changes that will push to PROD aka https://rapids.ai
+This is the PROD repo for all changes for the https://rapids.ai
 
-**All changes for PROD** go through this repo and the [deployment process](#deployment-process) outlined below.
+**All changes** go through this repo and the [deployment process](#deployment-process) outlined below
 
 ### Jekyll Markup
 
@@ -73,10 +73,12 @@ Twitter and Medium sections content are updated from the `post.json` file posted
 
 These examples are made possible by the new Jekyll site and can either be used in the production site or not.
 
-- [Job Board](https://rapidsai.github.io/rapidsai-staging/jobs.html) - [raw Markdown file](/jobs.md) (uses new short header)
-  - [Job Post](https://rapidsai.github.io/rapidsai-staging/job/2019/01/01/c-developers.html) - [raw Markdown file](/_posts/2019-01-01-c-developers.md)
-- [Site Blog](https://rapidsai.github.io/rapidsai-staging/blog.html) - [raw Markdown file](/blog.md) (uses new short header)
-  - [Jiwei's Converted Medium Post to Markdown](https://rapidsai.github.io/rapidsai-staging/blog/2019/01/15/make-sense-of-the-universe-with-rapids-ai.html) - [raw Markdown file](/_posts/2019-01-15-make-sense-of-the-universe-with-rapids-ai.md)
+>**NOTE:** With the merge of PROD & STAGING the links below do not work as they have been hidden.
+
+- [Job Board](https://rapidsai.github.io/rapids.ai/jobs.html) - [raw Markdown file](/jobs.md) (uses new short header)
+  - [Job Post](https://rapidsai.github.io/rapids.ai/job/2019/01/01/c-developers.html) - [raw Markdown file](/_posts/2019-01-01-c-developers.md)
+- [Site Blog](https://rapidsai.github.io/rapids.ai/blog.html) - [raw Markdown file](/blog.md) (uses new short header)
+  - [Jiwei's Converted Medium Post to Markdown](https://rapidsai.github.io/rapids.ai/blog/2019/01/15/make-sense-of-the-universe-with-rapids-ai.html) - [raw Markdown file](/_posts/2019-01-15-make-sense-of-the-universe-with-rapids-ai.md)
 
 ### TODO
 
@@ -103,7 +105,7 @@ This is also helpful as you're able to spot errors and issues more easily.
 
 ### Submitting PRs
 
-Once your changes are ready in your fork, create a [new pull request](https://github.com/rapidsai/rapidsai-staging/compare) to start the [deployment process](#deployment-process).
+Once your changes are ready in your fork, create a [new pull request](https://github.com/rapidsai/rapids.ai/compare) to start the [deployment process](#deployment-process).
 
 ### Other resources
 
@@ -112,10 +114,8 @@ Once your changes are ready in your fork, create a [new pull request](https://gi
 
 ## Deployment process
 
-1. Submit proposed changes as a PR to this repo from the contributor's fork
+1. Submit proposed changes as a PR to this repo from the contributor's fork, targetting the `gh-pages` branch
 2. Review PR providing feedback and request any necessary changes
-3. Approve PR merging into `gh-pages` of this repo
-4. Verify the staging site https://rapidsai.github.io/rapidsai-staging/ to ensure there are no errors or issues after merge
-5. Approve promotion to PROD 
-   - This is done through a CI process that merges `gh-pages` of this repo into the PROD repo and updates the `_config.yml` to match PROD
-6. Verify PROD site updated
+3. Use the Netlify preview to test and verify the changes in the PR
+4. Approve and merge PR into `gh-pages` of this repo
+4. Verify site updated by visiting https://rapids.ai
