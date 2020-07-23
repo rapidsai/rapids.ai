@@ -114,8 +114,8 @@ Once your changes are ready in your fork, create a [new pull request](https://gi
 
 1. Submit proposed changes as a PR to this repo from the contributor's fork
 2. Review PR providing feedback and request any necessary changes
-3. Approve PR merging into `main` of this repo
+3. Approve PR merging into `gh-pages` of this repo
 4. Verify the staging site https://rapidsai.github.io/rapidsai-staging/ to ensure there are no errors or issues after merge
 5. Approve promotion to PROD 
-   - This is done through a CI process that merges `main` of this repo into the PROD repo and updates the `_config.yml` to match PROD
+   - This is done through a CI process that merges `gh-pages` of this repo into the PROD repo and updates the `_config.yml` to match PROD
 6. Verify PROD site updated
