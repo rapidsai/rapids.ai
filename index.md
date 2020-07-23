@@ -226,7 +226,7 @@ Whether you are new to RAPIDS, looking to help, or are part of the team, learn a
 {% capture lib1_left %}
 ## <i class="fad fa-terminal"></i> cuDF <span class="api-tag">API</span>
 
-**[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cudf/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/master/CHANGELOG.md){: target="_blank"}**
+**[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cudf/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/main/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
 
 cuDF is a Python GPU DataFrame library (built on the **[Apache Arrow](http://arrow.apache.org/){: target="_blank"}** columnar memory format) for loading, joining, aggregating, filtering, and otherwise manipulating data all in a **[pandas-like](https://pandas.pydata.org/){: target="_blank"}** API familiar to data scientists.
@@ -235,7 +235,7 @@ cuDF is a Python GPU DataFrame library (built on the **[Apache Arrow](http://arr
 {% capture lib1_right %}
 ## <i class="fad fa-terminal"></i> libcudf <span class="lib-tag">LIB</span>
 
-**[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/libcudf/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/master/CHANGELOG.md){: target="_blank"}**
+**[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/libcudf/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/main/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
 
 libcudf is a C/C++ CUDA library for implementing standard dataframe operations. It is part of the cuDF repository. 
@@ -244,7 +244,7 @@ libcudf is a C/C++ CUDA library for implementing standard dataframe operations. 
 {% capture lib2_left %}
 ## <i class="fad fa-terminal"></i> cuML <span class="api-tag">API</span>
 
-**[GitHub](https://github.com/rapidsai/cuml){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cuml/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuml/blob/master/CHANGELOG.md){: target="_blank"}**
+**[GitHub](https://github.com/rapidsai/cuml){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cuml/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuml/blob/main/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
 
 cuML is a suite of libraries that implement machine learning algorithms and mathematical primitives functions that are compatible with other RAPIDS projects, all in a **[scikit-learn-like](https://scikit-learn.org/stable/index.html){: target="_blank"}** API familiar to data scientists.
@@ -254,7 +254,7 @@ cuML is a suite of libraries that implement machine learning algorithms and math
 {% capture lib2_right %}
 ## <i class="fad fa-terminal"></i> cuGraph <span class="api-tag">API</span>
 
-**[GitHub](https://github.com/rapidsai/cugraph){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cugraph/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cugraph/blob/master/CHANGELOG.md){: target="_blank"}**
+**[GitHub](https://github.com/rapidsai/cugraph){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cugraph/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cugraph/blob/main/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
 
 cuGraph is a GPU accelerated graph analytics library, with functionality like **[NetworkX](https://networkx.github.io/){: target="_blank"}**, which is seamlessly integrated into the RAPIDS data science platform.
@@ -263,7 +263,7 @@ cuGraph is a GPU accelerated graph analytics library, with functionality like **
 {% capture lib3_left %} 
 ## <i class="fad fa-terminal"></i> cuSignal <span class="api-tag">API</span>
 
-**[GitHub](https://github.com/rapidsai/cusignal){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cusignal/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cusignal/blob/master/CHANGELOG.md){: target="_blank"}**
+**[GitHub](https://github.com/rapidsai/cusignal){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cusignal/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cusignal/blob/main/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
 
 cuSignal is a GPU accelerated signal processing library built around a **[SciPy Signal-like](https://docs.scipy.org/doc/scipy/reference/signal.html){: target="_blank"}** API, CuPy, and custom Numba and CuPy CUDA kernels. cuSignal is written exclusively in Python and demonstrates GPU speeds without a C++ software layer.
@@ -272,7 +272,7 @@ cuSignal is a GPU accelerated signal processing library built around a **[SciPy 
 {% capture lib3_right %}
 ## <i class="fad fa-terminal"></i> cuSpatial <span class="api-tag">API</span>
 
-**[GitHub](https://github.com/rapidsai/cuspatial){: target="_blank"}** **/** **[Docs](https://github.com/rapidsai/cuspatial){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuspatial/blob/master/CHANGELOG.md){: target="_blank"}**
+**[GitHub](https://github.com/rapidsai/cuspatial){: target="_blank"}** **/** **[Docs](https://github.com/rapidsai/cuspatial){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuspatial/blob/main/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
 
 cuSpatial is an efficient C++ library accelerated on GPUs with Python bindings to enable use by the data science community. cuSpatial provides significant GPU-acceleration to common spatial and spatiotemporal operations such as point-in-polygon tests, distances between trajectories, and trajectory clustering when compared to CPU-based implementations. 
@@ -281,7 +281,7 @@ cuSpatial is an efficient C++ library accelerated on GPUs with Python bindings t
 {% capture lib4_left %} 
 ## <i class="fad fa-terminal"></i> cuxfilter <span class="api-tag">API</span>
 
-**[GitHub](https://github.com/rapidsai/cuxfilter){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cuxfilter/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuxfilter/blob/master/CHANGELOG.md){: target="_blank"}**
+**[GitHub](https://github.com/rapidsai/cuxfilter){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cuxfilter/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuxfilter/blob/main/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
 
 cuxfilter is a framework to connect web visualizations to GPU accelerated crossfiltering. Inspired by the javascript version of the **[original](https://github.com/crossfilter/crossfilter){: target="_blank"}**, it enables interactive and super fast multi-dimensional filtering of 100 million+ row tabular datasets via **[cuDF](https://github.com/rapidsai/cudf){: target="_blank"}**.
@@ -290,7 +290,7 @@ cuxfilter is a framework to connect web visualizations to GPU accelerated crossf
 {% capture lib4_right %} 
 ## <i class="fad fa-terminal"></i> CLX <span class="api-tag">API</span>
 
-**[GitHub](https://github.com/rapidsai/clx){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/clx/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/clx/blob/master/CHANGELOG.md){: target="_blank"}**
+**[GitHub](https://github.com/rapidsai/clx){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/clx/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/clx/blob/main/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
 
 Cyber Log Accelerators (CLX), also pronounced "clicks", provides a collection of RAPIDS examples for security analysts, data scientists, and engineers to quickly get started applying RAPIDS and GPU acceleration to real-world cybersecurity use cases.
@@ -298,7 +298,7 @@ Cyber Log Accelerators (CLX), also pronounced "clicks", provides a collection of
 {% capture lib5_left %}
 ## <i class="fad fa-terminal"></i> nvStrings <span class="api-tag">API</span>
 
-**[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/nvstrings/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/master/CHANGELOG.md){: target="_blank"}**
+**[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/nvstrings/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/main/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
 
 nvStrings, the Python bindings for **[cuStrings](https://github.com/rapidsai/cudf){: target="_blank"}**, provides a pandas-like API that will be familiar to data engineers & data scientists, so they can use it to easily accelerate their workflows without going into the details of CUDA programming.
@@ -307,7 +307,7 @@ nvStrings, the Python bindings for **[cuStrings](https://github.com/rapidsai/cud
 {% capture lib5_right %}
 ## <i class="fad fa-terminal"></i> RMM <span class="lib-tag">LIB</span>
 
-**[GitHub](https://github.com/rapidsai/rmm){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/rmm/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/rmm/blob/master/CHANGELOG.md){: target="_blank"}**
+**[GitHub](https://github.com/rapidsai/rmm){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/rmm/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/rmm/blob/main/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
 
 RAPIDS Memory Manager (RMM) is a central place for all device memory allocations in cuDF (C++ and Python) and other RAPIDS libraries. In addition, it is a replacement allocator for CUDA Device Memory (and CUDA Managed Memory) and a pool allocator to make CUDA device memory allocation / deallocation faster and asynchronous.
