@@ -246,7 +246,7 @@ function processClick(options, click, category) {
         selections['pkg'] = 'all';
     }
 
-    // Handle release specific exlcusions
+    // Handle nightly specific exlcusions
     if (selections['release'] == 'nightly') {
         // Change selections to new defaults and then disable
         if (selections['cuda'] == 'cuda100') {
@@ -261,14 +261,19 @@ function processClick(options, click, category) {
         $("#py36").addClass("disabled");
     }
 
-    // Handle clicks on disabled CUDA/Python
+    // Handle stable specific exlcusions
+    if (selections['release'] == 'stable') {
+        if (selections['python'] == 'py38') {
+            selections['python'] = 'py37';
+            $("#py38").removeClass("active");
+        }
+        $("#py38").addClass("disabled");
+    }
+
+    // Handle clicks on disabled CUDA
     if (selections['cuda'] == 'cuda110') {
         $("#cuda110").removeClass("active");
         selections['cuda'] = prev_cuda;
-    }
-    if (selections['python'] == 'py38') {
-        $("#py38").removeClass("active");
-        selections['python'] = prev_python;
     }
 
     $("#" + selections['method']).addClass("active");
