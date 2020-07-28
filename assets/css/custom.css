@@ -368,6 +368,7 @@ header {
     text-align: center;
     /* slope z-index chrome */
     position: relative;
+    margin-top: 0;
 }
 
 .section-subtitle-top-1 {
