@@ -199,7 +199,7 @@ Methods of grouping customers together based on some set of shared characteristi
 Identifying weaknesses and strengths of competition to improve efforts within the company: **[Query 1](#Query 1)**
 
 ## <i class="far fa-comments"></i> Sentiment Analysis
-Methods for analyzing text to predict if the text is positive or negative: **[Query 10](#Query uery 10), [Query 11](#Query 11), [Query 18](#Query 18), [Query 19](#Query 19), [Query 28](#Query 28)**
+Methods for analyzing text to predict if the text is positive or negative: **[Query 10](#Query 10), [Query 11](#Query 11), [Query 18](#Query 18), [Query 19](#Query 19), [Query 28](#Query 28)**
 
 {% endcapture %}
 
