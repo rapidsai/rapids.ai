@@ -1,6 +1,5 @@
 name: RAPIDS
 title: RAPIDS
-baseurl: "/rapidsai-staging"
 postsurl: "https://rapidsai.github.io/site-data/posts.json"
 exclude: ['_drafts', 'README.md', '.gitignore', 'CNAME']
 plugins:
@@ -8,9 +7,9 @@ plugins:
 
 collections:
   authors:
-    output: true
+    output: false
   posts:
-    output: true
+    output: false
 
 defaults:
   - scope:
