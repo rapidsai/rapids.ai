@@ -1,304 +1,304 @@
 {
 	"TPCxbb": [
 		{
-			"query": "Q1",
+			"query": "Query 1",
 			"sf1k": 4.6,
 			"sf1kx": 39.1,
 			"sf10k": 10.9,
 			"sf10kx": 4.6,
       "description": "To build and train recommender systems, it is typical in retail and eCommerce industries to build data science pipelines for prediction. “Data science pipelines to train recommender systems are typical in retail and eCommerce.A workflow may use a basketing technique to determine which products are most frequently to be grouped together in a single sale. To run this query, a data scientist loads structured, transactional data into a table, performs data pre-processing like pairing, sorting, and grouping data to create a report. The pairs can later be grouped into clusters to provide recommendations.",
       "workflows": ["Recommenders", "Basketing"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q1"
 		},
 		{
-			"query": "Q2",
+			"query": "Query 2",
 			"sf1k": 19.4,
 			"sf1kx": 25.9,
 			"sf10k": 49.5,
 			"sf10kx": 71.7,
 			"description": "When implementing a “viewed together” sort of online store streaming data, a data scientist working in eCommerce may choose to session the dataset to find common product clusters during a given timeframe. This involves reconstructing a user’s browsing session to create a virtual timestamp and determine if the given product was viewed during that session.",
       "workflows": ["Sessioning"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q2"
 		},
 		{
-			"query": "Q3",
+			"query": "Query 3",
 			"sf1k": 28.2,
 			"sf1kx": 13.5,
 			"sf10k": 66.3,
 			"sf10kx": 18.4,
 			"description": "A data scientist at an etailer may be asked to dig deeper into behavioral analytics of consumers shopping online. A typical query could ask what are the top 5 items most viewed before a purchase is made. This is a classic MapReduce workflow, where a block of data is read in, every input record is pre-processed, sorted, and then reduced and clustered. This result could inform recommendation systems in which items are linked to browsing behavior.",
       "workflows": ["Sessioning"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q3"
 		},
 		{
-			"query": "Q4",
+			"query": "Query 4",
 			"sf1k": 14.9,
 			"sf1kx": 28.1,
 			"sf10k": 47.5,
 			"sf10kx": 39.8,
 			"description": "Companies want to understand why consumers abandon an online shopping cart, leave a streaming tv show before finishing, or stop filling out a form. A data scientist may be asked to reconstruct an internet browsing session by importing, pre-processing a streaming dataset, and performing a series of sorts, joins, and clustering to produce a report. This information could improve customer service and user experience while increasing opportunities to influence consumer buying behavior.",
       "workflows": ["Sessioning"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q4"
 		},
 		{
-			"query": "Q5",
+			"query": "Query 5",
 			"sf1k": 25.7,
 			"sf1kx": 20.9,
 			"sf10k": 19.5,
 			"sf10kx": 50.8,
 			"description": "Prediction is a powerful tool to help identify consumer interest. A data scientist may use a machine learning approach like logistic regression to predict consumer interest in certain product groups. Retailers, Telecos, and consumer internet companies use this information to bundle and promote new products based on interest. Before training a regression model, a data scientist would first import the dataset and perform a series of preprocessing steps like inner joins and groupbys and then train and the model over several iterations. Once satisfied with the accuracy of the results, a report would be drawn and recommendations made.",
       "workflows": ["Recommenders"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q5"
 		},
 		{
-			"query": "Q6",
+			"query": "Query 6",
 			"sf1k": 4.3,
 			"sf1kx": 67.2,
 			"sf10k": 18.4,
 			"sf10kx": 11.6,
 			"description": "Consumers are constantly shifting their preferences. It’s quite difficult to track these, let alone determine if there’s a trending significance at an individual level. Etailers, streaming companies, and telecoms are constantly trying to understand their consumer preferences. For instance, a trend where preference to shop in-store shifts to purchasing online. This may indicate that consumers prefer transparency on pricing, more product variety, less travel, or 24-hour shopping experience. A data scientist may be asked to investigate this trend and determine if preferred customers move from primarily in-store buyers to online buyers.",
       "workflows": ["Customer Segmentation"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q6"
 		},
 		{
-			"query": "Q7",
+			"query": "Query 7",
 			"sf1k": 1.5,
 			"sf1kx": 140.7,
 			"sf10k": 8.0,
 			"sf10kx": 6.4,
 			"description": "Retailers constantly mine sales data to inform pricing decisions and maximize business results, value, and perception. A targeted price strategy incorporates demographics, gender, geography, time, and much more. Retailers effectively shape value perception by pricing competitively on items that matter most. Much of these pricing decisions are dynamic and fluctuate based on current or expected demand. Data scientists are often asked to help identify anomalies in buyer behavior to inform whether pricing should be adjusted. For example, a data scientist may be asked to find geographies with higher concentrations of buyers purchasing at a premium, or above the expected price of a product group. This indicates that buyers perceive more value in these higher-priced alternatives and the retailer may want to adjust the pricing or product mix.",
       "workflows": ["Customer Segmentation"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q7"
 		},
 		{
-			"query": "Q8",
+			"query": "Query 8",
 			"sf1k": 10.2,
 			"sf1kx": 38.8,
 			"sf10k": 85.6,
 			"sf10kx": 4.5,
 			"description": "Consumer reviews can play a deciding factor for consumers when making a buying decision. Reviews can also be used as a tool for an e-tailer to be transparent about product value. This puts the pressure back on the manufacturer to produce and deliver high-quality products to the market. Data scientists are often requested to help build a workflow to monitor consumer behavior that connects a specific product review with a purchase decision. If certain reviews translate into increased purchases, the e-tailer could feature or make this review more prominent on the product page to maximize exposure.",
       "workflows": ["Sales Analysis"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q8"
 		},
 		{
-			"query": "Q9",
+			"query": "Query 9",
 			"sf1k": 1.3,
 			"sf1kx": 179.2,
 			"sf10k": 9.9,
 			"sf10kx": 5.8,
 			"description": "Building systems and pipelines to effectively manage, automate, sort, query, model and visualize data is a science. Retailers rely on AI, machine learning, and advanced data science tools to make informed decisions on segmented customer groups like demographics. Data scientists can provide very specific sales reports that compare profit ranges across items sold in different states for a specific consumer demographic like married people with 4 year degrees.",
       "workflows": ["Sales Analysis"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q9"
 		},
 		{
-			"query": "Q10",
+			"query": "Query 10",
 			"sf1k": 5.0,
 			"sf1kx": 61.2,
 			"sf10k": 21.7,
 			"sf10kx": 15.5,
 			"description": "There can be an enormous amount of information hidden in unstructured data. For example, mining product reviews may reveal a product issue. A data scientist may be asked to parse strings of unstructured product review text to rate customer sentiment. Extracting sentiment from unstructured text in reviews or emails may help product managers better understand product value or product issues and create a response plan.",
       "workflows": ["Sentiment  Analysis"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q10"
 		},
 		{
-			"query": "Q11",
+			"query": "Query 11",
 			"sf1k": 3.0,
 			"sf1kx": 42.0,
 			"sf10k": 8.9,
 			"sf10kx": 4.7,
 			"description": "Having a pulse on how customers feel about certain products is important. Businesses may utilize a product review and rating system to collect this feedback. A data scientist may be tasked to help predict if customers are equally likely to write a review if they feel negatively or positively. This helps businesses better understand test the value of the review information and measure the correlation between sentiment and the review system.",
       "workflows": ["Sentiment Analysis"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q11"
 		},
 		{
-			"query": "Q12",
+			"query": "Query 12",
 			"sf1k": 3.2,
 			"sf1kx": 90.3,
 			"sf10k": 16.0,
 			"sf10kx": 15.1,
 			"description": "Often businesses want to understand the relationship between brick-and-mortar store sales and online sales. Retailers may want to test the effectiveness of online marketing driving in-store sales. A data scientist may be asked to build a model to track the effectiveness of this marketing campaign. This is a database workflow where a data scientist joins customer online browsing history with in-store sales and filters by time to get a result.",
       "workflows": ["Sales Analysis"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q12"
 		},
 		{
-			"query": "Q13",
+			"query": "Query 13",
 			"sf1k": 2.9,
 			"sf1kx": 62.8,
 			"sf10k": 13.1,
 			"sf10kx": 6.3,
 			"description": "Storefronts can be expensive and retailers may choose to lower their operating costs by closing a store. While brick and mortar stores may better serve local communities and provide more product diversity, on-line storefronts reach more customers and operate at lower costs for the business. A retailer may plan to preemptively convert customers to on-line sales and mitigate any negative response. A data scientist could be asked to help model if customers are moving to web purchases over in-store sales. This could help determine if these customers are able to buy what they want on the web now that their store has closed. This could also determine what product mix could be offered in-store versus online.",
       "workflows": ["Sales Analysis"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q13"
 		},
 		{
-			"query": "Q14",
+			"query": "Query 14",
 			"sf1k": 1.2,
 			"sf1kx": 42.5,
 			"sf10k": 9.0,
 			"sf10kx": 4.6,
 			"description": "Fine-tuning order fulfillment helps online sellers offer quick-turn, order delivery to customers. To better inform fulfillment processes, they may want to understand which specific consumers buy products during a preferred time of day for certain product groups. For instance, retailers may find that large households prefer to purchase products like cosmetics or electronics on weekday evenings when they have more free time. A data scientist can query this structured sales data to qualify this hypothesis.",
       "workflows": ["Sales Analysis"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q14"
 		},
 		{
-			"query": "Q15",
+			"query": "Query 15",
 			"sf1k": 3.2,
 			"sf1kx": 31.3,
 			"sf10k": 7.8,
 			"sf10kx": 5.5,
 			"description": "Sales reports often look at revenue for a given product group over a period of time. A data scientist may be asked to use structured sales data to build an analytics dashboard to track grouped product sales to alert the business of flat or declining product sales of a certain type, in a certain geography, or over a defined time period. This helps inform the business of potential revenue shortfalls or possible seasonal or cyclical buying behavior for certain products.",
       "workflows": ["Sales Analysis"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q15"
 		},
 		{
-			"query": "Q16",
+			"query": "Query 16",
 			"sf1k": 7.9,
 			"sf1kx": 43.5,
 			"sf10k": 36.6,
 			"sf10kx": 9.3,
 			"description": "In some businesses, Item prices can be quite dynamic and change often. To remain competitive, meet revenue goals and margins, and offer the best value to customers, pricing must be set just right. Data science teams are often asked to measure the impact of price changes. The team may choose to look at a specific location and time window before and after the change to measure impact and adjust accordingly.",
       "workflows": ["Pricing Analysis"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q16"
 		},
 		{
-			"query": "Q17",
+			"query": "Query 17",
 			"sf1k": 1.9,
 			"sf1kx": 108.9,
 			"sf10k": 15.2,
 			"sf10kx": 3.0,
 			"description": "Incentivizing consumers is often done through promotions like price discounts. Understanding if increased sales follow a promoted product is an important measure of the effectiveness of the promotion.  An item may be very price sensitive and sell at high volume when promoted. This may only hold true during certain times of the day or within certain demographics. It's a data scientist’s job to help define the ideal promotion recommendation.",
       "workflows": ["Pricing Analysis"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q17"
 		},
 		{
-			"query": "Q18",
+			"query": "Query 18",
 			"sf1k": 6.9,
 			"sf1kx": 266.7,
 			"sf10k": 21.9,
 			"sf10kx": 86.6,
 			"description": "When trying to understand the root cause of underperforming store revenues, a data scientist may be asked to build a table and sort by lowest performing stores. Take this a step further and create a correlation between the lowest-performing store and negative online reviews that may further shed light on why revenues are low.",
       "workflows": ["Sentiment Analysis"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q18"
 		},
 		{
-			"query": "Q19",
+			"query": "Query 19",
 			"sf1k": 5.0,
 			"sf1kx": 118.0,
 			"sf10k": 16.8,
 			"sf10kx": 92.7,
 			"description": "Returns are a drain on the revenue of any store, so understanding and taking steps to reduce returns always pays off. A data scientist may be asked to help identify reasons for the most commonly returned products by building a model that monitors sentiments for product reviews with the highest number of returns. If these reviews produce a negative result, this could help retailers prevent dissatisfaction with its customers and minimize returns.",
       "workflows": ["Sentiment Analysis"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q19"
 		},
 		{
-			"query": "Q20",
+			"query": "Query 20",
 			"sf1k": 16.9,
 			"sf1kx": 12.2,
 			"sf10k": 35.5,
 			"sf10kx": 3.7,
 			"description": "Understanding the behavior of customers can pay great dividends. For instance, a data science team at a retailer may be asked to perform an analysis on returns by organizing the dataset of customers who make returns in different slices. This is a k-means workflow to extract variables of interest and cluster by variables of interest to report on a specific customer segmentation.",
       "workflows": ["Customer Segmentation"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q20"
 		},
 		{
-			"query": "Q21",
+			"query": "Query 21",
 			"sf1k": 12.1,
 			"sf1kx": 26.1,
 			"sf10k": 134.0,
 			"sf10kx": 2.3,
 			"description": "Retailers may find certain product categories sell better in-store versus online. To test and optimize this product mix, a data science team may be asked to find items with high rates of a shift from store to online purchases. This can help optimize the product mix in the store versus available online and reduce costly returns.",
       "workflows": ["Sales Analysis"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q21"
 		},
 		{
-			"query": "Q22",
+			"query": "Query 22",
 			"sf1k": 1.3,
 			"sf1kx": 433.8,
 			"sf10k": 3.3,
 			"sf10kx": 43.7,
 			"description": "Pricing can have upstream effects on supply and inventory. If priced too low, an item may sell out in stores quickly, which creates an inventory shortfall. A data science team may be asked to correlate price changes with inventory change across all available warehouse locations. While this query aggregates sales across online and store channels, it may expose sensitivities to the warehouse operations and possible inefficiencies with inventory management.",
       "workflows": ["Pricing Analysis"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q22"
 		},
 		{
-			"query": "Q23",
+			"query": "Query 23",
 			"sf1k": 3.2,
 			"sf1kx": 56.6,
 			"sf10k": 8.8,
 			"sf10kx": 8.5,
 			"description": "Matching pricing with inventory with consumer demand is difficult. Understanding which product at each location has a high rate of change in sales and inventory may help Identify changes in customer preferences. For example, identifying items with high variance for an extended period helps with inventory forecasting for seasonal products.",
       "workflows": ["Pricing Analysis"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q23"
 		},
 		{
-			"query": "Q24",
+			"query": "Query 24",
 			"sf1k": 1.5,
 			"sf1kx": 113.3,
 			"sf10k": 11.7,
 			"sf10kx": 4.5,
 			"description": "Having real-time visibility into competitive pricing changes is key to maintaining market share. It’s important to understand how price changes may affect the ability to sell products. Products with high price sensitivities, or elasticities of demand, will require close competitive price matching. A data scientist may be asked to run a report and compute the cross-price elasticity of demand for a given product to identify products with high price sensitivities.",
       "workflows": ["Pricing Analysis"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q24"
 		},
 		{
-			"query": "Q25",
+			"query": "Query 25",
 			"sf1k": 17.6,
 			"sf1kx": 14.3,
 			"sf10k": 68.1,
 			"sf10kx": 2.5,
 			"description": "Classifying customer groups help businesses provide better customer support, opportunistic offers, and make recommendations for new products. A data scientist may be asked to understand similar groups of customers who have similar shopping behavior by using a k-means machine learning workflow. For example, offers should be targeted differently to customers who visit rarely and buy many products of high revenue, versus customers who visit often but buy few products of low revenue.",
       "workflows": ["Recommenders"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q25"
 		},
 		{
-			"query": "Q26",
+			"query": "Query 26",
 			"sf1k": 14.7,
 			"sf1kx": 18.6,
 			"sf10k": 21.6,
 			"sf10kx": 5.3,
 			"description": "Segmenting customers by purchasing behavior could help marketers build targeted campaigns and offer promotions based on a specific customer segment’s tastes or preferences. A data scientist may be asked to build a model to match preferences with customer segments. For example, a new science fiction book is best marketed to customer groups with a high affinity for science fiction.",
       "workflows": ["Customer Segmentation"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q26"
 		},
 		{
-			"query": "Q27",
+			"query": "Query 27",
 			"sf1k": 18.6,
 			"sf1kx": 4.1,
 			"sf10k": 19.0,
 			"sf10kx": 2.9,
 			"description": "There is valuable insight found in unstructured data like product reviews. Mining the dataset with high confidence of accuracy could help reveal new competitive offers, quality issues with the product, uncover opportunities to improve customer service, and better understand the competitive environment.",
       "workflows": ["Competitive  Analysis"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q27"
 		},
 		{
-			"query": "Q28",
+			"query": "Query 28",
 			"sf1k": 26.6,
 			"sf1kx": 13.3,
 			"sf10k": 15.6,
 			"sf10kx": 7.3,
 			"description": "It's important to be aware of negative product reviews as soon as possible. A data scientist may be asked to build a classifier to help identify negative sentiment from a product discussion board. They fit a model by taking labeled data and determining the accuracy of a trained classifier to understand sentiment that hasn’t been reviewed by a human.",
       "workflows": ["Sentiment Analysis"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q28"
 		},
 		{
-			"query": "Q29",
+			"query": "Query 29",
 			"sf1k": 13.3,
 			"sf1kx": 252.0,
 			"sf10k": 28.9,
 			"sf10kx": 5.1,
 			"description": "A data scientist may be asked to perform an affinity analysis to understand which products are likely to be bundled and purchased together. This result could help measure the effectiveness of existing recommenders for online purchases.",
       "workflows": ["Recommenders"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q29"
 		},
 		{
-			"query": "Q30",
+			"query": "Query 30",
 			"sf1k": 13.4,
 			"sf1kx": 52.8,
 			"sf10k": 41.4,
 			"sf10kx": 62.7,
 			"description": "Understanding which products people view in the same online shopping session is valuable input data for product recommenders. Retailers could build a recommendation system based on what products are viewed together in a single shopping session to create bundled offers.",
       "workflows": ["Basketing"],
-      "link": "#"
+      "link": "https://github.com/rapidsai/tpcx-bb/tree/main/tpcx_bb/queries/q30"
 		}
 	]
 }

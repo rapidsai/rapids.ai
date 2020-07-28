@@ -674,16 +674,16 @@ a.query-wf {
     padding: 0.5em 0.5em 0.5em 0em;
 }
 
-.query-subtitle-rapids {
+.query-subtitle-10k {
     font-size: 0.5em;
     text-align: center;
-    color: purple;
+    color: #7306ff;
 }
 
-.query-subtitle-comp {
+.query-subtitle-1k {
     font-size: 0.5em;
     text-align: center;
-    color: gray;
+    color: #d216d2;
 }
 
 .query-desc {

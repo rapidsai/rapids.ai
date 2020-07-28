@@ -3,7 +3,7 @@ title: "RAPIDS + TPC-XBB"
 description: "Benchmarking RAPIDS with TPCx-BB"
 tagline: "Benchmarking RAPIDS with TPCx-BB"
 button_text: "TPC.org"
-button_link: "http://www.tpc.org/tpcx-bb/default.asp"
+button_link: "http://www.tpc.org/"
 layout: default
 ---
 ![TPCxbb]({{ site.baseurl }}{% link /assets/images/tpc-reg.gif %}){: .projects-logo}
@@ -12,15 +12,15 @@ layout: default
 {: .section-title-full}
 
 {% capture total-time %}
-## What is TPCx-BB?
+## <i class="fal fa-tachometer-fastest"></i> What is TPCx-BB?
 
+TPCx-BB is a Big Data benchmark for enterprises that includes 30 queries representing real-world ETL & ML workflows at various scale factors: SF1000 is 1 TB of data, SF10000 is 10TB. Each “query” is in fact a model workflow that can include SQL, user-defined functions, careful sub-setting and aggregation, and machine learning. To date, these queries have been run using Apache Hive or Apache Spark. **[See the TPC guidelines and past results <i class="fas fa-angle-double-right"></i>](http://www.tpc.org/tpcx-bb/p){: target="_blank"}**  
 
-TPCx-BB is a Big Data benchmark for enterprises that includes 30 queries representing real-world ETL & ML workflows at various scale factors: SF1000 is 1 TB of data, SF10000 is 10TB. Each “query” is in fact a model workflow that can include SQL, user-defined functions, careful sub-setting and aggregation, and machine learning. To date, these queries have been run using Apache Hive or Apache Spark. **[See the TPC guidelines and past results <i class="fas fa-angle-double-right"></i>](http://www.tpc.org/tpcx-bb/default.asp){: target="_blank"}**  
-
-## Why the Benchmark Matters
+## <i class="far fa-lightbulb-exclamation"></i> Why the Benchmark Matters
 
 This marks the first TPCx-BB benchmark (unofficial) on GPUs. In this run, compute, communication, networking, and storage infrastructure are accelerated by the RAPIDS software ecosystem. This sets a new bar for running data science workloads at scale. **[Read more on this vision <i class="fas fa-angle-double-right"></i>](https://towardsdatascience.com/life-after-hadoop-getting-data-science-to-work-for-your-business-c9ab6605733f){: target="_blank"}**  
 
+<br>
 
 ## Get dramatic cost and time-savings <br> for both small scale and large-scale data analytics problems
 
@@ -29,22 +29,22 @@ This marks the first TPCx-BB benchmark (unofficial) on GPUs. In this run, comput
 {% endcapture %}
 
 {% capture sf1000-left %}
-## Scaling Up: <br> 1TB+ on a Single Server
+## <i class="fal fa-arrow-from-bottom"></i> Scaling Up: <br> 1TB+ on a Single Server
 {: .section-title-halfs}
 
 SF1000, with a data size of 1 TB, is the threshold of what used to be “Big Data”, but is now very common.  Many analytics workloads process data at this scale. These tasks take specialized infrastructure to execute, and the ability to draw actionable information out of data sets of this size on demand is relatively recent. It also suggests an organization of a size where data is increasingly critical to operating at optimal capacity. This is often when analysts will begin trading sophistication for performance.
 
-On **two NVIDIA DGX A100 systems (16 GPUs), RAPIDS achieved a 37.1x faster execution time.**
+**On two NVIDIA DGX A100 systems (16 GPUs), RAPIDS achieved a 37.1x faster execution time.**
 
 {% endcapture %}
 
 {% capture sf10000-right %}
-## Scaling Out: <br> 10TB+ on Distributed Systems
+## <i class="fal fa-expand-arrows"></i> Scaling Out: <br> 10TB+ on Distributed Systems
 {: .section-title-halfs}
 
 SF10000, with more than 10 TB of data, presents both an opportunity to make data-driven decisions, and a considerable infrastructure challenge. Minor iterations on queries become costly in both execution time and datacenter costs: space, server equipment, power, cooling, and human capital to manage it. Without an efficient solution, many TPCx-BB-style analyses will collapse under their own weight and be infeasible to execute at this scale.
 
-On **sixteen NVIDIA DGX A100 systems (128 GPUs), RAPIDS achieved a 19.5x faster execution time.**
+** On sixteen NVIDIA DGX A100 systems (128 GPUs), RAPIDS achieved a 19.5x faster execution time.**
 
 We expect even further improvement as we iterate on RAPIDS, but 19.5x represents a **wall-clock time reduction from 282 minutes to 23 minutes.** **[Read our blog on next steps and plans to improve <i class="fas fa-angle-double-right"></i>](https://medium.com/rapids-ai/no-more-waiting-interactive-big-data-now-32f7b903cf41){: target="_blank"}**
 
@@ -80,7 +80,7 @@ Learn about each query workflow and see how RAPIDS performs **[with each query e
 
 {% endcapture %}
 {% capture start_right %}
-## <i class="far fa-file-alt"></i> Next Steps
+## <i class="fal fa-chevron-circle-right"></i> Next Steps
 See the future plans for integrating new technologies for faster results **[with our next steps <i class="fas fa-angle-double-right"></i>](https://medium.com/rapids-ai/no-more-waiting-interactive-big-data-now-32f7b903cf41){: target="_blank"}**  
 
 {% endcapture %}
@@ -175,47 +175,31 @@ The 30 queries represent fundamental data science workflows, in this case for a 
 
 {% capture wf_left %}
 ## <i class="far fa-funnel-dollar"></i> Recommenders
-Systems that recommend goods to customers that customers are likely to buy, typically on a website:
-
-**[Query 1](#Q1), [Query 5](#Q5), [Query 25](#Q25), [Query 29](#Q29)**
+Systems that recommend goods to customers that customers are likely to buy, typically on a website: **[Query 1](#Query 1), [Query 5](#Query 5), [Query 25](#Query 25), [Query 29](#Query 29)**
 
 ## <i class="far fa-browser"></i> Sessionizing
-How a certain kind of customer interacts with a website during a visit; what their browsing/shopping behavior looks like:
-
-**[Query 2](#Q2), [Query 3](#Q3), [Query 4](#Q4)**
+How a certain kind of customer interacts with a website during a visit; what their browsing/shopping behavior looks like: **[Query 2](#Query 2), [Query 3](#Query 3), [Query 4](#Query 4)**
 
 ## <i class="far fa-cart-arrow-down"></i> Basketing
-How are items purchased together, do goods appear in similar “baskets” (customer orders):
-
-**[Query 1](#Q1), [Query 30](#Q30)**
+How are items purchased together, do goods appear in similar “baskets” (customer orders): **[Query 1](#Query 1), [Query 30](#Query 30)**
 
 ## <i class="far fa-barcode-alt"></i> Price Analysis
-How customer behavior changes in response to changes in price:
-
-**[Query 16](#Q16), [Query 17](#Q17), [Query 22](#Q22), [Query 23](#Q23), [Query 24](#Q24)**
+How customer behavior changes in response to changes in price: **[Query 16](#Query 16), [Query 17](#Query 17), [Query 22](#Query 22), [Query 23](#Query 23), [Query 24](#Query 24)**
 
 {% endcapture %}
 
 {% capture wf_right %}
 ## <i class="fal fa-analytics"></i> Sales Analysis
-Things that impact sales beyond price:
-
-**[Query 8](#Q8), [Query 9](#Q9), [Query 12](#Q12), [Query 13](#Q13), [Query 14](#Q14), [Query 15](#Q15), [Query 21](#Q21)**
+Things that impact sales beyond price: **[Query 8](#Query 8), [Query 9](#Query 9), [Query 12](#Query 12), [Query 13](#Query 13), [Query 14](#Query 14), [Query 15](#Query 15), [Query 21](#Query 21)**
 
 ## <i class="far fa-chalkboard-teacher"></i> Customer Segmentation
-Methods of grouping customers together based on some set of shared characteristics:
-
-**[Query 6](#Q6), [Query 7](#Q7), [Query 20](#Q20), [Query 26](#Q26)**
+Methods of grouping customers together based on some set of shared characteristics: **[Query 6](#Query 6), [Query 7](#Query 7), [Query 20](#Query 20), [Query 26](#Query 26)**
 
 ## <i class="fas fa-warehouse-alt"></i> Competitive Analysis
-Identifying weaknesses and strengths of competition to improve efforts within the company:
-
-**[Query 1](#Q1)**
+Identifying weaknesses and strengths of competition to improve efforts within the company: **[Query 1](#Query 1)**
 
 ## <i class="far fa-comments"></i> Sentiment Analysis
-Methods for analyzing text to predict if the text is positive or negative:
-
-**[Query 10](#Q10), [Query 11](#Q11), [Query 18](#Q18), [Query 19](#Q19), [Query 28](#Q28)**
+Methods for analyzing text to predict if the text is positive or negative: **[Query 10](#Query uery 10), [Query 11](#Query 11), [Query 18](#Query 18), [Query 19](#Query 19), [Query 28](#Query 28)**
 
 {% endcapture %}
 
@@ -246,32 +230,32 @@ The integration of RAPIDS, BlazingSQL, Dask, CuPy, Numba, and UCX is no easy fea
 {% endcapture %}
 
 {% capture key1 %}
-## Serialization and Spilling
+## <i class="fal fa-container-storage"></i> Serialization and Spilling
 
 RAPIDS defined and improved serialization protocols for key GPU data structures like dataframes and series, which enabled the use of NVIDIA NVLink to efficiently transfer these objects over the wire. The set of objects that can be spilled from GPU to main memory through Dask was added to allow the largest ETL workflows to use CPU memory as temporary storage when the GPU would otherwise go out-of-memory.
 {% endcapture %}
 
 {% capture key2 %}
-## I/O
+## <i class="fal fa-download"></i> I/O
 
 RAPIDS cuIO, the I/O component of cuDF, added support for reading and writing Apache Parquet formatted data (including splitting Parquet files by row group for enhanced parallelism) and optimized the existing CSV reader implementation.
 {% endcapture %}
 
 {% capture key3 %}
-## Memory Interoperability
+## <i class="fal fa-memory"></i> Memory Interoperability
 
 **[RAPIDS Memory Manager](https://github.com/rapidsai/rmm){: target="_blank"}** was enhanced to allow sharing a memory pool between RAPIDS libraries and CuPy. As some RAPIDS TPCx-BB queries rely on CuPy, this change allows use of a single device memory pool on the entire GPU, providing significant performance gains by reducing the cost of dynamically allocating and freeing memory. For more information sharing memory pools, **[check out this blog post](https://medium.com/rapids-ai/using-rapids-memory-manager-with-cupy-8d08fe8f58fa){: target="_blank"}**.
 {% endcapture %}
 
 {% capture key4 %}
-## High-Speed Networking
+## <i class="fal fa-network-wired"></i> High-Speed Networking
 
 RAPIDS developed and released UCX-Py, a Python interface for UCX (a low-level, high-performance networking library) to allow Dask workflows to take advantage of accelerated networking hardware like NVIDIA NVLink and Mellanox InfiniBand (IB). InfiniBand (IB) and GPU RDMA enable a direct path for data exchange between the GPU and a third-party peer device using PCI Express. 
 
 {% endcapture %}
 
 {% capture key5 %}
-## Algorithm Development
+## <i class="fal fa-superscript"></i> Algorithm Development
 
 RAPIDS added and enhanced many single-GPU and distributed algorithms to support the diverse TPCx-BB queries. Key enhancements include new and faster multi-column sort and concatenation, hash-based repartitioning of dataframes, a new join type (left-semi join), a hash-based token-occurrence counter, and a Naive Bayes classifier.
 
@@ -287,7 +271,7 @@ RAPIDS added and enhanced many single-GPU and distributed algorithms to support 
     padding-top="5em" padding-bottom="3m" 
     content-single=key_comp
 %}
-{% include section-five-third.html 
+{% include section-five-thirds.html 
     background="background-white" 
     padding-top="0em" padding-bottom="5em" 
     content-left-third=key1
@@ -320,6 +304,7 @@ The **[RAPIDS TPCx-BB benchmark](https://github.com/rapidsai/tpcx-bb){: target="
     <div class="logo-flex">
         <a href="https://www.anaconda.com/anaconda-community/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/anaconda.png %}" alt="anaconda"> </a>
     </div>
+    <div>
         <a href="https://arrow.apache.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/apache-arrow_Color.png %}" alt="Apache Arrow"> </a>
     </div>
     <div class="logo-flex">
@@ -332,10 +317,10 @@ The **[RAPIDS TPCx-BB benchmark](https://github.com/rapidsai/tpcx-bb){: target="
         <a href="https://dask.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/dask_logo.png %}" alt="Dask"> </a>
     </div>
     <div class="logo-flex">
-        <a href="#" target="_blank"> <img src="#" alt="Pandas"> </a>
+        <a href="https://pandas.pydata.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/pandas_logo.png %}" alt="Pandas"> </a>
     </div>
     <div class="logo-flex">
-        <a href="#" target="_blank"> <img src="#" alt="Python"> </a>
+        <a href="https://www.python.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/python_logo.png %}" alt="Python"> </a>
     </div>
     <div class="logo-flex">
         <a href="https://developer.nvidia.com/open-source" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/NVLogo_2D_H.png %}" alt="nvidia"> </a>
@@ -344,15 +329,16 @@ The **[RAPIDS TPCx-BB benchmark](https://github.com/rapidsai/tpcx-bb){: target="
         <a href="https://numba.pydata.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/numba_logo.png %}" alt="Numba"> </a>
     </div>
     <div class="logo-flex">
-        <a href="#" target="_blank"> <img src="#" alt="scikit-learn"> </a>
+        <a href="https://scikit-learn.org" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/scikit-learn_logo.png %}" alt="scikit-learn"> </a>
     </div>
     <div class="logo-flex">
-        <a href="#" target="_blank"> <img src="#" alt="spaCy"> </a>
+        <a href="https://spacy.io/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/SpaCy_logo.svg %}" alt="spaCy"> </a>
     </div>
     <div class="logo-flex">
         <a href="https://www.openucx.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/UCX_Logo.png %}" alt="UCX"> </a>
     </div>
 </section>
+ 
 
 {% capture next_step %}
 # Next Steps and Future Work
@@ -360,27 +346,27 @@ The **[RAPIDS TPCx-BB benchmark](https://github.com/rapidsai/tpcx-bb){: target="
 While the initial results show significant improvements, there are open GitHub issues for further optimizations, interoperability, and performance improvements.
 
 
-## BlazingSQL 
+## <i class="fal fa-chevron-circle-right"></i> BlazingSQL 
 BlazingSQL’s high- performance distributed SQL engine provides the opportunity for even better performance. The BlazingSQL team has heavily focused on out-of-core processing and is now able to cache cuDF DataFrames on GPU memory, system memory, or disk during query execution. Out-of-core is still in its infancy, but early testing demonstrates the ability to run over 50% of the TPCx-BB workloads at SF10K on a single NVIDIA DGX A100.
 
 Simultaneously, the team is integrating UCX-Py into BSQL’s communication layer to dramatically improve shuffles, and therefore overall performance.
 
-## Dask
+## <i class="fal fa-chevron-circle-right"></i> Dask
 RAPIDS continues to contribute back to the Dask open-source project. Dask will continue to be key to using RAPIDS at scale. As Dask improves, results will improve. There are several ongoing work streams to enhance the Dask scheduler.
 
 
-## cuStreamz
+## <i class="fal fa-chevron-circle-right"></i> cuStreamz
 Reading data from disk also currently requires sequentially doing I/O and compute. With cuStreamz, it will be possible to overlap the I/O and compute tasks involved in reading data, which will bring further performance gains.
 
 
-## High-Speed Networking
+## <i class="fal fa-chevron-circle-right"></i> High-Speed Networking
 
 Current SF10K TPCx-BB results use UCX with NVLink, Mellanox InfiniBand, and GPU RDMA. Communicating small data buffers is still slow compared to larger buffers, which reduces performance. There is ongoing work to improve how UCX-Py and InfiniBand transfer small buffers, which should bring performance gains, too.
 
 
-## GPU Direct Storage
+## <i class="fal fa-chevron-circle-right"></i> GPU Direct Storage
 
-Currently, reading data from disk requires moving the file into host memory and then copying from host memory into GPU memory. This adds latency and increases host memory requirements. The upcoming CUDA cuFile API enables a direct to GPU memory data path between both local and remote NVME storage systems, called GPU Direct Storage. This will greatly increase throughput for I/O heavy workloads.
+Currently, reading data from disk requires moving the file into host memory and then copying from host memory into GPU memory. This adds latency and increases host memory requirements. The upcoming CUDA cuFile API enables a direct to GPU memory data path between both local and remote NVME storage systems, called **[GPU Direct Storage](https://devblogs.nvidia.com/gpudirect-storage/){: target="_blank"}**. This will greatly increase throughput for I/O heavy workloads.
 
 {% endcapture %}
 
@@ -463,11 +449,11 @@ Currently, reading data from disk requires moving the file into host memory and 
             content.push(
             '<div class="pure-g"><div class="container-padding">'
             +
-            '<div class="pure-u-1 pure-u-md-1-3"> <div id="'+ r1.query +'" class="query-margin"></div> <h3 class="query-title"><i class="fal fa-analytics"></i> '+ r1.query +'</h3> <a href="#workflow" class="query-wf">'+ r1.workflows.toString() +'</a> <div class="query-num-container"> <div class="query-num">'+ r1.sf1kx +'x<div class="query-subtitle-rapids">SF1K</div></div><div class="query-num">'+ r1.sf10kx +'x<div class="query-subtitle-comp">SF10K</div></div></div> <p class="query-desc">'+ r1.description +'</p><a class="query-source" href="'+ r1.link +'">Get Source Code on Github <i class="fas fa-angle-double-right"></i></a></div>'
+            '<div class="pure-u-1 pure-u-md-1-3"> <div id="'+ r1.query +'" class="query-margin"></div> <h3 class="query-title"><i class="fal fa-analytics"></i> '+ r1.query +'</h3> <a href="#workflow" class="query-wf">'+ r1.workflows.toString() +'</a> <div class="query-num-container"> <div class="query-num">'+ r1.sf1kx +'x<div class="query-subtitle-1k">SF1K</div></div><div class="query-num">'+ r1.sf10kx +'x<div class="query-subtitle-10k">SF10K</div></div></div> <p class="query-desc">'+ r1.description +'</p><a class="query-source" href="'+ r1.link +'">Get Source Code on Github <i class="fas fa-angle-double-right"></i></a></div>'
             +   
-            '<div class="pure-u-1 pure-u-md-1-3"> <div id="'+ r2.query +'" class="query-margin"></div> <h3 class="query-title"><i class="fal fa-analytics"></i> '+ r2.query +'</h3> <a href="#workflow" class="query-wf">'+ r2.workflows.toString() +'</a> <div class="query-num-container"> <div class="query-num">'+ r2.sf1kx +'x<div class="query-subtitle-rapids">SF1K</div></div><div class="query-num">'+ r2.sf10kx +'x<div class="query-subtitle-comp">SF10K</div></div></div> <p class="query-desc">'+ r2.description +'</p><a class="query-source" href="'+ r2.link +'">Get Source Code on Github <i class="fas fa-angle-double-right"></i></a></div>'
+            '<div class="pure-u-1 pure-u-md-1-3"> <div id="'+ r2.query +'" class="query-margin"></div> <h3 class="query-title"><i class="fal fa-analytics"></i> '+ r2.query +'</h3> <a href="#workflow" class="query-wf">'+ r2.workflows.toString() +'</a> <div class="query-num-container"> <div class="query-num">'+ r2.sf1kx +'x<div class="query-subtitle-1k">SF1K</div></div><div class="query-num">'+ r2.sf10kx +'x<div class="query-subtitle-10k">SF10K</div></div></div> <p class="query-desc">'+ r2.description +'</p><a class="query-source" href="'+ r2.link +'">Get Source Code on Github <i class="fas fa-angle-double-right"></i></a></div>'
             +
-            '<div class="pure-u-1 pure-u-md-1-3"> <div id="'+ r3.query +'" class="query-margin"></div> <h3 class="query-title"><i class="fal fa-analytics"></i> '+ r3.query +'</h3> <a href="#workflow" class="query-wf">'+ r3.workflows.toString() +'</a> <div class="query-num-container"> <div class="query-num">'+ r3.sf1kx +'x<div class="query-subtitle-rapids">SF1K</div></div><div class="query-num">'+ r3.sf10kx +'x<div class="query-subtitle-comp">SF10K</div></div></div> <p class="query-desc">'+ r3.description +'</p><a class="query-source" href="'+ r3.link +'">Get Source Code on Github <i class="fas fa-angle-double-right"></i></a></div>'
+            '<div class="pure-u-1 pure-u-md-1-3"> <div id="'+ r3.query +'" class="query-margin"></div> <h3 class="query-title"><i class="fal fa-analytics"></i> '+ r3.query +'</h3> <a href="#workflow" class="query-wf">'+ r3.workflows.toString() +'</a> <div class="query-num-container"> <div class="query-num">'+ r3.sf1kx +'x<div class="query-subtitle-1k">SF1K</div></div><div class="query-num">'+ r3.sf10kx +'x<div class="query-subtitle-10k">SF10K</div></div></div> <p class="query-desc">'+ r3.description +'</p><a class="query-source" href="'+ r3.link +'">Get Source Code on Github <i class="fas fa-angle-double-right"></i></a></div>'
             +
             '</div></div>')
         
