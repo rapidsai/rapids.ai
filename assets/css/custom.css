@@ -91,6 +91,10 @@ strong {
     font-weight: 600;
 }
 
+.center-text {
+    text-align: center;
+}
+
 .center {
     position: relative;
     width: 100%;
@@ -616,6 +620,13 @@ a h2:hover,
     left: 50%;
     width: 300px;
     transform: translate(-50%)
+}
+
+.center-logo {
+    position: relative;
+    display: inline-block;
+    left: 50%;
+    transform: translate(-50%);
 }
 
 .projects-logo-bsql {

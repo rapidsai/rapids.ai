@@ -180,7 +180,7 @@ See the **[RAPIDS Container README](https://hub.docker.com/r/rapidsai/rapidsai){
     slope="up"
 %}
 {% include cta-footer.html 
-name="TRY RAPIDS NOW" 
-button="LAUNCH IN COLAB"
-link="https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true"
+    name="TRY RAPIDS NOW" 
+    button="LAUNCH IN COLAB"
+    link="https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true"
 %}
