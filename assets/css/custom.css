@@ -445,8 +445,13 @@ header {
 .padding-bottom-10em {
     padding-bottom: 10em;
 }
-.margin-top-0em{
+
+.margin-top-0em {
     margin-top: 0em;
+}
+
+.margin-bottom-3em {
+    margin-bottom: 3em;
 }
 
 .no-tb-margins {
@@ -629,6 +634,12 @@ a h2:hover,
     transform: translate(-50%);
 }
 
+.center-logo-text {
+    display: block;
+    text-align: center;
+    font-weight: bold;
+}
+
 .projects-logo-bsql {
     position: relative;
     left: 50%;
@@ -649,6 +660,35 @@ a h2:hover,
     left: 50%;
     max-width: 320px;
     transform: translate(-50%)
+}
+
+/* cloud table */
+
+.cloud-table {
+    color: white;
+    margin-top: 3em;
+    margin-bottom: 5em;
+    empty-cells: hide;
+}
+
+.cloud-table th {
+    text-align: left;
+    padding: 1em;
+    border-bottom: 2px solid white;
+}
+
+.cloud-table tr {
+    padding: 0.5em;
+    border-bottom: 1px solid #bfbfbf6e;
+}
+
+.cloud-table tr:hover {
+    background-color: #ffffff6e; 
+    border-bottom: none;
+}
+
+.cloud-table td {
+    padding: 1em;
 }
 
 /* TPC barcharts */
