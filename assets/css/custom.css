@@ -876,6 +876,10 @@ a.blue-btn:hover,
     margin: auto;
 }
 
+.selector .options .option-notice a {
+    font-weight: bold;
+}
+
 i.fa-up-6 {
     position: relative;
     top: -6px;
