@@ -1,0 +1,339 @@
+<section class='{{ include.background }} padding-top-{{ include.padding-top }} padding-bottom-{{ include.padding-bottom }}'>
+    <div class='container-padding'>
+        <div class='selector '>
+            <div class='options'>
+                <div class='note method'>
+                    <div class='option-label'>NOTICES</div>
+                    <div class='option-notice'>
+                        <span>
+                            <i class="fas fa-exclamation-triangle text-white"></i> RAPIDS repos will <a href="https://docs.rapids.ai/notices/rgn0001">rename</a> stable/release branches in v0.15
+                        </span>
+                    </div>
+                    <div class='option-notice'>
+                        <span>
+                            <i class="fas fa-exclamation-triangle text-white"></i> <a href="https://docs.rapids.ai/notices/rsn0002">Python 3.6 & CUDA 10.0</a> EOL in v0.14
+                        </span>
+                    </div>
+                </div>
+                <div class='note method padding-bottom-4em'>
+                    <div class='option-label'></div>
+                    <div class='option-notice'>
+                        <span>
+                            <i class="fas fa-bullhorn text-white"></i> Release changes to <a href="https://docs.rapids.ai/notices/rgn0002">clx</a> and <a href="https://docs.rapids.ai/notices/rgn0004">cuxfilter</a> in v0.15
+                        </span>
+                    </div>
+                    <div class='option-notice'>
+                        <span>
+                            <i class="fas fa-bullhorn text-white"></i> RAPIDS <a href="https://docs.rapids.ai/notices/rdn0001">dask-xgboost</a> library is deprecated in v0.15
+                        </span>
+                    </div>
+                </div>
+                <div class='preferred'>
+                    <div class='option-label'></div>
+                    <div class='option-blank'>
+                        <span>
+                            <i class="fas fa-level-up-alt fa-rotate-180 fa-down-6"></i> <i class="fas fa-check-square text-blue"></i> Preferred <i class="fas fa-level-down-alt fa-down-6"></i>
+                        </span>
+                    </div>
+                    <div class='option-blank'>
+                        <span>
+                            <i class="fas fa-level-up-alt fa-rotate-180 fa-down-6"></i> <i class="fas fa-flask text-orange"></i> Advanced <i class="fas fa-level-down-alt fa-down-6"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class='method padding-bottom-1em'>
+                    <div class='option-label'>Method</div>
+                    <div id='conda' class='option' title="Conda install">Conda&nbsp;<i class="fas fa-box-open"></i> <span class='context'> <i class="fas fa-check-square text-blue"></i> Preferred Install Method</span></div>
+                    <div id='docker' class='option' title="Docker image with example notebooks">Docker + Examples&nbsp;<i class="fab fa-docker"></i><span class='context'> <i class="fas fa-check-square text-blue"></i> Preferred Install Method</span></div>
+                    <div id='dev' class='option advanced' title="Docker image with developer tools and from source build environment ">Docker + Dev Env&nbsp;<i class="fab fa-docker"></i> <span class='context'> <i class="fas fa-flask text-orange"></i> Advanced Install Method</span></div>
+                    <div id='source' class='option advanced' title="From source build">Source&nbsp;<i class="fas fa-cogs"></i><span class='context'> <i class="fas fa-flask text-orange"></i> Advanced Install Method</span></div>
+                </div>
+                <div class='release'>
+                    <div class='option-label'>Release</div>
+                    <div id='legacy' class='option'>Legacy ({{ site.data.releases.legacy-version }})</div>
+                    <div id='stable' class='option'>Stable ({{ site.data.releases.stable-version }})</div>
+                    <div id='nightly' class='option'>Nightly ({{ site.data.releases.nightly-version }}a)</div>
+                </div>
+                <div class='pkg'>
+                    <div class='option-label'>Packages</div>
+                    <div id='all' class='option'>All Packages</div>
+                    <div id='cudf' class='option'>cuDF</div>
+                    <div id='cuml' class='option'>cuML</div>
+                    <div id='cugraph' class='option'>cuGraph</div>
+                    <div id='cusignal' class='option'>cuSignal</div>
+                    <div id='cuspatial' class='option'>cuSpatial</div>
+                    <div id='cuxfilter' class='option'>cuxfilter</div>
+                </div>
+                <div class='linux'>
+                    <div class='option-label'>Linux</div>
+                    <div id='ubuntu1604' class='option'>Ubuntu 16.04&nbsp;<i class="fab fa-ubuntu"></i></div>
+                    <div id='ubuntu1804' class='option'>Ubuntu 18.04&nbsp;<i class="fab fa-ubuntu"></i></div>
+                    <div id='centos7' class='option'>CentOS 7&nbsp;<i class="fab fa-centos"></i></div>
+                    <div id='rhel7' class='option'>RHEL 7&nbsp;<i class="fab fa-redhat"></i></div>
+                </div>
+                <div class='python'>
+                    <div class='option-label'>Python</div>
+                    <div id='py36' class='option'>Python 3.6 (0.14 only)</div>
+                    <div id='py37' class='option'>Python 3.7</div>
+                    <div id='py38' class='option'>Python 3.8 (0.15/0.16 only)</div>
+                </div>
+                <div class='cuda'>
+                    <div class='option-label'>CUDA</div>
+                    <div id='cuda100' class='option'>CUDA 10.0 (0.14 only)</div>
+                    <div id='cuda101' class='option'>CUDA 10.1.2</div>
+                    <div id='cuda102' class='option'>CUDA 10.2</div>
+                    <div id='cuda110' class='option'>CUDA 11.0 (0.15/0.16 only)</div>
+                </div>
+                <div class='preferred'>
+                    <div class='option-label'></div>
+                    <div class='option-blank'></div>
+                    <div class='option-blank'></div>
+                    <div class='option-blank'></div>
+                    <div class='option-blank'></div>
+                </div>
+                <div class='note'>
+                    <div class='option-label'></div>
+                    <div class='option-blank'>
+                        <span id='rhel7-conda-note' class='hidden option-note'>
+                            <i class="fas fa-exclamation-triangle text-orange"></i> <b>NOTE:</b> RHEL 7 <code>conda</code> support is provided by builds and tests on CentOS 7.<br/>The same <code>conda install</code> commands should work with <code>gcc >=7.5</code> and the correct NVIDIA and CUDA drivers.
+                        </span>
+                        <span id='rhel7-source-note' class='hidden option-note'>
+                            <i class="fas fa-exclamation-triangle text-orange"></i> <b>NOTE:</b> RHEL 7 from source build support is provided by following the build instructions for CentOS 7.<br/>The same methods should work with <code>gcc >=7.5</code> and the correct NVIDIA and CUDA drivers.
+                        </span>
+                        <span id='linux-conda-note' class='hidden option-note'>
+                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> Ubuntu 16.04/18.04 & CentOS 7 use the same <code>conda install</code> commands.
+                        </span>
+                        <span id='linux-source-note' class='hidden option-note'>
+                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> Ubuntu 16.04/18.04 & CentOS 7 use the same from source build instructions.
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class='cmd'>
+                <div class='cmd-label'>Command</div>
+                <div id='command' class='cmd-box'><div class="highlight"><pre class="highlight"><code><span class="gh"># Javascript is needed for this tool to run, please make sure it is enabled</span></code></pre></div></div>
+            </div>
+        </div>
+        <div class="selector-buttons">
+            <a id='copy-command' onclick='CopyToClipboard("command-code")' class='primary-btn'>COPY COMMAND <i class="fas fa-clipboard"></i></a>
+        </div>
+    </div>
+</section>
+<script type="text/javascript">
+/* Adopted from https://pytorch.org/assets/quick-start-module.js */
+var pkg = ['cudf', 'cuml', 'cugraph', 'cusignal', 'cuspatial', 'cuxfilter', 'all'];
+var method = ['conda', 'docker', 'source', 'dev'];
+var release = ['legacy', 'stable', 'nightly'];
+var linux = ['ubuntu1604', 'ubuntu1804', 'centos7', 'rhel7'];
+var python = ['py36', 'py37', 'py38'];
+var cuda = ['cuda100', 'cuda101', 'cuda102', 'cuda110'];
+var pkg_opts = $(".pkg > .option");
+var method_opts = $(".method > .option");
+var release_opts = $(".release > .option");
+var linux_opts = $(".linux > .option");
+var python_opts = $(".python > .option");
+var cuda_opts = $(".cuda > .option");
+var details = {
+    conda: 'conda-install',
+    docker: 'docker-container',
+    pip: 'pip-install',
+    source: 'build-from-source'
+}
+// Set initial choices
+var selections = {
+    pkg: 'all',
+    method: 'conda',
+    release: 'stable',
+    linux: 'ubuntu1604',
+    python: 'py37',
+    cuda: 'cuda101'
+};
+pkg_opts.on("click", function() {
+    processClick(pkg_opts, this, "pkg");
+});
+method_opts.on("click", function() {
+    processClick(method_opts, this, "method");
+});
+release_opts.on("click", function() {
+    processClick(release_opts, this, "release");
+});
+linux_opts.on("click", function() {
+    processClick(linux_opts, this, "linux");
+});
+python_opts.on("click", function() {
+    processClick(python_opts, this, "python");
+});
+cuda_opts.on("click", function() {
+    processClick(cuda_opts, this, "cuda");
+});
+// Initialize on start
+$(function() {
+    processClick();
+});
+
+function processClick(options, click, category) {
+    // reset all
+    $(pkg_opts).removeClass("disabled");
+    $(release_opts).removeClass("disabled");
+    $(linux_opts).removeClass("disabled");
+    $(python_opts).removeClass("disabled");
+    $(cuda_opts).removeClass("disabled");
+    $(pkg_opts).removeClass("active");
+    $(release_opts).removeClass("active");
+    $(linux_opts).removeClass("active");
+    $(python_opts).removeClass("active");
+    $(cuda_opts).removeClass("active");
+    var prev_cuda = selections['cuda'];
+    var prev_linux = selections['linux'];
+    var prev_python = selections['python'];
+    var prev_release = selections['release'];
+    if (options && click && category) {
+        $(options).removeClass("active");
+        $(click).addClass("active");
+        selections[category] = click.id;
+    }
+
+    // Hide linux/rhel notes
+    $("#rhel7-conda-note").addClass("hidden");
+    $("#rhel7-source-note").addClass("hidden");
+    $("#linux-conda-note").addClass("hidden");
+    $("#linux-source-note").addClass("hidden");
+
+    if (selections['method'] == 'conda') {
+        // Handle conda requests
+        if (selections['linux'] == 'rhel7') {
+            // Display RHEL note
+            $("#rhel7-conda-note").removeClass("hidden");
+        } else {
+            // Display linux note
+            $("#linux-conda-note").removeClass("hidden");
+        }
+    } else if (selections['method'] == 'docker') {
+        // Handle docker requests
+        if (selections['linux'] == 'rhel7') {
+            selections['linux'] = 'centos7';
+        }
+        $("#rhel7").addClass("disabled");
+        $(pkg_opts).addClass("disabled");
+        $("#all").removeClass("disabled");
+        $("#all").addClass("active");
+        selections['pkg'] = 'all';
+    } else if (selections['method'] == 'source') {
+        // Handle source requests
+        $("#all").addClass("disabled");
+        if (selections['pkg'] == 'all') {
+            selections['pkg'] = 'cudf';
+        }
+        if (selections['linux'] == 'rhel7') {
+            // Display RHEL note
+            $("#rhel7-source-note").removeClass("hidden");
+        } else {
+            // Display linux note
+            $("#linux-source-note").removeClass("hidden");
+        }
+        $(python_opts).removeClass("active");
+        $(cuda_opts).removeClass("active");
+        $(python_opts).addClass("disabled");
+        $(cuda_opts).addClass("disabled");
+    } else if (selections['method'] == 'dev') {
+        // Handle dev requests
+        if (selections['linux'] == 'rhel7') {
+            selections['linux'] = 'centos7';
+        }
+        $("#rhel7").addClass("disabled");
+        $(pkg_opts).addClass("disabled");
+        $("#all").removeClass("disabled");
+        $("#all").addClass("active");
+        selections['pkg'] = 'all';
+    }
+
+    // Handle py36/cuda100 specific exlcusions
+    if (selections['release'] == 'nightly' || selections['release'] == 'stable') {
+        // Change selections to new defaults and then disable
+        if (selections['cuda'] == 'cuda100') {
+            selections['cuda'] = 'cuda101';
+            $("#cuda100").removeClass("active");
+        }
+        if (selections['python'] == 'py36') {
+            selections['python'] = 'py37';
+            $("#py36").removeClass("active");
+        }
+        // Disable cuxfilter until released
+        if (selections['pkg'] == 'cuxfilter') {
+            selections['pkg'] = 'all';
+            $("#cuxfilter").removeClass("active");
+        }
+        $("#cuda100").addClass("disabled");
+        $("#py36").addClass("disabled");
+        $("#cuxfilter").addClass("disabled");
+    }
+
+    // Handle legacy specific exlcusions
+    if (selections['release'] == 'legacy') {
+        if (selections['python'] == 'py38') {
+            selections['python'] = 'py37';
+            $("#py38").removeClass("active");
+        }
+        if (selections['cuda'] == 'cuda110') {
+            $("#cuda110").removeClass("active");
+            selections['cuda'] = 'cuda102';
+        }
+        if (selections['pkg'] == 'all') {
+            selections['pkg'] = 'cudf';
+            $("#all").removeClass("active");
+        }
+        $("#py38").addClass("disabled");
+        $("#cuda110").addClass("disabled");
+        $("#all").addClass("disabled");
+        $("#cuxfilter").removeClass("disabled");
+    }
+
+    $("#" + selections['method']).addClass("active");
+    $("#" + selections['pkg']).addClass("active");
+    $("#" + selections['linux']).addClass("active");
+    $("#" + selections['python']).addClass("active");
+    $("#" + selections['cuda']).addClass("active");
+    $("#" + selections['release']).addClass("active");
+    showCommand();
+}
+
+function getSelections() {
+    if (selections['method'] == 'source') {
+        return "" + selections['release'] + "-" + selections['pkg'] + "-" + selections['method'];
+    } else if (selections['method'] == 'conda') {
+        return "" + selections['release'] + "-" + selections['pkg'] + "-" + selections['method'] + "-" + selections['python'] + "-" + selections['cuda'];
+    } else {
+        return "" + selections['release'] + "-" + selections['pkg'] + "-" + selections['method'] + "-" + selections['linux'] + "-" + selections['python'] + "-" + selections['cuda'];
+    }
+}
+
+function showCommand() {
+    var key = getSelections();
+    var command = $("." + key).html();
+    var anchor = details[selections['method']];
+    var txt = ("" + selections['method'] + " details").toUpperCase();
+    $("#command").html(command);
+    $("#command > div > pre > code ").attr("id", "command-code")
+}
+
+function CopyToClipboard(containerid) {
+    if (document.selection) { //IE
+        var range = document.body.createTextRange();
+        range.moveToElementText(document.getElementById(containerid));
+        range.select();
+        document.execCommand("copy");
+    } else if (window.getSelection) { //others
+        var range = document.createRange();
+        range.selectNode(document.getElementById(containerid));
+        window.getSelection().removeAllRanges();
+        window.getSelection().addRange(range);
+        document.execCommand("copy");
+    }
+}
+</script>
+<!--
+    FYI commands moved to 'selector-commands-*.html' one for each release type:
+      - selector-commands-legacy.html
+      - selector-commands-stable.html
+      - selector-commands-nightly.html
+-->
