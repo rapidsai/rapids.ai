@@ -1,4 +1,4 @@
-/* 
+/*
  * RAPIDS Site - Custom CSS for Jekyll Site
  * Utilizing https://purecss.io/grids/
 */
@@ -239,7 +239,7 @@ header {
 .header-short {
     background: url(../images/header-bg.svg) top center no-repeat;
     min-height: 230px;
-    background-size: cover;  
+    background-size: cover;
 }
 
 /* layout */
@@ -876,6 +876,10 @@ a.blue-btn:hover,
     margin: auto;
 }
 
+.selector .options .option-notice a {
+    font-weight: bold;
+}
+
 i.fa-up-6 {
     position: relative;
     top: -6px;
@@ -903,7 +907,7 @@ i.fa-down-6 {
     color: #424242;
 }
 
-.selector .options .disabled, 
+.selector .options .disabled,
 .selector .options .perm-disabled {
     background: #a785e7 !important;
     color: #706880;
@@ -1283,7 +1287,7 @@ code.tag {
         left: 50%;
         transform: translate(-50%);
     }
-  
+
     .section-subtitle-top-1 {
         margin-top: 0em;
     }
@@ -1317,7 +1321,7 @@ code.tag {
     }
 
     /* projects */
-    
+
     .projects-logo-bsql {
         position: relative;
         left: 50%;

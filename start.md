@@ -29,14 +29,14 @@ Jump right into a GPU powered RAPIDS notebook with **[Colabratory](https://colab
 <div id="req"></div>
 
 {% capture start_right %}
-## GPU Powered Data Science 
+## GPU Powered Data Science
 {: .section-subtitle-top-1}
 
 RAPIDS uses optimized **[NVIDIA CUDA®](https://developer.nvidia.com/cuda-toolkit){: target="_blank"}** primitives and high-bandwidth GPU memory to accelerate data preparation and machine learning. The goal of RAPIDS is not only to accelerate the individual parts of the typical data science workflow, but to accelerate the complete end-to-end workflow.
 
 We suggest that you take a look at the sample workflow in our Docker container (described below), which illustrates just how straightforward a basic XGBoost model training and testing workflow looks in RAPIDS.
 
-## Prerequisites 
+## Prerequisites
 <i class="fas fa-microchip text-purple"></i> **GPU:** NVIDIA Pascal™ or better with **[compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 6.0+
 {: .no-tb-margins }
 
@@ -47,7 +47,7 @@ We suggest that you take a look at the sample workflow in our Docker container (
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-info-circle text-purple"></i> RHEL 7 support is provided through CentOS 7 builds/installs
 {: .no-tb-margins }
 
-<i class="fab fa-docker text-purple"></i> **Docker:** Docker CE v19.03+ and **[nvidia-container-toolkit](https://github.com/NVIDIA/nvidia-docker#quickstart){: target="_blank"}** 
+<i class="fab fa-docker text-purple"></i> **Docker:** Docker CE v19.03+ and **[nvidia-container-toolkit](https://github.com/NVIDIA/nvidia-docker#quickstart){: target="_blank"}**
 {: .no-tb-margins }
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-history text-purple"></i> [Legacy Support](#-docker-container) - Docker CE v17-18 and [nvidia-docker2](https://github.com/NVIDIA/nvidia-docker/wiki/Installation-(version-2.0)){: target="_blank"}
@@ -56,17 +56,17 @@ We suggest that you take a look at the sample workflow in our Docker container (
 <i class="fas fa-download text-purple"></i> **CUDA & NVIDIA Drivers:** One of the following supported versions:
 {: .no-tb-margins }
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-check-circle text-purple"></i> [10.0](https://developer.nvidia.com/cuda-10.0-download-archive){: target="_blank"} & v410.48+ &nbsp; <i class="fas fa-check-circle text-purple"></i> [10.1.2](https://developer.nvidia.com/cuda-10.1-download-archive-update2){: target="_blank"} & v418.87+ &nbsp; <i class="fas fa-check-circle text-purple"></i> [10.2](https://developer.nvidia.com/cuda-10.2-download-archive){: target="_blank"} & v440.33+ &nbsp; 
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-check-circle text-purple"></i> [10.1.2](https://developer.nvidia.com/cuda-10.1-download-archive-update2){: target="_blank"} & v418.87+ &nbsp; <i class="fas fa-check-circle text-purple"></i> [10.2](https://developer.nvidia.com/cuda-10.2-download-archive){: target="_blank"} & v440.33+ &nbsp;<i class="fas fa-check-circle text-purple"></i> [11.0](https://developer.nvidia.com/cuda-downloads){: target="_blank"} & v450.51+
 {: .no-tb-margins }
 
 {% endcapture %}
 
 {% include section-halfs.html
-    background="background-white" 
-    padding-top="1em" padding-bottom="10em" 
+    background="background-white"
+    padding-top="1em" padding-bottom="10em"
     content-left-half=start_left
     content-right-half=start_right
-%} 
+%}
 
 <div id="get-rapids"></div>
 
@@ -74,23 +74,26 @@ We suggest that you take a look at the sample workflow in our Docker container (
 # RAPIDS Release Selector
 {: .section-title-full}
 
-RAPIDS is available as conda packages, docker images, and from source builds. Use the tool below to select your preferred method, packages, and environment to install RAPIDS. Certain combinations may not be possible and are dimmed automatically. Be sure you've met the required **[prerequisites above](#req)** and see the **[details below](#details)**. 
+RAPIDS is available as conda packages, docker images, and from source builds. Use the tool below to select your preferred method, packages, and environment to install RAPIDS. Certain combinations may not be possible and are dimmed automatically. Be sure you've met the required **[prerequisites above](#req)** and see the **[details below](#details)**.
 {% endcapture %}
 
-{% include slopecap.html 
-    background="background-purple" 
-    position="top" 
-    slope="down" 
+{% include slopecap.html
+    background="background-purple"
+    position="top"
+    slope="down"
 %}
 {% include section-single.html
-    background="background-purple" 
-    padding-top="1em" padding-bottom="1em" 
+    background="background-purple"
+    padding-top="1em" padding-bottom="1em"
     content-single=get_content
 %}
-{% include options.html  
+{% include selector.html
 	background="background-purple"
-	padding-top="1em" padding-bottom="1em" 
+	padding-top="1em" padding-bottom="1em"
 %}
+{% include selector-commands-legacy.html %}
+{% include selector-commands-stable.html %}
+{% include selector-commands-nightly.html %}
 
 {% capture options_details %}
 ## details below <br> <i class="fas fa-chevron-down"></i>
@@ -99,14 +102,14 @@ RAPIDS is available as conda packages, docker images, and from source builds. Us
 {% endcapture %}
 
 {% include section-single.html
-    background="background-purple" 
-    padding-top="0em" padding-bottom="3em" 
+    background="background-purple"
+    padding-top="0em" padding-bottom="3em"
     content-single=options_details
 %}
-{% include slopecap.html 
-    background="background-purple" 
-    position="bottom" 
-    slope="up" 
+{% include slopecap.html
+    background="background-purple"
+    position="bottom"
+    slope="up"
 %}
 
 
@@ -124,7 +127,7 @@ Checkout the **[cuDF README](https://github.com/rapidsai/cudf/tree/main#developm
 ## <i class="fas fa-laptop-code"></i> Where is Pip?
 {: .section-subtitle-top-2}
 
-Refer to our **[RAPIDS 0.7 Release Drops PIP Packages — and sticks with Conda](https://medium.com/rapids-ai/rapids-0-7-release-drops-pip-packages-47fc966e9472){: target="_blank"}** post for details on why we no longer support PIP installs. 
+Refer to our **[RAPIDS 0.7 Release Drops PIP Packages — and sticks with Conda](https://medium.com/rapids-ai/rapids-0-7-release-drops-pip-packages-47fc966e9472){: target="_blank"}** post for details on why we no longer support PIP installs.
 
 {% endcapture %}
 
@@ -167,20 +170,20 @@ See the **[RAPIDS Container README](https://hub.docker.com/r/rapidsai/rapidsai){
 {% endcapture %}
 
 {% include section-halfs.html
-    background="background-gray" 
-    padding-top="5em" padding-bottom="10em" 
-    content-left-half=use_left 
+    background="background-gray"
+    padding-top="5em" padding-bottom="10em"
+    content-left-half=use_left
     content-right-half=use_right
-%} 
+%}
 
 
-{% include slopecap.html 
-    background="background-darkpurple" 
-    position="top" 
+{% include slopecap.html
+    background="background-darkpurple"
+    position="top"
     slope="up"
 %}
-{% include cta-footer.html 
-name="TRY RAPIDS NOW" 
+{% include cta-footer.html
+name="TRY RAPIDS NOW"
 button="LAUNCH IN COLAB"
 link="https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true"
 %}
