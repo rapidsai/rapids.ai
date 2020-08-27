@@ -274,12 +274,17 @@ function processClick(options, click, category) {
             selections['python'] = 'py37';
             $("#py38").removeClass("active");
         }
-        $("#py38").addClass("disabled");
         if (selections['cuda'] == 'cuda110') {
             $("#cuda110").removeClass("active");
             selections['cuda'] = 'cuda102';
         }
+        if (selections['pkg'] == 'all') {
+            selections['pkg'] = 'cudf';
+            $("#all").removeClass("active");
+        }
+        $("#py38").addClass("disabled");
         $("#cuda110").addClass("disabled");
+        $("#all").addClass("disabled");
         $("#cuxfilter").removeClass("disabled");
     }
 
