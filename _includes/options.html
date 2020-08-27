@@ -50,6 +50,7 @@
                 </div>
                 <div class='release'>
                     <div class='option-label'>Release</div>
+                    <div id='legacy' class='option'>Legacy ({{ site.data.releases.legacy-version }})</div>
                     <div id='stable' class='option'>Stable ({{ site.data.releases.stable-version }})</div>
                     <div id='nightly' class='option'>Nightly ({{ site.data.releases.nightly-version }}a)</div>
                 </div>
@@ -72,16 +73,16 @@
                 </div>
                 <div class='python'>
                     <div class='option-label'>Python</div>
-                    <div id='py36' class='option'>Python 3.6 - v0.14 only</div>
+                    <div id='py36' class='option'>Python 3.6 (0.14 only)</div>
                     <div id='py37' class='option'>Python 3.7</div>
-                    <div id='py38' class='option'>Python 3.8 - v0.15 only</div>
+                    <div id='py38' class='option'>Python 3.8 (0.15/0.16 only)</div>
                 </div>
                 <div class='cuda'>
                     <div class='option-label'>CUDA</div>
-                    <div id='cuda100' class='option'>CUDA 10.0 - v0.14 only</div>
+                    <div id='cuda100' class='option'>CUDA 10.0 (0.14 only)</div>
                     <div id='cuda101' class='option'>CUDA 10.1.2</div>
                     <div id='cuda102' class='option'>CUDA 10.2</div>
-                    <div id='cuda110' class='option perm-disabled'>CUDA 11.0 - Work In Progress</div>
+                    <div id='cuda110' class='option'>CUDA 11.0 (0.15/0.16 only)</div>
                 </div>
                 <div class='preferred'>
                     <div class='option-label'></div>
@@ -122,7 +123,7 @@
 /* Adopted from https://pytorch.org/assets/quick-start-module.js */
 var pkg = ['cudf', 'cuml', 'cugraph', 'cusignal', 'cuspatial', 'cuxfilter', 'all'];
 var method = ['conda', 'docker', 'source', 'dev'];
-var release = ['stable', 'nightly'];
+var release = ['legacy', 'stable', 'nightly'];
 var linux = ['ubuntu1604', 'ubuntu1804', 'centos7', 'rhel7'];
 var python = ['py36', 'py37', 'py38'];
 var cuda = ['cuda100', 'cuda101', 'cuda102', 'cuda110'];
@@ -144,8 +145,8 @@ var selections = {
     method: 'conda',
     release: 'stable',
     linux: 'ubuntu1604',
-    python: 'py36',
-    cuda: 'cuda100'
+    python: 'py37',
+    cuda: 'cuda101'
 };
 pkg_opts.on("click", function() {
     processClick(pkg_opts, this, "pkg");
@@ -246,8 +247,8 @@ function processClick(options, click, category) {
         selections['pkg'] = 'all';
     }
 
-    // Handle nightly specific exlcusions
-    if (selections['release'] == 'nightly') {
+    // Handle py36/cuda100 specific exlcusions
+    if (selections['release'] == 'nightly' || selections['release'] == 'stable') {
         // Change selections to new defaults and then disable
         if (selections['cuda'] == 'cuda100') {
             selections['cuda'] = 'cuda101';
@@ -257,23 +258,29 @@ function processClick(options, click, category) {
             selections['python'] = 'py37';
             $("#py36").removeClass("active");
         }
+        // Disable cuxfilter until released
+        if (selections['pkg'] == 'cuxfilter') {
+            selections['pkg'] = 'all';
+            $("#cuxfilter").removeClass("active");
+        }
         $("#cuda100").addClass("disabled");
         $("#py36").addClass("disabled");
+        $("#cuxfilter").addClass("disabled");
     }
 
-    // Handle stable specific exlcusions
-    if (selections['release'] == 'stable') {
+    // Handle legacy specific exlcusions
+    if (selections['release'] == 'legacy') {
         if (selections['python'] == 'py38') {
             selections['python'] = 'py37';
             $("#py38").removeClass("active");
         }
         $("#py38").addClass("disabled");
-    }
-
-    // Handle clicks on disabled CUDA
-    if (selections['cuda'] == 'cuda110') {
-        $("#cuda110").removeClass("active");
-        selections['cuda'] = prev_cuda;
+        if (selections['cuda'] == 'cuda110') {
+            $("#cuda110").removeClass("active");
+            selections['cuda'] = 'cuda102';
+        }
+        $("#cuda110").addClass("disabled");
+        $("#cuxfilter").removeClass("disabled");
     }
 
     $("#" + selections['method']).addClass("active");
