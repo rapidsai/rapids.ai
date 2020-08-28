@@ -9,9 +9,6 @@ layout: default
 
 ![Placeholder]({{ site.baseurl }}{% link /assets/images/RAPIDs-cloud.png %}){: .projects-logo}
 
-# How to Deploy RAPIDS in the Cloud
-{: .section-title-full}
-
 {% capture intro_content %}
 
 RAPIDS’s GPU accelerated data science tools can be deployed on all of the major clouds, allowing anyone to take advantage of the speed increases and TCO reductions that RAPIDS enables.
@@ -31,28 +28,82 @@ Deploying on the cloud will require you to make use of supported GPU instances. 
 %}
 
 {% capture csp_left %}
-![aws]({{ site.baseurl }}{% link /assets/images/AWS-logo.png %}){: .center-logo}
-[Amazon Web Services](#aws){: .center-logo-text}
+
+[![aws]({{ site.baseurl }}{% link /assets/images/AWS-logo.png %})](#aws){: .center-logo}
+[Amazon Web Services <i class="fad fa-chevron-double-down"></i>](#aws){: .center-logo-text}
+
+[<i class="fas fa-caret-right"></i> Single EC2 instance](#AWS-EC2){: .block}
+[<i class="fas fa-caret-right"></i> Cluster using Dask](#AWS-Dask){: .block}
+[<i class="fas fa-caret-right"></i> Cluster using Kubernetes](#AWS-Kubernetes){: .block}
+[<i class="fas fa-caret-right"></i> Amazon Sagemaker](#AWS-Sagemaker){: .block}
 
 {% endcapture %}
 {% capture csp_mid %}
-![azure]({{ site.baseurl }}{% link /assets/images/MS-azure-logo.png %}){: .center-logo}
-[Microsoft Azure](#azure){: .center-logo-text}
+
+[![azure]({{ site.baseurl }}{% link /assets/images/MS-azure-logo.png %})](#azure){: .center-logo}
+[Microsoft Azure <i class="fad fa-chevron-double-down"></i>](#azure){: .center-logo-text}
+
+[<i class="fas fa-caret-right"></i> Single instance](#AZ-single){: .block}
+[<i class="fas fa-caret-right"></i> Cluster via Dask](#AZ-Dask){: .block}
+[<i class="fas fa-caret-right"></i> Cluster via Kubernetes](#AZ-Kubernetes){: .block}
+[<i class="fas fa-caret-right"></i> Azure’s AzureML service](#AZ-ML){: .block}
 
 {% endcapture %}
 {% capture csp_right %}
-![gcp]({{ site.baseurl }}{% link /assets/images/GCP-logo.png %}){: .center-logo}
-[Google Cloud](#googlecloud){: .center-logo-text}
 
+[![gcp]({{ site.baseurl }}{% link /assets/images/GCP-logo.png %})](#googlecloud){: .center-logo}
+[Google Cloud <i class="fad fa-chevron-double-down"></i>](#googlecloud){: .center-logo-text}
+
+[<i class="fas fa-caret-right"></i> Single instance](#GC-single){: .block}
+[<i class="fas fa-caret-right"></i> Cluster using Dask (via Dataproc)](#GC-Dask){: .block}
+[<i class="fas fa-caret-right"></i> Cluster using Kubernetes](#GC-Kubernetes){: .block}
+[<i class="fas fa-caret-right"></i> On CloudAI](#GC-AI){: .block}
 
 {% endcapture %}
 
-<!-- https://tableconvert.com/ -->
-{% capture csp_table %}
+{% capture csp_sel %}
 
 For the various deployment options on each cloud, as well as instructions and links to more details, please select the cloud provider you wish to deploy on.
 {: .subtitle}
 
+{% endcapture %}
+<div id="deploy"></div>
+{% include slopecap.html 
+    background="background-purple" 
+    position="top" 
+    slope="down" 
+%}
+{% include section-single.html
+    background="background-purple" 
+    padding-top="5em" padding-bottom="3em" 
+    content-single=csp_sel
+%}
+{% include section-thirds.html 
+    background="background-purple" 
+    padding-top="0em" padding-bottom="5em" 
+    content-left-third=csp_left
+    content-middle-third=csp_mid
+    content-right-third=csp_right
+%}
+{% include slopecap.html 
+    background="background-purple" 
+    position="bottom" 
+    slope="up" 
+%}
+
+<!-- AWS -->
+<div id="aws"></div>
+{% capture aws_intro %}
+
+![aws]({{ site.baseurl }}{% link /assets/images/AWS-logo.png %})
+## <i class="fab fa-aws"></i> Amazon Web Services
+
+RAPIDS can be deployed on Amazon Web Services (AWS) in several ways:
+
+**[<i class="fas fa-caret-right"></i> Single EC2 instance](#AWS-EC2)**{: .block}
+**[<i class="fas fa-caret-right"></i> Cluster using Dask](#AWS-Dask)**{: .block}
+**[<i class="fas fa-caret-right"></i> Cluster using Kubernetes and EKS/GKE/AKS](#AWS-Kubernetes)**{: .block}
+**[<i class="fas fa-caret-right"></i> Amazon Sagemaker](#AWS-Sagemaker)**{: .block}
 
 | Cloud Provider | Instance Type | Instance name  | \# GPUs | GPU Type | Per GPU RAM \(GB\) | Per GPU SP Performance \(TFLOPS\) |
 |----------------|---------------|----------------|---------|----------|--------------------|-----------------------------------|
@@ -67,71 +118,7 @@ For the various deployment options on each cloud, as well as instructions and li
 | AWS            | P3            | p3dn\.24xlarge | 8       | V100     | 32                 | 14                                |
 {: .cloud-table}
 
-| Cloud Provider | Instance Type | Instance name | \# GPUs | GPU Type | Per GPU RAM \(GB\) | Per GPU SP Performance \(TFLOPS\) |
-|----------------|---------------|---------------|---------|----------|--------------------|-----------------------------------|
-| Azure          | NDs Series    | ND6s          | 1       | P40      | 8                  | 12                                |
-| Azure          | NDs Series    | ND12s         | 2       | P40      | 8                  | 12                                |
-| Azure          | NDs Series    | ND24s         | 4       | P40      | 8                  | 12                                |
-| Azure          | NDs Series    | ND24rs        | 4       | P40      | 8                  | 12                                |
-| Azure          | NCs v2 Series | NC6s v2       | 1       | P100     | 16                 | 10\.6                             |
-| Azure          | NCs v2 Series | NC12s v2      | 2       | P100     | 16                 | 10\.6                             |
-| Azure          | NCs v2 Series | NC24s v2      | 4       | P100     | 16                 | 10\.6                             |
-| Azure          | NCs v2 Series | NC24rs v2     | 4       | P100     | 16                 | 10\.6                             |
-| Azure          | NCs v3 Series | NC6s v3       | 1       | V100     | 16                 | 14                                |
-| Azure          | NCs v3 Series | NC12s v3      | 2       | V100     | 16                 | 14                                |
-| Azure          | NCs v3 Series | NC24s v3      | 4       | V100     | 16                 | 14                                |
-| Azure          | NCs v3 Series | NC24rs v3     | 4       | V100     | 16                 | 14                                |
-| Azure          | NDs v2 Series | ND40rs        | 8       | V100     | 16                 | 14                                |
-{: .cloud-table}
-
-
-| Cloud Provider | Instance Type              | Instance name    | \# GPUs    | GPU Type | Per GPU RAM \(GB\) | Per GPU SP Performance \(TFLOPS\) |
-|----------------|----------------------------|------------------|------------|----------|--------------------|-----------------------------------|
-| Google Cloud   | GPU Compute Workload Addon | Any Machine Type | As desired | P4       | 8                  | 5\.5                              |
-| Google Cloud   | GPU Compute Workload Addon | Any Machine Type | As desired | P100     | 16                 | 10\.6                             |
-| Google Cloud   | GPU Compute Workload Addon | Any Machine Type | As desired | T4       | 16                 | 8\.1                              |
-| Google Cloud   | GPU Compute Workload Addon | Any Machine Type | As desired | V100     | 16                 | 14                                |
-|  Google Cloud  | A2                         | TBD \- In beta   | As desired | A100     | 32                 | 78                                |
-{: .cloud-table}
-
-{% endcapture %}
-<div id="deploy"></div>
-{% include slopecap.html 
-    background="background-purple" 
-    position="top" 
-    slope="down" 
-%}
-{% include section-thirds.html 
-    background="background-purple" 
-    padding-top="5em" padding-bottom="0em" 
-    content-left-third=csp_left
-    content-middle-third=csp_mid
-    content-right-third=csp_right
-%}
-{% include section-single.html
-    background="background-purple" 
-    padding-top="0em" padding-bottom="5em" 
-    content-single=csp_table
-%}
-{% include slopecap.html 
-    background="background-purple" 
-    position="bottom" 
-    slope="up" 
-%}
-
-<!-- AWS -->
-<div id="aws"></div>
-{% capture aws_intro %}
-
-![aws]({{ site.baseurl }}{% link /assets/images/AWS-logo.png %})
-## Amazon Web Services
-
-RAPIDS can be deployed on Amazon Web Services (AWS) in several ways:
-
-- **[On a single EC2 instance](#AWS-EC2)**
-- **[On a cluster using Dask](#AWS-Dask)**
-- **[On a cluster using Kubernetes and EKS/GKE/AKS](#AWS-Kubernetes)**
-- **[On Amazon Sagemaker](#AWS-Sagemaker)**
+**[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
 
 {% endcapture %}
 
@@ -147,7 +134,7 @@ RAPIDS can be deployed on Amazon Web Services (AWS) in several ways:
 %}
 
 {% capture aws_ec2 %}
-## <i class="fal fa-cloud-upload"></i> AWS Single Instance (EC2)
+## <i class="fab fa-aws"></i> AWS Single Instance (EC2)
 
 There are multiple ways you can deploy RAPIDS on a single instance, but the easiest is to use the RAPIDS docker image:
 
@@ -168,10 +155,12 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 **5. Test RAPIDS.** Test it! The RAPIDS docker image will start a Jupyter notebook instance automatically. You can log into it by going to the IP address provided by AWS on port 8888.
 
 
+**[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
+
 {% endcapture %}
 
 {% capture aws_dask %}
-## <i class="fal fa-cloud-upload"></i> AWS Cluster via Dask
+## <i class="fab fa-aws"></i> AWS Cluster via Dask
 
 RAPIDS can be deployed on ECS using Dask’s dask-cloudprovider management tools. For more details, see our **[blog post on deploying on ECS.](https://medium.com/rapids-ai/getting-started-with-rapids-on-aws-ecs-using-dask-cloud-provider-b1adfdbc9c6e)**
 
@@ -237,10 +226,13 @@ Name: id, dtype: int64
 
 **6. Cleanup.** Your cluster will continue to run (and incur charges!) until you shut it down. You can either scale the number of nodes down to zero instances, or shut it down altogether. If you are planning to use the cluster again soon, it is probably preferable to reduce the nodes to zero.
 
+
+**[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
+
 {% endcapture %}
 
 {% capture aws_kub %}
-## <i class="fal fa-cloud-upload"></i> AWS Cluster via Kubernetes
+## <i class="fab fa-aws"></i> AWS Cluster via Kubernetes
 
 RAPIDS can be deployed on AWS via AWS’s managed Kubernetes service (EKS) using Helm. More details can be found at our **[helm docs.](https://helm.rapids.ai/docs/csp.html)**
 
@@ -299,10 +291,13 @@ rapidsai-scheduler   LoadBalancer   10.100.19.121    5.6.7.8       8786:31779/TC
 
 You can now visit the external IP of the rapidsai-jupyter service in your browser!
 
+
+**[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
+
 {% endcapture %}
 
 {% capture aws_sage %}
-## <i class="fal fa-cloud-upload"></i> AWS Sagemaker
+## <i class="fab fa-aws"></i> AWS Sagemaker
 
 RAPIDS also works with AWS Sagemaker. We’ve written a **[detailed guide](https://medium.com/rapids-ai/running-rapids-experiments-at-scale-using-amazon-sagemaker-d516420f165b)** with **[examples](https://github.com/rapidsai/cloud-ml-examples/tree/master/aws)** for how to use Sagemaker with RAPIDS, but the simplest version is:
 
@@ -315,30 +310,31 @@ RAPIDS also works with AWS Sagemaker. We’ve written a **[detailed guide](https
 For more details, including on running large-scale HPO jobs on Sagemaker with RAPIDS, check out the **[detailed guide](https://medium.com/rapids-ai/running-rapids-experiments-at-scale-using-amazon-sagemaker-d516420f165b)** and **[examples.](https://github.com/rapidsai/cloud-ml-examples/tree/master/aws)**
 
 
+**[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
 
 {% endcapture %}
 <div id="AWS-EC2"></div>
 {% include section-single.html
     background="background-white" 
-    padding-top="5em" padding-bottom="0em" 
+    padding-top="6em" padding-bottom="0em" 
     content-single=aws_ec2
 %}
 <div id="AWS-Dask"></div>
 {% include section-single.html
     background="background-white" 
-    padding-top="5em" padding-bottom="0em" 
+    padding-top="3em" padding-bottom="0em" 
     content-single=aws_dask
 %}
 <div id="AWS-Kubernetes"></div>
 {% include section-single.html
     background="background-white" 
-    padding-top="5em" padding-bottom="0em" 
+    padding-top="3em" padding-bottom="0em" 
     content-single=aws_kub
 %}
 <div id="AWS-Sagemaker"></div>
 {% include section-single.html
     background="background-white" 
-    padding-top="5em" padding-bottom="10em" 
+    padding-top="3em" padding-bottom="10em" 
     content-single=aws_sage
 %}
 
@@ -346,13 +342,33 @@ For more details, including on running large-scale HPO jobs on Sagemaker with RA
 <div id="azure"></div>
 {% capture azure_intro %}
 ![azure]({{ site.baseurl }}{% link /assets/images/MS-azure-logo.png %})
-## Microsoft Azure
+## <i class="fab fa-microsoft"></i> Microsoft Azure
 
 RAPIDS can be deployed on Microsoft Azure via several methods:
-- **[On a single instance](#AZ-single)**
-- **[In a cluster via Dask](#AZ-Dask)**
-- **[In a cluster via Kubernetes](#AZ-Kubernetes)**
-- **[On Azure’s AzureML service](#AZ-ML)**
+**[<i class="fas fa-caret-right"></i> Single instance](#AZ-single)**{: .block}
+**[<i class="fas fa-caret-right"></i> Cluster via Dask](#AZ-Dask)**{: .block}
+**[<i class="fas fa-caret-right"></i> Cluster via Kubernetes](#AZ-Kubernetes)**{: .block}
+**[<i class="fas fa-caret-right"></i> Azure’s AzureML service](#AZ-ML)**{: .block}
+
+| Cloud Provider | Instance Type | Instance name | \# GPUs | GPU Type | Per GPU RAM \(GB\) | Per GPU SP Performance \(TFLOPS\) |
+|----------------|---------------|---------------|---------|----------|--------------------|-----------------------------------|
+| Azure          | NDs Series    | ND6s          | 1       | P40      | 8                  | 12                                |
+| Azure          | NDs Series    | ND12s         | 2       | P40      | 8                  | 12                                |
+| Azure          | NDs Series    | ND24s         | 4       | P40      | 8                  | 12                                |
+| Azure          | NDs Series    | ND24rs        | 4       | P40      | 8                  | 12                                |
+| Azure          | NCs v2 Series | NC6s v2       | 1       | P100     | 16                 | 10\.6                             |
+| Azure          | NCs v2 Series | NC12s v2      | 2       | P100     | 16                 | 10\.6                             |
+| Azure          | NCs v2 Series | NC24s v2      | 4       | P100     | 16                 | 10\.6                             |
+| Azure          | NCs v2 Series | NC24rs v2     | 4       | P100     | 16                 | 10\.6                             |
+| Azure          | NCs v3 Series | NC6s v3       | 1       | V100     | 16                 | 14                                |
+| Azure          | NCs v3 Series | NC12s v3      | 2       | V100     | 16                 | 14                                |
+| Azure          | NCs v3 Series | NC24s v3      | 4       | V100     | 16                 | 14                                |
+| Azure          | NCs v3 Series | NC24rs v3     | 4       | V100     | 16                 | 14                                |
+| Azure          | NDs v2 Series | ND40rs        | 8       | V100     | 16                 | 14                                |
+{: .cloud-table}
+
+**[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
+
 {% endcapture %}
 
 {% include slopecap.html 
@@ -362,7 +378,7 @@ RAPIDS can be deployed on Microsoft Azure via several methods:
 %}
 {% include section-single.html
     background="background-gray" 
-    padding-top="5em" padding-bottom="3em" 
+    padding-top="3em" padding-bottom="3em" 
     content-single=azure_intro
 %}
 {% include slopecap.html 
@@ -372,7 +388,7 @@ RAPIDS can be deployed on Microsoft Azure via several methods:
 %}
 
 {% capture az_single %}
-## <i class="fal fa-cloud-upload"></i> Azure Single Instance (VM)
+## <i class="fab fa-microsoft"></i> Azure Single Instance (VM)
 
 There are multiple ways you can deploy RAPIDS on a single VM instance, but the easiest is to use the RAPIDS docker image:
 
@@ -393,10 +409,12 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 **5. Test RAPIDS.** Test it! The RAPIDS docker image will start a Jupyter notebook instance automatically. You can log into it by going to the IP address provided by Azure on port 8888.
 
 
+**[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
+
 {% endcapture %}
 
 {% capture az_dask %}
-## <i class="fal fa-cloud-upload"></i> Azure Cluster via Dask
+## <i class="fab fa-microsoft"></i> Azure Cluster via Dask
 
 RAPIDS can be deployed on a Dask cluster on Azure ML Compute using dask-cloudprovider.
 
@@ -427,10 +445,12 @@ cluster = AzureMLCluster(ws)
 **6. Run Notebook.** In a Jupyter notebook, the cluster object will return a widget allowing you to scale up and containing links to the Jupyter Lab session running on the headnode and Dask dashboard, which are forwarded to local ports for you -unless running on a remote Compute Instance.
 
 
+**[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
+
 {% endcapture %}
 
 {% capture az_kub %}
-## <i class="fal fa-cloud-upload"></i> Azure Cluster via Kubernetes
+## <i class="fab fa-microsoft"></i> Azure Cluster via Kubernetes
 
 RAPIDS can be deployed on a Kubernetes cluster on Azure using Helm. More details can be found at our **[helm docs.](https://helm.rapids.ai/docs/csp.html)**
 
@@ -495,10 +515,13 @@ rapidsai-scheduler   LoadBalancer   10.100.19.121    5.6.7.8       8786:31779/TC
 
 You can now visit the external IP of the rapidsai-jupyter service in your browser!
 
+
+**[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
+
 {% endcapture %}
 
 {% capture az_ml %}
-## <i class="fal fa-cloud-upload"></i> AzureML Service
+## <i class="fab fa-microsoft"></i> AzureML Service
 
 RAPIDS can be deployed at scale using Azure Machine Learning Service--and easily scales up to any size needed. We have written a **[detailed guide](https://medium.com/rapids-ai/rapids-on-microsoft-azure-machine-learning-b51d5d5fde2b)** with **[helper scripts](https://github.com/rapidsai/cloud-ml-examples/tree/master/azure)** to get everything deployed, but the high level procedure is:
 
@@ -529,29 +552,32 @@ N is the number of nodes you’d like to deploy.
 
 See **[the guide](https://medium.com/rapids-ai/rapids-on-microsoft-azure-machine-learning-b51d5d5fde2b#fee3)** or **[GitHub](https://github.com/rapidsai/cloud-ml-examples/tree/master/azure)** for more details.
 
+
+**[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
+
 {% endcapture %}
 <div id="AZ-single"></div>
 {% include section-single.html
     background="background-white" 
-    padding-top="5em" padding-bottom="3em" 
+    padding-top="6em" padding-bottom="0em" 
     content-single=az_single
 %}
 <div id="AZ-Dask"></div>
 {% include section-single.html
     background="background-white" 
-    padding-top="5em" padding-bottom="3em" 
+    padding-top="5em" padding-bottom="0em" 
     content-single=az_dask
 %}
 <div id="AZ-Kubernetes"></div>
 {% include section-single.html
     background="background-white" 
-    padding-top="5em" padding-bottom="3em" 
+    padding-top="3em" padding-bottom="0em" 
     content-single=az_kub
 %}
 <div id="AZ-ML"></div>
 {% include section-single.html
     background="background-white" 
-    padding-top="5em" padding-bottom="10em" 
+    padding-top="3em" padding-bottom="10em" 
     content-single=az_ml
 %}
 
@@ -559,13 +585,25 @@ See **[the guide](https://medium.com/rapids-ai/rapids-on-microsoft-azure-machine
 <div id="googlecloud"></div>
 {% capture gcp_intro %}
 ![gcp]({{ site.baseurl }}{% link /assets/images/GCP-logo.png %})
-## Google Cloud
+## <i class="fab fa-google"></i> Google Cloud
 
 RAPIDS can be used in Google Cloud in several different ways:
-- **[On a single instance](#GC-single)**
-- **[On a cluster using Dask (via Dataproc)](#GC-Dask)**
-- **[On a cluster using Kubernetes](#GC-Kubernetes)**
-- **[On CloudAI](#GC-AI)**
+**[<i class="fas fa-caret-right"></i> Single instance](#GC-single)**{: .block}
+**[<i class="fas fa-caret-right"></i> Cluster using Dask (via Dataproc)](#GC-Dask)**{: .block}
+**[<i class="fas fa-caret-right"></i> Cluster using Kubernetes](#GC-Kubernetes)**{: .block}
+**[<i class="fas fa-caret-right"></i> On CloudAI](#GC-AI)**{: .block}
+
+
+| Cloud Provider | Instance Type              | Instance name    | \# GPUs    | GPU Type | Per GPU RAM \(GB\) | Per GPU SP Performance \(TFLOPS\) |
+|----------------|----------------------------|------------------|------------|----------|--------------------|-----------------------------------|
+| Google Cloud   | GPU Compute Workload Addon | Any Machine Type | As desired | P4       | 8                  | 5\.5                              |
+| Google Cloud   | GPU Compute Workload Addon | Any Machine Type | As desired | P100     | 16                 | 10\.6                             |
+| Google Cloud   | GPU Compute Workload Addon | Any Machine Type | As desired | T4       | 16                 | 8\.1                              |
+| Google Cloud   | GPU Compute Workload Addon | Any Machine Type | As desired | V100     | 16                 | 14                                |
+|  Google Cloud  | A2                         | TBD \- In beta   | As desired | A100     | 32                 | 78                                |
+{: .cloud-table}
+
+**[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
 
 {% endcapture %}
 
@@ -576,7 +614,7 @@ RAPIDS can be used in Google Cloud in several different ways:
 %}
 {% include section-single.html
     background="background-gray" 
-    padding-top="5em" padding-bottom="3em" 
+    padding-top="3em" padding-bottom="3em" 
     content-single=gcp_intro
 %}
 {% include slopecap.html 
@@ -587,7 +625,7 @@ RAPIDS can be used in Google Cloud in several different ways:
 
 {% capture gc_single %}
 
-## <i class="fal fa-cloud-upload"></i> Google Single Instance
+## <i class="fab fa-google"></i> Google Single Instance
 RAPIDS can be deployed on Google Cloud as a single instance:
 
 **1. Create.** Create a Project in your Google Cloud account.
@@ -608,11 +646,12 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 
 **6. Test RAPIDS.** The above command should start your docker container. To test the container, start a python instance and then import any one of the RAPIDS libraries in it.
 
+**[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
 
 {% endcapture %}
 
 {% capture gc_dask %}
-## <i class="fal fa-cloud-upload"></i> Google Cluster via Dask (Dataproc)
+## <i class="fab fa-google"></i> Google Cluster via Dask (Dataproc)
 
 RAPIDS can be deployed on Google Cloud Dataproc using Dask. We have **[helper scripts and detailed instructions](https://github.com/GoogleCloudDataproc/initialization-actions/tree/master/rapids)** to help.
 
@@ -640,10 +679,13 @@ gcloud dataproc clusters create $CLUSTER_NAME \
 
 For more, see our **[detailed instructions and helper scripts.](https://github.com/GoogleCloudDataproc/initialization-actions/tree/master/rapids)**
 
+
+**[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
+
 {% endcapture %}
 
 {% capture gc_kub %}
-## <i class="fal fa-cloud-upload"></i> Google Cluster via Kubernetes
+## <i class="fab fa-google"></i> Google Cluster via Kubernetes
 
 RAPIDS can be deployed in a Kubernetes cluster on GCP. For more information, see the **[detailed instructions and helm charts.](https://helm.rapids.ai/docs/csp.html)**
 
@@ -734,10 +776,12 @@ rapidsai-scheduler   LoadBalancer   10.100.19.121    5.6.7.8       8786:31779/TC
 To run notebooks on jupyter in your browser, visit the external IP of rapidsai-jupyter.
 
 
+**[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
+
 {% endcapture %}
 
 {% capture gc_ai %}
-## <i class="fal fa-cloud-upload"></i> Google CloudAI
+## <i class="fab fa-google"></i> Google CloudAI
 
 RAPIDS can be deployed on Google’s CloudAI platform. This deployment can range from a simple pre-made notebook (instructions below!) all the way up to a custom training container and HPO job. For more, see our **[detailed instructions and helper scripts.](https://github.com/rapidsai/cloud-ml-examples/tree/master/gcp)**
 
@@ -761,29 +805,32 @@ RAPIDS can be deployed on Google’s CloudAI platform. This deployment can range
 
 For more details, or for other ways to deploy on Google CloudAI, see the **[detailed instructions and helper scripts.](https://github.com/rapidsai/cloud-ml-examples/tree/master/gcp)**
 
+
+**[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
+
 {% endcapture %}
 <div id="GC-single"></div>
 {% include section-single.html
     background="background-white" 
-    padding-top="5em" padding-bottom="3em" 
+    padding-top="6em" padding-bottom="0em" 
     content-single=gc_single
 %}
 <div id="GC-Dask"></div>
 {% include section-single.html
     background="background-white" 
-    padding-top="5em" padding-bottom="3em" 
+    padding-top="3em" padding-bottom="0em" 
     content-single=gc_dask
 %}
 <div id="GC-Kubernetes"></div>
 {% include section-single.html
     background="background-white" 
-    padding-top="5em" padding-bottom="3em" 
+    padding-top="3em" padding-bottom="0em" 
     content-single=gc_kub
 %}
 <div id="GC-AI"></div>
 {% include section-single.html
     background="background-white" 
-    padding-top="5em" padding-bottom="10em" 
+    padding-top="3em" padding-bottom="10em" 
     content-single=gc_ai
 %}
 
