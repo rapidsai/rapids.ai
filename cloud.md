@@ -7,7 +7,7 @@ button_link: "#deploy"
 layout: default
 ---
 
-![Placeholder]({{ site.baseurl }}{% link /assets/images/RAPIDs-cloud.png %}){: .projects-logo}
+![cloud]({{ site.baseurl }}{% link /assets/images/RAPIDs-cloud.png %}){: .projects-logo}
 
 {% capture intro_content %}
 

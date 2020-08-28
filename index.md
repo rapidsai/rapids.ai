@@ -363,7 +363,7 @@ BlazingSQL is an open source project providing distributed SQL for analytics tha
 {% endcapture %}
 
 {% capture com_top_right %}
-![Dask]({{ site.baseurl }}{% link /assets/images/dask.svg %}){: .third-image-center}
+![Dask]({{ site.baseurl }}{% link /assets/images/dask.svg %}){: .half-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Dask
 
 Dask is an open source project providing advanced parallelism for analytics that enables performance at scale. RAPIDS is actively contributing to Dask, and it integrates with both RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. <br> **[Learn more on our Dask page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](dask.html)**
@@ -379,12 +379,12 @@ XGBoost is a well-known gradient boosted decision trees (GBDT) machine learning 
 {% endcapture %}
 
 {% capture com_bottom_right %}
-![spark]({{ site.baseurl }}{% link /assets/images/spark-logo-trademark.png %}){: .third-image-center}
-## <i class="fas fa-code-branch"></i> RAPIDS + Spark
+![cloud]({{ site.baseurl }}{% link /assets/images/RAPIDs-cloud.png %}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + Cloud
 
-NVIDIA is bringing RAPIDS to Apache Spark to accelerate ETL workflows with GPUs.
-<br> **[Learn more on the RAPIDS Accelerator for Apache Spark page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://nvidia.github.io/spark-rapids/){: target="_blank"}**
-
+RAPIDS’s GPU accelerated data science tools can be deployed on all of the major clouds, allowing anyone to take advantage of the speed increases and TCO reductions that RAPIDS enables.
+<br>
+**[Learn more on our cloud page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](cloud.html)**
 {% endcapture %}
 
 {% capture com2_top_left %}
@@ -404,11 +404,16 @@ Accelerate Hyperparameter Optimization (HPO) in the Cloud. The RAPIDS team works
 {% endcapture %}
 
 {% capture com2_bottom_left %}
+![spark]({{ site.baseurl }}{% link /assets/images/spark-logo-trademark.png %}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + Spark
+
+NVIDIA is bringing RAPIDS to Apache Spark to accelerate ETL workflows with GPUs.
+<br> **[Learn more on the RAPIDS for Apache Spark page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://www.nvidia.com/en-us/deep-learning-ai/solutions/data-science/apache-spark-3/){: target="_blank"}**
 
 {% endcapture %}
 
 {% capture com2_bottom_right %}
-
+ 
 {% endcapture %}
 
 
@@ -422,7 +427,7 @@ Accelerate Hyperparameter Optimization (HPO) in the Cloud. The RAPIDS team works
 %}
 {% include section-double-halfs.html 
     background="background-white" 
-    padding-top="0m" padding-bottom="3em" 
+    padding-top="0m" padding-bottom="0em" 
     content-top-left-half=com2_top_left
     content-top-right-half=com2_top_right
     content-bottom-left-half=com2_bottom_left
