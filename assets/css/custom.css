@@ -1346,6 +1346,26 @@ code.tag {
         margin-top: 0em;
     }
 
+    /* cloud table */
+    .cloud-table {
+       margin-top: 2em;
+       margin-bottom: 3em;
+       font-size: 0.70em;
+    }
+    
+    .cloud-table th {
+        padding: 0.2em;
+    }
+    
+    .cloud-table tr {
+        padding: 0.2em;
+    }
+       
+    .cloud-table td {
+        padding: 0.2em;
+    }
+    
+
     /* blog */
     .blog-preview-item {
         width: 100%;
