@@ -176,27 +176,36 @@ RAPIDS can be deployed on ECS using Dask’s dask-cloudprovider management tools
 {: .margin-bottom-3em}
 
 **3. Create an EC2 cluster:**
-- In the AWS console, visit the ECS dashboard. From the “Clusters” section on the left hand side, click “Create Cluster”. 
-- Make sure to select an EC 2 Linux + Networking cluster so that we can specify our networking options.
-- Give the cluster a name EX. `rapids-cluster`.
-- Change the instance type to one that supports RAPIDS-supported GPUs (see introduction section for list of supported instance types). For this example, we will use `p3.2xlarge`, each of which comes with one NVIDIA V100 GPU.
-- In the networking section, select the default VPC and all the subnets available in that VPC.
-- All other options can be left at defaults. You can now click “create” and wait for the cluster creation to complete.
+In the AWS console, visit the ECS dashboard. From the “Clusters” section on the left hand side, click “Create Cluster”. 
+
+Make sure to select an EC 2 Linux + Networking cluster so that we can specify our networking options.
+
+Give the cluster a name EX. `rapids-cluster`.
+
+Change the instance type to one that supports RAPIDS-supported GPUs (see introduction section for list of supported instance types). For this example, we will use `p3.2xlarge`, each of which comes with one NVIDIA V100 GPU.
+
+In the networking section, select the default VPC and all the subnets available in that VPC.
+
+All other options can be left at defaults. You can now click “create” and wait for the cluster creation to complete.
 
 **4. Create a Dask cluster:**
-- Get the Amazon Resource Name (ARN) for the cluster you just created.
-- Set `AWS_DEFAULT_REGION` environment variable to your **[default region](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions)**: 
+
+Get the Amazon Resource Name (ARN) for the cluster you just created.
+
+Set `AWS_DEFAULT_REGION` environment variable to your **[default region](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions)**: 
 ```shell
 export AWS_DEFAULT_REGION=<REGION>
 ```
-[REGION] = code fo the region being used
-- Create the ECSCluster object in your Python session:
+[REGION] = code fo the region being used.
+{: .margin-bottom-3em}
+
+Create the ECSCluster object in your Python session:
 ```shell
 >>> from dask_cloudprovider import ECSCluster
 >>> cluster = ECSCluster(
                             cluster_arn="<CLUSTER_ARN>",
                             n_workers=<NUM_WORKERS>,
-                            worker_gpu=<NUM_GPUS}>,
+                            worker_gpu=<NUM_GPUS>,
                             fargate_scheduler=True
                          )
 ```
