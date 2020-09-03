@@ -671,6 +671,7 @@ a h2:hover,
     margin-top: 3em;
     margin-bottom: 5em;
     empty-cells: hide;
+    width: 100%;
 }
 
 .cloud-table th {
