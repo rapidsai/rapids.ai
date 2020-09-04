@@ -324,7 +324,7 @@ RAPIDS also works with AWS Sagemaker. We’ve written a **[detailed guide](https
 
 **3. Run.** Start running the sagemaker-rapids.ipynb jupyter notebook. 
 
-For more details, including on running large-scale HPO jobs on Sagemaker with RAPIDS, check out the **[detailed guide](https://medium.com/rapids-ai/running-rapids-experiments-at-scale-using-amazon-sagemaker-d516420f165b)** and **[examples.](https://github.com/rapidsai/cloud-ml-examples/tree/master/aws)**
+For more details, including on running large-scale HPO jobs on Sagemaker with RAPIDS, check out the **[detailed guide](https://medium.com/rapids-ai/running-rapids-experiments-at-scale-using-amazon-sagemaker-d516420f165b)** and **[examples.](https://github.com/rapidsai/cloud-ml-examples/tree/main/aws)**
 
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
@@ -547,7 +547,7 @@ You can now visit the external IP of the rapidsai-jupyter service in your browse
 {% capture az_ml %}
 ## <i class="fab fa-microsoft"></i> AzureML Service
 
-RAPIDS can be deployed at scale using Azure Machine Learning Service--and easily scales up to any size needed. We have written a **[detailed guide](https://medium.com/rapids-ai/rapids-on-microsoft-azure-machine-learning-b51d5d5fde2b)** with **[helper scripts](https://github.com/rapidsai/cloud-ml-examples/tree/master/azure)** to get everything deployed, but the high level procedure is:
+RAPIDS can be deployed at scale using Azure Machine Learning Service--and easily scales up to any size needed. We have written a **[detailed guide](https://medium.com/rapids-ai/rapids-on-microsoft-azure-machine-learning-b51d5d5fde2b)** with **[helper scripts](https://github.com/rapidsai/cloud-ml-examples/tree/main/azure)** to get everything deployed, but the high level procedure is:
 
 **1. Create.** Create your Azure Resource Group.
 
@@ -574,7 +574,7 @@ NUM_NODES = the number of nodes you’d like to deploy. <br>
 
 **7. Start.** Open your browser to http://localhost:8888 and get started!
 
-See **[the guide](https://medium.com/rapids-ai/rapids-on-microsoft-azure-machine-learning-b51d5d5fde2b#fee3)** or **[GitHub](https://github.com/rapidsai/cloud-ml-examples/tree/master/azure)** for more details.
+See **[the guide](https://medium.com/rapids-ai/rapids-on-microsoft-azure-machine-learning-b51d5d5fde2b#fee3)** or **[GitHub](https://github.com/rapidsai/cloud-ml-examples/tree/main/azure)** for more details.
 
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
@@ -809,7 +809,7 @@ To run notebooks on jupyter in your browser, visit the external IP of rapidsai-j
 {% capture gc_ai %}
 ## <i class="fab fa-google"></i> Google CloudAI
 
-RAPIDS can be deployed on Google’s CloudAI platform. This deployment can range from a simple pre-made notebook (instructions below!) all the way up to a custom training container and HPO job. For more, see our **[detailed instructions and helper scripts.](https://github.com/rapidsai/cloud-ml-examples/tree/master/gcp)**
+RAPIDS can be deployed on Google’s CloudAI platform. This deployment can range from a simple pre-made notebook (instructions below!) all the way up to a custom training container and HPO job. For more, see our **[detailed instructions and helper scripts.](https://github.com/rapidsai/cloud-ml-examples/tree/main/gcp)**
 
 **1. Login.** Log into your GCP console.
 
@@ -829,7 +829,7 @@ RAPIDS can be deployed on Google’s CloudAI platform. This deployment can range
 - Run the script
 - Once completed, you will have a new kernel in your jupyter notebooks called `rapids_py37` which will have RAPIDS installed.
 
-For more details, or for other ways to deploy on Google CloudAI, see the **[detailed instructions and helper scripts.](https://github.com/rapidsai/cloud-ml-examples/tree/master/gcp)**
+For more details, or for other ways to deploy on Google CloudAI, see the **[detailed instructions and helper scripts.](https://github.com/rapidsai/cloud-ml-examples/tree/main/gcp)**
 
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
