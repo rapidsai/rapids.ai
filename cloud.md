@@ -14,7 +14,7 @@ layout: default
 RAPIDS’s GPU accelerated data science tools can be deployed on all of the major clouds, allowing anyone to take advantage of the speed increases and TCO reductions that RAPIDS enables.
 {: .subtitle}
 
-RAPIDS can be deployed in a number of ways, from hosted Jupyter notebooks, to the major HPO services, all the way up to large-scale clusters via Dask or Kubernetes. Deploying on the cloud will require you to make use of supported GPU instances. Each major cloud provider has GPU instances that are supported by RAPIDS with varying capabilities and price points -the below charts identifies the major instance types of each cloud.
+RAPIDS can be deployed in a number of ways, from hosted Jupyter notebooks, to the major HPO services, all the way up to large-scale clusters via Dask or Kubernetes. Deploying on the cloud will require you to make use of supported GPU instances. Each major cloud provider has GPU instances that are supported by RAPIDS with varying capabilities and price points - the below charts identifies the major instance types of each cloud.
 
 
 {% endcapture %}
