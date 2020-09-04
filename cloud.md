@@ -194,7 +194,7 @@ Get the Amazon Resource Name (ARN) for the cluster you just created.
 
 Set `AWS_DEFAULT_REGION` environment variable to your **[default region](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions)**: 
 ```shell
-export AWS_DEFAULT_REGION=<REGION>
+export AWS_DEFAULT_REGION=[REGION]
 ```
 [REGION] = code fo the region being used.
 {: .margin-bottom-3em}
@@ -203,9 +203,9 @@ Create the ECSCluster object in your Python session:
 ```shell
 >>> from dask_cloudprovider import ECSCluster
 >>> cluster = ECSCluster(
-                            cluster_arn="<CLUSTER_ARN>",
-                            n_workers=<NUM_WORKERS>,
-                            worker_gpu=<NUM_GPUS>,
+                            cluster_arn="[CLUSTER_ARN]",
+                            n_workers=[NUM_WORKERS],
+                            worker_gpu=[NUM_GPUS],
                             fargate_scheduler=True
                          )
 ```
@@ -255,15 +255,15 @@ RAPIDS can be deployed on AWS via AWS’s managed Kubernetes service (EKS) using
 **3. Create your cluster:**
 ```shell
 >>> eksctl create cluster \
-    --name <CLUSTER_NAME \
+    --name [CLUSTER_NAME] \
     --version 1.14 \
-    --region <REGION> \
+    --region [REGION] \
     --nodegroup-name gpu-workers \
-    --node-type <NODE_INSTANCE> \
-    --nodes  <NUM_NODES> \
+    --node-type [NODE_INSTANCE] \
+    --nodes  [NUM_NODES] \
     --nodes-min 1 \
-    --nodes-max <MAX_NODES> \
-    --node-volume-size <NODE_SIZE> \
+    --nodes-max [MAX_NODES] \
+    --node-volume-size [NODE_SIZE] \
     --ssh-access \
     --ssh-public-key ~/path/to/id_rsa.pub \
     --managed
@@ -562,15 +562,15 @@ RAPIDS can be deployed at scale using Azure Machine Learning Service--and easily
 **6. Run Utility.** Run the RAPIDS helper utility script to initialize the Azure Machine Learning service Workspace:
 ```shell
 >>> ./start_azureml.py \
- --config=CONFIG_PATH \
- --vm_size=VM_SIZE \
- --node_count=NUM_NODES
+ --config=[CONFIG_PATH] \
+ --vm_size=[VM_SIZE] \
+ --node_count=[NUM_NODES]
 ```
 {: .margin-bottom-3em}
 
 [CONFIG_PATH] = the path to the config file you downloaded in step three. <br>
 [VM_SIZE] = the size of the VM you would like to target. This must include a RAPIDS-compatible GPU. <br>
-NUM_NODES = the number of nodes you’d like to deploy. <br>
+[NUM_NODES] = the number of nodes you’d like to deploy. <br>
 
 **7. Start.** Open your browser to http://localhost:8888 and get started!
 
@@ -681,9 +681,9 @@ RAPIDS can be deployed on Google Cloud Dataproc using Dask. We have **[helper sc
 
 **1. Create Dataproc cluster with Dask RAPIDS.** Use the gcloud command to create a new cluster with the below initialization action. Because of an Anaconda version conflict, script deployment on older images is slow, we recommend using Dask with Dataproc 2.0+.
 ```shell
->>> GCS_BUCKET=<BUCKET_NAME>
->>> CLUSTER_NAME=<CLUSTER_NAME>
->>> REGION=<REGION>
+>>> GCS_BUCKET=[BUCKET_NAME]
+>>> CLUSTER_NAME=[CLUSTER_NAME]
+>>> REGION=[REGION]
 >>> gcloud dataproc clusters create $CLUSTER_NAME \
     --region $REGION \
     --image-version 1.4-ubuntu18 \
