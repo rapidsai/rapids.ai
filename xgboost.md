@@ -7,7 +7,7 @@ button_link: "https://xgboost.readthedocs.io"
 layout: default
 ---
 
-![xgboost]({{ site.baseurl }}{% link /assets/images/xgboost_logo_sorta.svg %}){: .projects-logo}
+![xgboost]({{ site.baseurl }}{% link /assets/images/xgboost_logo.png %}){: .projects-logo}
 
 # Seamless Acceleration at Scale
 {: .section-title-full}

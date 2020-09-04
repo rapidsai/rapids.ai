@@ -363,7 +363,7 @@ BlazingSQL is an open source project providing distributed SQL for analytics tha
 {% endcapture %}
 
 {% capture com_top_right %}
-![Dask]({{ site.baseurl }}{% link /assets/images/dask.svg %}){: .third-image-center}
+![Dask]({{ site.baseurl }}{% link /assets/images/dask_logo.png %}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Dask
 
 Dask is an open source project providing advanced parallelism for analytics that enables performance at scale. RAPIDS is actively contributing to Dask, and it integrates with both RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. <br> **[Learn more on our Dask page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](dask.html)**
@@ -371,7 +371,7 @@ Dask is an open source project providing advanced parallelism for analytics that
 {% endcapture %}
 
 {% capture com_bottom_left %}
-![xgboost]({{ site.baseurl }}{% link /assets/images/xgboost_logo_sorta.svg %}){: .third-image-center}
+![xgboost]({{ site.baseurl }}{% link /assets/images/xgboost_logo.png %}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + XGBoost
 
 XGBoost is a well-known gradient boosted decision trees (GBDT) machine learning package used to tackle regression, classification, and ranking problems. The RAPIDS team works closely with the Distributed Machine Learning Common (DMLC) XGBoost organization to upstream code and ensure that all components of the GPU-accelerated analytics ecosystem work together. <br> **[Learn more on our XGBoost page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](xgboost.html)**
