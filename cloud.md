@@ -316,7 +316,7 @@ You can now visit the external IP of the rapidsai-jupyter service in your browse
 {% capture aws_sage %}
 ## <i class="fab fa-aws"></i> AWS Sagemaker
 
-RAPIDS also works with AWS Sagemaker. We’ve written a **[detailed guide](https://medium.com/rapids-ai/running-rapids-experiments-at-scale-using-amazon-sagemaker-d516420f165b)** with **[examples](https://github.com/rapidsai/cloud-ml-examples/tree/master/aws)** for how to use Sagemaker with RAPIDS, but the simplest version is:
+RAPIDS also works with AWS Sagemaker. We’ve written a **[detailed guide](https://medium.com/rapids-ai/running-rapids-experiments-at-scale-using-amazon-sagemaker-d516420f165b)** with **[examples](https://github.com/rapidsai/cloud-ml-examples/tree/main/aws)** for how to use Sagemaker with RAPIDS, but the simplest version is:
 
 **1. Start.** Start a Sagemaker hosted Jupyter notebook instance on AWS. 
 
