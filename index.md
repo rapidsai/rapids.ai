@@ -204,7 +204,7 @@ RAPIDS is committed to open source. We strive for a **[6 week release schedule](
 ## <i class="fas fa-code" id="libraries"></i> RAPIDS APIS and Libraries
 {: .section-subtitle-top-1}
 
-RAPIDS is open source licensed under Apache 2.0, spanning multiple projects that range from GPU dataframes to GPU accelerated ML algorithms. Its also provides native `array_interface` support, allowing Apache Arrow data to be pushed to deep learning frameworks. <br> **[Learn more <i class="fas fa-angle-double-right"></i>](about.html)**
+RAPIDS is open source licensed under Apache 2.0, spanning multiple projects that range from GPU dataframes to GPU accelerated ML algorithms. Its also provides native array_interface support, allowing Apache Arrow data to be pushed to deep learning frameworks. <br> **[Learn more <i class="fas fa-angle-double-right"></i>](about.html)**
 
 ## <i class="fab fa-github"></i> Contributing
 Whether you are new to RAPIDS, looking to help, or are part of the team, learn about our contributing guidelines on our contributing page. <br> **[Go to Docs <i class="fas fa-angle-double-right"></i>](https://docs.rapids.ai/contributing){: target="_blank"}**
@@ -379,12 +379,12 @@ XGBoost is a well-known gradient boosted decision trees (GBDT) machine learning 
 {% endcapture %}
 
 {% capture com_bottom_right %}
-![spark]({{ site.baseurl }}{% link /assets/images/spark-logo-trademark.png %}){: .third-image-center}
-## <i class="fas fa-code-branch"></i> RAPIDS + Spark
+![cloud]({{ site.baseurl }}{% link /assets/images/RAPIDs-cloud.png %}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + Cloud
 
-NVIDIA is bringing RAPIDS to Apache Spark to accelerate ETL workflows with GPUs.
-<br> **[Learn more on the RAPIDS Accelerator for Apache Spark page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://nvidia.github.io/spark-rapids/){: target="_blank"}**
-
+RAPIDS’s GPU accelerated data science tools can be deployed on all of the major clouds, allowing anyone to take advantage of the speed increases and TCO reductions that RAPIDS enables.
+<br>
+**[Learn more on our cloud page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](cloud.html)**
 {% endcapture %}
 
 {% capture com2_top_left %}
@@ -404,11 +404,16 @@ Accelerate Hyperparameter Optimization (HPO) in the Cloud. The RAPIDS team works
 {% endcapture %}
 
 {% capture com2_bottom_left %}
+![spark]({{ site.baseurl }}{% link /assets/images/spark-logo-trademark.png %}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + Spark
+
+NVIDIA is bringing RAPIDS to Apache Spark to accelerate ETL workflows with GPUs.
+<br> **[Learn more on the RAPIDS for Apache Spark page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://www.nvidia.com/en-us/deep-learning-ai/solutions/data-science/apache-spark-3/){: target="_blank"}**
 
 {% endcapture %}
 
 {% capture com2_bottom_right %}
-
+ 
 {% endcapture %}
 
 
@@ -422,7 +427,7 @@ Accelerate Hyperparameter Optimization (HPO) in the Cloud. The RAPIDS team works
 %}
 {% include section-double-halfs.html 
     background="background-white" 
-    padding-top="0m" padding-bottom="3em" 
+    padding-top="0m" padding-bottom="0em" 
     content-top-left-half=com2_top_left
     content-top-right-half=com2_top_right
     content-bottom-left-half=com2_bottom_left

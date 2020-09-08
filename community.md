@@ -59,17 +59,20 @@ Accelerate Hyperparameter Optimization (HPO) in the Cloud. The RAPIDS team works
 
 {% endcapture %}
 {% capture com_right_bottom %}
+![cloud]({{ site.baseurl }}{% link /assets/images/RAPIDs-cloud.png %}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + Cloud
+
+RAPIDS’s GPU accelerated data science tools can be deployed on all of the major clouds, allowing anyone to take advantage of the speed increases and TCO reductions that RAPIDS enables.
+<br>
+**[Learn more on our cloud page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](cloud.html)**
+{% endcapture %}
+
+{% capture prj_left %}
 ![spark]({{ site.baseurl }}{% link /assets/images/spark-logo-trademark.png %}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Spark
 
-NVIDIA will be bringing RAPIDS to Apache Spark.
-<br> **[Learn more on our blog post <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://medium.com/rapids-ai/nvidia-gpus-and-apache-spark-one-step-closer-2d99e37ac8fd){: target="_blank"}**
-
-{% endcapture %}
-
-
-{% capture prj_left %}
-
+NVIDIA is bringing RAPIDS to Apache Spark to accelerate ETL workflows with GPUs.
+<br> **[Learn more on the RAPIDS for Apache Spark page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://www.nvidia.com/en-us/deep-learning-ai/solutions/data-science/apache-spark-3/){: target="_blank"}**
 {% endcapture %}
 
 {% capture prj_mid %}

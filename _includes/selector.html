@@ -19,7 +19,7 @@
                     <div class='option-label'></div>
                     <div class='option-notice'>
                         <span>
-                            <i class="fas fa-bullhorn text-white"></i> Release changes to <a href="https://docs.rapids.ai/notices/rgn0002">clx</a> and <a href="https://docs.rapids.ai/notices/rgn0004">cuxfilter</a> in v0.15
+                            <i class="fas fa-bullhorn text-white"></i> Release changes to <a href="https://docs.rapids.ai/notices/rgn0002">clx</a> in v0.15
                         </span>
                     </div>
                     <div class='option-notice'>
@@ -258,14 +258,8 @@ function processClick(options, click, category) {
             selections['python'] = 'py37';
             $("#py36").removeClass("active");
         }
-        // Disable cuxfilter until released
-        if (selections['pkg'] == 'cuxfilter') {
-            selections['pkg'] = 'all';
-            $("#cuxfilter").removeClass("active");
-        }
         $("#cuda100").addClass("disabled");
         $("#py36").addClass("disabled");
-        $("#cuxfilter").addClass("disabled");
     }
 
     // Handle legacy specific exlcusions
@@ -285,7 +279,6 @@ function processClick(options, click, category) {
         $("#py38").addClass("disabled");
         $("#cuda110").addClass("disabled");
         $("#all").addClass("disabled");
-        $("#cuxfilter").removeClass("disabled");
     }
 
     $("#" + selections['method']).addClass("active");
