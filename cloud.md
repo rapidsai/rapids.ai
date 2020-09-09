@@ -203,12 +203,13 @@ Create the ECSCluster object in your Python session:
 ```shell
 >>> from dask_cloudprovider import ECSCluster
 >>> cluster = ECSCluster(
-                            cluster_arn="[CLUSTER_ARN]",
+                            cluster_arn=[CLUSTER_ARN],
                             n_workers=[NUM_WORKERS],
                             worker_gpu=[NUM_GPUS],
                             fargate_scheduler=True
                          )
 ```
+[CLUSTER_ARN] = The ARN of an existing ECS cluster to use for launching tasks
 [NUM_WORKERS] = Number of workers to start on cluster creation. <br>
 [NUM_GPUS] = The number of GPUs to expose to the worker.
 {: .margin-bottom-3em}
@@ -415,7 +416,7 @@ There are multiple ways you can deploy RAPIDS on a single VM instance, but the e
 
 **3. Docker Permissions.** **[Setup docker user permissions.](https://docs.docker.com/engine/install/linux-postinstall/)** 
 
-**4. Install.** **[Install RAPIDS docker image:](https://rapids.ai/start.html)**
+**4. Install.** **[Install RAPIDS docker image](https://rapids.ai/start.html)**. The docker container can be customized by using the options provided in the **[Getting Started](https://rapids.ai/start.html)** page of RAPIDS. Example of an image that can be used is provided below:
 ```shell
 >>> docker pull rapidsai/rapidsai:cuda10.2-runtime-ubuntu18.04
 >>> docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -476,7 +477,7 @@ RAPIDS can be deployed on a Kubernetes cluster on Azure using Helm. More details
 **2. Configure.** Configure az and create a resource group if you don't already have one.
 ```shell
 >>> az login
->>> az group create --name RESOURCE_GROUP --location REGION
+>>> az group create --name [RESOURCE_GROUP] --location [REGION]
 ```
 [RESOURCE_GROUP] = resource group to be created. <br>
 [REGION] = the location where the resource group should be created. 
@@ -485,10 +486,10 @@ RAPIDS can be deployed on a Kubernetes cluster on Azure using Helm. More details
 **3. Create your cluster:**
 ```shell
 >>> az aks create \
-    --resource-group RESOURCE_GROUP \
-    --name CLUSTER_NAME \
-    --node-vm-size VM_SIZE \
-    --node-count NUM_NODES
+    --resource-group [RESOURCE_GROUP] \
+    --name [CLUSTER_NAME] \
+    --node-vm-size [VM_SIZE] \
+    --node-count [NUM_NODES]
 ```
 [CLUSTER_NAME] = Name of the managed cluster. <br>
 [NUM_NODES] = Number of nodes in the Kubernetes node pool. <br>
@@ -566,11 +567,8 @@ RAPIDS can be deployed at scale using Azure Machine Learning Service--and easily
  --vm_size=[VM_SIZE] \
  --node_count=[NUM_NODES]
 ```
+[CONFIG_PATH] = the path to the config file you downloaded in step three. 
 {: .margin-bottom-3em}
-
-[CONFIG_PATH] = the path to the config file you downloaded in step three. <br>
-[VM_SIZE] = the size of the VM you would like to target. This must include a RAPIDS-compatible GPU. <br>
-[NUM_NODES] = the number of nodes you’d like to deploy. <br>
 
 **7. Start.** Open your browser to http://localhost:8888 and get started!
 
