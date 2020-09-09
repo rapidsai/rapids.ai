@@ -7,7 +7,7 @@ button_link: "https://xgboost.readthedocs.io"
 layout: default
 ---
 
-![xgboost]({{ site.baseurl }}{% link /assets/images/xgboost_logo_sorta.svg %}){: .projects-logo}
+![xgboost]({{ site.baseurl }}{% link /assets/images/xgboost_logo.png %}){: .projects-logo}
 
 # Seamless Acceleration at Scale
 {: .section-title-full}
@@ -117,7 +117,9 @@ To take advantage of multiple GPU-accelerated nodes, you can use XGBoost’s nat
 {% capture deploy_mid %}
 ## <i class="fas fa-expand-arrows-alt"></i> Scale Out with Spark
 
-The RAPIDS team is working with the community to build a distributed, open source XGBoost4J-Spark + RAPIDS package. More details coming soon.
+XGBoost supports a Java API, called **[XGBoost4J](https://xgboost.readthedocs.io/en/latest/jvm/index.html){: target="_blank"}**. As of release 1.2, the XGBoost4J JARs include GPU support in the pre-built xgboost4j-spark-gpu JARs.
+
+The team is continuing to work on deeper integration into the Spark ecosystem - learn more in this **[devblog post](link to: https://news.developer.nvidia.com/gpu-accelerated-spark-xgboost/){: target="_blank"}**.
 
 {% endcapture %}
 {% capture deploy_right %}
@@ -160,35 +162,20 @@ With **[Dask-CUDA](https://github.com/rapidsai/dask-cuda){: target="_blank"}**, 
 The RAPIDS team is developing GPU enhancements to open-source XGBoost, working closely with the DCML/XGBoost organization to improve the larger ecosystem. Since RAPIDS is iterating ahead of upstream XGBoost releases, some enhancements will be available earlier from the **[RAPIDS branch](https://github.com/rapidsai/xgboost){: target="_blank"}**, or from RAPIDS-provided installers.
 {: .subtitle}
 
-## Installation Prerequisites for RAPIDS + XGBoost
-
-## Prerequisites 
-<i class="fas fa-microchip text-purple"></i> **GPU:** NVIDIA Pascal™ or better with **[compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 6.0+
-{: .no-tb-margins }
-
-<i class="fas fa-download text-purple"></i> **CUDA & NVIDIA Drivers:** One of the following supported versions:
-{: .no-tb-margins }
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-check-circle text-purple"></i> [9.2](https://developer.nvidia.com/cuda-92-download-archive){: target="_blank"} & v396.37+ &nbsp; <i class="fas fa-check-circle text-purple"></i> [10.0](https://developer.nvidia.com/cuda-10.0-download-archive){: target="_blank"} & v410.48+ &nbsp; <i class="fas fa-check-circle text-purple"></i> [10.1.2](https://developer.nvidia.com/cuda-downloads){: target="_blank"} & v418.87+
-{: .no-tb-margins }
-
-<i class="fas fa-box-open text-purple"></i> The latest RAPIDS package, which can be downloaded and installed one of these ways: 
-{: .no-tb-margins }
+## <i class="fas fa-box-open"></i> Prerequisites for RAPIDS + XGBoost
+For the latest prerequisites and supported versions, check out our **[Getting Started page](https://rapids.ai/start.html#req){: target="_blank"}**.
 
 {% endcapture %}
 {% capture download_left %}
 ## <i class="fas fa-laptop-code"></i> Conda Install
 
-The default RAPIDS conda metapackage includes a recent snapshot of XGBoost by default. This package is released on the same schedule as other RAPIDS packages and tested for full compatibility. You can install it with:
-```bash
-conda install -c rapidsai -c nvidia -c conda-forge \
-    -c defaults rapids=0.12 python=3.7
-```
+The default RAPIDS conda metapackage includes a recent snapshot of XGBoost by default. This package is released on the same schedule as other RAPIDS packages and tested for full compatibility. You can find the latest install options with our **[RAPIDS Release Selector](https://rapids.ai/start.html#get-rapids){: target="_blank"}**.
+
 
 ## <i class="fab fa-docker"></i> Docker Container
 {: .section-subtitle-top-2}
 
-Install using Docker (the latest RAPIDS release). RAPIDS provides Docker images that include a recent version of GPU-accelerated XGBoost. Just follow the Docker installation instructions on the **[Getting Started](https://rapids.ai/start.html)** page and you can start using XGBoost right away from a notebook or the command line.
+Install using Docker (the latest RAPIDS release). RAPIDS provides Docker images that include a recent version of GPU-accelerated XGBoost. Just follow the Docker installation instructions with our **[RAPIDS Release Selector](https://rapids.ai/start.html#get-rapids)** page and you can start using XGBoost right away from a notebook or the command line.
 
 
 {% endcapture %}
