@@ -142,7 +142,7 @@ There are multiple ways you can deploy RAPIDS on a single instance, but the easi
 
 **3. Install.** Install docker in the AWS instance. This step is not required if you are using AWS Deep Learning AMI.
 
-**4. Install.** Install RAPIDS docker image. The docker container can be customized by using the options provided in the **[Getting Started](https://rapids.ai/start.html)** page of RAPIDS. An example of an image that can be used is provided below:
+**4. Install.** Install RAPIDS docker image. The docker container can be customized by using the options provided in the **[Getting Started](https://rapids.ai/start.html)** page of RAPIDS. Example of an image that can be used is provided below:
 ```shell
 >>> docker pull rapidsai/rapidsai:cuda10.2-runtime-ubuntu18.04
 >>> docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -622,7 +622,7 @@ RAPIDS can be used in Google Cloud in several different ways:
 | Google Cloud   | GPU Compute Workload Addon | Any Machine Type | As desired | P100     | 16 (GB)            | 10.6 (TFLOPS)                             |
 | Google Cloud   | GPU Compute Workload Addon | Any Machine Type | As desired | T4       | 16 (GB)            | 8.1 (TFLOPS)                              |
 | Google Cloud   | GPU Compute Workload Addon | Any Machine Type | As desired | V100     | 16 (GB)            | 14 (TFLOPS)                                |
-| Google Cloud   | A2                         | TBD \- In beta   | As desired | A100     | 32 (GB)            | 78 (TFLOPS)                                |
+| Google Cloud   | A2                         | TBD \- In beta   | As desired | A100     | 40 (GB)            | 19.5 (TFLOPS)                                |
 {: .cloud-table}
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
@@ -658,7 +658,7 @@ RAPIDS can be deployed on Google Cloud as a single instance:
 
 **4. Permissions.** **[Setup Docker user permission.](https://docs.docker.com/engine/install/linux-postinstall/)**
 
-**5. Run.** Pull and run the **[RAPIDS docker image:](https://rapids.ai/start.html)**
+**5. Install.** **[Install RAPIDS docker image](https://rapids.ai/start.html)**. The docker container can be customized by using the options provided in the **[Getting Started](https://rapids.ai/start.html)** page of RAPIDS. Example of an image that can be used is provided below:
 ```shell
 >>> docker pull rapidsai/rapidsai:cuda10.2-runtime-ubuntu18.04-py3.7
 >>> docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
