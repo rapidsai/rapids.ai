@@ -71,8 +71,11 @@ for column in gdf.columns:
 ```
 Find more details on our **[get started section <i class="fas fa-angle-double-right"></i>](start.html)**
 
-## <i class="fas fa-bolt"></i> Try Now In CoLab
-Jump right into a GPU powered RAPIDS notebook with **[Colabratory](https://colab.research.google.com/notebooks/welcome.ipynb){: target="_blank"}** for free. **[Go to example notebook <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
+## <i class="fas fa-bolt"></i> Try Now Online
+Jump right into a GPU powered RAPIDS notebook online.<br>
+Try with **[<i class="fad fa-fire"></i> BlazingSQL (RAPIDS 0.15+) <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://app.blazingsql.com/){: target="_blank"}**
+<br>
+Or with **[<i class="fab fa-google"></i> Colabratory (RAPIDS 0.14 only) <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
 
 {% endcapture %}
 
@@ -85,7 +88,7 @@ Modeled after 10 Minutes to Pandas, this is a short introduction to cuDF that is
 ## <i class="far fa-bookmark"></i> Multi-GPU with Dask-cuDF
 {: .section-subtitle-top-1}
 
-A short introduction to multi-GPU solutions with a distributed DataFrame via Dask-cuDF. <br> **[Go to guide <i class="fas fa-angle-double-right"></i>](https://docs.rapids.ai/api/cudf/stable/dask-cudf.htmll){: target="_blank"}**
+A short introduction to multi-GPU solutions with a distributed DataFrame via Dask-cuDF. <br> **[Go to guide <i class="fas fa-angle-double-right"></i>](https://docs.rapids.ai/api/cudf/stable/dask-cudf.html){: target="_blank"}**
 
 
 ## <i class="far fa-bookmark"></i> Example Notebooks
