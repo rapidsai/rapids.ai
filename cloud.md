@@ -108,12 +108,12 @@ RAPIDS can be deployed on Amazon Web Services (AWS) in several ways:
 | AWS            | G4            | g4dn\.xlarge   | 1       | T4       | 16 (GB)            | 8.1 (TFLOPS)                 |
 | AWS            | G4            | g4dn\.8xlarge  | 1       | T4       | 16 (GB)            | 8.1 (TFLOPS)                 |
 | AWS            | G4            | g4dn\.12xlarge | 4       | T4       | 16 (GB)            | 8.1 (TFLOPS)                 |
-| AWS            | G4            | g4dn\.16xlarge | 1       | T4       | 16 (GB)            | 8.1 (TFLOPS)                  |
+| AWS            | G4            | g4dn\.16xlarge | 1       | T4       | 16 (GB)            | 8.1 (TFLOPS)                 |
 | AWS            | G4            | g4dn\.metal    | 8       | T4       | 16 (GB)            | 8.1 (TFLOPS)                 |
-| AWS            | P3            | p3\.2xlarge    | 1       | V100     | 16 (GB)            | 14 (TFLOPS)                  |
-| AWS            | P3            | p3\.8xlarge    | 4       | V100     | 16 (GB)            | 14 (TFLOPS)                  |
-| AWS            | P3            | p3\.16xlarge   | 8       | V100     | 16 (GB)            | 14 (TFLOPS)                  |
-| AWS            | P3            | p3dn\.24xlarge | 8       | V100     | 32 (GB)            | 14 (TFLOPS)                  |
+| AWS            | P3            | p3\.2xlarge    | 1       | V100     | 16 (GB)            | 14.1 (TFLOPS)                  |
+| AWS            | P3            | p3\.8xlarge    | 4       | V100     | 16 (GB)            | 14.1 (TFLOPS)                  |
+| AWS            | P3            | p3\.16xlarge   | 8       | V100     | 16 (GB)            | 14.1 (TFLOPS)                  |
+| AWS            | P3            | p3dn\.24xlarge | 8       | V100     | 32 (GB)            | 14.1 (TFLOPS)                  |
 {: .cloud-table}
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
@@ -370,19 +370,19 @@ RAPIDS can be deployed on Microsoft Azure via several methods:
 
 | Cloud <br> Provider | Inst. <br> Type | Inst. <br> Name  |  GPU <br> Count | GPU <br> Type | xGPU <br> RAM | xGPU <br> Perf. |
 |----------------|---------------|---------------|---------|----------|----------------------|---------------|-----------------|
-| Azure          | NDs Series    | ND6s          | 1       | P40      | 8 (GB)               | 12 (TFLOPS)                     |
-| Azure          | NDs Series    | ND12s         | 2       | P40      | 8 (GB)               | 12 (TFLOPS)                     |
-| Azure          | NDs Series    | ND24s         | 4       | P40      | 8 (GB)               | 12 (TFLOPS)                     |
-| Azure          | NDs Series    | ND24rs        | 4       | P40      | 8 (GB)               | 12 (TFLOPS)                     |
+| Azure          | NDs Series    | ND6s          | 1       | P40      | 24 (GB)               | 11.7 (TFLOPS)                     |
+| Azure          | NDs Series    | ND12s         | 2       | P40      | 24 (GB)               | 11.7 (TFLOPS)                     |
+| Azure          | NDs Series    | ND24s         | 4       | P40      | 24 (GB)               | 11.7 (TFLOPS)                     |
+| Azure          | NDs Series    | ND24rs        | 4       | P40      | 24 (GB)               | 11.7 (TFLOPS)                     |
 | Azure          | NCs v2 Series | NC6s v2       | 1       | P100     | 16 (GB)              | 10.6 (TFLOPS)                   |
 | Azure          | NCs v2 Series | NC12s v2      | 2       | P100     | 16 (GB)              | 10.6 (TFLOPS)                   |
 | Azure          | NCs v2 Series | NC24s v2      | 4       | P100     | 16 (GB)              | 10.6 (TFLOPS)                   |
 | Azure          | NCs v2 Series | NC24rs v2     | 4       | P100     | 16 (GB)              | 10.6 (TFLOPS)                   |
-| Azure          | NCs v3 Series | NC6s v3       | 1       | V100     | 16 (GB)              | 14 (TFLOPS)                     |
-| Azure          | NCs v3 Series | NC12s v3      | 2       | V100     | 16 (GB)              | 14 (TFLOPS)                     |
-| Azure          | NCs v3 Series | NC24s v3      | 4       | V100     | 16 (GB)              | 14 (TFLOPS)                     |
-| Azure          | NCs v3 Series | NC24rs v3     | 4       | V100     | 16 (GB)              | 14 (TFLOPS)                     |
-| Azure          | NDs v2 Series | ND40rs        | 8       | V100     | 16 (GB)              | 14 (TFLOPS)                     |
+| Azure          | NCs v3 Series | NC6s v3       | 1       | V100     | 16 (GB)              | 14.1 (TFLOPS)                     |
+| Azure          | NCs v3 Series | NC12s v3      | 2       | V100     | 16 (GB)              | 14.1 (TFLOPS)                     |
+| Azure          | NCs v3 Series | NC24s v3      | 4       | V100     | 16 (GB)              | 14.1 (TFLOPS)                     |
+| Azure          | NCs v3 Series | NC24rs v3     | 4       | V100     | 16 (GB)              | 14.1 (TFLOPS)                     |
+| Azure          | NDs v2 Series | ND40rs        | 8       | V100     | 32 (GB)              | 14.1 (TFLOPS)                     |
 {: .cloud-table}
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
@@ -618,11 +618,11 @@ RAPIDS can be used in Google Cloud in several different ways:
 
 | Cloud <br> Provider | Inst. <br> Type | Inst. <br> Name  |  GPU <br> Count | GPU <br> Type | xGPU <br> RAM | xGPU <br> Perf. |
 |----------------|----------------------------|------------------|------------|----------|--------------------|----------------|
-| Google Cloud   | GPU Compute Workload Addon | Any Machine Type | As desired | P4       | 8 (GB)             | 5.5 (TFLOPS)                               |
+| Google Cloud   | GPU Compute Workload Addon | Any Machine Type | As desired | P4       | 8 (GB)             | 5.5 (TFLOPS)                              |
 | Google Cloud   | GPU Compute Workload Addon | Any Machine Type | As desired | P100     | 16 (GB)            | 10.6 (TFLOPS)                             |
 | Google Cloud   | GPU Compute Workload Addon | Any Machine Type | As desired | T4       | 16 (GB)            | 8.1 (TFLOPS)                              |
-| Google Cloud   | GPU Compute Workload Addon | Any Machine Type | As desired | V100     | 16 (GB)            | 14 (TFLOPS)                                |
-| Google Cloud   | A2                         | TBD \- In beta   | As desired | A100     | 40 (GB)            | 19.5 (TFLOPS)                                |
+| Google Cloud   | GPU Compute Workload Addon | Any Machine Type | As desired | V100     | 16 (GB)            | 14.1 (TFLOPS)                             |
+| Google Cloud   | A2                         | TBD \- In beta   | As desired | A100     | 40 (GB)            | 19.5 (TFLOPS)                             |
 {: .cloud-table}
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
