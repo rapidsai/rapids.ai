@@ -186,8 +186,8 @@ See the **[RAPIDS Container README](https://hub.docker.com/r/rapidsai/rapidsai){
     slope="up"
 %}
 
-{% include cta-footer.html 
-    name="TRY RAPIDS NOW ONLINE" 
+{% include cta-footer.html
+    name="TRY RAPIDS NOW ONLINE"
     button="LAUNCH IN BLAZINGSQL"
     link="https://app.blazingsql.com/"
 %}

@@ -703,7 +703,7 @@ a h2:hover,
 }
 
 .cloud-table tr:hover {
-    background-color: #efefef; 
+    background-color: #efefef;
 }
 
 .cloud-table td {
@@ -1369,19 +1369,19 @@ code.tag {
        margin-bottom: 3em;
        font-size: 0.70em;
     }
-    
+
     .cloud-table th {
         padding: 0.2em;
     }
-    
+
     .cloud-table tr {
         padding: 0.2em;
     }
-       
+
     .cloud-table td {
         padding: 0.2em;
     }
-    
+
 
     /* blog */
     .blog-preview-item {
