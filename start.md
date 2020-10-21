@@ -74,7 +74,7 @@ We suggest that you take a look at the sample workflow in our Docker container (
 <div id="get-rapids"></div>
 
 {% capture get_content %}
-# [RAPIDS Release Selector](#rapids-release-selector)
+# [RAPIDS Release Selector](#get-rapids)
 {: .section-title-full }
 
 RAPIDS is available as conda packages, docker images, and from source builds. Use the tool below to select your preferred method, packages, and environment to install RAPIDS. Certain combinations may not be possible and are dimmed automatically. Be sure you've met the required **[prerequisites above](#req)** and see the **[details below](#details)**.
