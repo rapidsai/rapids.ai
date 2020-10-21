@@ -16,8 +16,8 @@ The RAPIDS team is developing, contributing, and collaborating closely with nume
 {% endcapture %}
 
 {% include section-single.html
-    background="white" 
-    padding-top="0em" padding-bottom="5em" 
+    background="white"
+    padding-top="0em" padding-bottom="5em"
     content-single=com_content
 %}
 
@@ -76,7 +76,11 @@ NVIDIA is bringing RAPIDS to Apache Spark to accelerate ETL workflows with GPUs.
 {% endcapture %}
 
 {% capture prj_mid %}
+![slurm]({{ site.baseurl }}{% link /assets/images/slurm-logo.png%}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + HPC
 
+RAPID's works extremely well in traditional HPC environments where GPUs are often co-located with accelerated networking hardware such as InfiniBand.
+<br> **[Learn more on our HPC page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](/hpc)**
 {% endcapture %}
 
 {% capture prj_right %}
@@ -85,8 +89,8 @@ NVIDIA is bringing RAPIDS to Apache Spark to accelerate ETL workflows with GPUs.
 
 
 {% include section-double-thirds.html
-    background="background-white" 
-    padding-top="1em" padding-bottom="0em" 
+    background="background-white"
+    padding-top="1em" padding-bottom="0em"
     content-top-left-third=com_left_top
     content-top-middle-third=com_mid_top
     content-top-right-third=com_right_top
@@ -94,9 +98,9 @@ NVIDIA is bringing RAPIDS to Apache Spark to accelerate ETL workflows with GPUs.
     content-bottom-middle-third=com_mid_bottom
     content-bottom-right-third=com_right_bottom
 %}
-{% include section-thirds.html 
-    background="background-white" 
-    padding-top="1em" padding-bottom="5em" 
+{% include section-thirds.html
+    background="background-white"
+    padding-top="1em" padding-bottom="5em"
     content-left-third=prj_left
     content-middle-third=prj_mid
     content-right-third=prj_right
@@ -135,40 +139,40 @@ Anyone can join our community and contribute to to RAPIDS in a five step onboard
 {% endcapture %}
 
 {% include section-halfs.html
-    background="background-white" 
-    padding-top="1em" padding-bottom="5em" 
-    content-left-half=com_left 
+    background="background-white"
+    padding-top="1em" padding-bottom="5em"
+    content-left-half=com_left
     content-right-half=com_right
-%} 
+%}
 
 
 # Contributors
 {: .section-title-full}
-{% include contributing-logos.html 
-    padding-top="0em" padding-bottom="5em" 
+{% include contributing-logos.html
+    padding-top="0em" padding-bottom="5em"
 %}
 
 
 # Adopters
 {: .section-title-full}
-{% include adopter-logos.html 
-    padding-top="0em" padding-bottom="5em" 
+{% include adopter-logos.html
+    padding-top="0em" padding-bottom="5em"
 %}
 
 
 # Open Source
 {: .section-title-full}
-{% include open-source-logos.html 
-    padding-top="0em" padding-bottom="10em" 
+{% include open-source-logos.html
+    padding-top="0em" padding-bottom="10em"
 %}
 
-{% include slopecap.html 
-    background="background-darkpurple" 
-    position="top" 
+{% include slopecap.html
+    background="background-darkpurple"
+    position="top"
     slope="down"
 %}
-{% include cta-footer-help.html 
-   background="background-darkpurple" 
+{% include cta-footer-help.html
+   background="background-darkpurple"
 %}
 
 
