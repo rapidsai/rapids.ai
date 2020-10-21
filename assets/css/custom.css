@@ -376,6 +376,22 @@ header {
     position: relative;
 }
 
+.section-title-full a {
+    color: white;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.section-title-full a:hover {
+    color: #ffb500;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
 .section-subtitle-top-1 {
     margin-top: 1.5em;
 }
