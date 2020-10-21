@@ -69,16 +69,14 @@
                 </div>
                 <div class='python'>
                     <div class='option-label'>Python</div>
-                    <div id='py36' class='option'>Python 3.6 (0.14 only)</div>
                     <div id='py37' class='option'>Python 3.7</div>
-                    <div id='py38' class='option'>Python 3.8 (0.15/0.16 only)</div>
+                    <div id='py38' class='option'>Python 3.8</div>
                 </div>
                 <div class='cuda'>
                     <div class='option-label'>CUDA</div>
-                    <div id='cuda100' class='option'>CUDA 10.0 (0.14 only)</div>
                     <div id='cuda101' class='option'>CUDA 10.1.2</div>
                     <div id='cuda102' class='option'>CUDA 10.2</div>
-                    <div id='cuda110' class='option'>CUDA 11.0 (0.15/0.16 only)</div>
+                    <div id='cuda110' class='option'>CUDA 11.0</div>
                 </div>
                 <div class='preferred'>
                     <div class='option-label'></div>
@@ -121,8 +119,8 @@ var pkg = ['cudf', 'cuml', 'cugraph', 'cusignal', 'cuspatial', 'cuxfilter', 'all
 var method = ['conda', 'docker', 'source', 'dev'];
 var release = ['legacy', 'stable', 'nightly'];
 var linux = ['ubuntu1604', 'ubuntu1804', 'centos7', 'rhel7'];
-var python = ['py36', 'py37', 'py38'];
-var cuda = ['cuda100', 'cuda101', 'cuda102', 'cuda110'];
+var python = ['py37', 'py38'];
+var cuda = ['cuda101', 'cuda102', 'cuda110'];
 var pkg_opts = $(".pkg > .option");
 var method_opts = $(".method > .option");
 var release_opts = $(".release > .option");
