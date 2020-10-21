@@ -50,6 +50,11 @@
                     <div id='stable' class='option'>Stable ({{ site.data.releases.stable-version }})</div>
                     <div id='nightly' class='option'>Nightly ({{ site.data.releases.nightly-version }}a)</div>
                 </div>
+                <div class='type'>
+                    <div class='option-label'>Type</div>
+                    <div id='rapids' class='option'>RAPIDS Only</div>
+                    <div id='blazing' class='option'>RAPIDS with BlazingSQL</div>
+                </div>
                 <div class='pkg'>
                     <div class='option-label'>Packages</div>
                     <div id='all' class='option'>All Packages</div>
@@ -118,12 +123,14 @@
 var pkg = ['cudf', 'cuml', 'cugraph', 'cusignal', 'cuspatial', 'cuxfilter', 'all'];
 var method = ['conda', 'docker', 'source', 'dev'];
 var release = ['legacy', 'stable', 'nightly'];
+var type = ['rapids', 'blazing'];
 var linux = ['ubuntu1604', 'ubuntu1804', 'centos7', 'rhel7'];
 var python = ['py37', 'py38'];
 var cuda = ['cuda101', 'cuda102', 'cuda110'];
 var pkg_opts = $(".pkg > .option");
 var method_opts = $(".method > .option");
 var release_opts = $(".release > .option");
+var type_opts = $(".type > .option");
 var linux_opts = $(".linux > .option");
 var python_opts = $(".python > .option");
 var cuda_opts = $(".cuda > .option");
@@ -138,6 +145,7 @@ var selections = {
     pkg: 'all',
     method: 'conda',
     release: 'stable',
+    type: 'rapids',
     linux: 'ubuntu1604',
     python: 'py37',
     cuda: 'cuda101'
@@ -150,6 +158,9 @@ method_opts.on("click", function() {
 });
 release_opts.on("click", function() {
     processClick(release_opts, this, "release");
+});
+type_opts.on("click", function() {
+    processClick(type_opts, this, "type");
 });
 linux_opts.on("click", function() {
     processClick(linux_opts, this, "linux");
@@ -167,13 +178,17 @@ $(function() {
 
 function processClick(options, click, category) {
     // reset all
+    $(method_opts).removeClass("disabled");
     $(pkg_opts).removeClass("disabled");
     $(release_opts).removeClass("disabled");
+    $(type_opts).removeClass("disabled");
     $(linux_opts).removeClass("disabled");
     $(python_opts).removeClass("disabled");
     $(cuda_opts).removeClass("disabled");
+    $(method_opts).removeClass("active");
     $(pkg_opts).removeClass("active");
     $(release_opts).removeClass("active");
+    $(type_opts).removeClass("active");
     $(linux_opts).removeClass("active");
     $(python_opts).removeClass("active");
     $(cuda_opts).removeClass("active");
@@ -181,11 +196,7 @@ function processClick(options, click, category) {
     var prev_linux = selections['linux'];
     var prev_python = selections['python'];
     var prev_release = selections['release'];
-    if (options && click && category) {
-        $(options).removeClass("active");
-        $(click).addClass("active");
-        selections[category] = click.id;
-    }
+    var prev_type = selections['type'];
 
     // Hide linux/rhel notes
     $("#rhel7-conda-note").addClass("hidden");
@@ -193,104 +204,104 @@ function processClick(options, click, category) {
     $("#linux-conda-note").addClass("hidden");
     $("#linux-source-note").addClass("hidden");
 
-    if (selections['method'] == 'conda') {
-        // Handle conda requests
-        if (selections['linux'] == 'rhel7') {
-            // Display RHEL note
-            $("#rhel7-conda-note").removeClass("hidden");
-        } else {
-            // Display linux note
-            $("#linux-conda-note").removeClass("hidden");
-        }
-    } else if (selections['method'] == 'docker') {
-        // Handle docker requests
-        if (selections['linux'] == 'rhel7') {
-            selections['linux'] = 'centos7';
-        }
-        $("#rhel7").addClass("disabled");
-        $(pkg_opts).addClass("disabled");
-        $("#all").removeClass("disabled");
-        $("#all").addClass("active");
-        selections['pkg'] = 'all';
-    } else if (selections['method'] == 'source') {
-        // Handle source requests
-        $("#all").addClass("disabled");
-        if (selections['pkg'] == 'all') {
-            selections['pkg'] = 'cudf';
-        }
-        if (selections['linux'] == 'rhel7') {
-            // Display RHEL note
-            $("#rhel7-source-note").removeClass("hidden");
-        } else {
-            // Display linux note
-            $("#linux-source-note").removeClass("hidden");
-        }
-        $(python_opts).removeClass("active");
-        $(cuda_opts).removeClass("active");
-        $(python_opts).addClass("disabled");
-        $(cuda_opts).addClass("disabled");
-    } else if (selections['method'] == 'dev') {
-        // Handle dev requests
-        if (selections['linux'] == 'rhel7') {
-            selections['linux'] = 'centos7';
-        }
-        $("#rhel7").addClass("disabled");
-        $(pkg_opts).addClass("disabled");
-        $("#all").removeClass("disabled");
-        $("#all").addClass("active");
-        selections['pkg'] = 'all';
+    // Record selection
+    if (options && click && category) {
+        $(options).removeClass("active");
+        $(click).addClass("active");
+        selections[category] = click.id;
     }
 
-    // Handle py36/cuda100 specific exlcusions
-    if (selections['release'] == 'nightly' || selections['release'] == 'stable') {
-        // Change selections to new defaults and then disable
-        if (selections['cuda'] == 'cuda100') {
-            selections['cuda'] = 'cuda101';
-            $("#cuda100").removeClass("active");
-        }
-        if (selections['python'] == 'py36') {
-            selections['python'] = 'py37';
-            $("#py36").removeClass("active");
-        }
-        $("#cuda100").addClass("disabled");
-        $("#py36").addClass("disabled");
-    }
-
-    // Handle legacy specific exlcusions
+    // Handle legacy specific exclusions
     if (selections['release'] == 'legacy') {
-        if (selections['python'] == 'py38') {
-            selections['python'] = 'py37';
-            $("#py38").removeClass("active");
+        if (selections['type'] == 'blazing') {
+            selections['type'] = 'rapids';
+            $("#blazing").removeClass("active");
         }
-        if (selections['cuda'] == 'cuda110') {
-            $("#cuda110").removeClass("active");
-            selections['cuda'] = 'cuda102';
-        }
-        if (selections['pkg'] == 'all') {
-            selections['pkg'] = 'cudf';
-            $("#all").removeClass("active");
-        }
-        $("#py38").addClass("disabled");
-        $("#cuda110").addClass("disabled");
-        $("#all").addClass("disabled");
+        $("#blazing").addClass("disabled");
+    } else if (selections['release'] != 'legacy') {
+        $("#blazing").removeClass("disabled");
     }
 
+    // Handle blazing type
+    if (selections['type'] == 'blazing') {
+        selections['method'] = 'dev';
+        if (selections['linux'] == 'rhel7') {
+                selections['linux'] = 'centos7';
+            }
+        selections['pkg'] = 'all';
+        $("#rhel7").addClass("disabled");
+        $(pkg_opts).addClass("disabled");
+        $("#legacy").addClass("disabled");
+        $("#all").removeClass("disabled");
+    } else if (selections['type'] == 'rapids') {
+        // Handle rapids type
+
+        if (selections['method'] == 'conda') {
+            // Handle conda requests
+            if (selections['linux'] == 'rhel7') {
+                // Display RHEL note
+                $("#rhel7-conda-note").removeClass("hidden");
+            } else {
+                // Display linux note
+                $("#linux-conda-note").removeClass("hidden");
+            }
+        } else if (selections['method'] == 'docker') {
+            // Handle docker requests
+            if (selections['linux'] == 'rhel7') {
+                selections['linux'] = 'centos7';
+            }
+            $("#rhel7").addClass("disabled");
+            $(pkg_opts).addClass("disabled");
+            $("#all").removeClass("disabled");
+            $("#all").addClass("active");
+            selections['pkg'] = 'all';
+        } else if (selections['method'] == 'source') {
+            // Handle source requests
+            $("#all").addClass("disabled");
+            if (selections['pkg'] == 'all') {
+                selections['pkg'] = 'cudf';
+            }
+            if (selections['linux'] == 'rhel7') {
+                // Display RHEL note
+                $("#rhel7-source-note").removeClass("hidden");
+            } else {
+                // Display linux note
+                $("#linux-source-note").removeClass("hidden");
+            }
+            $(python_opts).removeClass("active");
+            $(cuda_opts).removeClass("active");
+            $(python_opts).addClass("disabled");
+            $(cuda_opts).addClass("disabled");
+        } else if (selections['method'] == 'dev') {
+            // Handle dev requests
+            if (selections['linux'] == 'rhel7') {
+                selections['linux'] = 'centos7';
+            }
+            selections['pkg'] = 'all';
+            $("#rhel7").addClass("disabled");
+            $(pkg_opts).addClass("disabled");
+            $("#all").removeClass("disabled");
+        }
+    }
+
+    // Mark active options
     $("#" + selections['method']).addClass("active");
     $("#" + selections['pkg']).addClass("active");
     $("#" + selections['linux']).addClass("active");
     $("#" + selections['python']).addClass("active");
     $("#" + selections['cuda']).addClass("active");
     $("#" + selections['release']).addClass("active");
+    $("#" + selections['type']).addClass("active");
     showCommand();
 }
 
 function getSelections() {
     if (selections['method'] == 'source') {
-        return "" + selections['release'] + "-" + selections['pkg'] + "-" + selections['method'];
+        return "" + selections['release'] + "-" + selections['type'] + "-" + selections['pkg'] + "-" + selections['method'];
     } else if (selections['method'] == 'conda') {
-        return "" + selections['release'] + "-" + selections['pkg'] + "-" + selections['method'] + "-" + selections['python'] + "-" + selections['cuda'];
+        return "" + selections['release'] + "-" + selections['type'] + "-" + selections['pkg'] + "-" + selections['method'] + "-" + selections['python'] + "-" + selections['cuda'];
     } else {
-        return "" + selections['release'] + "-" + selections['pkg'] + "-" + selections['method'] + "-" + selections['linux'] + "-" + selections['python'] + "-" + selections['cuda'];
+        return "" + selections['release'] + "-" + selections['type'] + "-" + selections['pkg'] + "-" + selections['method'] + "-" + selections['linux'] + "-" + selections['python'] + "-" + selections['cuda'];
     }
 }
 
