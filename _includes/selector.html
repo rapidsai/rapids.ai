@@ -105,6 +105,9 @@
                         <span id="linux-source-note" class="hidden option-note">
                             <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> Ubuntu 16.04/18.04 & CentOS 7 use the same from source build instructions.
                         </span>
+                        <span id="blazing-dev-note" class="hidden option-note">
+                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> RAPIDS with BlazingSQL is only available as a <b>Docker + Dev Env</b> for v0.16/0.17. Additional install options, coming soon.
+                        </span>
                     </div>
                 </div>
             </div>
@@ -115,6 +118,7 @@
         </div>
         <div class="selector-buttons">
             <a id="copy-command" onclick="CopyToClipboard('command-code')" class="primary-btn">COPY COMMAND <i class="fas fa-clipboard"></i></a>
+            <a id="reset-selector" onclick="resetSelector()" class="primary-btn">RESET SELECTOR <i class="fas fa-undo"></i></a>
         </div>
     </div>
 </section>
@@ -150,6 +154,9 @@ var selections = {
     python: "py37",
     cuda: "cuda101"
 };
+// Save default choices
+var default_selections = Object.assign({}, selections);
+// Setup listeners
 pkg_opts.on("click", function() {
     processClick(pkg_opts, this, "pkg");
 });
@@ -171,13 +178,14 @@ python_opts.on("click", function() {
 cuda_opts.on("click", function() {
     processClick(cuda_opts, this, "cuda");
 });
+
 // Initialize on start
 $(function() {
     processClick();
 });
 
-function processClick(options, click, category) {
-    // reset all
+// Reset all options
+function resetAll() {
     $(method_opts).removeClass("disabled");
     $(pkg_opts).removeClass("disabled");
     $(release_opts).removeClass("disabled");
@@ -192,6 +200,21 @@ function processClick(options, click, category) {
     $(linux_opts).removeClass("active");
     $(python_opts).removeClass("active");
     $(cuda_opts).removeClass("active");
+}
+
+// Reset to default choices
+function resetSelector() {
+
+    selections = Object.assign({}, default_selections);
+    processClick();
+}
+
+// Process clicks on options
+function processClick(options, click, category) {
+    // Reset the board
+    resetAll();
+
+    // Grab previous selections
     var prev_cuda = selections["cuda"];
     var prev_linux = selections["linux"];
     var prev_python = selections["python"];
@@ -203,36 +226,31 @@ function processClick(options, click, category) {
     $("#rhel7-source-note").addClass("hidden");
     $("#linux-conda-note").addClass("hidden");
     $("#linux-source-note").addClass("hidden");
+    $("#blazing-dev-note").addClass("hidden");
 
     // Record selection
-    if (options && click && category) {
-        $(options).removeClass("active");
-        $(click).addClass("active");
+    if (click && category) {
         selections[category] = click.id;
-    }
-
-    // Handle legacy specific exclusions
-    if (selections["release"] == "legacy") {
-        if (selections["type"] == "blazing") {
-            selections["type"] = "rapids";
-            $("#blazing").removeClass("active");
-        }
-        $("#blazing").addClass("disabled");
-    } else if (selections["release"] != "legacy") {
-        $("#blazing").removeClass("disabled");
     }
 
     // Handle blazing type
     if (selections["type"] == "blazing") {
+        // Display Blazing note
+        $("#blazing-dev-note").removeClass("hidden");
+
+        // Override selections for what is available in blazing dev image
         selections["method"] = "dev";
         if (selections["linux"] == "rhel7") {
-                selections["linux"] = "centos7";
-            }
+            selections["linux"] = "centos7";
+        }
+        if (selections["release"] == "legacy") {
+            selections["release"] = "stable";
+        }
         selections["pkg"] = "all";
         $("#rhel7").addClass("disabled");
-        $(pkg_opts).addClass("disabled");
+        $(method_opts).addClass("disabled");
         $("#legacy").addClass("disabled");
-        $("#all").removeClass("disabled");
+        $(pkg_opts).addClass("disabled");
     } else if (selections["type"] == "rapids") {
         // Handle rapids type
 
@@ -252,8 +270,6 @@ function processClick(options, click, category) {
             }
             $("#rhel7").addClass("disabled");
             $(pkg_opts).addClass("disabled");
-            $("#all").removeClass("disabled");
-            $("#all").addClass("active");
             selections["pkg"] = "all";
         } else if (selections["method"] == "source") {
             // Handle source requests
@@ -280,18 +296,17 @@ function processClick(options, click, category) {
             selections["pkg"] = "all";
             $("#rhel7").addClass("disabled");
             $(pkg_opts).addClass("disabled");
-            $("#all").removeClass("disabled");
         }
     }
 
     // Mark active options
-    $("#" + selections["method"]).addClass("active");
-    $("#" + selections["pkg"]).addClass("active");
-    $("#" + selections["linux"]).addClass("active");
-    $("#" + selections["python"]).addClass("active");
-    $("#" + selections["cuda"]).addClass("active");
-    $("#" + selections["release"]).addClass("active");
-    $("#" + selections["type"]).addClass("active");
+    $("#" + selections["method"]).addClass("active").removeClass("disabled");
+    $("#" + selections["pkg"]).addClass("active").removeClass("disabled");
+    $("#" + selections["linux"]).addClass("active").removeClass("disabled");
+    $("#" + selections["python"]).addClass("active").removeClass("disabled");
+    $("#" + selections["cuda"]).addClass("active").removeClass("disabled");
+    $("#" + selections["release"]).addClass("active").removeClass("disabled");
+    $("#" + selections["type"]).addClass("active").removeClass("disabled");
     showCommand();
 }
 
