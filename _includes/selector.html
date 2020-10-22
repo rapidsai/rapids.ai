@@ -242,8 +242,10 @@ function processClick(options, click, category) {
         selections["pkg"] = "all";
         $("#rhel7").addClass("disabled");
         $(method_opts).addClass("disabled");
+        $("#dev").removeClass("disabled");
         $("#legacy").addClass("disabled");
         $(pkg_opts).addClass("disabled");
+        $("#all").removeClass("disabled");
     } else if (selections["type"] == "rapids") {
         // Handle rapids type
 
@@ -264,6 +266,7 @@ function processClick(options, click, category) {
             $("#rhel7").addClass("disabled");
             $(pkg_opts).addClass("disabled");
             selections["pkg"] = "all";
+            $("#all").removeClass("disabled");
         } else if (selections["method"] == "source") {
             // Handle source requests
             $("#all").addClass("disabled");
@@ -289,17 +292,21 @@ function processClick(options, click, category) {
             selections["pkg"] = "all";
             $("#rhel7").addClass("disabled");
             $(pkg_opts).addClass("disabled");
+            $("#all").removeClass("disabled");
+            $(method_opts).removeClass("disabled");
+            $(release_opts).removeClass("disabled");
         }
     }
 
     // Mark active options
-    $("#" + selections["method"]).addClass("active").removeClass("disabled");
-    $("#" + selections["pkg"]).addClass("active").removeClass("disabled");
-    $("#" + selections["linux"]).addClass("active").removeClass("disabled");
-    $("#" + selections["python"]).addClass("active").removeClass("disabled");
-    $("#" + selections["cuda"]).addClass("active").removeClass("disabled");
-    $("#" + selections["release"]).addClass("active").removeClass("disabled");
-    $("#" + selections["type"]).addClass("active").removeClass("disabled");
+    $("#" + selections["method"]).addClass("active");
+    $("#" + selections["pkg"]).addClass("active");
+    $("#" + selections["linux"]).addClass("active");
+    $("#" + selections["python"]).addClass("active");
+    $("#" + selections["cuda"]).addClass("active");
+    $("#" + selections["release"]).addClass("active");
+    $("#" + selections["type"]).addClass("active");
+
     showCommand();
 }
 
