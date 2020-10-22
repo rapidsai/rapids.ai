@@ -312,7 +312,7 @@ function processClick(options, click, category) {
 
 function getSelections() {
     if (selections["method"] == "source") {
-        return "" + selections["release"] + "-" + selections["type"] + "-" + selections["pkg"] + "-" + selections["method"];
+        return "" + selections["release"] + "-" + selections["pkg"] + "-" + selections["method"];
     } else if (selections["method"] == "conda") {
         return "" + selections["release"] + "-" + selections["type"] + "-" + selections["pkg"] + "-" + selections["method"] + "-" + selections["python"] + "-" + selections["cuda"];
     } else {
