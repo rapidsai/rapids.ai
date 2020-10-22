@@ -376,6 +376,22 @@ header {
     position: relative;
 }
 
+.section-title-full a {
+    color: white;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.section-title-full a:hover {
+    color: #ffb500;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
 .section-subtitle-top-1 {
     margin-top: 1.5em;
 }
@@ -687,7 +703,7 @@ a h2:hover,
 }
 
 .cloud-table tr:hover {
-    background-color: #efefef; 
+    background-color: #efefef;
 }
 
 .cloud-table td {
@@ -1013,6 +1029,10 @@ a.blue-btn,
 .selector-buttons {
     text-align: center;
     margin-top: 1em;
+}
+
+.selector-buttons a {
+    margin: 0 1em;
 }
 
 .selector .context {
@@ -1353,19 +1373,19 @@ code.tag {
        margin-bottom: 3em;
        font-size: 0.70em;
     }
-    
+
     .cloud-table th {
         padding: 0.2em;
     }
-    
+
     .cloud-table tr {
         padding: 0.2em;
     }
-       
+
     .cloud-table td {
         padding: 0.2em;
     }
-    
+
 
     /* blog */
     .blog-preview-item {
