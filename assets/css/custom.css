@@ -1031,6 +1031,10 @@ a.blue-btn,
     margin-top: 1em;
 }
 
+.selector-buttons a {
+    margin: 0 1em;
+}
+
 .selector .context {
     display: none;
 }
