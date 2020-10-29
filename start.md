@@ -74,8 +74,8 @@ We suggest that you take a look at the sample workflow in our Docker container (
 <div id="get-rapids"></div>
 
 {% capture get_content %}
-# RAPIDS Release Selector
-{: .section-title-full}
+# [RAPIDS Release Selector](#get-rapids)
+{: .section-title-full }
 
 RAPIDS is available as conda packages, docker images, and from source builds. Use the tool below to select your preferred method, packages, and environment to install RAPIDS. Certain combinations may not be possible and are dimmed automatically. Be sure you've met the required **[prerequisites above](#req)** and see the **[details below](#details)**.
 {% endcapture %}
@@ -186,8 +186,8 @@ See the **[RAPIDS Container README](https://hub.docker.com/r/rapidsai/rapidsai){
     slope="up"
 %}
 
-{% include cta-footer.html 
-    name="TRY RAPIDS NOW ONLINE" 
+{% include cta-footer.html
+    name="TRY RAPIDS NOW ONLINE"
     button="LAUNCH IN BLAZINGSQL"
     link="https://app.blazingsql.com/"
 %}
