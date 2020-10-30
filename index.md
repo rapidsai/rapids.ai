@@ -42,15 +42,15 @@ Drastically improve your productivity with more interactive data science tools l
 RAPIDS is an open source project. Supported by NVIDIA, it also relies on numba, apache arrow, and many more open source projects. <br> **[Learn about our projects <i class="fas fa-angle-double-right"></i>](community.html)**
 {% endcapture %}
 
-{% include section-double-thirds.html 
-    background="background-white" 
-    padding-top="1em" padding-bottom="10em" 
-    content-top-left-third=about_top_left 
-    content-top-middle-third=about_top_middle 
-    content-top-right-third=about_top_right 
-    content-bottom-left-third=about_bottom_left 
-    content-bottom-middle-third=about_bottom_middle 
-    content-bottom-right-third=about_bottom_right 
+{% include section-double-thirds.html
+    background="background-white"
+    padding-top="1em" padding-bottom="10em"
+    content-top-left-third=about_top_left
+    content-top-middle-third=about_top_middle
+    content-top-right-third=about_top_right
+    content-bottom-left-third=about_bottom_left
+    content-bottom-middle-third=about_bottom_middle
+    content-bottom-right-third=about_bottom_right
 %}
 
 
@@ -71,8 +71,11 @@ for column in gdf.columns:
 ```
 Find more details on our **[get started section <i class="fas fa-angle-double-right"></i>](start.html)**
 
-## <i class="fas fa-bolt"></i> Try Now In CoLab
-Jump right into a GPU powered RAPIDS notebook with **[Colabratory](https://colab.research.google.com/notebooks/welcome.ipynb){: target="_blank"}** for free. **[Go to example notebook <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
+## <i class="fas fa-bolt"></i> Try Now Online
+Jump right into a GPU powered RAPIDS notebook online.<br>
+Try with **[<i class="fad fa-fire"></i> BlazingSQL (RAPIDS 0.15+) <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://app.blazingsql.com/){: target="_blank"}**
+<br>
+Or with **[<i class="fab fa-google"></i> Colabratory (RAPIDS 0.14 only) <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
 
 {% endcapture %}
 
@@ -85,7 +88,7 @@ Modeled after 10 Minutes to Pandas, this is a short introduction to cuDF that is
 ## <i class="far fa-bookmark"></i> Multi-GPU with Dask-cuDF
 {: .section-subtitle-top-1}
 
-A short introduction to multi-GPU solutions with a distributed DataFrame via Dask-cuDF. <br> **[Go to guide <i class="fas fa-angle-double-right"></i>](https://docs.rapids.ai/api/cudf/stable/dask-cudf.htmll){: target="_blank"}**
+A short introduction to multi-GPU solutions with a distributed DataFrame via Dask-cuDF. <br> **[Go to guide <i class="fas fa-angle-double-right"></i>](https://docs.rapids.ai/api/cudf/stable/dask-cudf.html){: target="_blank"}**
 
 
 ## <i class="far fa-bookmark"></i> Example Notebooks
@@ -94,42 +97,42 @@ A short introduction to multi-GPU solutions with a distributed DataFrame via Das
 A Github repository with our introductory examples of XGBoost, cuML demos, cuGraph demos, and more. <br> **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks){: target="_blank"}**
 
 
-## <i class="far fa-bookmark"></i> Example Community Notebooks 
+## <i class="far fa-bookmark"></i> Example Community Notebooks
 {: .section-subtitle-top-1}
 
 A second Github repository with our extended collection of community contributed notebook examples. <br> **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-contrib){: target="_blank"}**
 
 
 {% endcapture %}
-{% include slopecap.html 
-    background="background-gray" 
-    position="top" 
-    slope="down" 
+{% include slopecap.html
+    background="background-gray"
+    position="top"
+    slope="down"
 %}
-{% include section-halfs.html 
-    background="background-gray" 
-    padding-top="1em" padding-bottom="1em" 
-    content-left-half=start_left 
-    content-right-half=start_right 
-%} 
+{% include section-halfs.html
+    background="background-gray"
+    padding-top="1em" padding-bottom="1em"
+    content-left-half=start_left
+    content-right-half=start_right
+%}
 {% capture posts_title %}
 # RAPIDS News
 {% endcapture %}
 {% include section-single.html
-    background="background-gray" 
-    padding-top="0em" padding-bottom="0em" 
+    background="background-gray"
+    padding-top="0em" padding-bottom="0em"
     content-single=posts_title
 %}
 
 {% include medium-thirds-json.html
     background="background-gray"
-    padding-top="1em" padding-bottom="1em" 
+    padding-top="1em" padding-bottom="1em"
 %}
 
 
 {% include tweet-thirds-json.html
     background="background-gray"
-    padding-top="1em" padding-bottom="10em" 
+    padding-top="1em" padding-bottom="10em"
 %}
 
 
@@ -210,17 +213,17 @@ RAPIDS is open source licensed under Apache 2.0, spanning multiple projects that
 Whether you are new to RAPIDS, looking to help, or are part of the team, learn about our contributing guidelines on our contributing page. <br> **[Go to Docs <i class="fas fa-angle-double-right"></i>](https://docs.rapids.ai/contributing){: target="_blank"}**
 {% endcapture %}
 
-{% include slopecap.html 
-    background="background-purple" 
-    position="top" 
-    slope="up" 
+{% include slopecap.html
+    background="background-purple"
+    position="top"
+    slope="up"
 %}
-{% include section-halfs.html 
-    background="background-purple" 
-    padding-top="5em" padding-bottom="6em" 
-    content-left-half=com_left 
-    content-right-half=com_right 
-%} 
+{% include section-halfs.html
+    background="background-purple"
+    padding-top="5em" padding-bottom="6em"
+    content-left-half=com_left
+    content-right-half=com_right
+%}
 
 
 {% capture lib1_left %}
@@ -238,7 +241,7 @@ cuDF is a Python GPU DataFrame library (built on the **[Apache Arrow](http://arr
 **[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/libcudf/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/main/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
 
-libcudf is a C/C++ CUDA library for implementing standard dataframe operations. It is part of the cuDF repository. 
+libcudf is a C/C++ CUDA library for implementing standard dataframe operations. It is part of the cuDF repository.
 
 {% endcapture %}
 {% capture lib2_left %}
@@ -260,7 +263,7 @@ cuML is a suite of libraries that implement machine learning algorithms and math
 cuGraph is a GPU accelerated graph analytics library, with functionality like **[NetworkX](https://networkx.github.io/){: target="_blank"}**, which is seamlessly integrated into the RAPIDS data science platform.
 
 {% endcapture %}
-{% capture lib3_left %} 
+{% capture lib3_left %}
 ## <i class="fad fa-terminal"></i> cuSignal <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cusignal){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cusignal/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cusignal/blob/main/CHANGELOG.md){: target="_blank"}**
@@ -275,10 +278,10 @@ cuSignal is a GPU accelerated signal processing library built around a **[SciPy 
 **[GitHub](https://github.com/rapidsai/cuspatial){: target="_blank"}** **/** **[Docs](https://github.com/rapidsai/cuspatial){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuspatial/blob/main/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
 
-cuSpatial is an efficient C++ library accelerated on GPUs with Python bindings to enable use by the data science community. cuSpatial provides significant GPU-acceleration to common spatial and spatiotemporal operations such as point-in-polygon tests, distances between trajectories, and trajectory clustering when compared to CPU-based implementations. 
+cuSpatial is an efficient C++ library accelerated on GPUs with Python bindings to enable use by the data science community. cuSpatial provides significant GPU-acceleration to common spatial and spatiotemporal operations such as point-in-polygon tests, distances between trajectories, and trajectory clustering when compared to CPU-based implementations.
 
 {% endcapture %}
-{% capture lib4_left %} 
+{% capture lib4_left %}
 ## <i class="fad fa-terminal"></i> cuxfilter <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/cuxfilter){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cuxfilter/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuxfilter/blob/main/CHANGELOG.md){: target="_blank"}**
@@ -287,7 +290,7 @@ cuSpatial is an efficient C++ library accelerated on GPUs with Python bindings t
 cuxfilter is a framework to connect web visualizations to GPU accelerated crossfiltering. Inspired by the javascript version of the **[original](https://github.com/crossfilter/crossfilter){: target="_blank"}**, it enables interactive and super fast multi-dimensional filtering of 100 million+ row tabular datasets via **[cuDF](https://github.com/rapidsai/cudf){: target="_blank"}**.
 
 {% endcapture %}
-{% capture lib4_right %} 
+{% capture lib4_right %}
 ## <i class="fad fa-terminal"></i> CLX <span class="api-tag">API</span>
 
 **[GitHub](https://github.com/rapidsai/clx){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/clx/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/clx/blob/main/CHANGELOG.md){: target="_blank"}**
@@ -296,15 +299,6 @@ cuxfilter is a framework to connect web visualizations to GPU accelerated crossf
 Cyber Log Accelerators (CLX), also pronounced "clicks", provides a collection of RAPIDS examples for security analysts, data scientists, and engineers to quickly get started applying RAPIDS and GPU acceleration to real-world cybersecurity use cases.
 {% endcapture %}
 {% capture lib5_left %}
-## <i class="fad fa-terminal"></i> nvStrings <span class="api-tag">API</span>
-
-**[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/nvstrings/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/main/CHANGELOG.md){: target="_blank"}**
-{: .no-tb-margins }
-
-nvStrings, the Python bindings for **[cuStrings](https://github.com/rapidsai/cudf){: target="_blank"}**, provides a pandas-like API that will be familiar to data engineers & data scientists, so they can use it to easily accelerate their workflows without going into the details of CUDA programming.
-
-{% endcapture %}
-{% capture lib5_right %}
 ## <i class="fad fa-terminal"></i> RMM <span class="lib-tag">LIB</span>
 
 **[GitHub](https://github.com/rapidsai/rmm){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/rmm/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/rmm/blob/main/CHANGELOG.md){: target="_blank"}**
@@ -314,39 +308,38 @@ RAPIDS Memory Manager (RMM) is a central place for all device memory allocations
 
 {% endcapture %}
 
-{% include section-halfs.html 
-    background="background-purple" 
-    padding-top="0em" padding-bottom="1em" 
-    content-left-half=lib1_left 
-    content-right-half=lib1_right 
+{% include section-halfs.html
+    background="background-purple"
+    padding-top="0em" padding-bottom="1em"
+    content-left-half=lib1_left
+    content-right-half=lib1_right
 %}
-{% include section-halfs.html 
-    background="background-purple" 
-    padding-top="0em" padding-bottom="1em" 
+{% include section-halfs.html
+    background="background-purple"
+    padding-top="0em" padding-bottom="1em"
     content-left-half=lib2_left
-    content-right-half=lib2_right 
+    content-right-half=lib2_right
 %}
-{% include section-halfs.html 
-    background="background-purple" 
-    padding-top="0em" padding-bottom="1em" 
+{% include section-halfs.html
+    background="background-purple"
+    padding-top="0em" padding-bottom="1em"
     content-left-half=lib3_left
-    content-right-half=lib3_right 
+    content-right-half=lib3_right
 %}
-{% include section-halfs.html 
-    background="background-purple" 
-    padding-top="0em" padding-bottom="1em" 
+{% include section-halfs.html
+    background="background-purple"
+    padding-top="0em" padding-bottom="1em"
     content-left-half=lib4_left
-    content-right-half=lib4_right 
+    content-right-half=lib4_right
 %}
-{% include section-halfs.html 
-    background="background-purple" 
-    padding-top="0em" padding-bottom="6em" 
+{% include section-halfs.html
+    background="background-purple"
+    padding-top="0em" padding-bottom="6em"
     content-left-half=lib5_left
-    content-right-half=lib5_right
 %}
-{% include slopecap.html 
-    background="background-purple" 
-    position="bottom" 
+{% include slopecap.html
+    background="background-purple"
+    position="bottom"
     slope="down"
 %}
 
@@ -413,21 +406,21 @@ NVIDIA is bringing RAPIDS to Apache Spark to accelerate ETL workflows with GPUs.
 {% endcapture %}
 
 {% capture com2_bottom_right %}
- 
+
 {% endcapture %}
 
 
-{% include section-double-halfs.html 
-    background="background-white" 
-    padding-top="1em" padding-bottom="0em" 
+{% include section-double-halfs.html
+    background="background-white"
+    padding-top="1em" padding-bottom="0em"
     content-top-left-half=com_top_left
     content-top-right-half=com_top_right
     content-bottom-left-half=com_bottom_left
     content-bottom-right-half=com_bottom_right
 %}
-{% include section-double-halfs.html 
-    background="background-white" 
-    padding-top="0m" padding-bottom="0em" 
+{% include section-double-halfs.html
+    background="background-white"
+    padding-top="0m" padding-bottom="0em"
     content-top-left-half=com2_top_left
     content-top-right-half=com2_top_right
     content-bottom-left-half=com2_bottom_left
@@ -436,31 +429,31 @@ NVIDIA is bringing RAPIDS to Apache Spark to accelerate ETL workflows with GPUs.
 
 # Contributors
 {: .section-title-full}
-{% include contributing-logos.html 
-    padding-top="0em" padding-bottom="5em" 
+{% include contributing-logos.html
+    padding-top="0em" padding-bottom="5em"
 %}
 
 
 # Adopters
 {: .section-title-full}
-{% include adopter-logos.html 
-    padding-top="0em" padding-bottom="5em" 
+{% include adopter-logos.html
+    padding-top="0em" padding-bottom="5em"
 %}
 
 
 # Open Source
 {: .section-title-full}
-{% include open-source-logos.html 
-    padding-top="0em" padding-bottom="10em" 
+{% include open-source-logos.html
+    padding-top="0em" padding-bottom="10em"
 %}
 
-{% include slopecap.html 
-    background="background-darkpurple" 
-    position="top" 
+{% include slopecap.html
+    background="background-darkpurple"
+    position="top"
     slope="up"
 %}
-{% include cta-footer.html 
-    name="Experience Data Science on GPUs with RAPIDS" 
+{% include cta-footer.html
+    name="Experience Data Science on GPUs with RAPIDS"
     tagline=""
     button="GET STARTED"
     link="start.html"
