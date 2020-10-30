@@ -25,7 +25,20 @@ If you use RAPIDS in a publication, please use citations in the following format
 {: .padding-bottom-3em }
 
 
-## <i class="fal fa-book"></i> Current Citations:
+## <i class="fal fa-book"></i> Current Known Citations:
+
+### <i class="fas fa-caret-right"></i> Bringing UMAP Closer to the Speed of Light <br> with GPU Acceleration
+```tex
+@misc{
+      nolet2020bringing,
+      title={Bringing UMAP Closer to the Speed of Light with GPU Acceleration}, 
+      author={Corey J. Nolet, Victor Lafargue, Edward Raff, Thejaswi Nanditale, Tim Oates, John Zedlewski, and Joshua Patterson},
+      year={2020},
+      eprint={2008.00325},
+      archivePrefix={arXiv},
+      primaryClass={cs.LG}
+}
+```
 
 ### <i class="fas fa-caret-right"></i> Machine Learning in Python: <br> Main developments and technology trends in data science, machine learning, and artificial intelligence
 ```tex
@@ -41,6 +54,7 @@ If you use RAPIDS in a publication, please use citations in the following format
   publisher={Multidisciplinary Digital Publishing Institute}
 }
 ```
+
 
 {% endcapture %}
 
