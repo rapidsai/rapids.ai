@@ -71,24 +71,31 @@ The RAPIDS team works closely with major cloud providers and open source hyperpa
 # Getting Started
 {: .section-title-halfs}
 
-RAPIDS supports hyperparameter optimization solutions based on AWS Sagemaker, Azure ML, Google Cloud AI, Dask ML, and Ray Tune frameworks, so you can easily integrate with whichever framework you use today.
+RAPIDS supports hyperparameter optimization solutions based on AWS SageMaker, Azure ML, Google Cloud AI, Dask ML, Optuna, Ray Tune and MLflow frameworks, so you can easily integrate with whichever framework you use today.
 
 
 ## <i class="fad fa-terminal"></i> Get the HPO example code
 
 Our GitHub repo contains helper code, sample notebooks, and step-by-step instructions to get you up and running on each HPO platform. **[See our README <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/cloud-ml-examples){: target="_blank"}**
 
-{% endcapture %}
 
-{% capture start_right %}
 ## <i class="far fa-code-merge"></i> Clone the Repo
 {: .section-subtitle-top-1}
 
 Start by cloning the open-source cloud-ml-examples repository from RAPIDSai GitHub.
  **[See our Repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/cloud-ml-examples){: target="_blank"}**
 
+{% endcapture %}
+
+{% capture start_right %}
 ## <i class="far fa-bookmark"></i> Notebook examples
+{: .section-subtitle-top-1}
+
 The repo will walk you through step-by-step instructions for a sample hyperparameter optimization job. To start running your experiments with HPO, navigate to the directory for your framework or CSP, and check out the README.md file there.  **[Walk Through The Notebooks <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/cloud-ml-examples){: target="_blank"}**
+
+## <i class="fab fa-youtube"></i> Video Tutorials
+
+Watch tutorials of accelerated HPO examples on Amazon SageMaker and Auzre ML from the **[RAPIDS YouTube Channel](https://www.youtube.com/channel/UCsoi4wfweA3I5FsPgyQnnqw){: target="_blank"}**.
 
 {% endcapture %}
 
@@ -128,7 +135,7 @@ It’s easy to work in the cloud of your choice to find the best quality model.
 {% endcapture %}
 {% capture cl_left_top %}
 ## <i class="fas fa-cloud"></i> RAPIDS on Cloud <br> Machine Learning Services
-Azure ML, AWS Sagemaker, and Google Cloud AI hyperparameter optimization services free users from the details of managing their own infrastructure. Launch a job from a RAPIDS sample notebook, and the platform will automatically scale up and launch as many instances as you need to complete the experiments quickly. From a centralized interface, you can manage your jobs, view results, and find the best model to deploy.
+Azure ML, AWS SageMaker, and Google Cloud AI hyperparameter optimization services free users from the details of managing their own infrastructure. Launch a job from a RAPIDS sample notebook, and the platform will automatically scale up and launch as many instances as you need to complete the experiments quickly. From a centralized interface, you can manage your jobs, view results, and find the best model to deploy.
 
 {% endcapture %}
 
@@ -169,8 +176,15 @@ Whether running a cluster on-prem, or managing instances in a public cloud, RAPI
         <a href="https://dask.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/dask_logo_icon.png %}" alt="Dask"> </a>
     </div>
     <div class="logo-flex">
+       <a href="https://optuna.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/Optuna-logo.png %}" alt="Optuna"> </a>
+    </div>
+    <div class="logo-flex">
        <a href="https://docs.ray.io/en/latest/tune.html" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/ray-tune.png %}" alt="ray tune"> </a>
     </div>
+    <div class="logo-flex">
+       <a href="https://mlflow.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/MLflow-logo.png %}" alt="MLflow"> </a>
+    </div>
+
 </section>
 
 
