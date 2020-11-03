@@ -82,7 +82,7 @@ include the IP address and port for the scheduler.  The file will serve as input
 
 **2. Start Dask CUDA workers.**
 
-Next start the [dask-cuda workers](https://dask-cuda.readthedocs.io/). Dask-CUDA extends the traditional dask worker class with specific options and enhacements for GPU environments.  Unlike the scheduler and client, the workers script should be _scalable_ and allow the users to tune how many workers are created.
+Next start the [dask-cuda workers](https://dask-cuda.readthedocs.io/). Dask-CUDA extends the traditional Dask `Worker` class with specific options and enhancements for GPU environments.  Unlike the scheduler and client, the workers script should be _scalable_ and allow the users to tune how many workers are created.
 For example, we can scale the number of nodes to 3: `sbatch/salloc -N3 dask-cuda-worker.script` .  In this case, because we have 8 GPUs per node and we have 3 nodes,
 our job will have 24 workers.
 
