@@ -95,7 +95,7 @@ our job will have 24 workers.
 module load cuda/11.0.3
 CONDA_ROOT=/nfs-mount/miniconda3
 source $CONDA_ROOT/etc/profile.d/conda.sh
-conda activate 20201020-nightly
+conda activate rapids
 
 LOCAL_DIRECTORY=/nfs-mount/dask-local-directory
 mkdir $LOCAL_DIRECTORY
