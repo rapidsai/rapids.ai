@@ -70,7 +70,7 @@ CONDA_ROOT=/nfs-mount/user/miniconda3
 source $CONDA_ROOT/etc/profile.d/conda.sh
 conda activate rapids
 
-LOCAL_DIRECTORY=/nfs-mount/user/dask-local-directory
+LOCAL_DIRECTORY=/nfs-mount/dask-local-directory
 mkdir $LOCAL_DIRECTORY
 dask-scheduler \
     --protocol tcp \
