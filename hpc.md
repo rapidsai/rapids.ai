@@ -49,7 +49,7 @@ RAPIDS can be deployed on HPC in standard sbatch/srun/salloc ways:
 ## <i class="fab"></i> SLURM
 
 If you are unfamiliar with SLURM or need a refresher, we recommend the [quickstart guide](https://slurm.schedmd.com/quickstart.html).  Depending on how
-your nodes are configured, additional settings my be required such as defining the number of GPUs (--gpus) desired
+your nodes are configured, additional settings may be required such as defining the number of GPUs (--gpus) desired
 or the number of gpus per node (--gpus-per-node).  In the following example, we assume each allocation runs on a DGX1 with access to all eight GPUs.
 
 
