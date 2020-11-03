@@ -31,7 +31,7 @@ Deploying on HPC often means using queue management systems such as SLURM, LSF, 
 ![slurm]({{ site.baseurl }}{% link /assets/images/slurm-logo-small.png %})
 ## <i class="fab"></i> SLURM
 
-RAPIDS can be deployed on HPC in standard sbatch/srun/salloc ways:
+RAPIDS can be deployed on HPC in standard `sbatch`/`srun`/`salloc` ways:
 {% endcapture %}
 
 {% include section-single.html
