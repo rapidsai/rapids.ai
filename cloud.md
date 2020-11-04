@@ -679,25 +679,27 @@ RAPIDS can be deployed on Google Cloud Dataproc using Dask. We have **[helper sc
 
 **1. Create Dataproc cluster with Dask RAPIDS.** Use the gcloud command to create a new cluster with the below initialization action. Because of an Anaconda version conflict, script deployment on older images is slow, we recommend using Dask with Dataproc 2.0+.
 ```shell
->>> GCS_BUCKET=[BUCKET_NAME]
->>> CLUSTER_NAME=[CLUSTER_NAME]
->>> REGION=[REGION]
+>>> export GCS_BUCKET=[BUCKET_NAME]
+>>> export CLUSTER_NAME=[CLUSTER_NAME]
+>>> export REGION=[REGION]
+>>> export DASK_RUNTIME=[DASK_RUNTIME]
 >>> gcloud dataproc clusters create $CLUSTER_NAME \
     --region $REGION \
-    --image-version 1.4-ubuntu18 \
+    --image-version preview-ubuntu18 \
     --master-machine-type n1-standard-32 \
-    --master-accelerator type=nvidia-tesla-t4,count=4 \
+    --master-accelerator type=nvidia-tesla-t4,count=2 \
     --worker-machine-type n1-standard-32 \
-    --worker-accelerator type=nvidia-tesla-t4,count=4 \
+    --worker-accelerator type=nvidia-tesla-t4,count=2 \
     --optional-components=ANACONDA \
-    --initialization-actions gs://goog-dataproc-initialization-actions-${REGION}/gpu/install_gpu_driver.sh,gs://goog-dataproc-initialization-actions-${REGION}/rapids/rapids.sh \
+    --initialization-actions gs://goog-dataproc-initialization-actions-${REGION}/gpu/install_gpu_driver.sh,gs://goog-dataproc-initialization-actions-${REGION}/dask/dask.sh,gs://goog-dataproc-initialization-actions-${REGION}/rapids/rapids.sh \
     --initialization-action-timeout=60m \
-    --metadata gpu-driver-provider=NVIDIA,rapids-runtime=DASK \
+    --metadata gpu-driver-provider=NVIDIA,dask-runtime=${DASK_RUNTIME},rapids-runtime=DASK \
     --enable-component-gateway
 ```
 [BUCKET_NAME] = name of the bucket to use. <br>
 [CLUSTER_NAME] = name of the cluster. <br>
-[REGION] = name of region where cluster is to be created.
+[REGION] = name of region where cluster is to be created. <br>
+[DASK_RUNTIME] = Dask runtime could be set to either yarn or standalone.
 {: .margin-bottom-3em}
 
 **2. Run Dask RAPIDS Workload.** Once the cluster has been created, the Dask scheduler listens for workers on port 8786, and its status dashboard is on port 8787 on the Dataproc master node. To connect to the Dask web interface, you will need to create an SSH tunnel as described in the **[Dataproc web interfaces documentation.](https://cloud.google.com/dataproc/docs/concepts/accessing/cluster-web-interfaces)** You can also connect using the Dask Client Python API from a Jupyter notebook, or from a Python script or interpreter session.
