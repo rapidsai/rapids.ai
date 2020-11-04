@@ -73,14 +73,11 @@ The RAPIDS team works closely with major cloud providers and open source hyperpa
 
 RAPIDS supports hyperparameter optimization solutions based on AWS SageMaker, Azure ML, Google Cloud AI, Dask ML, Optuna, Ray Tune and MLflow frameworks, so you can easily integrate with whichever framework you use today.
 
-
 ## <i class="fad fa-terminal"></i> Get the HPO example code
 
 Our GitHub repo contains helper code, sample notebooks, and step-by-step instructions to get you up and running on each HPO platform. **[See our README <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/cloud-ml-examples){: target="_blank"}**
 
-
 ## <i class="far fa-code-merge"></i> Clone the Repo
-{: .section-subtitle-top-1}
 
 Start by cloning the open-source cloud-ml-examples repository from RAPIDSai GitHub.
  **[See our Repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/cloud-ml-examples){: target="_blank"}**
@@ -95,7 +92,17 @@ The repo will walk you through step-by-step instructions for a sample hyperparam
 
 ## <i class="fab fa-youtube"></i> Video Tutorials
 
-Watch tutorials of accelerated HPO examples on Amazon SageMaker and Auzre ML from the **[RAPIDS YouTube Channel](https://www.youtube.com/channel/UCsoi4wfweA3I5FsPgyQnnqw){: target="_blank"}**.
+Watch tutorials of accelerated HPO examples on **[Amazon SageMaker](https://www.youtube.com/watch?v=BtE4d0v6Css){: target="_blank"}** and **[Azure ML](https://www.youtube.com/watch?v=aqTmVVFnEwI&t=3s){: target="_blank"}** from the RAPIDSAI YouTube Channel, and **[Optuna+MLflow](https://cfp.jupytercon.com/2020/schedule/presentation/139/optimizing-model-performance-with-feature-engineering-and-hyperparameter-optimisation/){: target="_blank"}** from JupyterCon 2020.
+
+## <i class="far fa-bookmark"></i> Blog Posts
+
+<i class="fas fa-caret-right"></i> Optimizing Machine Learning Models with Hyperopt and **[RAPIDS on Databricks Cloud](https://medium.com/rapids-ai/optimizing-machine-learning-models-with-hyperopt-and-rapids-on-databricks-cloud-fdac9154e3e4){: target="_blank"}**  
+{: .no-tb-margins }
+
+<i class="fas fa-caret-right"></i> Managing and Deploying High-Performance Machine Learning Models on GPUs with **[RAPIDS and MLFlow](https://medium.com/rapids-ai/managing-and-deploying-high-performance-machine-learning-models-on-gpus-with-rapids-and-mlflow-753b6fcaf75a){: target="_blank"}**
+{: .no-tb-margins }
+
+<i class="fas fa-caret-right"></i> 30x Faster Hyperparameter Search with **[Ray Tune and RAPIDS](https://medium.com/rapids-ai/30x-faster-hyperparameter-search-with-raytune-and-rapids-403013fbefc5){: target="_blank"}**
 
 {% endcapture %}
 
@@ -165,24 +172,33 @@ Whether running a cluster on-prem, or managing instances in a public cloud, RAPI
 <section class="container-logo-flex padding-top-1em padding-bottom-10em">
     <div class="logo-flex">
        <a href="https://aws.amazon.com/sagemaker/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/amazon-sagemaker.png %}" alt="amazon sagemaker"> </a>
+       <figcaption>Amazon SageMaker</figcaption>
     </div>
     <div class="logo-flex">
        <a href="https://azure.microsoft.com/en-us/services/machine-learning/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/azure-ml.png %}" alt="azure ml"> </a>
+       <figcaption>Azure Machine Learning</figcaption>
     </div>
     <div class="logo-flex">
        <a href="https://cloud.google.com/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/google-cloud.png %}" alt="google cloud"> </a>
+       <figcaption>Google AI Platform</figcaption>
     </div>
     <div class="logo-flex">
-        <a href="https://dask.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/dask_logo_icon.png %}" alt="Dask"> </a>
+        <a href="https://dask.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/dask_stacked.png %}" alt="Dask"> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://databricks.com/product/enterprise-cloud-service" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/databricks-logo.png %}" alt="Databricks"> </a>
+    </div>
+    <div class="logo-flex">
+       <a href="https://mlflow.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/MLflow-logo.png %}" alt="MLflow"> </a>
     </div>
     <div class="logo-flex">
        <a href="https://optuna.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/Optuna-logo.png %}" alt="Optuna"> </a>
     </div>
     <div class="logo-flex">
-       <a href="https://docs.ray.io/en/latest/tune.html" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/ray-tune.png %}" alt="ray tune"> </a>
+       <a href="https://epistasislab.github.io/tpot/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/tpot-logo.png %}" alt="TPOT"> </a>
     </div>
     <div class="logo-flex">
-       <a href="https://mlflow.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/MLflow-logo.png %}" alt="MLflow"> </a>
+       <a href="https://docs.ray.io/en/latest/tune.html" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/ray-tune.png %}" alt="ray tune"> </a>
     </div>
 
 </section>
