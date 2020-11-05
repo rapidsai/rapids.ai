@@ -21,7 +21,7 @@ Machine learning models can have dozens of options, or “hyperparameters,” th
 ## RAPIDS Integration into Cloud / Distributed Frameworks
 {: .section-title-full}
 
-![RAPIDS CSP HPO]({{ site.baseurl }}{% link /assets/images/HPO-space.png %}){: .center}
+![RAPIDS CSP HPO]({{ site.baseurl }}{% link /assets/images/HPO-space-2.png %}){: .center}
 {% endcapture %}
 
 {% include section-single.html
@@ -71,7 +71,7 @@ The RAPIDS team works closely with major cloud providers and open source hyperpa
 # Getting Started
 {: .section-title-halfs}
 
-RAPIDS supports hyperparameter optimization solutions based on AWS SageMaker, Azure ML, Google Cloud AI, Dask ML, Optuna, Ray Tune and MLflow frameworks, so you can easily integrate with whichever framework you use today.
+RAPIDS supports hyperparameter optimization and AutoML solutions based on AWS SageMaker, Azure ML, Google Cloud AI, Dask ML, Optuna, Ray Tune and TPOT frameworks, so you can easily integrate with whichever framework you use today. RAPIDS also integrates easily with MLflow to track and orchestrate experiments from any of these frameworks.
 
 ## <i class="fad fa-terminal"></i> Get the HPO example code
 
@@ -95,6 +95,12 @@ The repo will walk you through step-by-step instructions for a sample hyperparam
 Watch tutorials of accelerated HPO examples on **[Amazon SageMaker](https://www.youtube.com/watch?v=BtE4d0v6Css){: target="_blank"}** and **[Azure ML](https://www.youtube.com/watch?v=aqTmVVFnEwI&t=3s){: target="_blank"}** from the RAPIDSAI YouTube Channel, and **[Optuna+MLflow](https://cfp.jupytercon.com/2020/schedule/presentation/139/optimizing-model-performance-with-feature-engineering-and-hyperparameter-optimisation/){: target="_blank"}** from JupyterCon 2020.
 
 ## <i class="far fa-bookmark"></i> Blog Posts
+
+<i class="fas fa-caret-right"></i> Optuna **[placeholder](link){: target="_blank"}**
+{: .no-tb-margins }
+
+<i class="fas fa-caret-right"></i> TPOT **[placeholder](link){: target="_blank"}**
+{: .no-tb-margins }
 
 <i class="fas fa-caret-right"></i> Optimizing Machine Learning Models with Hyperopt and **[RAPIDS on Databricks Cloud](https://medium.com/rapids-ai/optimizing-machine-learning-models-with-hyperopt-and-rapids-on-databricks-cloud-fdac9154e3e4){: target="_blank"}**  
 {: .no-tb-margins }
@@ -142,7 +148,7 @@ It’s easy to work in the cloud of your choice to find the best quality model.
 {% endcapture %}
 {% capture cl_left_top %}
 ## <i class="fas fa-cloud"></i> RAPIDS on Cloud <br> Machine Learning Services
-Azure ML, AWS SageMaker, and Google Cloud AI hyperparameter optimization services free users from the details of managing their own infrastructure. Launch a job from a RAPIDS sample notebook, and the platform will automatically scale up and launch as many instances as you need to complete the experiments quickly. From a centralized interface, you can manage your jobs, view results, and find the best model to deploy.
+Azure ML, AWS SageMaker, and Google Cloud AI hyperparameter optimization services free users from the details of managing their own infrastructure. Launch a job from a RAPIDS sample notebook, and the platform will automatically scale up and launch as many instances as you need to complete the experiments quickly. From a centralized interface, you can manage your jobs, view results, and find the best model to deploy. For various deployment options and instructions, check out our **[Deploying RAPIDS in the Cloud page](https://rapids.ai/cloud){: target="_blank"}**.
 
 {% endcapture %}
 
