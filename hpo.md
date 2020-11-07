@@ -96,10 +96,10 @@ Watch tutorials of accelerated HPO examples on **[Amazon SageMaker](https://www.
 
 ## <i class="far fa-bookmark"></i> Blog Posts
 
-<i class="fas fa-caret-right"></i> Optuna **[placeholder](link){: target="_blank"}**
+<i class="fas fa-caret-right"></i> Hyperparameter Optimization with **[Optuna and RAPIDS](https://medium.com/rapids-ai/hyper-parameter-optimization-with-optuna-and-rapids-467fc8189962){: target="_blank"}**
 {: .no-tb-margins }
 
-<i class="fas fa-caret-right"></i> TPOT **[placeholder](link){: target="_blank"}**
+<i class="fas fa-caret-right"></i> Faster AutoML with **[TPOT and RAPIDS](https://medium.com/rapids-ai/faster-automl-with-tpot-and-rapids-758455cd89e5){: target="_blank"}**
 {: .no-tb-margins }
 
 <i class="fas fa-caret-right"></i> Optimizing Machine Learning Models with Hyperopt and **[RAPIDS on Databricks Cloud](https://medium.com/rapids-ai/optimizing-machine-learning-models-with-hyperopt-and-rapids-on-databricks-cloud-fdac9154e3e4){: target="_blank"}**  
