@@ -30,6 +30,27 @@ Machine learning models can have dozens of options, or “hyperparameters,” th
     content-single=intro_content
 %}
 
+<section class="container-logo-flex padding-top-1em padding-bottom-10em">
+    <div class="logo-flex">
+        <a href="https://dask.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/dask_stacked.png %}" alt="Dask"> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://databricks.com/product/enterprise-cloud-service" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/databricks-logo.png %}" alt="Databricks"> </a>
+    </div>
+    <div class="logo-flex">
+       <a href="https://mlflow.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/MLflow-logo.png %}" alt="MLflow"> </a>
+    </div>
+    <div class="logo-flex">
+       <a href="https://optuna.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/Optuna-logo.png %}" alt="Optuna"> </a>
+    </div>
+    <div class="logo-flex">
+       <a href="https://epistasislab.github.io/tpot/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/tpot-logo.png %}" alt="TPOT"> </a>
+    </div>
+    <div class="logo-flex">
+       <a href="https://docs.ray.io/en/latest/tune.html" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/ray-tune.png %}" alt="ray tune"> </a>
+    </div>
+
+</section>
 
 {% capture yd_header %}
 # Benefits With RAPIDS
@@ -170,44 +191,11 @@ Whether running a cluster on-prem, or managing instances in a public cloud, RAPI
 %}
 {% include section-halfs.html 
     background="background-white" 
-    padding-top="0em" padding-bottom="0em" 
+    padding-top="0em" padding-bottom="10em" 
     content-left-half=cl_left_top
     content-right-half=cl_right_top
 %}
 
-<section class="container-logo-flex padding-top-1em padding-bottom-10em">
-    <div class="logo-flex">
-       <a href="https://aws.amazon.com/sagemaker/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/amazon-sagemaker.png %}" alt="amazon sagemaker"> </a>
-       <figcaption>Amazon SageMaker</figcaption>
-    </div>
-    <div class="logo-flex">
-       <a href="https://azure.microsoft.com/en-us/services/machine-learning/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/azure-ml.png %}" alt="azure ml"> </a>
-       <figcaption>Azure Machine Learning</figcaption>
-    </div>
-    <div class="logo-flex">
-       <a href="https://cloud.google.com/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/google-cloud.png %}" alt="google cloud"> </a>
-       <figcaption>Google AI Platform</figcaption>
-    </div>
-    <div class="logo-flex">
-        <a href="https://dask.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/dask_stacked.png %}" alt="Dask"> </a>
-    </div>
-    <div class="logo-flex">
-        <a href="https://databricks.com/product/enterprise-cloud-service" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/databricks-logo.png %}" alt="Databricks"> </a>
-    </div>
-    <div class="logo-flex">
-       <a href="https://mlflow.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/MLflow-logo.png %}" alt="MLflow"> </a>
-    </div>
-    <div class="logo-flex">
-       <a href="https://optuna.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/Optuna-logo.png %}" alt="Optuna"> </a>
-    </div>
-    <div class="logo-flex">
-       <a href="https://epistasislab.github.io/tpot/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/tpot-logo.png %}" alt="TPOT"> </a>
-    </div>
-    <div class="logo-flex">
-       <a href="https://docs.ray.io/en/latest/tune.html" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/ray-tune.png %}" alt="ray tune"> </a>
-    </div>
-
-</section>
 
 
 {% capture end_bottom %}
