@@ -30,7 +30,7 @@ Machine learning models can have dozens of options, or “hyperparameters,” th
     content-single=intro_content
 %}
 
-<section class="container-logo-flex padding-top-1em padding-bottom-10em">
+<section class="container-logo-flex padding-top-1em padding-bottom-5em">
     <div class="logo-flex">
         <a href="https://dask.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/dask_stacked.png %}" alt="Dask"> </a>
     </div>
@@ -206,7 +206,7 @@ Whether running a cluster on-prem, or managing instances in a public cloud, RAPI
 {% include slopecap.html 
     background="background-darkpurple" 
     position="top" 
-    slope="up" 
+    slope="down" 
 %}
 {% include section-single.html
     background="background-darkpurple" 
