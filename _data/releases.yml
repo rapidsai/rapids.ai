@@ -1,9 +1,9 @@
 # Versions for site
 #
 # NOTE: Must use "" to prevent loosing data like 0.10 -> 0.1
-legacy-version: "0.14"
-legacy-date: "JUN 2020"
-stable-version: "0.15"
-stable-date: "AUG 2020"
-nightly-version: "0.16"
-nightly-date: "OCT 2020"
+legacy-version: "0.15"
+legacy-date: "AUG 2020"
+stable-version: "0.16"
+stable-date: "OCT 2020"
+nightly-version: "0.17"
+nightly-date: "DEC 2020"
