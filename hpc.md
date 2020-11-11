@@ -20,33 +20,16 @@ Deploying on HPC often means using queue management systems such as SLURM, LSF, 
 
 {% include section-single.html
     background="background-white"
-    padding-top="0em" padding-bottom="10em"
+    padding-top="0em" padding-bottom="1em"
     content-single=intro_content
 %}
 
-<!-- AWS -->
-<div id="SLURM"></div>
-{% capture aws_intro %}
-
-![slurm]({{ site.baseurl }}{% link /assets/images/slurm-logo-small.png %})
-## <i class="fab"></i> SLURM
-
-RAPIDS can be deployed on HPC in standard sbatch/srun/salloc ways:
-{% endcapture %}
-
-{% include section-single.html
-    background="background-gray"
-    padding-top="10em" padding-bottom="3em"
-    content-single=aws_intro
-%}
-{% include slopecap.html
-    background="background-gray"
-    position="bottom"
-    slope="down"
-%}
+<!-- HPC -->
 
 {% capture aws_ec2 %}
-## <i class="fab"></i> SLURM
+# SLURM
+{: .section-title-full}
+
 
 If you are unfamiliar with SLURM or need a refresher, we recommend the [quickstart guide](https://slurm.schedmd.com/quickstart.html).  Depending on how
 your nodes are configured, additional settings my be required such as defining the number of GPUs (--gpus) desired
