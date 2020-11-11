@@ -32,7 +32,7 @@ Deploying on HPC often means using queue management systems such as SLURM, LSF, 
 
 
 If you are unfamiliar with SLURM or need a refresher, we recommend the [quickstart guide](https://slurm.schedmd.com/quickstart.html).  Depending on how
-your nodes are configured, additional settings my be required such as defining the number of GPUs (--gpus) desired
+your nodes are configured, additional settings may be required such as defining the number of GPUs (--gpus) desired
 or the number of gpus per node (--gpus-per-node).  In the following example, we assume each allocation runs on a DGX1 with access to all eight GPUs.
 
 
@@ -53,7 +53,7 @@ CONDA_ROOT=/nfs-mount/user/miniconda3
 source $CONDA_ROOT/etc/profile.d/conda.sh
 conda activate rapids
 
-LOCAL_DIRECTORY=/nfs-mount/user/dask-local-directory
+LOCAL_DIRECTORY=/nfs-mount/dask-local-directory
 mkdir $LOCAL_DIRECTORY
 dask-scheduler \
     --protocol tcp \
@@ -65,7 +65,7 @@ include the IP address and port for the scheduler.  The file will serve as input
 
 **2. Start Dask CUDA workers.**
 
-Next start the [dask-cuda workers](https://dask-cuda.readthedocs.io/). Dask-CUDA extends the traditional dask worker class with specific options and enhacements for GPU environments.  Unlike the scheduler and client, the workers script should be _scalable_ and allow the users to tune how many workers are created.
+Next start the [dask-cuda workers](https://dask-cuda.readthedocs.io/). Dask-CUDA extends the traditional Dask `Worker` class with specific options and enhancements for GPU environments.  Unlike the scheduler and client, the workers script should be _scalable_ and allow the users to tune how many workers are created.
 For example, we can scale the number of nodes to 3: `sbatch/salloc -N3 dask-cuda-worker.script` .  In this case, because we have 8 GPUs per node and we have 3 nodes,
 our job will have 24 workers.
 
@@ -78,7 +78,7 @@ our job will have 24 workers.
 module load cuda/11.0.3
 CONDA_ROOT=/nfs-mount/miniconda3
 source $CONDA_ROOT/etc/profile.d/conda.sh
-conda activate 20201020-nightly
+conda activate rapids
 
 LOCAL_DIRECTORY=/nfs-mount/dask-local-directory
 mkdir $LOCAL_DIRECTORY
