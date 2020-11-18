@@ -21,7 +21,7 @@ Machine learning models can have dozens of options, or “hyperparameters,” th
 ## RAPIDS Integration into Cloud / Distributed Frameworks
 {: .section-title-full}
 
-![RAPIDS CSP HPO]({{ site.baseurl }}{% link /assets/images/HPO-space.png %}){: .center}
+![RAPIDS CSP HPO]({{ site.baseurl }}{% link /assets/images/HPO-space-2.png %}){: .center}
 {% endcapture %}
 
 {% include section-single.html
@@ -30,6 +30,27 @@ Machine learning models can have dozens of options, or “hyperparameters,” th
     content-single=intro_content
 %}
 
+<section class="container-logo-flex padding-top-1em padding-bottom-5em">
+    <div class="logo-flex">
+        <a href="https://dask.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/dask_stacked.png %}" alt="Dask"> </a>
+    </div>
+    <div class="logo-flex">
+        <a href="https://databricks.com/product/enterprise-cloud-service" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/databricks-logo.png %}" alt="Databricks"> </a>
+    </div>
+    <div class="logo-flex">
+       <a href="https://mlflow.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/MLflow-logo.png %}" alt="MLflow"> </a>
+    </div>
+    <div class="logo-flex">
+       <a href="https://optuna.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/Optuna-logo.png %}" alt="Optuna"> </a>
+    </div>
+    <div class="logo-flex">
+       <a href="https://epistasislab.github.io/tpot/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/tpot-logo.png %}" alt="TPOT"> </a>
+    </div>
+    <div class="logo-flex">
+       <a href="https://docs.ray.io/en/latest/tune.html" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/ray-tune.png %}" alt="ray tune"> </a>
+    </div>
+
+</section>
 
 {% capture yd_header %}
 # Benefits With RAPIDS
@@ -71,24 +92,44 @@ The RAPIDS team works closely with major cloud providers and open source hyperpa
 # Getting Started
 {: .section-title-halfs}
 
-RAPIDS supports hyperparameter optimization solutions based on AWS Sagemaker, Azure ML, Google Cloud AI, Dask ML, and Ray Tune frameworks, so you can easily integrate with whichever framework you use today.
-
+RAPIDS supports hyperparameter optimization and AutoML solutions based on AWS SageMaker, Azure ML, Google Cloud AI, Dask ML, Optuna, Ray Tune and TPOT frameworks, so you can easily integrate with whichever framework you use today. RAPIDS also integrates easily with MLflow to track and orchestrate experiments from any of these frameworks.
 
 ## <i class="fad fa-terminal"></i> Get the HPO example code
 
 Our GitHub repo contains helper code, sample notebooks, and step-by-step instructions to get you up and running on each HPO platform. **[See our README <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/cloud-ml-examples){: target="_blank"}**
 
-{% endcapture %}
-
-{% capture start_right %}
 ## <i class="far fa-code-merge"></i> Clone the Repo
-{: .section-subtitle-top-1}
 
 Start by cloning the open-source cloud-ml-examples repository from RAPIDSai GitHub.
  **[See our Repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/cloud-ml-examples){: target="_blank"}**
 
+{% endcapture %}
+
+{% capture start_right %}
 ## <i class="far fa-bookmark"></i> Notebook examples
+{: .section-subtitle-top-1}
+
 The repo will walk you through step-by-step instructions for a sample hyperparameter optimization job. To start running your experiments with HPO, navigate to the directory for your framework or CSP, and check out the README.md file there.  **[Walk Through The Notebooks <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/cloud-ml-examples){: target="_blank"}**
+
+## <i class="fab fa-youtube"></i> Video Tutorials
+
+Watch tutorials of accelerated HPO examples on **[Amazon SageMaker](https://www.youtube.com/watch?v=BtE4d0v6Css){: target="_blank"}** and **[Azure ML](https://www.youtube.com/watch?v=aqTmVVFnEwI&t=3s){: target="_blank"}** from the RAPIDSAI YouTube Channel, and **[Optuna+MLflow](https://cfp.jupytercon.com/2020/schedule/presentation/139/optimizing-model-performance-with-feature-engineering-and-hyperparameter-optimisation/){: target="_blank"}** from JupyterCon 2020.
+
+## <i class="far fa-bookmark"></i> Blog Posts
+
+<i class="fas fa-caret-right"></i> Hyperparameter Optimization with **[Optuna and RAPIDS](https://medium.com/rapids-ai/hyper-parameter-optimization-with-optuna-and-rapids-467fc8189962){: target="_blank"}**
+{: .no-tb-margins }
+
+<i class="fas fa-caret-right"></i> Faster AutoML with **[TPOT and RAPIDS](https://medium.com/rapids-ai/faster-automl-with-tpot-and-rapids-758455cd89e5){: target="_blank"}**
+{: .no-tb-margins }
+
+<i class="fas fa-caret-right"></i> Optimizing Machine Learning Models with Hyperopt and **[RAPIDS on Databricks Cloud](https://medium.com/rapids-ai/optimizing-machine-learning-models-with-hyperopt-and-rapids-on-databricks-cloud-fdac9154e3e4){: target="_blank"}**  
+{: .no-tb-margins }
+
+<i class="fas fa-caret-right"></i> Managing and Deploying High-Performance Machine Learning Models on GPUs with **[RAPIDS and MLFlow](https://medium.com/rapids-ai/managing-and-deploying-high-performance-machine-learning-models-on-gpus-with-rapids-and-mlflow-753b6fcaf75a){: target="_blank"}**
+{: .no-tb-margins }
+
+<i class="fas fa-caret-right"></i> 30x Faster Hyperparameter Search with **[Ray Tune and RAPIDS](https://medium.com/rapids-ai/30x-faster-hyperparameter-search-with-raytune-and-rapids-403013fbefc5){: target="_blank"}**
 
 {% endcapture %}
 
@@ -128,7 +169,7 @@ It’s easy to work in the cloud of your choice to find the best quality model.
 {% endcapture %}
 {% capture cl_left_top %}
 ## <i class="fas fa-cloud"></i> RAPIDS on Cloud <br> Machine Learning Services
-Azure ML, AWS Sagemaker, and Google Cloud AI hyperparameter optimization services free users from the details of managing their own infrastructure. Launch a job from a RAPIDS sample notebook, and the platform will automatically scale up and launch as many instances as you need to complete the experiments quickly. From a centralized interface, you can manage your jobs, view results, and find the best model to deploy.
+Azure ML, AWS SageMaker, and Google Cloud AI hyperparameter optimization services free users from the details of managing their own infrastructure. Launch a job from a RAPIDS sample notebook, and the platform will automatically scale up and launch as many instances as you need to complete the experiments quickly. From a centralized interface, you can manage your jobs, view results, and find the best model to deploy. For various deployment options and instructions, check out our **[Deploying RAPIDS in the Cloud page](https://rapids.ai/cloud){: target="_blank"}**.
 
 {% endcapture %}
 
@@ -150,28 +191,11 @@ Whether running a cluster on-prem, or managing instances in a public cloud, RAPI
 %}
 {% include section-halfs.html 
     background="background-white" 
-    padding-top="0em" padding-bottom="0em" 
+    padding-top="0em" padding-bottom="10em" 
     content-left-half=cl_left_top
     content-right-half=cl_right_top
 %}
 
-<section class="container-logo-flex padding-top-1em padding-bottom-10em">
-    <div class="logo-flex">
-       <a href="https://aws.amazon.com/sagemaker/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/amazon-sagemaker.png %}" alt="amazon sagemaker"> </a>
-    </div>
-    <div class="logo-flex">
-       <a href="https://azure.microsoft.com/en-us/services/machine-learning/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/azure-ml.png %}" alt="azure ml"> </a>
-    </div>
-    <div class="logo-flex">
-       <a href="https://cloud.google.com/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/google-cloud.png %}" alt="google cloud"> </a>
-    </div>
-    <div class="logo-flex">
-        <a href="https://dask.org/" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/dask_logo_icon.png %}" alt="Dask"> </a>
-    </div>
-    <div class="logo-flex">
-       <a href="https://docs.ray.io/en/latest/tune.html" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/ray-tune.png %}" alt="ray tune"> </a>
-    </div>
-</section>
 
 
 {% capture end_bottom %}
@@ -182,7 +206,7 @@ Whether running a cluster on-prem, or managing instances in a public cloud, RAPI
 {% include slopecap.html 
     background="background-darkpurple" 
     position="top" 
-    slope="up" 
+    slope="down" 
 %}
 {% include section-single.html
     background="background-darkpurple" 

@@ -21,8 +21,11 @@ for column in gdf.columns:
     print(gdf[column].mean())
 ```
 
-## <i class="fas fa-bolt"></i> Try Now In CoLab
-Jump right into a GPU powered RAPIDS notebook with **[Colabratory](https://colab.research.google.com/notebooks/welcome.ipynb){: target="_blank"}** for free. **[Go to example notebook <i class="fas fa-angle-double-right"></i>](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
+## <i class="fas fa-bolt"></i> Try Now Online
+Jump right into a GPU powered RAPIDS notebook. <br>
+Try with **[<i class="fad fa-fire"></i> BlazingSQL (RAPIDS 0.15+) <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://app.blazingsql.com/){: target="_blank"}**
+<br>
+Or with **[<i class="fab fa-google"></i> Colabratory (RAPIDS 0.14 only) <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
 
 {% endcapture %}
 
@@ -71,8 +74,8 @@ We suggest that you take a look at the sample workflow in our Docker container (
 <div id="get-rapids"></div>
 
 {% capture get_content %}
-# RAPIDS Release Selector
-{: .section-title-full}
+# [RAPIDS Release Selector](#get-rapids)
+{: .section-title-full }
 
 RAPIDS is available as conda packages, docker images, and from source builds. Use the tool below to select your preferred method, packages, and environment to install RAPIDS. Certain combinations may not be possible and are dimmed automatically. Be sure you've met the required **[prerequisites above](#req)** and see the **[details below](#details)**.
 {% endcapture %}
@@ -183,8 +186,8 @@ See the **[RAPIDS Container README](https://hub.docker.com/r/rapidsai/rapidsai){
     slope="up"
 %}
 
-{% include cta-footer.html 
-    name="TRY RAPIDS NOW" 
-    button="LAUNCH IN COLAB"
-    link="https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true"
+{% include cta-footer.html
+    name="TRY RAPIDS NOW ONLINE"
+    button="LAUNCH IN BLAZINGSQL"
+    link="https://app.blazingsql.com/"
 %}
