@@ -446,21 +446,51 @@ RAPIDS can be deployed on a Dask cluster on Azure ML Compute using dask-cloudpro
 
 **3. Config.** Create your workspace config file -see **[Azure docs](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-configure-environment#workspace)** for details.
 
-**4. Setup.** Setup your Azure ML Workspace using the config file created in the previous step:
+**4. Environment.** Setup your Azure ML core environment using the RAPIDS docker container:
+```shell
+from azureml.core import Environment
+>>> # create the environment
+>>> rapids_env = Environment('rapids_env')
+>>> # create the environment inside a Docker container
+>>> rapids_env.docker.enabled = True
+>>> # specify docker steps as a string. Alternatively, load the string from a file
+>>> dockerfile = """
+>>> FROM [CONTAINER]:[TAG]
+>>> RUN source activate rapids && \
+>>> pip install azureml-sdk && \
+>>> [ADDITIONAL_LIBRARIES]
+>>> """
+>>> # set base image to None since the image is defined by dockerfile
+>>> rapids_env.docker.base_image = None
+>>> rapids_env.docker.base_dockerfile = dockerfile
+>>> # use rapids environment in the container
+>>> rapids_env.python.user_managed_dependencies = True
+```
+[CONTAINER] = RAPIDS container to be used, for example, `rapidsai/rapidsai` <br>
+[TAG] = Docker container tag. <br>
+[ADDITIONAL_LIBRARIES] = Additional libraries required by the user can be installed by either using `conda` or `pip` install. <br>
+{: .margin-bottom-3em}
+
+**5. Setup.** Setup your Azure ML Workspace using the config file created in the previous step:
 ```shell
 >>> from azureml.core import Workspace
 >>> ws = Workspace.from_config()
 ```
 {: .margin-bottom-3em}
 
-**5. Create the AzureMLCluster:**
+**6. Create the AzureMLCluster:**
 ```shell
 >>> from dask_cloudprovider import AzureMLCluster
->>> cluster = AzureMLCluster(ws)
+>>> cluster = AzureMLCluster(ws,
+                             datastores=ws.datastores.values(),
+                             environment_definition=rapids_env,
+                             initial_node_count=[NUM_NODES])
 ```
+[NUM_NODES] = Number of nodes to be used. <br>
+
 {: .margin-bottom-3em}
 
-**6. Run Notebook.** In a Jupyter notebook, the cluster object will return a widget allowing you to scale up and containing links to the Jupyter Lab session running on the headnode and Dask dashboard, which are forwarded to local ports for you -unless running on a remote Compute Instance.
+**7. Run Notebook.** In a Jupyter notebook, the cluster object will return a widget allowing you to scale up and containing links to the Jupyter Lab session running on the headnode and Dask dashboard, which are forwarded to local ports for you -unless running on a remote Compute Instance.
 
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
