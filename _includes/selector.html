@@ -37,8 +37,8 @@
                 </div>
                 <div class="type">
                     <div class="option-label">Type</div>
-                    <div id="rapids" class="option">RAPIDS Only</div>
-                    <div id="blazing" class="option">RAPIDS with BlazingSQL</div>
+                    <div id="rapids" class="option">RAPIDS and BlazingSQL</div>
+                    <div id="rapidscore" class="option">RAPIDS Core (w/o BlazingSQL)</div>
                 </div>
                 <div class="pkg">
                     <div class="option-label">Packages</div>
@@ -112,7 +112,7 @@
 var pkg = ["cudf", "cuml", "cugraph", "cusignal", "cuspatial", "cuxfilter", "all"];
 var method = ["conda", "docker", "source", "dev"];
 var release = ["legacy", "stable", "nightly"];
-var type = ["rapids", "blazing"];
+var type = ["rapids", "rapidscore"];
 var linux = ["ubuntu1604", "ubuntu1804", "centos7", "rhel7"];
 var python = ["py37", "py38"];
 var cuda = ["cuda101", "cuda102", "cuda110"];
@@ -211,76 +211,66 @@ function processClick(options, click, category) {
         selections[category] = click.id;
     }
 
-    // Handle blazing type
-    if (selections["type"] == "blazing") {
-        // Display Blazing note
-        $("#blazing-dev-note").removeClass("hidden");
-
-        // Override selections for what is available in blazing dev image
-        selections["method"] = "dev";
+    // Handle exclusions
+    if (selections["method"] == "conda") {
+        // Handle conda requests
+        if (selections["linux"] == "rhel7") {
+            // Display RHEL note
+            $("#rhel7-conda-note").removeClass("hidden");
+        } else {
+            // Display linux note
+            $("#linux-conda-note").removeClass("hidden");
+        }
+    } else if (selections["method"] == "docker") {
+        // Handle docker requests
         if (selections["linux"] == "rhel7") {
             selections["linux"] = "centos7";
         }
-        if (selections["release"] == "legacy") {
-            selections["release"] = "stable";
+        $("#rhel7").addClass("disabled");
+        $(pkg_opts).addClass("disabled");
+        selections["pkg"] = "all";
+        $("#all").removeClass("disabled");
+    } else if (selections["method"] == "source") {
+        // Handle source requests
+        $("#all").addClass("disabled");
+        if (selections["pkg"] == "all") {
+            selections["pkg"] = "cudf";
+        }
+        if (selections["linux"] == "rhel7") {
+            // Display RHEL note
+            $("#rhel7-source-note").removeClass("hidden");
+        } else {
+            // Display linux note
+            $("#linux-source-note").removeClass("hidden");
+        }
+        $(python_opts).removeClass("active");
+        $(cuda_opts).removeClass("active");
+        $(type_opts).removeClass("active");
+        $(python_opts).addClass("disabled");
+        $(cuda_opts).addClass("disabled");
+        $(type_opts).addClass("disabled");
+    } else if (selections["method"] == "dev") {
+        // Handle dev requests
+        if (selections["linux"] == "rhel7") {
+            selections["linux"] = "centos7";
         }
         selections["pkg"] = "all";
         $("#rhel7").addClass("disabled");
-        $(method_opts).addClass("disabled");
-        $("#dev").removeClass("disabled");
-        $("#legacy").addClass("disabled");
         $(pkg_opts).addClass("disabled");
         $("#all").removeClass("disabled");
-    } else if (selections["type"] == "rapids") {
-        // Handle rapids type
-
-        if (selections["method"] == "conda") {
-            // Handle conda requests
-            if (selections["linux"] == "rhel7") {
-                // Display RHEL note
-                $("#rhel7-conda-note").removeClass("hidden");
-            } else {
-                // Display linux note
-                $("#linux-conda-note").removeClass("hidden");
-            }
-        } else if (selections["method"] == "docker") {
-            // Handle docker requests
-            if (selections["linux"] == "rhel7") {
-                selections["linux"] = "centos7";
-            }
-            $("#rhel7").addClass("disabled");
-            $(pkg_opts).addClass("disabled");
-            selections["pkg"] = "all";
-            $("#all").removeClass("disabled");
-        } else if (selections["method"] == "source") {
-            // Handle source requests
-            $("#all").addClass("disabled");
-            if (selections["pkg"] == "all") {
-                selections["pkg"] = "cudf";
-            }
-            if (selections["linux"] == "rhel7") {
-                // Display RHEL note
-                $("#rhel7-source-note").removeClass("hidden");
-            } else {
-                // Display linux note
-                $("#linux-source-note").removeClass("hidden");
-            }
-            $(python_opts).removeClass("active");
-            $(cuda_opts).removeClass("active");
-            $(python_opts).addClass("disabled");
-            $(cuda_opts).addClass("disabled");
-        } else if (selections["method"] == "dev") {
-            // Handle dev requests
-            if (selections["linux"] == "rhel7") {
-                selections["linux"] = "centos7";
-            }
-            selections["pkg"] = "all";
-            $("#rhel7").addClass("disabled");
-            $(pkg_opts).addClass("disabled");
-            $("#all").removeClass("disabled");
-            $(method_opts).removeClass("disabled");
-            $(release_opts).removeClass("disabled");
+        $(method_opts).removeClass("disabled");
+        $(release_opts).removeClass("disabled");
+    } else if (selections["method"] == "dev") {
+        // Handle dev requests
+        if (selections["linux"] == "rhel7") {
+            selections["linux"] = "centos7";
         }
+        selections["pkg"] = "all";
+        $("#rhel7").addClass("disabled");
+        $(pkg_opts).addClass("disabled");
+        $("#all").removeClass("disabled");
+        $(method_opts).removeClass("disabled");
+        $(release_opts).removeClass("disabled");
     }
 
     // Mark active options
