@@ -162,9 +162,7 @@ There are multiple ways you can deploy RAPIDS on a single instance, but the easi
 
 RAPIDS can be deployed on a multi-node ECS cluster using Dask’s dask-cloudprovider management tools. For more details, see our **[blog post on deploying on ECS.](https://medium.com/rapids-ai/getting-started-with-rapids-on-aws-ecs-using-dask-cloud-provider-b1adfdbc9c6e)**
 
-**0. Run from within AWS.**
-
-The following steps assume you are running them from within the same AWS VPC. One way to ensure this is to run through the "AWS Single Instance (EC2)" instructions and then run these steps from there.
+**0. Run from within AWS.** The following steps assume you are running them from within the same AWS VPC. One way to ensure this is to run through the "AWS Single Instance (EC2)" instructions and then run these steps from there.
 
 **1. Setup AWS credentials.** First, you will need AWS credentials to allow us to interact with the AWS CLI. If someone else manages your AWS account, you will need to get these keys from them. You can provide these credentials to dask-cloudprovider in a number of ways, but the easiest is to setup your local environment using the AWS command line tools:
 ```shell
