@@ -209,8 +209,7 @@ Create the ECSCluster object in your Python session:
 >>> cluster = ECSCluster(
                             cluster_arn=[CLUSTER_ARN],
                             n_workers=[NUM_WORKERS],
-                            worker_gpu=[NUM_GPUS],
-                            fargate_scheduler=True
+                            worker_gpu=[NUM_GPUS]
                          )
 ```
 [CLUSTER_ARN] = The ARN of an existing ECS cluster to use for launching tasks
