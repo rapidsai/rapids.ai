@@ -203,16 +203,16 @@ export AWS_DEFAULT_REGION=[REGION]
 
 Create the ECSCluster object in your Python session:
 ```shell
->>> from dask_cloudprovider import ECSCluster
+>>> from dask_cloudprovider.aws import ECSCluster
 >>> cluster = ECSCluster(
-                            cluster_arn=[CLUSTER_ARN],
-                            n_workers=[NUM_WORKERS],
-                            worker_gpu=[NUM_GPUS]
+                            cluster_arn=<CLUSTER_ARN>,
+                            n_workers=<NUM_WORKERS>,
+                            worker_gpu=<NUM_GPUS>
                          )
 ```
-[CLUSTER_ARN] = The ARN of an existing ECS cluster to use for launching tasks
-[NUM_WORKERS] = Number of workers to start on cluster creation. <br>
-[NUM_GPUS] = The number of GPUs to expose to the worker.
+[CLUSTER_ARN] = The ARN of an existing ECS cluster to use for launching tasks <br />
+[NUM_WORKERS] = Number of workers to start on cluster creation. <br />
+[NUM_GPUS] = The number of GPUs to expose to the worker, this must be less than or equal to the number of GPUs in the instance type you selected for the ECS cluster (e.g `1` for `p3.2xlarge`).
 {: .margin-bottom-3em}
 
 **5. Test RAPIDS.** Create a distributed client for our cluster:
