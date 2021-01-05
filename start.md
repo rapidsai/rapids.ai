@@ -94,7 +94,6 @@ RAPIDS is available as conda packages, docker images, and from source builds. Us
 	background="background-purple"
 	padding-top="1em" padding-bottom="1em"
 %}
-{% include selector-commands-legacy.html %}
 {% include selector-commands-stable.html %}
 {% include selector-commands-nightly.html %}
 
