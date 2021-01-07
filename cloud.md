@@ -300,14 +300,30 @@ Update the path to the ssh-public-key to point to the folder and file where your
 **7. Accessing your cluster:**
 ```shell
 >>> kubectl get svc
-NAME                 TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)                       AGE
-kubernetes           ClusterIP      10.100.0.1       <none>        443/TCP                       14m
-rapidsai-jupyter     LoadBalancer   10.100.208.179   1.2.3.4       80:32332/TCP                  3m30s
-rapidsai-scheduler   LoadBalancer   10.100.19.121    5.6.7.8       8786:31779/TCP,80:32011/TCP   3m30s
+NAME                TYPE          CLUSTER-IP      EXTERNAL-IP                                                               PORT(S)                         AGE
+kubernetes          ClusterIP     10.100.0.1      <none>                                                                    443/TCP                         12m
+rapidsai-jupyter    LoadBalancer  10.100.251.155  a454a9741455544cfa37fc4ac71caa53-868718558.us-east-1.elb.amazonaws.com    80:30633/TCP                    85s
+rapidsai-scheduler  LoadBalancer  10.100.11.182   a9c703f1c002f478ea60d9acaf165bab-1146605388.us-east-1.elb.amazonaws.com   8786:30346/TCP,8787:32444/TCP   85s
 ```
 {: .margin-bottom-3em}
 
-You can now visit the external IP of the rapidsai-jupyter service in your browser!
+**7. ELB IP address:**
+**[Convert the DNS address provided above as the EXTERNAL-IP address to an IPV4 address](https://aws.amazon.com/premiumsupport/knowledge-center/elb-find-load-balancer-IP/)**. Then use the obtained IPV4 address to visit the rapidsai-jupyter service in your browser!
+
+{: .margin-bottom-3em}
+
+**8. Delete the cluster:** List and delete services running in the cluster to release resources
+```shell
+>>> kubectl get svc --all-namespaces
+>>> kubectl delete svc [SERVICE_NAME]
+```
+[SERVICE_NAME] = Name of the services which have an EXTERNAL-IP value and are required to be removed to release resources.
+
+Delete the cluster and its associated nodes
+```shell
+>>> eksctl delete cluster --region=[REGION] --name=[CLUSTER_NAME]
+```
+{: .margin-bottom-3em}
 
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
