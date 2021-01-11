@@ -293,7 +293,7 @@ Update the path to the ssh-public-key to point to the folder and file where your
 
 **6. Install helm chart:**
 ```shell
->>> helm install rapidstest rapidsai/rapidsai
+>>> helm install --set dask.scheduler.serviceType="LoadBalancer" --set dask.jupyter.serviceType="LoadBalancer" rapidstest rapidsai/rapidsai
 ```
 {: .margin-bottom-3em}
 
@@ -322,6 +322,12 @@ rapidsai-scheduler  LoadBalancer  10.100.11.182   a9c703f1c002f478ea60d9acaf165b
 Delete the cluster and its associated nodes
 ```shell
 >>> eksctl delete cluster --region=[REGION] --name=[CLUSTER_NAME]
+```
+{: .margin-bottom-3em}
+
+**9. Uninstall the helm chart:**
+```shell
+>>> helm uninstall rapidstest
 ```
 {: .margin-bottom-3em}
 
@@ -570,7 +576,7 @@ Please refer to the **[Microsoft Azure CLI documentation](https://docs.microsoft
 
 **7. Install helm chart:**
 ```shell
->>> helm install rapidstest rapidsai/rapidsai
+>>> helm install --set dask.scheduler.serviceType="LoadBalancer" --set dask.jupyter.serviceType="LoadBalancer" rapidstest rapidsai/rapidsai
 ```
 {: .margin-bottom-3em}
 
@@ -585,6 +591,12 @@ rapidsai-scheduler   LoadBalancer   10.100.19.121    5.6.7.8       8786:31779/TC
 {: .margin-bottom-3em}
 
 You can now visit the external IP of the rapidsai-jupyter service in your browser!
+
+**9. Uninstall the helm chart:**
+```shell
+>>> helm uninstall rapidstest
+```
+{: .margin-bottom-3em}
 
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
@@ -831,7 +843,7 @@ Example:
 
 **8. Install the helm chart:**
 ```shell
->>> helm install rapidstest rapidsai/rapidsai
+>>> helm install --set dask.scheduler.serviceType="LoadBalancer" --set dask.jupyter.serviceType="LoadBalancer" rapidstest rapidsai/rapidsai
 ```
 {: .margin-bottom-3em}
 
@@ -846,6 +858,12 @@ rapidsai-scheduler   LoadBalancer   10.100.19.121    5.6.7.8       8786:31779/TC
 {: .margin-bottom-3em}
 
 To run notebooks on jupyter in your browser, visit the external IP of rapidsai-jupyter.
+
+**10. Uninstall the helm chart:**
+```shell
+>>> helm uninstall rapidstest
+```
+{: .margin-bottom-3em}
 
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
