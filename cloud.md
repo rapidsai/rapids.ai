@@ -20,8 +20,8 @@ RAPIDS can be deployed in a number of ways, from hosted Jupyter notebooks, to th
 {% endcapture %}
 
 {% include section-single.html
-    background="background-white" 
-    padding-top="0em" padding-bottom="10em" 
+    background="background-white"
+    padding-top="0em" padding-bottom="10em"
     content-single=intro_content
 %}
 
@@ -66,27 +66,27 @@ For the various deployment options on each cloud, as well as instructions and li
 {% endcapture %}
 
 <div id="deploy"></div>
-{% include slopecap.html 
-    background="background-purple" 
-    position="top" 
-    slope="down" 
+{% include slopecap.html
+    background="background-purple"
+    position="top"
+    slope="down"
 %}
 {% include section-single.html
-    background="background-purple" 
-    padding-top="5em" padding-bottom="3em" 
+    background="background-purple"
+    padding-top="5em" padding-bottom="3em"
     content-single=csp_sel
 %}
-{% include section-thirds.html 
-    background="background-purple" 
-    padding-top="0em" padding-bottom="5em" 
+{% include section-thirds.html
+    background="background-purple"
+    padding-top="0em" padding-bottom="5em"
     content-left-third=csp_left
     content-middle-third=csp_mid
     content-right-third=csp_right
 %}
-{% include slopecap.html 
-    background="background-purple" 
-    position="bottom" 
-    slope="up" 
+{% include slopecap.html
+    background="background-purple"
+    position="bottom"
+    slope="up"
 %}
 
 <!-- AWS -->
@@ -121,14 +121,14 @@ RAPIDS can be deployed on Amazon Web Services (AWS) in several ways:
 {% endcapture %}
 
 {% include section-single.html
-    background="background-gray" 
-    padding-top="10em" padding-bottom="3em" 
+    background="background-gray"
+    padding-top="10em" padding-bottom="3em"
     content-single=aws_intro
 %}
-{% include slopecap.html 
-    background="background-gray" 
-    position="bottom" 
-    slope="down" 
+{% include slopecap.html
+    background="background-gray"
+    position="bottom"
+    slope="down"
 %}
 
 {% capture aws_ec2 %}
@@ -160,7 +160,9 @@ There are multiple ways you can deploy RAPIDS on a single instance, but the easi
 {% capture aws_dask %}
 ## <i class="fab fa-aws"></i> AWS Cluster via Dask
 
-RAPIDS can be deployed on ECS using Dask’s dask-cloudprovider management tools. For more details, see our **[blog post on deploying on ECS.](https://medium.com/rapids-ai/getting-started-with-rapids-on-aws-ecs-using-dask-cloud-provider-b1adfdbc9c6e)**
+RAPIDS can be deployed on a multi-node ECS cluster using Dask’s dask-cloudprovider management tools. For more details, see our **[blog post on deploying on ECS.](https://medium.com/rapids-ai/getting-started-with-rapids-on-aws-ecs-using-dask-cloud-provider-b1adfdbc9c6e)**
+
+**0. Run from within AWS.** The following steps assume you are running them from within the same AWS VPC. One way to ensure this is to run through the [AWS Single Instance (EC2)](#AWS-EC2) instructions and then run these steps from there.
 
 **1. Setup AWS credentials.** First, you will need AWS credentials to allow us to interact with the AWS CLI. If someone else manages your AWS account, you will need to get these keys from them. You can provide these credentials to dask-cloudprovider in a number of ways, but the easiest is to setup your local environment using the AWS command line tools:
 ```shell
@@ -171,12 +173,12 @@ RAPIDS can be deployed on ECS using Dask’s dask-cloudprovider management tools
 
 **2. Install dask-cloudprovider.** To install, you will need to run the following:
 ```shell
->>> pip install dask-cloudprovider
+>>> pip install dask-cloudprovider[aws]
 ```
 {: .margin-bottom-3em}
 
 **3. Create an EC2 cluster:**
-In the AWS console, visit the ECS dashboard. From the “Clusters” section on the left hand side, click “Create Cluster”. 
+In the AWS console, visit the ECS dashboard. From the “Clusters” section on the left hand side, click “Create Cluster”.
 
 Make sure to select an EC 2 Linux + Networking cluster so that we can specify our networking options.
 
@@ -192,7 +194,7 @@ All other options can be left at defaults. You can now click “create” and wa
 
 Get the Amazon Resource Name (ARN) for the cluster you just created.
 
-Set `AWS_DEFAULT_REGION` environment variable to your **[default region](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions)**: 
+Set `AWS_DEFAULT_REGION` environment variable to your **[default region](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions)**:
 ```shell
 export AWS_DEFAULT_REGION=[REGION]
 ```
@@ -201,17 +203,16 @@ export AWS_DEFAULT_REGION=[REGION]
 
 Create the ECSCluster object in your Python session:
 ```shell
->>> from dask_cloudprovider import ECSCluster
+>>> from dask_cloudprovider.aws import ECSCluster
 >>> cluster = ECSCluster(
-                            cluster_arn=[CLUSTER_ARN],
-                            n_workers=[NUM_WORKERS],
-                            worker_gpu=[NUM_GPUS],
-                            fargate_scheduler=True
+                            cluster_arn=<CLUSTER_ARN>,
+                            n_workers=<NUM_WORKERS>,
+                            worker_gpu=<NUM_GPUS>
                          )
 ```
-[CLUSTER_ARN] = The ARN of an existing ECS cluster to use for launching tasks
-[NUM_WORKERS] = Number of workers to start on cluster creation. <br>
-[NUM_GPUS] = The number of GPUs to expose to the worker.
+[CLUSTER_ARN] = The ARN of an existing ECS cluster to use for launching tasks <br />
+[NUM_WORKERS] = Number of workers to start on cluster creation. <br />
+[NUM_GPUS] = The number of GPUs to expose to the worker, this must be less than or equal to the number of GPUs in the instance type you selected for the ECS cluster (e.g `1` for `p3.2xlarge`).
 {: .margin-bottom-3em}
 
 **5. Test RAPIDS.** Create a distributed client for our cluster:
@@ -341,11 +342,11 @@ Delete the cluster and its associated nodes
 
 RAPIDS also works with AWS Sagemaker. We’ve written a **[detailed guide](https://medium.com/rapids-ai/running-rapids-experiments-at-scale-using-amazon-sagemaker-d516420f165b)** with **[examples](https://github.com/rapidsai/cloud-ml-examples/tree/main/aws)** for how to use Sagemaker with RAPIDS, but the simplest version is:
 
-**1. Start.** Start a Sagemaker hosted Jupyter notebook instance on AWS. 
+**1. Start.** Start a Sagemaker hosted Jupyter notebook instance on AWS.
 
 **2. Clone.** **[Clone the example repository](https://github.com/shashankprasanna/sagemaker-rapids.git)** which includes all required setup and some example data and code.
 
-**3. Run.** Start running the sagemaker-rapids.ipynb jupyter notebook. 
+**3. Run.** Start running the sagemaker-rapids.ipynb jupyter notebook.
 
 For more details, including on running large-scale HPO jobs on Sagemaker with RAPIDS, check out the **[detailed guide](https://medium.com/rapids-ai/running-rapids-experiments-at-scale-using-amazon-sagemaker-d516420f165b)** and **[examples.](https://github.com/rapidsai/cloud-ml-examples/tree/main/aws)**
 
@@ -355,26 +356,26 @@ For more details, including on running large-scale HPO jobs on Sagemaker with RA
 {% endcapture %}
 <div id="AWS-EC2"></div>
 {% include section-single.html
-    background="background-white" 
-    padding-top="6em" padding-bottom="0em" 
+    background="background-white"
+    padding-top="6em" padding-bottom="0em"
     content-single=aws_ec2
 %}
 <div id="AWS-Dask"></div>
 {% include section-single.html
-    background="background-white" 
-    padding-top="3em" padding-bottom="0em" 
+    background="background-white"
+    padding-top="3em" padding-bottom="0em"
     content-single=aws_dask
 %}
 <div id="AWS-Kubernetes"></div>
 {% include section-single.html
-    background="background-white" 
-    padding-top="3em" padding-bottom="0em" 
+    background="background-white"
+    padding-top="3em" padding-bottom="0em"
     content-single=aws_kub
 %}
 <div id="AWS-Sagemaker"></div>
 {% include section-single.html
-    background="background-white" 
-    padding-top="3em" padding-bottom="10em" 
+    background="background-white"
+    padding-top="3em" padding-bottom="10em"
     content-single=aws_sage
 %}
 
@@ -411,20 +412,20 @@ RAPIDS can be deployed on Microsoft Azure via several methods:
 
 {% endcapture %}
 
-{% include slopecap.html 
-    background="background-gray" 
-    position="top" 
-    slope="down" 
+{% include slopecap.html
+    background="background-gray"
+    position="top"
+    slope="down"
 %}
 {% include section-single.html
-    background="background-gray" 
-    padding-top="3em" padding-bottom="3em" 
+    background="background-gray"
+    padding-top="3em" padding-bottom="3em"
     content-single=azure_intro
 %}
-{% include slopecap.html 
-    background="background-gray" 
-    position="bottom" 
-    slope="up" 
+{% include slopecap.html
+    background="background-gray"
+    position="bottom"
+    slope="up"
 %}
 
 {% capture az_single %}
@@ -432,11 +433,11 @@ RAPIDS can be deployed on Microsoft Azure via several methods:
 
 There are multiple ways you can deploy RAPIDS on a single VM instance, but the easiest is to use the RAPIDS docker image:
 
-**1. Initiate VM.** **[Initiate a VM instance](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-portal)** using a VM supported by RAPIDS. See the introduction section for a list of supported instance types. It is recommended to use an image that already includes the required NVIDIA drivers, such as **[this one.](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/nvidia.ngc_azure_17_11?tab=Overview)** 
+**1. Initiate VM.** **[Initiate a VM instance](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-portal)** using a VM supported by RAPIDS. See the introduction section for a list of supported instance types. It is recommended to use an image that already includes the required NVIDIA drivers, such as **[this one.](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/nvidia.ngc_azure_17_11?tab=Overview)**
 
 **2. Credentials.** Using the credentials supplied by Azure, log into the instance via SSH.
 
-**3. Docker Permissions.** **[Setup docker user permissions.](https://docs.docker.com/engine/install/linux-postinstall/)** 
+**3. Docker Permissions.** **[Setup docker user permissions.](https://docs.docker.com/engine/install/linux-postinstall/)**
 
 **4. Install.** **[Install RAPIDS docker image](https://rapids.ai/start.html)**. The docker container can be customized by using the options provided in the **[Getting Started](https://rapids.ai/start.html)** page of RAPIDS. Example of an image that can be used is provided below:
 ```shell
@@ -532,7 +533,7 @@ RAPIDS can be deployed on a Kubernetes cluster on Azure using Helm. More details
 >>> az group create --name [RESOURCE_GROUP] --location [REGION]
 ```
 [RESOURCE_GROUP] = resource group to be created. <br>
-[REGION] = the location where the resource group should be created. 
+[REGION] = the location where the resource group should be created.
 {: .margin-bottom-3em}
 
 **3. Create your cluster:**
@@ -625,7 +626,7 @@ RAPIDS can be deployed at scale using Azure Machine Learning Service--and easily
  --vm_size=[VM_SIZE] \
  --node_count=[NUM_NODES]
 ```
-[CONFIG_PATH] = the path to the config file you downloaded in step three. 
+[CONFIG_PATH] = the path to the config file you downloaded in step three.
 {: .margin-bottom-3em}
 
 **7. Start.** Open your browser to http://localhost:8888 and get started!
@@ -638,26 +639,26 @@ See **[the guide](https://medium.com/rapids-ai/rapids-on-microsoft-azure-machine
 {% endcapture %}
 <div id="AZ-single"></div>
 {% include section-single.html
-    background="background-white" 
-    padding-top="6em" padding-bottom="0em" 
+    background="background-white"
+    padding-top="6em" padding-bottom="0em"
     content-single=az_single
 %}
 <div id="AZ-Dask"></div>
 {% include section-single.html
-    background="background-white" 
-    padding-top="5em" padding-bottom="0em" 
+    background="background-white"
+    padding-top="5em" padding-bottom="0em"
     content-single=az_dask
 %}
 <div id="AZ-Kubernetes"></div>
 {% include section-single.html
-    background="background-white" 
-    padding-top="3em" padding-bottom="0em" 
+    background="background-white"
+    padding-top="3em" padding-bottom="0em"
     content-single=az_kub
 %}
 <div id="AZ-ML"></div>
 {% include section-single.html
-    background="background-white" 
-    padding-top="3em" padding-bottom="10em" 
+    background="background-white"
+    padding-top="3em" padding-bottom="10em"
     content-single=az_ml
 %}
 
@@ -687,20 +688,20 @@ RAPIDS can be used in Google Cloud in several different ways:
 
 {% endcapture %}
 
-{% include slopecap.html 
-    background="background-gray" 
-    position="top" 
-    slope="down" 
+{% include slopecap.html
+    background="background-gray"
+    position="top"
+    slope="down"
 %}
 {% include section-single.html
-    background="background-gray" 
-    padding-top="3em" padding-bottom="3em" 
+    background="background-gray"
+    padding-top="3em" padding-bottom="3em"
     content-single=gcp_intro
 %}
-{% include slopecap.html 
-    background="background-gray" 
-    position="bottom" 
-    slope="up" 
+{% include slopecap.html
+    background="background-gray"
+    position="bottom"
+    slope="up"
 %}
 
 {% capture gc_single %}
@@ -939,26 +940,26 @@ For more details, or for other ways to deploy on Google CloudAI, see the **[deta
 {% endcapture %}
 <div id="GC-single"></div>
 {% include section-single.html
-    background="background-white" 
-    padding-top="6em" padding-bottom="0em" 
+    background="background-white"
+    padding-top="6em" padding-bottom="0em"
     content-single=gc_single
 %}
 <div id="GC-Dask"></div>
 {% include section-single.html
-    background="background-white" 
-    padding-top="3em" padding-bottom="0em" 
+    background="background-white"
+    padding-top="3em" padding-bottom="0em"
     content-single=gc_dask
 %}
 <div id="GC-Kubernetes"></div>
 {% include section-single.html
-    background="background-white" 
-    padding-top="3em" padding-bottom="0em" 
+    background="background-white"
+    padding-top="3em" padding-bottom="0em"
     content-single=gc_kub
 %}
 <div id="GC-AI"></div>
 {% include section-single.html
-    background="background-white" 
-    padding-top="3em" padding-bottom="10em" 
+    background="background-white"
+    padding-top="3em" padding-bottom="10em"
     content-single=gc_ai
 %}
 
@@ -968,18 +969,18 @@ For more details, or for other ways to deploy on Google CloudAI, see the **[deta
 {: .section-title-full .text-white}
 
 {% endcapture %}
-{% include slopecap.html 
-    background="background-darkpurple" 
-    position="top" 
-    slope="down" 
+{% include slopecap.html
+    background="background-darkpurple"
+    position="top"
+    slope="down"
 %}
 {% include section-single.html
-    background="background-darkpurple" 
-    padding-top="0em" padding-bottom="0em" 
+    background="background-darkpurple"
+    padding-top="0em" padding-bottom="0em"
     content-single=end_bottom
 %}
-{% include cta-footer.html 
-    name="Experience Data Science on GPUs with RAPIDS" 
+{% include cta-footer.html
+    name="Experience Data Science on GPUs with RAPIDS"
     tagline=""
     button="GET STARTED"
     link="start.html"
