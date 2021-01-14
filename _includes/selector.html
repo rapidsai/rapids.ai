@@ -2,25 +2,11 @@
     <div class="container-padding">
         <div class="selector">
             <div class="options">
-                <div class="note method">
+                <div class="note method padding-bottom-4em">
                     <div class="option-label">NOTICES</div>
                     <div class="option-notice">
                         <span>
-                            <i class="fas fa-exclamation-triangle text-white"></i> <a href="https://docs.rapids.ai/notices/rsn0002">Python 3.6 & CUDA 10.0</a> EOL in v0.14
-                        </span>
-                    </div>
-                    <div class="option-notice">
-                        <span>
-                            <i class="fas fa-bullhorn text-white"></i> Google Colab RAPIDS <a href="https://docs.rapids.ai/notices/rgn0005">support limited</a> to v0.14
-                        </span>
-                    </div>
-
-                </div>
-                <div class="note method padding-bottom-4em">
-                    <div class="option-label"></div>
-                    <div class="option-notice">
-                        <span>
-                            <i class="fas fa-bullhorn text-white"></i> RAPIDS <a href="https://docs.rapids.ai/notices/rdn0001">dask-xgboost</a> library is deprecated in v0.15 and removed in v0.16
+                            <i class="fas fa-exclamation-triangle text-white"></i> RAPIDS <a href="https://docs.rapids.ai/notices/rgn0007">docker image</a> changes in v0.17; including BlazingSQL by default
                         </span>
                     </div>
                 </div>
@@ -46,14 +32,13 @@
                 </div>
                 <div class="release">
                     <div class="option-label">Release</div>
-                    <div id="legacy" class="option">Legacy ({{ site.data.releases.legacy-version }})</div>
                     <div id="stable" class="option">Stable ({{ site.data.releases.stable-version }})</div>
                     <div id="nightly" class="option">Nightly ({{ site.data.releases.nightly-version }}a)</div>
                 </div>
                 <div class="type">
                     <div class="option-label">Type</div>
-                    <div id="rapids" class="option">RAPIDS Only</div>
-                    <div id="blazing" class="option">RAPIDS with BlazingSQL</div>
+                    <div id="rapids" class="option">RAPIDS and BlazingSQL</div>
+                    <div id="rapidscore" class="option">RAPIDS Core (w/o BlazingSQL)</div>
                 </div>
                 <div class="pkg">
                     <div class="option-label">Packages</div>
@@ -105,9 +90,6 @@
                         <span id="linux-source-note" class="hidden option-note">
                             <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> Ubuntu 16.04/18.04 & CentOS 7 use the same from source build instructions.
                         </span>
-                        <span id="blazing-dev-note" class="hidden option-note">
-                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> RAPIDS with BlazingSQL is only available as a <b>Docker + Dev Env</b> for v0.16/0.17. Additional install options, coming soon.
-                        </span>
                     </div>
                 </div>
             </div>
@@ -127,7 +109,7 @@
 var pkg = ["cudf", "cuml", "cugraph", "cusignal", "cuspatial", "cuxfilter", "all"];
 var method = ["conda", "docker", "source", "dev"];
 var release = ["legacy", "stable", "nightly"];
-var type = ["rapids", "blazing"];
+var type = ["rapids", "rapidscore"];
 var linux = ["ubuntu1604", "ubuntu1804", "centos7", "rhel7"];
 var python = ["py37", "py38"];
 var cuda = ["cuda101", "cuda102", "cuda110"];
@@ -141,7 +123,6 @@ var cuda_opts = $(".cuda > .option");
 var details = {
     conda: "conda-install",
     docker: "docker-container",
-    pip: "pip-install",
     source: "build-from-source"
 }
 // Set initial choices
@@ -204,7 +185,6 @@ function resetAll() {
 
 // Reset to default choices
 function resetSelector() {
-
     selections = Object.assign({}, default_selections);
     processClick();
 }
@@ -219,83 +199,72 @@ function processClick(options, click, category) {
     $("#rhel7-source-note").addClass("hidden");
     $("#linux-conda-note").addClass("hidden");
     $("#linux-source-note").addClass("hidden");
-    $("#blazing-dev-note").addClass("hidden");
 
     // Record selection
     if (click && category) {
         selections[category] = click.id;
     }
 
-    // Handle blazing type
-    if (selections["type"] == "blazing") {
-        // Display Blazing note
-        $("#blazing-dev-note").removeClass("hidden");
-
-        // Override selections for what is available in blazing dev image
-        selections["method"] = "dev";
+    // Handle exclusions
+    if (selections["method"] == "conda") {
+        // Handle conda requests
+        if (selections["linux"] == "rhel7") {
+            // Display RHEL note
+            $("#rhel7-conda-note").removeClass("hidden");
+        } else {
+            // Display linux note
+            $("#linux-conda-note").removeClass("hidden");
+        }
+    } else if (selections["method"] == "docker") {
+        // Handle docker requests
         if (selections["linux"] == "rhel7") {
             selections["linux"] = "centos7";
         }
-        if (selections["release"] == "legacy") {
-            selections["release"] = "stable";
+        $("#rhel7").addClass("disabled");
+        $(pkg_opts).addClass("disabled");
+        selections["pkg"] = "all";
+        $("#all").removeClass("disabled");
+    } else if (selections["method"] == "source") {
+        // Handle source requests
+        $("#all").addClass("disabled");
+        if (selections["pkg"] == "all") {
+            selections["pkg"] = "cudf";
+        }
+        if (selections["linux"] == "rhel7") {
+            // Display RHEL note
+            $("#rhel7-source-note").removeClass("hidden");
+        } else {
+            // Display linux note
+            $("#linux-source-note").removeClass("hidden");
+        }
+        $(python_opts).removeClass("active");
+        $(cuda_opts).removeClass("active");
+        $(type_opts).removeClass("active");
+        $(python_opts).addClass("disabled");
+        $(cuda_opts).addClass("disabled");
+        $(type_opts).addClass("disabled");
+    } else if (selections["method"] == "dev") {
+        // Handle dev requests
+        if (selections["linux"] == "rhel7") {
+            selections["linux"] = "centos7";
         }
         selections["pkg"] = "all";
         $("#rhel7").addClass("disabled");
-        $(method_opts).addClass("disabled");
-        $("#dev").removeClass("disabled");
-        $("#legacy").addClass("disabled");
         $(pkg_opts).addClass("disabled");
         $("#all").removeClass("disabled");
-    } else if (selections["type"] == "rapids") {
-        // Handle rapids type
-
-        if (selections["method"] == "conda") {
-            // Handle conda requests
-            if (selections["linux"] == "rhel7") {
-                // Display RHEL note
-                $("#rhel7-conda-note").removeClass("hidden");
-            } else {
-                // Display linux note
-                $("#linux-conda-note").removeClass("hidden");
-            }
-        } else if (selections["method"] == "docker") {
-            // Handle docker requests
-            if (selections["linux"] == "rhel7") {
-                selections["linux"] = "centos7";
-            }
-            $("#rhel7").addClass("disabled");
-            $(pkg_opts).addClass("disabled");
-            selections["pkg"] = "all";
-            $("#all").removeClass("disabled");
-        } else if (selections["method"] == "source") {
-            // Handle source requests
-            $("#all").addClass("disabled");
-            if (selections["pkg"] == "all") {
-                selections["pkg"] = "cudf";
-            }
-            if (selections["linux"] == "rhel7") {
-                // Display RHEL note
-                $("#rhel7-source-note").removeClass("hidden");
-            } else {
-                // Display linux note
-                $("#linux-source-note").removeClass("hidden");
-            }
-            $(python_opts).removeClass("active");
-            $(cuda_opts).removeClass("active");
-            $(python_opts).addClass("disabled");
-            $(cuda_opts).addClass("disabled");
-        } else if (selections["method"] == "dev") {
-            // Handle dev requests
-            if (selections["linux"] == "rhel7") {
-                selections["linux"] = "centos7";
-            }
-            selections["pkg"] = "all";
-            $("#rhel7").addClass("disabled");
-            $(pkg_opts).addClass("disabled");
-            $("#all").removeClass("disabled");
-            $(method_opts).removeClass("disabled");
-            $(release_opts).removeClass("disabled");
+        $(method_opts).removeClass("disabled");
+        $(release_opts).removeClass("disabled");
+    } else if (selections["method"] == "dev") {
+        // Handle dev requests
+        if (selections["linux"] == "rhel7") {
+            selections["linux"] = "centos7";
         }
+        selections["pkg"] = "all";
+        $("#rhel7").addClass("disabled");
+        $(pkg_opts).addClass("disabled");
+        $("#all").removeClass("disabled");
+        $(method_opts).removeClass("disabled");
+        $(release_opts).removeClass("disabled");
     }
 
     // Mark active options
@@ -346,7 +315,6 @@ function CopyToClipboard(containerid) {
 </script>
 <!--
     FYI commands moved to "selector-commands-*.html" one for each release type:
-      - selector-commands-legacy.html
       - selector-commands-stable.html
       - selector-commands-nightly.html
 -->

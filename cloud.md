@@ -447,21 +447,51 @@ RAPIDS can be deployed on a Dask cluster on Azure ML Compute using dask-cloudpro
 
 **3. Config.** Create your workspace config file -see **[Azure docs](https://docs.microsoft.com/en-us/azure/machine-learning/how-to-configure-environment#workspace)** for details.
 
-**4. Setup.** Setup your Azure ML Workspace using the config file created in the previous step:
+**4. Environment.** Setup your Azure ML core environment using the RAPIDS docker container:
+```shell
+from azureml.core import Environment
+>>> # create the environment
+>>> rapids_env = Environment('rapids_env')
+>>> # create the environment inside a Docker container
+>>> rapids_env.docker.enabled = True
+>>> # specify docker steps as a string. Alternatively, load the string from a file
+>>> dockerfile = """
+>>> FROM [CONTAINER]:[TAG]
+>>> RUN source activate rapids && \
+>>> pip install azureml-sdk && \
+>>> [ADDITIONAL_LIBRARIES]
+>>> """
+>>> # set base image to None since the image is defined by dockerfile
+>>> rapids_env.docker.base_image = None
+>>> rapids_env.docker.base_dockerfile = dockerfile
+>>> # use rapids environment in the container
+>>> rapids_env.python.user_managed_dependencies = True
+```
+[CONTAINER] = RAPIDS container to be used, for example, `rapidsai/rapidsai` <br>
+[TAG] = Docker container tag. <br>
+[ADDITIONAL_LIBRARIES] = Additional libraries required by the user can be installed by either using `conda` or `pip` install. <br>
+{: .margin-bottom-3em}
+
+**5. Setup.** Setup your Azure ML Workspace using the config file created in the previous step:
 ```shell
 >>> from azureml.core import Workspace
 >>> ws = Workspace.from_config()
 ```
 {: .margin-bottom-3em}
 
-**5. Create the AzureMLCluster:**
+**6. Create the AzureMLCluster:**
 ```shell
 >>> from dask_cloudprovider import AzureMLCluster
->>> cluster = AzureMLCluster(ws)
+>>> cluster = AzureMLCluster(ws,
+                             datastores=ws.datastores.values(),
+                             environment_definition=rapids_env,
+                             initial_node_count=[NUM_NODES])
 ```
+[NUM_NODES] = Number of nodes to be used. <br>
+
 {: .margin-bottom-3em}
 
-**6. Run Notebook.** In a Jupyter notebook, the cluster object will return a widget allowing you to scale up and containing links to the Jupyter Lab session running on the headnode and Dask dashboard, which are forwarded to local ports for you -unless running on a remote Compute Instance.
+**7. Run Notebook.** In a Jupyter notebook, the cluster object will return a widget allowing you to scale up and containing links to the Jupyter Lab session running on the headnode and Dask dashboard, which are forwarded to local ports for you -unless running on a remote Compute Instance.
 
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
@@ -680,25 +710,27 @@ RAPIDS can be deployed on Google Cloud Dataproc using Dask. We have **[helper sc
 
 **1. Create Dataproc cluster with Dask RAPIDS.** Use the gcloud command to create a new cluster with the below initialization action. Because of an Anaconda version conflict, script deployment on older images is slow, we recommend using Dask with Dataproc 2.0+.
 ```shell
->>> GCS_BUCKET=[BUCKET_NAME]
->>> CLUSTER_NAME=[CLUSTER_NAME]
->>> REGION=[REGION]
+>>> export GCS_BUCKET=[BUCKET_NAME]
+>>> export CLUSTER_NAME=[CLUSTER_NAME]
+>>> export REGION=[REGION]
+>>> export DASK_RUNTIME=[DASK_RUNTIME]
 >>> gcloud dataproc clusters create $CLUSTER_NAME \
     --region $REGION \
-    --image-version 1.4-ubuntu18 \
+    --image-version preview-ubuntu18 \
     --master-machine-type n1-standard-32 \
-    --master-accelerator type=nvidia-tesla-t4,count=4 \
+    --master-accelerator type=nvidia-tesla-t4,count=2 \
     --worker-machine-type n1-standard-32 \
-    --worker-accelerator type=nvidia-tesla-t4,count=4 \
+    --worker-accelerator type=nvidia-tesla-t4,count=2 \
     --optional-components=ANACONDA \
-    --initialization-actions gs://goog-dataproc-initialization-actions-${REGION}/gpu/install_gpu_driver.sh,gs://goog-dataproc-initialization-actions-${REGION}/rapids/rapids.sh \
+    --initialization-actions gs://goog-dataproc-initialization-actions-${REGION}/gpu/install_gpu_driver.sh,gs://goog-dataproc-initialization-actions-${REGION}/dask/dask.sh,gs://goog-dataproc-initialization-actions-${REGION}/rapids/rapids.sh \
     --initialization-action-timeout=60m \
-    --metadata gpu-driver-provider=NVIDIA,rapids-runtime=DASK \
+    --metadata gpu-driver-provider=NVIDIA,dask-runtime=${DASK_RUNTIME},rapids-runtime=DASK \
     --enable-component-gateway
 ```
 [BUCKET_NAME] = name of the bucket to use. <br>
 [CLUSTER_NAME] = name of the cluster. <br>
-[REGION] = name of region where cluster is to be created.
+[REGION] = name of region where cluster is to be created. <br>
+[DASK_RUNTIME] = Dask runtime could be set to either yarn or standalone.
 {: .margin-bottom-3em}
 
 **2. Run Dask RAPIDS Workload.** Once the cluster has been created, the Dask scheduler listens for workers on port 8786, and its status dashboard is on port 8787 on the Dataproc master node. To connect to the Dask web interface, you will need to create an SSH tunnel as described in the **[Dataproc web interfaces documentation.](https://cloud.google.com/dataproc/docs/concepts/accessing/cluster-web-interfaces)** You can also connect using the Dask Client Python API from a Jupyter notebook, or from a Python script or interpreter session.

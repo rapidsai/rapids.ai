@@ -406,6 +406,11 @@ NVIDIA is bringing RAPIDS to Apache Spark to accelerate ETL workflows with GPUs.
 {% endcapture %}
 
 {% capture com2_bottom_right %}
+![slurm]({{ site.baseurl }}{% link /assets/images/slurm-logo.png%}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + HPC
+
+RAPIDS works extremely well in traditional HPC environments where GPUs are often co-located with accelerated networking hardware such as InfiniBand.
+<br> **[Learn more on our HPC page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](/hpc)**
 
 {% endcapture %}
 
