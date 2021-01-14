@@ -294,21 +294,43 @@ Update the path to the ssh-public-key to point to the folder and file where your
 
 **6. Install helm chart:**
 ```shell
->>> helm install rapidstest rapidsai/rapidsai
+>>> helm install --set dask.scheduler.serviceType="LoadBalancer" --set dask.jupyter.serviceType="LoadBalancer" rapidstest rapidsai/rapidsai
 ```
 {: .margin-bottom-3em}
 
 **7. Accessing your cluster:**
 ```shell
 >>> kubectl get svc
-NAME                 TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)                       AGE
-kubernetes           ClusterIP      10.100.0.1       <none>        443/TCP                       14m
-rapidsai-jupyter     LoadBalancer   10.100.208.179   1.2.3.4       80:32332/TCP                  3m30s
-rapidsai-scheduler   LoadBalancer   10.100.19.121    5.6.7.8       8786:31779/TCP,80:32011/TCP   3m30s
+NAME                TYPE          CLUSTER-IP      EXTERNAL-IP                                                               PORT(S)                         AGE
+kubernetes          ClusterIP     10.100.0.1      <none>                                                                    443/TCP                         12m
+rapidsai-jupyter    LoadBalancer  10.100.251.155  a454a9741455544cfa37fc4ac71caa53-868718558.us-east-1.elb.amazonaws.com    80:30633/TCP                    85s
+rapidsai-scheduler  LoadBalancer  10.100.11.182   a9c703f1c002f478ea60d9acaf165bab-1146605388.us-east-1.elb.amazonaws.com   8786:30346/TCP,8787:32444/TCP   85s
 ```
 {: .margin-bottom-3em}
 
-You can now visit the external IP of the rapidsai-jupyter service in your browser!
+**7. ELB IP address:**
+**[Convert the DNS address provided above as the EXTERNAL-IP address to an IPV4 address](https://aws.amazon.com/premiumsupport/knowledge-center/elb-find-load-balancer-IP/)**. Then use the obtained IPV4 address to visit the rapidsai-jupyter service in your browser!
+
+{: .margin-bottom-3em}
+
+**8. Delete the cluster:** List and delete services running in the cluster to release resources
+```shell
+>>> kubectl get svc --all-namespaces
+>>> kubectl delete svc [SERVICE_NAME]
+```
+[SERVICE_NAME] = Name of the services which have an EXTERNAL-IP value and are required to be removed to release resources.
+
+Delete the cluster and its associated nodes
+```shell
+>>> eksctl delete cluster --region=[REGION] --name=[CLUSTER_NAME]
+```
+{: .margin-bottom-3em}
+
+**9. Uninstall the helm chart:**
+```shell
+>>> helm uninstall rapidstest
+```
+{: .margin-bottom-3em}
 
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
@@ -555,7 +577,7 @@ Please refer to the **[Microsoft Azure CLI documentation](https://docs.microsoft
 
 **7. Install helm chart:**
 ```shell
->>> helm install rapidstest rapidsai/rapidsai
+>>> helm install --set dask.scheduler.serviceType="LoadBalancer" --set dask.jupyter.serviceType="LoadBalancer" rapidstest rapidsai/rapidsai
 ```
 {: .margin-bottom-3em}
 
@@ -570,6 +592,12 @@ rapidsai-scheduler   LoadBalancer   10.100.19.121    5.6.7.8       8786:31779/TC
 {: .margin-bottom-3em}
 
 You can now visit the external IP of the rapidsai-jupyter service in your browser!
+
+**9. Uninstall the helm chart:**
+```shell
+>>> helm uninstall rapidstest
+```
+{: .margin-bottom-3em}
 
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
@@ -683,7 +711,7 @@ RAPIDS can be deployed on Google Cloud as a single instance:
 
 **1. Create.** Create a Project in your Google Cloud account.
 
-**2. Launch VM.** See the introduction section for a list of supported GPUs. We recommend using an image that already includes prerequisites such as drivers and docker, such as the **[NVIDIA GPU-Optimized Image for Deep Learning, ML & HPC VM](https://console.cloud.google.com/marketplace/details/nvidia-ngc-public/nvidia_gpu_cloud_image?supportedpurview=project)** image.
+**2. Create VM.** See the introduction section for a list of supported GPUs. We recommend using an image that already includes prerequisites such as drivers and docker, such as the **[NVIDIA GPU-Optimized Image for Deep Learning, ML & HPC VM](https://console.cloud.google.com/marketplace/details/nvidia-ngc-public/nvidia_gpu_cloud_image?supportedpurview=project)** image.
 
 **3. Drivers.** Enter Y (Yes) when asked if you would like to download the latest NVIDIA drivers.
 
@@ -698,6 +726,46 @@ RAPIDS can be deployed on Google Cloud as a single instance:
 {: .margin-bottom-3em}
 
 **6. Test RAPIDS.** The above command should start your docker container. To test the container, start a python instance and then import any one of the RAPIDS libraries in it.
+
+
+**[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
+
+
+## <i class="fab fa-google"></i> Google Instance with JupyterLab
+RAPIDS can be deployed on Google Cloud creating a VM with RAPIDS docker container fo launching JupyterLab:
+
+**1. Create.** Create a Project in your Google Cloud account.
+
+**2. Create VM.** The VM will be created by using the **[container for RAPIDS](docker pull rapidsai/rapidsai:cuda10.2-runtime-ubuntu18.04-py3.7)** available on Google cloud and [`gcloud compute instances create`](https://cloud.google.com/sdk/gcloud/reference/compute/instances/create) command
+```shell
+>>> export VM_NAME=[VM_NAME]
+>>> gcloud compute instances create $VM_NAME \
+   --zone=[ZONE] --image-project=deeplearning-platform-release \
+   --image-family=common-container --maintenance-policy=[MAINTENANCE_POLICY] \
+   --accelerator=type=[GPU_TYPE],count=[NUM_GPU]\
+   --metadata=install-nvidia-driver=True,proxy-mode=project_editors,container=gcr.io/deeplearning-platform-dogfood/dogfood.rapids-gpu.0-17 \
+   --boot-disk-size=[BOOT_DISK_SIZE] \
+   --machine-type=[MACHINE_TYPE] \
+   --scopes=https://www.googleapis.com/auth/cloud-platform
+
+```
+[BOOT_DISK_SIZE] = size of the boot disk.<br>
+[GPU_TYPE] = the type of GPU. See the introduction section for a list of supported GPU types. Ex. `nvidia-tesla-v100`.<br>
+[MAINTENANCE_POLICY] = specifies the behavior of the instance when the host machine is undergoes maintenance. The recommended value is TERMINATE.<br>
+[MACHINE_TYPE] = machine type used for the instances. Ex. `n1-highmem-2`.<br>
+[NUM_GPU] = the number of GPUs. <br>
+[VM_NAME] = name of the VM to be created.<br>
+[ZONE] = zone in which the instance will be created.
+
+**3. Launch VM.** Launch the VM and then run the docker continer using the following command :
+```shell
+>>> docker run --gpus all --rm -it \
+    gcr.io/deeplearning-platform-dogfood/dogfood.rapids-gpu.0-17
+```
+This will launch the JupyterLab session.
+
+{: .margin-bottom-3em}
+
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
 
@@ -774,8 +842,6 @@ RAPIDS can be deployed in a Kubernetes cluster on GCP. For more information, see
     --max-nodes [MAX_NODES] \
     --enable-autoscaling
 ```
-[GPU_TYPE] = the type of GPU. See the introduction section for a list of supported GPU types. Ex. `nvidia-tesla-v100`.<br>
-[NUM_GPU] = the number of GPUs. <br>
 [NODE_REGION] = The node locations to be used in the default regions. Ex. `us-west1-b` <br>
 [NUM_NODES] = number of nodes to be created in each of the cluster's zones. <br>
 [MAX_NODES] = Maximum number of nodes to which the node pool specified by `--node-pool` (or default node pool if unspecified) can scale.
@@ -816,7 +882,7 @@ Example:
 
 **8. Install the helm chart:**
 ```shell
->>> helm install rapidstest rapidsai/rapidsai
+>>> helm install --set dask.scheduler.serviceType="LoadBalancer" --set dask.jupyter.serviceType="LoadBalancer" rapidstest rapidsai/rapidsai
 ```
 {: .margin-bottom-3em}
 
@@ -831,6 +897,12 @@ rapidsai-scheduler   LoadBalancer   10.100.19.121    5.6.7.8       8786:31779/TC
 {: .margin-bottom-3em}
 
 To run notebooks on jupyter in your browser, visit the external IP of rapidsai-jupyter.
+
+**10. Uninstall the helm chart:**
+```shell
+>>> helm uninstall rapidstest
+```
+{: .margin-bottom-3em}
 
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
