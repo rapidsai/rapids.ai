@@ -641,7 +641,7 @@ a h2:hover,
 .projects-logo {
     position: relative;
     left: 50%;
-    width: 350px;
+    max-width: 350px;
     transform: translate(-50%)
 }
 
@@ -784,6 +784,7 @@ a.query-wf {
 
 footer {
     background: url(../images/footer-bg.png) top center no-repeat;
+    background-size: cover;
     padding-top: 4em;
     padding-bottom: 3em;
     text-align: center;
