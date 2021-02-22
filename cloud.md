@@ -20,8 +20,8 @@ RAPIDS can be deployed in a number of ways, from hosted Jupyter notebooks, to th
 {% endcapture %}
 
 {% include section-single.html
-    background="background-white" 
-    padding-top="0em" padding-bottom="10em" 
+    background="background-white"
+    padding-top="0em" padding-bottom="10em"
     content-single=intro_content
 %}
 
@@ -66,27 +66,27 @@ For the various deployment options on each cloud, as well as instructions and li
 {% endcapture %}
 
 <div id="deploy"></div>
-{% include slopecap.html 
-    background="background-purple" 
-    position="top" 
-    slope="down" 
+{% include slopecap.html
+    background="background-purple"
+    position="top"
+    slope="down"
 %}
 {% include section-single.html
-    background="background-purple" 
-    padding-top="5em" padding-bottom="3em" 
+    background="background-purple"
+    padding-top="5em" padding-bottom="3em"
     content-single=csp_sel
 %}
-{% include section-thirds.html 
-    background="background-purple" 
-    padding-top="0em" padding-bottom="5em" 
+{% include section-thirds.html
+    background="background-purple"
+    padding-top="0em" padding-bottom="5em"
     content-left-third=csp_left
     content-middle-third=csp_mid
     content-right-third=csp_right
 %}
-{% include slopecap.html 
-    background="background-purple" 
-    position="bottom" 
-    slope="up" 
+{% include slopecap.html
+    background="background-purple"
+    position="bottom"
+    slope="up"
 %}
 
 <!-- AWS -->
@@ -121,14 +121,14 @@ RAPIDS can be deployed on Amazon Web Services (AWS) in several ways:
 {% endcapture %}
 
 {% include section-single.html
-    background="background-gray" 
-    padding-top="10em" padding-bottom="3em" 
+    background="background-gray"
+    padding-top="10em" padding-bottom="3em"
     content-single=aws_intro
 %}
-{% include slopecap.html 
-    background="background-gray" 
-    position="bottom" 
-    slope="down" 
+{% include slopecap.html
+    background="background-gray"
+    position="bottom"
+    slope="down"
 %}
 
 {% capture aws_ec2 %}
@@ -160,7 +160,9 @@ There are multiple ways you can deploy RAPIDS on a single instance, but the easi
 {% capture aws_dask %}
 ## <i class="fab fa-aws"></i> AWS Cluster via Dask
 
-RAPIDS can be deployed on ECS using Dask’s dask-cloudprovider management tools. For more details, see our **[blog post on deploying on ECS.](https://medium.com/rapids-ai/getting-started-with-rapids-on-aws-ecs-using-dask-cloud-provider-b1adfdbc9c6e)**
+RAPIDS can be deployed on a multi-node ECS cluster using Dask’s dask-cloudprovider management tools. For more details, see our **[blog post on deploying on ECS.](https://medium.com/rapids-ai/getting-started-with-rapids-on-aws-ecs-using-dask-cloud-provider-b1adfdbc9c6e)**
+
+**0. Run from within AWS.** The following steps assume you are running them from within the same AWS VPC. One way to ensure this is to run through the [AWS Single Instance (EC2)](#AWS-EC2) instructions and then run these steps from there.
 
 **1. Setup AWS credentials.** First, you will need AWS credentials to allow us to interact with the AWS CLI. If someone else manages your AWS account, you will need to get these keys from them. You can provide these credentials to dask-cloudprovider in a number of ways, but the easiest is to setup your local environment using the AWS command line tools:
 ```shell
@@ -171,12 +173,12 @@ RAPIDS can be deployed on ECS using Dask’s dask-cloudprovider management tools
 
 **2. Install dask-cloudprovider.** To install, you will need to run the following:
 ```shell
->>> pip install dask-cloudprovider
+>>> pip install dask-cloudprovider[aws]
 ```
 {: .margin-bottom-3em}
 
 **3. Create an EC2 cluster:**
-In the AWS console, visit the ECS dashboard. From the “Clusters” section on the left hand side, click “Create Cluster”. 
+In the AWS console, visit the ECS dashboard. From the “Clusters” section on the left hand side, click “Create Cluster”.
 
 Make sure to select an EC 2 Linux + Networking cluster so that we can specify our networking options.
 
@@ -192,7 +194,7 @@ All other options can be left at defaults. You can now click “create” and wa
 
 Get the Amazon Resource Name (ARN) for the cluster you just created.
 
-Set `AWS_DEFAULT_REGION` environment variable to your **[default region](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions)**: 
+Set `AWS_DEFAULT_REGION` environment variable to your **[default region](https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html#concepts-regions)**:
 ```shell
 export AWS_DEFAULT_REGION=[REGION]
 ```
@@ -201,17 +203,16 @@ export AWS_DEFAULT_REGION=[REGION]
 
 Create the ECSCluster object in your Python session:
 ```shell
->>> from dask_cloudprovider import ECSCluster
+>>> from dask_cloudprovider.aws import ECSCluster
 >>> cluster = ECSCluster(
-                            cluster_arn=[CLUSTER_ARN],
-                            n_workers=[NUM_WORKERS],
-                            worker_gpu=[NUM_GPUS],
-                            fargate_scheduler=True
+                            cluster_arn=<CLUSTER_ARN>,
+                            n_workers=<NUM_WORKERS>,
+                            worker_gpu=<NUM_GPUS>
                          )
 ```
-[CLUSTER_ARN] = The ARN of an existing ECS cluster to use for launching tasks
-[NUM_WORKERS] = Number of workers to start on cluster creation. <br>
-[NUM_GPUS] = The number of GPUs to expose to the worker.
+[CLUSTER_ARN] = The ARN of an existing ECS cluster to use for launching tasks <br />
+[NUM_WORKERS] = Number of workers to start on cluster creation. <br />
+[NUM_GPUS] = The number of GPUs to expose to the worker, this must be less than or equal to the number of GPUs in the instance type you selected for the ECS cluster (e.g `1` for `p3.2xlarge`).
 {: .margin-bottom-3em}
 
 **5. Test RAPIDS.** Create a distributed client for our cluster:
@@ -293,21 +294,43 @@ Update the path to the ssh-public-key to point to the folder and file where your
 
 **6. Install helm chart:**
 ```shell
->>> helm install rapidstest rapidsai/rapidsai
+>>> helm install --set dask.scheduler.serviceType="LoadBalancer" --set dask.jupyter.serviceType="LoadBalancer" rapidstest rapidsai/rapidsai
 ```
 {: .margin-bottom-3em}
 
 **7. Accessing your cluster:**
 ```shell
 >>> kubectl get svc
-NAME                 TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)                       AGE
-kubernetes           ClusterIP      10.100.0.1       <none>        443/TCP                       14m
-rapidsai-jupyter     LoadBalancer   10.100.208.179   1.2.3.4       80:32332/TCP                  3m30s
-rapidsai-scheduler   LoadBalancer   10.100.19.121    5.6.7.8       8786:31779/TCP,80:32011/TCP   3m30s
+NAME                TYPE          CLUSTER-IP      EXTERNAL-IP                                                               PORT(S)                         AGE
+kubernetes          ClusterIP     10.100.0.1      <none>                                                                    443/TCP                         12m
+rapidsai-jupyter    LoadBalancer  10.100.251.155  a454a9741455544cfa37fc4ac71caa53-868718558.us-east-1.elb.amazonaws.com    80:30633/TCP                    85s
+rapidsai-scheduler  LoadBalancer  10.100.11.182   a9c703f1c002f478ea60d9acaf165bab-1146605388.us-east-1.elb.amazonaws.com   8786:30346/TCP,8787:32444/TCP   85s
 ```
 {: .margin-bottom-3em}
 
-You can now visit the external IP of the rapidsai-jupyter service in your browser!
+**7. ELB IP address:**
+**[Convert the DNS address provided above as the EXTERNAL-IP address to an IPV4 address](https://aws.amazon.com/premiumsupport/knowledge-center/elb-find-load-balancer-IP/)**. Then use the obtained IPV4 address to visit the rapidsai-jupyter service in your browser!
+
+{: .margin-bottom-3em}
+
+**8. Delete the cluster:** List and delete services running in the cluster to release resources
+```shell
+>>> kubectl get svc --all-namespaces
+>>> kubectl delete svc [SERVICE_NAME]
+```
+[SERVICE_NAME] = Name of the services which have an EXTERNAL-IP value and are required to be removed to release resources.
+
+Delete the cluster and its associated nodes
+```shell
+>>> eksctl delete cluster --region=[REGION] --name=[CLUSTER_NAME]
+```
+{: .margin-bottom-3em}
+
+**9. Uninstall the helm chart:**
+```shell
+>>> helm uninstall rapidstest
+```
+{: .margin-bottom-3em}
 
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
@@ -319,11 +342,11 @@ You can now visit the external IP of the rapidsai-jupyter service in your browse
 
 RAPIDS also works with AWS Sagemaker. We’ve written a **[detailed guide](https://medium.com/rapids-ai/running-rapids-experiments-at-scale-using-amazon-sagemaker-d516420f165b)** with **[examples](https://github.com/rapidsai/cloud-ml-examples/tree/main/aws)** for how to use Sagemaker with RAPIDS, but the simplest version is:
 
-**1. Start.** Start a Sagemaker hosted Jupyter notebook instance on AWS. 
+**1. Start.** Start a Sagemaker hosted Jupyter notebook instance on AWS.
 
 **2. Clone.** **[Clone the example repository](https://github.com/shashankprasanna/sagemaker-rapids.git)** which includes all required setup and some example data and code.
 
-**3. Run.** Start running the sagemaker-rapids.ipynb jupyter notebook. 
+**3. Run.** Start running the sagemaker-rapids.ipynb jupyter notebook.
 
 For more details, including on running large-scale HPO jobs on Sagemaker with RAPIDS, check out the **[detailed guide](https://medium.com/rapids-ai/running-rapids-experiments-at-scale-using-amazon-sagemaker-d516420f165b)** and **[examples.](https://github.com/rapidsai/cloud-ml-examples/tree/main/aws)**
 
@@ -333,26 +356,26 @@ For more details, including on running large-scale HPO jobs on Sagemaker with RA
 {% endcapture %}
 <div id="AWS-EC2"></div>
 {% include section-single.html
-    background="background-white" 
-    padding-top="6em" padding-bottom="0em" 
+    background="background-white"
+    padding-top="6em" padding-bottom="0em"
     content-single=aws_ec2
 %}
 <div id="AWS-Dask"></div>
 {% include section-single.html
-    background="background-white" 
-    padding-top="3em" padding-bottom="0em" 
+    background="background-white"
+    padding-top="3em" padding-bottom="0em"
     content-single=aws_dask
 %}
 <div id="AWS-Kubernetes"></div>
 {% include section-single.html
-    background="background-white" 
-    padding-top="3em" padding-bottom="0em" 
+    background="background-white"
+    padding-top="3em" padding-bottom="0em"
     content-single=aws_kub
 %}
 <div id="AWS-Sagemaker"></div>
 {% include section-single.html
-    background="background-white" 
-    padding-top="3em" padding-bottom="10em" 
+    background="background-white"
+    padding-top="3em" padding-bottom="10em"
     content-single=aws_sage
 %}
 
@@ -389,20 +412,20 @@ RAPIDS can be deployed on Microsoft Azure via several methods:
 
 {% endcapture %}
 
-{% include slopecap.html 
-    background="background-gray" 
-    position="top" 
-    slope="down" 
+{% include slopecap.html
+    background="background-gray"
+    position="top"
+    slope="down"
 %}
 {% include section-single.html
-    background="background-gray" 
-    padding-top="3em" padding-bottom="3em" 
+    background="background-gray"
+    padding-top="3em" padding-bottom="3em"
     content-single=azure_intro
 %}
-{% include slopecap.html 
-    background="background-gray" 
-    position="bottom" 
-    slope="up" 
+{% include slopecap.html
+    background="background-gray"
+    position="bottom"
+    slope="up"
 %}
 
 {% capture az_single %}
@@ -410,11 +433,11 @@ RAPIDS can be deployed on Microsoft Azure via several methods:
 
 There are multiple ways you can deploy RAPIDS on a single VM instance, but the easiest is to use the RAPIDS docker image:
 
-**1. Initiate VM.** **[Initiate a VM instance](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-portal)** using a VM supported by RAPIDS. See the introduction section for a list of supported instance types. It is recommended to use an image that already includes the required NVIDIA drivers, such as **[this one.](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/nvidia.ngc_azure_17_11?tab=Overview)** 
+**1. Initiate VM.** **[Initiate a VM instance](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-portal)** using a VM supported by RAPIDS. See the introduction section for a list of supported instance types. It is recommended to use an image that already includes the required NVIDIA drivers, such as **[this one.](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/nvidia.ngc_azure_17_11?tab=Overview)**
 
 **2. Credentials.** Using the credentials supplied by Azure, log into the instance via SSH.
 
-**3. Docker Permissions.** **[Setup docker user permissions.](https://docs.docker.com/engine/install/linux-postinstall/)** 
+**3. Docker Permissions.** **[Setup docker user permissions.](https://docs.docker.com/engine/install/linux-postinstall/)**
 
 **4. Install.** **[Install RAPIDS docker image](https://rapids.ai/start.html)**. The docker container can be customized by using the options provided in the **[Getting Started](https://rapids.ai/start.html)** page of RAPIDS. Example of an image that can be used is provided below:
 ```shell
@@ -510,7 +533,7 @@ RAPIDS can be deployed on a Kubernetes cluster on Azure using Helm. More details
 >>> az group create --name [RESOURCE_GROUP] --location [REGION]
 ```
 [RESOURCE_GROUP] = resource group to be created. <br>
-[REGION] = the location where the resource group should be created. 
+[REGION] = the location where the resource group should be created.
 {: .margin-bottom-3em}
 
 **3. Create your cluster:**
@@ -554,7 +577,7 @@ Please refer to the **[Microsoft Azure CLI documentation](https://docs.microsoft
 
 **7. Install helm chart:**
 ```shell
->>> helm install rapidstest rapidsai/rapidsai
+>>> helm install --set dask.scheduler.serviceType="LoadBalancer" --set dask.jupyter.serviceType="LoadBalancer" rapidstest rapidsai/rapidsai
 ```
 {: .margin-bottom-3em}
 
@@ -569,6 +592,12 @@ rapidsai-scheduler   LoadBalancer   10.100.19.121    5.6.7.8       8786:31779/TC
 {: .margin-bottom-3em}
 
 You can now visit the external IP of the rapidsai-jupyter service in your browser!
+
+**9. Uninstall the helm chart:**
+```shell
+>>> helm uninstall rapidstest
+```
+{: .margin-bottom-3em}
 
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
@@ -597,7 +626,7 @@ RAPIDS can be deployed at scale using Azure Machine Learning Service--and easily
  --vm_size=[VM_SIZE] \
  --node_count=[NUM_NODES]
 ```
-[CONFIG_PATH] = the path to the config file you downloaded in step three. 
+[CONFIG_PATH] = the path to the config file you downloaded in step three.
 {: .margin-bottom-3em}
 
 **7. Start.** Open your browser to http://localhost:8888 and get started!
@@ -610,26 +639,26 @@ See **[the guide](https://medium.com/rapids-ai/rapids-on-microsoft-azure-machine
 {% endcapture %}
 <div id="AZ-single"></div>
 {% include section-single.html
-    background="background-white" 
-    padding-top="6em" padding-bottom="0em" 
+    background="background-white"
+    padding-top="6em" padding-bottom="0em"
     content-single=az_single
 %}
 <div id="AZ-Dask"></div>
 {% include section-single.html
-    background="background-white" 
-    padding-top="5em" padding-bottom="0em" 
+    background="background-white"
+    padding-top="5em" padding-bottom="0em"
     content-single=az_dask
 %}
 <div id="AZ-Kubernetes"></div>
 {% include section-single.html
-    background="background-white" 
-    padding-top="3em" padding-bottom="0em" 
+    background="background-white"
+    padding-top="3em" padding-bottom="0em"
     content-single=az_kub
 %}
 <div id="AZ-ML"></div>
 {% include section-single.html
-    background="background-white" 
-    padding-top="3em" padding-bottom="10em" 
+    background="background-white"
+    padding-top="3em" padding-bottom="10em"
     content-single=az_ml
 %}
 
@@ -659,20 +688,20 @@ RAPIDS can be used in Google Cloud in several different ways:
 
 {% endcapture %}
 
-{% include slopecap.html 
-    background="background-gray" 
-    position="top" 
-    slope="down" 
+{% include slopecap.html
+    background="background-gray"
+    position="top"
+    slope="down"
 %}
 {% include section-single.html
-    background="background-gray" 
-    padding-top="3em" padding-bottom="3em" 
+    background="background-gray"
+    padding-top="3em" padding-bottom="3em"
     content-single=gcp_intro
 %}
-{% include slopecap.html 
-    background="background-gray" 
-    position="bottom" 
-    slope="up" 
+{% include slopecap.html
+    background="background-gray"
+    position="bottom"
+    slope="up"
 %}
 
 {% capture gc_single %}
@@ -682,7 +711,7 @@ RAPIDS can be deployed on Google Cloud as a single instance:
 
 **1. Create.** Create a Project in your Google Cloud account.
 
-**2. Launch VM.** See the introduction section for a list of supported GPUs. We recommend using an image that already includes prerequisites such as drivers and docker, such as the **[NVIDIA GPU-Optimized Image for Deep Learning, ML & HPC VM](https://console.cloud.google.com/marketplace/details/nvidia-ngc-public/nvidia_gpu_cloud_image?supportedpurview=project)** image. 
+**2. Create VM.** See the introduction section for a list of supported GPUs. We recommend using an image that already includes prerequisites such as drivers and docker, such as the **[NVIDIA GPU-Optimized Image for Deep Learning, ML & HPC VM](https://console.cloud.google.com/marketplace/details/nvidia-ngc-public/nvidia_gpu_cloud_image?supportedpurview=project)** image.
 
 **3. Drivers.** Enter Y (Yes) when asked if you would like to download the latest NVIDIA drivers.
 
@@ -697,6 +726,46 @@ RAPIDS can be deployed on Google Cloud as a single instance:
 {: .margin-bottom-3em}
 
 **6. Test RAPIDS.** The above command should start your docker container. To test the container, start a python instance and then import any one of the RAPIDS libraries in it.
+
+
+**[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
+
+
+## <i class="fab fa-google"></i> Google Instance with JupyterLab
+RAPIDS can be deployed on Google Cloud creating a VM with RAPIDS docker container fo launching JupyterLab:
+
+**1. Create.** Create a Project in your Google Cloud account.
+
+**2. Create VM.** The VM will be created by using the **[container for RAPIDS](docker pull rapidsai/rapidsai:cuda10.2-runtime-ubuntu18.04-py3.7)** available on Google cloud and [`gcloud compute instances create`](https://cloud.google.com/sdk/gcloud/reference/compute/instances/create) command
+```shell
+>>> export VM_NAME=[VM_NAME]
+>>> gcloud compute instances create $VM_NAME \
+   --zone=[ZONE] --image-project=deeplearning-platform-release \
+   --image-family=common-container --maintenance-policy=[MAINTENANCE_POLICY] \
+   --accelerator=type=[GPU_TYPE],count=[NUM_GPU]\
+   --metadata=install-nvidia-driver=True,proxy-mode=project_editors,container=gcr.io/deeplearning-platform-dogfood/dogfood.rapids-gpu.0-17 \
+   --boot-disk-size=[BOOT_DISK_SIZE] \
+   --machine-type=[MACHINE_TYPE] \
+   --scopes=https://www.googleapis.com/auth/cloud-platform
+
+```
+[BOOT_DISK_SIZE] = size of the boot disk.<br>
+[GPU_TYPE] = the type of GPU. See the introduction section for a list of supported GPU types. Ex. `nvidia-tesla-v100`.<br>
+[MAINTENANCE_POLICY] = specifies the behavior of the instance when the host machine is undergoes maintenance. The recommended value is TERMINATE.<br>
+[MACHINE_TYPE] = machine type used for the instances. Ex. `n1-highmem-2`.<br>
+[NUM_GPU] = the number of GPUs. <br>
+[VM_NAME] = name of the VM to be created.<br>
+[ZONE] = zone in which the instance will be created.
+
+**3. Launch VM.** Launch the VM and then run the docker continer using the following command :
+```shell
+>>> docker run --gpus all --rm -it \
+    gcr.io/deeplearning-platform-dogfood/dogfood.rapids-gpu.0-17
+```
+This will launch the JupyterLab session.
+
+{: .margin-bottom-3em}
+
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
 
@@ -773,8 +842,6 @@ RAPIDS can be deployed in a Kubernetes cluster on GCP. For more information, see
     --max-nodes [MAX_NODES] \
     --enable-autoscaling
 ```
-[GPU_TYPE] = the type of GPU. See the introduction section for a list of supported GPU types. Ex. `nvidia-tesla-v100`.<br>
-[NUM_GPU] = the number of GPUs. <br>
 [NODE_REGION] = The node locations to be used in the default regions. Ex. `us-west1-b` <br>
 [NUM_NODES] = number of nodes to be created in each of the cluster's zones. <br>
 [MAX_NODES] = Maximum number of nodes to which the node pool specified by `--node-pool` (or default node pool if unspecified) can scale.
@@ -815,7 +882,7 @@ Example:
 
 **8. Install the helm chart:**
 ```shell
->>> helm install rapidstest rapidsai/rapidsai
+>>> helm install --set dask.scheduler.serviceType="LoadBalancer" --set dask.jupyter.serviceType="LoadBalancer" rapidstest rapidsai/rapidsai
 ```
 {: .margin-bottom-3em}
 
@@ -830,6 +897,12 @@ rapidsai-scheduler   LoadBalancer   10.100.19.121    5.6.7.8       8786:31779/TC
 {: .margin-bottom-3em}
 
 To run notebooks on jupyter in your browser, visit the external IP of rapidsai-jupyter.
+
+**10. Uninstall the helm chart:**
+```shell
+>>> helm uninstall rapidstest
+```
+{: .margin-bottom-3em}
 
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
@@ -867,26 +940,26 @@ For more details, or for other ways to deploy on Google CloudAI, see the **[deta
 {% endcapture %}
 <div id="GC-single"></div>
 {% include section-single.html
-    background="background-white" 
-    padding-top="6em" padding-bottom="0em" 
+    background="background-white"
+    padding-top="6em" padding-bottom="0em"
     content-single=gc_single
 %}
 <div id="GC-Dask"></div>
 {% include section-single.html
-    background="background-white" 
-    padding-top="3em" padding-bottom="0em" 
+    background="background-white"
+    padding-top="3em" padding-bottom="0em"
     content-single=gc_dask
 %}
 <div id="GC-Kubernetes"></div>
 {% include section-single.html
-    background="background-white" 
-    padding-top="3em" padding-bottom="0em" 
+    background="background-white"
+    padding-top="3em" padding-bottom="0em"
     content-single=gc_kub
 %}
 <div id="GC-AI"></div>
 {% include section-single.html
-    background="background-white" 
-    padding-top="3em" padding-bottom="10em" 
+    background="background-white"
+    padding-top="3em" padding-bottom="10em"
     content-single=gc_ai
 %}
 
@@ -896,18 +969,18 @@ For more details, or for other ways to deploy on Google CloudAI, see the **[deta
 {: .section-title-full .text-white}
 
 {% endcapture %}
-{% include slopecap.html 
-    background="background-darkpurple" 
-    position="top" 
-    slope="down" 
+{% include slopecap.html
+    background="background-darkpurple"
+    position="top"
+    slope="down"
 %}
 {% include section-single.html
-    background="background-darkpurple" 
-    padding-top="0em" padding-bottom="0em" 
+    background="background-darkpurple"
+    padding-top="0em" padding-bottom="0em"
     content-single=end_bottom
 %}
-{% include cta-footer.html 
-    name="Experience Data Science on GPUs with RAPIDS" 
+{% include cta-footer.html
+    name="Experience Data Science on GPUs with RAPIDS"
     tagline=""
     button="GET STARTED"
     link="start.html"
