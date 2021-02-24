@@ -61,23 +61,23 @@ def generate_source(config):
     tag_name = config["name"]
     url_path = "/tree/main" if tag_name == "stable" else ""
     config["cmds"].append("\n<!-- source installs -->\n")
-    cmd = "<div class='"+tag_name+"-cudf-source hidden'>\n\\n\
-    <pre># See <a href='https://github.com/rapidsai/cudf"+url_path+"#buildinstall-from-source' _target='blank'>cuDF Stable README</a> for build instructions</pre>\n\\n\
+    cmd = "<div class='"+tag_name+"-cudf-source hidden'>\n\
+    <pre># See <a href='https://github.com/rapidsai/cudf"+url_path+"#buildinstall-from-source' _target='blank'>cuDF README</a> for "+tag_name+" build instructions</pre>\n\
 </div>\n\
 <div class='"+tag_name+"-cuml-source hidden'>\n\
-    <pre># See <a href='https://github.com/rapidsai/cuml"+url_path+"#buildinstall-from-source' _target='blank'>cuML Stable README</a> for build instructions</pre>\n\
+    <pre># See <a href='https://github.com/rapidsai/cuml"+url_path+"#buildinstall-from-source' _target='blank'>cuML README</a> for "+tag_name+" build instructions</pre>\n\
 </div>\n\
 <div class='"+tag_name+"-cugraph-source hidden'>\n\
-    <pre># See <a href='https://github.com/rapidsai/cugraph"+url_path+"#build-from-source-and-contributing' _target='blank'>cuGraph Stable README</a> for build instructions</pre>\n\
+    <pre># See <a href='https://github.com/rapidsai/cugraph"+url_path+"#build-from-source-and-contributing' _target='blank'>cuGraph README</a> for "+tag_name+" build instructions</pre>\n\
 </div>\n\
 <div class='"+tag_name+"-cusignal-source hidden'>\n\
-    <pre># See <a href='https://github.com/rapidsai/cusignal"+url_path+"#dependencies' _target='blank'>cuSignal Stable README</a> for build instructions</pre>\n\
+    <pre># See <a href='https://github.com/rapidsai/cusignal"+url_path+"#dependencies' _target='blank'>cuSignal README</a> for "+tag_name+" build instructions</pre>\n\
 </div>\n\
 <div class='"+tag_name+"-cuspatial-source hidden'>\n\
-    <pre># See <a href='https://github.com/rapidsai/cuspatial"+url_path+"#clone-build-and-install-cuspatial' _target='blank'>cuSpatial Stable README</a> for build instructions</pre>\n\
+    <pre># See <a href='https://github.com/rapidsai/cuspatial"+url_path+"#clone-build-and-install-cuspatial' _target='blank'>cuSpatial Stable README</a> for "+tag_name+" build instructions</pre>\n\
 </div>\n\
 <div class='"+tag_name+"-cuxfilter-source hidden'>\n\
-    <pre># See <a href='https://github.com/rapidsai/cuxfilter"+url_path+"#installation' _target='blank'>cuxfilter Stable README</a> for build instructions</pre>\n\
+    <pre># See <a href='https://github.com/rapidsai/cuxfilter"+url_path+"#installation' _target='blank'>cuxfilter Stable README</a> for "+tag_name+" build instructions</pre>\n\
 </div>\n"
     config["cmds"].append(cmd)
 
