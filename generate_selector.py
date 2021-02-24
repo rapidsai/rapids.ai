@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """
-selector_generator.py
+generate_selector.py
 
 Script generates output for the following files based on the configuration
 arrays below:
@@ -12,11 +12,11 @@ import glob
 import os
 
 """
-Configurations
+Selector configurations
 """
 STABLE_CONFIG ={
     "name": "stable",
-    "file": "_includes/selector-commands-stable-test.html",
+    "file": "_includes/selector-commands-stable-test.html", #TODO update path after testing
     "ver": "0.18",
     "os": ['ubuntu16.04','ubuntu18.04','ubuntu20.04','centos7','centos8'],
     "cuda": ['cuda10.1','cuda10.2','cuda11.0'],
@@ -26,7 +26,7 @@ STABLE_CONFIG ={
 
 NIGHTLY_CONFIG ={
     "name": "nightly",
-    "file": "_includes/selector-commands-nightly-test.html",
+    "file": "_includes/selector-commands-nightly-test.html", #TODO update path after testing
     "ver": "0.19",
     "os": ['ubuntu16.04','ubuntu18.04','ubuntu20.04','centos7','centos8'],
     "cuda": ['cuda10.1','cuda10.2','cuda11.0'],
@@ -34,9 +34,6 @@ NIGHTLY_CONFIG ={
     "cmds": [] # Leave empty
 }
 
-"""
-GENERATOR FUNCTIONS
-"""
 def generate_docker(config, selector_name, docker_repo, docker_type):
     """ Generates docker commands"""
     rapids_ver = config["ver"]
@@ -57,6 +54,30 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \\\n\
 {: ."+tag_name+"-"+selector_name+"-all-"+docker_type+"-"+tag_os+"-"+tag_py+"-"+tag_cuda+" .hidden }\n"
                 config["cmds"].append(cmd)
 
+def generate_source(config):
+    tag_name = config["name"]
+    url_path = "/tree/main" if tag_name == "stable" else ""
+    cmd = "<div class='"+tag_name+"-cudf-source hidden'>\n\\n\
+    <pre># See <a href='https://github.com/rapidsai/cudf"+url_path+"#buildinstall-from-source' _target='blank'>cuDF Stable README</a> for build instructions</pre>\n\\n\
+</div>\n\
+<div class='"+tag_name+"-cuml-source hidden'>\n\
+    <pre># See <a href='https://github.com/rapidsai/cuml"+url_path+"#buildinstall-from-source' _target='blank'>cuML Stable README</a> for build instructions</pre>\n\
+</div>\n\
+<div class='"+tag_name+"-cugraph-source hidden'>\n\
+    <pre># See <a href='https://github.com/rapidsai/cugraph"+url_path+"#build-from-source-and-contributing' _target='blank'>cuGraph Stable README</a> for build instructions</pre>\n\
+</div>\n\
+<div class='"+tag_name+"-cusignal-source hidden'>\n\
+    <pre># See <a href='https://github.com/rapidsai/cusignal"+url_path+"#dependencies' _target='blank'>cuSignal Stable README</a> for build instructions</pre>\n\
+</div>\n\
+<div class='"+tag_name+"-cuspatial-source hidden'>\n\
+    <pre># See <a href='https://github.com/rapidsai/cuspatial"+url_path+"#clone-build-and-install-cuspatial' _target='blank'>cuSpatial Stable README</a> for build instructions</pre>\n\
+</div>\n\
+<div class='"+tag_name+"-cuxfilter-source hidden'>\n\
+    <pre># See <a href='https://github.com/rapidsai/cuxfilter"+url_path+"#installation' _target='blank'>cuxfilter Stable README</a> for build instructions</pre>\n\
+</div>"
+    config["cmds"].append(cmd)
+
+
 def write_output(config):
     """Write output to file"""
     f = open(config["file"], 'wt')
@@ -75,6 +96,7 @@ def main():
         generate_docker(config, "rapidscore", "rapidsai/rapidsai-core", "base")
         generate_docker(config, "rapidscore", "rapidsai/rapidsai-core", "runtime")
         generate_docker(config, "rapidscore", "rapidsai/rapidsai-core-dev", "devel")
+        generate_source(config)
         print(f"Writing {name} commands to file '{filename}'")
         write_output(config)
         print(f"Finished writing {name} commands to file '{filename}'")
