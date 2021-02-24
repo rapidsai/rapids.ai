@@ -16,7 +16,7 @@ Selector configurations
 """
 STABLE_CONFIG ={
     "name": "stable",
-    "file": "_includes/selector-commands-stable-test.html", #TODO update path after testing
+    "file": "_includes/selector-commands-stable.html",
     "ver": "0.18",
     "os": ['ubuntu16.04','ubuntu18.04','ubuntu20.04','centos7','centos8'],
     "cuda": ['10.1','10.2','11.0'],
@@ -27,7 +27,7 @@ STABLE_CONFIG ={
 
 NIGHTLY_CONFIG ={
     "name": "nightly",
-    "file": "_includes/selector-commands-nightly-test.html", #TODO update path after testing
+    "file": "_includes/selector-commands-nightly.html",
     "ver": "0.19",
     "os": ['ubuntu16.04','ubuntu18.04','ubuntu20.04','centos7','centos8'],
     "cuda": ['10.1','10.2','11.0'],
