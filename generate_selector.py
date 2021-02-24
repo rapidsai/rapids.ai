@@ -37,7 +37,7 @@ NIGHTLY_CONFIG ={
 }
 
 def generate_docker(config, selector_name, docker_repo, docker_type):
-    """ Generates docker commands"""
+    """Generates docker commands"""
     rapids_ver = config["ver"]
     for os_ver in config["os"]:
         config["cmds"].append("\n<!-- docker "+selector_name+"-"+docker_type+" "+os_ver+" -->\n")
@@ -57,8 +57,10 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \\\n\
                 config["cmds"].append(cmd)
 
 def generate_source(config):
+    """Generates source install commands"""
     tag_name = config["name"]
     url_path = "/tree/main" if tag_name == "stable" else ""
+    config["cmds"].append("\n<!-- source installs -->\n")
     cmd = "<div class='"+tag_name+"-cudf-source hidden'>\n\\n\
     <pre># See <a href='https://github.com/rapidsai/cudf"+url_path+"#buildinstall-from-source' _target='blank'>cuDF Stable README</a> for build instructions</pre>\n\\n\
 </div>\n\
@@ -76,9 +78,42 @@ def generate_source(config):
 </div>\n\
 <div class='"+tag_name+"-cuxfilter-source hidden'>\n\
     <pre># See <a href='https://github.com/rapidsai/cuxfilter"+url_path+"#installation' _target='blank'>cuxfilter Stable README</a> for build instructions</pre>\n\
-</div>"
+</div>\n"
     config["cmds"].append(cmd)
 
+def generate_conda_all(config, selector_name, meta_package):
+    """Generates conda install commands with all libraries"""
+    rapids_ver = config["ver"]
+    for cuda_ver in config["cuda"]:
+        config["cmds"].append("\n<!-- conda "+selector_name+"-all "+cuda_ver+" -->\n")
+        for py_ver in config["py"]:
+            tag_name = config["name"]
+            tag_cuda = cuda_ver.replace('.','')
+            tag_py = py_ver.replace('.','')
+            cmd = "```bash\n\
+conda create -n rapids-"+rapids_ver+" -c rapidsai -c nvidia -c conda-forge \\\n\
+    -c defaults "+meta_package+"="+rapids_ver+" python="+py_ver+" cudatoolkit="+cuda_ver+"\n\
+```\n\
+{: ."+tag_name+"-"+selector_name+"-all-conda-py"+tag_py+"-cuda"+tag_cuda+" .hidden }\n"
+            config["cmds"].append(cmd)
+
+def generate_conda_lib(config, selector_name):
+    """Generates conda install commands for each library"""
+    rapids_ver = config["ver"]
+    for lib in config["libs"]:
+        for cuda_ver in config["cuda"]:
+            config["cmds"].append("\n<!-- conda-lib "+selector_name+"-"+lib+" "+cuda_ver+" -->\n")
+            for py_ver in config["py"]:
+                tag_name = config["name"]
+                tag_cuda = cuda_ver.replace('.','')
+                tag_py = py_ver.replace('.','')
+                blazing_conda = "blazingsql="+rapids_ver+" " if selector_name == "rapids" else ""
+                cmd = "```bash\n\
+    conda create -n rapids-"+rapids_ver+" -c rapidsai -c nvidia -c conda-forge \\\n\
+        -c defaults "+blazing_conda+lib+"="+rapids_ver+" python="+py_ver+" cudatoolkit="+cuda_ver+"\n\
+    ```\n\
+    {: ."+tag_name+"-"+selector_name+"-all-conda-py"+tag_py+"-cuda"+tag_cuda+" .hidden }\n"
+                config["cmds"].append(cmd)
 
 def write_output(config):
     """Write output to file"""
@@ -99,6 +134,10 @@ def main():
         generate_docker(config, "rapidscore", "rapidsai/rapidsai-core", "runtime")
         generate_docker(config, "rapidscore", "rapidsai/rapidsai-core-dev", "devel")
         generate_source(config)
+        generate_conda_all(config, "rapids", "rapids-blazing")
+        generate_conda_all(config, "rapidscore", "rapids")
+        generate_conda_lib(config, "rapids")
+        generate_conda_lib(config, "rapidscore")
         print(f"Writing {name} commands to file '{filename}'")
         write_output(config)
         print(f"Finished writing {name} commands to file '{filename}'")
