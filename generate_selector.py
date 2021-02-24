@@ -19,8 +19,9 @@ STABLE_CONFIG ={
     "file": "_includes/selector-commands-stable-test.html", #TODO update path after testing
     "ver": "0.18",
     "os": ['ubuntu16.04','ubuntu18.04','ubuntu20.04','centos7','centos8'],
-    "cuda": ['cuda10.1','cuda10.2','cuda11.0'],
-    "py": ['py3.7','py3.8'],
+    "cuda": ['10.1','10.2','11.0'],
+    "py": ['3.7','3.8'],
+    "libs": ['cudf', 'cuml', 'cugraph', 'cusignal', 'cuspatial', 'cuxfilter'],
     "cmds": [] # Leave empty
 }
 
@@ -29,8 +30,9 @@ NIGHTLY_CONFIG ={
     "file": "_includes/selector-commands-nightly-test.html", #TODO update path after testing
     "ver": "0.19",
     "os": ['ubuntu16.04','ubuntu18.04','ubuntu20.04','centos7','centos8'],
-    "cuda": ['cuda10.1','cuda10.2','cuda11.0'],
-    "py": ['py3.7','py3.8'],
+    "cuda": ['10.1','10.2','11.0'],
+    "py": ['3.7','3.8'],
+    "libs": ['cudf', 'cuml', 'cugraph', 'cusignal', 'cuspatial', 'cuxfilter'],
     "cmds": [] # Leave empty
 }
 
@@ -47,11 +49,11 @@ def generate_docker(config, selector_name, docker_repo, docker_type):
                 tag_py = py_ver.replace('.','')
                 repo = docker_repo + ("-nightly" if config["name"] == "nightly" else "")
                 cmd = "```bash\n\
-docker pull "+repo+":"+rapids_ver+"-"+cuda_ver+"-"+docker_type+"-"+os_ver+"-"+py_ver+"\n\
+docker pull "+repo+":"+rapids_ver+"-cuda"+cuda_ver+"-"+docker_type+"-"+os_ver+"-py"+py_ver+"\n\
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \\\n\
-    "+repo+":"+rapids_ver+"-"+cuda_ver+"-"+docker_type+"-"+os_ver+"-"+py_ver+"\n\
+    "+repo+":"+rapids_ver+"-cuda"+cuda_ver+"-"+docker_type+"-"+os_ver+"-py"+py_ver+"\n\
 ```\n\
-{: ."+tag_name+"-"+selector_name+"-all-"+docker_type+"-"+tag_os+"-"+tag_py+"-"+tag_cuda+" .hidden }\n"
+{: ."+tag_name+"-"+selector_name+"-all-"+docker_type+"-"+tag_os+"-py"+tag_py+"-cuda"+tag_cuda+" .hidden }\n"
                 config["cmds"].append(cmd)
 
 def generate_source(config):
