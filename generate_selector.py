@@ -109,10 +109,10 @@ def generate_conda_lib(config, selector_name):
                 tag_py = py_ver.replace('.','')
                 blazing_conda = "blazingsql="+rapids_ver+" " if selector_name == "rapids" else ""
                 cmd = "```bash\n\
-    conda create -n rapids-"+rapids_ver+" -c rapidsai -c nvidia -c conda-forge \\\n\
-        -c defaults "+blazing_conda+lib+"="+rapids_ver+" python="+py_ver+" cudatoolkit="+cuda_ver+"\n\
-    ```\n\
-    {: ."+tag_name+"-"+selector_name+"-all-conda-py"+tag_py+"-cuda"+tag_cuda+" .hidden }\n"
+conda create -n rapids-"+rapids_ver+" -c rapidsai -c nvidia -c conda-forge \\\n\
+    -c defaults "+blazing_conda+lib+"="+rapids_ver+" python="+py_ver+" cudatoolkit="+cuda_ver+"\n\
+```\n\
+{: ."+tag_name+"-"+selector_name+"-"+lib+"-conda-py"+tag_py+"-cuda"+tag_cuda+" .hidden }\n"
                 config["cmds"].append(cmd)
 
 def write_output(config):
