@@ -26,8 +26,8 @@
                 <div class="method padding-bottom-1em">
                     <div class="option-label">Method</div>
                     <div id="conda" class="option" title="Conda install">Conda&nbsp;<i class="fas fa-box-open"></i> <span class="context"> <i class="fas fa-check-square text-blue"></i> Preferred Install Method</span></div>
-                    <div id="docker" class="option" title="Docker image with example notebooks">Docker + Examples&nbsp;<i class="fab fa-docker"></i><span class="context"> <i class="fas fa-check-square text-blue"></i> Preferred Install Method</span></div>
-                    <div id="dev" class="option advanced" title="Docker image with developer tools and from source build environment ">Docker + Dev Env&nbsp;<i class="fab fa-docker"></i> <span class="context"> <i class="fas fa-flask text-orange"></i> Advanced Install Method</span></div>
+                    <div id="runtime" class="option" title="Docker image with example notebooks">Docker + Examples&nbsp;<i class="fab fa-docker"></i><span class="context"> <i class="fas fa-check-square text-blue"></i> Preferred Install Method</span></div>
+                    <div id="devel" class="option advanced" title="Docker image with developer tools and from source build environment ">Docker + Dev Env&nbsp;<i class="fab fa-docker"></i> <span class="context"> <i class="fas fa-flask text-orange"></i> Advanced Install Method</span></div>
                     <div id="source" class="option advanced" title="From source build">Source&nbsp;<i class="fas fa-cogs"></i><span class="context"> <i class="fas fa-flask text-orange"></i> Advanced Install Method</span></div>
                 </div>
                 <div class="release">
@@ -107,10 +107,10 @@
 <script type="text/javascript">
 /* Adopted from https://pytorch.org/assets/quick-start-module.js */
 var pkg = ["cudf", "cuml", "cugraph", "cusignal", "cuspatial", "cuxfilter", "all"];
-var method = ["conda", "docker", "source", "dev"];
+var method = ["conda", "runtime", "source", "devel"];
 var release = ["legacy", "stable", "nightly"];
 var type = ["rapids", "rapidscore"];
-var linux = ["ubuntu1604", "ubuntu1804", "centos7", "rhel7"];
+var linux = ["ubuntu1604", "ubuntu1804", "ubuntu20.04", "centos7", "centos8", "rhel7"];
 var python = ["py37", "py38"];
 var cuda = ["cuda101", "cuda102", "cuda110"];
 var pkg_opts = $(".pkg > .option");
@@ -215,8 +215,8 @@ function processClick(options, click, category) {
             // Display linux note
             $("#linux-conda-note").removeClass("hidden");
         }
-    } else if (selections["method"] == "docker") {
-        // Handle docker requests
+    } else if (selections["method"] == "runtime") {
+        // Handle docker runtime requests
         if (selections["linux"] == "rhel7") {
             selections["linux"] = "centos7";
         }
@@ -243,19 +243,8 @@ function processClick(options, click, category) {
         $(python_opts).addClass("disabled");
         $(cuda_opts).addClass("disabled");
         $(type_opts).addClass("disabled");
-    } else if (selections["method"] == "dev") {
-        // Handle dev requests
-        if (selections["linux"] == "rhel7") {
-            selections["linux"] = "centos7";
-        }
-        selections["pkg"] = "all";
-        $("#rhel7").addClass("disabled");
-        $(pkg_opts).addClass("disabled");
-        $("#all").removeClass("disabled");
-        $(method_opts).removeClass("disabled");
-        $(release_opts).removeClass("disabled");
-    } else if (selections["method"] == "dev") {
-        // Handle dev requests
+    } else if (selections["method"] == "devel") {
+        // Handle docker devel requests
         if (selections["linux"] == "rhel7") {
             selections["linux"] = "centos7";
         }
