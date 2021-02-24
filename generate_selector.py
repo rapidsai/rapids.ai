@@ -74,10 +74,10 @@ def generate_source(config):
     <pre># See <a href='https://github.com/rapidsai/cusignal"+url_path+"#dependencies' _target='blank'>cuSignal README</a> for "+tag_name+" build instructions</pre>\n\
 </div>\n\
 <div class='"+tag_name+"-cuspatial-source hidden'>\n\
-    <pre># See <a href='https://github.com/rapidsai/cuspatial"+url_path+"#clone-build-and-install-cuspatial' _target='blank'>cuSpatial Stable README</a> for "+tag_name+" build instructions</pre>\n\
+    <pre># See <a href='https://github.com/rapidsai/cuspatial"+url_path+"#clone-build-and-install-cuspatial' _target='blank'>cuSpatial README</a> for "+tag_name+" build instructions</pre>\n\
 </div>\n\
 <div class='"+tag_name+"-cuxfilter-source hidden'>\n\
-    <pre># See <a href='https://github.com/rapidsai/cuxfilter"+url_path+"#installation' _target='blank'>cuxfilter Stable README</a> for "+tag_name+" build instructions</pre>\n\
+    <pre># See <a href='https://github.com/rapidsai/cuxfilter"+url_path+"#installation' _target='blank'>cuxfilter README</a> for "+tag_name+" build instructions</pre>\n\
 </div>\n"
     config["cmds"].append(cmd)
 
