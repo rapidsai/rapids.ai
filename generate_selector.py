@@ -127,10 +127,10 @@ def main():
         name = config["name"]
         filename = config["file"]
         print(f"Generating {name} commands")
-        generate_docker(config, "rapids", "rapidsai/rapidsai", "base")
+        #generate_docker(config, "rapids", "rapidsai/rapidsai", "base") #TODO add to selector as a future option
         generate_docker(config, "rapids", "rapidsai/rapidsai", "runtime")
         generate_docker(config, "rapids", "rapidsai/rapidsai-dev", "devel")
-        generate_docker(config, "rapidscore", "rapidsai/rapidsai-core", "base")
+        #generate_docker(config, "rapidscore", "rapidsai/rapidsai-core", "base") #TODO add to selector as a future option
         generate_docker(config, "rapidscore", "rapidsai/rapidsai-core", "runtime")
         generate_docker(config, "rapidscore", "rapidsai/rapidsai-core-dev", "devel")
         generate_source(config)
