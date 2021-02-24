@@ -205,9 +205,9 @@ Create the ECSCluster object in your Python session:
 ```shell
 >>> from dask_cloudprovider.aws import ECSCluster
 >>> cluster = ECSCluster(
-                            cluster_arn=<CLUSTER_ARN>,
-                            n_workers=<NUM_WORKERS>,
-                            worker_gpu=<NUM_GPUS>
+                            cluster_arn=[CLUSTER_ARN],
+                            n_workers=[NUM_WORKERS],
+                            worker_gpu=[NUM_GPUS]
                          )
 ```
 [CLUSTER_ARN] = The ARN of an existing ECS cluster to use for launching tasks <br />
@@ -785,10 +785,10 @@ RAPIDS can be deployed on Google Cloud Dataproc using Dask. We have **[helper sc
 >>> gcloud dataproc clusters create $CLUSTER_NAME \
     --region $REGION \
     --image-version preview-ubuntu18 \
-    --master-machine-type n1-standard-32 \
-    --master-accelerator type=nvidia-tesla-t4,count=2 \
-    --worker-machine-type n1-standard-32 \
-    --worker-accelerator type=nvidia-tesla-t4,count=2 \
+    --master-machine-type [MACHINE_TYPE] \
+    --master-accelerator type=[GPU_TYPE],count=[NUM_GPU] \
+    --worker-machine-type [MACHINE_TYPE] \
+    --worker-accelerator type=[GPU_TYPE],count=[NUM_GPU] \
     --optional-components=ANACONDA \
     --initialization-actions gs://goog-dataproc-initialization-actions-${REGION}/gpu/install_gpu_driver.sh,gs://goog-dataproc-initialization-actions-${REGION}/dask/dask.sh,gs://goog-dataproc-initialization-actions-${REGION}/rapids/rapids.sh \
     --initialization-action-timeout=60m \
