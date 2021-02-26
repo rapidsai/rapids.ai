@@ -6,7 +6,12 @@
                     <div class="option-label">NOTICES</div>
                     <div class="option-notice">
                         <span>
-                            <i class="fas fa-exclamation-triangle text-white"></i> RAPIDS <a href="https://docs.rapids.ai/notices/rgn0007">docker image</a> changes in v0.17; including BlazingSQL by default
+                            <i class="fas fa-exclamation-triangle text-white"></i> Changes to from-source builds with conda using <a href="https://docs.rapids.ai/notices/rdn0002">gcc 7.5</a>
+                        </span>
+                    </div>
+                    <div class="option-notice">
+                        <span>
+                            <i class="fas fa-exclamation-triangle text-white"></i> CUDA 10.1 & 10.2 will be deprecated in RAPIDS <a href="https://docs.rapids.ai/notices/rsn0005">v0.19</a>
                         </span>
                     </div>
                 </div>
@@ -26,8 +31,8 @@
                 <div class="method padding-bottom-1em">
                     <div class="option-label">Method</div>
                     <div id="conda" class="option" title="Conda install">Conda&nbsp;<i class="fas fa-box-open"></i> <span class="context"> <i class="fas fa-check-square text-blue"></i> Preferred Install Method</span></div>
-                    <div id="docker" class="option" title="Docker image with example notebooks">Docker + Examples&nbsp;<i class="fab fa-docker"></i><span class="context"> <i class="fas fa-check-square text-blue"></i> Preferred Install Method</span></div>
-                    <div id="dev" class="option advanced" title="Docker image with developer tools and from source build environment ">Docker + Dev Env&nbsp;<i class="fab fa-docker"></i> <span class="context"> <i class="fas fa-flask text-orange"></i> Advanced Install Method</span></div>
+                    <div id="runtime" class="option" title="Docker image with example notebooks">Docker + Examples&nbsp;<i class="fab fa-docker"></i><span class="context"> <i class="fas fa-check-square text-blue"></i> Preferred Install Method</span></div>
+                    <div id="devel" class="option advanced" title="Docker image with developer tools and from source build environment ">Docker + Dev Env&nbsp;<i class="fab fa-docker"></i> <span class="context"> <i class="fas fa-flask text-orange"></i> Advanced Install Method</span></div>
                     <div id="source" class="option advanced" title="From source build">Source&nbsp;<i class="fas fa-cogs"></i><span class="context"> <i class="fas fa-flask text-orange"></i> Advanced Install Method</span></div>
                 </div>
                 <div class="release">
@@ -54,8 +59,10 @@
                     <div class="option-label">Linux</div>
                     <div id="ubuntu1604" class="option">Ubuntu 16.04&nbsp;<i class="fab fa-ubuntu"></i></div>
                     <div id="ubuntu1804" class="option">Ubuntu 18.04&nbsp;<i class="fab fa-ubuntu"></i></div>
+                    <div id="ubuntu2004" class="option">Ubuntu 20.04&nbsp;<i class="fab fa-ubuntu"></i></div>
                     <div id="centos7" class="option">CentOS 7&nbsp;<i class="fab fa-centos"></i></div>
-                    <div id="rhel7" class="option">RHEL 7&nbsp;<i class="fab fa-redhat"></i></div>
+                    <div id="centos8" class="option">CentOS 8&nbsp;<i class="fab fa-centos"></i></div>
+                    <div id="rhel7" class="option">RHEL 7&8&nbsp;<i class="fab fa-redhat"></i></div>
                 </div>
                 <div class="python">
                     <div class="option-label">Python</div>
@@ -79,16 +86,19 @@
                     <div class="option-label"></div>
                     <div class="option-blank">
                         <span id="rhel7-conda-note" class="hidden option-note">
-                            <i class="fas fa-exclamation-triangle text-orange"></i> <b>NOTE:</b> RHEL 7 <code>conda</code> support is provided by builds and tests on CentOS 7.<br/>The same <code>conda create</code> commands should work with <code>gcc >=7.5</code> and the correct NVIDIA and CUDA drivers.
+                            <i class="fas fa-exclamation-triangle text-orange"></i> <b>NOTE:</b> RHEL 7 & 8 <code>conda</code> support is provided by builds and tests on CentOS 7 or 8.<br/>The same <code>conda create</code> commands should work with <code>gcc >=7.5</code> and the correct NVIDIA and CUDA drivers.
                         </span>
                         <span id="rhel7-source-note" class="hidden option-note">
-                            <i class="fas fa-exclamation-triangle text-orange"></i> <b>NOTE:</b> RHEL 7 from source build support is provided by following the build instructions for CentOS 7.<br/>The same methods should work with <code>gcc >=7.5</code> and the correct NVIDIA and CUDA drivers.
+                            <i class="fas fa-exclamation-triangle text-orange"></i> <b>NOTE:</b> RHEL 7 & 8 from source build support is provided by following the build instructions for CentOS 7 or 8.<br/>The same methods should work with <code>gcc >=7.5</code> and the correct NVIDIA and CUDA drivers.
                         </span>
                         <span id="linux-conda-note" class="hidden option-note">
-                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> Ubuntu 16.04/18.04 & CentOS 7 use the same <code>conda create</code> commands.
+                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> Ubuntu 16.04/18.04/20.04 & CentOS 7/8 use the same <code>conda create</code> commands.
                         </span>
                         <span id="linux-source-note" class="hidden option-note">
-                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> Ubuntu 16.04/18.04 & CentOS 7 use the same from source build instructions.
+                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> Ubuntu 16.04/18.04/20.04 & CentOS 7/8 use the same from source build instructions.
+                        </span>
+                        <span id="base-docker-note" class="hidden option-note">
+                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> For docker images without examples or notebooks replace <code>runtime</code> with <code>base</code> in the commands below.
                         </span>
                     </div>
                 </div>
@@ -107,10 +117,10 @@
 <script type="text/javascript">
 /* Adopted from https://pytorch.org/assets/quick-start-module.js */
 var pkg = ["cudf", "cuml", "cugraph", "cusignal", "cuspatial", "cuxfilter", "all"];
-var method = ["conda", "docker", "source", "dev"];
+var method = ["conda", "runtime", "source", "devel"];
 var release = ["legacy", "stable", "nightly"];
 var type = ["rapids", "rapidscore"];
-var linux = ["ubuntu1604", "ubuntu1804", "centos7", "rhel7"];
+var linux = ["ubuntu1604", "ubuntu1804", "ubuntu20.04", "centos7", "centos8", "rhel7"];
 var python = ["py37", "py38"];
 var cuda = ["cuda101", "cuda102", "cuda110"];
 var pkg_opts = $(".pkg > .option");
@@ -194,11 +204,12 @@ function processClick(options, click, category) {
     // Reset the board
     resetAll();
 
-    // Hide linux/rhel notes
+    // Hide linux/rhel/docker notes
     $("#rhel7-conda-note").addClass("hidden");
     $("#rhel7-source-note").addClass("hidden");
     $("#linux-conda-note").addClass("hidden");
     $("#linux-source-note").addClass("hidden");
+    $("#base-docker-note").addClass("hidden");
 
     // Record selection
     if (click && category) {
@@ -215,11 +226,13 @@ function processClick(options, click, category) {
             // Display linux note
             $("#linux-conda-note").removeClass("hidden");
         }
-    } else if (selections["method"] == "docker") {
-        // Handle docker requests
+    } else if (selections["method"] == "runtime") {
+        // Handle docker runtime requests
         if (selections["linux"] == "rhel7") {
             selections["linux"] = "centos7";
         }
+        // Display base note
+        $("#base-docker-note").removeClass("hidden");
         $("#rhel7").addClass("disabled");
         $(pkg_opts).addClass("disabled");
         selections["pkg"] = "all";
@@ -243,19 +256,8 @@ function processClick(options, click, category) {
         $(python_opts).addClass("disabled");
         $(cuda_opts).addClass("disabled");
         $(type_opts).addClass("disabled");
-    } else if (selections["method"] == "dev") {
-        // Handle dev requests
-        if (selections["linux"] == "rhel7") {
-            selections["linux"] = "centos7";
-        }
-        selections["pkg"] = "all";
-        $("#rhel7").addClass("disabled");
-        $(pkg_opts).addClass("disabled");
-        $("#all").removeClass("disabled");
-        $(method_opts).removeClass("disabled");
-        $(release_opts).removeClass("disabled");
-    } else if (selections["method"] == "dev") {
-        // Handle dev requests
+    } else if (selections["method"] == "devel") {
+        // Handle docker devel requests
         if (selections["linux"] == "rhel7") {
             selections["linux"] = "centos7";
         }
