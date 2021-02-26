@@ -108,8 +108,9 @@ def generate_conda_lib(config, selector_name):
                 tag_cuda = cuda_ver.replace('.','')
                 tag_py = py_ver.replace('.','')
                 blazing_conda = "blazingsql="+rapids_ver+" " if selector_name == "rapids" else ""
+                channel = "rapidsai" + ("-nightly" if config["name"] == "nightly" else "")
                 cmd = "```bash\n\
-conda create -n rapids-"+rapids_ver+" -c rapidsai -c nvidia -c conda-forge \\\n\
+conda create -n rapids-"+rapids_ver+" -c "+channel+" -c nvidia -c conda-forge \\\n\
     -c defaults "+blazing_conda+lib+"="+rapids_ver+" python="+py_ver+" cudatoolkit="+cuda_ver+"\n\
 ```\n\
 {: ."+tag_name+"-"+selector_name+"-"+lib+"-conda-py"+tag_py+"-cuda"+tag_cuda+" .hidden }\n"
