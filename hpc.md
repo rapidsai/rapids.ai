@@ -32,6 +32,7 @@ In the following example, we assume each allocation runs on a DGX1 with access t
 
 
 **1. Start Scheduler.** First, start the scheduler with the following SLURM script.  This and the following scripts can deployed with `salloc` for interactive usage or `sbatch` for batched run.
+{: .no-tb-margins }
 
 ```bash
 #!/usr/bin/env bash
@@ -59,6 +60,7 @@ include the IP address and port for the scheduler.  The file will serve as input
 **2. Start Dask CUDA workers.** Next start the **[dask-cuda workers](https://dask-cuda.readthedocs.io/)**. Dask-CUDA extends the traditional Dask `Worker` class with specific options and enhancements for GPU environments.  Unlike the scheduler and client, the workers script should be _scalable_ and allow the users to tune how many workers are created.
 For example, we can scale the number of nodes to 3: `sbatch/salloc -N3 dask-cuda-worker.script` .  In this case, because we have 8 GPUs per node and we have 3 nodes,
 our job will have 24 workers.
+{: .no-tb-margins }
 
 ```bash
 #!/usr/bin/env bash
@@ -80,6 +82,7 @@ dask-cuda-worker \
 {: .margin-bottom-3em}
 
 **3. cuDF Example Workflow.** Lastly, we can now run a job on the established Dask Cluster.
+{: .no-tb-margins }
 
 ```bash
 #!/usr/bin/env bash
@@ -114,6 +117,7 @@ python /tmp/dask-cudf-example.py
 
 
 **4. Confirm Output.** Putting the above together will result in the following output:
+{: .no-tb-margins }
 
 ```python
                       x                          y
