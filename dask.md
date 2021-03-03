@@ -145,7 +145,7 @@ For other machine learning work on GPU, the **[cuML library](https://github.com/
 The RAPIDS Notebooks Extended repository includes several examples with end-to-end examples using Dask for distributed, GPU-accelerated computation. Here’s a few from the collection to get started with. 
 
 
-<i class="fas fa-caret-right"></i> The Introductino to Dask shows how to get started with Dask using basic Python primitives like integers and strings. **[Go to notebook <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-contrib/blob/main/getting_started_notebooks/basics/Getting_Started_with_Dask.ipynb){: target="_blank"}**
+<i class="fas fa-caret-right"></i> The introduction to Dask shows how to get started with Dask using basic Python primitives like integers and strings. **[Go to notebook <i class="fas fa-angle-double-right"></i>](https://github.com/dmlc/xgboost/tree/master/demo/dask){: target="_blank"}**
 {: .no-tb-margins }
 
 <i class="fas fa-caret-right"></i> Introduction to XGBoost with RAPIDS shows the acceleration one can gain by using GPUs with XGBoost in RAPIDS. **[Go to notebook <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks/blob/main/xgboost/XGBoost_Demo.ipynb){: target="_blank"}**

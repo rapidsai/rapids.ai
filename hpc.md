@@ -2,44 +2,37 @@
 title: "HPC RAPIDS DEPLOYMENT"
 description: "How to Deploy RAPIDS on HPC"
 tagline: "Deploying RAPIDS on HPC"
-button_text: "Deploy Now"
+button_text: "Learn More"
+button_link: "#top"
 layout: default
 ---
 
-![cloud]({{ site.baseurl }}{% link /assets/images/RAPIDs-cloud.png %}){: .projects-logo}
+![supercomputer]({{ site.baseurl }}{% link /assets/images/craySC.jpeg %}){: .projects-logo}
 
 {% capture intro_content %}
-
 RAPIDS works extremely well in traditional HPC environments where GPUs are often co-located with accelerated networking hardware such as InfiniBand.
+Deploying on HPC often means using queue management systems such as SLURM, LSF, PBS, etc. Below we demonstrate using RAPIDS with SLURM.
 {: .subtitle}
 
-Deploying on HPC often means using queue management systems such as SLURM, LSF, PBS, etc. Below we demonstrate using RAPIDS with SLURM:
-
-
 {% endcapture %}
-
 {% include section-single.html
     background="background-white"
-    padding-top="0em" padding-bottom="1em"
+    padding-top="0em" padding-bottom="10em"
     content-single=intro_content
 %}
 
-<!-- HPC -->
+{% capture slurm %}
+<div id="slurm"></div>
+![slurm]({{ site.baseurl }}{% link /assets/images/slurm-logo-sm.png%})
+## <i class="fad fa-server"></i> SLURM
 
-{% capture aws_ec2 %}
-# SLURM
-{: .section-title-full}
-
-
-If you are unfamiliar with SLURM or need a refresher, we recommend the [quickstart guide](https://slurm.schedmd.com/quickstart.html).  Depending on how
-your nodes are configured, additional settings may be required such as defining the number of GPUs (--gpus) desired
-or the number of gpus per node (--gpus-per-node).  In the following example, we assume each allocation runs on a DGX1 with access to all eight GPUs.
+If you are unfamiliar with SLURM or need a refresher, we recommend the **[quickstart guide](https://slurm.schedmd.com/quickstart.html)**.
+Depending on how your nodes are configured, additional settings may be required such as defining the number of GPUs `(--gpus)` desired or the number of gpus per node `(--gpus-per-node)`.
+In the following example, we assume each allocation runs on a DGX1 with access to all eight GPUs.
 
 
-**1. Start Scheduler.**
-
-First, start the scheduler with the following SLURM script.  This and the following scripts can deployed with `salloc` for interactive usage or `sbatch` for batched run
-
+**1. Start Scheduler.** First, start the scheduler with the following SLURM script.  This and the following scripts can deployed with `salloc` for interactive usage or `sbatch` for batched run.
+{: .no-tb-margins }
 
 ```bash
 #!/usr/bin/env bash
@@ -61,13 +54,13 @@ dask-scheduler \
 ```
 
 Notice that we configure the scheduler to write a `scheduler-file` to a NFS accessible location.  This file contains metadata about the scheduler and will
-include the IP address and port for the scheduler.  The file will serve as input to the workers informing them what address and port to connect to.
+include the IP address and port for the scheduler.  The file will serve as input to the workers informing them what address and port to connect.
+{: .margin-bottom-3em}
 
-**2. Start Dask CUDA workers.**
-
-Next start the [dask-cuda workers](https://dask-cuda.readthedocs.io/). Dask-CUDA extends the traditional Dask `Worker` class with specific options and enhancements for GPU environments.  Unlike the scheduler and client, the workers script should be _scalable_ and allow the users to tune how many workers are created.
+**2. Start Dask CUDA workers.** Next start the **[dask-cuda workers](https://dask-cuda.readthedocs.io/)**. Dask-CUDA extends the traditional Dask `Worker` class with specific options and enhancements for GPU environments.  Unlike the scheduler and client, the workers script should be _scalable_ and allow the users to tune how many workers are created.
 For example, we can scale the number of nodes to 3: `sbatch/salloc -N3 dask-cuda-worker.script` .  In this case, because we have 8 GPUs per node and we have 3 nodes,
 our job will have 24 workers.
+{: .no-tb-margins }
 
 ```bash
 #!/usr/bin/env bash
@@ -86,10 +79,10 @@ dask-cuda-worker \
     --rmm-pool-size 14GB \
     --scheduler-file "$LOCAL_DIRECTORY/dask-scheduler.json"
 ```
+{: .margin-bottom-3em}
 
-**3. cuDF Example Workflow.**
-
-Lastly, we can now run a job on the established Dask Cluster.
+**3. cuDF Example Workflow.** Lastly, we can now run a job on the established Dask Cluster.
+{: .no-tb-margins }
 
 ```bash
 #!/usr/bin/env bash
@@ -120,10 +113,11 @@ EOF
 
 python /tmp/dask-cudf-example.py
 ```
+{: .margin-bottom-3em}
 
-**3. Confirm Output.**
 
-Putting the above together will result in the following output:
+**4. Confirm Output.** Putting the above together will result in the following output:
+{: .no-tb-margins }
 
 ```python
                       x                          y
@@ -143,38 +137,27 @@ id   name
 
 [6449 rows x 6 columns]
 ```
-
 {: .margin-bottom-3em}
 
-**[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
+**[Jump to Top <i class="fad fa-chevron-double-up"></i>](#slurm)**
 
 {% endcapture %}
 
-<div id="AWS-EC2"></div>
+{% include slopecap.html
+    background="background-white"
+    position="top"
+    slope="down"
+%}
 {% include section-single.html
     background="background-white"
-    padding-top="6em" padding-bottom="0em"
-    content-single=aws_ec2
+    padding-top="0em" padding-bottom="5em"
+    content-single=slurm
 %}
-<div id="AWS-Dask"></div>
-{% include section-single.html
-    background="background-white"
-    padding-top="3em" padding-bottom="0em"
-    content-single=aws_dask
+{% include slopecap.html
+    background="background-darkpurple"
+    position="top"
+    slope="up"
 %}
-<div id="AWS-Kubernetes"></div>
-{% include section-single.html
-    background="background-white"
-    padding-top="3em" padding-bottom="0em"
-    content-single=aws_kub
-%}
-<div id="AWS-Sagemaker"></div>
-{% include section-single.html
-    background="background-white"
-    padding-top="3em" padding-bottom="10em"
-    content-single=aws_sage
-%}
-
 {% include section-single.html
     background="background-darkpurple"
     padding-top="0em" padding-bottom="0em"
