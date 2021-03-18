@@ -117,6 +117,9 @@ Watch tutorials of accelerated HPO examples on **[Amazon SageMaker](https://www.
 
 ## <i class="far fa-bookmark"></i> Blog Posts
 
+<i class="fas fa-caret-right"></i> An End to End Guide to Hyperparameter Optimization using **[RAPIDS and MLflow on Google’s Kubernetes Engine (GKE)](https://medium.com/rapids-ai/an-end-to-end-guide-to-hyperparameter-optimization-using-rapids-and-mlflow-on-gke-8c07596cfff5){: target="_blank"}**
+{: .no-tb-margins }
+
 <i class="fas fa-caret-right"></i> Hyperparameter Optimization with **[Optuna and RAPIDS](https://medium.com/rapids-ai/hyper-parameter-optimization-with-optuna-and-rapids-467fc8189962){: target="_blank"}**
 {: .no-tb-margins }
 

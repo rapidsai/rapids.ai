@@ -922,11 +922,11 @@ RAPIDS can be deployed on Google’s CloudAI platform. This deployment can range
 - Select 'Install NVIDIA GPU driver automatically for me'
 - Create and launch your notebook service
 
-To create and instance wtih A100s:
+To create an instance wtih A100s:
 - Select 'New Instance' -> 'Customize instance'
 - Select 'us-central1' region
 - Select 'RAPIDS 0.18 [EXPERIMENTAL]' environment
-- Choose A2 highgpu (for 1, 2, 4 or 8 A100s) or A1 megagpu (for 16 A100s) as machine type
+- Choose 'A2 highgpu' (for 1, 2, 4 or 8 A100s) or 'A2 megagpu' (for 16 A100s) as machine type
 - Select 'Install NVIDIA GPU driver automatically for me'
 - Create and launch your notebook service
 
