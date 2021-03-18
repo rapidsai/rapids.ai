@@ -910,29 +910,27 @@ To run notebooks on jupyter in your browser, visit the external IP of rapidsai-j
 {% endcapture %}
 
 {% capture gc_ai %}
-## <i class="fab fa-google"></i> Google CloudAI
+## <i class="fab fa-google"></i> Google Cloud AI Platform
 
 RAPIDS can be deployed on Google’s CloudAI platform. This deployment can range from a simple pre-made notebook (instructions below!) all the way up to a custom training container and HPO job. For more, see our **[detailed instructions and helper scripts.](https://github.com/rapidsai/cloud-ml-examples/tree/main/gcp)**
 
 **1. Login.** Log into your GCP console.
 
-**2. Select.** Select AI-Platform, then Notebooks.
+**2. Select.** Select AI Platform, then Notebooks.
 
-**3. Create and Run.** Select a "Create new notebook" and select the RAPIDS XGBoost variant (comes with Conda installed):
-- Select 'install gpu driver for me'
-- Select 'customize'
-- Pick the CUDA variant you want (10.1, 10.0, etc..)
-- Select a GPU type
-- Select the number of GPUs
-- Launch your notebook service
+**3. Create and Run.** Select a "New Instance" and select the "RAPIDS 0.18 [EXPERIMENTAL]" environment (comes with Conda installed):
+- Select 'Install NVIDIA GPU driver automatically for me'
+- Create and launch your notebook service
 
-**4. Run Script.** Once JupyterLab is running:
-- Open a new terminal
-- Copy the `rapids-py37-kernel.sh` GCP script into the local environment.
-- Run the script
-- Once completed, you will have a new kernel in your jupyter notebooks called `rapids_py37` which will have RAPIDS installed.
+To create and instance wtih A100s:
+- Select 'New Instance' -> 'Customize instance'
+- Select 'us-central1' region
+- Select 'RAPIDS 0.18 [EXPERIMENTAL]' environment
+- Choose A2 highgpu (for 1, 2, 4 or 8 A100s) or A1 megagpu (for 16 A100s) as machine type
+- Select 'Install NVIDIA GPU driver automatically for me'
+- Create and launch your notebook service
 
-For more details, or for other ways to deploy on Google CloudAI, see the **[detailed instructions and helper scripts.](https://github.com/rapidsai/cloud-ml-examples/tree/main/gcp)**
+For more details, or for other ways to deploy on Google Cloud AI Platform, see the **[detailed instructions and helper scripts.](https://github.com/rapidsai/cloud-ml-examples/tree/main/gcp)**
 
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
