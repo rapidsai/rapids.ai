@@ -27,7 +27,8 @@ Try with **[<i class="fad fa-fire"></i> BlazingSQL <i class="fa fa-angle-double-
 <br>
 Or with **[<i class="fab fa-google"></i> Colaboratory <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
 
-## <i class="fas fa-bolt"></i> Deploy RAPIDS on the **[Cloud](https://rapids.ai/cloud){: target="_blank"}**
+## <i class="fas fa-bolt"></i> Deploy RAPIDS on the Cloud 
+Learn how to deploy RAPIDS on the top **[Cloud Service Providers](https://rapids.ai/cloud){: target="_blank"}**
 
 {% endcapture %}
 
