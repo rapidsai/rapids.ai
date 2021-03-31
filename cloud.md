@@ -11,7 +11,7 @@ layout: default
 
 {% capture intro_content %}
 
-RAPIDS’s GPU accelerated data science tools can be deployed on all of the major clouds, allowing anyone to take advantage of the speed increases and TCO reductions that RAPIDS enables.
+RAPIDS GPU accelerated data science tools can be deployed on all of the major clouds, allowing anyone to take advantage of the speed increases and TCO reductions that RAPIDS enables.
 {: .subtitle}
 
 RAPIDS can be deployed in a number of ways, from hosted Jupyter notebooks, to the major HPO services, all the way up to large-scale clusters via Dask or Kubernetes. Deploying on the cloud will require you to make use of supported GPU instances. Each major cloud provider has GPU instances that are supported by RAPIDS with varying capabilities and price points - the below charts identifies the major instance types of each cloud.
@@ -36,10 +36,10 @@ For the various deployment options on each cloud, as well as instructions and li
 [![aws]({{ site.baseurl }}{% link /assets/images/AWS-logo.png %})](#aws) <br>
 **[<i class="fad fa-chevron-double-down"></i> Amazon Web Services ](#aws)**
 
+[<i class="fas fa-caret-right"></i> Amazon SageMaker](#AWS-Sagemaker){: .block}
 [<i class="fas fa-caret-right"></i> Single EC2 instance](#AWS-EC2){: .block}
 [<i class="fas fa-caret-right"></i> Cluster using Dask](#AWS-Dask){: .block}
 [<i class="fas fa-caret-right"></i> Cluster using Kubernetes](#AWS-Kubernetes){: .block}
-[<i class="fas fa-caret-right"></i> Amazon Sagemaker](#AWS-Sagemaker){: .block}
 
 {% endcapture %}
 {% capture csp_mid %}
@@ -47,10 +47,10 @@ For the various deployment options on each cloud, as well as instructions and li
 [![azure]({{ site.baseurl }}{% link /assets/images/MS-azure-logo.png %})](#azure) <br>
 **[<i class="fad fa-chevron-double-down"></i> Microsoft Azure ](#azure)**
 
+[<i class="fas fa-caret-right"></i> Azure Machine Learning](#AZ-ML){: .block}
 [<i class="fas fa-caret-right"></i> Single instance](#AZ-single){: .block}
 [<i class="fas fa-caret-right"></i> Cluster via Dask](#AZ-Dask){: .block}
 [<i class="fas fa-caret-right"></i> Cluster via Kubernetes](#AZ-Kubernetes){: .block}
-[<i class="fas fa-caret-right"></i> Azure’s AzureML service](#AZ-ML){: .block}
 
 {% endcapture %}
 {% capture csp_right %}
@@ -58,10 +58,10 @@ For the various deployment options on each cloud, as well as instructions and li
 [![gcp]({{ site.baseurl }}{% link /assets/images/GCP-logo.png %})](#googlecloud) <br>
 **[<i class="fad fa-chevron-double-down"></i> Google Cloud ](#googlecloud)**
 
+[<i class="fas fa-caret-right"></i> Google AI Platform](#GC-AI){: .block}
 [<i class="fas fa-caret-right"></i> Single instance](#GC-single){: .block}
 [<i class="fas fa-caret-right"></i> Cluster using Dask (via Dataproc)](#GC-Dask){: .block}
 [<i class="fas fa-caret-right"></i> Cluster using Kubernetes](#GC-Kubernetes){: .block}
-[<i class="fas fa-caret-right"></i> On CloudAI](#GC-AI){: .block}
 
 {% endcapture %}
 
@@ -98,22 +98,21 @@ For the various deployment options on each cloud, as well as instructions and li
 
 RAPIDS can be deployed on Amazon Web Services (AWS) in several ways:
 
+**[<i class="fas fa-caret-right"></i> Amazon SageMaker](#AWS-Sagemaker)**{: .block}
 **[<i class="fas fa-caret-right"></i> Single EC2 instance](#AWS-EC2)**{: .block}
 **[<i class="fas fa-caret-right"></i> Cluster using Dask](#AWS-Dask)**{: .block}
-**[<i class="fas fa-caret-right"></i> Cluster using Kubernetes and EKS/GKE/AKS](#AWS-Kubernetes)**{: .block}
-**[<i class="fas fa-caret-right"></i> Amazon Sagemaker](#AWS-Sagemaker)**{: .block}
+**[<i class="fas fa-caret-right"></i> Cluster using Kubernetes on EKS](#AWS-Kubernetes)**{: .block}
 
-| Cloud <br> Provider | Inst. <br> Type | Inst. <br> Name  |  GPU <br> Count | GPU <br> Type | xGPU <br> RAM | xGPU <br> Perf. |
+| Cloud <br> Provider | Inst. <br> Type | Inst. <br> Name  |  GPU <br> Count | GPU <br> Type | xGPU <br> RAM | xGPU <br> RAM Total |
 |----------------|---------------|----------------|---------|----------|------------ --------|---------------------------------|
-| AWS            | G4            | g4dn\.xlarge   | 1       | T4       | 16 (GB)            | 8.1 (TFLOPS)                 |
-| AWS            | G4            | g4dn\.8xlarge  | 1       | T4       | 16 (GB)            | 8.1 (TFLOPS)                 |
-| AWS            | G4            | g4dn\.12xlarge | 4       | T4       | 16 (GB)            | 8.1 (TFLOPS)                 |
-| AWS            | G4            | g4dn\.16xlarge | 1       | T4       | 16 (GB)            | 8.1 (TFLOPS)                 |
-| AWS            | G4            | g4dn\.metal    | 8       | T4       | 16 (GB)            | 8.1 (TFLOPS)                 |
-| AWS            | P3            | p3\.2xlarge    | 1       | V100     | 16 (GB)            | 14.1 (TFLOPS)                  |
-| AWS            | P3            | p3\.8xlarge    | 4       | V100     | 16 (GB)            | 14.1 (TFLOPS)                  |
-| AWS            | P3            | p3\.16xlarge   | 8       | V100     | 16 (GB)            | 14.1 (TFLOPS)                  |
-| AWS            | P3            | p3dn\.24xlarge | 8       | V100     | 32 (GB)            | 14.1 (TFLOPS)                  |
+| AWS            | G4dn            | g4dn\.xlarge   | 1       | T4       | 16 (GB)            | 16 (GB)                 |
+| AWS            | G4dn            | g4dn\.12xlarge | 4       | T4       | 16 (GB)            | 64 (GB)                 |
+| AWS            | G4dn            | g4dn\.metal    | 8       | T4       | 16 (GB)            | 128 (GB)                 |
+| AWS            | P3            | p3\.2xlarge    | 1       | V100     | 16 (GB)            | 16 (GB)                  |
+| AWS            | P3            | p3\.8xlarge    | 4       | V100     | 16 (GB)            | 64 (GB)                  |
+| AWS            | P3            | p3\.16xlarge   | 8       | V100     | 16 (GB)            | 128 (GB)                  |
+| AWS            | P3            | p3dn\.24xlarge | 8       | V100     | 32 (GB)            | 256 (GB)                  |
+| AWS            | P4            | p4d\.24xlarge | 8       | A100     | 40 (GB)            | 320 (GB)                  |
 {: .cloud-table}
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
@@ -340,7 +339,7 @@ Delete the cluster and its associated nodes
 {% capture aws_sage %}
 ## <i class="fab fa-aws"></i> AWS Sagemaker
 
-RAPIDS also works with AWS Sagemaker. We’ve written a **[detailed guide](https://medium.com/rapids-ai/running-rapids-experiments-at-scale-using-amazon-sagemaker-d516420f165b)** with **[examples](https://github.com/rapidsai/cloud-ml-examples/tree/main/aws)** for how to use Sagemaker with RAPIDS, but the simplest version is:
+RAPIDS also works with AWS SageMaker. We’ve written a **[detailed guide](https://medium.com/rapids-ai/running-rapids-experiments-at-scale-using-amazon-sagemaker-d516420f165b)** with **[examples](https://github.com/rapidsai/cloud-ml-examples/tree/main/aws)** for how to use Sagemaker with RAPIDS, but the simplest version is:
 
 **1. Start.** Start a Sagemaker hosted Jupyter notebook instance on AWS.
 
@@ -354,10 +353,16 @@ For more details, including on running large-scale HPO jobs on Sagemaker with RA
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
 
 {% endcapture %}
-<div id="AWS-EC2"></div>
+<div id="AWS-Sagemaker"></div>
 {% include section-single.html
     background="background-white"
     padding-top="6em" padding-bottom="0em"
+    content-single=aws_sage
+%}
+<div id="AWS-EC2"></div>
+{% include section-single.html
+    background="background-white"
+    padding-top="3em" padding-bottom="0em"
     content-single=aws_ec2
 %}
 <div id="AWS-Dask"></div>
@@ -369,14 +374,8 @@ For more details, including on running large-scale HPO jobs on Sagemaker with RA
 <div id="AWS-Kubernetes"></div>
 {% include section-single.html
     background="background-white"
-    padding-top="3em" padding-bottom="0em"
-    content-single=aws_kub
-%}
-<div id="AWS-Sagemaker"></div>
-{% include section-single.html
-    background="background-white"
     padding-top="3em" padding-bottom="10em"
-    content-single=aws_sage
+    content-single=aws_kub
 %}
 
 <!-- Azure -->
@@ -386,26 +385,25 @@ For more details, including on running large-scale HPO jobs on Sagemaker with RA
 ## <i class="fab fa-microsoft"></i> Microsoft Azure
 
 RAPIDS can be deployed on Microsoft Azure via several methods:
+**[<i class="fas fa-caret-right"></i> Azure Machine Learning](#AZ-ML)**{: .block}
 **[<i class="fas fa-caret-right"></i> Single instance](#AZ-single)**{: .block}
 **[<i class="fas fa-caret-right"></i> Cluster via Dask](#AZ-Dask)**{: .block}
-**[<i class="fas fa-caret-right"></i> Cluster via Kubernetes](#AZ-Kubernetes)**{: .block}
-**[<i class="fas fa-caret-right"></i> Azure’s AzureML service](#AZ-ML)**{: .block}
+**[<i class="fas fa-caret-right"></i> Cluster via Kubernetes on AKS](#AZ-Kubernetes)**{: .block}
 
-| Cloud <br> Provider | Inst. <br> Type | Inst. <br> Name  |  GPU <br> Count | GPU <br> Type | xGPU <br> RAM | xGPU <br> Perf. |
+| Cloud <br> Provider | Inst. <br> Type | Inst. <br> Name  |  GPU <br> Count | GPU <br> Type | xGPU <br> RAM | xGPU <br> RAM Total |
 |----------------|---------------|---------------|---------|----------|----------------------|---------------|-----------------|
-| Azure          | NDs Series    | ND6s          | 1       | P40      | 24 (GB)               | 11.7 (TFLOPS)                     |
-| Azure          | NDs Series    | ND12s         | 2       | P40      | 24 (GB)               | 11.7 (TFLOPS)                     |
-| Azure          | NDs Series    | ND24s         | 4       | P40      | 24 (GB)               | 11.7 (TFLOPS)                     |
-| Azure          | NDs Series    | ND24rs        | 4       | P40      | 24 (GB)               | 11.7 (TFLOPS)                     |
-| Azure          | NCs v2 Series | NC6s v2       | 1       | P100     | 16 (GB)              | 10.6 (TFLOPS)                   |
-| Azure          | NCs v2 Series | NC12s v2      | 2       | P100     | 16 (GB)              | 10.6 (TFLOPS)                   |
-| Azure          | NCs v2 Series | NC24s v2      | 4       | P100     | 16 (GB)              | 10.6 (TFLOPS)                   |
-| Azure          | NCs v2 Series | NC24rs v2     | 4       | P100     | 16 (GB)              | 10.6 (TFLOPS)                   |
-| Azure          | NCs v3 Series | NC6s v3       | 1       | V100     | 16 (GB)              | 14.1 (TFLOPS)                     |
-| Azure          | NCs v3 Series | NC12s v3      | 2       | V100     | 16 (GB)              | 14.1 (TFLOPS)                     |
-| Azure          | NCs v3 Series | NC24s v3      | 4       | V100     | 16 (GB)              | 14.1 (TFLOPS)                     |
-| Azure          | NCs v3 Series | NC24rs v3     | 4       | V100     | 16 (GB)              | 14.1 (TFLOPS)                     |
-| Azure          | NDs v2 Series | ND40rs        | 8       | V100     | 32 (GB)              | 14.1 (TFLOPS)                     |
+| Azure          | NDs    | ND6s          | 1       | P40      | 24 (GB)               | 24 (GB)                     |
+| Azure          | NDs    | ND12s         | 2       | P40      | 24 (GB)               | 48 (GB)                     |
+| Azure          | NDs    | ND24s         | 4       | P40      | 24 (GB)               | 96 (GB)                     |
+| Azure          | NCs v2 | NC6s v2       | 1       | P100     | 16 (GB)              | 16 (GB)                   |
+| Azure          | NCs v2 | NC12s v2      | 2       | P100     | 16 (GB)              | 32 (GB)                   |
+| Azure          | NCs v2 | NC24s v2      | 4       | P100     | 16 (GB)              | 64 (GB)                   |
+| Azure          | NCas T4 v3 | NC4as T4 v3       | 1       | T4     | 16 (GB)              | 16 (GB)                     |
+| Azure          | NCas T4 v3 | NC64as T4 v3       | 4       | T4     | 16 (GB)              | 64 (GB)                     |
+| Azure          | NCs v3 | NC6s v3       | 1       | V100     | 16 (GB)              | 16 (GB)                     |
+| Azure          | NCs v3 | NC12s v3      | 2       | V100     | 16 (GB)              | 32 (GB)                     |
+| Azure          | NCs v3 | NC24s v3      | 4       | V100     | 16 (GB)              | 64 (GB)                     |
+| Azure          | NDs v2 | ND40rs        | 8       | V100     | 32 (GB)              | 256 (GB)                     |
 {: .cloud-table}
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
@@ -605,7 +603,7 @@ You can now visit the external IP of the rapidsai-jupyter service in your browse
 {% endcapture %}
 
 {% capture az_ml %}
-## <i class="fab fa-microsoft"></i> AzureML Service
+## <i class="fab fa-microsoft"></i> Azure Machine Learning (Azure ML)
 
 RAPIDS can be deployed at scale using Azure Machine Learning Service--and easily scales up to any size needed. We have written a **[detailed guide](https://medium.com/rapids-ai/rapids-on-microsoft-azure-machine-learning-b51d5d5fde2b)** with **[helper scripts](https://github.com/rapidsai/cloud-ml-examples/tree/main/azure)** to get everything deployed, but the high level procedure is:
 
@@ -669,19 +667,23 @@ See **[the guide](https://medium.com/rapids-ai/rapids-on-microsoft-azure-machine
 ## <i class="fab fa-google"></i> Google Cloud
 
 RAPIDS can be used in Google Cloud in several different ways:
+**[<i class="fas fa-caret-right"></i> Google AI Platform](#GC-AI)**{: .block}
 **[<i class="fas fa-caret-right"></i> Single instance](#GC-single)**{: .block}
 **[<i class="fas fa-caret-right"></i> Cluster using Dask (via Dataproc)](#GC-Dask)**{: .block}
-**[<i class="fas fa-caret-right"></i> Cluster using Kubernetes](#GC-Kubernetes)**{: .block}
-**[<i class="fas fa-caret-right"></i> On CloudAI](#GC-AI)**{: .block}
+**[<i class="fas fa-caret-right"></i> Cluster using Kubernetes on GKE](#GC-Kubernetes)**{: .block}
 
 
-| Cloud <br> Provider | Inst. <br> Type | Inst. <br> Name  |  GPU <br> Count | GPU <br> Type | xGPU <br> RAM | xGPU <br> Perf. |
+| Cloud <br> Provider | Inst. <br> Type | Inst. <br> Name  |  GPU <br> Count | GPU <br> Type | xGPU <br> RAM | xGPU <br> RAM Total |
 |----------------|----------------------------|------------------|------------|----------|--------------------|----------------|
-| Google Cloud   | GPU Compute Workload Addon | Any Machine Type | As desired | P4       | 8 (GB)             | 5.5 (TFLOPS)                              |
-| Google Cloud   | GPU Compute Workload Addon | Any Machine Type | As desired | P100     | 16 (GB)            | 10.6 (TFLOPS)                             |
-| Google Cloud   | GPU Compute Workload Addon | Any Machine Type | As desired | T4       | 16 (GB)            | 8.1 (TFLOPS)                              |
-| Google Cloud   | GPU Compute Workload Addon | Any Machine Type | As desired | V100     | 16 (GB)            | 14.1 (TFLOPS)                             |
-| Google Cloud   | A2                         | TBD \- In beta   | As desired | A100     | 40 (GB)            | 19.5 (TFLOPS)                             |
+| Google Cloud   | GPU Compute Workload Addon | Any Machine Type | 1, 2, 4 | P4       | 8 (GB)             | 8, 16, 32 (GB)                              |
+| Google Cloud   | GPU Compute Workload Addon | Any Machine Type | 1, 2, 4 | P100     | 16 (GB)            | 16, 32, 64 (GB)                             |
+| Google Cloud   | GPU Compute Workload Addon | Any Machine Type | 1, 2, 4 | T4       | 16 (GB)            | 16, 32, 64 (GB)                              |
+| Google Cloud   | GPU Compute Workload Addon | Any Machine Type | 1, 2, 4, 8 | V100     | 16 (GB)            | 16, 32, 64, 128 (GB)                             |
+| Google Cloud   | A2                         | a2-highgpu-1g   | 1 | A100     | 40 (GB)            | 40 (GB)                             |
+| Google Cloud   | A2                         | a2-highgpu-2g   | 2 | A100     | 40 (GB)            | 80 (GB)                             |
+| Google Cloud   | A2                         | a2-highgpu-4g   | 4 | A100     | 40 (GB)            | 160 (GB)                             |
+| Google Cloud   | A2                         | a2-highgpu-8g   | 8 | A100     | 40 (GB)            | 320 (GB)                             |
+| Google Cloud   | A2                         | a2-highgpu-16g   | 16 | A100     | 40 (GB)            | 640 (GB)                             |
 {: .cloud-table}
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
@@ -910,38 +912,43 @@ To run notebooks on jupyter in your browser, visit the external IP of rapidsai-j
 {% endcapture %}
 
 {% capture gc_ai %}
-## <i class="fab fa-google"></i> Google CloudAI
+## <i class="fab fa-google"></i> Google Cloud AI Platform
 
-RAPIDS can be deployed on Google’s CloudAI platform. This deployment can range from a simple pre-made notebook (instructions below!) all the way up to a custom training container and HPO job. For more, see our **[detailed instructions and helper scripts.](https://github.com/rapidsai/cloud-ml-examples/tree/main/gcp)**
+RAPIDS can be deployed on Google’s Cloud AI platform. This deployment can range from a simple pre-made notebook (instructions below!) all the way up to a custom training container and HPO job. For more, see our **[detailed instructions and helper scripts.](https://github.com/rapidsai/cloud-ml-examples/tree/main/gcp)**
 
 **1. Login.** Log into your GCP console.
 
-**2. Select.** Select AI-Platform, then Notebooks.
+**2. Select.** Select AI Platform, then Notebooks.
 
-**3. Create and Run.** Select a "Create new notebook" and select the RAPIDS XGBoost variant (comes with Conda installed):
-- Select 'install gpu driver for me'
-- Select 'customize'
-- Pick the CUDA variant you want (10.1, 10.0, etc..)
-- Select a GPU type
-- Select the number of GPUs
-- Launch your notebook service
+**3. Create and Run.** Select a "New Instance" and select the "RAPIDS 0.18 [EXPERIMENTAL]" environment (comes with Conda installed):
+- Select 'Install NVIDIA GPU driver automatically for me'
+- Create and launch your notebook service
 
-**4. Run Script.** Once JupyterLab is running:
-- Open a new terminal
-- Copy the `rapids-py37-kernel.sh` GCP script into the local environment.
-- Run the script
-- Once completed, you will have a new kernel in your jupyter notebooks called `rapids_py37` which will have RAPIDS installed.
+To create an instance wtih A100s:
+- Select 'New Instance' -> 'Customize instance'
+- Select 'us-central1' region
+- Select 'RAPIDS 0.18 [EXPERIMENTAL]' environment
+- Choose 'A2 highgpu' (for 1, 2, 4 or 8 A100s) or 'A2 megagpu' (for 16 A100s) as machine type
+- Select 'Install NVIDIA GPU driver automatically for me'
+- Create and launch your notebook service
 
-For more details, or for other ways to deploy on Google CloudAI, see the **[detailed instructions and helper scripts.](https://github.com/rapidsai/cloud-ml-examples/tree/main/gcp)**
+For more details, or for other ways to deploy on Google Cloud AI Platform, see the **[detailed instructions and helper scripts.](https://github.com/rapidsai/cloud-ml-examples/tree/main/gcp)**
 
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
 
 {% endcapture %}
-<div id="GC-single"></div>
+
+<div id="GC-AI"></div>
 {% include section-single.html
     background="background-white"
     padding-top="6em" padding-bottom="0em"
+    content-single=gc_ai
+%}
+<div id="GC-single"></div>
+{% include section-single.html
+    background="background-white"
+    padding-top="3em" padding-bottom="0em"
     content-single=gc_single
 %}
 <div id="GC-Dask"></div>
@@ -953,14 +960,8 @@ For more details, or for other ways to deploy on Google CloudAI, see the **[deta
 <div id="GC-Kubernetes"></div>
 {% include section-single.html
     background="background-white"
-    padding-top="3em" padding-bottom="0em"
-    content-single=gc_kub
-%}
-<div id="GC-AI"></div>
-{% include section-single.html
-    background="background-white"
     padding-top="3em" padding-bottom="10em"
-    content-single=gc_ai
+    content-single=gc_kub
 %}
 
 

@@ -73,9 +73,9 @@ Find more details on our **[get started section <i class="fas fa-angle-double-ri
 
 ## <i class="fas fa-bolt"></i> Try Now Online
 Jump right into a GPU powered RAPIDS notebook online.<br>
-Try with **[<i class="fad fa-fire"></i> BlazingSQL (RAPIDS 0.15+) <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://app.blazingsql.com/){: target="_blank"}**
+Try with **[<i class="fad fa-fire"></i> BlazingSQL <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://app.blazingsql.com/){: target="_blank"}**
 <br>
-Or with **[<i class="fab fa-google"></i> Colabratory (RAPIDS 0.14 only) <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
+Or with **[<i class="fab fa-google"></i> Colaboratory <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
 
 {% endcapture %}
 
