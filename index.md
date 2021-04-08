@@ -69,13 +69,11 @@ for column in gdf.columns:
     print(gdf[column].mean())
 
 ```
-Find more details on our **[get started section <i class="fas fa-angle-double-right"></i>](start.html)**
+Find more details on our **[Get Started Page <i class="fas fa-angle-double-right"></i>](start.html)**
 
 ## <i class="fas fa-bolt"></i> Try Now Online
 Jump right into a GPU powered RAPIDS notebook online.<br>
-Try with **[<i class="fad fa-fire"></i> BlazingSQL <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://app.blazingsql.com/){: target="_blank"}**
-<br>
-Or with **[<i class="fab fa-google"></i> Colaboratory <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
+Try with **[<i class="fab fa-google"></i> Colaboratory <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
 
 {% endcapture %}
 
@@ -139,7 +137,7 @@ A second Github repository with our extended collection of community contributed
 {% capture com_left %}
 # RAPIDS Repositories
 {: .section-title-halfs}
-RAPIDS is committed to open source. We strive for a **[6 week release schedule](https://docs.rapids.ai/maintainers){: target="_blank"}**, below is a generalized release schedule. Learn more on our **[Road To 1.0 post <i class="fas fa-angle-double-right"></i>](https://medium.com/rapids-ai/the-road-to-1-0-building-for-the-long-haul-657ae1afdfd6){: target="_blank"}**
+RAPIDS is committed to open source. We strive for a **[6 week release schedule](https://docs.rapids.ai/maintainers){: target="_blank"}** with the generalized release schedule below. Learn more on our **[Release Blogs <i class="fas fa-angle-double-right"></i>](https://medium.com/rapids-ai){: target="_blank"}**
 
 ## <i class="far fa-calendar-check"></i> Release Schedule
 <svg id="Release" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 108">
@@ -417,7 +415,7 @@ RAPIDS works extremely well in traditional HPC environments where GPUs are often
 
 {% include section-double-halfs.html
     background="background-white"
-    padding-top="1em" padding-bottom="0em"
+    padding-top="2em" padding-bottom="0em"
     content-top-left-half=com_top_left
     content-top-right-half=com_top_right
     content-bottom-left-half=com_bottom_left
@@ -425,7 +423,7 @@ RAPIDS works extremely well in traditional HPC environments where GPUs are often
 %}
 {% include section-double-halfs.html
     background="background-white"
-    padding-top="0m" padding-bottom="0em"
+    padding-top="2em" padding-bottom="0em"
     content-top-left-half=com2_top_left
     content-top-right-half=com2_top_right
     content-bottom-left-half=com2_bottom_left
