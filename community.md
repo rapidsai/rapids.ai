@@ -68,11 +68,10 @@ RAPIDS’s GPU accelerated data science tools can be deployed on all of the majo
 {% endcapture %}
 
 {% capture prj_left %}
-![spark]({{ site.baseurl }}{% link /assets/images/spark-logo-trademark.png %}){: .third-image-center}
-## <i class="fas fa-code-branch"></i> RAPIDS + Spark
+![merlin]({{ site.baseurl }}{% link /assets/images/NVLogo_2D_H.png%}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + NVIDIA MERLIN
 
-NVIDIA is bringing RAPIDS to Apache Spark to accelerate ETL workflows with GPUs.
-<br> **[Learn more on the RAPIDS for Apache Spark page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://www.nvidia.com/en-us/deep-learning-ai/solutions/data-science/apache-spark-3/){: target="_blank"}**
+NVIDIA Merlin is an open source library providing end-to-end GPU-accelerated recommender systems. Merlin leverages RAPIDs cuDF and dask cuDF for dataframe transformation during ETL and inference, as well as for the optimized dataloaders in TensorFlow, PyTorch or HugeCTR to accelerate deep learning training. <br> **[Learn more on our Merlin page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](merlin.html)**
 {% endcapture %}
 
 {% capture prj_mid %}
@@ -84,7 +83,11 @@ RAPIDS works extremely well in traditional HPC environments where GPUs are often
 {% endcapture %}
 
 {% capture prj_right %}
+![spark]({{ site.baseurl }}{% link /assets/images/spark-logo-trademark.png %}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + Spark
 
+NVIDIA is bringing RAPIDS to Apache Spark to accelerate ETL workflows with GPUs.
+<br> **[Learn more on the RAPIDS for Apache Spark page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://nvidia.github.io/spark-rapids/){: target="_blank"}**
 {% endcapture %}
 
 

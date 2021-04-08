@@ -27,23 +27,21 @@ NVIDIA Merlin is an open source library designed to accelerate recommender syste
 %}
 
 {% capture yd_left %}
-## <i class="fas fa-layer-group"></i> ETL with NVTabular <br><br>
-As the ETL component of the Merlin ecosystem, NVTabular is a feature engineering and preprocessing library for tabular data. It is designed to quickly and easily manipulate terabyte scale datasets that are used to train deep learning based recommender systems. NVTabular uses RAPIDS’ dask_cudf to perform GPU-accelerated transformation.
+## <i class="fas fa-layer-group"></i> ETL with NVTabular 
+As the ETL component of the Merlin ecosystem, NVTabular is a feature engineering and preprocessing library for tabular data. It is designed to quickly and easily manipulate terabyte scale datasets that are used to train deep learning based recommender systems. NVTabular uses RAPIDS’ `dask_cudf` to perform GPU-accelerated transformation.
 
 **[Read more about NVTabular’s  features <i class="fas fa-angle-double-right"></i>](https://nvidia.github.io/NVTabular/main/core_features.html){: target="_blank"}**
 
 {% endcapture %}
 {% capture yd_mid %}
-## <i class="far fa-chart-network"></i> Scaled and Accelerated Training
-When training deep learning recommender system models, data loading can be a bottleneck. Merlin accelerates the training of deep learning recommender systems using: 
-
-Customized dataloaders speed-up existing TensorFlow or PyTorch training pipelines *or* using HugeCTR, a dedicated framework to train deep learning recommender systems written in CUDA C++. The optimized dataloader are built on top of RAPIDS’ cuDF and DaskcuDF to read asynchronous parquet files. 
+## <i class="far fa-chart-network"></i> Accelerated Training
+When training deep learning recommender system models, data loading can be a bottleneck. Merlin accelerates the training of deep learning recommender systems using RAPIDS’ cuDF and DaskcuDF to read asynchronous parquet files. This is used to speed-up existing TensorFlow and PyTorch training pipelines **or** used with HugeCTR to train deep learning recommender systems written in CUDA C++. 
 
 **[Read more about accelerated training <i class="fas fa-angle-double-right"></i>](https://nvidia.github.io/NVTabular/main/training/index.html){: target="_blank"}**
 
 {% endcapture %}
 {% capture yd_right %}
-## <i class="fal fa-waveform-path"></i> Accelerated Inference <br><br>
+## <i class="fal fa-waveform-path"></i> Accelerated Inference 
 NVTabular and HugeCTR both support the Triton Inference Server to provide GPU-accelerated inference. The Triton Inference Server simplifies the deployment of AI models to production at scale. It is an inference serving software that is open source and lets teams deploy trained AI models from any framework. The NVTabular ETL workflow and trained deep learning models can be easily deployed to production with only a few steps.
 
 **[Read more about inference from examples <i class="fas fa-angle-double-right"></i>](https://github.com/NVIDIA/NVTabular/tree/main/examples/inference_triton){: target="_blank"}**
@@ -67,7 +65,7 @@ NVTabular and HugeCTR both support the Triton Inference Server to provide GPU-ac
 
 It is easy to get started with Merlin. There are many examples and blog posts to reference.
 
-## <i class="fab fa-kaggle"></i> Try Now Online
+## <i class="fas fa-bolt"></i> Try Now Online
 Try on Kaggle with: 
 <br>
 **[GPU-accelerated ETL with NVTabular <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://www.kaggle.com/benediktschifferer/faster-etl-for-tabular-data){: target="_blank"}**
@@ -81,7 +79,7 @@ Try on Kaggle with:
 {: .section-subtitle-top-1}
 NVTabular and HugeCTR both provide a collection of examples based on a variety of recommender system datasets that are publicly available. Checkout the **[NVTabular notebooks](https://github.com/NVIDIA/NVTabular/tree/main/examples){: target="_blank"}** and **[HugeCTR notebooks](https://github.com/NVIDIA/HugeCTR/tree/master/notebooks){: target="_blank"}**. 
 
-## <i class="fab fa-docker"></i>Pull Our Docker Container
+## <i class="fab fa-docker"></i> Pull Our Docker Container
 Merlin published docker containers with pre-installed versions of the latest release on **[NVIDIA's NGC repository](https://ngc.nvidia.com/catalog/containers?orderBy=modifiedDESC&pageNumber=0&query=%20label%3A%22Merlin%22&quickFilter=containers&filters=){: target="_blank"}**. Pull the container and try out Merlin yourself.
 
 
@@ -106,9 +104,9 @@ Learn more about recommender systems and Merlin on our **[Blog](https://medium.c
 
 
 {% capture nv_l %}
-## <i class="fas fa-layer-group"></i> Accelerate ETL with NVTabular <br><br>
+## <i class="fas fa-layer-group"></i> Accelerate ETL <br> with NVTabular <br>
 
-![NVIDIA]({{ site.baseurl }}{% link /assets/images/NVLogo_2D_H.png %}){: .third-image-center}
+![NVIDIA]({{ site.baseurl }}{% link /assets/images/merlin_tab_chart.png%}){: .image-center}
 
 NVTabular is capable of scaling ETL over multiple GPUs and nodes. NVTabular can process the Criteo 1TB Clicks Ads dataset in 13.8 minutes on a GPU and 1.9 minutes on eight GPUs, which is the largest, publicly available recommendation dataset that contains 1.3TB of uncompressed click logs with roughly 4 billion users. NVTabular’s processing time is much faster compared to the original NumPy script that requires 5 days (7200 minutes) and an optimized spark cluster that requires 3 hours (180 minutes). That accounts for a **speedup of 100 times to 3700 times**.
 
@@ -116,18 +114,18 @@ NVTabular is capable of scaling ETL over multiple GPUs and nodes. NVTabular can 
 {% endcapture %}
 
 {% capture nv_r %}
-## <i class="fal fa-chart-network"></i> Accelerate Deep Learning <br> Training With HugeCTR
+## <i class="fal fa-chart-network"></i> Accelerate DL Training <br> with HugeCTR
 
-![NVIDIA]({{ site.baseurl }}{% link /assets/images/NVLogo_2D_H.png %}){: .third-image-center}
+![NVIDIA]({{ site.baseurl }}{% link /assets/images/merlin_huge_chart.png %}){: .image-center}
 
-MLPerf is a consortium of AI leaders from academia, research labs, and industry whose mission is to “build fair and useful benchmarks” that provide unbiased evaluations of training and inference. HugeCTR on DGX-A100 is the fastest commercial solution available to train Facebook’s Deep Learning Recommender Model on 4TB of data. It finishes the training in 3.33min and is **13.5x faster** than the best CPU-only solution.
+MLPerf is a consortium of AI leaders from academia, research labs, and industry whose mission is to “build fair and useful benchmarks” that provide unbiased evaluations of training and inference. HugeCTR on DGX-A100 is the fastest commercial solution available to train Facebook’s Deep Learning Recommender Model on 4TB of data. It finishes the training in 3.33 min and is **13.5x faster** than the best CPU-only solution.
 
 **[Read more in our blogpost <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://developer.nvidia.com/blog/accelerating-recommender-systems-training-with-nvidia-merlin-open-beta/){: target="_blank"}**
 {% endcapture %}
 
 {% include section-halfs.html
     background="background-gray" 
-    padding-top="0em" padding-bottom="10em" 
+    padding-top="3em" padding-bottom="10em" 
     content-left-half=nv_l
     content-right-half=nv_r
 %}
@@ -144,7 +142,7 @@ MLPerf is a consortium of AI leaders from academia, research labs, and industry 
 %}
 {% include section-single.html
     background="background-darkpurple" 
-    padding-top="1em" padding-bottom="0em" 
+    padding-top="3em" padding-bottom="0em" 
     content-single=end_bottom
 %}
 
