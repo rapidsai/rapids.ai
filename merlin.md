@@ -3,7 +3,7 @@ title: "RAPIDS + NVIDIA Merlin"
 description: "Learn How to Use RAPIDS with Merlin"
 tagline: "RAPIDS + NVIDIA Merlin"
 button_text: "NVTabular"
-button_link: "https://nvidia.github.io/NVTabular/main/Introduction.html"
+button_link: "https://developer.nvidia.com/nvidia-merlin"
 layout: default
 ---
 
