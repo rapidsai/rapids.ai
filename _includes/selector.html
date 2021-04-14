@@ -79,6 +79,7 @@
                     <div id="cuda101" class="option">CUDA 10.1.2</div>
                     <div id="cuda102" class="option">CUDA 10.2</div>
                     <div id="cuda110" class="option">CUDA 11.0</div>
+                    <div id="cuda112" class="option">CUDA 11.2</div>
                 </div>
                 <div class="preferred">
                     <div class="option-label"></div>
@@ -127,7 +128,7 @@ var release = ["legacy", "stable", "nightly"];
 var type = ["rapids", "rapidscore"];
 var linux = ["ubuntu1604", "ubuntu1804", "ubuntu20.04", "centos7", "centos8", "rhel7"];
 var python = ["py37", "py38"];
-var cuda = ["cuda101", "cuda102", "cuda110"];
+var cuda = ["cuda101", "cuda102", "cuda110", "cuda112"];
 var pkg_opts = $(".pkg > .option");
 var method_opts = $(".method > .option");
 var release_opts = $(".release > .option");
@@ -272,6 +273,17 @@ function processClick(options, click, category) {
         $("#all").removeClass("disabled");
         $(method_opts).removeClass("disabled");
         $(release_opts).removeClass("disabled");
+    }
+
+    // Handle CUDA 10.X removal in v0.20
+    if (selections["release"] == "nightly") {
+        if (selections["cuda"] == "cuda101" || selections["cuda"] == "cuda102") {
+            // Reset cuda to 11.0 from 10.X
+            selections["cuda"] = "cuda110";
+        }
+        // Unmark current active cuda option and disable 10.X
+        $(cuda_opts).removeClass("active");
+        $("#cuda101,#cuda102").addClass("disabled");
     }
 
     // Mark active options
