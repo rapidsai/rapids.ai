@@ -27,7 +27,7 @@ NVIDIA Merlin is an open source library designed to accelerate recommender syste
 %}
 
 {% capture yd_left %}
-## <i class="fas fa-layer-group"></i> ETL with NVTabular 
+## <i class="fas fa-layer-group"></i> Accelerated ETL
 As the ETL component of the Merlin ecosystem, NVTabular is a feature engineering and preprocessing library for tabular data. It is designed to quickly and easily manipulate terabyte scale datasets that are used to train deep learning based recommender systems. NVTabular uses RAPIDS’ `dask_cudf` to perform GPU-accelerated transformation.
 
 **[Read more about NVTabular’s  features <i class="fas fa-angle-double-right"></i>](https://nvidia.github.io/NVTabular/main/core_features.html){: target="_blank"}**
