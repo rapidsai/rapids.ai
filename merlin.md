@@ -106,7 +106,7 @@ Learn more about recommender systems and Merlin on our **[Blog](https://medium.c
 {% capture nv_l %}
 ## <i class="fas fa-layer-group"></i> Accelerate ETL <br> with NVTabular <br>
 
-![NVIDIA]({{ site.baseurl }}{% link /assets/images/merlin_tab_chart.png%}){: .image-center}
+![NVIDIA]({{ site.baseurl }}{% link /assets/images/merlin_tab_chart.png%}){: .full-image-center}
 
 NVTabular is capable of scaling ETL over multiple GPUs and nodes. NVTabular can process the Criteo 1TB Clicks Ads dataset in 13.8 minutes on a GPU and 1.9 minutes on eight GPUs, which is the largest, publicly available recommendation dataset that contains 1.3TB of uncompressed click logs with roughly 4 billion users. NVTabular’s processing time is much faster compared to the original NumPy script that requires 5 days (7200 minutes) and an optimized spark cluster that requires 3 hours (180 minutes). That accounts for a **speedup of 100 times to 3700 times**.
 
@@ -116,7 +116,7 @@ NVTabular is capable of scaling ETL over multiple GPUs and nodes. NVTabular can 
 {% capture nv_r %}
 ## <i class="fal fa-chart-network"></i> Accelerate DL Training <br> with HugeCTR
 
-![NVIDIA]({{ site.baseurl }}{% link /assets/images/merlin_huge_chart.png %}){: .image-center}
+![NVIDIA]({{ site.baseurl }}{% link /assets/images/merlin_huge_chart.png %}){: .full-image-center}
 
 MLPerf is a consortium of AI leaders from academia, research labs, and industry whose mission is to “build fair and useful benchmarks” that provide unbiased evaluations of training and inference. HugeCTR on DGX-A100 is the fastest commercial solution available to train Facebook’s Deep Learning Recommender Model on 4TB of data. It finishes the training in 3.33 min and is **13.5x faster** than the best CPU-only solution.
 
