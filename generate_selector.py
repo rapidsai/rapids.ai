@@ -93,7 +93,7 @@ def generate_conda_all(config, selector_name, meta_package):
             channel = "rapidsai" + ("-nightly" if config["name"] == "nightly" else "")
             cmd = "```bash\n\
 conda create -n rapids-"+rapids_ver+" -c "+channel+" -c nvidia -c conda-forge \\\n\
-    -c defaults "+meta_package+"="+rapids_ver+" python="+py_ver+" cudatoolkit="+cuda_ver+"\n\
+    "+meta_package+"="+rapids_ver+" python="+py_ver+" cudatoolkit="+cuda_ver+"\n\
 ```\n\
 {: ."+tag_name+"-"+selector_name+"-all-conda-py"+tag_py+"-cuda"+tag_cuda+" .hidden }\n"
             config["cmds"].append(cmd)
@@ -112,7 +112,7 @@ def generate_conda_lib(config, selector_name):
                 channel = "rapidsai" + ("-nightly" if config["name"] == "nightly" else "")
                 cmd = "```bash\n\
 conda create -n rapids-"+rapids_ver+" -c "+channel+" -c nvidia -c conda-forge \\\n\
-    -c defaults "+blazing_conda+lib+"="+rapids_ver+" python="+py_ver+" cudatoolkit="+cuda_ver+"\n\
+    "+blazing_conda+lib+"="+rapids_ver+" python="+py_ver+" cudatoolkit="+cuda_ver+"\n\
 ```\n\
 {: ."+tag_name+"-"+selector_name+"-"+lib+"-conda-py"+tag_py+"-cuda"+tag_cuda+" .hidden }\n"
                 config["cmds"].append(cmd)
