@@ -108,7 +108,7 @@ Learn more about recommender systems and Merlin on our **[Blog](https://medium.c
 
 ![NVIDIA]({{ site.baseurl }}{% link /assets/images/merlin_tab_chart.png%}){: .full-image-center}
 
-NVTabular is capable of scaling ETL over multiple GPUs and nodes. NVTabular can process the Criteo 1TB Clicks Ads dataset in 13.8 minutes on a GPU and 1.9 minutes on eight GPUs, which is the largest, publicly available recommendation dataset that contains 1.3TB of uncompressed click logs with roughly 4 billion users. NVTabular’s processing time is much faster compared to the original NumPy script that requires 5 days (7200 minutes) and an optimized spark cluster that requires 3 hours (180 minutes). That accounts for a **speedup of 100 times to 3700 times**.
+NVTabular is capable of scaling ETL over multiple GPUs and nodes. NVTabular can process the Criteo 1TB Clicks Ads dataset in 13.8 minutes on a GPU and 1.9 minutes on eight GPUs, which is the largest, publicly available recommendation dataset that contains 1.3TB of uncompressed click logs with roughly 4 billion users. NVTabular’s processing time is much faster compared to the original NumPy script that requires 5 days (7200 minutes) and an optimized spark cluster that requires 3 hours (180 minutes). That accounts for a **speedup of 13 times to 95 times**.
 
 **[Read more in our blogpost <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://developer.nvidia.com/blog/announcing-the-nvtabular-open-beta-with-multi-gpu-support-and-new-data-loaders/){: target="_blank"}**
 {% endcapture %}
