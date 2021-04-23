@@ -25,6 +25,7 @@ for column in gdf.columns:
 Jump right into a GPU powered RAPIDS notebook. <br>
 Try with **[<i class="fab fa-google"></i> Colaboratory <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
 
+
 ## <i class="fas fa-bolt"></i> Deploy RAPIDS on the Cloud 
 Learn how to deploy RAPIDS on **[Cloud Service Providers <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://rapids.ai/cloud){: target="_blank"}**
 
@@ -57,9 +58,10 @@ We suggest that you take a look at the sample workflow in our Docker container (
 <i class="fas fa-download text-purple"></i> **CUDA & NVIDIA Drivers:** One of the following supported versions:
 {: .no-tb-margins }
 
-- <i class="fas fa-check-circle text-purple"></i> [10.1.2](https://developer.nvidia.com/cuda-10.1-download-archive-update2){: target="_blank"} & v418.87+ 
-- <i class="fas fa-check-circle text-purple"></i> [10.2](https://developer.nvidia.com/cuda-10.2-download-archive){: target="_blank"} & v440.33+ 
-- <i class="fas fa-check-circle text-purple"></i> [11.0-11.2](https://developer.nvidia.com/cuda-toolkit-archive){: target="_blank"} & v450.51+
+- <i class="fas fa-check-circle text-purple"></i> [10.1.2](https://developer.nvidia.com/cuda-10.1-download-archive-update2){: target="_blank"} & v418.87+
+- <i class="fas fa-check-circle text-purple"></i> [10.2](https://developer.nvidia.com/cuda-10.2-download-archive){: target="_blank"} & v440.33+
+- <i class="fas fa-check-circle text-purple"></i> [11.0](https://developer.nvidia.com/cuda-11.0-update1-download-archive){: target="_blank"} & v450.51+
+- <i class="fas fa-check-circle text-purple"></i> [11.2](https://developer.nvidia.com/cuda-11.2.0-download-archive){: target="_blank"} & v460.32+
 
 
 {% endcapture %}
