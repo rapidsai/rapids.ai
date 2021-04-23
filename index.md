@@ -348,6 +348,11 @@ cuCIM is a an extensible toolkit designed to provide GPU-accelearted I/O, comput
     padding-top="0em" padding-bottom="6em"
     content-left-half=lib5_left
 %}
+{% include section-halfs.html
+    background="background-purple"
+    padding-top="0em" padding-bottom="6em"
+    content-left-half=lib5_right
+%}
 {% include slopecap.html
     background="background-purple"
     position="bottom"
