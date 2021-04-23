@@ -307,6 +307,16 @@ Cyber Log Accelerators (CLX), also pronounced "clicks", provides a collection of
 RAPIDS Memory Manager (RMM) is a central place for all device memory allocations in cuDF (C++ and Python) and other RAPIDS libraries. In addition, it is a replacement allocator for CUDA Device Memory (and CUDA Managed Memory) and a pool allocator to make CUDA device memory allocation / deallocation faster and asynchronous.
 
 {% endcapture %}
+{% capture lib5_right %}
+## <i class="fad fa-terminal"></i> cuCIM <span class="lib-tag">API</span>
+
+**[GitHub](https://github.com/rapidsai/cucim){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cucim/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cucim/blob/main/CHANGELOG.md){: target="_blank"}**
+{: .no-tb-margins }
+
+cuCIM is a an extensible toolkit designed to provide GPU-accelearted I/O, computer vision and image processing primitives for N-Dimensional images with a focus on biomedical imaging.  Our API mirrors [scikit-image](https://scikit-image.org/) for image manipulation and [OpenSlide](https://openslide.org/) for image loading.
+
+{% endcapture %}
+
 
 {% include section-halfs.html
     background="background-purple"
@@ -336,6 +346,7 @@ RAPIDS Memory Manager (RMM) is a central place for all device memory allocations
     background="background-purple"
     padding-top="0em" padding-bottom="6em"
     content-left-half=lib5_left
+    content-right-half=lib5_right
 %}
 {% include slopecap.html
     background="background-purple"
