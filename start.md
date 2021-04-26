@@ -23,12 +23,11 @@ for column in gdf.columns:
 
 ## <i class="fas fa-bolt"></i> Try Now Online
 Jump right into a GPU powered RAPIDS notebook. <br>
-Try with **[<i class="fad fa-fire"></i> BlazingSQL <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://app.blazingsql.com/){: target="_blank"}**
-<br>
-Or with **[<i class="fab fa-google"></i> Colaboratory <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
+Try with **[<i class="fab fa-google"></i> Colaboratory <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
 
-## <i class="fas fa-bolt"></i> Deploy RAPIDS on the Cloud
-Learn how to deploy RAPIDS on the top **[Cloud Service Providers](https://rapids.ai/cloud){: target="_blank"}**
+
+## <i class="fas fa-bolt"></i> Deploy RAPIDS on the Cloud 
+Learn how to deploy RAPIDS on **[Cloud Service Providers <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://rapids.ai/cloud){: target="_blank"}**
 
 {% endcapture %}
 
@@ -62,7 +61,8 @@ We suggest that you take a look at the sample workflow in our Docker container (
 - <i class="fas fa-check-circle text-purple"></i> [10.1.2](https://developer.nvidia.com/cuda-10.1-download-archive-update2){: target="_blank"} & v418.87+
 - <i class="fas fa-check-circle text-purple"></i> [10.2](https://developer.nvidia.com/cuda-10.2-download-archive){: target="_blank"} & v440.33+
 - <i class="fas fa-check-circle text-purple"></i> [11.0](https://developer.nvidia.com/cuda-11.0-update1-download-archive){: target="_blank"} & v450.51+
-- <i class="fas fa-check-circle text-purple"></i> [11.2](https://developer.nvidia.com/cuda-downloads){: target="_blank"} & v460.32+
+- <i class="fas fa-check-circle text-purple"></i> [11.2](https://developer.nvidia.com/cuda-11.2.0-download-archive){: target="_blank"} & v460.32+
+
 
 {% endcapture %}
 
@@ -189,6 +189,6 @@ See the **[RAPIDS Container README](https://hub.docker.com/r/rapidsai/rapidsai){
 
 {% include cta-footer.html
     name="TRY RAPIDS NOW ONLINE"
-    button="LAUNCH IN BLAZINGSQL"
-    link="https://app.blazingsql.com/"
+    button="LAUNCH IN COLAB"
+    link="https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true"
 %}
