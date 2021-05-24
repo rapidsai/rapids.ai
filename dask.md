@@ -125,7 +125,7 @@ The RAPIDS **[cuDF library](https://github.com/rapidsai/cudf){: target="_blank"}
 ## <i class="fas fa-bezier-curve"></i> XGBoost Integration
 XGBoost, the popular open source machine learning library for gradient boosting, now includes integrated support for Dask. Users can partition data across nodes using Dask’s standard data structures, build a DMatrix on each GPU using `xgboost.dask.create_worker_dmatrix`, and then launch training through `xgboost.dask.run`. See the **[XGBoost dask documentation](https://ml.dask.org/xgboost.html){: target="_blank"}** or the **[Dask+XGBoost GPU example code](https://github.com/dmlc/xgboost/tree/master/demo/dask){: target="_blank"}** for more details.
 
-New users should check out our **[XGBoost page](https://rapids.ai/xgboost.html){: target="_blank"}** and the **[10 Minutes to Dask-XGBoost guide](https://docs.rapids.ai/api/cudf/stable/dask-xgb-10min.html){: target="_blank"}** to get started quickly.
+New users should check out our **[XGBoost page](https://rapids.ai/xgboost.html){: target="_blank"}** and the **[XGBoost.Dask guide](https://xgboost.readthedocs.io/en/latest/tutorials/dask.html){: target="_blank"}** to get started quickly, as well as the **[NYC Taxi E2E Notebook](https://github.com/rapidsai-community/notebooks-contrib/blob/main/community_tutorials_and_guides/taxi/NYCTaxi-E2E.ipynb){: target="_blank"}** to see a real world example.
 {% endcapture %}
 
 {% include section-halfs.html
