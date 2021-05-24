@@ -21,7 +21,7 @@ BlazingSQL is an incredibly fast distributed SQL engine on GPUs. BlazingSQL enab
 ## <i class="fas fa-sort-amount-up-alt"></i> ETL at Scale
 Distributed architecture scales to thousands of GPUs. Relative performance improvements of the engine continue to increase with scale of cluster.
 <br> <br>
-**[Read more on our blog <i class="fas fa-angle-double-right"></i>](https://blog.blazingdb.com/blazingsql-the-gpu-sql-engine-now-runs-over-20x-faster-than-apache-spark-1b0bffc990a9){: target="_blank"}**
+**[Read more on our blog <i class="fas fa-angle-double-right"></i>](https://www.infoworld.com/article/3610188/blazingsql-review-fast-etl-for-gpu-based-data-science.html){: target="_blank"}**
 
 {% endcapture %}
 
@@ -72,7 +72,7 @@ It’s easy to get started with RAPIDS + BlazingSQL
 {: .subtitle}
 
 ## <i class="fad fa-bookmark"></i> Try with RAPIDS 
-You can use BlazingSQL with a RAPIDS install on our <br> **[Get Started Page <i class="fas fa-angle-double-right"></i>](start.html)**
+You can use BlazingSQL with a RAPIDS install on our <br> **[Get Started Page <i class="fas fa-angle-double-right"></i>](start.html)**. 
 
 {% endcapture %}
 
@@ -80,11 +80,11 @@ You can use BlazingSQL with a RAPIDS install on our <br> **[Get Started Page <i 
 ## <i class="fab fa-readme"></i> Learn More
 {: .section-subtitle-top-1}
 
-Learn more about BlazingSQL on the
-**[Notebooks Page <i class="fas fa-angle-double-right"></i>](https://www.blazingsql.com/notebooks){: target="_blank"}**
+Learn more about BlazingSQL on the and try out their examples on their 
+**[Welcome To BlazingSQL Github Repository <i class="fas fa-angle-double-right"></i>](https://github.com/BlazingDB/Welcome_to_BlazingSQL_Notebooks){: target="_blank"}**
 
 ## <i class="far fa-file-code"></i> Access BlazingSQL Docs
-See the latest **[documentation for BlazingSQL <i class="fas fa-angle-double-right"></i>](https://docs.blazingdb.com/docs){: target="_blank"}**
+See the latest **[documentation for BlazingSQL <i class="fas fa-angle-double-right"></i>](https://docs.blazingsql.com/){: target="_blank"}**
 
 {% endcapture %}
 {% include slopecap.html 
