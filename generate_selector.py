@@ -28,7 +28,7 @@ STABLE_CONFIG ={
 NIGHTLY_CONFIG ={
     "name": "nightly",
     "file": "_includes/selector-commands-nightly.html",
-    "ver": "0.20",
+    "ver": "21.06",
     "os": ['ubuntu16.04','ubuntu18.04','ubuntu20.04','centos7','centos8'],
     "cuda": ['11.0','11.2'],
     "py": ['3.7','3.8'],

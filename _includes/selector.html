@@ -275,7 +275,7 @@ function processClick(options, click, category) {
         $(release_opts).removeClass("disabled");
     }
 
-    // Handle CUDA 10.X removal in v0.20
+    // Handle CUDA 10.X removal in v21.06
     if (selections["release"] == "nightly") {
         if (selections["cuda"] == "cuda101" || selections["cuda"] == "cuda102") {
             // Reset cuda to 11.0 from 10.X
