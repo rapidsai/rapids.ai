@@ -26,7 +26,7 @@ NIGHTLY_CONFIG ={
     "name": "nightly",
     "file": "_includes/selector-commands-nightly.html",
     "ver": "21.08",
-    "os": ['ubuntu16.04','ubuntu18.04','ubuntu20.04','centos7','centos8'],
+    "os": ['ubuntu18.04','ubuntu20.04','centos7','centos8'],
     "cuda": ['11.0','11.2'],
     "py": ['3.7','3.8'],
     "libs": ['cudf', 'cuml', 'cugraph', 'cusignal', 'cuspatial', 'cuxfilter'],

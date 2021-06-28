@@ -1,30 +1,4 @@
 
-<!-- docker rapids-runtime ubuntu16.04 -->
-```bash
-docker pull rapidsai/rapidsai-nightly:21.08-cuda11.0-runtime-ubuntu16.04-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-nightly:21.08-cuda11.0-runtime-ubuntu16.04-py3.7
-```
-{: .nightly-rapids-all-runtime-ubuntu1604-py37-cuda110 .hidden }
-```bash
-docker pull rapidsai/rapidsai-nightly:21.08-cuda11.0-runtime-ubuntu16.04-py3.8
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-nightly:21.08-cuda11.0-runtime-ubuntu16.04-py3.8
-```
-{: .nightly-rapids-all-runtime-ubuntu1604-py38-cuda110 .hidden }
-```bash
-docker pull rapidsai/rapidsai-nightly:21.08-cuda11.2-runtime-ubuntu16.04-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-nightly:21.08-cuda11.2-runtime-ubuntu16.04-py3.7
-```
-{: .nightly-rapids-all-runtime-ubuntu1604-py37-cuda112 .hidden }
-```bash
-docker pull rapidsai/rapidsai-nightly:21.08-cuda11.2-runtime-ubuntu16.04-py3.8
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-nightly:21.08-cuda11.2-runtime-ubuntu16.04-py3.8
-```
-{: .nightly-rapids-all-runtime-ubuntu1604-py38-cuda112 .hidden }
-
 <!-- docker rapids-runtime ubuntu18.04 -->
 ```bash
 docker pull rapidsai/rapidsai-nightly:21.08-cuda11.0-runtime-ubuntu18.04-py3.7
@@ -128,32 +102,6 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai-nightly:21.08-cuda11.2-runtime-centos8-py3.8
 ```
 {: .nightly-rapids-all-runtime-centos8-py38-cuda112 .hidden }
-
-<!-- docker rapids-devel ubuntu16.04 -->
-```bash
-docker pull rapidsai/rapidsai-dev-nightly:21.08-cuda11.0-devel-ubuntu16.04-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-dev-nightly:21.08-cuda11.0-devel-ubuntu16.04-py3.7
-```
-{: .nightly-rapids-all-devel-ubuntu1604-py37-cuda110 .hidden }
-```bash
-docker pull rapidsai/rapidsai-dev-nightly:21.08-cuda11.0-devel-ubuntu16.04-py3.8
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-dev-nightly:21.08-cuda11.0-devel-ubuntu16.04-py3.8
-```
-{: .nightly-rapids-all-devel-ubuntu1604-py38-cuda110 .hidden }
-```bash
-docker pull rapidsai/rapidsai-dev-nightly:21.08-cuda11.2-devel-ubuntu16.04-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-dev-nightly:21.08-cuda11.2-devel-ubuntu16.04-py3.7
-```
-{: .nightly-rapids-all-devel-ubuntu1604-py37-cuda112 .hidden }
-```bash
-docker pull rapidsai/rapidsai-dev-nightly:21.08-cuda11.2-devel-ubuntu16.04-py3.8
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-dev-nightly:21.08-cuda11.2-devel-ubuntu16.04-py3.8
-```
-{: .nightly-rapids-all-devel-ubuntu1604-py38-cuda112 .hidden }
 
 <!-- docker rapids-devel ubuntu18.04 -->
 ```bash
@@ -259,32 +207,6 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 ```
 {: .nightly-rapids-all-devel-centos8-py38-cuda112 .hidden }
 
-<!-- docker rapidscore-runtime ubuntu16.04 -->
-```bash
-docker pull rapidsai/rapidsai-core-nightly:21.08-cuda11.0-runtime-ubuntu16.04-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-nightly:21.08-cuda11.0-runtime-ubuntu16.04-py3.7
-```
-{: .nightly-rapidscore-all-runtime-ubuntu1604-py37-cuda110 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core-nightly:21.08-cuda11.0-runtime-ubuntu16.04-py3.8
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-nightly:21.08-cuda11.0-runtime-ubuntu16.04-py3.8
-```
-{: .nightly-rapidscore-all-runtime-ubuntu1604-py38-cuda110 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core-nightly:21.08-cuda11.2-runtime-ubuntu16.04-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-nightly:21.08-cuda11.2-runtime-ubuntu16.04-py3.7
-```
-{: .nightly-rapidscore-all-runtime-ubuntu1604-py37-cuda112 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core-nightly:21.08-cuda11.2-runtime-ubuntu16.04-py3.8
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-nightly:21.08-cuda11.2-runtime-ubuntu16.04-py3.8
-```
-{: .nightly-rapidscore-all-runtime-ubuntu1604-py38-cuda112 .hidden }
-
 <!-- docker rapidscore-runtime ubuntu18.04 -->
 ```bash
 docker pull rapidsai/rapidsai-core-nightly:21.08-cuda11.0-runtime-ubuntu18.04-py3.7
@@ -388,32 +310,6 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai-core-nightly:21.08-cuda11.2-runtime-centos8-py3.8
 ```
 {: .nightly-rapidscore-all-runtime-centos8-py38-cuda112 .hidden }
-
-<!-- docker rapidscore-devel ubuntu16.04 -->
-```bash
-docker pull rapidsai/rapidsai-core-dev-nightly:21.08-cuda11.0-devel-ubuntu16.04-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev-nightly:21.08-cuda11.0-devel-ubuntu16.04-py3.7
-```
-{: .nightly-rapidscore-all-devel-ubuntu1604-py37-cuda110 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core-dev-nightly:21.08-cuda11.0-devel-ubuntu16.04-py3.8
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev-nightly:21.08-cuda11.0-devel-ubuntu16.04-py3.8
-```
-{: .nightly-rapidscore-all-devel-ubuntu1604-py38-cuda110 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core-dev-nightly:21.08-cuda11.2-devel-ubuntu16.04-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev-nightly:21.08-cuda11.2-devel-ubuntu16.04-py3.7
-```
-{: .nightly-rapidscore-all-devel-ubuntu1604-py37-cuda112 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core-dev-nightly:21.08-cuda11.2-devel-ubuntu16.04-py3.8
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev-nightly:21.08-cuda11.2-devel-ubuntu16.04-py3.8
-```
-{: .nightly-rapidscore-all-devel-ubuntu1604-py38-cuda112 .hidden }
 
 <!-- docker rapidscore-devel ubuntu18.04 -->
 ```bash
