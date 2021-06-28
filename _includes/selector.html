@@ -274,6 +274,13 @@ function processClick(options, click, category) {
         $("#all").removeClass("disabled");
         $(method_opts).removeClass("disabled");
         $(release_opts).removeClass("disabled");
+    } 
+    if (selections["release"] == "nightly") {
+        // Handle ubuntu16.04 deprecation
+        $("#ubuntu1604").addClass("disabled");
+        if (selections["linux"] == "ubuntu1604") {
+            selections["linux"] = "ubuntu1804";
+        }
     }
 
     // Mark active options
