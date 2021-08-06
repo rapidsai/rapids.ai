@@ -44,7 +44,7 @@ We suggest that you take a look at the sample workflow in our Docker container (
 ## Prerequisites
 <i class="fas fa-microchip text-purple"></i> **GPU:** NVIDIA Pascal™ or better with **[compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 6.0+
 
-<i class="fas fa-desktop text-purple"></i> **OS:** Ubuntu 16.04/18.04/20.04 or CentOS 7/8 with <code>gcc/++</code> 9.0+
+<i class="fas fa-desktop text-purple"></i> **OS:** Ubuntu 18.04/20.04 or CentOS 7/8 with <code>gcc/++</code> 9.0+
 {: .no-tb-margins }
 
 - <i class="fas fa-bullhorn text-purple"></i> See [RDN 8](https://docs.rapids.ai/notices/rdn0008) for recent changes to <code>gcc/++</code> 9.0 requirements<br/>
