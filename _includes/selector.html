@@ -65,7 +65,6 @@
                 </div>
                 <div class="linux">
                     <div class="option-label">Linux</div>
-                    <div id="ubuntu1604" class="option">Ubuntu 16.04&nbsp;<i class="fab fa-ubuntu"></i></div>
                     <div id="ubuntu1804" class="option">Ubuntu 18.04&nbsp;<i class="fab fa-ubuntu"></i></div>
                     <div id="ubuntu2004" class="option">Ubuntu 20.04&nbsp;<i class="fab fa-ubuntu"></i></div>
                     <div id="centos7" class="option">CentOS 7&nbsp;<i class="fab fa-centos"></i></div>
@@ -99,10 +98,10 @@
                             <i class="fas fa-exclamation-triangle text-orange"></i> <b>NOTE:</b> RHEL 7 & 8 from source build support is provided by following the build instructions for CentOS 7 or 8.<br/>The same methods should work with <code>gcc >=7.5</code> and the correct NVIDIA and CUDA drivers.
                         </span>
                         <span id="linux-conda-note" class="hidden option-note">
-                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> Ubuntu 16.04/18.04/20.04 & CentOS 7/8 use the same <code>conda create</code> commands.
+                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> Ubuntu 18.04/20.04 & CentOS 7/8 use the same <code>conda create</code> commands.
                         </span>
                         <span id="linux-source-note" class="hidden option-note">
-                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> Ubuntu 16.04/18.04/20.04 & CentOS 7/8 use the same from source build instructions.
+                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> Ubuntu 18.04/20.04 & CentOS 7/8 use the same from source build instructions.
                         </span>
                         <span id="base-docker-note" class="hidden option-note">
                             <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> For docker images without examples or notebooks replace <code>runtime</code> with <code>base</code> in the commands below.
@@ -127,7 +126,7 @@ var pkg = ["cudf", "cuml", "cugraph", "cusignal", "cuspatial", "cuxfilter", "all
 var method = ["conda", "runtime", "source", "devel"];
 var release = ["legacy", "stable", "nightly"];
 var type = ["rapids", "rapidscore"];
-var linux = ["ubuntu1604", "ubuntu1804", "ubuntu20.04", "centos7", "centos8", "rhel7"];
+var linux = ["ubuntu1804", "ubuntu20.04", "centos7", "centos8", "rhel7"];
 var python = ["py37", "py38"];
 var cuda = ["cuda110", "cuda112"];
 var pkg_opts = $(".pkg > .option");
@@ -274,13 +273,6 @@ function processClick(options, click, category) {
         $("#all").removeClass("disabled");
         $(method_opts).removeClass("disabled");
         $(release_opts).removeClass("disabled");
-    } 
-    if (selections["release"] == "nightly") {
-        // Handle ubuntu16.04 deprecation
-        $("#ubuntu1604").addClass("disabled");
-        if (selections["linux"] == "ubuntu1604") {
-            selections["linux"] = "ubuntu1804";
-        }
     }
 
     // Mark active options
