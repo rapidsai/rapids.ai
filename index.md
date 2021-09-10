@@ -39,7 +39,7 @@ Drastically improve your productivity with more interactive data science tools l
 
 {% capture about_bottom_right %}
 ## <i class="fas fa-code-branch"></i> Open Source
-RAPIDS is an open source project. Supported by NVIDIA, it also relies on numba, apache arrow, and many more open source projects. <br> **[Learn about our projects <i class="fas fa-angle-double-right"></i>](community.html)**
+RAPIDS is an open source project. Supported by NVIDIA, it also relies on Numba, Apache Arrow, and many more open source projects. <br> **[Learn about our projects <i class="fas fa-angle-double-right"></i>](community.html)**
 {% endcapture %}
 
 {% include section-double-thirds.html
@@ -230,7 +230,7 @@ Whether you are new to RAPIDS, looking to help, or are part of the team, learn a
 **[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cudf/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/main/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
 
-cuDF is a Python GPU DataFrame library (built on the **[Apache Arrow](http://arrow.apache.org/){: target="_blank"}** columnar memory format) for loading, joining, aggregating, filtering, and otherwise manipulating data all in a **[pandas-like](https://pandas.pydata.org/){: target="_blank"}** API familiar to data scientists.
+cuDF is a Python GPU DataFrame library (built on the **[Apache Arrow](https://arrow.apache.org/){: target="_blank"}** columnar memory format) for loading, joining, aggregating, filtering, and otherwise manipulating data all in a **[pandas-like](https://pandas.pydata.org/){: target="_blank"}** API familiar to data scientists.
 
 {% endcapture %}
 {% capture lib1_right %}
@@ -273,7 +273,7 @@ cuSignal is a GPU accelerated signal processing library built around a **[SciPy 
 {% capture lib3_right %}
 ## <i class="fad fa-terminal"></i> cuSpatial <span class="api-tag">API</span>
 
-**[GitHub](https://github.com/rapidsai/cuspatial){: target="_blank"}** **/** **[Docs](https://github.com/rapidsai/cuspatial){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuspatial/blob/main/CHANGELOG.md){: target="_blank"}**
+**[GitHub](https://github.com/rapidsai/cuspatial){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cuspatial/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuspatial/blob/main/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
 
 cuSpatial is an efficient C++ library accelerated on GPUs with Python bindings to enable use by the data science community. cuSpatial provides significant GPU-acceleration to common spatial and spatiotemporal operations such as point-in-polygon tests, distances between trajectories, and trajectory clustering when compared to CPU-based implementations.
@@ -285,7 +285,7 @@ cuSpatial is an efficient C++ library accelerated on GPUs with Python bindings t
 **[GitHub](https://github.com/rapidsai/cuxfilter){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cuxfilter/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuxfilter/blob/main/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
 
-cuxfilter is a framework to connect web visualizations to GPU accelerated crossfiltering. Inspired by the javascript version of the **[original](https://github.com/crossfilter/crossfilter){: target="_blank"}**, it enables interactive and super fast multi-dimensional filtering of 100 million+ row tabular datasets via **[cuDF](https://github.com/rapidsai/cudf){: target="_blank"}**.
+cuxfilter is a framework to connect web visualizations to GPU accelerated crossfiltering. Inspired by the JavaScript library **[crossfilter](https://github.com/crossfilter/crossfilter){: target="_blank"}**, it enables interactive and super fast multi-dimensional filtering of 100 million+ row tabular datasets via **[cuDF](https://github.com/rapidsai/cudf){: target="_blank"}**.
 
 {% endcapture %}
 {% capture lib4_right %}
@@ -311,7 +311,7 @@ RAPIDS Memory Manager (RMM) is a central place for all device memory allocations
 **[GitHub](https://github.com/rapidsai/cucim){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cucim/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cucim/blob/main/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
 
-cuCIM is a an extensible toolkit designed to provide GPU-accelearted I/O, computer vision and image processing primitives for N-Dimensional images with a focus on biomedical imaging.  Our API mirrors [scikit-image](https://scikit-image.org/) for image manipulation and [OpenSlide](https://openslide.org/) for image loading.
+cuCIM is a an extensible toolkit designed to provide GPU-accelerated I/O, computer vision and image processing primitives for N-Dimensional images with a focus on biomedical imaging.  Our API mirrors [scikit-image](https://scikit-image.org/) for image manipulation and [OpenSlide](https://openslide.org/) for image loading.
 
 {% endcapture %}
 
@@ -368,7 +368,7 @@ BlazingSQL is an open source project providing distributed SQL for analytics tha
 ![Dask]({{ site.baseurl }}{% link /assets/images/dask_logo.png %}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Dask
 
-Dask is an open source project providing advanced parallelism for analytics that enables performance at scale. RAPIDS is actively contributing to Dask, and it integrates with both RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. <br> **[Learn more on our Dask page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](dask.html)**
+Dask is an open source project providing advanced parallelism for analytics that enables performance at scale. RAPIDS is actively contributing to Dask, and it integrates with RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. <br> **[Learn more on our Dask page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](dask.html)**
 
 {% endcapture %}
 
@@ -409,7 +409,7 @@ Accelerate Hyperparameter Optimization (HPO) in the Cloud. The RAPIDS team works
 ![merlin]({{ site.baseurl }}{% link /assets/images/NVLogo_2D_H.png%}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + NVIDIA MERLIN
 
-NVIDIA Merlin is an open source library providing end-to-end GPU-accelerated recommender systems. Merlin leverages RAPIDs cuDF and dask cuDF for dataframe transformation during ETL and inference, as well as for the optimized dataloaders in TensorFlow, PyTorch or HugeCTR to accelerate deep learning training. <br> **[Learn more on our Merlin page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](merlin.html)**
+NVIDIA Merlin is an open source library providing end-to-end GPU-accelerated recommender systems. Merlin leverages RAPIDs cuDF and Dask cuDF for dataframe transformation during ETL and inference, as well as for the optimized dataloaders in TensorFlow, PyTorch or HugeCTR to accelerate deep learning training. <br> **[Learn more on our Merlin page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](merlin.html)**
 
 {% endcapture %}
 
