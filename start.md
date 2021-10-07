@@ -60,7 +60,6 @@ We suggest that you take a look at the sample workflow in our Docker container (
 
 - <i class="fas fa-check-circle text-purple"></i> [11.0](https://developer.nvidia.com/cuda-11.0-update1-download-archive){: target="_blank"} & v450.51+
 - <i class="fas fa-check-circle text-purple"></i> [11.2](https://developer.nvidia.com/cuda-11.2.0-download-archive){: target="_blank"} & v460.32+
-- <i class="fas fa-check-circle text-purple"></i> [11.4](https://developer.nvidia.com/cuda-11-4-1-download-archive){: target="_blank"} & v470.57+
 
 
 {% endcapture %}
