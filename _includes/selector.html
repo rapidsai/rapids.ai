@@ -51,7 +51,7 @@
                 <div class="type">
                     <div class="option-label">Type</div>
                     <div id="rapids" class="option">RAPIDS and BlazingSQL</div>
-                    <div id="rapidscore" class="option">RAPIDS Core (w/o BlazingSQL)</div>
+                    <div id="rapidscore" class="option">RAPIDS Core</div>
                 </div>
                 <div class="pkg">
                     <div class="option-label">Packages</div>
@@ -124,7 +124,7 @@
 /* Adopted from https://pytorch.org/assets/quick-start-module.js */
 var pkg = ["cudf", "cuml", "cugraph", "cusignal", "cuspatial", "cuxfilter", "all"];
 var method = ["conda", "runtime", "source", "devel"];
-var release = ["legacy", "stable", "nightly"];
+var release = ["stable", "nightly"];
 var type = ["rapids", "rapidscore"];
 var linux = ["ubuntu1804", "ubuntu20.04", "centos7", "centos8", "rhel7"];
 var python = ["py37", "py38"];
@@ -273,6 +273,10 @@ function processClick(options, click, category) {
         $("#all").removeClass("disabled");
         $(method_opts).removeClass("disabled");
         $(release_opts).removeClass("disabled");
+    } 
+    if (selections["release"] == "nightly") {
+        selections["type"] = "rapidscore";
+        $("#rapids").addClass("disabled");
     }
 
     // Mark active options
