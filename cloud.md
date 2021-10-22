@@ -732,47 +732,6 @@ RAPIDS can be deployed on Google Cloud as a single instance:
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
 
-
-## <i class="fab fa-google"></i> Google Instance with JupyterLab
-RAPIDS can be deployed on Google Cloud creating a VM with RAPIDS docker container fo launching JupyterLab:
-
-**1. Create.** Create a Project in your Google Cloud account.
-
-**2. Create VM.** The VM will be created by using the **[container for RAPIDS](docker pull rapidsai/rapidsai:cuda11.2-runtime-ubuntu18.04-py3.7)** available on Google cloud and [`gcloud compute instances create`](https://cloud.google.com/sdk/gcloud/reference/compute/instances/create) command
-```shell
->>> export VM_NAME=[VM_NAME]
->>> gcloud compute instances create $VM_NAME \
-   --zone=[ZONE] --image-project=deeplearning-platform-release \
-   --image-family=common-container --maintenance-policy=[MAINTENANCE_POLICY] \
-   --accelerator=type=[GPU_TYPE],count=[NUM_GPU]\
-   --metadata=install-nvidia-driver=True,proxy-mode=project_editors,container=gcr.io/deeplearning-platform-dogfood/dogfood.rapids-gpu.0-17 \
-   --boot-disk-size=[BOOT_DISK_SIZE] \
-   --machine-type=[MACHINE_TYPE] \
-   --scopes=https://www.googleapis.com/auth/cloud-platform
-
-```
-[BOOT_DISK_SIZE] = size of the boot disk.<br>
-[GPU_TYPE] = the type of GPU. See the introduction section for a list of supported GPU types. Ex. `nvidia-tesla-v100`.<br>
-[MAINTENANCE_POLICY] = specifies the behavior of the instance when the host machine is undergoes maintenance. The recommended value is TERMINATE.<br>
-[MACHINE_TYPE] = machine type used for the instances. Ex. `n1-highmem-2`.<br>
-[NUM_GPU] = the number of GPUs. <br>
-[VM_NAME] = name of the VM to be created.<br>
-[ZONE] = zone in which the instance will be created.
-
-**3. Launch VM.** Launch the VM and then run the docker continer using the following command :
-```shell
->>> docker run --gpus all --rm -it \
-    gcr.io/deeplearning-platform-dogfood/dogfood.rapids-gpu.0-17
-```
-This will launch the JupyterLab session.
-
-{: .margin-bottom-3em}
-
-
-**[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
-
-{% endcapture %}
-
 {% capture gc_dask %}
 ## <i class="fab fa-google"></i> Google Cluster via Dask (Dataproc)
 
