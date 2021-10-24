@@ -732,6 +732,9 @@ RAPIDS can be deployed on Google Cloud as a single instance:
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
 
+
+{% endcapture %}
+
 {% capture gc_dask %}
 ## <i class="fab fa-google"></i> Google Cluster via Dask (Dataproc)
 
