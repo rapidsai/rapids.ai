@@ -67,14 +67,14 @@ RAPIDS’s GPU accelerated data science tools can be deployed on all of the majo
 **[Learn more on our cloud page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](cloud.html)**
 {% endcapture %}
 
-{% capture prj_left %}
+{% capture prj_left_top %}
 ![merlin]({{ site.baseurl }}{% link /assets/images/NVLogo_2D_H.png%}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + NVIDIA MERLIN
 
 NVIDIA Merlin is an open source library providing end-to-end GPU-accelerated recommender systems. Merlin leverages RAPIDs cuDF and Dask cuDF for dataframe transformation during ETL and inference, as well as for the optimized dataloaders in TensorFlow, PyTorch or HugeCTR to accelerate deep learning training. <br> **[Learn more on our Merlin page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](merlin.html)**
 {% endcapture %}
 
-{% capture prj_mid %}
+{% capture prj_mid_top %}
 ![slurm]({{ site.baseurl }}{% link /assets/images/slurm-logo.png%}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + HPC
 
@@ -82,13 +82,23 @@ RAPIDS works extremely well in traditional HPC environments where GPUs are often
 <br> **[Learn more on our HPC page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](/hpc)**
 {% endcapture %}
 
-{% capture prj_right %}
+{% capture prj_right_top %}
 ![spark]({{ site.baseurl }}{% link /assets/images/spark-logo-trademark.png %}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Spark
 
 NVIDIA is bringing RAPIDS to Apache Spark to accelerate ETL workflows with GPUs.
 <br> **[Learn more on the RAPIDS for Apache Spark page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://nvidia.github.io/spark-rapids/){: target="_blank"}**
 {% endcapture %}
+
+{% capture prj_left_bottom %}
+![monai]({{ site.baseurl }}{% link /assets/images/MONAI-logo_color.png%}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + MONAI
+
+The Medical Open Network for AI ([MONAI](https://monai.io/)) has been named by some the PyTorch of healthcare.
+RAPIDS cuCIM has been integrated into the MONAI Transforms component to accelerate the data pathology training pipeline on GPU.
+<br> **[Learn more on MONAI latest highlights <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://docs.monai.io/en/latest/highlights.html)**
+{% endcapture %}
+
 
 
 {% include section-double-thirds.html
@@ -101,15 +111,17 @@ NVIDIA is bringing RAPIDS to Apache Spark to accelerate ETL workflows with GPUs.
     content-bottom-middle-third=com_mid_bottom
     content-bottom-right-third=com_right_bottom
 %}
-{% include section-thirds.html
+
+{% include section-double-thirds.html
     background="background-white"
-    padding-top="1em" padding-bottom="5em"
-    content-left-third=prj_left
-    content-middle-third=prj_mid
-    content-right-third=prj_right
+    padding-top="1em" padding-bottom="0em"
+    content-top-left-third=prj_left_top
+    content-top-middle-third=prj_mid_top
+    content-top-right-third=prj_right_top
+    content-bottom-left-third=prj_left_bottom
+    content-bottom-middle-third=prj_mid_bottom
+    content-bottom-right-third=prj_right_bottom
 %}
-
-
 
 
 {% capture com_left %}
