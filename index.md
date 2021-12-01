@@ -432,7 +432,13 @@ NVIDIA is bringing RAPIDS to Apache Spark to accelerate ETL workflows with GPUs.
 {% endcapture %}
 
 {% capture com3_right %}
-  
+![monai]({{ site.baseurl }}{% link /assets/images/MONAI-logo_color.png%}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + MONAI
+
+The Medical Open Network for AI ([MONAI](https://monai.io/)) has been named by some the PyTorch of healthcare.
+RAPIDS cuCIM has been integrated into the MONAI Transforms component to accelerate the data pathology training pipeline on GPU.
+<br> **[Learn more on MONAI latest highlights <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://docs.monai.io/en/latest/highlights.html)**
+
 {% endcapture %}
 
 
