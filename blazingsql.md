@@ -12,7 +12,8 @@ layout: default
 # Blazing fast SQL on Rapids
 {: .section-title-full}
 {% capture intro_content %}
-BlazingSQL was an incredibly fast distributed SQL engine on GPUs. BlazingSQL enabled data scientists to easily connect large-scale data lakes to GPU-accelerated analytics. With a few lines of code, you can directly query raw file formats such as CSV and Apache Parquet inside Data Lakes like HDFS and AWS S3, and directly pipe the results into GPU memory. <br><br>**RAPIDS support of BlazingSQL has been deprecated with release 21.12 in favor of [Dask-SQL](dasksql.html)**. You can still use it with RAPIDS 21.08 and 21.08 
+BlazingSQL was an incredibly fast distributed SQL engine on GPUs. BlazingSQL enabled data scientists to easily connect large-scale data lakes to GPU-accelerated analytics. With a few lines of code, you can directly query raw file formats such as CSV and Apache Parquet inside Data Lakes like HDFS and AWS S3, and directly pipe the results into GPU memory. 
+<br><br>**[RAPIDS support of BlazingSQL has been deprecated with release 21.12](https://docs.rapids.ai/notices/rsn0012/) in favor of [Dask-SQL](dasksql.html)**. You can still use it with RAPIDS 21.08 and 21.08 
 {: .subtitle .pading-top-0em .margin-top-0em}
 
 {% endcapture %}
