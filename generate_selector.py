@@ -14,7 +14,7 @@ Selector configurations
 STABLE_CONFIG ={
     "name": "stable",
     "file": "_includes/selector-commands-stable.html",
-    "ver": "21.12",
+    "ver": "21.10",
     "os": ['ubuntu18.04','ubuntu20.04','centos7','centos8'],
     "cuda": ['11.0','11.2'],
     "py": ['3.7','3.8'],
@@ -25,7 +25,7 @@ STABLE_CONFIG ={
 NIGHTLY_CONFIG ={
     "name": "nightly",
     "file": "_includes/selector-commands-nightly.html",
-    "ver": "22.02",
+    "ver": "21.12",
     "os": ['ubuntu18.04','ubuntu20.04','centos7','centos8'],
     "cuda": ['11.0','11.2'],
     "py": ['3.7','3.8'],
@@ -105,13 +105,11 @@ def generate_conda_lib(config, selector_name):
                 tag_name = config["name"]
                 tag_cuda = cuda_ver.replace('.','')
                 tag_py = py_ver.replace('.','')
-                #blazing_conda = "blazingsql="+rapids_ver+" " if selector_name == "rapids" else ""
-				dasksql_ver = "2021.11.0"
-				dasksql_conda = "dask-sql="+dasksql_ver+" " if selector_name == "rapids" else ""
-				channel = "rapidsai" + ("-nightly" if config["name"] == "nightly" else "")
+                blazing_conda = "blazingsql="+rapids_ver+" " if selector_name == "rapids" else ""
+                channel = "rapidsai" + ("-nightly" if config["name"] == "nightly" else "")
                 cmd = "```bash\n\
 conda create -n rapids-"+rapids_ver+" -c "+channel+" -c nvidia -c conda-forge \\\n\
-    "+lib+"="+rapids_ver+" python="+py_ver+" cudatoolkit="+cuda_ver+" "+dasksql_conda+" \n\
+    "+blazing_conda+lib+"="+rapids_ver+" python="+py_ver+" cudatoolkit="+cuda_ver+"\n\
 ```\n\
 {: ."+tag_name+"-"+selector_name+"-"+lib+"-conda-py"+tag_py+"-cuda"+tag_cuda+" .hidden }\n"
                 config["cmds"].append(cmd)
@@ -135,7 +133,7 @@ def main():
         generate_docker(config, "rapidscore", "rapidsai/rapidsai-core", "runtime")
         generate_docker(config, "rapidscore", "rapidsai/rapidsai-core-dev", "devel")
         generate_source(config)
-        generate_conda_all(config, "rapids", "rapids-dasksql")
+        generate_conda_all(config, "rapids", "rapids-blazing")
         generate_conda_all(config, "rapidscore", "rapids")
         generate_conda_lib(config, "rapids")
         generate_conda_lib(config, "rapidscore")

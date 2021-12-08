@@ -48,11 +48,14 @@
                     <div id="stable" class="option">Stable ({{ site.data.releases.stable-version }})</div>
                     <div id="nightly" class="option">Nightly ({{ site.data.releases.nightly-version }}a)</div>
                 </div>
-                <div class="type">
+				<!--  COMMENTING THIS OUT IN CASE WE NEED TO ADD TYPE
+                      AGAIN IN THE FUTURE
+				<div class="type">
                     <div class="option-label">Type</div>
-                    <div id="rapids" class="option">RAPIDS and BlazingSQL</div>
+                    <div id="rapids" class="option">RAPIDS and Dask-SQL</div>
                     <div id="rapidscore" class="option">RAPIDS Core</div>
-                </div>
+                </div>	  	  
+					  -->
                 <div class="pkg">
                     <div class="option-label">Packages</div>
                     <div id="all" class="option">All Packages</div>
@@ -125,7 +128,7 @@
 var pkg = ["cudf", "cuml", "cugraph", "cusignal", "cuspatial", "cuxfilter", "all"];
 var method = ["conda", "runtime", "source", "devel"];
 var release = ["stable", "nightly"];
-var type = ["rapids", "rapidscore"];
+var type = ["rapids","rapidscore"];
 var linux = ["ubuntu1804", "ubuntu20.04", "centos7", "centos8", "rhel7"];
 var python = ["py37", "py38"];
 var cuda = ["cuda110", "cuda112"];
@@ -146,7 +149,7 @@ var selections = {
     pkg: "all",
     method: "conda",
     release: "stable",
-    type: "rapids",
+    type: "rapidscore",
     linux: "ubuntu1804",
     python: "py37",
     cuda: "cuda110"
@@ -286,7 +289,7 @@ function processClick(options, click, category) {
     $("#" + selections["python"]).addClass("active");
     $("#" + selections["cuda"]).addClass("active");
     $("#" + selections["release"]).addClass("active");
-    $("#" + selections["type"]).addClass("active");
+    //$("#" + selections["type"]).addClass("active");
 
     showCommand();
 }
