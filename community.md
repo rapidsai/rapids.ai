@@ -22,10 +22,10 @@ The RAPIDS team is developing, contributing, and collaborating closely with nume
 %}
 
 {% capture com_left_top %}
-![BLAZINGSQL]({{ site.baseurl }}{% link /assets/images/blazingsql.png %}){: .third-image-center}
-## <i class="fas fa-code-branch"></i> RAPIDS + BlazingSQL
+![Dask-SQL]({{ site.baseurl }}{% link /assets/images/dask_logo.png %}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + Dask-SQL
 
-BlazingSQL is an open source project providing distributed SQL for analytics that enables the integration of enterprise data at scale. RAPIDS is actively contributing to BlazingSQL, and it integrates with RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. <br> **[Learn more on our BlazingSQL page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](blazingsql.html)**
+Dask-SQL is an open source project providing distributed SQL for analytics that enables the integration of enterprise data at scale. RAPIDS is actively contributing to Dask-SQL, and it integrates with RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. <br> **[Learn more on our Dask-SQL page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](dasksql.html)**
 
 {% endcapture %}
 {% capture com_mid_top %}
@@ -99,6 +99,13 @@ RAPIDS cuCIM has been integrated into the MONAI Transforms component to accelera
 <br> **[Learn more on MONAI latest highlights <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://docs.monai.io/en/latest/highlights.html)**
 {% endcapture %}
 
+{% capture prj_mid_bottom %}
+![BLAZINGSQL]({{ site.baseurl }}{% link /assets/images/blazingsql.png %}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + BlazingSQL
+
+BlazingSQL is an open source project providing distributed SQL for analytics that enables the integration of enterprise data at scale. RAPIDS is actively contributing to BlazingSQL, and it integrates with RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. <br> **[Learn more on our BlazingSQL page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](blazingsql.html)**
+
+{% endcapture %}
 
 
 {% include section-double-thirds.html
