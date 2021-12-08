@@ -7,7 +7,7 @@ button_link: "https://dask-sql.readthedocs.io/en/latest/"
 layout: default
 ---
 
-![Dask-SQL]({{ site.baseurl }}{% link /assets/images/dask.svg %}){: .projects-logo-bsql}
+![Dask-SQL]({{ site.baseurl }}{% link /assets/images/dasksql3.png %}){: .projects-logo-bsql}
 
 # Fast, Scalable SQL on Rapids
 {: .section-title-full}

@@ -22,7 +22,8 @@ The RAPIDS team is developing, contributing, and collaborating closely with nume
 %}
 
 {% capture com_left_top %}
-![Dask-SQL]({{ site.baseurl }}{% link /assets/images/dask_logo.png %}){: .third-image-center}
+![Dask-SQL]({{ site.baseurl }}{% link /assets/images/dasksql3.png %}){: .third-image-center}
+<br>
 ## <i class="fas fa-code-branch"></i> RAPIDS + Dask-SQL
 
 Dask-SQL is an open source project providing distributed SQL for analytics that enables the integration of enterprise data at scale. It runs interchangeably on CPUs and GPUs. The RAPIDS team actively contributes to Dask-SQL; it integrates with cuDF, XGBoost, and cuML for GPU-accelerated data analytics and machine learning. <br> **[Learn more on the Dask-SQL page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](dasksql.html)**
@@ -103,8 +104,7 @@ RAPIDS cuCIM has been integrated into the MONAI Transforms component to accelera
 ![BLAZINGSQL]({{ site.baseurl }}{% link /assets/images/blazingsql.png %}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + BlazingSQL
 
-BlazingSQL is an open source project providing distributed SQL for analytics that enables the integration of enterprise data at scale. RAPIDS is actively contributing to BlazingSQL, and it integrates with RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. <br> **[Learn more on our BlazingSQL page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](blazingsql.html)**
-
+BlazingSQL was an open source project providing distributed SQL for analytics that enables the integration of enterprise data at scale. It integrates with RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. **Deprecated in favor of Dask-SQL.  Supported RAPIDS releases: 21.08 & 21.10**.  <br> **[Learn more on our BlazingSQL page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](blazingsql.html)**
 {% endcapture %}
 
 
