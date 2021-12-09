@@ -14,7 +14,7 @@ Selector configurations
 STABLE_CONFIG ={
     "name": "stable",
     "file": "_includes/selector-commands-stable.html",
-    "ver": "21.12",
+    "ver": "21.10",
     "os": ['ubuntu18.04','ubuntu20.04','centos7','centos8'],
     "cuda": ['11.0','11.2'],
     "py": ['3.7','3.8'],
@@ -25,7 +25,7 @@ STABLE_CONFIG ={
 NIGHTLY_CONFIG ={
     "name": "nightly",
     "file": "_includes/selector-commands-nightly.html",
-    "ver": "22.02",
+    "ver": "21.12",
     "os": ['ubuntu18.04','ubuntu20.04','centos7','centos8'],
     "cuda": ['11.0','11.2'],
     "py": ['3.7','3.8'],
@@ -133,8 +133,7 @@ def main():
         generate_docker(config, "rapidscore", "rapidsai/rapidsai-core", "runtime")
         generate_docker(config, "rapidscore", "rapidsai/rapidsai-core-dev", "devel")
         generate_source(config)
-        #generate_conda_all(config, "rapids", "rapids-blazing")\
-		generate_conda_all(config, "rapids", "rapids")
+        generate_conda_all(config, "rapids", "rapids-blazing")
         generate_conda_all(config, "rapidscore", "rapids")
         generate_conda_lib(config, "rapids")
         generate_conda_lib(config, "rapidscore")
