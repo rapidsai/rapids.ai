@@ -78,7 +78,7 @@ You can use Dask-SQL with a RAPIDS install on our <br> **[Get Started Page <i cl
 {: .section-subtitle-top-1}
 
 Learn more about Dask-SQL on the and try out their examples on their 
-**[Welcome To Dask-SQL Github Repository <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai-community/notebooks-contrib/tree/main/community_tutorials_and_guides/dasksql){: target="_blank"}**
+**[Welcome To Dask-SQL Github Repository <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai-community/notebooks-contrib/tree/main/community_tutorials_and_guides/dask-sql){: target="_blank"}**
 
 ## <i class="far fa-file-code"></i> Access Dask-SQL Docs
 See the latest **[documentation for Dask-SQL <i class="fas fa-angle-double-right"></i>](https://dask-sql.readthedocs.io/en/latest/){: target="_blank"}**
