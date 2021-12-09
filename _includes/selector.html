@@ -48,11 +48,6 @@
                     <div id="stable" class="option">Stable ({{ site.data.releases.stable-version }})</div>
                     <div id="nightly" class="option">Nightly ({{ site.data.releases.nightly-version }}a)</div>
                 </div>
-                <div class="type">
-                    <div class="option-label">Type</div>
-                    <div id="rapids" class="option">RAPIDS and BlazingSQL</div>
-                    <div id="rapidscore" class="option">RAPIDS Core</div>
-                </div>
                 <div class="pkg">
                     <div class="option-label">Packages</div>
                     <div id="all" class="option">All Packages</div>
@@ -127,14 +122,12 @@
 var pkg = ["cudf", "cuml", "cugraph", "cusignal", "cuspatial", "cuxfilter", "all"];
 var method = ["conda", "runtime", "source", "devel"];
 var release = ["stable", "nightly"];
-var type = ["rapids", "rapidscore"];
 var linux = ["ubuntu1804", "ubuntu20.04", "centos7", "centos8", "rhel7"];
 var python = ["py37", "py38"];
 var cuda = ["cuda110", "cuda112"];
 var pkg_opts = $(".pkg > .option");
 var method_opts = $(".method > .option");
 var release_opts = $(".release > .option");
-var type_opts = $(".type > .option");
 var linux_opts = $(".linux > .option");
 var python_opts = $(".python > .option");
 var cuda_opts = $(".cuda > .option");
@@ -148,7 +141,6 @@ var selections = {
     pkg: "all",
     method: "conda",
     release: "stable",
-    type: "rapids",
     linux: "ubuntu1804",
     python: "py37",
     cuda: "cuda110"
@@ -164,9 +156,6 @@ method_opts.on("click", function() {
 });
 release_opts.on("click", function() {
     processClick(release_opts, this, "release");
-});
-type_opts.on("click", function() {
-    processClick(type_opts, this, "type");
 });
 linux_opts.on("click", function() {
     processClick(linux_opts, this, "linux");
@@ -188,14 +177,12 @@ function resetAll() {
     $(method_opts).removeClass("disabled");
     $(pkg_opts).removeClass("disabled");
     $(release_opts).removeClass("disabled");
-    $(type_opts).removeClass("disabled");
     $(linux_opts).removeClass("disabled");
     $(python_opts).removeClass("disabled");
     $(cuda_opts).removeClass("disabled");
     $(method_opts).removeClass("active");
     $(pkg_opts).removeClass("active");
     $(release_opts).removeClass("active");
-    $(type_opts).removeClass("active");
     $(linux_opts).removeClass("active");
     $(python_opts).removeClass("active");
     $(cuda_opts).removeClass("active");
@@ -260,10 +247,8 @@ function processClick(options, click, category) {
         }
         $(python_opts).removeClass("active");
         $(cuda_opts).removeClass("active");
-        $(type_opts).removeClass("active");
         $(python_opts).addClass("disabled");
         $(cuda_opts).addClass("disabled");
-        $(type_opts).addClass("disabled");
     } else if (selections["method"] == "devel") {
         // Handle docker devel requests
         if (selections["linux"] == "rhel7") {
@@ -276,10 +261,6 @@ function processClick(options, click, category) {
         $(method_opts).removeClass("disabled");
         $(release_opts).removeClass("disabled");
     } 
-    if (selections["release"] == "nightly") {
-        selections["type"] = "rapidscore";
-        $("#rapids").addClass("disabled");
-    }
 
     // Mark active options
     $("#" + selections["method"]).addClass("active");
@@ -288,7 +269,6 @@ function processClick(options, click, category) {
     $("#" + selections["python"]).addClass("active");
     $("#" + selections["cuda"]).addClass("active");
     $("#" + selections["release"]).addClass("active");
-    $("#" + selections["type"]).addClass("active");
 
     showCommand();
 }
@@ -297,9 +277,9 @@ function getSelections() {
     if (selections["method"] == "source") {
         return "" + selections["release"] + "-" + selections["pkg"] + "-" + selections["method"];
     } else if (selections["method"] == "conda") {
-        return "" + selections["release"] + "-" + selections["type"] + "-" + selections["pkg"] + "-" + selections["method"] + "-" + selections["python"] + "-" + selections["cuda"];
+        return "" + selections["release"] + "-" + selections["pkg"] + "-" + selections["method"] + "-" + selections["python"] + "-" + selections["cuda"];
     } else {
-        return "" + selections["release"] + "-" + selections["type"] + "-" + selections["pkg"] + "-" + selections["method"] + "-" + selections["linux"] + "-" + selections["python"] + "-" + selections["cuda"];
+        return "" + selections["release"] + "-" + selections["pkg"] + "-" + selections["method"] + "-" + selections["linux"] + "-" + selections["python"] + "-" + selections["cuda"];
     }
 }
 
