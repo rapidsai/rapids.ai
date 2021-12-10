@@ -1,419 +1,403 @@
 
-<!-- docker rapids-runtime ubuntu18.04 -->
+<!-- docker runtime ubuntu18.04 -->
 ```bash
-docker pull rapidsai/rapidsai:21.10-cuda11.0-runtime-ubuntu18.04-py3.7
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.0-runtime-ubuntu18.04-py3.7
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai:21.10-cuda11.0-runtime-ubuntu18.04-py3.7
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.0-runtime-ubuntu18.04-py3.7
 ```
-{: .stable-rapids-all-runtime-ubuntu1804-py37-cuda110 .hidden }
+{: .stable-all-runtime-ubuntu1804-py37-cuda110 .hidden }
 ```bash
-docker pull rapidsai/rapidsai:21.10-cuda11.0-runtime-ubuntu18.04-py3.8
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.0-runtime-ubuntu18.04-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai:21.10-cuda11.0-runtime-ubuntu18.04-py3.8
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.0-runtime-ubuntu18.04-py3.8
 ```
-{: .stable-rapids-all-runtime-ubuntu1804-py38-cuda110 .hidden }
+{: .stable-all-runtime-ubuntu1804-py38-cuda110 .hidden }
 ```bash
-docker pull rapidsai/rapidsai:21.10-cuda11.2-runtime-ubuntu18.04-py3.7
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.2-runtime-ubuntu18.04-py3.7
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai:21.10-cuda11.2-runtime-ubuntu18.04-py3.7
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.2-runtime-ubuntu18.04-py3.7
 ```
-{: .stable-rapids-all-runtime-ubuntu1804-py37-cuda112 .hidden }
+{: .stable-all-runtime-ubuntu1804-py37-cuda112 .hidden }
 ```bash
-docker pull rapidsai/rapidsai:21.10-cuda11.2-runtime-ubuntu18.04-py3.8
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.2-runtime-ubuntu18.04-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai:21.10-cuda11.2-runtime-ubuntu18.04-py3.8
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.2-runtime-ubuntu18.04-py3.8
 ```
-{: .stable-rapids-all-runtime-ubuntu1804-py38-cuda112 .hidden }
+{: .stable-all-runtime-ubuntu1804-py38-cuda112 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.4-runtime-ubuntu18.04-py3.7
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.4-runtime-ubuntu18.04-py3.7
+```
+{: .stable-all-runtime-ubuntu1804-py37-cuda114 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.4-runtime-ubuntu18.04-py3.8
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.4-runtime-ubuntu18.04-py3.8
+```
+{: .stable-all-runtime-ubuntu1804-py38-cuda114 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.5-runtime-ubuntu18.04-py3.7
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.5-runtime-ubuntu18.04-py3.7
+```
+{: .stable-all-runtime-ubuntu1804-py37-cuda115 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.5-runtime-ubuntu18.04-py3.8
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.5-runtime-ubuntu18.04-py3.8
+```
+{: .stable-all-runtime-ubuntu1804-py38-cuda115 .hidden }
 
-<!-- docker rapids-runtime ubuntu20.04 -->
+<!-- docker runtime ubuntu20.04 -->
 ```bash
-docker pull rapidsai/rapidsai:21.10-cuda11.0-runtime-ubuntu20.04-py3.7
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.0-runtime-ubuntu20.04-py3.7
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai:21.10-cuda11.0-runtime-ubuntu20.04-py3.7
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.0-runtime-ubuntu20.04-py3.7
 ```
-{: .stable-rapids-all-runtime-ubuntu2004-py37-cuda110 .hidden }
+{: .stable-all-runtime-ubuntu2004-py37-cuda110 .hidden }
 ```bash
-docker pull rapidsai/rapidsai:21.10-cuda11.0-runtime-ubuntu20.04-py3.8
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.0-runtime-ubuntu20.04-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai:21.10-cuda11.0-runtime-ubuntu20.04-py3.8
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.0-runtime-ubuntu20.04-py3.8
 ```
-{: .stable-rapids-all-runtime-ubuntu2004-py38-cuda110 .hidden }
+{: .stable-all-runtime-ubuntu2004-py38-cuda110 .hidden }
 ```bash
-docker pull rapidsai/rapidsai:21.10-cuda11.2-runtime-ubuntu20.04-py3.7
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.2-runtime-ubuntu20.04-py3.7
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai:21.10-cuda11.2-runtime-ubuntu20.04-py3.7
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.2-runtime-ubuntu20.04-py3.7
 ```
-{: .stable-rapids-all-runtime-ubuntu2004-py37-cuda112 .hidden }
+{: .stable-all-runtime-ubuntu2004-py37-cuda112 .hidden }
 ```bash
-docker pull rapidsai/rapidsai:21.10-cuda11.2-runtime-ubuntu20.04-py3.8
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.2-runtime-ubuntu20.04-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai:21.10-cuda11.2-runtime-ubuntu20.04-py3.8
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.2-runtime-ubuntu20.04-py3.8
 ```
-{: .stable-rapids-all-runtime-ubuntu2004-py38-cuda112 .hidden }
+{: .stable-all-runtime-ubuntu2004-py38-cuda112 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.4-runtime-ubuntu20.04-py3.7
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.4-runtime-ubuntu20.04-py3.7
+```
+{: .stable-all-runtime-ubuntu2004-py37-cuda114 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.4-runtime-ubuntu20.04-py3.8
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.4-runtime-ubuntu20.04-py3.8
+```
+{: .stable-all-runtime-ubuntu2004-py38-cuda114 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.5-runtime-ubuntu20.04-py3.7
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.5-runtime-ubuntu20.04-py3.7
+```
+{: .stable-all-runtime-ubuntu2004-py37-cuda115 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.5-runtime-ubuntu20.04-py3.8
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.5-runtime-ubuntu20.04-py3.8
+```
+{: .stable-all-runtime-ubuntu2004-py38-cuda115 .hidden }
 
-<!-- docker rapids-runtime centos7 -->
+<!-- docker runtime centos7 -->
 ```bash
-docker pull rapidsai/rapidsai:21.10-cuda11.0-runtime-centos7-py3.7
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.0-runtime-centos7-py3.7
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai:21.10-cuda11.0-runtime-centos7-py3.7
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.0-runtime-centos7-py3.7
 ```
-{: .stable-rapids-all-runtime-centos7-py37-cuda110 .hidden }
+{: .stable-all-runtime-centos7-py37-cuda110 .hidden }
 ```bash
-docker pull rapidsai/rapidsai:21.10-cuda11.0-runtime-centos7-py3.8
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.0-runtime-centos7-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai:21.10-cuda11.0-runtime-centos7-py3.8
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.0-runtime-centos7-py3.8
 ```
-{: .stable-rapids-all-runtime-centos7-py38-cuda110 .hidden }
+{: .stable-all-runtime-centos7-py38-cuda110 .hidden }
 ```bash
-docker pull rapidsai/rapidsai:21.10-cuda11.2-runtime-centos7-py3.7
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.2-runtime-centos7-py3.7
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai:21.10-cuda11.2-runtime-centos7-py3.7
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.2-runtime-centos7-py3.7
 ```
-{: .stable-rapids-all-runtime-centos7-py37-cuda112 .hidden }
+{: .stable-all-runtime-centos7-py37-cuda112 .hidden }
 ```bash
-docker pull rapidsai/rapidsai:21.10-cuda11.2-runtime-centos7-py3.8
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.2-runtime-centos7-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai:21.10-cuda11.2-runtime-centos7-py3.8
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.2-runtime-centos7-py3.8
 ```
-{: .stable-rapids-all-runtime-centos7-py38-cuda112 .hidden }
+{: .stable-all-runtime-centos7-py38-cuda112 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.4-runtime-centos7-py3.7
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.4-runtime-centos7-py3.7
+```
+{: .stable-all-runtime-centos7-py37-cuda114 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.4-runtime-centos7-py3.8
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.4-runtime-centos7-py3.8
+```
+{: .stable-all-runtime-centos7-py38-cuda114 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.5-runtime-centos7-py3.7
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.5-runtime-centos7-py3.7
+```
+{: .stable-all-runtime-centos7-py37-cuda115 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.5-runtime-centos7-py3.8
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.5-runtime-centos7-py3.8
+```
+{: .stable-all-runtime-centos7-py38-cuda115 .hidden }
 
-<!-- docker rapids-runtime centos8 -->
+<!-- docker runtime centos8 -->
 ```bash
-docker pull rapidsai/rapidsai:21.10-cuda11.0-runtime-centos8-py3.7
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.0-runtime-centos8-py3.7
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai:21.10-cuda11.0-runtime-centos8-py3.7
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.0-runtime-centos8-py3.7
 ```
-{: .stable-rapids-all-runtime-centos8-py37-cuda110 .hidden }
+{: .stable-all-runtime-centos8-py37-cuda110 .hidden }
 ```bash
-docker pull rapidsai/rapidsai:21.10-cuda11.0-runtime-centos8-py3.8
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.0-runtime-centos8-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai:21.10-cuda11.0-runtime-centos8-py3.8
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.0-runtime-centos8-py3.8
 ```
-{: .stable-rapids-all-runtime-centos8-py38-cuda110 .hidden }
+{: .stable-all-runtime-centos8-py38-cuda110 .hidden }
 ```bash
-docker pull rapidsai/rapidsai:21.10-cuda11.2-runtime-centos8-py3.7
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.2-runtime-centos8-py3.7
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai:21.10-cuda11.2-runtime-centos8-py3.7
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.2-runtime-centos8-py3.7
 ```
-{: .stable-rapids-all-runtime-centos8-py37-cuda112 .hidden }
+{: .stable-all-runtime-centos8-py37-cuda112 .hidden }
 ```bash
-docker pull rapidsai/rapidsai:21.10-cuda11.2-runtime-centos8-py3.8
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.2-runtime-centos8-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai:21.10-cuda11.2-runtime-centos8-py3.8
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.2-runtime-centos8-py3.8
 ```
-{: .stable-rapids-all-runtime-centos8-py38-cuda112 .hidden }
+{: .stable-all-runtime-centos8-py38-cuda112 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.4-runtime-centos8-py3.7
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.4-runtime-centos8-py3.7
+```
+{: .stable-all-runtime-centos8-py37-cuda114 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.4-runtime-centos8-py3.8
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.4-runtime-centos8-py3.8
+```
+{: .stable-all-runtime-centos8-py38-cuda114 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.5-runtime-centos8-py3.7
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.5-runtime-centos8-py3.7
+```
+{: .stable-all-runtime-centos8-py37-cuda115 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.5-runtime-centos8-py3.8
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core:{{site.data.releases.stable-version}}-cuda11.5-runtime-centos8-py3.8
+```
+{: .stable-all-runtime-centos8-py38-cuda115 .hidden }
 
-<!-- docker rapids-devel ubuntu18.04 -->
+<!-- docker devel ubuntu18.04 -->
 ```bash
-docker pull rapidsai/rapidsai-dev:21.10-cuda11.0-devel-ubuntu18.04-py3.7
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.0-devel-ubuntu18.04-py3.7
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-dev:21.10-cuda11.0-devel-ubuntu18.04-py3.7
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.0-devel-ubuntu18.04-py3.7
 ```
-{: .stable-rapids-all-devel-ubuntu1804-py37-cuda110 .hidden }
+{: .stable-all-devel-ubuntu1804-py37-cuda110 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-dev:21.10-cuda11.0-devel-ubuntu18.04-py3.8
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.0-devel-ubuntu18.04-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-dev:21.10-cuda11.0-devel-ubuntu18.04-py3.8
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.0-devel-ubuntu18.04-py3.8
 ```
-{: .stable-rapids-all-devel-ubuntu1804-py38-cuda110 .hidden }
+{: .stable-all-devel-ubuntu1804-py38-cuda110 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-dev:21.10-cuda11.2-devel-ubuntu18.04-py3.7
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.2-devel-ubuntu18.04-py3.7
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-dev:21.10-cuda11.2-devel-ubuntu18.04-py3.7
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.2-devel-ubuntu18.04-py3.7
 ```
-{: .stable-rapids-all-devel-ubuntu1804-py37-cuda112 .hidden }
+{: .stable-all-devel-ubuntu1804-py37-cuda112 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-dev:21.10-cuda11.2-devel-ubuntu18.04-py3.8
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.2-devel-ubuntu18.04-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-dev:21.10-cuda11.2-devel-ubuntu18.04-py3.8
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.2-devel-ubuntu18.04-py3.8
 ```
-{: .stable-rapids-all-devel-ubuntu1804-py38-cuda112 .hidden }
+{: .stable-all-devel-ubuntu1804-py38-cuda112 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.4-devel-ubuntu18.04-py3.7
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.4-devel-ubuntu18.04-py3.7
+```
+{: .stable-all-devel-ubuntu1804-py37-cuda114 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.4-devel-ubuntu18.04-py3.8
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.4-devel-ubuntu18.04-py3.8
+```
+{: .stable-all-devel-ubuntu1804-py38-cuda114 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.5-devel-ubuntu18.04-py3.7
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.5-devel-ubuntu18.04-py3.7
+```
+{: .stable-all-devel-ubuntu1804-py37-cuda115 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.5-devel-ubuntu18.04-py3.8
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.5-devel-ubuntu18.04-py3.8
+```
+{: .stable-all-devel-ubuntu1804-py38-cuda115 .hidden }
 
-<!-- docker rapids-devel ubuntu20.04 -->
+<!-- docker devel ubuntu20.04 -->
 ```bash
-docker pull rapidsai/rapidsai-dev:21.10-cuda11.0-devel-ubuntu20.04-py3.7
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.0-devel-ubuntu20.04-py3.7
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-dev:21.10-cuda11.0-devel-ubuntu20.04-py3.7
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.0-devel-ubuntu20.04-py3.7
 ```
-{: .stable-rapids-all-devel-ubuntu2004-py37-cuda110 .hidden }
+{: .stable-all-devel-ubuntu2004-py37-cuda110 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-dev:21.10-cuda11.0-devel-ubuntu20.04-py3.8
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.0-devel-ubuntu20.04-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-dev:21.10-cuda11.0-devel-ubuntu20.04-py3.8
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.0-devel-ubuntu20.04-py3.8
 ```
-{: .stable-rapids-all-devel-ubuntu2004-py38-cuda110 .hidden }
+{: .stable-all-devel-ubuntu2004-py38-cuda110 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-dev:21.10-cuda11.2-devel-ubuntu20.04-py3.7
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.2-devel-ubuntu20.04-py3.7
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-dev:21.10-cuda11.2-devel-ubuntu20.04-py3.7
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.2-devel-ubuntu20.04-py3.7
 ```
-{: .stable-rapids-all-devel-ubuntu2004-py37-cuda112 .hidden }
+{: .stable-all-devel-ubuntu2004-py37-cuda112 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-dev:21.10-cuda11.2-devel-ubuntu20.04-py3.8
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.2-devel-ubuntu20.04-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-dev:21.10-cuda11.2-devel-ubuntu20.04-py3.8
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.2-devel-ubuntu20.04-py3.8
 ```
-{: .stable-rapids-all-devel-ubuntu2004-py38-cuda112 .hidden }
+{: .stable-all-devel-ubuntu2004-py38-cuda112 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.4-devel-ubuntu20.04-py3.7
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.4-devel-ubuntu20.04-py3.7
+```
+{: .stable-all-devel-ubuntu2004-py37-cuda114 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.4-devel-ubuntu20.04-py3.8
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.4-devel-ubuntu20.04-py3.8
+```
+{: .stable-all-devel-ubuntu2004-py38-cuda114 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.5-devel-ubuntu20.04-py3.7
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.5-devel-ubuntu20.04-py3.7
+```
+{: .stable-all-devel-ubuntu2004-py37-cuda115 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.5-devel-ubuntu20.04-py3.8
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.5-devel-ubuntu20.04-py3.8
+```
+{: .stable-all-devel-ubuntu2004-py38-cuda115 .hidden }
 
-<!-- docker rapids-devel centos7 -->
+<!-- docker devel centos7 -->
 ```bash
-docker pull rapidsai/rapidsai-dev:21.10-cuda11.0-devel-centos7-py3.7
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.0-devel-centos7-py3.7
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-dev:21.10-cuda11.0-devel-centos7-py3.7
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.0-devel-centos7-py3.7
 ```
-{: .stable-rapids-all-devel-centos7-py37-cuda110 .hidden }
+{: .stable-all-devel-centos7-py37-cuda110 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-dev:21.10-cuda11.0-devel-centos7-py3.8
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.0-devel-centos7-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-dev:21.10-cuda11.0-devel-centos7-py3.8
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.0-devel-centos7-py3.8
 ```
-{: .stable-rapids-all-devel-centos7-py38-cuda110 .hidden }
+{: .stable-all-devel-centos7-py38-cuda110 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-dev:21.10-cuda11.2-devel-centos7-py3.7
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.2-devel-centos7-py3.7
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-dev:21.10-cuda11.2-devel-centos7-py3.7
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.2-devel-centos7-py3.7
 ```
-{: .stable-rapids-all-devel-centos7-py37-cuda112 .hidden }
+{: .stable-all-devel-centos7-py37-cuda112 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-dev:21.10-cuda11.2-devel-centos7-py3.8
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.2-devel-centos7-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-dev:21.10-cuda11.2-devel-centos7-py3.8
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.2-devel-centos7-py3.8
 ```
-{: .stable-rapids-all-devel-centos7-py38-cuda112 .hidden }
+{: .stable-all-devel-centos7-py38-cuda112 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.4-devel-centos7-py3.7
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.4-devel-centos7-py3.7
+```
+{: .stable-all-devel-centos7-py37-cuda114 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.4-devel-centos7-py3.8
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.4-devel-centos7-py3.8
+```
+{: .stable-all-devel-centos7-py38-cuda114 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.5-devel-centos7-py3.7
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.5-devel-centos7-py3.7
+```
+{: .stable-all-devel-centos7-py37-cuda115 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.5-devel-centos7-py3.8
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.5-devel-centos7-py3.8
+```
+{: .stable-all-devel-centos7-py38-cuda115 .hidden }
 
-<!-- docker rapids-devel centos8 -->
+<!-- docker devel centos8 -->
 ```bash
-docker pull rapidsai/rapidsai-dev:21.10-cuda11.0-devel-centos8-py3.7
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.0-devel-centos8-py3.7
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-dev:21.10-cuda11.0-devel-centos8-py3.7
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.0-devel-centos8-py3.7
 ```
-{: .stable-rapids-all-devel-centos8-py37-cuda110 .hidden }
+{: .stable-all-devel-centos8-py37-cuda110 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-dev:21.10-cuda11.0-devel-centos8-py3.8
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.0-devel-centos8-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-dev:21.10-cuda11.0-devel-centos8-py3.8
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.0-devel-centos8-py3.8
 ```
-{: .stable-rapids-all-devel-centos8-py38-cuda110 .hidden }
+{: .stable-all-devel-centos8-py38-cuda110 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-dev:21.10-cuda11.2-devel-centos8-py3.7
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.2-devel-centos8-py3.7
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-dev:21.10-cuda11.2-devel-centos8-py3.7
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.2-devel-centos8-py3.7
 ```
-{: .stable-rapids-all-devel-centos8-py37-cuda112 .hidden }
+{: .stable-all-devel-centos8-py37-cuda112 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-dev:21.10-cuda11.2-devel-centos8-py3.8
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.2-devel-centos8-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-dev:21.10-cuda11.2-devel-centos8-py3.8
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.2-devel-centos8-py3.8
 ```
-{: .stable-rapids-all-devel-centos8-py38-cuda112 .hidden }
-
-<!-- docker rapidscore-runtime ubuntu18.04 -->
+{: .stable-all-devel-centos8-py38-cuda112 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core:21.10-cuda11.0-runtime-ubuntu18.04-py3.7
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.4-devel-centos8-py3.7
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core:21.10-cuda11.0-runtime-ubuntu18.04-py3.7
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.4-devel-centos8-py3.7
 ```
-{: .stable-rapidscore-all-runtime-ubuntu1804-py37-cuda110 .hidden }
+{: .stable-all-devel-centos8-py37-cuda114 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core:21.10-cuda11.0-runtime-ubuntu18.04-py3.8
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.4-devel-centos8-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core:21.10-cuda11.0-runtime-ubuntu18.04-py3.8
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.4-devel-centos8-py3.8
 ```
-{: .stable-rapidscore-all-runtime-ubuntu1804-py38-cuda110 .hidden }
+{: .stable-all-devel-centos8-py38-cuda114 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core:21.10-cuda11.2-runtime-ubuntu18.04-py3.7
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.5-devel-centos8-py3.7
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core:21.10-cuda11.2-runtime-ubuntu18.04-py3.7
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.5-devel-centos8-py3.7
 ```
-{: .stable-rapidscore-all-runtime-ubuntu1804-py37-cuda112 .hidden }
+{: .stable-all-devel-centos8-py37-cuda115 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core:21.10-cuda11.2-runtime-ubuntu18.04-py3.8
+docker pull rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.5-devel-centos8-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core:21.10-cuda11.2-runtime-ubuntu18.04-py3.8
+    rapidsai/rapidsai-core-dev:{{site.data.releases.stable-version}}-cuda11.5-devel-centos8-py3.8
 ```
-{: .stable-rapidscore-all-runtime-ubuntu1804-py38-cuda112 .hidden }
-
-<!-- docker rapidscore-runtime ubuntu20.04 -->
-```bash
-docker pull rapidsai/rapidsai-core:21.10-cuda11.0-runtime-ubuntu20.04-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core:21.10-cuda11.0-runtime-ubuntu20.04-py3.7
-```
-{: .stable-rapidscore-all-runtime-ubuntu2004-py37-cuda110 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core:21.10-cuda11.0-runtime-ubuntu20.04-py3.8
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core:21.10-cuda11.0-runtime-ubuntu20.04-py3.8
-```
-{: .stable-rapidscore-all-runtime-ubuntu2004-py38-cuda110 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core:21.10-cuda11.2-runtime-ubuntu20.04-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core:21.10-cuda11.2-runtime-ubuntu20.04-py3.7
-```
-{: .stable-rapidscore-all-runtime-ubuntu2004-py37-cuda112 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core:21.10-cuda11.2-runtime-ubuntu20.04-py3.8
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core:21.10-cuda11.2-runtime-ubuntu20.04-py3.8
-```
-{: .stable-rapidscore-all-runtime-ubuntu2004-py38-cuda112 .hidden }
-
-<!-- docker rapidscore-runtime centos7 -->
-```bash
-docker pull rapidsai/rapidsai-core:21.10-cuda11.0-runtime-centos7-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core:21.10-cuda11.0-runtime-centos7-py3.7
-```
-{: .stable-rapidscore-all-runtime-centos7-py37-cuda110 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core:21.10-cuda11.0-runtime-centos7-py3.8
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core:21.10-cuda11.0-runtime-centos7-py3.8
-```
-{: .stable-rapidscore-all-runtime-centos7-py38-cuda110 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core:21.10-cuda11.2-runtime-centos7-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core:21.10-cuda11.2-runtime-centos7-py3.7
-```
-{: .stable-rapidscore-all-runtime-centos7-py37-cuda112 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core:21.10-cuda11.2-runtime-centos7-py3.8
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core:21.10-cuda11.2-runtime-centos7-py3.8
-```
-{: .stable-rapidscore-all-runtime-centos7-py38-cuda112 .hidden }
-
-<!-- docker rapidscore-runtime centos8 -->
-```bash
-docker pull rapidsai/rapidsai-core:21.10-cuda11.0-runtime-centos8-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core:21.10-cuda11.0-runtime-centos8-py3.7
-```
-{: .stable-rapidscore-all-runtime-centos8-py37-cuda110 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core:21.10-cuda11.0-runtime-centos8-py3.8
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core:21.10-cuda11.0-runtime-centos8-py3.8
-```
-{: .stable-rapidscore-all-runtime-centos8-py38-cuda110 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core:21.10-cuda11.2-runtime-centos8-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core:21.10-cuda11.2-runtime-centos8-py3.7
-```
-{: .stable-rapidscore-all-runtime-centos8-py37-cuda112 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core:21.10-cuda11.2-runtime-centos8-py3.8
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core:21.10-cuda11.2-runtime-centos8-py3.8
-```
-{: .stable-rapidscore-all-runtime-centos8-py38-cuda112 .hidden }
-
-<!-- docker rapidscore-devel ubuntu18.04 -->
-```bash
-docker pull rapidsai/rapidsai-core-dev:21.10-cuda11.0-devel-ubuntu18.04-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev:21.10-cuda11.0-devel-ubuntu18.04-py3.7
-```
-{: .stable-rapidscore-all-devel-ubuntu1804-py37-cuda110 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core-dev:21.10-cuda11.0-devel-ubuntu18.04-py3.8
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev:21.10-cuda11.0-devel-ubuntu18.04-py3.8
-```
-{: .stable-rapidscore-all-devel-ubuntu1804-py38-cuda110 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core-dev:21.10-cuda11.2-devel-ubuntu18.04-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev:21.10-cuda11.2-devel-ubuntu18.04-py3.7
-```
-{: .stable-rapidscore-all-devel-ubuntu1804-py37-cuda112 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core-dev:21.10-cuda11.2-devel-ubuntu18.04-py3.8
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev:21.10-cuda11.2-devel-ubuntu18.04-py3.8
-```
-{: .stable-rapidscore-all-devel-ubuntu1804-py38-cuda112 .hidden }
-
-<!-- docker rapidscore-devel ubuntu20.04 -->
-```bash
-docker pull rapidsai/rapidsai-core-dev:21.10-cuda11.0-devel-ubuntu20.04-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev:21.10-cuda11.0-devel-ubuntu20.04-py3.7
-```
-{: .stable-rapidscore-all-devel-ubuntu2004-py37-cuda110 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core-dev:21.10-cuda11.0-devel-ubuntu20.04-py3.8
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev:21.10-cuda11.0-devel-ubuntu20.04-py3.8
-```
-{: .stable-rapidscore-all-devel-ubuntu2004-py38-cuda110 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core-dev:21.10-cuda11.2-devel-ubuntu20.04-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev:21.10-cuda11.2-devel-ubuntu20.04-py3.7
-```
-{: .stable-rapidscore-all-devel-ubuntu2004-py37-cuda112 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core-dev:21.10-cuda11.2-devel-ubuntu20.04-py3.8
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev:21.10-cuda11.2-devel-ubuntu20.04-py3.8
-```
-{: .stable-rapidscore-all-devel-ubuntu2004-py38-cuda112 .hidden }
-
-<!-- docker rapidscore-devel centos7 -->
-```bash
-docker pull rapidsai/rapidsai-core-dev:21.10-cuda11.0-devel-centos7-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev:21.10-cuda11.0-devel-centos7-py3.7
-```
-{: .stable-rapidscore-all-devel-centos7-py37-cuda110 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core-dev:21.10-cuda11.0-devel-centos7-py3.8
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev:21.10-cuda11.0-devel-centos7-py3.8
-```
-{: .stable-rapidscore-all-devel-centos7-py38-cuda110 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core-dev:21.10-cuda11.2-devel-centos7-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev:21.10-cuda11.2-devel-centos7-py3.7
-```
-{: .stable-rapidscore-all-devel-centos7-py37-cuda112 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core-dev:21.10-cuda11.2-devel-centos7-py3.8
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev:21.10-cuda11.2-devel-centos7-py3.8
-```
-{: .stable-rapidscore-all-devel-centos7-py38-cuda112 .hidden }
-
-<!-- docker rapidscore-devel centos8 -->
-```bash
-docker pull rapidsai/rapidsai-core-dev:21.10-cuda11.0-devel-centos8-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev:21.10-cuda11.0-devel-centos8-py3.7
-```
-{: .stable-rapidscore-all-devel-centos8-py37-cuda110 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core-dev:21.10-cuda11.0-devel-centos8-py3.8
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev:21.10-cuda11.0-devel-centos8-py3.8
-```
-{: .stable-rapidscore-all-devel-centos8-py38-cuda110 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core-dev:21.10-cuda11.2-devel-centos8-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev:21.10-cuda11.2-devel-centos8-py3.7
-```
-{: .stable-rapidscore-all-devel-centos8-py37-cuda112 .hidden }
-```bash
-docker pull rapidsai/rapidsai-core-dev:21.10-cuda11.2-devel-centos8-py3.8
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev:21.10-cuda11.2-devel-centos8-py3.8
-```
-{: .stable-rapidscore-all-devel-centos8-py38-cuda112 .hidden }
+{: .stable-all-devel-centos8-py38-cuda115 .hidden }
 
 <!-- source installs -->
 <div class='stable-cudf-source hidden'>
@@ -435,338 +419,338 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     <pre># See <a href='https://github.com/rapidsai/cuxfilter/tree/main#installation' _target='blank'>cuxfilter README</a> for stable build instructions</pre>
 </div>
 
-<!-- conda rapids-all 11.0 -->
+<!-- conda all 11.0 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    rapids-blazing=21.10 python=3.7 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    rapids={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.0
 ```
-{: .stable-rapids-all-conda-py37-cuda110 .hidden }
+{: .stable-all-conda-py37-cuda110 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    rapids-blazing=21.10 python=3.8 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    rapids={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.0
 ```
-{: .stable-rapids-all-conda-py38-cuda110 .hidden }
+{: .stable-all-conda-py38-cuda110 .hidden }
 
-<!-- conda rapids-all 11.2 -->
+<!-- conda all 11.2 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    rapids-blazing=21.10 python=3.7 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    rapids={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.2
 ```
-{: .stable-rapids-all-conda-py37-cuda112 .hidden }
+{: .stable-all-conda-py37-cuda112 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    rapids-blazing=21.10 python=3.8 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    rapids={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.2
 ```
-{: .stable-rapids-all-conda-py38-cuda112 .hidden }
+{: .stable-all-conda-py38-cuda112 .hidden }
 
-<!-- conda rapidscore-all 11.0 -->
+<!-- conda all 11.4 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    rapids=21.10 python=3.7 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    rapids={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.4
 ```
-{: .stable-rapidscore-all-conda-py37-cuda110 .hidden }
+{: .stable-all-conda-py37-cuda114 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    rapids=21.10 python=3.8 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    rapids={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.4
 ```
-{: .stable-rapidscore-all-conda-py38-cuda110 .hidden }
+{: .stable-all-conda-py38-cuda114 .hidden }
 
-<!-- conda rapidscore-all 11.2 -->
+<!-- conda all 11.5 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    rapids=21.10 python=3.7 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    rapids={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.5
 ```
-{: .stable-rapidscore-all-conda-py37-cuda112 .hidden }
+{: .stable-all-conda-py37-cuda115 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    rapids=21.10 python=3.8 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    rapids={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.5
 ```
-{: .stable-rapidscore-all-conda-py38-cuda112 .hidden }
+{: .stable-all-conda-py38-cuda115 .hidden }
 
-<!-- conda-lib rapids-cudf 11.0 -->
+<!-- conda-lib cudf 11.0 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    blazingsql=21.10 cudf=21.10 python=3.7 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cudf={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.0
 ```
-{: .stable-rapids-cudf-conda-py37-cuda110 .hidden }
+{: .stable-cudf-conda-py37-cuda110 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    blazingsql=21.10 cudf=21.10 python=3.8 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cudf={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.0
 ```
-{: .stable-rapids-cudf-conda-py38-cuda110 .hidden }
+{: .stable-cudf-conda-py38-cuda110 .hidden }
 
-<!-- conda-lib rapids-cudf 11.2 -->
+<!-- conda-lib cudf 11.2 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    blazingsql=21.10 cudf=21.10 python=3.7 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cudf={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.2
 ```
-{: .stable-rapids-cudf-conda-py37-cuda112 .hidden }
+{: .stable-cudf-conda-py37-cuda112 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    blazingsql=21.10 cudf=21.10 python=3.8 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cudf={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.2
 ```
-{: .stable-rapids-cudf-conda-py38-cuda112 .hidden }
+{: .stable-cudf-conda-py38-cuda112 .hidden }
 
-<!-- conda-lib rapids-cuml 11.0 -->
+<!-- conda-lib cudf 11.4 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    blazingsql=21.10 cuml=21.10 python=3.7 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cudf={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.4
 ```
-{: .stable-rapids-cuml-conda-py37-cuda110 .hidden }
+{: .stable-cudf-conda-py37-cuda114 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    blazingsql=21.10 cuml=21.10 python=3.8 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cudf={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.4
 ```
-{: .stable-rapids-cuml-conda-py38-cuda110 .hidden }
+{: .stable-cudf-conda-py38-cuda114 .hidden }
 
-<!-- conda-lib rapids-cuml 11.2 -->
+<!-- conda-lib cudf 11.5 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    blazingsql=21.10 cuml=21.10 python=3.7 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cudf={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.5
 ```
-{: .stable-rapids-cuml-conda-py37-cuda112 .hidden }
+{: .stable-cudf-conda-py37-cuda115 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    blazingsql=21.10 cuml=21.10 python=3.8 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cudf={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.5
 ```
-{: .stable-rapids-cuml-conda-py38-cuda112 .hidden }
+{: .stable-cudf-conda-py38-cuda115 .hidden }
 
-<!-- conda-lib rapids-cugraph 11.0 -->
+<!-- conda-lib cuml 11.0 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    blazingsql=21.10 cugraph=21.10 python=3.7 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cuml={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.0
 ```
-{: .stable-rapids-cugraph-conda-py37-cuda110 .hidden }
+{: .stable-cuml-conda-py37-cuda110 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    blazingsql=21.10 cugraph=21.10 python=3.8 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cuml={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.0
 ```
-{: .stable-rapids-cugraph-conda-py38-cuda110 .hidden }
+{: .stable-cuml-conda-py38-cuda110 .hidden }
 
-<!-- conda-lib rapids-cugraph 11.2 -->
+<!-- conda-lib cuml 11.2 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    blazingsql=21.10 cugraph=21.10 python=3.7 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cuml={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.2
 ```
-{: .stable-rapids-cugraph-conda-py37-cuda112 .hidden }
+{: .stable-cuml-conda-py37-cuda112 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    blazingsql=21.10 cugraph=21.10 python=3.8 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cuml={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.2
 ```
-{: .stable-rapids-cugraph-conda-py38-cuda112 .hidden }
+{: .stable-cuml-conda-py38-cuda112 .hidden }
 
-<!-- conda-lib rapids-cusignal 11.0 -->
+<!-- conda-lib cuml 11.4 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    blazingsql=21.10 cusignal=21.10 python=3.7 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cuml={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.4
 ```
-{: .stable-rapids-cusignal-conda-py37-cuda110 .hidden }
+{: .stable-cuml-conda-py37-cuda114 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    blazingsql=21.10 cusignal=21.10 python=3.8 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cuml={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.4
 ```
-{: .stable-rapids-cusignal-conda-py38-cuda110 .hidden }
+{: .stable-cuml-conda-py38-cuda114 .hidden }
 
-<!-- conda-lib rapids-cusignal 11.2 -->
+<!-- conda-lib cuml 11.5 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    blazingsql=21.10 cusignal=21.10 python=3.7 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cuml={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.5
 ```
-{: .stable-rapids-cusignal-conda-py37-cuda112 .hidden }
+{: .stable-cuml-conda-py37-cuda115 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    blazingsql=21.10 cusignal=21.10 python=3.8 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cuml={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.5
 ```
-{: .stable-rapids-cusignal-conda-py38-cuda112 .hidden }
+{: .stable-cuml-conda-py38-cuda115 .hidden }
 
-<!-- conda-lib rapids-cuspatial 11.0 -->
+<!-- conda-lib cugraph 11.0 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    blazingsql=21.10 cuspatial=21.10 python=3.7 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cugraph={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.0
 ```
-{: .stable-rapids-cuspatial-conda-py37-cuda110 .hidden }
+{: .stable-cugraph-conda-py37-cuda110 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    blazingsql=21.10 cuspatial=21.10 python=3.8 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cugraph={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.0
 ```
-{: .stable-rapids-cuspatial-conda-py38-cuda110 .hidden }
+{: .stable-cugraph-conda-py38-cuda110 .hidden }
 
-<!-- conda-lib rapids-cuspatial 11.2 -->
+<!-- conda-lib cugraph 11.2 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    blazingsql=21.10 cuspatial=21.10 python=3.7 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cugraph={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.2
 ```
-{: .stable-rapids-cuspatial-conda-py37-cuda112 .hidden }
+{: .stable-cugraph-conda-py37-cuda112 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    blazingsql=21.10 cuspatial=21.10 python=3.8 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cugraph={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.2
 ```
-{: .stable-rapids-cuspatial-conda-py38-cuda112 .hidden }
+{: .stable-cugraph-conda-py38-cuda112 .hidden }
 
-<!-- conda-lib rapids-cuxfilter 11.0 -->
+<!-- conda-lib cugraph 11.4 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    blazingsql=21.10 cuxfilter=21.10 python=3.7 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cugraph={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.4
 ```
-{: .stable-rapids-cuxfilter-conda-py37-cuda110 .hidden }
+{: .stable-cugraph-conda-py37-cuda114 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    blazingsql=21.10 cuxfilter=21.10 python=3.8 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cugraph={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.4
 ```
-{: .stable-rapids-cuxfilter-conda-py38-cuda110 .hidden }
+{: .stable-cugraph-conda-py38-cuda114 .hidden }
 
-<!-- conda-lib rapids-cuxfilter 11.2 -->
+<!-- conda-lib cugraph 11.5 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    blazingsql=21.10 cuxfilter=21.10 python=3.7 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cugraph={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.5
 ```
-{: .stable-rapids-cuxfilter-conda-py37-cuda112 .hidden }
+{: .stable-cugraph-conda-py37-cuda115 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    blazingsql=21.10 cuxfilter=21.10 python=3.8 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cugraph={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.5
 ```
-{: .stable-rapids-cuxfilter-conda-py38-cuda112 .hidden }
+{: .stable-cugraph-conda-py38-cuda115 .hidden }
 
-<!-- conda-lib rapidscore-cudf 11.0 -->
+<!-- conda-lib cusignal 11.0 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    cudf=21.10 python=3.7 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cusignal={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.0
 ```
-{: .stable-rapidscore-cudf-conda-py37-cuda110 .hidden }
+{: .stable-cusignal-conda-py37-cuda110 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    cudf=21.10 python=3.8 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cusignal={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.0
 ```
-{: .stable-rapidscore-cudf-conda-py38-cuda110 .hidden }
+{: .stable-cusignal-conda-py38-cuda110 .hidden }
 
-<!-- conda-lib rapidscore-cudf 11.2 -->
+<!-- conda-lib cusignal 11.2 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    cudf=21.10 python=3.7 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cusignal={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.2
 ```
-{: .stable-rapidscore-cudf-conda-py37-cuda112 .hidden }
+{: .stable-cusignal-conda-py37-cuda112 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    cudf=21.10 python=3.8 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cusignal={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.2
 ```
-{: .stable-rapidscore-cudf-conda-py38-cuda112 .hidden }
+{: .stable-cusignal-conda-py38-cuda112 .hidden }
 
-<!-- conda-lib rapidscore-cuml 11.0 -->
+<!-- conda-lib cusignal 11.4 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    cuml=21.10 python=3.7 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cusignal={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.4
 ```
-{: .stable-rapidscore-cuml-conda-py37-cuda110 .hidden }
+{: .stable-cusignal-conda-py37-cuda114 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    cuml=21.10 python=3.8 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cusignal={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.4
 ```
-{: .stable-rapidscore-cuml-conda-py38-cuda110 .hidden }
+{: .stable-cusignal-conda-py38-cuda114 .hidden }
 
-<!-- conda-lib rapidscore-cuml 11.2 -->
+<!-- conda-lib cusignal 11.5 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    cuml=21.10 python=3.7 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cusignal={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.5
 ```
-{: .stable-rapidscore-cuml-conda-py37-cuda112 .hidden }
+{: .stable-cusignal-conda-py37-cuda115 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    cuml=21.10 python=3.8 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cusignal={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.5
 ```
-{: .stable-rapidscore-cuml-conda-py38-cuda112 .hidden }
+{: .stable-cusignal-conda-py38-cuda115 .hidden }
 
-<!-- conda-lib rapidscore-cugraph 11.0 -->
+<!-- conda-lib cuspatial 11.0 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    cugraph=21.10 python=3.7 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cuspatial={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.0
 ```
-{: .stable-rapidscore-cugraph-conda-py37-cuda110 .hidden }
+{: .stable-cuspatial-conda-py37-cuda110 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    cugraph=21.10 python=3.8 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cuspatial={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.0
 ```
-{: .stable-rapidscore-cugraph-conda-py38-cuda110 .hidden }
+{: .stable-cuspatial-conda-py38-cuda110 .hidden }
 
-<!-- conda-lib rapidscore-cugraph 11.2 -->
+<!-- conda-lib cuspatial 11.2 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    cugraph=21.10 python=3.7 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cuspatial={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.2
 ```
-{: .stable-rapidscore-cugraph-conda-py37-cuda112 .hidden }
+{: .stable-cuspatial-conda-py37-cuda112 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    cugraph=21.10 python=3.8 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cuspatial={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.2
 ```
-{: .stable-rapidscore-cugraph-conda-py38-cuda112 .hidden }
+{: .stable-cuspatial-conda-py38-cuda112 .hidden }
 
-<!-- conda-lib rapidscore-cusignal 11.0 -->
+<!-- conda-lib cuspatial 11.4 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    cusignal=21.10 python=3.7 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cuspatial={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.4
 ```
-{: .stable-rapidscore-cusignal-conda-py37-cuda110 .hidden }
+{: .stable-cuspatial-conda-py37-cuda114 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    cusignal=21.10 python=3.8 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cuspatial={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.4
 ```
-{: .stable-rapidscore-cusignal-conda-py38-cuda110 .hidden }
+{: .stable-cuspatial-conda-py38-cuda114 .hidden }
 
-<!-- conda-lib rapidscore-cusignal 11.2 -->
+<!-- conda-lib cuspatial 11.5 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    cusignal=21.10 python=3.7 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cuspatial={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.5
 ```
-{: .stable-rapidscore-cusignal-conda-py37-cuda112 .hidden }
+{: .stable-cuspatial-conda-py37-cuda115 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    cusignal=21.10 python=3.8 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cuspatial={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.5
 ```
-{: .stable-rapidscore-cusignal-conda-py38-cuda112 .hidden }
+{: .stable-cuspatial-conda-py38-cuda115 .hidden }
 
-<!-- conda-lib rapidscore-cuspatial 11.0 -->
+<!-- conda-lib cuxfilter 11.0 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    cuspatial=21.10 python=3.7 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cuxfilter={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.0
 ```
-{: .stable-rapidscore-cuspatial-conda-py37-cuda110 .hidden }
+{: .stable-cuxfilter-conda-py37-cuda110 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    cuspatial=21.10 python=3.8 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cuxfilter={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.0
 ```
-{: .stable-rapidscore-cuspatial-conda-py38-cuda110 .hidden }
+{: .stable-cuxfilter-conda-py38-cuda110 .hidden }
 
-<!-- conda-lib rapidscore-cuspatial 11.2 -->
+<!-- conda-lib cuxfilter 11.2 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    cuspatial=21.10 python=3.7 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cuxfilter={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.2
 ```
-{: .stable-rapidscore-cuspatial-conda-py37-cuda112 .hidden }
+{: .stable-cuxfilter-conda-py37-cuda112 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    cuspatial=21.10 python=3.8 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cuxfilter={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.2
 ```
-{: .stable-rapidscore-cuspatial-conda-py38-cuda112 .hidden }
+{: .stable-cuxfilter-conda-py38-cuda112 .hidden }
 
-<!-- conda-lib rapidscore-cuxfilter 11.0 -->
+<!-- conda-lib cuxfilter 11.4 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    cuxfilter=21.10 python=3.7 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cuxfilter={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.4
 ```
-{: .stable-rapidscore-cuxfilter-conda-py37-cuda110 .hidden }
+{: .stable-cuxfilter-conda-py37-cuda114 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    cuxfilter=21.10 python=3.8 cudatoolkit=11.0
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cuxfilter={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.4
 ```
-{: .stable-rapidscore-cuxfilter-conda-py38-cuda110 .hidden }
+{: .stable-cuxfilter-conda-py38-cuda114 .hidden }
 
-<!-- conda-lib rapidscore-cuxfilter 11.2 -->
+<!-- conda-lib cuxfilter 11.5 -->
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    cuxfilter=21.10 python=3.7 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cuxfilter={{site.data.releases.stable-version}} python=3.7 cudatoolkit=11.5
 ```
-{: .stable-rapidscore-cuxfilter-conda-py37-cuda112 .hidden }
+{: .stable-cuxfilter-conda-py37-cuda115 .hidden }
 ```bash
-conda create -n rapids-21.10 -c rapidsai -c nvidia -c conda-forge \
-    cuxfilter=21.10 python=3.8 cudatoolkit=11.2
+conda create -n rapids-{{site.data.releases.stable-version}} -c rapidsai -c nvidia -c conda-forge \
+    cuxfilter={{site.data.releases.stable-version}} python=3.8 cudatoolkit=11.5
 ```
-{: .stable-rapidscore-cuxfilter-conda-py38-cuda112 .hidden }
+{: .stable-cuxfilter-conda-py38-cuda115 .hidden }

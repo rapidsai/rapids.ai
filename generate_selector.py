@@ -14,9 +14,8 @@ Selector configurations
 STABLE_CONFIG ={
     "name": "stable",
     "file": "_includes/selector-commands-stable.html",
-    "ver": "21.10",
     "os": ['ubuntu18.04','ubuntu20.04','centos7','centos8'],
-    "cuda": ['11.0','11.2'],
+    "cuda": ['11.0','11.2', '11.4', '11.5'],
     "py": ['3.7','3.8'],
     "libs": ['cudf', 'cuml', 'cugraph', 'cusignal', 'cuspatial', 'cuxfilter'],
     "cmds": [] # Leave empty
@@ -25,19 +24,18 @@ STABLE_CONFIG ={
 NIGHTLY_CONFIG ={
     "name": "nightly",
     "file": "_includes/selector-commands-nightly.html",
-    "ver": "21.12",
     "os": ['ubuntu18.04','ubuntu20.04','centos7','centos8'],
-    "cuda": ['11.0','11.2'],
+    "cuda": ['11.0','11.2', '11.4', '11.5'],
     "py": ['3.7','3.8'],
     "libs": ['cudf', 'cuml', 'cugraph', 'cusignal', 'cuspatial', 'cuxfilter'],
     "cmds": [] # Leave empty
 }
 
-def generate_docker(config, selector_name, docker_repo, docker_type):
+def generate_docker(config, docker_repo, docker_type):
     """Generates docker commands"""
-    rapids_ver = config["ver"]
+    rapids_ver = "{{" + f"site.data.releases.{config['name']}-version" +"}}" # Use "{{ var }}" syntax to get version number from Jekyll site data
     for os_ver in config["os"]:
-        config["cmds"].append("\n<!-- docker "+selector_name+"-"+docker_type+" "+os_ver+" -->\n")
+        config["cmds"].append("\n<!-- docker "+docker_type+" "+os_ver+" -->\n")
         for cuda_ver in config["cuda"]:
             for py_ver in config["py"]:
                 tag_name = config["name"]
@@ -50,7 +48,7 @@ docker pull "+repo+":"+rapids_ver+"-cuda"+cuda_ver+"-"+docker_type+"-"+os_ver+"-
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \\\n\
     "+repo+":"+rapids_ver+"-cuda"+cuda_ver+"-"+docker_type+"-"+os_ver+"-py"+py_ver+"\n\
 ```\n\
-{: ."+tag_name+"-"+selector_name+"-all-"+docker_type+"-"+tag_os+"-py"+tag_py+"-cuda"+tag_cuda+" .hidden }\n"
+{: ."+tag_name+"-all-"+docker_type+"-"+tag_os+"-py"+tag_py+"-cuda"+tag_cuda+" .hidden }\n"
                 config["cmds"].append(cmd)
 
 def generate_source(config):
@@ -78,11 +76,11 @@ def generate_source(config):
 </div>\n"
     config["cmds"].append(cmd)
 
-def generate_conda_all(config, selector_name, meta_package):
+def generate_conda_all(config, meta_package):
     """Generates conda install commands with all libraries"""
-    rapids_ver = config["ver"]
+    rapids_ver = "{{" + f"site.data.releases.{config['name']}-version" +"}}" # Use "{{ var }}" syntax to get version number from Jekyll site data
     for cuda_ver in config["cuda"]:
-        config["cmds"].append("\n<!-- conda "+selector_name+"-all "+cuda_ver+" -->\n")
+        config["cmds"].append("\n<!-- conda "+"all "+cuda_ver+" -->\n")
         for py_ver in config["py"]:
             tag_name = config["name"]
             tag_cuda = cuda_ver.replace('.','')
@@ -92,26 +90,25 @@ def generate_conda_all(config, selector_name, meta_package):
 conda create -n rapids-"+rapids_ver+" -c "+channel+" -c nvidia -c conda-forge \\\n\
     "+meta_package+"="+rapids_ver+" python="+py_ver+" cudatoolkit="+cuda_ver+"\n\
 ```\n\
-{: ."+tag_name+"-"+selector_name+"-all-conda-py"+tag_py+"-cuda"+tag_cuda+" .hidden }\n"
+{: ."+tag_name+"-all-conda-py"+tag_py+"-cuda"+tag_cuda+" .hidden }\n"
             config["cmds"].append(cmd)
 
-def generate_conda_lib(config, selector_name):
+def generate_conda_lib(config):
     """Generates conda install commands for each library"""
-    rapids_ver = config["ver"]
+    rapids_ver = "{{" + f"site.data.releases.{config['name']}-version" +"}}" # Use "{{ var }}" syntax to get version number from Jekyll site data
     for lib in config["libs"]:
         for cuda_ver in config["cuda"]:
-            config["cmds"].append("\n<!-- conda-lib "+selector_name+"-"+lib+" "+cuda_ver+" -->\n")
+            config["cmds"].append("\n<!-- conda-lib "+lib+" "+cuda_ver+" -->\n")
             for py_ver in config["py"]:
                 tag_name = config["name"]
                 tag_cuda = cuda_ver.replace('.','')
                 tag_py = py_ver.replace('.','')
-                blazing_conda = "blazingsql="+rapids_ver+" " if selector_name == "rapids" else ""
                 channel = "rapidsai" + ("-nightly" if config["name"] == "nightly" else "")
                 cmd = "```bash\n\
 conda create -n rapids-"+rapids_ver+" -c "+channel+" -c nvidia -c conda-forge \\\n\
-    "+blazing_conda+lib+"="+rapids_ver+" python="+py_ver+" cudatoolkit="+cuda_ver+"\n\
+    "+lib+"="+rapids_ver+" python="+py_ver+" cudatoolkit="+cuda_ver+"\n\
 ```\n\
-{: ."+tag_name+"-"+selector_name+"-"+lib+"-conda-py"+tag_py+"-cuda"+tag_cuda+" .hidden }\n"
+{: ."+tag_name+"-"+lib+"-conda-py"+tag_py+"-cuda"+tag_cuda+" .hidden }\n"
                 config["cmds"].append(cmd)
 
 def write_output(config):
@@ -126,17 +123,11 @@ def main():
         name = config["name"]
         filename = config["file"]
         print(f"Generating {name} commands")
-        #generate_docker(config, "rapids", "rapidsai/rapidsai", "base") #TODO add to selector as a future option
-        generate_docker(config, "rapids", "rapidsai/rapidsai", "runtime")
-        generate_docker(config, "rapids", "rapidsai/rapidsai-dev", "devel")
-        #generate_docker(config, "rapidscore", "rapidsai/rapidsai-core", "base") #TODO add to selector as a future option
-        generate_docker(config, "rapidscore", "rapidsai/rapidsai-core", "runtime")
-        generate_docker(config, "rapidscore", "rapidsai/rapidsai-core-dev", "devel")
+        generate_docker(config, "rapidsai/rapidsai-core", "runtime")
+        generate_docker(config, "rapidsai/rapidsai-core-dev", "devel")
         generate_source(config)
-        generate_conda_all(config, "rapids", "rapids-blazing")
-        generate_conda_all(config, "rapidscore", "rapids")
-        generate_conda_lib(config, "rapids")
-        generate_conda_lib(config, "rapidscore")
+        generate_conda_all(config, "rapids")
+        generate_conda_lib(config)
         print(f"Writing {name} commands to file '{filename}'")
         write_output(config)
         print(f"Finished writing {name} commands to file '{filename}'")
