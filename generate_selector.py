@@ -14,7 +14,6 @@ Selector configurations
 STABLE_CONFIG ={
     "name": "stable",
     "file": "_includes/selector-commands-stable.html",
-    "ver": "21.10",
     "os": ['ubuntu18.04','ubuntu20.04','centos7','centos8'],
     "cuda": ['11.0','11.2', '11.4', '11.5'],
     "py": ['3.7','3.8'],
@@ -25,7 +24,6 @@ STABLE_CONFIG ={
 NIGHTLY_CONFIG ={
     "name": "nightly",
     "file": "_includes/selector-commands-nightly.html",
-    "ver": "21.12",
     "os": ['ubuntu18.04','ubuntu20.04','centos7','centos8'],
     "cuda": ['11.0','11.2', '11.4', '11.5'],
     "py": ['3.7','3.8'],
@@ -35,7 +33,7 @@ NIGHTLY_CONFIG ={
 
 def generate_docker(config, docker_repo, docker_type):
     """Generates docker commands"""
-    rapids_ver = config["ver"]
+    rapids_ver = "{{" + f"site.data.releases.{config['name']}-version" +"}}" # Use "{{ var }}" syntax to get version number from Jekyll site data
     for os_ver in config["os"]:
         config["cmds"].append("\n<!-- docker "+docker_type+" "+os_ver+" -->\n")
         for cuda_ver in config["cuda"]:
@@ -80,7 +78,7 @@ def generate_source(config):
 
 def generate_conda_all(config, meta_package):
     """Generates conda install commands with all libraries"""
-    rapids_ver = config["ver"]
+    rapids_ver = "{{" + f"site.data.releases.{config['name']}-version" +"}}" # Use "{{ var }}" syntax to get version number from Jekyll site data
     for cuda_ver in config["cuda"]:
         config["cmds"].append("\n<!-- conda "+"all "+cuda_ver+" -->\n")
         for py_ver in config["py"]:
@@ -97,7 +95,7 @@ conda create -n rapids-"+rapids_ver+" -c "+channel+" -c nvidia -c conda-forge \\
 
 def generate_conda_lib(config):
     """Generates conda install commands for each library"""
-    rapids_ver = config["ver"]
+    rapids_ver = "{{" + f"site.data.releases.{config['name']}-version" +"}}" # Use "{{ var }}" syntax to get version number from Jekyll site data
     for lib in config["libs"]:
         for cuda_ver in config["cuda"]:
             config["cmds"].append("\n<!-- conda-lib "+lib+" "+cuda_ver+" -->\n")
