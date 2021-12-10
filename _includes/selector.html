@@ -254,6 +254,9 @@ function processClick(options, click, category) {
         if (selections["linux"] == "rhel7") {
             selections["linux"] = "centos7";
         }
+        selections["cuda"] = "cuda115";
+        $(cuda_opts).addClass("disabled");
+        $("#cuda115").removeClass("disabled");
         selections["pkg"] = "all";
         $("#rhel7").addClass("disabled");
         $(pkg_opts).addClass("disabled");
