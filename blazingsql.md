@@ -85,7 +85,7 @@ conda install -c rapidsai -c nvidia -c conda-forge blazingsql=21.08
 ```
 <br>
 **Docker**:<br>
-Pull either then 21.08 or 21.10 docker containers with tag (BlazingSQL is included)
+Pull either the 21.08 or 21.10 Docker containers with tag (BlazingSQL is included)
 
 {% endcapture %}
 
