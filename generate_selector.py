@@ -88,7 +88,7 @@ def generate_conda_all(config, meta_package):
             channel = "rapidsai" + ("-nightly" if config["name"] == "nightly" else "")
             cmd = "```bash\n\
 conda create -n rapids-"+rapids_ver+" -c "+channel+" -c nvidia -c conda-forge \\\n\
-    "+meta_package+"="+rapids_ver+" python="+py_ver+" cudatoolkit="+cuda_ver+"\n\
+    "+meta_package+"="+rapids_ver+" python="+py_ver+" cudatoolkit="+cuda_ver+" dask-sql"+"\n\
 ```\n\
 {: ."+tag_name+"-all-conda-py"+tag_py+"-cuda"+tag_cuda+" .hidden }\n"
             config["cmds"].append(cmd)
