@@ -205,7 +205,7 @@ RAPIDS is committed to open source. We strive to release new features on a **[2 
 ## <i class="fas fa-code" id="libraries"></i> RAPIDS APIS and Libraries
 {: .section-subtitle-top-1}
 
-RAPIDS is open source licensed under Apache 2.0, spanning multiple projects that range from GPU dataframes to GPU accelerated ML algorithms. It also provides native `array_interface` support, allowing Apache Arrow data to be pushed to deep learning frameworks. <br> **[Learn more <i class="fas fa-angle-double-right"></i>](about.html)**
+RAPIDS is open source licensed under Apache 2.0, spanning multiple projects that range from GPU dataframes to GPU accelerated ML algorithms. It also provides native array_interface support, allowing Apache Arrow data to be pushed to deep learning frameworks. <br> **[Learn more <i class="fas fa-angle-double-right"></i>](about.html)**
 
 ## <i class="fab fa-github"></i> Contributing
 Whether you are new to RAPIDS, looking to help, or are part of the team, learn about our contributing guidelines on our contributing page. <br> **[Go to Docs <i class="fas fa-angle-double-right"></i>](https://docs.rapids.ai/contributing){: target="_blank"}**
