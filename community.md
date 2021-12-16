@@ -59,10 +59,10 @@ Accelerate Hyperparameter Optimization (HPO) in the Cloud. The RAPIDS team works
 
 {% endcapture %}
 {% capture com_right_bottom %}
-![cloud]({{ site.baseurl }}{% link /assets/images/RAPIDs-cloud.png %}){: .third-image-center}
+![cloud]({{ site.baseurl }}{% link /assets/images/RAPIDS-cloud.png %}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Cloud
 
-RAPIDS’s GPU accelerated data science tools can be deployed on all of the major clouds, allowing anyone to take advantage of the speed increases and TCO reductions that RAPIDS enables.
+RAPIDS’ GPU accelerated data science tools can be deployed on all of the major clouds, allowing anyone to take advantage of the speed increases and TCO reductions that RAPIDS enables.
 <br>
 **[Learn more on our cloud page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](cloud.html)**
 {% endcapture %}
@@ -71,7 +71,7 @@ RAPIDS’s GPU accelerated data science tools can be deployed on all of the majo
 ![merlin]({{ site.baseurl }}{% link /assets/images/NVLogo_2D_H.png%}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + NVIDIA MERLIN
 
-NVIDIA Merlin is an open source library providing end-to-end GPU-accelerated recommender systems. Merlin leverages RAPIDs cuDF and Dask cuDF for dataframe transformation during ETL and inference, as well as for the optimized dataloaders in TensorFlow, PyTorch or HugeCTR to accelerate deep learning training. <br> **[Learn more on our Merlin page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](merlin.html)**
+NVIDIA Merlin is an open source library providing end-to-end GPU-accelerated recommender systems. Merlin leverages RAPIDS cuDF and Dask cuDF for dataframe transformation during ETL and inference, as well as for the optimized dataloaders in TensorFlow, PyTorch or HugeCTR to accelerate deep learning training. <br> **[Learn more on our Merlin page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](merlin.html)**
 {% endcapture %}
 
 {% capture prj_mid_top %}
