@@ -384,7 +384,7 @@ XGBoost is a well-known gradient boosted decision trees (GBDT) machine learning 
 ![cloud]({{ site.baseurl }}{% link /assets/images/RAPIDS-cloud.png %}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Cloud
 
-RAPIDS GPU accelerated data science tools can be deployed on all of the major clouds, allowing anyone to take advantage of the speed increases and TCO reductions that RAPIDS enables.
+RAPIDS’ GPU accelerated data science tools can be deployed on all of the major clouds, allowing anyone to take advantage of the speed increases and TCO reductions that RAPIDS enables.
 <br>
 **[Learn more on our cloud page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](cloud.html)**
 {% endcapture %}
