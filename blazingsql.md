@@ -12,7 +12,9 @@ layout: default
 # Blazing fast SQL on Rapids
 {: .section-title-full}
 {% capture intro_content %}
-BlazingSQL is an incredibly fast distributed SQL engine on GPUs. BlazingSQL enables data scientists to easily connect large-scale data lakes to GPU-accelerated analytics. With a few lines of code, you can directly query raw file formats such as CSV and Apache Parquet inside Data Lakes like HDFS and AWS S3, and directly pipe the results into GPU memory. 
+**[RAPIDS support of BlazingSQL has been deprecated with release 21.12](https://docs.rapids.ai/notices/rsn0012/) in favor of [Dask-SQL](https://dask-sql.readthedocs.io/en/latest/)**. You can still use it with RAPIDS 21.08 and 21.10.
+<br><br>BlazingSQL is an incredibly fast distributed SQL engine on GPUs. BlazingSQL enabled data scientists to easily connect large-scale data lakes to GPU-accelerated analytics. With a few lines of code, you can directly query raw file formats such as CSV and Apache Parquet inside Data Lakes like HDFS and AWS S3, and directly pipe the results into GPU memory. 
+
 {: .subtitle .pading-top-0em .margin-top-0em}
 
 {% endcapture %}
@@ -72,7 +74,22 @@ It’s easy to get started with RAPIDS + BlazingSQL
 {: .subtitle}
 
 ## <i class="fad fa-bookmark"></i> Try with RAPIDS 
-You can use BlazingSQL with a RAPIDS install on our <br> **[Get Started Page <i class="fas fa-angle-double-right"></i>](start.html)**. 
+You can use BlazingSQL with a RAPIDS 21.08 or 21.10 install from: <br>
+**Conda**:
+```
+conda install -c rapidsai -c nvidia -c conda-forge blazingsql=21.10
+```
+or 
+```
+conda install -c rapidsai -c nvidia -c conda-forge blazingsql=21.08
+```
+<br>
+**Docker**:<br>
+Pull desired containers with RAPIDS version of the **21.08** or **21.10** from the repos below:
+<br>
+**[Standard containers <i class="fas fa-angle-double-right"></i>](https://hub.docker.com/r/rapidsai/rapidsai/tags){: target="_blank"}**
+<br>
+**[Dev containers <i class="fas fa-angle-double-right"></i>](https://hub.docker.com/r/rapidsai/rapidsai-dev/tags){: target="_blank"}**
 
 {% endcapture %}
 
