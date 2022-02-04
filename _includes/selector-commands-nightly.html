@@ -1,23 +1,17 @@
 
 <!-- docker runtime ubuntu18.04 -->
 ```bash
-docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.0-runtime-ubuntu18.04-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.0-runtime-ubuntu18.04-py3.7
-```
-{: .nightly-all-runtime-ubuntu1804-py37-cuda110 .hidden }
-```bash
 docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.0-runtime-ubuntu18.04-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.0-runtime-ubuntu18.04-py3.8
 ```
 {: .nightly-all-runtime-ubuntu1804-py38-cuda110 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.2-runtime-ubuntu18.04-py3.7
+docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.0-runtime-ubuntu18.04-py3.9
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.2-runtime-ubuntu18.04-py3.7
+    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.0-runtime-ubuntu18.04-py3.9
 ```
-{: .nightly-all-runtime-ubuntu1804-py37-cuda112 .hidden }
+{: .nightly-all-runtime-ubuntu1804-py39-cuda110 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.2-runtime-ubuntu18.04-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -25,11 +19,11 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 ```
 {: .nightly-all-runtime-ubuntu1804-py38-cuda112 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.4-runtime-ubuntu18.04-py3.7
+docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.2-runtime-ubuntu18.04-py3.9
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.4-runtime-ubuntu18.04-py3.7
+    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.2-runtime-ubuntu18.04-py3.9
 ```
-{: .nightly-all-runtime-ubuntu1804-py37-cuda114 .hidden }
+{: .nightly-all-runtime-ubuntu1804-py39-cuda112 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.4-runtime-ubuntu18.04-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -37,25 +31,25 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 ```
 {: .nightly-all-runtime-ubuntu1804-py38-cuda114 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.5-runtime-ubuntu18.04-py3.7
+docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.4-runtime-ubuntu18.04-py3.9
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.5-runtime-ubuntu18.04-py3.7
+    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.4-runtime-ubuntu18.04-py3.9
 ```
-{: .nightly-all-runtime-ubuntu1804-py37-cuda115 .hidden }
+{: .nightly-all-runtime-ubuntu1804-py39-cuda114 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.5-runtime-ubuntu18.04-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.5-runtime-ubuntu18.04-py3.8
 ```
 {: .nightly-all-runtime-ubuntu1804-py38-cuda115 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.5-runtime-ubuntu18.04-py3.9
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.5-runtime-ubuntu18.04-py3.9
+```
+{: .nightly-all-runtime-ubuntu1804-py39-cuda115 .hidden }
 
 <!-- docker runtime ubuntu20.04 -->
-```bash
-docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.0-runtime-ubuntu20.04-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.0-runtime-ubuntu20.04-py3.7
-```
-{: .nightly-all-runtime-ubuntu2004-py37-cuda110 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.0-runtime-ubuntu20.04-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -63,11 +57,11 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 ```
 {: .nightly-all-runtime-ubuntu2004-py38-cuda110 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.2-runtime-ubuntu20.04-py3.7
+docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.0-runtime-ubuntu20.04-py3.9
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.2-runtime-ubuntu20.04-py3.7
+    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.0-runtime-ubuntu20.04-py3.9
 ```
-{: .nightly-all-runtime-ubuntu2004-py37-cuda112 .hidden }
+{: .nightly-all-runtime-ubuntu2004-py39-cuda110 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.2-runtime-ubuntu20.04-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -75,11 +69,11 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 ```
 {: .nightly-all-runtime-ubuntu2004-py38-cuda112 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.4-runtime-ubuntu20.04-py3.7
+docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.2-runtime-ubuntu20.04-py3.9
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.4-runtime-ubuntu20.04-py3.7
+    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.2-runtime-ubuntu20.04-py3.9
 ```
-{: .nightly-all-runtime-ubuntu2004-py37-cuda114 .hidden }
+{: .nightly-all-runtime-ubuntu2004-py39-cuda112 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.4-runtime-ubuntu20.04-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -87,25 +81,25 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 ```
 {: .nightly-all-runtime-ubuntu2004-py38-cuda114 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.5-runtime-ubuntu20.04-py3.7
+docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.4-runtime-ubuntu20.04-py3.9
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.5-runtime-ubuntu20.04-py3.7
+    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.4-runtime-ubuntu20.04-py3.9
 ```
-{: .nightly-all-runtime-ubuntu2004-py37-cuda115 .hidden }
+{: .nightly-all-runtime-ubuntu2004-py39-cuda114 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.5-runtime-ubuntu20.04-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.5-runtime-ubuntu20.04-py3.8
 ```
 {: .nightly-all-runtime-ubuntu2004-py38-cuda115 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.5-runtime-ubuntu20.04-py3.9
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.5-runtime-ubuntu20.04-py3.9
+```
+{: .nightly-all-runtime-ubuntu2004-py39-cuda115 .hidden }
 
 <!-- docker runtime centos7 -->
-```bash
-docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.0-runtime-centos7-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.0-runtime-centos7-py3.7
-```
-{: .nightly-all-runtime-centos7-py37-cuda110 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.0-runtime-centos7-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -113,11 +107,11 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 ```
 {: .nightly-all-runtime-centos7-py38-cuda110 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.2-runtime-centos7-py3.7
+docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.0-runtime-centos7-py3.9
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.2-runtime-centos7-py3.7
+    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.0-runtime-centos7-py3.9
 ```
-{: .nightly-all-runtime-centos7-py37-cuda112 .hidden }
+{: .nightly-all-runtime-centos7-py39-cuda110 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.2-runtime-centos7-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -125,11 +119,11 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 ```
 {: .nightly-all-runtime-centos7-py38-cuda112 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.4-runtime-centos7-py3.7
+docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.2-runtime-centos7-py3.9
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.4-runtime-centos7-py3.7
+    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.2-runtime-centos7-py3.9
 ```
-{: .nightly-all-runtime-centos7-py37-cuda114 .hidden }
+{: .nightly-all-runtime-centos7-py39-cuda112 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.4-runtime-centos7-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -137,25 +131,25 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 ```
 {: .nightly-all-runtime-centos7-py38-cuda114 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.5-runtime-centos7-py3.7
+docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.4-runtime-centos7-py3.9
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.5-runtime-centos7-py3.7
+    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.4-runtime-centos7-py3.9
 ```
-{: .nightly-all-runtime-centos7-py37-cuda115 .hidden }
+{: .nightly-all-runtime-centos7-py39-cuda114 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.5-runtime-centos7-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.5-runtime-centos7-py3.8
 ```
 {: .nightly-all-runtime-centos7-py38-cuda115 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.5-runtime-centos7-py3.9
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.5-runtime-centos7-py3.9
+```
+{: .nightly-all-runtime-centos7-py39-cuda115 .hidden }
 
 <!-- docker runtime centos8 -->
-```bash
-docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.0-runtime-centos8-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.0-runtime-centos8-py3.7
-```
-{: .nightly-all-runtime-centos8-py37-cuda110 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.0-runtime-centos8-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -163,11 +157,11 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 ```
 {: .nightly-all-runtime-centos8-py38-cuda110 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.2-runtime-centos8-py3.7
+docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.0-runtime-centos8-py3.9
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.2-runtime-centos8-py3.7
+    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.0-runtime-centos8-py3.9
 ```
-{: .nightly-all-runtime-centos8-py37-cuda112 .hidden }
+{: .nightly-all-runtime-centos8-py39-cuda110 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.2-runtime-centos8-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -175,11 +169,11 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 ```
 {: .nightly-all-runtime-centos8-py38-cuda112 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.4-runtime-centos8-py3.7
+docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.2-runtime-centos8-py3.9
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.4-runtime-centos8-py3.7
+    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.2-runtime-centos8-py3.9
 ```
-{: .nightly-all-runtime-centos8-py37-cuda114 .hidden }
+{: .nightly-all-runtime-centos8-py39-cuda112 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.4-runtime-centos8-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -187,25 +181,25 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 ```
 {: .nightly-all-runtime-centos8-py38-cuda114 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.5-runtime-centos8-py3.7
+docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.4-runtime-centos8-py3.9
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.5-runtime-centos8-py3.7
+    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.4-runtime-centos8-py3.9
 ```
-{: .nightly-all-runtime-centos8-py37-cuda115 .hidden }
+{: .nightly-all-runtime-centos8-py39-cuda114 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.5-runtime-centos8-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.5-runtime-centos8-py3.8
 ```
 {: .nightly-all-runtime-centos8-py38-cuda115 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.5-runtime-centos8-py3.9
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core-nightly:{{site.data.releases.nightly-version}}-cuda11.5-runtime-centos8-py3.9
+```
+{: .nightly-all-runtime-centos8-py39-cuda115 .hidden }
 
 <!-- docker devel ubuntu18.04 -->
-```bash
-docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.0-devel-ubuntu18.04-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.0-devel-ubuntu18.04-py3.7
-```
-{: .nightly-all-devel-ubuntu1804-py37-cuda110 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.0-devel-ubuntu18.04-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -213,11 +207,11 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 ```
 {: .nightly-all-devel-ubuntu1804-py38-cuda110 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.2-devel-ubuntu18.04-py3.7
+docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.0-devel-ubuntu18.04-py3.9
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.2-devel-ubuntu18.04-py3.7
+    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.0-devel-ubuntu18.04-py3.9
 ```
-{: .nightly-all-devel-ubuntu1804-py37-cuda112 .hidden }
+{: .nightly-all-devel-ubuntu1804-py39-cuda110 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.2-devel-ubuntu18.04-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -225,11 +219,11 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 ```
 {: .nightly-all-devel-ubuntu1804-py38-cuda112 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.4-devel-ubuntu18.04-py3.7
+docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.2-devel-ubuntu18.04-py3.9
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.4-devel-ubuntu18.04-py3.7
+    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.2-devel-ubuntu18.04-py3.9
 ```
-{: .nightly-all-devel-ubuntu1804-py37-cuda114 .hidden }
+{: .nightly-all-devel-ubuntu1804-py39-cuda112 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.4-devel-ubuntu18.04-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -237,25 +231,25 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 ```
 {: .nightly-all-devel-ubuntu1804-py38-cuda114 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.5-devel-ubuntu18.04-py3.7
+docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.4-devel-ubuntu18.04-py3.9
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.5-devel-ubuntu18.04-py3.7
+    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.4-devel-ubuntu18.04-py3.9
 ```
-{: .nightly-all-devel-ubuntu1804-py37-cuda115 .hidden }
+{: .nightly-all-devel-ubuntu1804-py39-cuda114 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.5-devel-ubuntu18.04-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.5-devel-ubuntu18.04-py3.8
 ```
 {: .nightly-all-devel-ubuntu1804-py38-cuda115 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.5-devel-ubuntu18.04-py3.9
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.5-devel-ubuntu18.04-py3.9
+```
+{: .nightly-all-devel-ubuntu1804-py39-cuda115 .hidden }
 
 <!-- docker devel ubuntu20.04 -->
-```bash
-docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.0-devel-ubuntu20.04-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.0-devel-ubuntu20.04-py3.7
-```
-{: .nightly-all-devel-ubuntu2004-py37-cuda110 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.0-devel-ubuntu20.04-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -263,11 +257,11 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 ```
 {: .nightly-all-devel-ubuntu2004-py38-cuda110 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.2-devel-ubuntu20.04-py3.7
+docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.0-devel-ubuntu20.04-py3.9
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.2-devel-ubuntu20.04-py3.7
+    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.0-devel-ubuntu20.04-py3.9
 ```
-{: .nightly-all-devel-ubuntu2004-py37-cuda112 .hidden }
+{: .nightly-all-devel-ubuntu2004-py39-cuda110 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.2-devel-ubuntu20.04-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -275,11 +269,11 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 ```
 {: .nightly-all-devel-ubuntu2004-py38-cuda112 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.4-devel-ubuntu20.04-py3.7
+docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.2-devel-ubuntu20.04-py3.9
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.4-devel-ubuntu20.04-py3.7
+    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.2-devel-ubuntu20.04-py3.9
 ```
-{: .nightly-all-devel-ubuntu2004-py37-cuda114 .hidden }
+{: .nightly-all-devel-ubuntu2004-py39-cuda112 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.4-devel-ubuntu20.04-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -287,25 +281,25 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 ```
 {: .nightly-all-devel-ubuntu2004-py38-cuda114 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.5-devel-ubuntu20.04-py3.7
+docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.4-devel-ubuntu20.04-py3.9
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.5-devel-ubuntu20.04-py3.7
+    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.4-devel-ubuntu20.04-py3.9
 ```
-{: .nightly-all-devel-ubuntu2004-py37-cuda115 .hidden }
+{: .nightly-all-devel-ubuntu2004-py39-cuda114 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.5-devel-ubuntu20.04-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.5-devel-ubuntu20.04-py3.8
 ```
 {: .nightly-all-devel-ubuntu2004-py38-cuda115 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.5-devel-ubuntu20.04-py3.9
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.5-devel-ubuntu20.04-py3.9
+```
+{: .nightly-all-devel-ubuntu2004-py39-cuda115 .hidden }
 
 <!-- docker devel centos7 -->
-```bash
-docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.0-devel-centos7-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.0-devel-centos7-py3.7
-```
-{: .nightly-all-devel-centos7-py37-cuda110 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.0-devel-centos7-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -313,11 +307,11 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 ```
 {: .nightly-all-devel-centos7-py38-cuda110 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.2-devel-centos7-py3.7
+docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.0-devel-centos7-py3.9
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.2-devel-centos7-py3.7
+    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.0-devel-centos7-py3.9
 ```
-{: .nightly-all-devel-centos7-py37-cuda112 .hidden }
+{: .nightly-all-devel-centos7-py39-cuda110 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.2-devel-centos7-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -325,11 +319,11 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 ```
 {: .nightly-all-devel-centos7-py38-cuda112 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.4-devel-centos7-py3.7
+docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.2-devel-centos7-py3.9
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.4-devel-centos7-py3.7
+    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.2-devel-centos7-py3.9
 ```
-{: .nightly-all-devel-centos7-py37-cuda114 .hidden }
+{: .nightly-all-devel-centos7-py39-cuda112 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.4-devel-centos7-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -337,25 +331,25 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 ```
 {: .nightly-all-devel-centos7-py38-cuda114 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.5-devel-centos7-py3.7
+docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.4-devel-centos7-py3.9
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.5-devel-centos7-py3.7
+    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.4-devel-centos7-py3.9
 ```
-{: .nightly-all-devel-centos7-py37-cuda115 .hidden }
+{: .nightly-all-devel-centos7-py39-cuda114 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.5-devel-centos7-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.5-devel-centos7-py3.8
 ```
 {: .nightly-all-devel-centos7-py38-cuda115 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.5-devel-centos7-py3.9
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.5-devel-centos7-py3.9
+```
+{: .nightly-all-devel-centos7-py39-cuda115 .hidden }
 
 <!-- docker devel centos8 -->
-```bash
-docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.0-devel-centos8-py3.7
-docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.0-devel-centos8-py3.7
-```
-{: .nightly-all-devel-centos8-py37-cuda110 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.0-devel-centos8-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -363,11 +357,11 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 ```
 {: .nightly-all-devel-centos8-py38-cuda110 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.2-devel-centos8-py3.7
+docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.0-devel-centos8-py3.9
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.2-devel-centos8-py3.7
+    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.0-devel-centos8-py3.9
 ```
-{: .nightly-all-devel-centos8-py37-cuda112 .hidden }
+{: .nightly-all-devel-centos8-py39-cuda110 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.2-devel-centos8-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -375,11 +369,11 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 ```
 {: .nightly-all-devel-centos8-py38-cuda112 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.4-devel-centos8-py3.7
+docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.2-devel-centos8-py3.9
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.4-devel-centos8-py3.7
+    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.2-devel-centos8-py3.9
 ```
-{: .nightly-all-devel-centos8-py37-cuda114 .hidden }
+{: .nightly-all-devel-centos8-py39-cuda112 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.4-devel-centos8-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
@@ -387,17 +381,23 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 ```
 {: .nightly-all-devel-centos8-py38-cuda114 .hidden }
 ```bash
-docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.5-devel-centos8-py3.7
+docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.4-devel-centos8-py3.9
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
-    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.5-devel-centos8-py3.7
+    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.4-devel-centos8-py3.9
 ```
-{: .nightly-all-devel-centos8-py37-cuda115 .hidden }
+{: .nightly-all-devel-centos8-py39-cuda114 .hidden }
 ```bash
 docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.5-devel-centos8-py3.8
 docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
     rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.5-devel-centos8-py3.8
 ```
 {: .nightly-all-devel-centos8-py38-cuda115 .hidden }
+```bash
+docker pull rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.5-devel-centos8-py3.9
+docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
+    rapidsai/rapidsai-core-dev-nightly:{{site.data.releases.nightly-version}}-cuda11.5-devel-centos8-py3.9
+```
+{: .nightly-all-devel-centos8-py39-cuda115 .hidden }
 
 <!-- source installs -->
 <div class='nightly-cudf-source hidden'>
@@ -422,335 +422,335 @@ docker run --gpus all --rm -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 <!-- conda all 11.0 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    rapids={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.0 dask-sql
-```
-{: .nightly-all-conda-py37-cuda110 .hidden }
-```bash
-conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     rapids={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.0 dask-sql
 ```
 {: .nightly-all-conda-py38-cuda110 .hidden }
-
-<!-- conda all 11.2 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    rapids={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.2 dask-sql
+    rapids={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.0 dask-sql
 ```
-{: .nightly-all-conda-py37-cuda112 .hidden }
+{: .nightly-all-conda-py39-cuda110 .hidden }
+
+<!-- conda all 11.2 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     rapids={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.2 dask-sql
 ```
 {: .nightly-all-conda-py38-cuda112 .hidden }
-
-<!-- conda all 11.4 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    rapids={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.4 dask-sql
+    rapids={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.2 dask-sql
 ```
-{: .nightly-all-conda-py37-cuda114 .hidden }
+{: .nightly-all-conda-py39-cuda112 .hidden }
+
+<!-- conda all 11.4 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     rapids={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.4 dask-sql
 ```
 {: .nightly-all-conda-py38-cuda114 .hidden }
-
-<!-- conda all 11.5 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    rapids={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.5 dask-sql
+    rapids={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.4 dask-sql
 ```
-{: .nightly-all-conda-py37-cuda115 .hidden }
+{: .nightly-all-conda-py39-cuda114 .hidden }
+
+<!-- conda all 11.5 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     rapids={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.5 dask-sql
 ```
 {: .nightly-all-conda-py38-cuda115 .hidden }
-
-<!-- conda-lib cudf 11.0 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    cudf={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.0
+    rapids={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.5 dask-sql
 ```
-{: .nightly-cudf-conda-py37-cuda110 .hidden }
+{: .nightly-all-conda-py39-cuda115 .hidden }
+
+<!-- conda-lib cudf 11.0 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     cudf={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.0
 ```
 {: .nightly-cudf-conda-py38-cuda110 .hidden }
-
-<!-- conda-lib cudf 11.2 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    cudf={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.2
+    cudf={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.0
 ```
-{: .nightly-cudf-conda-py37-cuda112 .hidden }
+{: .nightly-cudf-conda-py39-cuda110 .hidden }
+
+<!-- conda-lib cudf 11.2 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     cudf={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.2
 ```
 {: .nightly-cudf-conda-py38-cuda112 .hidden }
-
-<!-- conda-lib cudf 11.4 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    cudf={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.4
+    cudf={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.2
 ```
-{: .nightly-cudf-conda-py37-cuda114 .hidden }
+{: .nightly-cudf-conda-py39-cuda112 .hidden }
+
+<!-- conda-lib cudf 11.4 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     cudf={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.4
 ```
 {: .nightly-cudf-conda-py38-cuda114 .hidden }
-
-<!-- conda-lib cudf 11.5 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    cudf={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.5
+    cudf={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.4
 ```
-{: .nightly-cudf-conda-py37-cuda115 .hidden }
+{: .nightly-cudf-conda-py39-cuda114 .hidden }
+
+<!-- conda-lib cudf 11.5 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     cudf={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.5
 ```
 {: .nightly-cudf-conda-py38-cuda115 .hidden }
-
-<!-- conda-lib cuml 11.0 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    cuml={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.0
+    cudf={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.5
 ```
-{: .nightly-cuml-conda-py37-cuda110 .hidden }
+{: .nightly-cudf-conda-py39-cuda115 .hidden }
+
+<!-- conda-lib cuml 11.0 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     cuml={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.0
 ```
 {: .nightly-cuml-conda-py38-cuda110 .hidden }
-
-<!-- conda-lib cuml 11.2 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    cuml={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.2
+    cuml={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.0
 ```
-{: .nightly-cuml-conda-py37-cuda112 .hidden }
+{: .nightly-cuml-conda-py39-cuda110 .hidden }
+
+<!-- conda-lib cuml 11.2 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     cuml={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.2
 ```
 {: .nightly-cuml-conda-py38-cuda112 .hidden }
-
-<!-- conda-lib cuml 11.4 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    cuml={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.4
+    cuml={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.2
 ```
-{: .nightly-cuml-conda-py37-cuda114 .hidden }
+{: .nightly-cuml-conda-py39-cuda112 .hidden }
+
+<!-- conda-lib cuml 11.4 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     cuml={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.4
 ```
 {: .nightly-cuml-conda-py38-cuda114 .hidden }
-
-<!-- conda-lib cuml 11.5 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    cuml={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.5
+    cuml={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.4
 ```
-{: .nightly-cuml-conda-py37-cuda115 .hidden }
+{: .nightly-cuml-conda-py39-cuda114 .hidden }
+
+<!-- conda-lib cuml 11.5 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     cuml={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.5
 ```
 {: .nightly-cuml-conda-py38-cuda115 .hidden }
-
-<!-- conda-lib cugraph 11.0 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    cugraph={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.0
+    cuml={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.5
 ```
-{: .nightly-cugraph-conda-py37-cuda110 .hidden }
+{: .nightly-cuml-conda-py39-cuda115 .hidden }
+
+<!-- conda-lib cugraph 11.0 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     cugraph={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.0
 ```
 {: .nightly-cugraph-conda-py38-cuda110 .hidden }
-
-<!-- conda-lib cugraph 11.2 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    cugraph={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.2
+    cugraph={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.0
 ```
-{: .nightly-cugraph-conda-py37-cuda112 .hidden }
+{: .nightly-cugraph-conda-py39-cuda110 .hidden }
+
+<!-- conda-lib cugraph 11.2 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     cugraph={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.2
 ```
 {: .nightly-cugraph-conda-py38-cuda112 .hidden }
-
-<!-- conda-lib cugraph 11.4 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    cugraph={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.4
+    cugraph={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.2
 ```
-{: .nightly-cugraph-conda-py37-cuda114 .hidden }
+{: .nightly-cugraph-conda-py39-cuda112 .hidden }
+
+<!-- conda-lib cugraph 11.4 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     cugraph={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.4
 ```
 {: .nightly-cugraph-conda-py38-cuda114 .hidden }
-
-<!-- conda-lib cugraph 11.5 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    cugraph={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.5
+    cugraph={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.4
 ```
-{: .nightly-cugraph-conda-py37-cuda115 .hidden }
+{: .nightly-cugraph-conda-py39-cuda114 .hidden }
+
+<!-- conda-lib cugraph 11.5 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     cugraph={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.5
 ```
 {: .nightly-cugraph-conda-py38-cuda115 .hidden }
-
-<!-- conda-lib cusignal 11.0 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    cusignal={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.0
+    cugraph={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.5
 ```
-{: .nightly-cusignal-conda-py37-cuda110 .hidden }
+{: .nightly-cugraph-conda-py39-cuda115 .hidden }
+
+<!-- conda-lib cusignal 11.0 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     cusignal={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.0
 ```
 {: .nightly-cusignal-conda-py38-cuda110 .hidden }
-
-<!-- conda-lib cusignal 11.2 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    cusignal={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.2
+    cusignal={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.0
 ```
-{: .nightly-cusignal-conda-py37-cuda112 .hidden }
+{: .nightly-cusignal-conda-py39-cuda110 .hidden }
+
+<!-- conda-lib cusignal 11.2 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     cusignal={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.2
 ```
 {: .nightly-cusignal-conda-py38-cuda112 .hidden }
-
-<!-- conda-lib cusignal 11.4 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    cusignal={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.4
+    cusignal={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.2
 ```
-{: .nightly-cusignal-conda-py37-cuda114 .hidden }
+{: .nightly-cusignal-conda-py39-cuda112 .hidden }
+
+<!-- conda-lib cusignal 11.4 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     cusignal={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.4
 ```
 {: .nightly-cusignal-conda-py38-cuda114 .hidden }
-
-<!-- conda-lib cusignal 11.5 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    cusignal={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.5
+    cusignal={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.4
 ```
-{: .nightly-cusignal-conda-py37-cuda115 .hidden }
+{: .nightly-cusignal-conda-py39-cuda114 .hidden }
+
+<!-- conda-lib cusignal 11.5 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     cusignal={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.5
 ```
 {: .nightly-cusignal-conda-py38-cuda115 .hidden }
-
-<!-- conda-lib cuspatial 11.0 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    cuspatial={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.0
+    cusignal={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.5
 ```
-{: .nightly-cuspatial-conda-py37-cuda110 .hidden }
+{: .nightly-cusignal-conda-py39-cuda115 .hidden }
+
+<!-- conda-lib cuspatial 11.0 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     cuspatial={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.0
 ```
 {: .nightly-cuspatial-conda-py38-cuda110 .hidden }
-
-<!-- conda-lib cuspatial 11.2 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    cuspatial={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.2
+    cuspatial={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.0
 ```
-{: .nightly-cuspatial-conda-py37-cuda112 .hidden }
+{: .nightly-cuspatial-conda-py39-cuda110 .hidden }
+
+<!-- conda-lib cuspatial 11.2 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     cuspatial={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.2
 ```
 {: .nightly-cuspatial-conda-py38-cuda112 .hidden }
-
-<!-- conda-lib cuspatial 11.4 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    cuspatial={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.4
+    cuspatial={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.2
 ```
-{: .nightly-cuspatial-conda-py37-cuda114 .hidden }
+{: .nightly-cuspatial-conda-py39-cuda112 .hidden }
+
+<!-- conda-lib cuspatial 11.4 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     cuspatial={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.4
 ```
 {: .nightly-cuspatial-conda-py38-cuda114 .hidden }
-
-<!-- conda-lib cuspatial 11.5 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    cuspatial={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.5
+    cuspatial={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.4
 ```
-{: .nightly-cuspatial-conda-py37-cuda115 .hidden }
+{: .nightly-cuspatial-conda-py39-cuda114 .hidden }
+
+<!-- conda-lib cuspatial 11.5 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     cuspatial={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.5
 ```
 {: .nightly-cuspatial-conda-py38-cuda115 .hidden }
-
-<!-- conda-lib cuxfilter 11.0 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    cuxfilter={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.0
+    cuspatial={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.5
 ```
-{: .nightly-cuxfilter-conda-py37-cuda110 .hidden }
+{: .nightly-cuspatial-conda-py39-cuda115 .hidden }
+
+<!-- conda-lib cuxfilter 11.0 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     cuxfilter={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.0
 ```
 {: .nightly-cuxfilter-conda-py38-cuda110 .hidden }
-
-<!-- conda-lib cuxfilter 11.2 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    cuxfilter={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.2
+    cuxfilter={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.0
 ```
-{: .nightly-cuxfilter-conda-py37-cuda112 .hidden }
+{: .nightly-cuxfilter-conda-py39-cuda110 .hidden }
+
+<!-- conda-lib cuxfilter 11.2 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     cuxfilter={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.2
 ```
 {: .nightly-cuxfilter-conda-py38-cuda112 .hidden }
-
-<!-- conda-lib cuxfilter 11.4 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    cuxfilter={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.4
+    cuxfilter={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.2
 ```
-{: .nightly-cuxfilter-conda-py37-cuda114 .hidden }
+{: .nightly-cuxfilter-conda-py39-cuda112 .hidden }
+
+<!-- conda-lib cuxfilter 11.4 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     cuxfilter={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.4
 ```
 {: .nightly-cuxfilter-conda-py38-cuda114 .hidden }
-
-<!-- conda-lib cuxfilter 11.5 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
-    cuxfilter={{site.data.releases.nightly-version}} python=3.7 cudatoolkit=11.5
+    cuxfilter={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.4
 ```
-{: .nightly-cuxfilter-conda-py37-cuda115 .hidden }
+{: .nightly-cuxfilter-conda-py39-cuda114 .hidden }
+
+<!-- conda-lib cuxfilter 11.5 -->
 ```bash
 conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
     cuxfilter={{site.data.releases.nightly-version}} python=3.8 cudatoolkit=11.5
 ```
 {: .nightly-cuxfilter-conda-py38-cuda115 .hidden }
+```bash
+conda create -n rapids-{{site.data.releases.nightly-version}} -c rapidsai-nightly -c nvidia -c conda-forge \
+    cuxfilter={{site.data.releases.nightly-version}} python=3.9 cudatoolkit=11.5
+```
+{: .nightly-cuxfilter-conda-py39-cuda115 .hidden }

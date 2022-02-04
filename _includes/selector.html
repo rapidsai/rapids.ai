@@ -68,8 +68,8 @@
                 </div>
                 <div class="python">
                     <div class="option-label">Python</div>
-                    <div id="py37" class="option">Python 3.7</div>
                     <div id="py38" class="option">Python 3.8</div>
+                    <div id="py39" class="option">Python 3.9</div>
                 </div>
                 <div class="cuda">
                     <div class="option-label">CUDA</div>
@@ -123,7 +123,7 @@ var pkg = ["cudf", "cuml", "cugraph", "cusignal", "cuspatial", "cuxfilter", "all
 var method = ["conda", "runtime", "source", "devel"];
 var release = ["stable", "nightly"];
 var linux = ["ubuntu1804", "ubuntu20.04", "centos7", "centos8", "rhel7"];
-var python = ["py37", "py38"];
+var python = ["py38", "py39"];
 var cuda = ["cuda110", "cuda112"];
 var pkg_opts = $(".pkg > .option");
 var method_opts = $(".method > .option");
@@ -263,7 +263,7 @@ function processClick(options, click, category) {
         $("#all").removeClass("disabled");
         $(method_opts).removeClass("disabled");
         $(release_opts).removeClass("disabled");
-    } 
+    }
 
     // Mark active options
     $("#" + selections["method"]).addClass("active");
