@@ -16,7 +16,7 @@ STABLE_CONFIG ={
     "file": "_includes/selector-commands-stable.html",
     "os": ['ubuntu18.04','ubuntu20.04','centos7','centos8'],
     "cuda": ['11.0','11.2', '11.4', '11.5'],
-    "py": ['3.7','3.8'],
+    "py": ['3.8','3.9'],
     "libs": ['cudf', 'cuml', 'cugraph', 'cusignal', 'cuspatial', 'cuxfilter'],
     "cmds": [] # Leave empty
 }
@@ -26,7 +26,7 @@ NIGHTLY_CONFIG ={
     "file": "_includes/selector-commands-nightly.html",
     "os": ['ubuntu18.04','ubuntu20.04','centos7','centos8'],
     "cuda": ['11.0','11.2', '11.4', '11.5'],
-    "py": ['3.7','3.8'],
+    "py": ['3.8','3.9'],
     "libs": ['cudf', 'cuml', 'cugraph', 'cusignal', 'cuspatial', 'cuxfilter'],
     "cmds": [] # Leave empty
 }
