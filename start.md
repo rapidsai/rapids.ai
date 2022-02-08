@@ -22,8 +22,10 @@ for column in gdf.columns:
 ```
 
 ## <i class="fas fa-bolt"></i> Try Now Online
-Jump right into a GPU powered RAPIDS notebook. <br>
-Try with **[<i class="fab fa-google"></i> Colaboratory <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
+Jump right into a GPU powered RAPIDS notebook online with either SageMaker Studio or Colab [(v21.12 only)](https://docs.rapids.ai/notices/rsn0014/).<br>
+
+* [![Try RAPIDSAI with Sagemaker Studio Lab](https://studiolab.sagemaker.aws/studiolab.svg)](https://studiolab.sagemaker.aws/import/github/rapidsai-community/rapids-sagemaker/blob/main/RAPIDS-SageMaker.ipynb)
+* Try with **[<i class="fab fa-google"></i> Colaboratory <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}** (pegged to [RAPIDS v21.12 due to Python 3.7 EOL](https://docs.rapids.ai/notices/rsn0014/))
 
 
 ## <i class="fas fa-bolt"></i> Deploy RAPIDS on the Cloud 
