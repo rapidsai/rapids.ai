@@ -22,10 +22,12 @@ The RAPIDS team is developing, contributing, and collaborating closely with nume
 %}
 
 {% capture com_left_top %}
-![BLAZINGSQL]({{ site.baseurl }}{% link /assets/images/blazingsql.png %}){: .third-image-center}
-## <i class="fas fa-code-branch"></i> RAPIDS + BlazingSQL
+![RAPIDS+SQL]({{ site.baseurl }}{% link /assets/images/RAPIDS-SQL.png %}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + SQL
 
-BlazingSQL is an open source project providing distributed SQL for analytics that enables the integration of enterprise data at scale. RAPIDS is actively contributing to BlazingSQL, and it integrates with RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. <br> **[Learn more on our BlazingSQL page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](blazingsql.html)**
+RAPIDS integrates with Spark SQL and Dask-SQL to accelerate your SQL queries at scale and make GPU acceleration available to an even broader set of users.
+<br> **[Learn more about RAPIDS + Spark SQL <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://developer.nvidia.com/blog/accelerating-apache-spark-3-0-with-gpus-and-rapids/)**
+<br> **[Learn more about RAPIDS + Dask SQL <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://dask-sql.readthedocs.io/en/latest/)**
 
 {% endcapture %}
 {% capture com_mid_top %}
