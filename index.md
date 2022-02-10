@@ -96,13 +96,13 @@ A short introduction to multi-GPU solutions with a distributed DataFrame via Das
 ## <i class="far fa-bookmark"></i> Example Notebooks
 {: .section-subtitle-top-1}
 
-A Github repository with our introductory examples of XGBoost, cuML demos, cuGraph demos, and more. <br> **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks){: target="_blank"}**
+A GitHub repository with our introductory examples of XGBoost, cuML demos, cuGraph demos, and more. <br> **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks){: target="_blank"}**
 
 
 ## <i class="far fa-bookmark"></i> Example Community Notebooks
 {: .section-subtitle-top-1}
 
-A second Github repository with our extended collection of community contributed notebook examples. <br> **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-contrib){: target="_blank"}**
+A second GitHub repository with our extended collection of community contributed notebook examples. <br> **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-contrib){: target="_blank"}**
 
 
 {% endcapture %}
@@ -141,7 +141,7 @@ A second Github repository with our extended collection of community contributed
 {% capture com_left %}
 # RAPIDS Repositories
 {: .section-title-halfs}
-RAPIDS is committed to open source. We strive for a **[6 week release schedule](https://docs.rapids.ai/maintainers){: target="_blank"}** with the generalized release schedule below. Learn more on our **[Release Blogs <i class="fas fa-angle-double-right"></i>](https://medium.com/rapids-ai){: target="_blank"}**
+RAPIDS is committed to open source. We strive to release new features on a **[2 month cadence](https://docs.rapids.ai/maintainers){: target="_blank"}** with the generalized release schedule below. Learn more on our **[Release Blogs <i class="fas fa-angle-double-right"></i>](https://medium.com/rapids-ai){: target="_blank"}**
 
 ## <i class="far fa-calendar-check"></i> Release Schedule
 <svg id="Release" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 108">
@@ -209,7 +209,7 @@ RAPIDS is committed to open source. We strive for a **[6 week release schedule](
 ## <i class="fas fa-code" id="libraries"></i> RAPIDS APIS and Libraries
 {: .section-subtitle-top-1}
 
-RAPIDS is open source licensed under Apache 2.0, spanning multiple projects that range from GPU dataframes to GPU accelerated ML algorithms. Its also provides native array_interface support, allowing Apache Arrow data to be pushed to deep learning frameworks. <br> **[Learn more <i class="fas fa-angle-double-right"></i>](about.html)**
+RAPIDS is open source licensed under Apache 2.0, spanning multiple projects that range from GPU dataframes to GPU accelerated ML algorithms. It also provides native array_interface support, allowing Apache Arrow data to be pushed to deep learning frameworks. <br> **[Learn more <i class="fas fa-angle-double-right"></i>](about.html)**
 
 ## <i class="fab fa-github"></i> Contributing
 Whether you are new to RAPIDS, looking to help, or are part of the team, learn about our contributing guidelines on our contributing page. <br> **[Go to Docs <i class="fas fa-angle-double-right"></i>](https://docs.rapids.ai/contributing){: target="_blank"}**
@@ -243,7 +243,7 @@ cuDF is a Python GPU DataFrame library (built on the **[Apache Arrow](https://ar
 **[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/libcudf/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/main/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
 
-libcudf is a C/C++ CUDA library for implementing standard dataframe operations. It is part of the cuDF repository.
+libcudf is a CUDA C++ library for implementing standard dataframe operations. It is part of the cuDF repository.
 
 {% endcapture %}
 {% capture lib2_left %}
@@ -385,10 +385,10 @@ XGBoost is a well-known gradient boosted decision trees (GBDT) machine learning 
 {% endcapture %}
 
 {% capture com_bottom_right %}
-![cloud]({{ site.baseurl }}{% link /assets/images/RAPIDs-cloud.png %}){: .third-image-center}
+![cloud]({{ site.baseurl }}{% link /assets/images/RAPIDS-cloud.png %}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Cloud
 
-RAPIDS’s GPU accelerated data science tools can be deployed on all of the major clouds, allowing anyone to take advantage of the speed increases and TCO reductions that RAPIDS enables.
+RAPIDS’ GPU accelerated data science tools can be deployed on all of the major clouds, allowing anyone to take advantage of the speed increases and TCO reductions that RAPIDS enables.
 <br>
 **[Learn more on our cloud page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](cloud.html)**
 {% endcapture %}
@@ -413,7 +413,7 @@ Accelerate Hyperparameter Optimization (HPO) in the Cloud. The RAPIDS team works
 ![merlin]({{ site.baseurl }}{% link /assets/images/NVLogo_2D_H.png%}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + NVIDIA MERLIN
 
-NVIDIA Merlin is an open source library providing end-to-end GPU-accelerated recommender systems. Merlin leverages RAPIDs cuDF and Dask cuDF for dataframe transformation during ETL and inference, as well as for the optimized dataloaders in TensorFlow, PyTorch or HugeCTR to accelerate deep learning training. <br> **[Learn more on our Merlin page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](merlin.html)**
+NVIDIA Merlin is an open source library providing end-to-end GPU-accelerated recommender systems. Merlin leverages RAPIDS cuDF and Dask cuDF for dataframe transformation during ETL and inference, as well as for the optimized dataloaders in TensorFlow, PyTorch or HugeCTR to accelerate deep learning training. <br> **[Learn more on our Merlin page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](merlin.html)**
 
 {% endcapture %}
 
