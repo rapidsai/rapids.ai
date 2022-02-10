@@ -143,7 +143,7 @@ RAPIDS is open sourced under the Apache 2.0 license and is intended to be improv
 
 Anyone can join our community and contribute to to RAPIDS in a five step onboarding process:
 
-> **<i class="fas fa-download text-purple"></i> 1. Install** RAPIDS using **[Docker or Conda](https://rapids.ai/start.html#get-rapids){: target="_blank"}**. Or try **[RAPIDSAI with SageMaker Studio Lab](smsl.html){: target="_blank"}** or with **[<i class="fab fa-google"></i> Colaboratory ](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**.
+> **<i class="fas fa-download text-purple"></i> 1. Install** RAPIDS using **[Docker or Conda](https://rapids.ai/start.html#get-rapids){: target="_blank"}**. Or try RAPIDSAI with **[SageMaker Studio Lab](smsl.html){: target="_blank"}** or with **[<i class="fab fa-google"></i> Colaboratory ](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**.
 
 > **<i class="far fa-comments text-purple"></i>  2. Join** our community conversations on **[Twitter](https://twitter.com/rapidsai){: target="_blank"}**, **[Google Groups](https://groups.google.com/forum/#!forum/rapidsai){: target="_blank"}**, and **[Slack]({{ site.slack_invite }}){: target="_blank"}**.
 
