@@ -360,7 +360,7 @@ cuCIM is a an extensible toolkit designed to provide GPU-accelerated I/O, comput
 # Community and Projects
 {: .section-title-full .padding-top-1em}
 
-{% capture com_left_top %}
+{% capture com_top_left %}
 ![RAPIDS+SQL]({{ site.baseurl }}{% link /assets/images/RAPIDS-SQL.png %}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + SQL
 
