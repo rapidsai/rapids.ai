@@ -39,7 +39,7 @@ Drastically improve your productivity with more interactive data science tools l
 
 {% capture about_bottom_right %}
 ## <i class="fas fa-code-branch"></i> Open Source
-RAPIDS is an open source project. Supported by NVIDIA, it also relies on numba, apache arrow, and many more open source projects. <br> **[Learn about our projects <i class="fas fa-angle-double-right"></i>](community.html)**
+RAPIDS is an open source project. Supported by NVIDIA, it also relies on Numba, Apache Arrow, and many more open source projects. <br> **[Learn about our projects <i class="fas fa-angle-double-right"></i>](community.html)**
 {% endcapture %}
 
 {% include section-double-thirds.html
@@ -72,33 +72,37 @@ for column in gdf.columns:
 Find more details on our **[Get Started Page <i class="fas fa-angle-double-right"></i>](start.html)**
 
 ## <i class="fas fa-bolt"></i> Try Now Online
-Jump right into a GPU powered RAPIDS notebook online.<br>
-Try with **[<i class="fab fa-google"></i> Colaboratory <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
+Jump right into a GPU powered RAPIDS notebook online with either SageMaker Studio Lab or Colab [(v21.12 only)](https://docs.rapids.ai/notices/rsn0014/)
+.<br>
+
+[![SageMaker Studio Lab]({{ site.baseurl }}{% link /assets/images/Open-StudioLab.png%})](smsl.html){: target="_blank"}{: .half-image}
+
+[![Colab]({{ site.baseurl }}{% link /assets/images/Open-Colab.png%})](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}{: .half-image}
 
 {% endcapture %}
 
 {% capture start_right %}
-## <i class="far fa-bookmark"></i> 10 Minutes to cuDF
+## <i class="far fa-bookmark"></i> 10 Minutes to cuDF and Dask-cuDF
 {: .section-subtitle-top-1}
 
-Modeled after 10 Minutes to Pandas, this is a short introduction to cuDF that is geared mainly for new users. <br> **[Go to guide <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://docs.rapids.ai/api/cudf/stable/10min.html){: target="_blank"}**
+Modeled after 10 Minutes to Pandas, this is a short introduction to cuDF that is geared mainly for new users. <br> **[Go to guide <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://docs.rapids.ai/api/cudf/stable/user_guide/10min.html){: target="_blank"}**
 
 ## <i class="far fa-bookmark"></i> Multi-GPU with Dask-cuDF
 {: .section-subtitle-top-1}
 
-A short introduction to multi-GPU solutions with a distributed DataFrame via Dask-cuDF. <br> **[Go to guide <i class="fas fa-angle-double-right"></i>](https://docs.rapids.ai/api/cudf/stable/dask-cudf.html){: target="_blank"}**
+A short introduction to multi-GPU solutions with a distributed DataFrame via Dask-cuDF. <br> **[Go to guide <i class="fas fa-angle-double-right"></i>](https://docs.rapids.ai/api/cudf/stable/basics/dask-cudf.html){: target="_blank"}**
 
 
 ## <i class="far fa-bookmark"></i> Example Notebooks
 {: .section-subtitle-top-1}
 
-A Github repository with our introductory examples of XGBoost, cuML demos, cuGraph demos, and more. <br> **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks){: target="_blank"}**
+A GitHub repository with our introductory examples of XGBoost, cuML demos, cuGraph demos, and more. <br> **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks){: target="_blank"}**
 
 
 ## <i class="far fa-bookmark"></i> Example Community Notebooks
 {: .section-subtitle-top-1}
 
-A second Github repository with our extended collection of community contributed notebook examples. <br> **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-contrib){: target="_blank"}**
+A second GitHub repository with our extended collection of community contributed notebook examples. <br> **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-contrib){: target="_blank"}**
 
 
 {% endcapture %}
@@ -137,7 +141,7 @@ A second Github repository with our extended collection of community contributed
 {% capture com_left %}
 # RAPIDS Repositories
 {: .section-title-halfs}
-RAPIDS is committed to open source. We strive for a **[6 week release schedule](https://docs.rapids.ai/maintainers){: target="_blank"}** with the generalized release schedule below. Learn more on our **[Release Blogs <i class="fas fa-angle-double-right"></i>](https://medium.com/rapids-ai){: target="_blank"}**
+RAPIDS is committed to open source. We strive to release new features on a **[2 month cadence](https://docs.rapids.ai/maintainers){: target="_blank"}** with the generalized release schedule below. Learn more on our **[Release Blogs <i class="fas fa-angle-double-right"></i>](https://medium.com/rapids-ai){: target="_blank"}**
 
 ## <i class="far fa-calendar-check"></i> Release Schedule
 <svg id="Release" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 108">
@@ -205,7 +209,7 @@ RAPIDS is committed to open source. We strive for a **[6 week release schedule](
 ## <i class="fas fa-code" id="libraries"></i> RAPIDS APIS and Libraries
 {: .section-subtitle-top-1}
 
-RAPIDS is open source licensed under Apache 2.0, spanning multiple projects that range from GPU dataframes to GPU accelerated ML algorithms. Its also provides native array_interface support, allowing Apache Arrow data to be pushed to deep learning frameworks. <br> **[Learn more <i class="fas fa-angle-double-right"></i>](about.html)**
+RAPIDS is open source licensed under Apache 2.0, spanning multiple projects that range from GPU dataframes to GPU accelerated ML algorithms. It also provides native array_interface support, allowing Apache Arrow data to be pushed to deep learning frameworks. <br> **[Learn more <i class="fas fa-angle-double-right"></i>](about.html)**
 
 ## <i class="fab fa-github"></i> Contributing
 Whether you are new to RAPIDS, looking to help, or are part of the team, learn about our contributing guidelines on our contributing page. <br> **[Go to Docs <i class="fas fa-angle-double-right"></i>](https://docs.rapids.ai/contributing){: target="_blank"}**
@@ -230,7 +234,7 @@ Whether you are new to RAPIDS, looking to help, or are part of the team, learn a
 **[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cudf/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/main/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
 
-cuDF is a Python GPU DataFrame library (built on the **[Apache Arrow](http://arrow.apache.org/){: target="_blank"}** columnar memory format) for loading, joining, aggregating, filtering, and otherwise manipulating data all in a **[pandas-like](https://pandas.pydata.org/){: target="_blank"}** API familiar to data scientists.
+cuDF is a Python GPU DataFrame library (built on the **[Apache Arrow](https://arrow.apache.org/){: target="_blank"}** columnar memory format) for loading, joining, aggregating, filtering, and otherwise manipulating data all in a **[pandas-like](https://pandas.pydata.org/){: target="_blank"}** API familiar to data scientists.
 
 {% endcapture %}
 {% capture lib1_right %}
@@ -239,7 +243,7 @@ cuDF is a Python GPU DataFrame library (built on the **[Apache Arrow](http://arr
 **[GitHub](https://github.com/rapidsai/cudf){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/libcudf/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cudf/blob/main/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
 
-libcudf is a C/C++ CUDA library for implementing standard dataframe operations. It is part of the cuDF repository.
+libcudf is a CUDA C++ library for implementing standard dataframe operations. It is part of the cuDF repository.
 
 {% endcapture %}
 {% capture lib2_left %}
@@ -273,7 +277,7 @@ cuSignal is a GPU accelerated signal processing library built around a **[SciPy 
 {% capture lib3_right %}
 ## <i class="fad fa-terminal"></i> cuSpatial <span class="api-tag">API</span>
 
-**[GitHub](https://github.com/rapidsai/cuspatial){: target="_blank"}** **/** **[Docs](https://github.com/rapidsai/cuspatial){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuspatial/blob/main/CHANGELOG.md){: target="_blank"}**
+**[GitHub](https://github.com/rapidsai/cuspatial){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cuspatial/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuspatial/blob/main/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
 
 cuSpatial is an efficient C++ library accelerated on GPUs with Python bindings to enable use by the data science community. cuSpatial provides significant GPU-acceleration to common spatial and spatiotemporal operations such as point-in-polygon tests, distances between trajectories, and trajectory clustering when compared to CPU-based implementations.
@@ -285,7 +289,7 @@ cuSpatial is an efficient C++ library accelerated on GPUs with Python bindings t
 **[GitHub](https://github.com/rapidsai/cuxfilter){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cuxfilter/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cuxfilter/blob/main/CHANGELOG.md){: target="_blank"}**
 {: .no-tb-margins }
 
-cuxfilter is a framework to connect web visualizations to GPU accelerated crossfiltering. Inspired by the javascript version of the **[original](https://github.com/crossfilter/crossfilter){: target="_blank"}**, it enables interactive and super fast multi-dimensional filtering of 100 million+ row tabular datasets via **[cuDF](https://github.com/rapidsai/cudf){: target="_blank"}**.
+cuxfilter is a framework to connect web visualizations to GPU accelerated crossfiltering. Inspired by the JavaScript library **[crossfilter](https://github.com/crossfilter/crossfilter){: target="_blank"}**, it enables interactive and super fast multi-dimensional filtering of 100 million+ row tabular datasets via **[cuDF](https://github.com/rapidsai/cudf){: target="_blank"}**.
 
 {% endcapture %}
 {% capture lib4_right %}
@@ -305,6 +309,16 @@ Cyber Log Accelerators (CLX), also pronounced "clicks", provides a collection of
 RAPIDS Memory Manager (RMM) is a central place for all device memory allocations in cuDF (C++ and Python) and other RAPIDS libraries. In addition, it is a replacement allocator for CUDA Device Memory (and CUDA Managed Memory) and a pool allocator to make CUDA device memory allocation / deallocation faster and asynchronous.
 
 {% endcapture %}
+{% capture lib5_right %}
+## <i class="fad fa-terminal"></i> cuCIM <span class="lib-tag">API</span>
+
+**[GitHub](https://github.com/rapidsai/cucim){: target="_blank"}** **/** **[Docs](https://docs.rapids.ai/api/cucim/stable/){: target="_blank"}** **/** **[Change Log](https://github.com/rapidsai/cucim/blob/main/CHANGELOG.md){: target="_blank"}**
+{: .no-tb-margins }
+
+cuCIM is a an extensible toolkit designed to provide GPU-accelerated I/O, computer vision and image processing primitives for N-Dimensional images with a focus on biomedical imaging.  Our API mirrors [scikit-image](https://scikit-image.org/) for image manipulation and [OpenSlide](https://openslide.org/) for image loading.
+
+{% endcapture %}
+
 
 {% include section-halfs.html
     background="background-purple"
@@ -334,6 +348,7 @@ RAPIDS Memory Manager (RMM) is a central place for all device memory allocations
     background="background-purple"
     padding-top="0em" padding-bottom="6em"
     content-left-half=lib5_left
+    content-right-half=lib5_right
 %}
 {% include slopecap.html
     background="background-purple"
@@ -346,10 +361,12 @@ RAPIDS Memory Manager (RMM) is a central place for all device memory allocations
 {: .section-title-full .padding-top-1em}
 
 {% capture com_top_left %}
-![BLAZINGSQL]({{ site.baseurl }}{% link /assets/images/blazingsql.png %}){: .third-image-center}
-## <i class="fas fa-code-branch"></i> RAPIDS + BlazingSQL
+![RAPIDS+SQL]({{ site.baseurl }}{% link /assets/images/RAPIDS-SQL.png %}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + SQL
 
-BlazingSQL is an open source project providing distributed SQL for analytics that enables the integration of enterprise data at scale. RAPIDS is actively contributing to BlazingSQL, and it integrates with RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. <br> **[Learn more on our BlazingSQL page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](blazingsql.html)**
+RAPIDS integrates with Spark SQL and Dask-SQL to accelerate your SQL queries at scale and make GPU acceleration available to an even broader set of users.
+<br> **[Learn more about RAPIDS + Spark SQL <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://developer.nvidia.com/blog/accelerating-apache-spark-3-0-with-gpus-and-rapids/)**
+<br> **[Learn more about RAPIDS + Dask SQL <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://dask-sql.readthedocs.io/en/latest/)**
 
 {% endcapture %}
 
@@ -357,7 +374,7 @@ BlazingSQL is an open source project providing distributed SQL for analytics tha
 ![Dask]({{ site.baseurl }}{% link /assets/images/dask_logo.png %}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Dask
 
-Dask is an open source project providing advanced parallelism for analytics that enables performance at scale. RAPIDS is actively contributing to Dask, and it integrates with both RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. <br> **[Learn more on our Dask page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](dask.html)**
+Dask is an open source project providing advanced parallelism for analytics that enables performance at scale. RAPIDS is actively contributing to Dask, and it integrates with RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. <br> **[Learn more on our Dask page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](dask.html)**
 
 {% endcapture %}
 
@@ -370,10 +387,10 @@ XGBoost is a well-known gradient boosted decision trees (GBDT) machine learning 
 {% endcapture %}
 
 {% capture com_bottom_right %}
-![cloud]({{ site.baseurl }}{% link /assets/images/RAPIDs-cloud.png %}){: .third-image-center}
+![cloud]({{ site.baseurl }}{% link /assets/images/RAPIDS-cloud.png %}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Cloud
 
-RAPIDS’s GPU accelerated data science tools can be deployed on all of the major clouds, allowing anyone to take advantage of the speed increases and TCO reductions that RAPIDS enables.
+RAPIDS’ GPU accelerated data science tools can be deployed on all of the major clouds, allowing anyone to take advantage of the speed increases and TCO reductions that RAPIDS enables.
 <br>
 **[Learn more on our cloud page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](cloud.html)**
 {% endcapture %}
@@ -395,11 +412,10 @@ Accelerate Hyperparameter Optimization (HPO) in the Cloud. The RAPIDS team works
 {% endcapture %}
 
 {% capture com2_bottom_left %}
-![spark]({{ site.baseurl }}{% link /assets/images/spark-logo-trademark.png %}){: .third-image-center}
-## <i class="fas fa-code-branch"></i> RAPIDS + Spark
+![merlin]({{ site.baseurl }}{% link /assets/images/NVLogo_2D_H.png%}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + NVIDIA MERLIN
 
-NVIDIA is bringing RAPIDS to Apache Spark to accelerate ETL workflows with GPUs.
-<br> **[Learn more on the RAPIDS for Apache Spark page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://www.nvidia.com/en-us/deep-learning-ai/solutions/data-science/apache-spark-3/){: target="_blank"}**
+NVIDIA Merlin is an open source library providing end-to-end GPU-accelerated recommender systems. Merlin leverages RAPIDS cuDF and Dask cuDF for dataframe transformation during ETL and inference, as well as for the optimized dataloaders in TensorFlow, PyTorch or HugeCTR to accelerate deep learning training. <br> **[Learn more on our Merlin page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](merlin.html)**
 
 {% endcapture %}
 
@@ -409,6 +425,25 @@ NVIDIA is bringing RAPIDS to Apache Spark to accelerate ETL workflows with GPUs.
 
 RAPIDS works extremely well in traditional HPC environments where GPUs are often co-located with accelerated networking hardware such as InfiniBand.
 <br> **[Learn more on our HPC page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](/hpc)**
+
+{% endcapture %}
+
+{% capture com3_left %}
+![spark]({{ site.baseurl }}{% link /assets/images/spark-logo-trademark.png %}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + Spark
+
+NVIDIA is bringing RAPIDS to Apache Spark to accelerate ETL workflows with GPUs.
+<br> **[Learn more on the RAPIDS for Apache Spark page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://nvidia.github.io/spark-rapids/){: target="_blank"}**
+
+{% endcapture %}
+
+{% capture com3_right %}
+![monai]({{ site.baseurl }}{% link /assets/images/MONAI-logo_color.png%}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + MONAI
+
+The Medical Open Network for AI ([MONAI](https://monai.io/)) has been named by some the PyTorch of healthcare.
+RAPIDS cuCIM has been integrated into the MONAI Transforms component to accelerate the data pathology training pipeline on GPU.
+<br> **[Learn more on MONAI latest highlights <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://docs.monai.io/en/latest/highlights.html)**
 
 {% endcapture %}
 
@@ -428,6 +463,12 @@ RAPIDS works extremely well in traditional HPC environments where GPUs are often
     content-top-right-half=com2_top_right
     content-bottom-left-half=com2_bottom_left
     content-bottom-right-half=com2_bottom_right
+%}
+{% include section-halfs.html
+    background="background-white"
+    padding-top="0em" padding-bottom="1em"
+    content-left-half=com3_left
+    content-right-half=com3_right
 %}
 
 # Contributors

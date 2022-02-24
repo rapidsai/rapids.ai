@@ -2,19 +2,27 @@
     <div class="container-padding">
         <div class="selector">
             <div class="options">
+                <!--  COMMENTING THIS OUT IN CASE WE NEED TO ADD NOTICE
+                      AGAIN IN THE FUTURE
                 <div class="note method padding-bottom-4em">
                     <div class="option-label">NOTICES</div>
                     <div class="option-notice">
                         <span>
-                            <i class="fas fa-exclamation-triangle text-white"></i> Changes to from-source builds with conda using <a href="https://docs.rapids.ai/notices/rdn0002">gcc 7.5</a>
+                            <i class="fas fa-exclamation-triangle text-white"></i> Changes to builds with conda using <a href="https://docs.rapids.ai/notices/rdn0002">gcc 7.5</a>
                         </span>
                     </div>
                     <div class="option-notice">
                         <span>
-                            <i class="fas fa-exclamation-triangle text-white"></i> CUDA 10.1 & 10.2 will be deprecated in RAPIDS <a href="https://docs.rapids.ai/notices/rsn0005">v0.19</a>
+                            <i class="fas fa-exclamation-triangle text-white"></i> CUDA 10.1/10.2 EOL in RAPIDS <a href="https://docs.rapids.ai/notices/rsn0006">v0.19</a>
+                        </span>
+                    </div>
+                    <div class="option-notice">
+                        <span>
+                            <i class="fas fa-exclamation-triangle text-white"></i> CUDA 11.2 support in RAPIDS <a href="https://docs.rapids.ai/notices/rsn0007">v0.19</a>
                         </span>
                     </div>
                 </div>
+                -->
                 <div class="preferred">
                     <div class="option-label"></div>
                     <div class="option-blank">
@@ -40,11 +48,6 @@
                     <div id="stable" class="option">Stable ({{ site.data.releases.stable-version }})</div>
                     <div id="nightly" class="option">Nightly ({{ site.data.releases.nightly-version }}a)</div>
                 </div>
-                <div class="type">
-                    <div class="option-label">Type</div>
-                    <div id="rapids" class="option">RAPIDS and BlazingSQL</div>
-                    <div id="rapidscore" class="option">RAPIDS Core (w/o BlazingSQL)</div>
-                </div>
                 <div class="pkg">
                     <div class="option-label">Packages</div>
                     <div id="all" class="option">All Packages</div>
@@ -57,7 +60,6 @@
                 </div>
                 <div class="linux">
                     <div class="option-label">Linux</div>
-                    <div id="ubuntu1604" class="option">Ubuntu 16.04&nbsp;<i class="fab fa-ubuntu"></i></div>
                     <div id="ubuntu1804" class="option">Ubuntu 18.04&nbsp;<i class="fab fa-ubuntu"></i></div>
                     <div id="ubuntu2004" class="option">Ubuntu 20.04&nbsp;<i class="fab fa-ubuntu"></i></div>
                     <div id="centos7" class="option">CentOS 7&nbsp;<i class="fab fa-centos"></i></div>
@@ -66,14 +68,15 @@
                 </div>
                 <div class="python">
                     <div class="option-label">Python</div>
-                    <div id="py37" class="option">Python 3.7</div>
                     <div id="py38" class="option">Python 3.8</div>
+                    <div id="py39" class="option">Python 3.9</div>
                 </div>
                 <div class="cuda">
                     <div class="option-label">CUDA</div>
-                    <div id="cuda101" class="option">CUDA 10.1.2</div>
-                    <div id="cuda102" class="option">CUDA 10.2</div>
                     <div id="cuda110" class="option">CUDA 11.0</div>
+                    <div id="cuda112" class="option">CUDA 11.2</div>
+                    <div id="cuda114" class="option">CUDA 11.4</div>
+                    <div id="cuda115" class="option">CUDA 11.5</div>
                 </div>
                 <div class="preferred">
                     <div class="option-label"></div>
@@ -92,10 +95,10 @@
                             <i class="fas fa-exclamation-triangle text-orange"></i> <b>NOTE:</b> RHEL 7 & 8 from source build support is provided by following the build instructions for CentOS 7 or 8.<br/>The same methods should work with <code>gcc >=7.5</code> and the correct NVIDIA and CUDA drivers.
                         </span>
                         <span id="linux-conda-note" class="hidden option-note">
-                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> Ubuntu 16.04/18.04/20.04 & CentOS 7/8 use the same <code>conda create</code> commands.
+                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> Ubuntu 18.04/20.04 & CentOS 7/8 use the same <code>conda create</code> commands.
                         </span>
                         <span id="linux-source-note" class="hidden option-note">
-                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> Ubuntu 16.04/18.04/20.04 & CentOS 7/8 use the same from source build instructions.
+                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> Ubuntu 18.04/20.04 & CentOS 7/8 use the same from source build instructions.
                         </span>
                         <span id="base-docker-note" class="hidden option-note">
                             <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> For docker images without examples or notebooks replace <code>runtime</code> with <code>base</code> in the commands below.
@@ -118,15 +121,13 @@
 /* Adopted from https://pytorch.org/assets/quick-start-module.js */
 var pkg = ["cudf", "cuml", "cugraph", "cusignal", "cuspatial", "cuxfilter", "all"];
 var method = ["conda", "runtime", "source", "devel"];
-var release = ["legacy", "stable", "nightly"];
-var type = ["rapids", "rapidscore"];
-var linux = ["ubuntu1604", "ubuntu1804", "ubuntu20.04", "centos7", "centos8", "rhel7"];
-var python = ["py37", "py38"];
-var cuda = ["cuda101", "cuda102", "cuda110"];
+var release = ["stable", "nightly"];
+var linux = ["ubuntu1804", "ubuntu20.04", "centos7", "centos8", "rhel7"];
+var python = ["py38", "py39"];
+var cuda = ["cuda110", "cuda112"];
 var pkg_opts = $(".pkg > .option");
 var method_opts = $(".method > .option");
 var release_opts = $(".release > .option");
-var type_opts = $(".type > .option");
 var linux_opts = $(".linux > .option");
 var python_opts = $(".python > .option");
 var cuda_opts = $(".cuda > .option");
@@ -140,10 +141,9 @@ var selections = {
     pkg: "all",
     method: "conda",
     release: "stable",
-    type: "rapids",
-    linux: "ubuntu1604",
-    python: "py37",
-    cuda: "cuda101"
+    linux: "ubuntu2004",
+    python: "py38",
+    cuda: "cuda115"
 };
 // Save default choices
 var default_selections = Object.assign({}, selections);
@@ -156,9 +156,6 @@ method_opts.on("click", function() {
 });
 release_opts.on("click", function() {
     processClick(release_opts, this, "release");
-});
-type_opts.on("click", function() {
-    processClick(type_opts, this, "type");
 });
 linux_opts.on("click", function() {
     processClick(linux_opts, this, "linux");
@@ -180,14 +177,12 @@ function resetAll() {
     $(method_opts).removeClass("disabled");
     $(pkg_opts).removeClass("disabled");
     $(release_opts).removeClass("disabled");
-    $(type_opts).removeClass("disabled");
     $(linux_opts).removeClass("disabled");
     $(python_opts).removeClass("disabled");
     $(cuda_opts).removeClass("disabled");
     $(method_opts).removeClass("active");
     $(pkg_opts).removeClass("active");
     $(release_opts).removeClass("active");
-    $(type_opts).removeClass("active");
     $(linux_opts).removeClass("active");
     $(python_opts).removeClass("active");
     $(cuda_opts).removeClass("active");
@@ -252,15 +247,16 @@ function processClick(options, click, category) {
         }
         $(python_opts).removeClass("active");
         $(cuda_opts).removeClass("active");
-        $(type_opts).removeClass("active");
         $(python_opts).addClass("disabled");
         $(cuda_opts).addClass("disabled");
-        $(type_opts).addClass("disabled");
     } else if (selections["method"] == "devel") {
         // Handle docker devel requests
         if (selections["linux"] == "rhel7") {
             selections["linux"] = "centos7";
         }
+        selections["cuda"] = "cuda115";
+        $(cuda_opts).addClass("disabled");
+        $("#cuda115").removeClass("disabled");
         selections["pkg"] = "all";
         $("#rhel7").addClass("disabled");
         $(pkg_opts).addClass("disabled");
@@ -276,7 +272,6 @@ function processClick(options, click, category) {
     $("#" + selections["python"]).addClass("active");
     $("#" + selections["cuda"]).addClass("active");
     $("#" + selections["release"]).addClass("active");
-    $("#" + selections["type"]).addClass("active");
 
     showCommand();
 }
@@ -285,9 +280,9 @@ function getSelections() {
     if (selections["method"] == "source") {
         return "" + selections["release"] + "-" + selections["pkg"] + "-" + selections["method"];
     } else if (selections["method"] == "conda") {
-        return "" + selections["release"] + "-" + selections["type"] + "-" + selections["pkg"] + "-" + selections["method"] + "-" + selections["python"] + "-" + selections["cuda"];
+        return "" + selections["release"] + "-" + selections["pkg"] + "-" + selections["method"] + "-" + selections["python"] + "-" + selections["cuda"];
     } else {
-        return "" + selections["release"] + "-" + selections["type"] + "-" + selections["pkg"] + "-" + selections["method"] + "-" + selections["linux"] + "-" + selections["python"] + "-" + selections["cuda"];
+        return "" + selections["release"] + "-" + selections["pkg"] + "-" + selections["method"] + "-" + selections["linux"] + "-" + selections["python"] + "-" + selections["cuda"];
     }
 }
 

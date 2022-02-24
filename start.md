@@ -22,8 +22,12 @@ for column in gdf.columns:
 ```
 
 ## <i class="fas fa-bolt"></i> Try Now Online
-Jump right into a GPU powered RAPIDS notebook. <br>
-Try with **[<i class="fab fa-google"></i> Colaboratory <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**
+Jump right into a GPU powered RAPIDS notebook online with either SageMaker Studio Lab or Colab [(v21.12 only)](https://docs.rapids.ai/notices/rsn0014/)
+.<br>
+
+[![SageMaker Studio Lab]({{ site.baseurl }}{% link /assets/images/Open-StudioLab.png%})](smsl.html){: target="_blank"}{: .half-image}
+
+[![Colab]({{ site.baseurl }}{% link /assets/images/Open-Colab.png%})](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}{: .half-image}
 
 ## <i class="fas fa-bolt"></i> Deploy RAPIDS on the Cloud 
 Learn how to deploy RAPIDS on **[Cloud Service Providers <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://rapids.ai/cloud){: target="_blank"}**
@@ -43,10 +47,10 @@ We suggest that you take a look at the sample workflow in our Docker container (
 ## Prerequisites
 <i class="fas fa-microchip text-purple"></i> **GPU:** NVIDIA Pascal™ or better with **[compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 6.0+
 
-<i class="fas fa-desktop text-purple"></i> **OS:** Ubuntu 16.04/18.04/20.04 or CentOS 7/8 with <code>gcc/++</code> 7.5+
+<i class="fas fa-desktop text-purple"></i> **OS:** Ubuntu 18.04/20.04 or CentOS 7/8 with <code>gcc/++</code> 9.0+
 {: .no-tb-margins }
 
-- <i class="fas fa-bullhorn text-purple"></i> See [RDN 2](https://docs.rapids.ai/notices/rdn0002) for recent changes to <code>gcc/++</code> 7.5 requirements<br/>
+- <i class="fas fa-bullhorn text-purple"></i> See [RDN 8](https://docs.rapids.ai/notices/rdn0008) for recent changes to <code>gcc/++</code> 9.0 requirements<br/>
 - <i class="fas fa-info-circle text-purple"></i> RHEL 7/8 support is provided through CentOS 7/8 builds/installs
 
 <i class="fab fa-docker text-purple"></i> **Docker:** Docker CE v19.03+ and **[nvidia-container-toolkit](https://github.com/NVIDIA/nvidia-docker#quickstart){: target="_blank"}**
@@ -57,9 +61,10 @@ We suggest that you take a look at the sample workflow in our Docker container (
 <i class="fas fa-download text-purple"></i> **CUDA & NVIDIA Drivers:** One of the following supported versions:
 {: .no-tb-margins }
 
-- <i class="fas fa-check-circle text-purple"></i> [10.1.2](https://developer.nvidia.com/cuda-10.1-download-archive-update2){: target="_blank"} & v418.87+ 
-- <i class="fas fa-check-circle text-purple"></i> [10.2](https://developer.nvidia.com/cuda-10.2-download-archive){: target="_blank"} & v440.33+ 
-- <i class="fas fa-check-circle text-purple"></i> [11.0-11.2](https://developer.nvidia.com/cuda-downloads){: target="_blank"} & v450.51+
+- <i class="fas fa-check-circle text-purple"></i> [11.0](https://developer.nvidia.com/cuda-11.0-update1-download-archive){: target="_blank"} & v450.80.02+
+- <i class="fas fa-check-circle text-purple"></i> [11.2](https://developer.nvidia.com/cuda-11.2.0-download-archive){: target="_blank"} & v460.27.03+
+- <i class="fas fa-check-circle text-purple"></i> [11.4](https://developer.nvidia.com/cuda-11-4-0-download-archive){: target="_blank"} & v470.42.01+
+- <i class="fas fa-check-circle text-purple"></i> [11.5](https://developer.nvidia.com/cuda-11-5-0-download-archive){: target="_blank"} & v495.29.05+
 
 
 {% endcapture %}

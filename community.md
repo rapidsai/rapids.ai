@@ -22,10 +22,12 @@ The RAPIDS team is developing, contributing, and collaborating closely with nume
 %}
 
 {% capture com_left_top %}
-![BLAZINGSQL]({{ site.baseurl }}{% link /assets/images/blazingsql.png %}){: .third-image-center}
-## <i class="fas fa-code-branch"></i> RAPIDS + BlazingSQL
+![RAPIDS+SQL]({{ site.baseurl }}{% link /assets/images/RAPIDS-SQL.png %}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + SQL
 
-BlazingSQL is an open source project providing distributed SQL for analytics that enables the integration of enterprise data at scale. RAPIDS is actively contributing to BlazingSQL, and it integrates with RAPIDS cuDF, XGBoost, and RAPIDS cuML for GPU-accelerated data analytics and machine learning. <br> **[Learn more on our BlazingSQL page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](blazingsql.html)**
+RAPIDS integrates with Spark SQL and Dask-SQL to accelerate your SQL queries at scale and make GPU acceleration available to an even broader set of users.
+<br> **[Learn more about RAPIDS + Spark SQL <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://developer.nvidia.com/blog/accelerating-apache-spark-3-0-with-gpus-and-rapids/)**
+<br> **[Learn more about RAPIDS + Dask SQL <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://dask-sql.readthedocs.io/en/latest/)**
 
 {% endcapture %}
 {% capture com_mid_top %}
@@ -59,23 +61,22 @@ Accelerate Hyperparameter Optimization (HPO) in the Cloud. The RAPIDS team works
 
 {% endcapture %}
 {% capture com_right_bottom %}
-![cloud]({{ site.baseurl }}{% link /assets/images/RAPIDs-cloud.png %}){: .third-image-center}
+![cloud]({{ site.baseurl }}{% link /assets/images/RAPIDS-cloud.png %}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Cloud
 
-RAPIDS’s GPU accelerated data science tools can be deployed on all of the major clouds, allowing anyone to take advantage of the speed increases and TCO reductions that RAPIDS enables.
+RAPIDS’ GPU accelerated data science tools can be deployed on all of the major clouds, allowing anyone to take advantage of the speed increases and TCO reductions that RAPIDS enables.
 <br>
 **[Learn more on our cloud page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](cloud.html)**
 {% endcapture %}
 
-{% capture prj_left %}
-![spark]({{ site.baseurl }}{% link /assets/images/spark-logo-trademark.png %}){: .third-image-center}
-## <i class="fas fa-code-branch"></i> RAPIDS + Spark
+{% capture prj_left_top %}
+![merlin]({{ site.baseurl }}{% link /assets/images/NVLogo_2D_H.png%}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + NVIDIA MERLIN
 
-NVIDIA is bringing RAPIDS to Apache Spark to accelerate ETL workflows with GPUs.
-<br> **[Learn more on the RAPIDS for Apache Spark page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://www.nvidia.com/en-us/deep-learning-ai/solutions/data-science/apache-spark-3/){: target="_blank"}**
+NVIDIA Merlin is an open source library providing end-to-end GPU-accelerated recommender systems. Merlin leverages RAPIDS cuDF and Dask cuDF for dataframe transformation during ETL and inference, as well as for the optimized dataloaders in TensorFlow, PyTorch or HugeCTR to accelerate deep learning training. <br> **[Learn more on our Merlin page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](merlin.html)**
 {% endcapture %}
 
-{% capture prj_mid %}
+{% capture prj_mid_top %}
 ![slurm]({{ site.baseurl }}{% link /assets/images/slurm-logo.png%}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + HPC
 
@@ -83,9 +84,23 @@ RAPIDS works extremely well in traditional HPC environments where GPUs are often
 <br> **[Learn more on our HPC page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](/hpc)**
 {% endcapture %}
 
-{% capture prj_right %}
+{% capture prj_right_top %}
+![spark]({{ site.baseurl }}{% link /assets/images/spark-logo-trademark.png %}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + Spark
 
+NVIDIA is bringing RAPIDS to Apache Spark to accelerate ETL workflows with GPUs.
+<br> **[Learn more on the RAPIDS for Apache Spark page <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://nvidia.github.io/spark-rapids/){: target="_blank"}**
 {% endcapture %}
+
+{% capture prj_left_bottom %}
+![monai]({{ site.baseurl }}{% link /assets/images/MONAI-logo_color.png%}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + MONAI
+
+The Medical Open Network for AI ([MONAI](https://monai.io/)) has been named by some the PyTorch of healthcare.
+RAPIDS cuCIM has been integrated into the MONAI Transforms component to accelerate the data pathology training pipeline on GPU.
+<br> **[Learn more on MONAI latest highlights <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://docs.monai.io/en/latest/highlights.html)**
+{% endcapture %}
+
 
 
 {% include section-double-thirds.html
@@ -98,15 +113,17 @@ RAPIDS works extremely well in traditional HPC environments where GPUs are often
     content-bottom-middle-third=com_mid_bottom
     content-bottom-right-third=com_right_bottom
 %}
-{% include section-thirds.html
+
+{% include section-double-thirds.html
     background="background-white"
-    padding-top="1em" padding-bottom="5em"
-    content-left-third=prj_left
-    content-middle-third=prj_mid
-    content-right-third=prj_right
+    padding-top="1em" padding-bottom="0em"
+    content-top-left-third=prj_left_top
+    content-top-middle-third=prj_mid_top
+    content-top-right-third=prj_right_top
+    content-bottom-left-third=prj_left_bottom
+    content-bottom-middle-third=prj_mid_bottom
+    content-bottom-right-third=prj_right_bottom
 %}
-
-
 
 
 {% capture com_left %}
@@ -126,9 +143,9 @@ RAPIDS is open sourced under the Apache 2.0 license and is intended to be improv
 
 Anyone can join our community and contribute to to RAPIDS in a five step onboarding process:
 
-> **<i class="fas fa-download text-purple"></i> 1. Install** RAPIDS using **[Docker or Conda](https://rapids.ai/start.html#get-rapids){: target="_blank"}**. Or try with **[<i class="fab fa-google"></i> Colaboratory ](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**.
+> **<i class="fas fa-download text-purple"></i> 1. Install** RAPIDS using **[Docker or Conda](https://rapids.ai/start.html#get-rapids){: target="_blank"}**. Or try RAPIDSAI with **[SageMaker Studio Lab](smsl.html){: target="_blank"}** or with **[<i class="fab fa-google"></i> Colaboratory ](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}**.
 
-> **<i class="far fa-comments text-purple"></i>  2. Join** our community conversations on **[Twitter](https://twitter.com/rapidsai){: target="_blank"}**, **[Google Groups](https://groups.google.com/forum/#!forum/rapidsai){: target="_blank"}**, and **[Slack](https://join.slack.com/t/rapids-goai/shared_invite/zt-h54mq1uv-KHeHDVCYs8xvZO5AB~ctTQ){: target="_blank"}**.
+> **<i class="far fa-comments text-purple"></i>  2. Join** our community conversations on **[Twitter](https://twitter.com/rapidsai){: target="_blank"}**, **[Google Groups](https://groups.google.com/forum/#!forum/rapidsai){: target="_blank"}**, and **[Slack]({{ site.slack_invite }}){: target="_blank"}**.
 
 > **<i class="fas fa-search text-purple"></i> 3. Explore** our **[docs](https://docs.rapids.ai/){: target="_blank"}**, **[walk through videos](https://www.youtube.com/channel/UCsoi4wfweA3I5FsPgyQnnqw?view_as=subscriber){: target="_blank"}**, **[blog posts](https://medium.com/rapids-ai){: target="_blank"}**, **[tutorial notebooks](https://github.com/rapidsai/notebooks-contrib#getting-started-notebooks){: target="_blank"}**, and our **[examples workflows](https://github.com/rapidsai/notebooks-contrib#intermediate-notebooks){: target="_blank"}**.
 

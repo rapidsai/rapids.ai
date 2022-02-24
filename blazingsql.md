@@ -12,7 +12,9 @@ layout: default
 # Blazing fast SQL on Rapids
 {: .section-title-full}
 {% capture intro_content %}
-BlazingSQL is an incredibly fast distributed SQL engine on GPUs. BlazingSQL enables data scientists to easily connect large-scale data lakes to GPU-accelerated analytics. With a few lines of code, you can directly query raw file formats such as CSV and Apache Parquet inside Data Lakes like HDFS and AWS S3, and directly pipe the results into GPU memory. 
+**[RAPIDS support of BlazingSQL has been deprecated with release 21.12](https://docs.rapids.ai/notices/rsn0012/) in favor of [Dask-SQL](https://dask-sql.readthedocs.io/en/latest/)**. You can still use it with RAPIDS 21.08 and 21.10.
+<br><br>BlazingSQL is an incredibly fast distributed SQL engine on GPUs. BlazingSQL enabled data scientists to easily connect large-scale data lakes to GPU-accelerated analytics. With a few lines of code, you can directly query raw file formats such as CSV and Apache Parquet inside Data Lakes like HDFS and AWS S3, and directly pipe the results into GPU memory. 
+
 {: .subtitle .pading-top-0em .margin-top-0em}
 
 {% endcapture %}
@@ -21,7 +23,7 @@ BlazingSQL is an incredibly fast distributed SQL engine on GPUs. BlazingSQL enab
 ## <i class="fas fa-sort-amount-up-alt"></i> ETL at Scale
 Distributed architecture scales to thousands of GPUs. Relative performance improvements of the engine continue to increase with scale of cluster.
 <br> <br>
-**[Read more on our blog <i class="fas fa-angle-double-right"></i>](https://blog.blazingdb.com/blazingsql-the-gpu-sql-engine-now-runs-over-20x-faster-than-apache-spark-1b0bffc990a9){: target="_blank"}**
+**[Read more on our blog <i class="fas fa-angle-double-right"></i>](https://www.infoworld.com/article/3610188/blazingsql-review-fast-etl-for-gpu-based-data-science.html){: target="_blank"}**
 
 {% endcapture %}
 
@@ -72,7 +74,22 @@ It’s easy to get started with RAPIDS + BlazingSQL
 {: .subtitle}
 
 ## <i class="fad fa-bookmark"></i> Try with RAPIDS 
-You can use BlazingSQL with a RAPIDS install on our <br> **[Get Started Page <i class="fas fa-angle-double-right"></i>](start.html)**
+You can use BlazingSQL with a RAPIDS 21.08 or 21.10 install from: <br>
+**Conda**:
+```
+conda install -c rapidsai -c nvidia -c conda-forge blazingsql=21.10
+```
+or 
+```
+conda install -c rapidsai -c nvidia -c conda-forge blazingsql=21.08
+```
+<br>
+**Docker**:<br>
+Pull desired containers with RAPIDS version of the **21.08** or **21.10** from the repos below:
+<br>
+**[Standard containers <i class="fas fa-angle-double-right"></i>](https://hub.docker.com/r/rapidsai/rapidsai/tags){: target="_blank"}**
+<br>
+**[Dev containers <i class="fas fa-angle-double-right"></i>](https://hub.docker.com/r/rapidsai/rapidsai-dev/tags){: target="_blank"}**
 
 {% endcapture %}
 
@@ -80,11 +97,11 @@ You can use BlazingSQL with a RAPIDS install on our <br> **[Get Started Page <i 
 ## <i class="fab fa-readme"></i> Learn More
 {: .section-subtitle-top-1}
 
-Learn more about BlazingSQL on the
-**[Notebooks Page <i class="fas fa-angle-double-right"></i>](https://www.blazingsql.com/notebooks){: target="_blank"}**
+Learn more about BlazingSQL on the and try out their examples on their 
+**[Welcome To BlazingSQL Github Repository <i class="fas fa-angle-double-right"></i>](https://github.com/BlazingDB/Welcome_to_BlazingSQL_Notebooks){: target="_blank"}**
 
 ## <i class="far fa-file-code"></i> Access BlazingSQL Docs
-See the latest **[documentation for BlazingSQL <i class="fas fa-angle-double-right"></i>](https://docs.blazingdb.com/docs){: target="_blank"}**
+See the latest **[documentation for BlazingSQL <i class="fas fa-angle-double-right"></i>](https://docs.blazingsql.com/){: target="_blank"}**
 
 {% endcapture %}
 {% include slopecap.html 
