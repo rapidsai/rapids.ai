@@ -1,122 +1,131 @@
 <section class="{{ include.background }} padding-top-{{ include.padding-top }} padding-bottom-{{ include.padding-bottom }}">
-    <div class="container-padding">
+    <div class="container-padding" x-data="rapids_selector">
         <div class="selector">
             <div class="options">
-                <!--  COMMENTING THIS OUT IN CASE WE NEED TO ADD NOTICE
-                      AGAIN IN THE FUTURE
-                <div class="note method padding-bottom-4em">
-                    <div class="option-label">NOTICES</div>
-                    <div class="option-notice">
-                        <span>
-                            <i class="fas fa-exclamation-triangle text-white"></i> Changes to builds with conda using <a href="https://docs.rapids.ai/notices/rdn0002">gcc 7.5</a>
-                        </span>
-                    </div>
-                    <div class="option-notice">
-                        <span>
-                            <i class="fas fa-exclamation-triangle text-white"></i> CUDA 10.1/10.2 EOL in RAPIDS <a href="https://docs.rapids.ai/notices/rsn0006">v0.19</a>
-                        </span>
-                    </div>
-                    <div class="option-notice">
-                        <span>
-                            <i class="fas fa-exclamation-triangle text-white"></i> CUDA 11.2 support in RAPIDS <a href="https://docs.rapids.ai/notices/rsn0007">v0.19</a>
-                        </span>
-                    </div>
+                <div>
+                    <div class="option-label">Arch</div>
+                    <template x-for="arch in arches">
+                        <div x-on:click="active_arch = arch" x-bind:class="{'active': arch === active_arch}" class="option" x-text="arch"></div>
+                    </template>
                 </div>
-                -->
-                <div class="preferred">
-                    <div class="option-label"></div>
-                    <div class="option-blank">
-                        <span>
-                            <i class="fas fa-level-up-alt fa-rotate-180 fa-down-6"></i> <i class="fas fa-check-square text-blue"></i> Preferred <i class="fas fa-level-down-alt fa-down-6"></i>
-                        </span>
-                    </div>
-                    <div class="option-blank">
-                        <span>
-                            <i class="fas fa-level-up-alt fa-rotate-180 fa-down-6"></i> <i class="fas fa-flask text-orange"></i> Advanced <i class="fas fa-level-down-alt fa-down-6"></i>
-                        </span>
-                    </div>
-                </div>
-                <div class="method padding-bottom-1em">
+                <div>
                     <div class="option-label">Method</div>
-                    <div id="conda" class="option" title="Conda install">Conda&nbsp;<i class="fas fa-box-open"></i> <span class="context"> <i class="fas fa-check-square text-blue"></i> Preferred Install Method</span></div>
-                    <div id="runtime" class="option" title="Docker image with example notebooks">Docker + Examples&nbsp;<i class="fab fa-docker"></i><span class="context"> <i class="fas fa-check-square text-blue"></i> Preferred Install Method</span></div>
-                    <div id="devel" class="option advanced" title="Docker image with developer tools and from source build environment ">Docker + Dev Env&nbsp;<i class="fab fa-docker"></i> <span class="context"> <i class="fas fa-flask text-orange"></i> Advanced Install Method</span></div>
-                    <div id="source" class="option advanced" title="From source build">Source&nbsp;<i class="fas fa-cogs"></i><span class="context"> <i class="fas fa-flask text-orange"></i> Advanced Install Method</span></div>
+                    <template x-for="method in methods">
+                        <div x-on:click="active_method = method" x-bind:class="{'active': method === active_method}" class="option" x-html="() => getMethodHTML(method)">
+                        </div>
+                    </template>
                 </div>
-                <div class="release">
+                <div>
+                    <div class="option-label">OS</div>
+                    <template x-for="version in os_vers">
+                        <div x-on:click="active_os_ver = version" x-bind:class="{'active': version === active_os_ver}" class="option" x-html="() => getOSHTML(version)">
+                        </div>
+                    </template>
+                </div>
+                <div>
                     <div class="option-label">Release</div>
-                    <div id="stable" class="option">Stable ({{ site.data.releases.stable-version }})</div>
-                    <div id="nightly" class="option">Nightly ({{ site.data.releases.nightly-version }}a)</div>
+                    <template x-for="release in releases">
+                        <div x-on:click="active_release = release" x-bind:class="{'active': release === active_release}" class="option" x-text="() => getReleaseText(release)">
+                        </div>
+                    </template>
                 </div>
-                <div class="pkg">
-                    <div class="option-label">Packages</div>
-                    <div id="all" class="option">All Packages</div>
-                    <div id="cudf" class="option">cuDF</div>
-                    <div id="cuml" class="option">cuML</div>
-                    <div id="cugraph" class="option">cuGraph</div>
-                    <div id="cusignal" class="option">cuSignal</div>
-                    <div id="cuspatial" class="option">cuSpatial</div>
-                    <div id="cuxfilter" class="option">cuxfilter</div>
-                </div>
-                <div class="linux">
-                    <div class="option-label">Linux</div>
-                    <div id="ubuntu1804" class="option">Ubuntu 18.04&nbsp;<i class="fab fa-ubuntu"></i></div>
-                    <div id="ubuntu2004" class="option">Ubuntu 20.04&nbsp;<i class="fab fa-ubuntu"></i></div>
-                    <div id="centos7" class="option">CentOS 7&nbsp;<i class="fab fa-centos"></i></div>
-                    <div id="centos8" class="option">CentOS 8&nbsp;<i class="fab fa-centos"></i></div>
-                    <div id="rhel7" class="option">RHEL 7&8&nbsp;<i class="fab fa-redhat"></i></div>
-                </div>
-                <div class="python">
-                    <div class="option-label">Python</div>
-                    <div id="py38" class="option">Python 3.8</div>
-                    <div id="py39" class="option">Python 3.9</div>
-                </div>
-                <div class="cuda">
+                <div>
                     <div class="option-label">CUDA</div>
-                    <div id="cuda110" class="option">CUDA 11.0</div>
-                    <div id="cuda112" class="option">CUDA 11.2</div>
-                    <div id="cuda114" class="option">CUDA 11.4</div>
-                    <div id="cuda115" class="option">CUDA 11.5</div>
+                    <template x-for="version in cuda_vers">
+                        <div x-on:click="active_cuda_ver = version" x-bind:class="{'active': version === active_cuda_ver}" class="option" x-text="'CUDA ' + version"></div>
+                    </template>
                 </div>
-                <div class="preferred">
-                    <div class="option-label"></div>
-                    <div class="option-blank"></div>
-                    <div class="option-blank"></div>
-                    <div class="option-blank"></div>
-                    <div class="option-blank"></div>
+                <div>
+                    <div class="option-label">Python</div>
+                    <template x-for="version in python_vers">
+                        <div x-on:click="active_python_ver = version" x-bind:class="{'active': version === active_python_ver}" class="option" x-text="'Python ' + version"></div>
+                    </template>
                 </div>
-                <div class="note">
-                    <div class="option-label"></div>
-                    <div class="option-blank">
-                        <span id="rhel7-conda-note" class="hidden option-note">
-                            <i class="fas fa-exclamation-triangle text-orange"></i> <b>NOTE:</b> RHEL 7 & 8 <code>conda</code> support is provided by builds and tests on CentOS 7 or 8.<br/>The same <code>conda create</code> commands should work with <code>gcc >=7.5</code> and the correct NVIDIA and CUDA drivers.
-                        </span>
-                        <span id="rhel7-source-note" class="hidden option-note">
-                            <i class="fas fa-exclamation-triangle text-orange"></i> <b>NOTE:</b> RHEL 7 & 8 from source build support is provided by following the build instructions for CentOS 7 or 8.<br/>The same methods should work with <code>gcc >=7.5</code> and the correct NVIDIA and CUDA drivers.
-                        </span>
-                        <span id="linux-conda-note" class="hidden option-note">
-                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> Ubuntu 18.04/20.04 & CentOS 7/8 use the same <code>conda create</code> commands.
-                        </span>
-                        <span id="linux-source-note" class="hidden option-note">
-                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> Ubuntu 18.04/20.04 & CentOS 7/8 use the same from source build instructions.
-                        </span>
-                        <span id="base-docker-note" class="hidden option-note">
-                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> For docker images without examples or notebooks replace <code>runtime</code> with <code>base</code> in the commands below.
-                        </span>
-                    </div>
+                <div>
+                    <div class="option-label">Container Type</div>
+                    <template x-for="type in container_types">
+                        <div x-on:click="active_container_type = type" x-bind:class="{'active': type === active_container_type}" class="option" x-text="type"></div>
+                    </template>
+                    <div class="option">Add devel checkbox</div>
+                    <div class="option">Add examples checkbox</div>
+                </div>
+                <div>
+                    <div class="option-label">Packages</div>
+                    <template x-for="package in packages">
+                        <div x-on:click="active_package = package" x-bind:class="{'active': package === active_package}" class="option" x-text="package"></div>
+                    </template>
                 </div>
             </div>
             <div class="cmd">
                 <div class="cmd-label">Command</div>
-                <div id="command" class="cmd-box"><div class="highlight"><pre class="highlight"><code><span class="gh"># Javascript is needed for this tool to run, please make sure it is enabled</span></code></pre></div></div>
+                <div class="cmd-box"><div class="highlight"><pre class="highlight"><code><span class="gh" x-ref="cmd" x-text="getCmdText"># Javascript is needed for this tool to run, please make sure it is enabled</span></code></pre></div></div>
             </div>
         </div>
         <div class="selector-buttons">
-            <a id="copy-command" onclick="CopyToClipboard('command-code')" class="primary-btn">COPY COMMAND <i class="fas fa-clipboard"></i></a>
-            <a id="reset-selector" onclick="resetSelector()" class="primary-btn">RESET SELECTOR <i class="fas fa-undo"></i></a>
+            <a class="primary-btn" x-on:click="copyToClipboard">COPY COMMAND <i class="fas fa-clipboard"></i></a>
         </div>
     </div>
 </section>
 <script type="text/javascript">
 
+document.addEventListener('alpine:init', () => {
+    Alpine.data('rapids_selector', () => ({
+        // default values
+        active_python_ver: "3.8",
+        active_cuda_ver: "11.5",
+        active_os_ver: "Ubuntu 20.04",
+        active_method: "Conda",
+        active_release: "Stable",
+        active_arch: "Workstation",
+        active_container_type: "Standard",
+        active_package: "All",
+
+        // all possible values
+        python_vers: ["3.8", "3.9"],
+        cuda_vers: ["11.0", "11.2", "11.4", "11.5"],
+        os_vers: ["Ubuntu 18.04", "Ubuntu 20.04", "CentOS 7", "CentOS 8"],
+        methods: ["Conda", "Docker", "Source"],
+        releases: ["Stable", "Nightly"],
+        arches: ["Workstation", "ARM SBSA"],
+        container_types: ["Standard", "Full", "Basic", "Cloud HPO"],
+        packages: ["All", "Standard", "cuDF", "cuML", "cuGraph", "cuSpatial", "cuXFilter", "CLX"],
+        getOSHTML (os_ver) {
+            var icon_class = "ubuntu"
+            if (os_ver.toLowerCase().includes("centos")) icon_class = "centos";
+            return os_ver + "&nbsp;<i class='fab fa-" + icon_class + "'></i>";
+        },
+        getMethodHTML (method) {
+            var icon_class = "box-open fas";
+            if (method.toLowerCase().includes("docker")) icon_class = "docker fab";
+            if (method.toLowerCase().includes("source")) icon_class = "cogs fas";
+            return method + "&nbsp;<i class='fa-" + icon_class + "'></i>";
+        },
+        getReleaseText (release) {
+            var version = "{{ site.data.releases.stable-version }}";
+            if (release.toLowerCase().includes("nightly")) version = "{{ site.data.releases.nightly-version }}a";
+            return release + " " +"(" + version + ")";
+        },
+        getCmdText () {
+            var str = "";
+            str += "You've selected:\n"
+            str += "Python Version: " + this.active_python_ver + "\n";
+            str += "CUDA Version: " + this.active_cuda_ver + "\n";
+            str += "OS Version: " + this.active_os_ver + "\n";
+            str += "Method: " + this.active_method + "\n";
+            str += "Release: " + this.active_release + "\n";
+            str += "Arch: " + this.active_arch + "\n";
+            str += "Container Type: " + this.active_container_type + "\n";
+            str += "Package: " + this.active_package + "\n";
+            return str;
+        },
+        copyToClipboard() {
+            var range = document.createRange();
+            range.selectNode(this.$refs.cmd);
+            window.getSelection().removeAllRanges();
+            window.getSelection().addRange(range);
+            document.execCommand("copy");
+            window.getSelection().removeAllRanges();
+        },
+    }))
+})
 </script>
