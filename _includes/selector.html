@@ -50,7 +50,8 @@
                         <template x-for="package in packages">
                             <div x-on:click="(e) => packagesClickHandler(e, package)"
                                 x-bind:class="{'active': active_packages.includes(package)}" class="option"
-                                x-text="package"></div>
+                                x-html="() => getPackageHTML(package)">
+                            </div>
                         </template>
                     </div>
                     <div class="options-section">
@@ -148,6 +149,15 @@
                 if (method.includes("Docker")) icon_class = "docker fab";
                 if (method.includes("Source")) icon_class = "cogs fas";
                 return method + "&nbsp;<i class='fa-" + icon_class + "'></i>";
+            },
+            getPackageHTML(pkg) {
+                var package_group_selections = ["All", "Standard"]
+
+                if (package_group_selections.includes(pkg)) {
+                    return pkg + "&nbsp;<i class='fas fa-check-square'></i>";
+                }
+
+                return pkg;
             },
             getReleaseText(release) {
                 var version = this.getStableVersion();
