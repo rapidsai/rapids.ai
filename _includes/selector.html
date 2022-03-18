@@ -93,7 +93,7 @@
             <div class="cmd">
                 <div class="cmd-label">Command</div>
                 <div class="cmd-box">
-                    <pre class="highlight"><code><span x-ref="cmd" x-text="getCmdText"></span></code></pre>
+                    <pre class="highlight"><code><span x-ref="cmd" x-html="getCmdHtml"></span></code></pre>
                 </div>
             </div>
         </div>
@@ -154,23 +154,39 @@
                 if (release.includes("Nightly")) version = this.getNightlyVersion() + "a";
                 return release + " " + "(" + version + ")";
             },
-            getCondaCmdText() {
+            highlightCmd(str) {
+                return "<span class='nb'>" + str + "</span>"
+            },
+            highlightFlag(str) {
+                return "<span class='nt'>" + str + "</span>"
+            },
+            highlightPkgOrContainer(str) {
+                return "<span class='nv'>" + str + "</span>"
+            },
+            getCondaCmdHtml() {
                 var rapids_version = this.active_release === "Stable" ? this.getStableVersion() : this.getNightlyVersion();
-                var conda_channel = this.active_release === "Stable" ? "rapidsai" : "rapidsai-nightly";
+                var rapids_channel = this.active_release === "Stable" ? "rapidsai" : "rapidsai-nightly";
                 var dask_prefix = this.active_release === "Nightly" ? "dask/label/dev::" : "";
                 var python_version = this.active_python_ver;
                 var cuda_version = this.active_cuda_ver;
-                var pkgs = this.active_packages.concat("").join("=" + rapids_version + " ").toLowerCase();
+                var pkgs = this.active_packages;
+                var py_cuda_pkgs = [this.highlightPkgOrContainer("python") + "=" + python_version, this.highlightPkgOrContainer("cudatoolkit") + "=" + cuda_version].join(" ");
+                var conda_channels = [rapids_channel, "nvidia", "conda-forge"]
+                    .map(ch => this.highlightFlag("-c") + " " + ch + " ")
+                    .join("");
 
                 if (this.active_packages.length === 1 && ["All", "Standard"].includes(this.active_packages[0])) {
-                    pkgs = "rapids=" + rapids_version + " ";
+                    pkgs = ["rapids"];
                 }
 
-                var cmd = "conda create -n rapids-" + rapids_version + " -c " + conda_channel + " -c nvidia -c conda-forge \\\n" +
-                    "    " + pkgs + "python=" + python_version + " cudatoolkit=" + cuda_version + " " + dask_prefix + "dask-sql";
+                var pkgs_vers = pkgs.map(pkg => this.highlightPkgOrContainer(pkg) + "=" + rapids_version + " ").join("").toLowerCase();
+                var all_pkgs = pkgs_vers + py_cuda_pkgs;
+
+                var cmd = this.highlightCmd('conda') + " create " + this.highlightFlag("-n") + " rapids-" + rapids_version + " " + conda_channels + "\\\n" +
+                    "    " + all_pkgs + " " + dask_prefix + this.highlightPkgOrContainer("dask-sql");
                 return cmd;
             },
-            getDockerCmdText() {
+            getDockerCmdHtml() {
                 var hasNotebooks = this.active_container_options.includes("notebooks");
                 var isDevel = this.active_container_options.includes("development");
                 var isNightly = this.active_release === "Nightly";
@@ -181,7 +197,8 @@
                 var imgType = "base";
                 if (hasNotebooks) imgType = "runtime";
                 if (isDevel) imgType = "devel";
-                var portOptions = hasNotebooks ? "-p 8888:8888 -p 8787:8787 -p 8786:8786" : "";
+                var portOptions = (hasNotebooks ? ["8888:8888", "8787:8787", "8786:8786"] : [])
+                    .map(opt => this.highlightFlag("-p") + " " + opt + " ").join("");
 
                 var imgRepo = [
                     "rapidsai/rapidsai",
@@ -198,12 +215,12 @@
                     "py" + this.active_python_ver
                 ].join("-");
 
-                var fullImg = (imgRepo + ":" + imgTag).toLowerCase();
+                var fullImg = (this.highlightPkgOrContainer(imgRepo) + ":" + imgTag).toLowerCase();
 
                 var indent = "    ";
-                var cmd = "docker pull " + fullImg + "\n" +
-                    "docker run --gpus all --rm -it \\\n" +
-                    (portOptions ? indent + portOptions + " \\\n" : "") +
+                var cmd = this.highlightCmd("docker") + " pull " + fullImg + "\n" +
+                    this.highlightCmd("docker") + " run " + this.highlightFlag("--gpus") + " all " + this.highlightFlag("--rm -it") + " \\\n" +
+                    (portOptions ? indent + portOptions + "\\\n" : "") +
                     indent + fullImg;
                 return cmd;
             },
@@ -218,11 +235,11 @@
                 if (option === "development") return "Development Image";
                 return option;
             },
-            getCmdText() {
+            getCmdHtml() {
                 if (this.active_method === "Docker")
-                    return this.getDockerCmdText();
+                    return this.getDockerCmdHtml();
                 if (this.active_method === "Conda")
-                    return this.getCondaCmdText();
+                    return this.getCondaCmdHtml();
                 return "Not implemented yet!";
             },
             getNewestCudaVer() {
