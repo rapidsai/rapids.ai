@@ -886,7 +886,7 @@ a.blue-btn:hover,
     width: 100%;
 }
 
-.selector .options div {
+.selector .options-section {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;

@@ -2,58 +2,60 @@
     <div class="container-padding" x-data="rapids_selector">
         <div class="selector">
             <div class="options">
-                <div>
+                <div class="options-section">
                     <div class="option-label">Arch</div>
                     <template x-for="arch in arches">
                         <div x-on:click="(e) => archClickHandler(e, arch)" x-bind:class="{'active': arch === active_arch}" class="option" x-text="arch"></div>
                     </template>
                 </div>
-                <div>
+                <div class="options-section">
                     <div class="option-label">Release</div>
                     <template x-for="release in releases">
                         <div x-on:click="(e) => releaseClickHandler(e, release)" x-bind:class="{'active': release === active_release}" class="option" x-text="() => getReleaseText(release)">
                         </div>
                     </template>
                 </div>
-                <div>
+                <div class="options-section">
                     <div class="option-label">CUDA</div>
                     <template x-for="version in cuda_vers">
                         <div x-on:click="(e) => cudaClickHandler(e, version)" x-bind:class="{'active': version === active_cuda_ver, 'disabled': disableUnsupportedCuda(version)}" class="option" x-text="'CUDA ' + version"></div>
                     </template>
                 </div>
-                <div>
+                <div class="options-section">
                     <div class="option-label">Python</div>
                     <template x-for="version in python_vers">
                         <div x-on:click="(e) => pythonClickHandler(e, version)" x-bind:class="{'active': version === active_python_ver, 'disabled': disableUnsupportedPython(version)}" class="option" x-text="'Python ' + version"></div>
                     </template>
                 </div>
-                <div>
+                <div class="options-section">
                     <div class="option-label">Method</div>
                     <template x-for="method in methods">
                         <div x-on:click="(e) => methodClickHandler(e, method)" x-bind:class="{'active': method === active_method}" class="option" x-html="() => getMethodHTML(method)">
                         </div>
                     </template>
                 </div>
-                <div x-bind="dockerOptions">
-                    <div class="option-label">Container OS</div>
-                    <template x-for="version in os_vers">
-                        <div x-on:click="(e) => containerOSClickHandler(e, version)" x-bind:class="{'active': version === active_os_ver, 'disabled': disableUnsupportedContainerOS(version)}" class="option" x-html="() => getOSHTML(version)">
-                        </div>
-                    </template>
+                <div class="docker-options-container" x-bind="transitionSettings" x-show="active_method === 'Docker'">
+                    <div class="options-section">
+                        <div class="option-label">Container OS</div>
+                        <template x-for="version in os_vers">
+                            <div x-on:click="(e) => containerOSClickHandler(e, version)" x-bind:class="{'active': version === active_os_ver, 'disabled': disableUnsupportedContainerOS(version)}" class="option" x-html="() => getOSHTML(version)">
+                            </div>
+                        </template>
+                    </div>
+                    <div class="options-section">
+                        <div class="option-label">Container Type</div>
+                        <template x-for="type in container_types">
+                            <div x-on:click="(e) => containerTypeClickHandler(e, type)" x-bind:class="{'active': type === active_container_type, 'disabled': disableUnsupportedContainerType(type)}" class="option" x-text="() => getContainerTypeText(type)"></div>
+                        </template>
+                    </div>
+                    <div class="options-section">
+                        <div class="option-label">Container Options</div>
+                        <template x-for="option in container_options">
+                            <div x-on:click="(e) => containerOptionClickHandler(e, option)" x-bind:class="{'active': active_container_options.includes(option), 'disabled': disableUnsupportedContainerOption(option)}" class="option" x-text="() => getContainerOptionText(option)"></div>
+                        </template>
+                    </div>
                 </div>
-                <div x-bind="dockerOptions">
-                    <div class="option-label">Container Type</div>
-                    <template x-for="type in container_types">
-                        <div x-on:click="(e) => containerTypeClickHandler(e, type)" x-bind:class="{'active': type === active_container_type, 'disabled': disableUnsupportedContainerType(type)}" class="option" x-text="() => getContainerTypeText(type)"></div>
-                    </template>
-                </div>
-                <div x-bind="dockerOptions">
-                    <div class="option-label">Container Options</div>
-                    <template x-for="option in container_options">
-                        <div x-on:click="(e) => containerOptionClickHandler(e, option)" x-bind:class="{'active': active_container_options.includes(option), 'disabled': disableUnsupportedContainerOption(option)}" class="option" x-text="() => getContainerOptionText(option)"></div>
-                    </template>
-                </div>
-                <div x-show="active_method === 'Conda'">
+                <div class="options-section" x-bind="transitionSettings" x-show="active_method === 'Conda'">
                     <div class="option-label">Packages</div>
                     <template x-for="package in packages">
                         <div x-on:click="(e) => packagesClickHandler(e, package)" x-bind:class="{'active': active_packages.includes(package)}" class="option" x-text="package"></div>
@@ -326,13 +328,10 @@ document.addEventListener('alpine:init', () => {
             }
             this.active_packages = [...this.active_packages, package];
         },
-        dockerOptions: {
-            ['x-show']() {
-                return this.active_method === 'Docker';
-            },
+        transitionSettings: {
             ['x-transition']() {},
-            ['x-transition:enter.duration.150ms']() {},
-            ['x-transition:leave.duration.150ms']() {}
+            ['x-transition:enter.duration.100ms']() {},
+            ['x-transition:leave.duration.100ms']() {}
         },
         copyToClipboard() {
             var range = document.createRange();
