@@ -34,6 +34,20 @@
                         </div>
                     </template>
                 </div>
+                <div class="conda-options-container" x-bind="transitionSettings" x-show="active_method === 'Conda'">
+                    <div class="options-section">
+                        <div class="option-label">Packages</div>
+                        <template x-for="package in packages">
+                            <div x-on:click="(e) => packagesClickHandler(e, package)" x-bind:class="{'active': active_packages.includes(package)}" class="option" x-text="package"></div>
+                        </template>
+                    </div>
+                    <div class="options-section">
+                        <div class="option-label">Additional Packages</div>
+                        <template x-for="package in additional_packages">
+                            <div x-on:click="(e) => additionalPackagesClickHandler(e, package)" x-bind:class="{'active': active_additional_packages.includes(package)}" class="option" x-text="package"></div>
+                        </template>
+                    </div>
+                </div>
                 <div class="docker-options-container" x-bind="transitionSettings" x-show="active_method === 'Docker'">
                     <div class="options-section">
                         <div class="option-label">Container OS</div>
@@ -52,20 +66,6 @@
                         <div class="option-label">Container Options</div>
                         <template x-for="option in container_options">
                             <div x-on:click="(e) => containerOptionClickHandler(e, option)" x-bind:class="{'active': active_container_options.includes(option), 'disabled': disableUnsupportedContainerOption(option)}" class="option" x-text="() => getContainerOptionText(option)"></div>
-                        </template>
-                    </div>
-                </div>
-                <div class="docker-options-container" x-bind="transitionSettings" x-show="active_method === 'Conda'">
-                    <div class="options-section">
-                        <div class="option-label">Packages</div>
-                        <template x-for="package in packages">
-                            <div x-on:click="(e) => packagesClickHandler(e, package)" x-bind:class="{'active': active_packages.includes(package)}" class="option" x-text="package"></div>
-                        </template>
-                    </div>
-                    <div class="options-section">
-                        <div class="option-label">Additional Packages</div>
-                        <template x-for="package in additional_packages">
-                            <div x-on:click="(e) => additionalPackagesClickHandler(e, package)" x-bind:class="{'active': active_additional_packages.includes(package)}" class="option" x-text="package"></div>
                         </template>
                     </div>
                 </div>
@@ -347,8 +347,8 @@ document.addEventListener('alpine:init', () => {
         },
         transitionSettings: {
             ['x-transition']() {},
-            ['x-transition:enter.duration.100ms']() {},
-            ['x-transition:leave.duration.100ms']() {}
+            ['x-transition:enter.duration.150ms']() {},
+            ['x-transition:leave.duration.150ms']() {}
         },
         copyToClipboard() {
             var range = document.createRange();
