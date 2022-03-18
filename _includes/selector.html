@@ -1,36 +1,46 @@
-<section class="{{ include.background }} padding-top-{{ include.padding-top }} padding-bottom-{{ include.padding-bottom }}">
+<section
+    class="{{ include.background }} padding-top-{{ include.padding-top }} padding-bottom-{{ include.padding-bottom }}">
     <div class="container-padding" x-data="rapids_selector">
         <div class="selector">
             <div class="options">
                 <div class="options-section">
                     <div class="option-label">Arch</div>
                     <template x-for="arch in arches">
-                        <div x-on:click="(e) => archClickHandler(e, arch)" x-bind:class="{'active': arch === active_arch}" class="option" x-text="arch"></div>
+                        <div x-on:click="(e) => archClickHandler(e, arch)"
+                            x-bind:class="{'active': arch === active_arch}" class="option" x-text="arch"></div>
                     </template>
                 </div>
                 <div class="options-section">
                     <div class="option-label">Release</div>
                     <template x-for="release in releases">
-                        <div x-on:click="(e) => releaseClickHandler(e, release)" x-bind:class="{'active': release === active_release}" class="option" x-text="() => getReleaseText(release)">
+                        <div x-on:click="(e) => releaseClickHandler(e, release)"
+                            x-bind:class="{'active': release === active_release}" class="option"
+                            x-text="() => getReleaseText(release)">
                         </div>
                     </template>
                 </div>
                 <div class="options-section">
                     <div class="option-label">CUDA</div>
                     <template x-for="version in cuda_vers">
-                        <div x-on:click="(e) => cudaClickHandler(e, version)" x-bind:class="{'active': version === active_cuda_ver, 'disabled': disableUnsupportedCuda(version)}" class="option" x-text="'CUDA ' + version"></div>
+                        <div x-on:click="(e) => cudaClickHandler(e, version)"
+                            x-bind:class="{'active': version === active_cuda_ver, 'disabled': disableUnsupportedCuda(version)}"
+                            class="option" x-text="'CUDA ' + version"></div>
                     </template>
                 </div>
                 <div class="options-section">
                     <div class="option-label">Python</div>
                     <template x-for="version in python_vers">
-                        <div x-on:click="(e) => pythonClickHandler(e, version)" x-bind:class="{'active': version === active_python_ver, 'disabled': disableUnsupportedPython(version)}" class="option" x-text="'Python ' + version"></div>
+                        <div x-on:click="(e) => pythonClickHandler(e, version)"
+                            x-bind:class="{'active': version === active_python_ver, 'disabled': disableUnsupportedPython(version)}"
+                            class="option" x-text="'Python ' + version"></div>
                     </template>
                 </div>
                 <div class="options-section">
                     <div class="option-label">Method</div>
                     <template x-for="method in methods">
-                        <div x-on:click="(e) => methodClickHandler(e, method)" x-bind:class="{'active': method === active_method}" class="option" x-html="() => getMethodHTML(method)">
+                        <div x-on:click="(e) => methodClickHandler(e, method)"
+                            x-bind:class="{'active': method === active_method}" class="option"
+                            x-html="() => getMethodHTML(method)">
                         </div>
                     </template>
                 </div>
@@ -38,13 +48,17 @@
                     <div class="options-section">
                         <div class="option-label">Packages</div>
                         <template x-for="package in packages">
-                            <div x-on:click="(e) => packagesClickHandler(e, package)" x-bind:class="{'active': active_packages.includes(package)}" class="option" x-text="package"></div>
+                            <div x-on:click="(e) => packagesClickHandler(e, package)"
+                                x-bind:class="{'active': active_packages.includes(package)}" class="option"
+                                x-text="package"></div>
                         </template>
                     </div>
                     <div class="options-section">
                         <div class="option-label">Additional Packages</div>
                         <template x-for="package in additional_packages">
-                            <div x-on:click="(e) => additionalPackagesClickHandler(e, package)" x-bind:class="{'active': active_additional_packages.includes(package)}" class="option" x-text="package"></div>
+                            <div x-on:click="(e) => additionalPackagesClickHandler(e, package)"
+                                x-bind:class="{'active': active_additional_packages.includes(package)}" class="option"
+                                x-text="package"></div>
                         </template>
                     </div>
                 </div>
@@ -52,20 +66,26 @@
                     <div class="options-section">
                         <div class="option-label">Container OS</div>
                         <template x-for="version in os_vers">
-                            <div x-on:click="(e) => containerOSClickHandler(e, version)" x-bind:class="{'active': version === active_os_ver, 'disabled': disableUnsupportedContainerOS(version)}" class="option" x-html="() => getOSHTML(version)">
+                            <div x-on:click="(e) => containerOSClickHandler(e, version)"
+                                x-bind:class="{'active': version === active_os_ver, 'disabled': disableUnsupportedContainerOS(version)}"
+                                class="option" x-html="() => getOSHTML(version)">
                             </div>
                         </template>
                     </div>
                     <div class="options-section">
                         <div class="option-label">Container Type</div>
                         <template x-for="type in container_types">
-                            <div x-on:click="(e) => containerTypeClickHandler(e, type)" x-bind:class="{'active': type === active_container_type, 'disabled': disableUnsupportedContainerType(type)}" class="option" x-text="() => getContainerTypeText(type)"></div>
+                            <div x-on:click="(e) => containerTypeClickHandler(e, type)"
+                                x-bind:class="{'active': type === active_container_type, 'disabled': disableUnsupportedContainerType(type)}"
+                                class="option" x-text="() => getContainerTypeText(type)"></div>
                         </template>
                     </div>
                     <div class="options-section">
                         <div class="option-label">Container Options</div>
                         <template x-for="option in container_options">
-                            <div x-on:click="(e) => containerOptionClickHandler(e, option)" x-bind:class="{'active': active_container_options.includes(option), 'disabled': disableUnsupportedContainerOption(option)}" class="option" x-text="() => getContainerOptionText(option)"></div>
+                            <div x-on:click="(e) => containerOptionClickHandler(e, option)"
+                                x-bind:class="{'active': active_container_options.includes(option), 'disabled': disableUnsupportedContainerOption(option)}"
+                                class="option" x-text="() => getContainerOptionText(option)"></div>
                         </template>
                     </div>
                 </div>
@@ -84,282 +104,282 @@
 </section>
 <script type="text/javascript">
 
-document.addEventListener('alpine:init', () => {
-    Alpine.data('rapids_selector', () => ({
-        // default values
-        active_python_ver: "3.8",
-        active_cuda_ver: "11.5",
-        active_os_ver: "Ubuntu 20.04",
-        active_method: "Conda",
-        active_release: "Stable",
-        active_arch: "Workstation",
-        active_container_type: "standard",
-        active_packages: ["All"],
-        active_container_options: [],
-        active_additional_packages: [],
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('rapids_selector', () => ({
+            // default values
+            active_python_ver: "3.8",
+            active_cuda_ver: "11.5",
+            active_os_ver: "Ubuntu 20.04",
+            active_method: "Conda",
+            active_release: "Stable",
+            active_arch: "Workstation",
+            active_container_type: "standard",
+            active_packages: ["All"],
+            active_container_options: [],
+            active_additional_packages: [],
 
-        // all possible values
-        python_vers: ["3.8", "3.9"],
-        cloud_hpo_py_vers: ["3.8"],
-        cuda_vers: ["11.0", "11.2", "11.4", "11.5"],
-        cloud_hpo_cuda_vers: ["11.0", "11.2"],
-        os_vers: ["Ubuntu 18.04", "Ubuntu 20.04", "CentOS 7", "CentOS 8"],
-        cloud_hpo_os_vers: ["Ubuntu 18.04", "Ubuntu 20.04"],
-        methods: ["Conda", "Docker", "Source"],
-        releases: ["Stable", "Nightly"],
-        arches: ["Workstation", "ARM SBSA"],
-        container_types: ["core", "standard", "clx", "Cloud HPO"],
-        packages: ["All", "Standard", "cuDF", "cuML", "cuGraph", "cuSpatial", "cuXFilter", "CLX"],
-        additional_packages: ["DaskSQL", "JupyterLab", "PyTorch", "Graphistry", "Plotly Dash", "Xarray Spatial", "rtxpy", "Tensor"],
-        container_options: ["notebooks", "development"],
-        getStableVersion () {
-            return "{{ site.data.releases.stable-version }}";
-        },
-        getNightlyVersion () {
-            return "{{ site.data.releases.nightly-version }}";
-        },
-        getOSHTML (os_ver) {
-            var icon_class = "ubuntu"
-            if (os_ver.includes("CentOS")) icon_class = "centos";
-            return os_ver + "&nbsp;<i class='fab fa-" + icon_class + "'></i>";
-        },
-        getMethodHTML (method) {
-            var icon_class = "box-open fas";
-            if (method.includes("Docker")) icon_class = "docker fab";
-            if (method.includes("Source")) icon_class = "cogs fas";
-            return method + "&nbsp;<i class='fa-" + icon_class + "'></i>";
-        },
-        getReleaseText (release) {
-            var version = this.getStableVersion();
-            if (release.includes("Nightly")) version = this.getNightlyVersion() + "a";
-            return release + " " +"(" + version + ")";
-        },  
-        getCondaCmdText() {
-            var rapids_version = this.active_release === "Stable" ? this.getStableVersion() : this.getNightlyVersion();
-            var conda_channel = this.active_release === "Stable" ? "rapidsai" : "rapidsai-nightly";
-            var dask_prefix = this.active_release === "Nightly" ? "dask/label/dev::" : "";
-            var python_version = this.active_python_ver;
-            var cuda_version = this.active_cuda_ver;
-            var pkgs = this.active_packages.concat("").join("=" + rapids_version + " ").toLowerCase();
+            // all possible values
+            python_vers: ["3.8", "3.9"],
+            cloud_hpo_py_vers: ["3.8"],
+            cuda_vers: ["11.0", "11.2", "11.4", "11.5"],
+            cloud_hpo_cuda_vers: ["11.0", "11.2"],
+            os_vers: ["Ubuntu 18.04", "Ubuntu 20.04", "CentOS 7", "CentOS 8"],
+            cloud_hpo_os_vers: ["Ubuntu 18.04", "Ubuntu 20.04"],
+            methods: ["Conda", "Docker", "Source"],
+            releases: ["Stable", "Nightly"],
+            arches: ["Workstation", "ARM SBSA"],
+            container_types: ["core", "standard", "clx", "Cloud HPO"],
+            packages: ["All", "Standard", "cuDF", "cuML", "cuGraph", "cuSpatial", "cuXFilter", "CLX"],
+            additional_packages: ["DaskSQL", "JupyterLab", "PyTorch", "Graphistry", "Plotly Dash", "Xarray Spatial", "rtxpy", "Tensor"],
+            container_options: ["notebooks", "development"],
+            getStableVersion() {
+                return "{{ site.data.releases.stable-version }}";
+            },
+            getNightlyVersion() {
+                return "{{ site.data.releases.nightly-version }}";
+            },
+            getOSHTML(os_ver) {
+                var icon_class = "ubuntu"
+                if (os_ver.includes("CentOS")) icon_class = "centos";
+                return os_ver + "&nbsp;<i class='fab fa-" + icon_class + "'></i>";
+            },
+            getMethodHTML(method) {
+                var icon_class = "box-open fas";
+                if (method.includes("Docker")) icon_class = "docker fab";
+                if (method.includes("Source")) icon_class = "cogs fas";
+                return method + "&nbsp;<i class='fa-" + icon_class + "'></i>";
+            },
+            getReleaseText(release) {
+                var version = this.getStableVersion();
+                if (release.includes("Nightly")) version = this.getNightlyVersion() + "a";
+                return release + " " + "(" + version + ")";
+            },
+            getCondaCmdText() {
+                var rapids_version = this.active_release === "Stable" ? this.getStableVersion() : this.getNightlyVersion();
+                var conda_channel = this.active_release === "Stable" ? "rapidsai" : "rapidsai-nightly";
+                var dask_prefix = this.active_release === "Nightly" ? "dask/label/dev::" : "";
+                var python_version = this.active_python_ver;
+                var cuda_version = this.active_cuda_ver;
+                var pkgs = this.active_packages.concat("").join("=" + rapids_version + " ").toLowerCase();
 
-            if (this.active_packages.length === 1 && ["All", "Standard"].includes(this.active_packages[0])) {
-                pkgs = "rapids=" + rapids_version + " ";
-            }
-            
-            var cmd = "conda create -n rapids-" + rapids_version + " -c " + conda_channel + " -c nvidia -c conda-forge \\\n" +
-                "    " + pkgs + "python=" + python_version + " cudatoolkit=" + cuda_version + " " + dask_prefix + "dask-sql";
-            return cmd;
-        },
-        getDockerCmdText() {
-            var hasNotebooks = this.active_container_options.includes("notebooks");
-            var isDevel = this.active_container_options.includes("development");
-            var isNightly = this.active_release === "Nightly";
-            var imgVariant = "";
-            if (this.active_container_type === "core") imgVariant = "core";
-            if (this.active_container_type === "clx") imgVariant = "clx";
-            if (this.active_container_type === "Cloud HPO") imgVariant = "cloud-ml";
-            var imgType = "base";
-            if (hasNotebooks) imgType = "runtime";
-            if (isDevel) imgType = "devel";
-            var portOptions = hasNotebooks ? "-p 8888:8888 -p 8787:8787 -p 8786:8786" : "" ;
-
-            var imgRepo = [
-                "rapidsai/rapidsai",
-                imgVariant,
-                (isDevel ? "dev" : ""),
-                (isNightly ? "nightly" : ""),
-            ].filter(Boolean).join("-");
-
-            var imgTag = [
-                (isNightly ? this.getNightlyVersion() : this.getStableVersion()),
-                "cuda" + this.active_cuda_ver,
-                imgType,
-                this.active_os_ver.replace(" ", ""),
-                "py" + this.active_python_ver
-            ].join("-");
-
-            var fullImg = (imgRepo + ":" + imgTag).toLowerCase();
-
-            var indent = "    ";
-            var cmd = "docker pull " + fullImg + "\n" +
-                "docker run --gpus all --rm -it \\\n" +
-                (portOptions ? indent + portOptions + " \\\n" : "") +
-                indent + fullImg;
-            return cmd;
-        },
-        getContainerTypeText(type) {
-            if (type === "core") return "Basic"
-            if (type === "standard") return "Basic w/ Dask-SQL"
-            if (type === "clx") return "Basic w/ CLX"
-            return type;
-        },
-        getContainerOptionText(option) {
-            if (option === "notebooks") return "Include Jupyter Notebooks";
-            if (option === "development") return "Development Image";
-            return option;
-        },
-        getCmdText () {
-            if (this.active_method === "Docker")
-                return this.getDockerCmdText();
-            if (this.active_method === "Conda")
-                return this.getCondaCmdText();
-            return "Not implemented yet!";
-        },
-        getNewestCudaVer() {
-            return this.cuda_vers[this.cuda_vers.length - 1];
-        },
-        disableUnsupportedCuda(cuda_version) { 
-            var isDisabled = false;
-            if (this.active_container_options.includes("development") && cuda_version !== this.getNewestCudaVer()) {
-                isDisabled = true;
-            }
-
-            if (this.active_container_type === "Cloud HPO" && !this.cloud_hpo_cuda_vers.includes(cuda_version)) {
-                isDisabled = true
-            }
-
-            return isDisabled;
-        },
-        disableUnsupportedPython(python_version) { 
-            var isDisabled = false;
-            if (this.active_container_type === "Cloud HPO" && !this.cloud_hpo_py_vers.includes(python_version)) {
-                isDisabled = true
-            }
-            return isDisabled;
-        },
-        disableUnsupportedContainerOS(version) {
-            var isDisabled = false;
-            if (this.active_container_type === "Cloud HPO" && !this.cloud_hpo_os_vers.includes(version)) isDisabled = true;
-            return isDisabled;
-        },
-        disableUnsupportedContainerType(type) {
-            var isDisabled = false;
-            if (this.active_release === "Nightly" && type === "Cloud HPO") isDisabled = true;
-            return isDisabled;
-        },
-        disableUnsupportedContainerOption(option) {
-            var isDisabled = false;
-            if (this.active_container_type === "Cloud HPO") isDisabled = true;
-            return isDisabled;
-        },
-        isDisabled(e) {
-            return e.classList.contains('disabled');
-        },
-        releaseClickHandler(e, release) {
-            this.active_release = release;
-            if (this.active_release === "Nightly" && this.active_container_type === "Cloud HPO") {
-                this.active_container_type = "core"
-            }
-        },
-        containerTypeClickHandler(e, type) {
-            if (this.isDisabled(e.target)) return;
-            this.active_container_type = type;
-            if (this.active_container_type === "Cloud HPO") {
-                if (!this.cloud_hpo_cuda_vers.includes(this.active_cuda_ver)) {
-                    this.active_cuda_ver = this.cloud_hpo_cuda_vers[this.cloud_hpo_cuda_vers.length - 1];
+                if (this.active_packages.length === 1 && ["All", "Standard"].includes(this.active_packages[0])) {
+                    pkgs = "rapids=" + rapids_version + " ";
                 }
-                if (!this.cloud_hpo_os_vers.includes(this.active_os_ver)) {
-                    this.active_os_ver = this.cloud_hpo_os_vers[this.cloud_hpo_os_vers.length - 1];
+
+                var cmd = "conda create -n rapids-" + rapids_version + " -c " + conda_channel + " -c nvidia -c conda-forge \\\n" +
+                    "    " + pkgs + "python=" + python_version + " cudatoolkit=" + cuda_version + " " + dask_prefix + "dask-sql";
+                return cmd;
+            },
+            getDockerCmdText() {
+                var hasNotebooks = this.active_container_options.includes("notebooks");
+                var isDevel = this.active_container_options.includes("development");
+                var isNightly = this.active_release === "Nightly";
+                var imgVariant = "";
+                if (this.active_container_type === "core") imgVariant = "core";
+                if (this.active_container_type === "clx") imgVariant = "clx";
+                if (this.active_container_type === "Cloud HPO") imgVariant = "cloud-ml";
+                var imgType = "base";
+                if (hasNotebooks) imgType = "runtime";
+                if (isDevel) imgType = "devel";
+                var portOptions = hasNotebooks ? "-p 8888:8888 -p 8787:8787 -p 8786:8786" : "";
+
+                var imgRepo = [
+                    "rapidsai/rapidsai",
+                    imgVariant,
+                    (isDevel ? "dev" : ""),
+                    (isNightly ? "nightly" : ""),
+                ].filter(Boolean).join("-");
+
+                var imgTag = [
+                    (isNightly ? this.getNightlyVersion() : this.getStableVersion()),
+                    "cuda" + this.active_cuda_ver,
+                    imgType,
+                    this.active_os_ver.replace(" ", ""),
+                    "py" + this.active_python_ver
+                ].join("-");
+
+                var fullImg = (imgRepo + ":" + imgTag).toLowerCase();
+
+                var indent = "    ";
+                var cmd = "docker pull " + fullImg + "\n" +
+                    "docker run --gpus all --rm -it \\\n" +
+                    (portOptions ? indent + portOptions + " \\\n" : "") +
+                    indent + fullImg;
+                return cmd;
+            },
+            getContainerTypeText(type) {
+                if (type === "core") return "Basic"
+                if (type === "standard") return "Basic w/ Dask-SQL"
+                if (type === "clx") return "Basic w/ CLX"
+                return type;
+            },
+            getContainerOptionText(option) {
+                if (option === "notebooks") return "Include Jupyter Notebooks";
+                if (option === "development") return "Development Image";
+                return option;
+            },
+            getCmdText() {
+                if (this.active_method === "Docker")
+                    return this.getDockerCmdText();
+                if (this.active_method === "Conda")
+                    return this.getCondaCmdText();
+                return "Not implemented yet!";
+            },
+            getNewestCudaVer() {
+                return this.cuda_vers[this.cuda_vers.length - 1];
+            },
+            disableUnsupportedCuda(cuda_version) {
+                var isDisabled = false;
+                if (this.active_container_options.includes("development") && cuda_version !== this.getNewestCudaVer()) {
+                    isDisabled = true;
                 }
-                if (!this.cloud_hpo_py_vers.includes(this.active_python_ver)) {
-                    this.active_python_ver = this.cloud_hpo_py_vers[this.cloud_hpo_py_vers.length - 1];
+
+                if (this.active_container_type === "Cloud HPO" && !this.cloud_hpo_cuda_vers.includes(cuda_version)) {
+                    isDisabled = true
                 }
-                this.active_container_options = [];
-            }
-        },
-        archClickHandler(e, arch) {
-            if (this.isDisabled(e.target)) return;
-            this.active_arch = arch;
-        },
-        cudaClickHandler(e, version) {
-            if (this.isDisabled(e.target)) return;
-            this.active_cuda_ver = version;
-        },
-        pythonClickHandler(e, version) {
-            if (this.isDisabled(e.target)) return;
-            this.active_python_ver = version;
-        },
-        methodClickHandler(e, method) {
-            if (this.isDisabled(e.target)) return;
-            if (method !== "Docker") {
-                this.active_container_options = [];
-                this.active_container_type = "core";
-            }
-            this.active_method = method;
-        },
-        containerOSClickHandler(e, version) {
-            if (this.isDisabled(e.target)) return;
-            this.active_os_ver = version;
-        },
-        containerOptionClickHandler(e, option) {
-            if (this.isDisabled(e.target)) return;
 
-            // development images have notebooks
-            if (option === "development" && this.active_container_options.length === 0) {
-                this.active_container_options = ["notebooks", "development"];
-                this.active_cuda_ver = this.getNewestCudaVer();
-                return;
-            }
+                return isDisabled;
+            },
+            disableUnsupportedPython(python_version) {
+                var isDisabled = false;
+                if (this.active_container_type === "Cloud HPO" && !this.cloud_hpo_py_vers.includes(python_version)) {
+                    isDisabled = true
+                }
+                return isDisabled;
+            },
+            disableUnsupportedContainerOS(version) {
+                var isDisabled = false;
+                if (this.active_container_type === "Cloud HPO" && !this.cloud_hpo_os_vers.includes(version)) isDisabled = true;
+                return isDisabled;
+            },
+            disableUnsupportedContainerType(type) {
+                var isDisabled = false;
+                if (this.active_release === "Nightly" && type === "Cloud HPO") isDisabled = true;
+                return isDisabled;
+            },
+            disableUnsupportedContainerOption(option) {
+                var isDisabled = false;
+                if (this.active_container_type === "Cloud HPO") isDisabled = true;
+                return isDisabled;
+            },
+            isDisabled(e) {
+                return e.classList.contains('disabled');
+            },
+            releaseClickHandler(e, release) {
+                this.active_release = release;
+                if (this.active_release === "Nightly" && this.active_container_type === "Cloud HPO") {
+                    this.active_container_type = "core"
+                }
+            },
+            containerTypeClickHandler(e, type) {
+                if (this.isDisabled(e.target)) return;
+                this.active_container_type = type;
+                if (this.active_container_type === "Cloud HPO") {
+                    if (!this.cloud_hpo_cuda_vers.includes(this.active_cuda_ver)) {
+                        this.active_cuda_ver = this.cloud_hpo_cuda_vers[this.cloud_hpo_cuda_vers.length - 1];
+                    }
+                    if (!this.cloud_hpo_os_vers.includes(this.active_os_ver)) {
+                        this.active_os_ver = this.cloud_hpo_os_vers[this.cloud_hpo_os_vers.length - 1];
+                    }
+                    if (!this.cloud_hpo_py_vers.includes(this.active_python_ver)) {
+                        this.active_python_ver = this.cloud_hpo_py_vers[this.cloud_hpo_py_vers.length - 1];
+                    }
+                    this.active_container_options = [];
+                }
+            },
+            archClickHandler(e, arch) {
+                if (this.isDisabled(e.target)) return;
+                this.active_arch = arch;
+            },
+            cudaClickHandler(e, version) {
+                if (this.isDisabled(e.target)) return;
+                this.active_cuda_ver = version;
+            },
+            pythonClickHandler(e, version) {
+                if (this.isDisabled(e.target)) return;
+                this.active_python_ver = version;
+            },
+            methodClickHandler(e, method) {
+                if (this.isDisabled(e.target)) return;
+                if (method !== "Docker") {
+                    this.active_container_options = [];
+                    this.active_container_type = "core";
+                }
+                this.active_method = method;
+            },
+            containerOSClickHandler(e, version) {
+                if (this.isDisabled(e.target)) return;
+                this.active_os_ver = version;
+            },
+            containerOptionClickHandler(e, option) {
+                if (this.isDisabled(e.target)) return;
 
-            if (option === "notebooks" && this.active_container_options.length === 2) {
-                this.active_container_options = [];
-                return;
-            }
+                // development images have notebooks
+                if (option === "development" && this.active_container_options.length === 0) {
+                    this.active_container_options = ["notebooks", "development"];
+                    this.active_cuda_ver = this.getNewestCudaVer();
+                    return;
+                }
 
-            if (this.active_container_options.includes(option)) {
-                this.active_container_options = this.active_container_options.filter(el => el !== option);
-                return;
-            }
+                if (option === "notebooks" && this.active_container_options.length === 2) {
+                    this.active_container_options = [];
+                    return;
+                }
 
-            this.active_container_options = [...this.active_container_options, option];
-            if (this.active_container_options.includes("development")) {
-                this.active_cuda_ver = this.getNewestCudaVer();
-            }
-        },
-        /**
-        * Determines which packages are selected. "All" and "Standard" selections can
-        * only be selected individually. All other packages can be selected together.
-        **/
-        packagesClickHandler(e, package) {
-            var package_group_selections = ["All", "Standard"]
+                if (this.active_container_options.includes(option)) {
+                    this.active_container_options = this.active_container_options.filter(el => el !== option);
+                    return;
+                }
 
-            if (package_group_selections.includes(package)) {
-                this.active_packages = [package];
-                return;
-            }
+                this.active_container_options = [...this.active_container_options, option];
+                if (this.active_container_options.includes("development")) {
+                    this.active_cuda_ver = this.getNewestCudaVer();
+                }
+            },
+            /**
+            * Determines which packages are selected. "All" and "Standard" selections can
+            * only be selected individually. All other packages can be selected together.
+            **/
+            packagesClickHandler(e, package) {
+                var package_group_selections = ["All", "Standard"]
 
-            for (let i = 0; i < package_group_selections.length; i++) {
-                let pkg = package_group_selections[i];
-                this.active_packages = this.active_packages.filter(el => el !== pkg);
-            }
-            
-            if (this.active_packages.includes(package)) {
-                if (this.active_packages.length === 1) return;
-                this.active_packages = this.active_packages.filter(el => el !== package);
-                return;
-            }
-            this.active_packages = [...this.active_packages, package];
-        },
-        additionalPackagesClickHandler(e, package) {
-            if (this.active_additional_packages.includes(package)) {
-                this.active_additional_packages = this.active_additional_packages.filter(el => el !== package);
-                return;
-            }
-            this.active_additional_packages = [...this.active_additional_packages, package];
-        },
-        transitionSettings: {
-            ['x-transition']() {},
-            ['x-transition:enter.duration.150ms']() {},
-            ['x-transition:leave.duration.150ms']() {}
-        },
-        copyToClipboard() {
-            var range = document.createRange();
-            range.selectNode(this.$refs.cmd);
-            window.getSelection().removeAllRanges();
-            window.getSelection().addRange(range);
-            document.execCommand("copy");
-            window.getSelection().removeAllRanges();
-        },
-    }))
-})
+                if (package_group_selections.includes(package)) {
+                    this.active_packages = [package];
+                    return;
+                }
+
+                for (let i = 0; i < package_group_selections.length; i++) {
+                    let pkg = package_group_selections[i];
+                    this.active_packages = this.active_packages.filter(el => el !== pkg);
+                }
+
+                if (this.active_packages.includes(package)) {
+                    if (this.active_packages.length === 1) return;
+                    this.active_packages = this.active_packages.filter(el => el !== package);
+                    return;
+                }
+                this.active_packages = [...this.active_packages, package];
+            },
+            additionalPackagesClickHandler(e, package) {
+                if (this.active_additional_packages.includes(package)) {
+                    this.active_additional_packages = this.active_additional_packages.filter(el => el !== package);
+                    return;
+                }
+                this.active_additional_packages = [...this.active_additional_packages, package];
+            },
+            transitionSettings: {
+                ['x-transition']() { },
+                ['x-transition:enter.duration.150ms']() { },
+                ['x-transition:leave.duration.150ms']() { }
+            },
+            copyToClipboard() {
+                var range = document.createRange();
+                range.selectNode(this.$refs.cmd);
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(range);
+                document.execCommand("copy");
+                window.getSelection().removeAllRanges();
+            },
+        }))
+    })
 </script>
