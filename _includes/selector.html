@@ -55,11 +55,19 @@
                         </template>
                     </div>
                 </div>
-                <div class="options-section" x-bind="transitionSettings" x-show="active_method === 'Conda'">
-                    <div class="option-label">Packages</div>
-                    <template x-for="package in packages">
-                        <div x-on:click="(e) => packagesClickHandler(e, package)" x-bind:class="{'active': active_packages.includes(package)}" class="option" x-text="package"></div>
-                    </template>
+                <div class="docker-options-container" x-bind="transitionSettings" x-show="active_method === 'Conda'">
+                    <div class="options-section">
+                        <div class="option-label">Packages</div>
+                        <template x-for="package in packages">
+                            <div x-on:click="(e) => packagesClickHandler(e, package)" x-bind:class="{'active': active_packages.includes(package)}" class="option" x-text="package"></div>
+                        </template>
+                    </div>
+                    <div class="options-section">
+                        <div class="option-label">Additional Packages</div>
+                        <template x-for="package in additional_packages">
+                            <div x-on:click="(e) => additionalPackagesClickHandler(e, package)" x-bind:class="{'active': active_additional_packages.includes(package)}" class="option" x-text="package"></div>
+                        </template>
+                    </div>
                 </div>
             </div>
             <div class="cmd">
@@ -86,6 +94,7 @@ document.addEventListener('alpine:init', () => {
         active_container_type: "standard",
         active_packages: ["All"],
         active_container_options: [],
+        active_additional_packages: [],
 
         // all possible values
         python_vers: ["3.8", "3.9"],
@@ -99,6 +108,7 @@ document.addEventListener('alpine:init', () => {
         arches: ["Workstation", "ARM SBSA"],
         container_types: ["core", "standard", "clx", "Cloud HPO"],
         packages: ["All", "Standard", "cuDF", "cuML", "cuGraph", "cuSpatial", "cuXFilter", "CLX"],
+        additional_packages: ["DaskSQL", "JupyterLab", "PyTorch", "Graphistry", "Plotly Dash", "Xarray Spatial", "rtxpy", "Tensor"],
         container_options: ["notebooks", "development"],
         getStableVersion () {
             return "{{ site.data.releases.stable-version }}";
@@ -327,6 +337,13 @@ document.addEventListener('alpine:init', () => {
                 return;
             }
             this.active_packages = [...this.active_packages, package];
+        },
+        additionalPackagesClickHandler(e, package) {
+            if (this.active_additional_packages.includes(package)) {
+                this.active_additional_packages = this.active_additional_packages.filter(el => el !== package);
+                return;
+            }
+            this.active_additional_packages = [...this.active_additional_packages, package];
         },
         transitionSettings: {
             ['x-transition']() {},
