@@ -7,7 +7,9 @@
                     <div class="option-label">Arch</div>
                     <template x-for="arch in arches">
                         <div x-on:click="(e) => archClickHandler(e, arch)"
-                            x-bind:class="{'active': arch === active_arch}" class="option" x-text="arch"></div>
+                            x-bind:class="{'active': arch === active_arch}" class="option" x-text="arch"
+                            x-text="() => getArchText(arch)">
+                        </div>
                     </template>
                 </div>
                 <div class="options-section">
@@ -113,7 +115,7 @@
             active_os_ver: "Ubuntu 20.04",
             active_method: "Conda",
             active_release: "Stable",
-            active_arch: "Workstation",
+            active_arch: "amd",
             active_container_type: "standard",
             active_packages: ["All"],
             active_container_options: [],
@@ -128,7 +130,7 @@
             cloud_hpo_os_vers: ["Ubuntu 18.04", "Ubuntu 20.04"],
             methods: ["Conda", "Docker", "Source"],
             releases: ["Stable", "Nightly"],
-            arches: ["Workstation", "ARM SBSA"],
+            arches: ["amd", "arm"],
             container_types: ["core", "standard", "clx", "Cloud HPO"],
             packages: ["All", "Standard", "cuDF", "cuML", "cuGraph", "cuSpatial", "cuXFilter", "CLX"],
             additional_packages: ["DaskSQL", "JupyterLab", "PyTorch", "Graphistry", "Plotly Dash", "Xarray Spatial", "rtxpy", "Tensor"],
@@ -163,6 +165,12 @@
                 var version = this.getStableVersion();
                 if (release.includes("Nightly")) version = this.getNightlyVersion() + "a";
                 return release + " " + "(" + version + ")";
+            },
+            getArchText(arch) {
+                var text = "Arch not implemented yet!"
+                if (arch === "amd") text = "Workstation";
+                if (arch === "arm") text = "ARM SBSA";
+                return text;
             },
             highlightCmd(str) {
                 return "<span class='nb'>" + str + "</span>"
@@ -200,6 +208,7 @@
                 var hasNotebooks = this.active_container_options.includes("notebooks");
                 var isDevel = this.active_container_options.includes("development");
                 var isNightly = this.active_release === "Nightly";
+                var isArm = this.active_arch === "arm";
                 var imgVariant = "";
                 if (this.active_container_type === "core") imgVariant = "core";
                 if (this.active_container_type === "clx") imgVariant = "clx";
@@ -215,6 +224,7 @@
                     imgVariant,
                     (isDevel ? "dev" : ""),
                     (isNightly ? "nightly" : ""),
+                    (isArm ? "arm64" : ""),
                 ].filter(Boolean).join("-");
 
                 var imgTag = [
@@ -274,14 +284,16 @@
                 }
                 return isDisabled;
             },
-            disableUnsupportedContainerOS(version) {
+            disableUnsupportedContainerOS(os) {
                 var isDisabled = false;
-                if (this.active_container_type === "Cloud HPO" && !this.cloud_hpo_os_vers.includes(version)) isDisabled = true;
+                if (this.active_container_type === "Cloud HPO" && !this.cloud_hpo_os_vers.includes(os)) isDisabled = true;
+                if (this.active_arch === "arm" && os === "CentOS 7") isDisabled = true;
                 return isDisabled;
             },
             disableUnsupportedContainerType(type) {
                 var isDisabled = false;
                 if (this.active_release === "Nightly" && type === "Cloud HPO") isDisabled = true;
+                if (this.active_arch === "arm" && type !== "core") isDisabled = true;
                 return isDisabled;
             },
             disableUnsupportedContainerOption(option) {
@@ -290,7 +302,7 @@
                 return isDisabled;
             },
             isDisabled(e) {
-                return e.classList.contains('disabled');
+                return e.classList.contains("disabled");
             },
             releaseClickHandler(e, release) {
                 this.active_release = release;
@@ -316,6 +328,8 @@
             },
             archClickHandler(e, arch) {
                 if (this.isDisabled(e.target)) return;
+                if (arch === "arm") this.active_container_type = "core";
+                if (arch === "arm" && this.active_os_ver === "CentOS 7") this.active_os_ver = "Ubuntu 20.04";
                 this.active_arch = arch;
             },
             cudaClickHandler(e, version) {
