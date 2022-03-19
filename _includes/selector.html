@@ -92,6 +92,12 @@
                         </template>
                     </div>
                 </div>
+                <div class="note" x-show="getNoteHtml()">
+                    <div class="option-label"></div>
+                    <div class="option-blank">
+                        <span class="option-note" x-html="getNoteHtml()"></span>
+                    </div>
+                </div>
             </div>
             <div class="cmd">
                 <div class="cmd-label">Command</div>
@@ -110,13 +116,13 @@
     document.addEventListener('alpine:init', () => {
         Alpine.data('rapids_selector', () => ({
             // default values
-            active_python_ver: "3.8",
+            active_python_ver: "3.9",
             active_cuda_ver: "11.5",
             active_os_ver: "Ubuntu 20.04",
             active_method: "Conda",
             active_release: "Stable",
             active_arch: "amd",
-            active_container_type: "standard",
+            active_container_type: "core",
             active_packages: ["All"],
             active_container_options: [],
             active_additional_packages: [],
@@ -254,6 +260,23 @@
                 if (option === "notebooks") return "Include Jupyter Notebooks";
                 if (option === "development") return "Development Image";
                 return option;
+            },
+            getNoteHtml() {
+                var core_pkgs = ["cudf", "cuml", "cugraph", "cuspatial", "cuxfilter"];
+                var note_prefix = '<i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> The selected image contains the following packages:<br>';
+
+                if (this.active_container_type === "standard") {
+                    core_pkgs = [...core_pkgs, "dask-sql"];
+                }
+                if (this.active_container_type === "clx") {
+                    core_pkgs = [...core_pkgs, "clx"];
+                }
+                var pkgs_html = core_pkgs.map(pkg => "<code>" + pkg + "</code>").join(", ");
+
+                if (this.active_method === "Docker") {
+                    return note_prefix + pkgs_html;
+                }
+
             },
             getCmdHtml() {
                 if (this.active_method === "Docker")

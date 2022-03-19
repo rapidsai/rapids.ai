@@ -922,7 +922,7 @@ a.blue-btn:hover,
 .selector .options .note code {
     background: #e3e3e3;
     color: #000000;
-    padding: 0.2em;
+    padding: 0.1em 0.1em 0.15em;
 }
 
 .selector .options .option-blank {
