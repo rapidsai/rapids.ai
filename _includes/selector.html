@@ -8,7 +8,7 @@
                     <template x-for="arch in arches">
                         <div x-on:click="(e) => archClickHandler(e, arch)"
                             x-bind:class="{'active': arch === active_arch}" class="option" x-text="arch"
-                            x-text="() => getArchText(arch)">
+                            x-text="getArchText(arch)">
                         </div>
                     </template>
                 </div>
@@ -17,7 +17,7 @@
                     <template x-for="release in releases">
                         <div x-on:click="(e) => releaseClickHandler(e, release)"
                             x-bind:class="{'active': release === active_release}" class="option"
-                            x-text="() => getReleaseText(release)">
+                            x-text="getReleaseText(release)">
                         </div>
                     </template>
                 </div>
@@ -42,7 +42,7 @@
                     <template x-for="method in methods">
                         <div x-on:click="(e) => methodClickHandler(e, method)"
                             x-bind:class="{'active': method === active_method}" class="option"
-                            x-html="() => getMethodHTML(method)">
+                            x-html="getMethodHTML(method)">
                         </div>
                     </template>
                 </div>
@@ -52,7 +52,7 @@
                         <template x-for="package in packages">
                             <div x-on:click="(e) => packagesClickHandler(e, package)"
                                 x-bind:class="{'active': active_packages.includes(package)}" class="option"
-                                x-html="() => getPackageHTML(package)">
+                                x-html="getPackageHTML(package)">
                             </div>
                         </template>
                     </div>
@@ -71,7 +71,7 @@
                         <template x-for="version in os_vers">
                             <div x-on:click="(e) => containerOSClickHandler(e, version)"
                                 x-bind:class="{'active': version === active_os_ver, 'disabled': disableUnsupportedContainerOS(version)}"
-                                class="option" x-html="() => getOSHTML(version)">
+                                class="option" x-html="getOSHTML(version)">
                             </div>
                         </template>
                     </div>
@@ -80,7 +80,7 @@
                         <template x-for="type in container_types">
                             <div x-on:click="(e) => containerTypeClickHandler(e, type)"
                                 x-bind:class="{'active': type === active_container_type, 'disabled': disableUnsupportedContainerType(type)}"
-                                class="option" x-text="() => getContainerTypeText(type)"></div>
+                                class="option" x-text="getContainerTypeText(type)"></div>
                         </template>
                     </div>
                     <div class="options-section">
@@ -88,7 +88,7 @@
                         <template x-for="option in container_options">
                             <div x-on:click="(e) => containerOptionClickHandler(e, option)"
                                 x-bind:class="{'active': active_container_options.includes(option), 'disabled': disableUnsupportedContainerOption(option)}"
-                                class="option" x-text="() => getContainerOptionText(option)"></div>
+                                class="option" x-text="getContainerOptionText(option)"></div>
                         </template>
                     </div>
                 </div>
