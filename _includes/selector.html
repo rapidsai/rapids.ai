@@ -123,7 +123,7 @@
             active_release: "Stable",
             active_arch: "amd",
             active_img_type: "core",
-            active_packages: ["All"],
+            active_packages: ["Standard"],
             active_img_options: [],
             active_additional_packages: [],
 
@@ -138,8 +138,8 @@
             releases: ["Stable", "Nightly"],
             arches: ["amd", "arm"],
             img_types: ["core", "standard", "clx", "Cloud HPO"],
-            packages: ["All", "Standard", "cuDF", "cuML", "cuGraph", "cuSpatial", "cuXFilter", "CLX"],
-            additional_packages: ["DaskSQL", "JupyterLab", "PyTorch", "Graphistry", "Plotly Dash", "Xarray Spatial", "rtxpy", "Tensor"],
+            packages: ["Standard", "cuDF", "cuML", "cuGraph", "cuSpatial", "cuXFilter", "CLX"],
+            additional_packages: ["DaskSQL", "JupyterLab", "Graphistry", "Plotly Dash", "Xarray Spatial", "rtxpy", "Tensor"],
             img_options: ["notebooks", "development"],
             getStableVersion() {
                 return "{{ site.data.releases.stable-version }}";
@@ -159,9 +159,8 @@
                 return method + "&nbsp;<i class='fa-" + icon_class + "'></i>";
             },
             getPackageHTML(pkg) {
-                var package_group_selections = ["All", "Standard"]
 
-                if (package_group_selections.includes(pkg)) {
+                if (pkg === "Standard") {
                     return pkg + "&nbsp;<i class='fas fa-check-square'></i>";
                 }
 
@@ -199,7 +198,7 @@
                     .map(ch => this.highlightFlag("-c") + " " + ch + " ")
                     .join("");
 
-                if (this.active_packages.length === 1 && ["All", "Standard"].includes(this.active_packages[0])) {
+                if (this.active_packages.length === 1 && this.active_packages[0] === "Standard") {
                     pkgs = ["rapids"];
                 }
 
@@ -401,21 +400,16 @@
                 }
             },
             /**
-            * Determines which packages are selected. "All" and "Standard" selections can
-            * only be selected individually. All other packages can be selected together.
+            * Determines which packages are selected. "Standard" can only be
+            * selected individually. All other packages can be selected together.
             **/
             packagesClickHandler(e, package) {
-                var package_group_selections = ["All", "Standard"]
-
-                if (package_group_selections.includes(package)) {
+                if (package === "Standard") {
                     this.active_packages = [package];
                     return;
                 }
 
-                for (let i = 0; i < package_group_selections.length; i++) {
-                    let pkg = package_group_selections[i];
-                    this.active_packages = this.active_packages.filter(el => el !== pkg);
-                }
+                this.active_packages = this.active_packages.filter(el => el !== "Standard");
 
                 if (this.active_packages.includes(package)) {
                     if (this.active_packages.length === 1) return;
