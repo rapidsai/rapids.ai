@@ -139,7 +139,7 @@
             arches: ["amd", "arm"],
             img_types: ["core", "standard", "clx", "Cloud HPO"],
             packages: ["Standard", "cuDF", "cuML", "cuGraph", "cuSpatial", "cuXFilter", "CLX"],
-            additional_packages: ["DaskSQL", "JupyterLab", "Graphistry", "Plotly Dash", "Xarray Spatial", "rtxpy", "Tensor"],
+            additional_packages: ["DaskSQL", "JupyterLab", "Plotly Dash", "Xarray-Spatial", "RTXpy", "TensorFlow"],
             img_options: ["notebooks", "development"],
             note_prefix: "<i class='fas fa-info-circle text-blue'></i>",
             rapids_meta_pkgs: ["cudf", "cuml", "cugraph", "cuspatial", "cuxfilter"],
@@ -188,6 +188,22 @@
             highlightPkgOrImg(str) {
                 return "<span class='nv'>" + str + "</span>"
             },
+            highlightCondaPkg(pkg) {
+                var channel_pkg_separator = "::";
+                var pkg_components = pkg.split(channel_pkg_separator);
+                if (pkg_components.length === 1) {
+                    return this.highlightPkgOrImg(pkg);
+                }
+                return pkg_components[0] + channel_pkg_separator + this.highlightPkgOrImg(pkg_components[1]);
+            },
+            getAdditionalPkgName(pkg) {
+                var dask_prefix = this.active_release === "Nightly" ? "dask/label/dev::" : "";
+                var pkg_names = {
+                    "Plotly Dash": "dash",
+                    "DaskSQL": dask_prefix + "dask-sql"
+                }
+                return (pkg_names[pkg] || pkg).toLowerCase();
+            },
             getCondaCmdHtml() {
                 var rapids_version = this.active_release === "Stable" ? this.getStableVersion() : this.getNightlyVersion();
                 var rapids_channel = this.active_release === "Stable" ? "rapidsai" : "rapidsai-nightly";
@@ -199,6 +215,7 @@
                 var conda_channels = [rapids_channel, "nvidia", "conda-forge"]
                     .map(ch => this.highlightFlag("-c") + " " + ch + " ")
                     .join("");
+                var indentation = "    ";
 
                 if (this.active_packages.length === 1 && this.active_packages[0] === "Standard") {
                     pkgs = ["rapids"];
@@ -207,9 +224,23 @@
                 var pkgs_vers = pkgs.map(pkg => this.highlightPkgOrImg(pkg) + "=" + rapids_version + " ").join("").toLowerCase();
                 var all_pkgs = pkgs_vers + py_cuda_pkgs;
 
-                var cmd = this.highlightCmd('conda') + " create " + this.highlightFlag("-n") + " rapids-" + rapids_version + " " + conda_channels + "\\\n" +
-                    "    " + all_pkgs + " " + dask_prefix + this.highlightPkgOrImg("dask-sql");
-                return cmd;
+                var conda_create_ln = this.highlightCmd('conda') + " create " + this.highlightFlag("-n") + " rapids-" + rapids_version + " " + conda_channels;
+                var pkgs_ln = indentation + all_pkgs;
+                var add_pkgs_ln = "";
+
+                if (this.active_additional_packages.length) {
+                    add_pkgs_ln = indentation + this.active_additional_packages
+                        .map(pkg => this.highlightCondaPkg(this.getAdditionalPkgName(pkg)))
+                        .join(" ");
+                }
+
+                var lines = [
+                    conda_create_ln,
+                    pkgs_ln,
+                    add_pkgs_ln
+                ].filter(Boolean).join(" \\\n");
+
+                return lines;
             },
             getDockerCmdHtml() {
                 var hasNotebooks = this.active_img_options.includes("notebooks");
