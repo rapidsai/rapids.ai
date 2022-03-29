@@ -16,8 +16,8 @@
                     <div class="option-label">Release</div>
                     <template x-for="release in releases">
                         <div x-on:click="(e) => releaseClickHandler(e, release)"
-                            x-bind:class="{'active': release === active_release}" class="option"
-                            x-text="getReleaseText(release)">
+                            x-bind:class="{'active': release === active_release, 'disabled': disableUnsupportedRelease(release)}"
+                            class="option" x-text="getReleaseText(release)">
                         </div>
                     </template>
                 </div>
@@ -337,6 +337,13 @@
             getNewestCudaVer() {
                 return this.cuda_vers[this.cuda_vers.length - 1];
             },
+            disableUnsupportedRelease(release) {
+                var isDisabled = false;
+                if (this.active_img_type === "Cloud HPO" && release === "Nightly") {
+                    isDisabled = true
+                }
+                return isDisabled;
+            },
             disableUnsupportedCuda(cuda_version) {
                 var isDisabled = false;
                 if (this.active_img_options.includes("development") && cuda_version !== this.getNewestCudaVer()) {
@@ -377,6 +384,7 @@
                 return e.classList.contains("disabled");
             },
             releaseClickHandler(e, release) {
+                if (this.isDisabled(e.target)) return;
                 this.active_release = release;
                 if (this.active_release === "Nightly" && this.active_img_type === "Cloud HPO") {
                     this.active_img_type = "core"
