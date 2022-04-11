@@ -139,7 +139,7 @@ There are multiple ways you can deploy RAPIDS on a single instance, but the easi
 
 **2. Credentials.** Using the credentials supplied by AWS, log into the instance via SSH. For a short guide on launching your instance and accessing it, read the Getting Started with Amazon EC2 documentation.
 
-**3. Install.** Install docker in the AWS instance. This step is not required if you are using AWS Deep Learning AMI.
+**3. Install.** Install [Docker and the NVIDIA Docker runtime](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html) in the AWS instance. This step is not required if you are using AWS Deep Learning AMI.
 
 **4. Install.** Install RAPIDS docker image. The docker container can be customized by using the options provided in the **[Getting Started](https://rapids.ai/start.html)** page of RAPIDS. Example of an image that can be used is provided below:
 ```shell
