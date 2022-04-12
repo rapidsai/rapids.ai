@@ -30,9 +30,9 @@ RAPIDS uses optimized **[NVIDIA CUDA®](https://developer.nvidia.com/cuda-toolki
 Jump right into a GPU powered RAPIDS notebook online with either SageMaker Studio Lab or Colab [(v21.12 only)](https://docs.rapids.ai/notices/rsn0014/)
 .<br>
 
-[![SageMaker Studio Lab]({{ site.baseurl }}{% link /assets/images/Open-StudioLab.png%})](smsl.html){: target="_blank"}{: .half-image}
+[![SageMaker Studio Lab]({{ site.baseurl }}{% link /assets/images/Open-StudioLab.png%})](smsl.html){: target="_blank"}
 
-[![Colab]({{ site.baseurl }}{% link /assets/images/Open-Colab.png%})](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}{: .half-image}
+[![Colab]({{ site.baseurl }}{% link /assets/images/Open-Colab.png%})](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}
 
 # RAPIDS Installation Overview
 {: .section-title-full }
