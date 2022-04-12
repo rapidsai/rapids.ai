@@ -110,7 +110,7 @@ Learn how to deploy RAPIDS on **[Cloud Service Providers <i class="fa fa-angle-d
         <a href="cloud.html#googlecloud" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/GCP-logo.png %}" alt="GCP"> </a>
     </div>
     <div class="logo-flex">
-        <a href="https://www.paperspace.com/gpu-cloud" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/paperspace_small.png %}" alt="Paperspace"> </a>
+        <a href="https://www.paperspace.com/gpu-cloud?utm_source=nvidia&utm_campaign=rapids" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/paperspace_small.png %}" alt="Paperspace"> </a>
     </div>
 </section>
 
@@ -287,6 +287,7 @@ RAPIDS is available as conda packages, docker images, and from source builds. Us
 {% capture use_left %}
 {: .section-title-halfs}
 ## <i class="fas fa-laptop-code"></i> Next Steps with RAPIDS on Conda
+### Get Example Notebooks
 1. Install Jupyter Lab
 2. [Download and Explore](#repos) the RAPIDS Repo Notebooks and Community Notebooks
 3. Run RAPIDS using Python or JupyterLab
@@ -320,10 +321,25 @@ git clone https://github.com/rapidsai/cloud-ml-examples.git
 {% capture use_right %}
 ## <i class="fab fa-docker"></i> Next Steps with RAPIDS Docker Container
 
-The copied Docker command above should auto-run a notebook server. If it does not, run the following command within the Docker container to launch the notebook server.
+### Running in a Multi Node/ Multi GPU (MNMG) Environment
+To start the container in an MNMG environment, please use:
+
+```bash
+docker run -t -d --gpus all --shm-size=1g --ulimit memlock=-1 -v $PWD:/ws <container label>
+``` 
+The standard docker command may be sufficient, but the additional arguments ensures more stability.  Please see the [NCCL docs](https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/troubleshooting.html#sharing-data) and [UCX docs](https://github.com/openucx/ucx/blob/master/docs/source/running.md#running-in-docker-containers) for more details on usage
+
+### Starting and Stopping the Jupyter Lab Notebooks
+Either the standard (Single GPU) or the modified MNMG Docker command above should auto-run a Jupyter Lab Notebook server. If it does not, or you need to restart it, run the following command within the Docker container to launch the notebook server.
 
 ```bash
 bash /rapids/utils/start-jupyter.sh
+```
+
+If, for whatever reason, you need to shut down the Jupyter Lab server, please use:
+
+```bash
+bash /rapids/utils/stop-jupyter.sh
 ```
 
 **NOTE:** This will run **[JupyterLab](https://jupyterlab.readthedocs.io/en/stable/){: target="_blank"}** on your host machine at port 8888.
