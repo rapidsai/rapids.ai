@@ -110,7 +110,7 @@ Learn how to deploy RAPIDS on **[Cloud Service Providers <i class="fa fa-angle-d
         <a href="cloud.html#googlecloud" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/GCP-logo.png %}" alt="GCP"> </a>
     </div>
     <div class="logo-flex">
-        <a href="https://www.paperspace.com/gpu-cloud" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/paperspace_small.png %}" alt="Paperspace"> </a>
+        <a href="https://www.paperspace.com/gpu-cloud?utm_source=nvidia&utm_campaign=rapids" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/paperspace_small.png %}" alt="Paperspace"> </a>
     </div>
 </section>
 
