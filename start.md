@@ -1,80 +1,103 @@
 ---
 title: "Getting Started"
 description: "Get started with RAPIDS using conda, docker, or from source builds."
-tagline: "Try RAPIDS Now"
+tagline: "Get RAPIDS Now"
 button_text: "SELECT RELEASE"
 button_link: "#get-rapids"
 layout: default
 redirect_from: "/documentation.html" # redirect from old page to ensure existing links still work
 ---
 
-{% capture gs_overview %}
 # Getting Started
-{: .section-title-full }
+{: .section-title-full}
 
-The RAPIDS data science framework includes a collection of libraries for executing end-to-end data science pipelines completely in the GPU. It is designed to have a familiar look and feel to data scientists working in Python. Here’s a code snippet where we read in a CSV file and output some descriptive statistics:
+{% capture intro %}
+The RAPIDS data science framework is a collection of libraries for executing end-to-end data science pipelines completely in the GPU.
+{: .subtitle}
+
+{% endcapture %}
+{% include section-single.html
+    background="background-white" 
+    padding-top="0em" padding-bottom="0em" 
+    content-single=intro
+%}
+
+
+{% capture start_left %}
+## <i class="fas fa-bolt"></i> GPU Accelerated Data Science
+RAPIDS uses optimized **[NVIDIA CUDA®](https://developer.nvidia.com/cuda-toolkit){: target="_blank"}** primitives and high-bandwidth GPU memory to accelerate data preparation and machine learning. The goal of RAPIDS is not only to accelerate the individual parts of the typical data science workflow, but to accelerate the complete end-to-end workflow.
+
+It is designed to have a familiar look and feel to data scientists working in Python. Here's a code snippet where we read in a CSV file and output some descriptive statistics:
 
 ```python
 import cudf
-gdf = cudf.read_csv('path/to/file.csv')
-for column in gdf.columns:
-    print(gdf[column].mean())
+df = cudf.read_csv('path/to/file.csv')
+for column in df.columns:
+    print(df[column].mean())
 ```
 
-## GPU Powered Data Science
+{% endcapture %}
+{% capture start_right %}
 
-RAPIDS uses optimized **[NVIDIA CUDA®](https://developer.nvidia.com/cuda-toolkit){: target="_blank"}** primitives and high-bandwidth GPU memory to accelerate data preparation and machine learning. The goal of RAPIDS is not only to accelerate the individual parts of the typical data science workflow, but to accelerate the complete end-to-end workflow.
+## <i class="fa-solid fa-arrow-pointer"></i> Test Drive RAPIDS Now
 
-### <i class="fas fa-bolt"></i> Test Drive RAPIDS Now!
+Jump right into a GPU powered RAPIDS notebook, online, with either **[SageMaker Studio Lab](https://studiolab.sagemaker.aws/)** or **[Colab](https://colab.research.google.com/){: target="_blank"} [(v21.12 only)](https://docs.rapids.ai/notices/rsn0014/)**:
 
-Jump right into a GPU powered RAPIDS notebook online with either SageMaker Studio Lab or Colab [(v21.12 only)](https://docs.rapids.ai/notices/rsn0014/)
-.<br>
+<a href="smsl.html" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/Open-StudioLab.png%}" alt="Studio Lab"> </a>
 
-[![SageMaker Studio Lab]({{ site.baseurl }}{% link /assets/images/Open-StudioLab.png%})](smsl.html){: target="_blank"}
-
-[![Colab]({{ site.baseurl }}{% link /assets/images/Open-Colab.png%})](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}
-
-# RAPIDS Installation Overview
-{: .section-title-full }
-
-You can easily install RAPIDS on an 
-- on-prem computer with a CUDA enabled GPU or 
-- a CUDA enabled GPU cloud instance.
-
-Using
-
-- <a href="#rapids-conda" class="primary-btn">Conda</a>
-- <a href="#rapids-docker" class="primary-btn">Docker</a>
-
-You can also [build from source*](#env-rapids)  
+<a href="https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/Open-Colab.png%}" alt="CoLab"> </a>
 
 {% endcapture %}
+{% include section-halfs.html
+    background="background-white"
+    padding-top="1em" padding-bottom="10em"
+    content-left-half=start_left
+    content-right-half=start_right
+%}
 
+
+{% capture gs_overview %}
+# Installation Steps
+{: .section-title-full}
+
+Easily install RAPIDS on a local system with a CUDA enabled GPU or a CUDA enabled GPU cloud instance with either **[Conda](#conda)** or **[Docker](#docker)**. For some advanced use cases, RAPIDS can also be **[built from source](#source)**.
+
+{% endcapture %}
+{% include slopecap.html
+    background="background-gray"
+    position="top"
+    slope="down"
+%}
 {% include section-single.html
-    background="white"
-    padding-top="0em" padding-bottom="5em"
+    background="background-gray"
+    padding-top="3em" padding-bottom="1em"
     content-single=gs_overview
 %}
 
-{% capture prov_overview %}
-<div id="req"></div>
+<div id="requirements"></div>
+{% capture prov %}
+# Provision A System
+{: .section-title-full}
 
-# 1. Provision a RAPIDS Capable System
-{: .section-title-full }
+{: .section-title-halfs}
+{% endcapture %}
+{% include section-single.html
+    background="background-gray" 
+    padding-top="0em" padding-bottom="0em" 
+    content-single=prov
+%}
+{% capture req_left%}
+## <i class="fa-regular fa-memory"></i> System Requirements
 
-All provisioned provisioned systems need to be RAPIDS capable.  Here's what you need:
+All provisioned systems need to be RAPIDS capable. Here's what is required:
 
-<i class="fas fa-microchip text-purple"></i> **GPU:** NVIDIA Pascal™ or better with **[compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 6.0+ 
-**[Any of these GPUs or newer will work](https://medium.com/dropout-analytics/which-gpus-work-with-rapids-ai-f562ef29c75f)**
+<i class="fas fa-microchip text-purple"></i> **GPU:** NVIDIA Pascal™ or better with **[compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 6.0+ **[More details <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://medium.com/dropout-analytics/which-gpus-work-with-rapids-ai-f562ef29c75f){: target="_blank"}**
 
 <i class="fas fa-desktop text-purple"></i> **OS:** Ubuntu 18.04/20.04 or CentOS 7/8 with <code>gcc/++</code> 9.0+
-  |||  <i class="fas fa-info-circle text-purple"></i> **Experimental:** WSL2 with Windows 11 **[(please see this separate install guide](https://developer.nvidia.com/blog/run-rapids-on-microsoft-windows-10-using-wsl-2-the-windows-subsystem-for-linux/){: target="_blank"})**
 {: .no-tb-margins }
-
-- <i class="fas fa-bullhorn text-purple"></i> See [RDN 8](https://docs.rapids.ai/notices/rdn0008) for recent changes to <code>gcc/++</code> 9.0 requirements<br/>
+- <i class="fas fa-bullhorn text-purple"></i> See **[RDN 8](https://docs.rapids.ai/notices/rdn0008){: target="_blank"}** for recent changes to <code>gcc/++</code> 9.0 requirements<br/>
 - <i class="fas fa-info-circle text-purple"></i> RHEL 7/8 support is provided through CentOS 7/8 builds/installs
-
-
+- <i class="fas fa-desktop text-purple"></i> Experimental WSL2 on Windows11 **[See separate install guide <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://developer.nvidia.com/blog/run-rapids-on-microsoft-windows-10-using-wsl-2-the-windows-subsystem-for-linux/){: target="_blank"}**
 
 <i class="fas fa-download text-purple"></i> **CUDA & NVIDIA Drivers:** One of the following supported versions:
 {: .no-tb-margins }
@@ -85,92 +108,81 @@ All provisioned provisioned systems need to be RAPIDS capable.  Here's what you 
 - <i class="fas fa-check-circle text-purple"></i> [11.5](https://developer.nvidia.com/cuda-11-5-0-download-archive){: target="_blank"} & v495.29.05+
 
 {% endcapture %}
-{% include section-single.html
-    background="white"
-    padding-top="0em" padding-bottom="5em"
-    content-single=prov_overview
-%}
+{% capture req_mid %}
+## <i class="fa-regular fa-cloud"></i> RAPIDS Cloud Systems
 
-{% capture prov_right %}
-<div id="cloud"></div>
-## Use RAPIDS on a Cloud Provisioned System
-{: .section-title-halfs}
+Learn how to deploy RAPIDS on <br> **[Cloud Service Providers <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://rapids.ai/cloud){: target="_blank"}**
 
-### <i class="fas fa-bolt"></i> Provision 
-Learn how to deploy RAPIDS on **[Cloud Service Providers <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://rapids.ai/cloud){: target="_blank"}**
+<a href="cloud.html#aws" target="_blank"> <img class="quarter-image-center" src="{{ site.baseurl }}{% link /assets/images/AWS-logo.png %}" alt="AWS"> </a>
 
-<section class="container-logo-flex padding-top-{{ include.padding-top }} padding-bottom-{{ include.padding-bottom }}">
-    <div class="logo-flex">
-        <a href="cloud.html#aws" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/AWS-logo.png %}" alt="AWS"> </a>
-    </div>
-    <div class="logo-flex">
-        <a href="cloud.html#azure" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/azure-ml.png %}" alt="Azure ML"> </a>
-    </div>
-    <div class="logo-flex">
-        <a href="cloud.html#googlecloud" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/GCP-logo.png %}" alt="GCP"> </a>
-    </div>
-    <div class="logo-flex">
-        <a href="https://www.paperspace.com/gpu-cloud?utm_source=nvidia&utm_campaign=rapids" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/paperspace_small.png %}" alt="Paperspace"> </a>
-    </div>
-</section>
+<a href="cloud.html#azure" target="_blank"> <img class="quarter-image-center" src="{{ site.baseurl }}{% link /assets/images/azure-ml.png %}" alt="Azure ML"> </a>
+
+<a href="cloud.html#googlecloud" target="_blank"> <img class="quarter-image-center" src="{{ site.baseurl }}{% link /assets/images/GCP-logo.png %}" alt="GCP"> </a>
+
+<a href="https://www.paperspace.com/gpu-cloud" target="_blank"> <img class="quarter-image-center " src="{{ site.baseurl }}{% link /assets/images/paperspace_small.png %}" alt="Paperspace"> </a>
 
 {% endcapture %}
+{% capture req_right %}
+## <i class="fa-regular fa-computer"></i> RAPIDS Local Systems
 
-
-
-{% capture prov_left %}
-<div id="local"></div>
-## Use RAPIDS on a Local Provisioned System
-{: .section-subtitle-top-1}
-
-RAPIDS requires your local system or Workstation to have the prerequisites met above.  Other considerations for best performance include:
-- SSD drive
-- 1.5x-2x:1 ratio of host RAM to total GPU Memory (especially useful for Dask)
-- A late generation, mid to high end CPU
-- If you have 2x or more GPUs, NVLink between your GPUs
-
-We suggest that you take a look at the sample workflow in our Docker container (described below), which illustrates just how straightforward a basic XGBoost model training and testing workflow looks in RAPIDS.
-
-
-
-{% endcapture %}
-
-{% include section-halfs.html
-    background="background-white"
-    padding-top="1em" padding-bottom="10em"
-    content-left-half=prov_left
-    content-right-half=prov_right
-%}
-<div id="env-rapids"></div>
-{% capture env_overview %}
-# 2. Select and Installation Environment a RAPIDS Capable System
-{: .section-title-full }
-For most installations, you will need a Conda or Docker environments installed to install RAPIDS.  To build RAPIDS cuDF from source, please check out the **[cuDF README](https://github.com/rapidsai/cudf/tree/main#development-setup){: target="_blank"}** for from-source environment set up and build instructions.  If you need to build other packages from source, please contact us for the necessary build components and instructions.
-
-These examples are for Ubuntu.  Please modify appropriately for CentOS or RHEL.
-{% endcapture %}
-{% include section-single.html
-    background="white"
-    padding-top="0em" padding-bottom="5em"
-    content-single=env_overview
-%}
-<div id="rapids-docker"></div>
-{% capture env_right %}
-## [Docker](#rapids-docker)
-{: .section-title-halfs}
-### <i class="fab fa-docker text-purple"></i> **Docker Overview** 
-PAIDS requires both Docker CE v19.03+ and **[nvidia-container-toolkit](https://github.com/NVIDIA/nvidia-docker#quickstart){: target="_blank"}** installed
+Aside from the system requirments, other considerations for best performance include:
 {: .no-tb-margins }
 
-- <i class="fas fa-history text-purple"></i> [Legacy Support](#-docker-container) - Docker CE v17-18 and [nvidia-docker2](https://github.com/NVIDIA/nvidia-docker/wiki/Installation-(version-2.0)){: target="_blank"}
+- SSD drive (NVMe preferred)
+- Approximately **2:1** ratio of host RAM to total GPU Memory (especially useful for Dask)
+- **[NVLink](https://www.nvidia.com/en-us/data-center/nvlink/)** if with 2 or more GPUs
 
-### Install Docker
-**In Terminal:**
-#### 1. Download and Install Latest Docker CE Edition
+We suggest taking a look at the sample workflow in our Docker container, which illustrates how straightforward a basic XGBoost model training and testing workflow runs with RAPIDS.
+{% endcapture %}
+{% include section-thirds.html 
+    background="background-gray" 
+    padding-top="0em" padding-bottom="10em" 
+    content-left-third=req_left
+    content-middle-third=req_mid
+    content-right-third=req_right
+%}
+
+<div id="enviroment"></div>
+<div id="docker"></div>
+<div id="source"></div>
+<div id="conda"></div>
+{% capture env_overview %}
+# Install Environment
+{: .section-title-full }
+
+For most installations, you will need a Conda or Docker environments installed for RAPIDS. Note, these examples are for Ubuntu. Please modify appropriately for CentOS or RHEL.
+
+{% endcapture %}
+{% include slopecap.html
+    background="background-white"
+    position="top"
+    slope="up"
+%}
+{% include section-single.html
+    background="white"
+    padding-top="0em" padding-bottom="1em"
+    content-single=env_overview
+%}
+
+{% capture env_right %}
+## <i class="fab fa-docker text-purple"></i> Docker
+{: .section-title-halfs}
+
+RAPIDS requires both Docker CE v19.03+ and **[nvidia-container-toolkit](https://github.com/NVIDIA/nvidia-docker#quickstart){: target="_blank"}** installed.
+{: .no-tb-margins }
+
+- <i class="fas fa-history text-purple"></i> Legacy Support: Docker CE v17-18 and **[nvidia-docker2](https://github.com/NVIDIA/nvidia-docker/wiki/Installation-(version-2.0)){: target="_blank"}**
+
+
+**1. Download and Install Latest Docker CE Edition:**
+
 ```
 curl https://get.docker.com | sh
 ```
-#### 2. Install Latest NVIDIA Docker (Ubuntu Exmple)
+{: .margin-bottom-3em}
+
+**2. Install Latest NVIDIA Docker.** This is the Ubuntu Exmple:
+
 ```
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
 curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
@@ -179,172 +191,203 @@ curl -s -L https://nvidia.github.io/libnvidia-container/experimental/$distributi
 sudo apt-get update
 sudo apt-get install -y nvidia-docker2
 ```   
-#### 3. In new, seperate terminal window/tab, (Window 2) run this
+{: .margin-bottom-3em}
+
+**3. Start Docker.** In new, seperate terminal window run:
 ```
 sudo service docker stop
 sudo service docker start
 ```
+{: .margin-bottom-3em}
 
-##### You can close or keep use to later git clone additional RAPIDS exmaple notebookes on the side
 
-#### 4. Test NVIDIA Docker
+**4a. Test NVIDIA Docker:**
 
 ```
 docker run --gpus all nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark
 ```
-##### Legacy Docker Users
-Docker CE v18 & [nvidia-docker2](https://github.com/NVIDIA/nvidia-docker/wiki/Installation-(version-2.0)) users will need to replace the following for compatibility:
+{: .margin-bottom-3em}
+
+**4b. Legacy Docker Users.** Docker CE v18 & **[nvidia-docker2](https://github.com/NVIDIA/nvidia-docker/wiki/Installation-(version-2.0)){: target="_blank"}** users will need to replace the following for compatibility:
 ```bash
 'docker run --gpus all' with 'docker run --runtime=nvidia'
 ```
-{% endcapture %}
-<div id="rapids-conda"></div>
-{% capture env_left %}
-## [Conda](#rapids-conda)
+{: .margin-bottom-3em}
 
+{% endcapture %}
+
+
+
+{% capture env_left %}
+## <i class="fas fa-laptop-code"></i> Conda
 {: .section-title-halfs}
-### <i class="fas fa-laptop-code"></i> Conda Overview
+
 You can get a minimal conda installation with **[Miniconda](https://conda.io/miniconda.html){: target="_blank"}** or get the full installation with **[Anaconda](https://www.anaconda.com/download){: target="_blank"}**.
 
-### Install Conda
-**In Terminal:**
-#### 1. Download and run install conda script
+**1. Download and run install script:**
 ```
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
 ```
-#### 2. Customize your Conda install
-Please interact with your terminal window to finish installation.  We recommend enabling [conda-init]()
+{: .margin-bottom-3em}
 
-#### 3. Open a new conda window with Conda initialized
+**2. Customize Conda install.** Use the terminal window to finish installation. Note, we recommend enabling `conda-init`.
 
+**3. Start Conda.** Opening a new window should show Conda initialized.
+{: .padding-bottom-3em }
 
+## <i class="fa-regular fa-binary"></i> Build From Source
+{: .section-title-halfs}
 
+To build RAPIDS **cuDF** from source, see the **[cuDF README](https://github.com/rapidsai/cudf/tree/main#development-setup){: target="_blank"}** for source environment setup and build instructions.  If you need to build other packages from source, contact RAPIDS for the necessary build components and instructions.
+{: .padding-bottom-3em }
+
+## <i class="fas fa-laptop-code"></i> Where is Pip?
+{: .section-title-halfs}
+
+Refer to this **[blog post](https://medium.com/rapids-ai/rapids-0-7-release-drops-pip-packages-47fc966e9472){: target="_blank"}** for details on why PIP is not currently supported.
 {% endcapture %}
 {% include section-halfs.html
     background="background-white"
-    padding-top="1em" padding-bottom="1em"
+    padding-top="1em" padding-bottom="10em"
     content-left-half=env_left
     content-right-half=env_right
 %}
 
 
-{% capture install_overview %}
-# 3. Install RAPIDS
-{: .section-title-full }
-Once you've installed your environment, please use the interactive **[RAPIDS Release Selector](#get-rapids)** tool below to create your custom RAPIDS install script.
-{% endcapture %}
-{% include section-single.html
-    background="white"
-    padding-top="0em" padding-bottom="2em"
-    content-single=install_overview
-%}
-
 <div id="get-rapids"></div>
-{% capture get_content %}
-## [RAPIDS Release Selector](#get-rapids)
-{: .section-title-full }
+{% capture selector_header %}
+# Install RAPIDS
+{: .section-title-full}
 
-RAPIDS is available as conda packages, docker images, and from source builds. Use the tool below to select your preferred method, packages, and environment to install RAPIDS. Certain combinations may not be possible and are dimmed automatically. Be sure you've met the required **[prerequisites above](#req)** and see the **[details below](#details)**.
-{% endcapture %}
+RAPIDS is available in conda packages, docker images, and from source builds. Use the tool below to select your preferred method, packages, and environment to install RAPIDS. Certain combinations may not be possible and are dimmed automatically. Be sure you've met the required **[Prerequisites above](#requirements)** and see the **[Next Steps](#next-steps)** below.
+{: .padding-bottom-3em }
 
-{% include slopecap.html
-    background="background-purple"
-    position="top"
-    slope="down"
-%}
-{% include section-single.html
-    background="background-purple"
-    padding-top="1em" padding-bottom="1em"
-    content-single=get_content
-%}
-{% include selector.html
-	background="background-purple"
-	padding-top="1em" padding-bottom="1em"
-%}
-{% include selector-commands-stable.html %}
-{% include selector-commands-nightly.html %}
-
-{% capture options_details %}
-<div id="next"></div>
-# 4. Next Steps <br> <i class="fas fa-chevron-down"></i>
+## **Release Selector**
 {: .section-title-full}
 
 {% endcapture %}
-
+{% include slopecap.html
+    background="background-purple"
+    position="top"
+    slope="up"
+%}
 {% include section-single.html
     background="background-purple"
-    padding-top="0em" padding-bottom="3em"
-    content-single=options_details
+    padding-top="3em" padding-bottom="0em"
+    content-single=selector_header
 %}
+{% include selector.html
+	background="background-purple"
+	padding-top="0em" padding-bottom="10em"
+%}
+{% include selector-commands-stable.html %}
+{% include selector-commands-nightly.html %}
 {% include slopecap.html
     background="background-purple"
     position="bottom"
-    slope="up"
+    slope="down"
 %}
-<div id="next"></div>
+
+<div id="next_steps"></div>
+{% capture next_steps %}
+# Next Steps
+{: .section-title-full}
+
+Once installation has been successful, explore the capabilities of RAPIDS with the provided notebooks, tutorials, and guides below.
+
+{% endcapture %}
+{% include section-single.html
+    background="background-gray"
+    padding-top="5em" padding-bottom="0em"
+    content-single=next_steps
+%}
+
 
 {% capture use_left %}
+# RAPIDS on Conda
 {: .section-title-halfs}
-## <i class="fas fa-laptop-code"></i> Next Steps with RAPIDS on Conda
-### Get Example Notebooks
-1. Install Jupyter Lab
-2. [Download and Explore](#repos) the RAPIDS Repo Notebooks and Community Notebooks
-3. Run RAPIDS using Python or JupyterLab
+
+## <i class="far fa-bookmark"></i> Get Example Notebooks
+
+
+**1. Install Jupyter Lab.** If it or Jupyter Notebook is not already installed. 
+
+**2. Get Notebooks.** See links to the RAPIDS Notebooks and Community Notebooks below.
+
+**3. Run RAPIDS.** Use Python directly or start JupyterLab as below:
 ```
 jupyter-lab --allow-root --ip='0.0.0.0' --NotebookApp.token='**your token**'
 ```
-4. Check out the RAPIDS tutorials and workflows examples
-5. Explore our integrations or Install your other favorite Data Science or Machine Learning libraries
+{: .margin-bottom-3em}
 
-<div id="repos"></div>
-### RAPIDS Repos you can Clone
+**4. Check out the RAPIDS tutorials and workflows examples.**
 
-- **[RAPIDS Notebooks](https://github.com/rapidsai/notebooks)**
+**5. Explore.** See our integrations or install other favorite Data Science or Machine Learning libraries.
+{: .padding-bottom-3em }
+
+
+## <i class="fa-brands fa-github"></i> RAPIDS User Guide Repositorys
+
+
+**[Go to RAPIDS Notebooks](https://github.com/rapidsai/notebooks){: target="_blank"}** or clone directly:
 ```
 git clone https://github.com/rapidsai/notebooks.git
 git submodule update --init --remote --no-single-branch --depth 1
 ```
-- **[RAPIDS Community Notebooks](https://github.com/rapidsai-community/notebooks-contrib)**
+{: .margin-bottom-3em}
+
+**[Go To RAPIDS Community Notebooks](https://github.com/rapidsai-community/notebooks-contrib){: target="_blank"}** or clone directly:
 ```
 git clone https://github.com/rapidsai-community/notebooks-contrib.git
 ```
-- **[Cloud ML Notebooks](https://github.com/rapidsai/cloud-ml-examples)**
+{: .margin-bottom-3em}
+
+**[Go To Cloud ML Notebooks](https://github.com/rapidsai/cloud-ml-examples){: target="_blank"}** or clone directly:
 ```
 git clone https://github.com/rapidsai/cloud-ml-examples.git
 ```
-
-
+{: .margin-bottom-3em}
 
 {% endcapture %}
-
 {% capture use_right %}
-## <i class="fab fa-docker"></i> Next Steps with RAPIDS Docker Container
+# RAPIDS on Docker
+{: .section-title-halfs}
 
-### Running in a Multi Node/ Multi GPU (MNMG) Environment
-To start the container in an MNMG environment, please use:
+## <i class="fa-regular fa-circle-nodes"></i> Running Multi-Node/ <br> Multi-GPU (MNMG) Environment
+
+
+To start the container in an MNMG environment:
 
 ```bash
 docker run -t -d --gpus all --shm-size=1g --ulimit memlock=-1 -v $PWD:/ws <container label>
 ``` 
-The standard docker command may be sufficient, but the additional arguments ensures more stability.  Please see the [NCCL docs](https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/troubleshooting.html#sharing-data) and [UCX docs](https://github.com/openucx/ucx/blob/master/docs/source/running.md#running-in-docker-containers) for more details on usage
+{: .margin-bottom-3em}
 
-### Starting and Stopping the Jupyter Lab Notebooks
-Either the standard (Single GPU) or the modified MNMG Docker command above should auto-run a Jupyter Lab Notebook server. If it does not, or you need to restart it, run the following command within the Docker container to launch the notebook server.
+The standard docker command may be sufficient, but the additional arguments ensures more stability.  See the **[NCCL docs](https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/troubleshooting.html#sharing-data){: target="_blank"}** and **[UCX docs](https://github.com/openucx/ucx/blob/master/docs/source/running.md#running-in-docker-containers){: target="_blank"}** for more details on MNMG usage.
+{: .padding-bottom-3em }
+
+
+## <i class="far fa-bookmark"></i> Start / Stop Jupyter Lab Notebooks
+Either the standard single GPU or the modified MNMG Docker command above should auto-run a Jupyter Lab Notebook server. If it does not, or a restart is needed, run the following command within the Docker container to launch the notebook server:
 
 ```bash
 bash /rapids/utils/start-jupyter.sh
 ```
+{: .margin-bottom-3em}
 
-If, for whatever reason, you need to shut down the Jupyter Lab server, please use:
+If, for whatever reason, you need to shut down the Jupyter Lab server, use:
 
 ```bash
 bash /rapids/utils/stop-jupyter.sh
 ```
+{: .margin-bottom-3em}
 
-**NOTE:** This will run **[JupyterLab](https://jupyterlab.readthedocs.io/en/stable/){: target="_blank"}** on your host machine at port 8888.
+**NOTE:** Defaults will run **[JupyterLab](https://jupyterlab.readthedocs.io/en/stable/){: target="_blank"}** on your host machine at port: `8888`.
+{: .padding-bottom-3em }
 
-### Use JupyterLab to Explore the Demo Notebooks
+
+## <i class="far fa-bookmark"></i> Explore RAPIDS Demo Notebooks
 
 RAPIDS demo notebooks can be found in the notebooks directory:
 
@@ -366,21 +409,21 @@ RAPIDS demo notebooks can be found in the notebooks directory:
 <i class="far fa-folder-open"></i> **`/rapids/notebooks/xgboost`** (XGBoost)
 {: .no-tb-margins }
 
-You can get more RAPIDS tutorials and workflow examples by `git cloning` the **[RAPIDS Community Notebooks](<addlink>)**
+You can get more RAPIDS tutorials and workflow examples by `git cloning` the **[RAPIDS Community Notebooks](https://github.com/rapidsai-community/notebooks-contrib){: target="_blank"}**.
+{: .padding-bottom-3em }
 
-### Advanced Usage
+### <i class="fa-solid fa-screwdriver-wrench"></i> Advanced Usage
 
-See the **[RAPIDS Container README](https://hub.docker.com/r/rapidsai/rapidsai){: target="_blank"}** page for more information about using custom datasets. **[Docker Hub](https://hub.docker.com/r/rapidsai/rapidsai/){: target="_blank"}** and **[NVIDIA GPU Cloud](https://ngc.nvidia.com/catalog/containers/nvidia:rapidsai:rapidsai){: target="_blank"}** host RAPIDS containers with full list of available **[tags](https://hub.docker.com/r/rapidsai/rapidsai#full-tag-list){: target="_blank"}**.
+See the **[RAPIDS Container README](https://hub.docker.com/r/rapidsai/rapidsai){: target="_blank"}** for more information about using custom datasets. **[Docker Hub](https://hub.docker.com/r/rapidsai/rapidsai/){: target="_blank"}** and **[NVIDIA GPU Cloud](https://ngc.nvidia.com/catalog/containers/nvidia:rapidsai:rapidsai){: target="_blank"}** host RAPIDS containers with full list of available **[tags](https://hub.docker.com/r/rapidsai/rapidsai#full-tag-list){: target="_blank"}**.
 
 {% endcapture %}
 
 {% include section-halfs.html
     background="background-gray"
-    padding-top="5em" padding-bottom="10em"
+    padding-top="1em" padding-bottom="10em"
     content-left-half=use_left
     content-right-half=use_right
 %}
-
 
 {% include slopecap.html
     background="background-darkpurple"
@@ -389,7 +432,7 @@ See the **[RAPIDS Container README](https://hub.docker.com/r/rapidsai/rapidsai){
 %}
 
 {% include cta-footer.html
-    name="TRY RAPIDS NOW ONLINE"
-    button="LAUNCH IN COLAB"
-    link="https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true"
+    name="INSTALL RAPIDS NOW"
+    button="SELECT RELEASE"
+    link="start.html#get-rapids"
 %}
