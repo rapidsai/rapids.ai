@@ -138,6 +138,13 @@ strong {
     transform: translate(-50%);
 }
 
+.quarter-image-center {
+    position: relative;
+    left: 25%;
+    width: 25%;
+}
+
+
 .flex-center {
     display: flex;
     justify-content: center;
@@ -635,7 +642,7 @@ a h2:hover,
 }
 
 .logo-flex a img {
-    max-width: 120px;
+    max-width: 100px;
 }
 
 .projects-logo {
