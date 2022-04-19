@@ -76,7 +76,7 @@ Easily install RAPIDS on a local system with a CUDA enabled GPU or a CUDA enable
 
 <div id="requirements"></div>
 {% capture prov %}
-# Provision A System
+# Step One: Provision A System
 {: .section-title-full}
 
 {: .section-title-halfs}
@@ -147,7 +147,7 @@ We suggest taking a look at the sample workflow in our Docker container, which i
 <div id="source"></div>
 <div id="conda"></div>
 {% capture env_overview %}
-# Install Environment
+# Step Two: Install Environment
 {: .section-title-full }
 
 For most installations, you will need a Conda or Docker environments installed for RAPIDS. Note, these examples are for Ubuntu. Please modify appropriately for CentOS or RHEL.
@@ -257,7 +257,7 @@ Refer to this **[blog post](https://medium.com/rapids-ai/rapids-0-7-release-drop
 
 <div id="get-rapids"></div>
 {% capture selector_header %}
-# Install RAPIDS
+# Step Three: Install RAPIDS
 {: .section-title-full}
 
 RAPIDS is available in conda packages, docker images, and from source builds. Use the tool below to select your preferred method, packages, and environment to install RAPIDS. Certain combinations may not be possible and are dimmed automatically. Be sure you've met the required **[Prerequisites above](#requirements)** and see the **[Next Steps](#next-steps)** below.
@@ -291,7 +291,7 @@ RAPIDS is available in conda packages, docker images, and from source builds. Us
 
 <div id="next_steps"></div>
 {% capture next_steps %}
-# Next Steps
+# Step Four: Learn More
 {: .section-title-full}
 
 Once installation has been successful, explore the capabilities of RAPIDS with the provided notebooks, tutorials, and guides below.
