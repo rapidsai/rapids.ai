@@ -340,14 +340,25 @@
 
                 return notes.map(note => this.note_prefix + " " + note).join("<br>");
             },
+            getArmNote() {
+                return this.note_prefix + " ARM support does not currently include Jetson products.";
+            },
             getNoteHtml() {
+                var notes = [];
+
+                if (this.active_arch === "arm") {
+                    notes.push(this.getArmNote());
+                }
+
                 if (this.active_method === "Docker") {
-                    return this.getDockerNote();
+                    notes.push(this.getDockerNote());
                 }
 
                 if (this.active_method === "Conda") {
-                    return this.getCondaNote();
+                    notes.push(this.getCondaNote());
                 }
+
+                return notes.join("<br>");
             },
             getCmdHtml() {
                 if (this.active_method === "Docker")
