@@ -46,7 +46,7 @@
                         </div>
                     </template>
                 </div>
-                <div class="conda-options-container" x-bind="transitionSettings" x-show="active_method === 'Conda'">
+                <div class="conda-options-container" x-show="active_method === 'Conda'">
                     <div class="options-section">
                         <div class="option-label">Packages</div>
                         <template x-for="package in packages">
@@ -65,7 +65,7 @@
                         </template>
                     </div>
                 </div>
-                <div class="docker-options-container" x-bind="transitionSettings" x-show="active_method === 'Docker'">
+                <div class="docker-options-container" x-show="active_method === 'Docker'">
                     <div class="options-section">
                         <div class="option-label">Image OS</div>
                         <template x-for="version in os_vers">
@@ -517,11 +517,6 @@
                     return;
                 }
                 this.active_additional_packages = [...this.active_additional_packages, package];
-            },
-            transitionSettings: {
-                ['x-transition']() { },
-                ['x-transition:enter.duration.150ms']() { },
-                ['x-transition:leave.duration.150ms']() { }
             },
             copyToClipboard() {
                 var range = document.createRange();
