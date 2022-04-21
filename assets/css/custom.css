@@ -898,6 +898,8 @@ a.blue-btn:hover,
     text-transform: uppercase;
     font-weight: 600;
     margin-top: 0.6em;
+    margin-right: 0.6em;
+    text-align: right;
 }
 
 .selector .options .option {
@@ -1272,6 +1274,7 @@ code.tag {
 
     .selector .options .option-label, .selector .cmd .cmd-label {
         width: 5em;
+        text-align: left;
     }
 
     .selector .options .option, .selector .options .option-blank, .selector .options .option-notice  {
