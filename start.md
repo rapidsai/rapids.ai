@@ -198,7 +198,7 @@ RAPIDS requires both Docker CE v19.03+ and **[nvidia-container-toolkit](https://
 - <i class="fas fa-history text-purple"></i> Legacy Support: Docker CE v17-18 and **[nvidia-docker2](https://github.com/NVIDIA/nvidia-docker/wiki/Installation-(version-2.0)){: target="_blank"}**
 
 
-**1. Copy Command belopw to Download and Install Latest Docker CE Edition:**
+**1. Copy Command Below to Download and Install Latest Docker CE Edition:**
 
 ```
 curl https://get.docker.com | sh
