@@ -41,51 +41,65 @@ for column in df.columns:
 
 ## <i class="fa-solid fa-arrow-pointer"></i> Test Drive RAPIDS Now
 
-Jump right into a GPU powered RAPIDS notebook, online, with either **[SageMaker Studio Lab](https://studiolab.sagemaker.aws/)** or **[Colab](https://colab.research.google.com/){: target="_blank"} [(v21.12 only)](https://docs.rapids.ai/notices/rsn0014/)**:
+Jump right into a GPU powered RAPIDS notebook, online, with either **[SageMaker Studio Lab](https://studiolab.sagemaker.aws/)** or **[Colab](https://colab.research.google.com/){: target="_blank"}** 
+(currently only supports **[RAPIDS v21.12](https://docs.rapids.ai/notices/rsn0014/)**):
 
 <a href="smsl.html" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/Open-StudioLab.png%}" alt="Studio Lab"> </a>
 
 <a href="https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/Open-Colab.png%}" alt="CoLab"> </a>
 
 {% endcapture %}
+{% capture gs_overview %}
+# Installation Overview
+{: .section-title-full}
+
+In four steps, easily install RAPIDS on a local system or cloud instance with a CUDA enabled GPU for either **[Conda](#conda)** or **[Docker](#docker)** and then explore our user guides and examples.
+
+{% endcapture %}
+{% capture gs_left %}
+## **[<i class="fad fa-chevron-double-down"></i> Step 1: Provision A System](#requirements)** 
+- Check system requirements
+- Choose a cloud or local system
+
+## **[<i class="fad fa-chevron-double-down"></i> Step 2: Install Environment](#environment)**
+- Choose to use Conda or Docker
+- Choose to Build from source 
+
+{% endcapture %}
+{% capture gs_right%}
+## **[<i class="fad fa-chevron-double-down"></i> Step 3: Install RAPIDS](#get-rapids)**
+- Select and install RAPIDS libraries
+
+## **[<i class="fad fa-chevron-double-down"></i> Step 4: Learn More](#next-steps)**
+- Check out examples and user guides
+
+{% endcapture %}
 {% include section-halfs.html
     background="background-white"
-    padding-top="1em" padding-bottom="10em"
+    padding-top="1em" padding-bottom="3em"
     content-left-half=start_left
     content-right-half=start_right
 %}
-
-
-{% capture gs_overview %}
-# Installation Steps
-{: .section-title-full}
-
-Easily install RAPIDS on a local system with a CUDA enabled GPU or a CUDA enabled GPU cloud instance with either **[Conda](#conda)** or **[Docker](#docker)**. For some advanced use cases, RAPIDS can also be **[built from source](#source)**.
-
-{% endcapture %}
-{% include slopecap.html
-    background="background-gray"
-    position="top"
-    slope="down"
-%}
 {% include section-single.html
-    background="background-gray"
-    padding-top="3em" padding-bottom="1em"
+    background="background-white"
+    padding-top="3em" padding-bottom="0em"
     content-single=gs_overview
 %}
+{% include section-halfs.html
+    background="background-white"
+    padding-top="1em" padding-bottom="10em"
+    content-left-half=gs_left
+    content-right-half=gs_right
+%}
+
 
 <div id="requirements"></div>
 {% capture prov %}
-# Step One: Provision A System
+# Step 1: Provision A System
 {: .section-title-full}
 
 {: .section-title-halfs}
 {% endcapture %}
-{% include section-single.html
-    background="background-gray" 
-    padding-top="0em" padding-bottom="0em" 
-    content-single=prov
-%}
 {% capture req_left%}
 ## <i class="fa-regular fa-memory"></i> System Requirements
 
@@ -125,7 +139,7 @@ Learn how to deploy RAPIDS on <br> **[Cloud Service Providers <i class="fa fa-an
 {% capture req_right %}
 ## <i class="fa-regular fa-computer"></i> RAPIDS Local Systems
 
-Aside from the system requirments, other considerations for best performance include:
+Aside from the system requirements, other considerations for best performance include:
 {: .no-tb-margins }
 
 - SSD drive (NVMe preferred)
@@ -134,6 +148,16 @@ Aside from the system requirments, other considerations for best performance inc
 
 We suggest taking a look at the sample workflow in our Docker container, which illustrates how straightforward a basic XGBoost model training and testing workflow runs with RAPIDS.
 {% endcapture %}
+{% include slopecap.html
+    background="background-gray"
+    position="top"
+    slope="down"
+%}
+{% include section-single.html
+    background="background-gray" 
+    padding-top="3em" padding-bottom="0em" 
+    content-single=prov
+%}
 {% include section-thirds.html 
     background="background-gray" 
     padding-top="0em" padding-bottom="10em" 
@@ -142,12 +166,12 @@ We suggest taking a look at the sample workflow in our Docker container, which i
     content-right-third=req_right
 %}
 
-<div id="enviroment"></div>
+<div id="environment"></div>
 <div id="docker"></div>
 <div id="source"></div>
 <div id="conda"></div>
 {% capture env_overview %}
-# Step Two: Install Environment
+# Step 2: Install Environment
 {: .section-title-full }
 
 For most installations, you will need a Conda or Docker environments installed for RAPIDS. Note, these examples are for Ubuntu. Please modify appropriately for CentOS or RHEL.
@@ -159,7 +183,7 @@ For most installations, you will need a Conda or Docker environments installed f
     slope="up"
 %}
 {% include section-single.html
-    background="white"
+    background="background-white"
     padding-top="0em" padding-bottom="1em"
     content-single=env_overview
 %}
@@ -181,7 +205,7 @@ curl https://get.docker.com | sh
 ```
 {: .margin-bottom-3em}
 
-**2. Install Latest NVIDIA Docker.** This is the Ubuntu Exmple:
+**2. Install Latest NVIDIA Docker.** This is the Ubuntu Example:
 
 ```
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
@@ -193,7 +217,7 @@ sudo apt-get install -y nvidia-docker2
 ```   
 {: .margin-bottom-3em}
 
-**3. Start Docker.** In new, seperate terminal window run:
+**3. Start Docker.** In new, separate terminal window run:
 ```
 sudo service docker stop
 sudo service docker start
@@ -239,7 +263,7 @@ bash Miniconda3-latest-Linux-x86_64.sh
 ## <i class="fa-regular fa-binary"></i> Build From Source
 {: .section-title-halfs}
 
-To build RAPIDS **cuDF** from source, see the **[cuDF README](https://github.com/rapidsai/cudf/tree/main#development-setup){: target="_blank"}** for source environment setup and build instructions.  If you need to build other packages from source, contact RAPIDS for the necessary build components and instructions.
+To build RAPIDS **cuDF** from source, see the **[cuDF README](https://github.com/rapidsai/cudf/tree/main#development-setup){: target="_blank"}** for source environment setup and build instructions.  If you need to build other packages from source, first check their README documentation, and if further help is needed reach out on our [Slack Channel](https://join.slack.com/t/rapids-goai/shared_invite/zt-trnsul8g-Sblci8dk6dIoEeGpoFcFOQ). 
 {: .padding-bottom-3em }
 
 ## <i class="fas fa-laptop-code"></i> Where is Pip?
@@ -257,7 +281,7 @@ Refer to this **[blog post](https://medium.com/rapids-ai/rapids-0-7-release-drop
 
 <div id="get-rapids"></div>
 {% capture selector_header %}
-# Step Three: Install RAPIDS
+# Step 3: Install RAPIDS
 {: .section-title-full}
 
 RAPIDS is available in conda packages, docker images, and from source builds. Use the tool below to select your preferred method, packages, and environment to install RAPIDS. Certain combinations may not be possible and are dimmed automatically. Be sure you've met the required **[Prerequisites above](#requirements)** and see the **[Next Steps](#next-steps)** below.
@@ -283,20 +307,21 @@ RAPIDS is available in conda packages, docker images, and from source builds. Us
 %}
 {% include selector-commands-stable.html %}
 {% include selector-commands-nightly.html %}
-{% include slopecap.html
-    background="background-purple"
-    position="bottom"
-    slope="down"
-%}
 
-<div id="next_steps"></div>
+
+<div id="next-steps"></div>
 {% capture next_steps %}
-# Step Four: Learn More
+# Step 4: Learn More
 {: .section-title-full}
 
 Once installation has been successful, explore the capabilities of RAPIDS with the provided notebooks, tutorials, and guides below.
 
 {% endcapture %}
+{% include slopecap.html
+    background="background-gray"
+    position="top"
+    slope="up"
+%}
 {% include section-single.html
     background="background-gray"
     padding-top="5em" padding-bottom="0em"
@@ -327,7 +352,7 @@ jupyter-lab --allow-root --ip='0.0.0.0' --NotebookApp.token='**your token**'
 {: .padding-bottom-3em }
 
 
-## <i class="fa-brands fa-github"></i> RAPIDS User Guide Repositorys
+## <i class="fa-brands fa-github"></i> RAPIDS User Guide Repositories
 
 
 **[Go to RAPIDS Notebooks](https://github.com/rapidsai/notebooks){: target="_blank"}** or clone directly:
@@ -428,7 +453,7 @@ See the **[RAPIDS Container README](https://hub.docker.com/r/rapidsai/rapidsai){
 {% include slopecap.html
     background="background-darkpurple"
     position="top"
-    slope="up"
+    slope="down"
 %}
 
 {% include cta-footer.html

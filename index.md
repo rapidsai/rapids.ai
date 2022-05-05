@@ -72,8 +72,8 @@ for column in gdf.columns:
 Find more details on our **[Get Started Page <i class="fas fa-angle-double-right"></i>](start.html)**
 
 ## <i class="fas fa-bolt"></i> Try Now Online
-Jump right into a GPU powered RAPIDS notebook online with either SageMaker Studio Lab or Colab [(v21.12 only)](https://docs.rapids.ai/notices/rsn0014/)
-.<br>
+Jump right into a GPU powered RAPIDS notebook, online, with either **[SageMaker Studio Lab](https://studiolab.sagemaker.aws/)** or **[Colab](https://colab.research.google.com/){: target="_blank"}** 
+(currently only supports **[RAPIDS v21.12](https://docs.rapids.ai/notices/rsn0014/)**):
 
 [![SageMaker Studio Lab]({{ site.baseurl }}{% link /assets/images/Open-StudioLab.png%})](smsl.html){: target="_blank"}{: .half-image}
 
