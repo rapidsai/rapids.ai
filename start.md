@@ -248,16 +248,16 @@ docker run --gpus all nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark
 
 You can get a minimal conda installation with **[Miniconda](https://conda.io/miniconda.html){: target="_blank"}** or get the full installation with **[Anaconda](https://www.anaconda.com/download){: target="_blank"}**.
 
-**1. Download and run install script:**
+**1. Copy commands to download and run install script:**
 ```
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
 ```
 {: .margin-bottom-3em}
 
-**2. Customize Conda install.** Use the terminal window to finish installation. Note, we recommend enabling `conda-init`.
+**2. Customize Conda and run the install.** Use the terminal window to finish installation. Note, we recommend enabling `conda-init`.
 
-**3. Start Conda.** Opening a new window should show Conda initialized.
+**3. Start Conda.** As per Conda's instructions, open a new terminal window, which should now show Conda initialized.
 {: .padding-bottom-3em }
 
 ## <i class="fa-regular fa-binary"></i> Build From Source
