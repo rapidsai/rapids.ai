@@ -198,7 +198,7 @@ RAPIDS requires both Docker CE v19.03+ and **[nvidia-container-toolkit](https://
 - <i class="fas fa-history text-purple"></i> Legacy Support: Docker CE v17-18 and **[nvidia-docker2](https://github.com/NVIDIA/nvidia-docker/wiki/Installation-(version-2.0)){: target="_blank"}**
 
 
-**1. Download and Install Latest Docker CE Edition:**
+**1. Copy Command belopw to Download and Install Latest Docker CE Edition:**
 
 ```
 curl https://get.docker.com | sh
@@ -248,16 +248,16 @@ docker run --gpus all nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark
 
 You can get a minimal conda installation with **[Miniconda](https://conda.io/miniconda.html){: target="_blank"}** or get the full installation with **[Anaconda](https://www.anaconda.com/download){: target="_blank"}**.
 
-**1. Copy commands to download and run install script:**
+**1. Copy Commands Below to Download and Run Install Script:**
 ```
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
 ```
 {: .margin-bottom-3em}
 
-**2. Customize Conda and run the install.** Use the terminal window to finish installation. Note, we recommend enabling `conda-init`.
+**2. Customize Conda and Run the Install.** Use the terminal window to finish installation. Note, we recommend enabling `conda-init`.
 
-**3. Start Conda.** As per Conda's instructions, open a new terminal window, which should now show Conda initialized.
+**3. Start Conda.** Open a new terminal window, which should now show Conda initialized.
 {: .padding-bottom-3em }
 
 ## <i class="fa-regular fa-binary"></i> Build From Source
