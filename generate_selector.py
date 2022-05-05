@@ -79,6 +79,7 @@ def generate_source(config):
 def generate_conda_all(config, meta_package):
     """Generates conda install commands with all libraries"""
     rapids_ver = "{{" + f"site.data.releases.{config['name']}-version" +"}}" # Use "{{ var }}" syntax to get version number from Jekyll site data
+    dask_prefix = "dask/label/dev::" if config['name'] == "nightly" else ""
     for cuda_ver in config["cuda"]:
         config["cmds"].append("\n<!-- conda "+"all "+cuda_ver+" -->\n")
         for py_ver in config["py"]:
@@ -88,7 +89,7 @@ def generate_conda_all(config, meta_package):
             channel = "rapidsai" + ("-nightly" if config["name"] == "nightly" else "")
             cmd = "```bash\n\
 conda create -n rapids-"+rapids_ver+" -c "+channel+" -c nvidia -c conda-forge \\\n\
-    "+meta_package+"="+rapids_ver+" python="+py_ver+" cudatoolkit="+cuda_ver+" dask-sql"+"\n\
+    "+meta_package+"="+rapids_ver+" python="+py_ver+" cudatoolkit="+cuda_ver+" "+dask_prefix+"dask-sql"+"\n\
 ```\n\
 {: ."+tag_name+"-all-conda-py"+tag_py+"-cuda"+tag_cuda+" .hidden }\n"
             config["cmds"].append(cmd)

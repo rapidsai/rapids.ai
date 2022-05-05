@@ -86,7 +86,7 @@ Watch presentations from the **[Dask Youtube channel](https://www.youtube.com/pl
 See the latest **[documentation from Dask](https://docs.dask.org/en/latest/){: target="_blank"}**.
 
 ## <i class="far fa-file-code"></i> Check Out Dask Tutorials
-Explore Dask tutorials on **[Github](https://github.com/dask/dask-tutorial){: target="_blank"}**, see Dask code examples on **[dask.org](https://examples.dask.org){: target="_blank"}** and **[Binder](https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab){: target="_blank"}**.
+Explore Dask tutorials on **[GitHub](https://github.com/dask/dask-tutorial){: target="_blank"}**, see Dask code examples on **[dask.org](https://examples.dask.org){: target="_blank"}** and **[Binder](https://mybinder.org/v2/gh/dask/dask-examples/master?urlpath=lab){: target="_blank"}**.
 
 {% endcapture %}
 {% include section-halfs.html 
