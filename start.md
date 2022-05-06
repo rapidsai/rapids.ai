@@ -1,6 +1,6 @@
 ---
 title: "Getting Started"
-description: "Get started with RAPIDS using conda, docker, or from source builds."
+description: "Get started with RAPIDS using conda or docker."
 tagline: "Get RAPIDS Now"
 button_text: "SELECT RELEASE"
 button_link: "#get-rapids"
@@ -184,7 +184,7 @@ For most installations, you will need a Conda or Docker environments installed f
 %}
 {% include section-single.html
     background="background-white"
-    padding-top="0em" padding-bottom="1em"
+    padding-top="3em" padding-bottom="1em"
     content-single=env_overview
 %}
 
@@ -198,14 +198,14 @@ RAPIDS requires both Docker CE v19.03+ and **[nvidia-container-toolkit](https://
 - <i class="fas fa-history text-purple"></i> Legacy Support: Docker CE v17-18 and **[nvidia-docker2](https://github.com/NVIDIA/nvidia-docker/wiki/Installation-(version-2.0)){: target="_blank"}**
 
 
-**1. Copy Command Below to Download and Install Latest Docker CE Edition:**
+**1. Download and Install.** Copy command below to download and install the latest Docker CE Edition:
 
 ```
 curl https://get.docker.com | sh
 ```
 {: .margin-bottom-3em}
 
-**2. Install Latest NVIDIA Docker.** This is the Ubuntu Example:
+**2. Install Latest NVIDIA Docker.** For example, this is the Ubuntu Example:
 
 ```
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
@@ -217,7 +217,7 @@ sudo apt-get install -y nvidia-docker2
 ```   
 {: .margin-bottom-3em}
 
-**3. Start Docker.** In new, separate terminal window run:
+**3. Start Docker.** In new terminal window run:
 ```
 sudo service docker stop
 sudo service docker start
@@ -248,7 +248,7 @@ docker run --gpus all nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark
 
 You can get a minimal conda installation with **[Miniconda](https://conda.io/miniconda.html){: target="_blank"}** or get the full installation with **[Anaconda](https://www.anaconda.com/download){: target="_blank"}**.
 
-**1. Copy Commands Below to Download and Run Install Script:**
+**1. Download and Run Install Script**. Copy the command below to download and run the miniconda install scriptg
 ```
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
@@ -266,10 +266,10 @@ bash Miniconda3-latest-Linux-x86_64.sh
 To build RAPIDS **cuDF** from source, see the **[cuDF README](https://github.com/rapidsai/cudf/tree/main#development-setup){: target="_blank"}** for source environment setup and build instructions.  If you need to build other packages from source, first check their README documentation, and if further help is needed reach out on our [Slack Channel](https://join.slack.com/t/rapids-goai/shared_invite/zt-trnsul8g-Sblci8dk6dIoEeGpoFcFOQ). 
 {: .padding-bottom-3em }
 
-## <i class="fas fa-laptop-code"></i> Where is Pip?
+## <i class="fas fa-laptop-code"></i> Where is PIP?
 {: .section-title-halfs}
 
-Refer to this **[blog post](https://medium.com/rapids-ai/rapids-0-7-release-drops-pip-packages-47fc966e9472){: target="_blank"}** for details on why PIP is not currently supported.
+Refer to this **[blog post](https://medium.com/rapids-ai/rapids-0-7-release-drops-pip-packages-47fc966e9472){: target="_blank"}** for details on why PIP is not currently supported. PIP may be supported in future releases. 
 {% endcapture %}
 {% include section-halfs.html
     background="background-white"
