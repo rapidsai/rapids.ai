@@ -143,7 +143,7 @@ RAPIDS can be deployed on Amazon Web Services (AWS) in several ways:
 
 There are multiple ways you can deploy RAPIDS on a single instance, but the easiest is to use the RAPIDS docker image:
 
-**1. Initiate.** Initiate an instance supported by RAPIDS. See the introduction section for a list of supported instance types. It is recommended to use an AMI that already includes the required NVIDIA drivers, such as the **[Amazon Linux 2 AMI with NVIDIA TESLA GPU Driver](https://aws.amazon.com/marketplace/pp/Amazon-Web-Services-Amazon-Linux-2-AMI-with-NVIDIA/B07S5G9S1Z)** or the **[AWS Deep Learning AMI.](https://docs.aws.amazon.com/dlami/latest/devguide/what-is-dlami.html)**
+**1. Initiate.** Initiate an instance supported by RAPIDS. See the introduction section for a list of supported instance types. It is recommended to use an AMI that already includes the required NVIDIA drivers, such as the **[AWS Deep Learning AMI](https://aws.amazon.com/marketplace/pp/prodview-7ikjtg3um26wq?sr=0-9&ref_=beagle&applicationId=AWSMPContessa) ([docs](https://docs.aws.amazon.com/dlami/latest/devguide/what-is-dlami.html))**.  Other options include the **[Amazon Linux 2 AMI with NVIDIA TESLA GPU Driver](https://aws.amazon.com/marketplace/pp/Amazon-Web-Services-Amazon-Linux-2-AMI-with-NVIDIA/B07S5G9S1Z)**.
 
 **2. Credentials.** Using the credentials supplied by AWS, log into the instance via SSH. For a short guide on launching your instance and accessing it, read the Getting Started with Amazon EC2 documentation.
 
