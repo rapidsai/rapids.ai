@@ -246,9 +246,9 @@ docker run --gpus all nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark
 ## <i class="fas fa-laptop-code"></i> Conda
 {: .section-title-halfs}
 
-You can get a minimal conda installation with **[Miniconda](https://conda.io/miniconda.html){: target="_blank"}** or get the full installation with **[Anaconda](https://www.anaconda.com/download){: target="_blank"}**.
+RAPIDS can use either a minimal conda installation with **[Miniconda](https://conda.io/miniconda.html){: target="_blank"}** or a full installation of **[Anaconda](https://www.anaconda.com/download){: target="_blank"}**. Below is a quick installation guide using miniconda.
 
-**1. Download and Run Install Script**. Copy the command below to download and run the miniconda install scriptg
+**1. Download and Run Install Script**. Copy the command below to download and run the miniconda install script:
 ```
 wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh
