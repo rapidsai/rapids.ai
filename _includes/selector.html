@@ -138,11 +138,11 @@
             releases: ["Stable", "Nightly"],
             arches: ["amd", "arm"],
             img_types: ["core", "standard", "clx", "Cloud HPO"],
-            packages: ["Standard", "cuDF", "cuML", "cuGraph", "cuSpatial", "cuXFilter", "CLX"],
+            packages: ["Standard", "cuDF", "cuML", "cuGraph", "cuSpatial", "cuSignal", "cuCIM", "cuXFilter", "CLX"],
             additional_packages: ["DaskSQL", "JupyterLab", "Plotly Dash", "Xarray-Spatial", "RTXpy", "TensorFlow"],
             img_options: ["notebooks", "development"],
             note_prefix: "<i class='fas fa-info-circle text-blue'></i>",
-            rapids_meta_pkgs: ["cudf", "cuml", "cugraph", "cuspatial", "cuxfilter"],
+            rapids_meta_pkgs: ["cuDF", "cuML", "cuGraph", "cuSpatial", "cuXFilter", "cuSignal", "cuCIM"],
             getStableVersion() {
                 return "{{ site.data.releases.stable-version }}";
             },
