@@ -136,7 +136,7 @@
             arches: ["amd", "arm"],
             img_types: ["core", "standard", "clx"],
             packages: ["Standard", "cuDF", "cuML", "cuGraph", "cuSpatial", "cuSignal", "cuCIM", "cuXFilter", "CLX"],
-            additional_packages: ["DaskSQL", "JupyterLab", "Plotly Dash", "Xarray-Spatial", "RTXpy", "TensorFlow"],
+            additional_packages: ["DaskSQL", "JupyterLab", "Plotly Dash", "Graphistry", "PyCaret", "TensorFlow"], // "Xarray-Spatial", "RTXpy" will return later
             img_options: ["notebooks", "development"],
             note_prefix: "<i class='fas fa-info-circle text-blue'></i>",
             rapids_meta_pkgs: ["cuDF", "cuML", "cuGraph", "cuSpatial", "cuXFilter", "cuSignal", "cuCIM"],
@@ -377,6 +377,7 @@
                 if (this.active_img_options.includes("development") && cuda_version !== this.getNewestCudaVer()) {
                     isDisabled = true;
                 }
+				if (this.active_arch === "arm" && cuda_version === "11.0") isDisabled = true;
                 return isDisabled;
             },
             disableUnsupportedPython(python_version) {
@@ -412,6 +413,7 @@
                 if (this.isDisabled(e.target)) return;
                 if (arch === "arm") this.active_img_type = "core";
                 if (arch === "arm" && this.active_os_ver === "CentOS 7") this.active_os_ver = "Ubuntu 20.04";
+				if (arch === "arm" && this.active_cuda_ver === "11.0") this.active_cuda_ver = "11.2";
                 this.active_arch = arch;
             },
             cudaClickHandler(e, version) {
