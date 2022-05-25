@@ -3,21 +3,21 @@
     <div class="container-padding" x-data="rapids_selector">
         <div class="selector">
             <div class="options">
+				<div class="options-section">
+                    <div class="option-label">Release</div>
+                    <template x-for="release in releases">
+                        <div x-on:click="(e) => releaseClickHandler(e, release)"
+                            x-bind:class="{'active': release === active_release, 'disabled': disableUnsupportedRelease(release)}"
+                            class="option" x-text="getReleaseText(release)">
+                        </div>
+                    </template>
+                </div>
                 <div class="options-section">
                     <div class="option-label">Arch</div>
                     <template x-for="arch in arches">
                         <div x-on:click="(e) => archClickHandler(e, arch)"
                             x-bind:class="{'active': arch === active_arch}" class="option" x-text="arch"
                             x-text="getArchText(arch)">
-                        </div>
-                    </template>
-                </div>
-                <div class="options-section">
-                    <div class="option-label">Release</div>
-                    <template x-for="release in releases">
-                        <div x-on:click="(e) => releaseClickHandler(e, release)"
-                            x-bind:class="{'active': release === active_release, 'disabled': disableUnsupportedRelease(release)}"
-                            class="option" x-text="getReleaseText(release)">
                         </div>
                     </template>
                 </div>
@@ -135,8 +135,8 @@
             releases: ["Stable", "Nightly"],
             arches: ["amd", "arm"],
             img_types: ["core", "standard", "clx"],
-            packages: ["Standard", "cuDF", "cuML", "cuGraph", "cuSpatial", "cuSignal", "cuCIM", "cuXFilter", "CLX"],
-            additional_packages: ["DaskSQL", "JupyterLab", "Plotly Dash", "Graphistry", "PyCaret", "TensorFlow"], // "Xarray-Spatial", "RTXpy" will return later
+            packages: ["Standard", "cuDF", "cuML", "cuGraph", "cuSpatial", "cuXFilter", "cuSignal", "cuCIM"],
+            additional_packages: ["Dask SQL", "JupyterLab", "Plotly Dash", "Graphistry", "PyCaret", "TensorFlow"], // "Xarray-Spatial", "RTXpy" will return later
             img_options: ["notebooks", "development"],
             note_prefix: "<i class='fas fa-info-circle text-blue'></i>",
             rapids_meta_pkgs: ["cuDF", "cuML", "cuGraph", "cuSpatial", "cuXFilter", "cuSignal", "cuCIM"],
@@ -197,7 +197,7 @@
                 var dask_prefix = this.active_release === "Nightly" ? "dask/label/dev::" : "";
                 var pkg_names = {
                     "Plotly Dash": "dash",
-                    "DaskSQL": dask_prefix + "dask-sql"
+                    "Dask SQL": dask_prefix + "dask-sql"
                 }
                 return (pkg_names[pkg] || pkg).toLowerCase();
             },
