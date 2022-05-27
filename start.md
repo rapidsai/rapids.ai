@@ -305,8 +305,6 @@ RAPIDS is available in conda packages, docker images, and from source builds. Us
 	background="background-purple"
 	padding-top="0em" padding-bottom="10em"
 %}
-{% include selector-commands-stable.html %}
-{% include selector-commands-nightly.html %}
 
 
 <div id="next-steps"></div>
