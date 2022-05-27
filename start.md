@@ -263,7 +263,7 @@ bash Miniconda3-latest-Linux-x86_64.sh
 ## <i class="fa-regular fa-binary"></i> Build From Source
 {: .section-title-halfs}
 
-To build RAPIDS **cuDF** from source, see the **[cuDF README](https://github.com/rapidsai/cudf/tree/main#development-setup){: target="_blank"}** for source environment setup and build instructions.  If you need to build other packages from source, first check their README documentation, and if further help is needed reach out on our [Slack Channel](https://join.slack.com/t/rapids-goai/shared_invite/zt-trnsul8g-Sblci8dk6dIoEeGpoFcFOQ). 
+To build RAPIDS from source, check each libraries readme. For example the **[cuDF README](https://github.com/rapidsai/cudf/tree/main#development-setup){: target="_blank"}** has details for source environment setup and build instructions. Further links are provided in the selector tool. If additional help is needed reach out on our [Slack Channel](https://join.slack.com/t/rapids-goai/shared_invite/zt-trnsul8g-Sblci8dk6dIoEeGpoFcFOQ). 
 {: .padding-bottom-3em }
 
 ## <i class="fas fa-laptop-code"></i> Where is PIP?
