@@ -1072,6 +1072,10 @@ a.blue-btn,
     color: #3c3c3c;
 }
 
+.option-note {
+    margin-bottom: 10px;
+}
+
 /* blog posts */
 .blog-container h1, .posts-container h1 {
     margin-bottom: 0.1em;
