@@ -124,7 +124,7 @@
             active_arch: "amd",
             active_img_type: "core",
             active_packages: ["Standard"],
-            active_img_options: [],
+            active_img_options: ["notebooks"],
             active_additional_packages: [],
 
             // all possible values
@@ -273,7 +273,8 @@
 
                 var indent = "    ";
                 var cmd = this.highlightCmd("docker") + " pull " + fullImg + "\n" +
-                    this.highlightCmd("docker") + " run " + this.highlightFlag("--gpus") + " all " + this.highlightFlag("--rm -it") + " \\\n" +
+                    this.highlightCmd("docker") + " run --" + this.highlightFlag("gpus") + " all --" + this.highlightFlag("rm") + " -" + this.highlightFlag("it") + " \\\n" +
+                    indent + "--" + this.highlightFlag("shm-size") + "=1g --" + this.highlightFlag("ulimit") + " memlock=-1" + " \\\n" +
                     (portOptions ? indent + portOptions + "\\\n" : "") +
                     indent + fullImg;
                 return cmd;
@@ -429,7 +430,7 @@
             methodClickHandler(e, method) {
                 if (this.isDisabled(e.target)) return;
                 if (method !== "Docker") {
-                    this.active_img_options = [];
+                    this.active_img_options = ["notebooks"];
                     this.active_img_type = "core";
                 }
                 this.active_method = method;
