@@ -95,7 +95,7 @@
                 <div class="note" x-show="getNoteHtml()">
                     <div class="option-label"></div>
                     <div class="option-blank">
-                        <span class="option-note" x-html="getNoteHtml()"></span>
+                        <div class="option-note-container" x-html="getNoteHtml()"></div>
                     </div>
                 </div>
             </div>
@@ -124,7 +124,7 @@
             active_arch: "amd",
             active_img_type: "core",
             active_packages: ["Standard"],
-            active_img_options: [],
+            active_img_options: ["notebooks"],
             active_additional_packages: [],
 
             // all possible values
@@ -273,7 +273,8 @@
 
                 var indent = "    ";
                 var cmd = this.highlightCmd("docker") + " pull " + fullImg + "\n" +
-                    this.highlightCmd("docker") + " run " + this.highlightFlag("--gpus") + " all " + this.highlightFlag("--rm -it") + " \\\n" +
+                    this.highlightCmd("docker") + " run --" + this.highlightFlag("gpus") + " all --" + this.highlightFlag("rm") + " -" + this.highlightFlag("it") + " \\\n" +
+                    indent + "--" + this.highlightFlag("shm-size") + "=1g --" + this.highlightFlag("ulimit") + " memlock=-1" + " \\\n" +
                     (portOptions ? indent + portOptions + "\\\n" : "") +
                     indent + fullImg;
                 return cmd;
@@ -312,7 +313,7 @@
                 if (option === "development") return "Development Image";
                 return option;
             },
-            getDockerNote() {
+            getDockerNotes() {
                 var core_pkgs = this.rapids_meta_pkgs;
 
                 if (this.active_img_type === "standard") {
@@ -322,40 +323,41 @@
                     core_pkgs = [...core_pkgs, "clx"];
                 }
                 var pkgs_html = core_pkgs.map(pkg => "<code>" + pkg + "</code>").join(", ");
-                return this.note_prefix + " The selected image contains the following packages:<br>" + pkgs_html
+                return [this.note_prefix + " The selected image contains the following packages:<br>" + pkgs_html];
             },
-            getCondaNote() {
+            getCondaNotes() {
                 var notes = [];
+                notes = [...notes, "RAPIDS currently doesn't support <code>channel_priority: strict</code>; use <code>channel_priority: flexible</code> instead"];
                 if (this.active_packages.length === 1 && this.active_packages[0] === "Standard") {
                     var pkgs_html = this.rapids_meta_pkgs.map(pkg => "<code>" + pkg + "</code>").join(", ");
-                    notes = [...notes, "The <code>Standard</code> selection contains the following packages:<br>" + pkgs_html]
+                    notes = [...notes, "The <code>Standard</code> selection contains the following packages:<br>" + pkgs_html];
                 }
 
                 if (this.active_additional_packages.length) {
-                    notes = [...notes, "Third-party packages are not tested."]
+                    notes = [...notes, "Third-party packages are not tested."];
                 }
 
-                return notes.map(note => this.note_prefix + " " + note).join("<br>");
+                return notes.map(note => this.note_prefix + " " + note);
             },
-            getArmNote() {
-                return this.note_prefix + " ARM support does not currently include Jetson products.";
+            getArmNotes() {
+                return [this.note_prefix + " ARM support does not currently include Jetson products."];
             },
             getNoteHtml() {
                 var notes = [];
 
                 if (this.active_arch === "arm") {
-                    notes.push(this.getArmNote());
+                    notes.push(...this.getArmNotes());
                 }
 
                 if (this.active_method === "Docker") {
-                    notes.push(this.getDockerNote());
+                    notes.push(...this.getDockerNotes());
                 }
 
                 if (this.active_method === "Conda") {
-                    notes.push(this.getCondaNote());
+                    notes.push(...this.getCondaNotes());
                 }
 
-                return notes.join("<br>");
+                return notes.map(note => `<div class="option-note">${note}</div>`).join("");
             },
             getCmdHtml() {
                 if (this.active_method === "Docker")
@@ -428,7 +430,7 @@
             methodClickHandler(e, method) {
                 if (this.isDisabled(e.target)) return;
                 if (method !== "Docker") {
-                    this.active_img_options = [];
+                    this.active_img_options = ["notebooks"];
                     this.active_img_type = "core";
                 }
                 this.active_method = method;
