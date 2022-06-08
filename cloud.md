@@ -11,17 +11,10 @@ layout: default
 
 {% capture intro_content %}
 
-RAPIDS GPU accelerated data science tools can be deployed on all of the major
-clouds, allowing anyone to take advantage of the speed increases and TCO
-reductions that RAPIDS enables. {: .subtitle}
+RAPIDS GPU accelerated data science tools can be deployed on all of the major clouds, allowing anyone to take advantage of the speed increases and TCO reductions that RAPIDS enables.
+{: .subtitle}
 
-RAPIDS can be deployed in a number of ways, from hosted Jupyter notebooks, to
-the major HPO services, all the way up to large-scale clusters via Dask or
-Kubernetes. Deploying on the cloud will require you to make use of supported GPU
-instances. Each major cloud provider has GPU instances that are supported by
-RAPIDS with varying capabilities and price points - the below charts identifies
-the major instance types of each cloud.
-
+RAPIDS can be deployed in a number of ways, from hosted Jupyter notebooks, to the major HPO services, all the way up to large-scale clusters via Dask or Kubernetes. Deploying on the cloud will require you to make use of supported GPU instances. Each major cloud provider has GPU instances that are supported by RAPIDS with varying capabilities and price points. The below charts identifies the major instance types of each cloud.
 
 {% endcapture %}
 
@@ -34,8 +27,7 @@ the major instance types of each cloud.
 {% capture csp_sel %}
 # Cloud Providers
 
-For the various deployment options on each cloud, as well as instructions and
-links to more details, please select the cloud provider you wish to deploy on.
+For the various deployment options on each cloud, as well as instructions and links to more details, please select the cloud provider you wish to deploy on.
 {: .subtitle}
 
 {% endcapture %}
@@ -43,10 +35,10 @@ links to more details, please select the cloud provider you wish to deploy on.
 [![aws]({{ site.baseurl }}{% link /assets/images/AWS-logo.png %})](#aws) <br>
 **[<i class="fad fa-chevron-double-down"></i> Amazon Web Services ](#aws)**
 
-[<i class="fas fa-caret-right"></i> Amazon SageMaker](#AWS-Sagemaker){: .block}
-[<i class="fas fa-caret-right"></i> Single EC2 instance](#AWS-EC2){: .block}
-[<i class="fas fa-caret-right"></i> Cluster using Dask](#AWS-Dask){: .block}
-[<i class="fas fa-caret-right"></i> Cluster using Kubernetes](#AWS-Kubernetes){: .block}
+**[<i class="fas fa-caret-right"></i> Amazon SageMaker](#AWS-Sagemaker){: .block}**
+**[<i class="fas fa-caret-right"></i> Single EC2 instance](#AWS-EC2){: .block}**
+**[<i class="fas fa-caret-right"></i> Cluster using Dask](#AWS-Dask){: .block}**
+**[<i class="fas fa-caret-right"></i> Cluster using Kubernetes](#AWS-Kubernetes){: .block}**
 
 {% endcapture %}
 {% capture csp_mid %}
@@ -54,10 +46,10 @@ links to more details, please select the cloud provider you wish to deploy on.
 [![azure]({{ site.baseurl }}{% link /assets/images/MS-azure-logo.png %})](#azure) <br>
 **[<i class="fad fa-chevron-double-down"></i> Microsoft Azure ](#azure)**
 
-[<i class="fas fa-caret-right"></i> Azure Machine Learning](#AZ-ML){: .block}
-[<i class="fas fa-caret-right"></i> Single instance](#AZ-single){: .block}
-[<i class="fas fa-caret-right"></i> Cluster via Dask](#AZ-Dask){: .block}
-[<i class="fas fa-caret-right"></i> Cluster via Kubernetes](#AZ-Kubernetes){: .block}
+**[<i class="fas fa-caret-right"></i> Azure Machine Learning](#AZ-ML){: .block}**
+**[<i class="fas fa-caret-right"></i> Single instance](#AZ-single){: .block}**
+**[<i class="fas fa-caret-right"></i> Cluster via Dask](#AZ-Dask){: .block}**
+**[<i class="fas fa-caret-right"></i> Cluster via Kubernetes](#AZ-Kubernetes){: .block}**
 
 {% endcapture %}
 {% capture csp_right %}
@@ -65,10 +57,10 @@ links to more details, please select the cloud provider you wish to deploy on.
 [![gcp]({{ site.baseurl }}{% link /assets/images/GCP-logo.png %})](#googlecloud) <br>
 **[<i class="fad fa-chevron-double-down"></i> Google Cloud ](#googlecloud)**
 
-[<i class="fas fa-caret-right"></i> Google AI Platform](#GC-AI){: .block}
-[<i class="fas fa-caret-right"></i> Single instance](#GC-single){: .block}
-[<i class="fas fa-caret-right"></i> Cluster using Dask (via Dataproc)](#GC-Dask){: .block}
-[<i class="fas fa-caret-right"></i> Cluster using Kubernetes](#GC-Kubernetes){: .block}
+**[<i class="fas fa-caret-right"></i> Google AI Platform](#GC-AI){: .block}**
+**[<i class="fas fa-caret-right"></i> Single instance](#GC-single){: .block}**
+**[<i class="fas fa-caret-right"></i> Cluster using Dask (via Dataproc)](#GC-Dask){: .block}**
+**[<i class="fas fa-caret-right"></i> Cluster using Kubernetes](#GC-Kubernetes){: .block}**
 
 {% endcapture %}
 
@@ -148,26 +140,16 @@ RAPIDS can be deployed on Amazon Web Services (AWS) in several ways:
 {% capture aws_ec2 %}
 ## <i class="fab fa-aws"></i> AWS Single Instance (EC2)
 
-There are multiple ways you can deploy RAPIDS on a single instance, but the
-easiest is to use the RAPIDS docker image:
+There are multiple ways you can deploy RAPIDS on a single instance, but the easiest is to use the RAPIDS docker image:
 
 **1. Initiate.** Initiate an instance supported by RAPIDS. See the introduction
 section for a list of supported instance types. It is recommended to use an AMI
-that already includes the required NVIDIA drivers, such as the **[AWS Deep
-Learning
-AMI](https://aws.amazon.com/marketplace/pp/prodview-7ikjtg3um26wq?sr=0-9&ref_=beagle&applicationId=AWSMPContessa)
-([docs](https://docs.aws.amazon.com/dlami/latest/devguide/what-is-dlami.html))**.
-Other options include the **[Amazon Linux 2 AMI with NVIDIA TESLA GPU
-Driver](https://aws.amazon.com/marketplace/pp/Amazon-Web-Services-Amazon-Linux-2-AMI-with-NVIDIA/B07S5G9S1Z)**.
+that already includes the required NVIDIA drivers, such as the **[AWS Deep Learning AMI](https://aws.amazon.com/marketplace/pp/prodview-7ikjtg3um26wq?sr=0-9&ref_=beagle&applicationId=AWSMPContessa)**
+**([docs](https://docs.aws.amazon.com/dlami/latest/devguide/what-is-dlami.html))**. Other options include the **[Amazon Linux 2 AMI with NVIDIA TESLA GPU Driver](https://aws.amazon.com/marketplace/pp/Amazon-Web-Services-Amazon-Linux-2-AMI-with-NVIDIA/B07S5G9S1Z)**.
 
-**2. Credentials.** Using the credentials supplied by AWS, log into the instance
-via SSH. For a short guide on launching your instance and accessing it, read the
-Getting Started with Amazon EC2 documentation.
+**2. Credentials.** Using the credentials supplied by AWS, log into the instance via SSH. For a short guide on launching your instance and accessing it, read the Getting Started with Amazon EC2 documentation.
 
-**3. Install.** Install [Docker and the NVIDIA Docker
-runtime](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)
-in the AWS instance. This step is not required if you are using AWS Deep
-Learning AMI.
+**3. Install.** Install **[Docker and the NVIDIA Docker runtime](https://docs.nvidia.com/datacenter/cloud-native/container-toolkit/install-guide.html)** in the AWS instance. This step is not required if you are using AWS Deep Learning AMI.
 
 **4. Install.** Install RAPIDS docker image. The docker container can be customized by using the options provided in the **[Getting Started](https://rapids.ai/start.html)** page of RAPIDS. Example of an image that can be used is provided below:
 ```shell
@@ -177,10 +159,7 @@ Learning AMI.
 ```
 {: .margin-bottom-3em}
 
-**5. Test RAPIDS.** Test it! The RAPIDS docker image will start a Jupyter
-notebook instance automatically. You can log into it by going to the IP address
-provided by AWS on port 8888.
-
+**5. Test RAPIDS.** Test it! The RAPIDS docker image will start a Jupyter notebook instance automatically. You can log into it by going to the IP address provided by AWS on port 8888.
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
 
@@ -189,22 +168,16 @@ provided by AWS on port 8888.
 {% capture aws_dask %}
 ## <i class="fab fa-aws"></i> AWS Cluster via Dask
 
-RAPIDS can be deployed on a multi-node ECS cluster using Dask’s
-dask-cloudprovider management tools. For more details, see our **[blog post on
-deploying on
-ECS.](https://medium.com/rapids-ai/getting-started-with-rapids-on-aws-ecs-using-dask-cloud-provider-b1adfdbc9c6e)**
+RAPIDS can be deployed on a multi-node ECS cluster using Dask’s dask-cloud provider management tools. For more details, see our **[blog post on deploying on ECS.](https://medium.com/rapids-ai/getting-started-with-rapids-on-aws-ecs-using-dask-cloud-provider-b1adfdbc9c6e)**
 
-**0. Run from within AWS.** The following steps assume you are running them from
-within the same AWS VPC. One way to ensure this is to run through the [AWS
-Single Instance (EC2)](#AWS-EC2) instructions and then run these steps from
-there.
+**0. Run from within AWS.** The following steps assume you are running them from within the same AWS VPC. One way to ensure this is to run through the **[AWS Single Instance (EC2)](#AWS-EC2)** instructions and then run these steps from there.
 
-**1. Setup AWS credentials.** First, you will need AWS credentials to allow us
-to interact with the AWS CLI. If someone else manages your AWS account, you will
-need to get these keys from them. You can provide these credentials to
-dask-cloudprovider in a number of ways, but the easiest is to setup your local
-environment using the AWS command line tools: ```shell >>> pip install awscli
->>> aws configure ``` {: .margin-bottom-3em}
+**1. Setup AWS credentials.** First, you will need AWS credentials to allow us to interact with the AWS CLI. If someone else manages your AWS account, you will need to get these keys from them. You can provide these credentials to dask-cloudprovider in a number of ways, but the easiest is to setup your local environment using the AWS command line tools: 
+```shell 
+>>> pip install awscli
+>>> aws configure 
+```
+{: .margin-bottom-3em}
 
 **2. Install dask-cloudprovider.** To install, you will need to run the following:
 ```shell
@@ -212,23 +185,13 @@ environment using the AWS command line tools: ```shell >>> pip install awscli
 ```
 {: .margin-bottom-3em}
 
-**3. Create an EC2 cluster:** In the AWS console, visit the ECS dashboard. From
-the “Clusters” section on the left hand side, click “Create Cluster”.
+**3. Create an EC2 cluster:** In the AWS console, visit the ECS dashboard. From the “Clusters” section on the left hand side, click “Create Cluster” then:
+- Make sure to select an EC2 Linux + Networking cluster so that we can specify our networking options.
+- Give the cluster a name EX. `rapids-cluster`.
+- Change the instance type to one that supports RAPIDS-supported GPUs (see introduction section for list of supported instance types). For this example, we will use `p3.2xlarge`, each of which comes with one NVIDIA V100 GPU.
+- In the networking section, select the default VPC and all the subnets available in that VPC.
 
-Make sure to select an EC 2 Linux + Networking cluster so that we can specify
-our networking options.
-
-Give the cluster a name EX. `rapids-cluster`.
-
-Change the instance type to one that supports RAPIDS-supported GPUs (see
-introduction section for list of supported instance types). For this example, we
-will use `p3.2xlarge`, each of which comes with one NVIDIA V100 GPU.
-
-In the networking section, select the default VPC and all the subnets available
-in that VPC.
-
-All other options can be left at defaults. You can now click “create” and wait
-for the cluster creation to complete.
+All other options can be left at defaults. You can now click “create” and wait for the cluster creation to complete.
 
 **4. Create a Dask cluster:**
 
@@ -278,11 +241,7 @@ Name: id, dtype: int64
 ```
 {: .margin-bottom-3em}
 
-**6. Cleanup.** Your cluster will continue to run (and incur charges!) until you
-shut it down. You can either scale the number of nodes down to zero instances,
-or shut it down altogether. If you are planning to use the cluster again soon,
-it is probably preferable to reduce the nodes to zero.
-
+**6. Cleanup.** Your cluster will continue to run (and incur charges!) until you shut it down. You can either scale the number of nodes down to zero instances, or shut it down altogether. If you are planning to use the cluster again soon, it is probably preferable to reduce the nodes to zero.
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
 
@@ -291,9 +250,7 @@ it is probably preferable to reduce the nodes to zero.
 {% capture aws_kub %}
 ## <i class="fab fa-aws"></i> AWS Cluster via Kubernetes
 
-RAPIDS can be deployed on AWS via AWS’s managed Kubernetes service (EKS) using
-Helm. More details can be found at our **[helm
-docs.](https://helm.rapids.ai/docs/csp.html)**
+RAPIDS can be deployed on AWS via AWS’s managed Kubernetes service (EKS) using Helm. More details can be found at our **[helm docs.](https://helm.rapids.ai/docs/csp.html)**
 
 **1. Install.** Install and configure dependencies in your local environment:
 kubectl, helm, awscli, and eksctl.
@@ -354,12 +311,8 @@ rapidsai-scheduler  LoadBalancer  10.100.11.182   a9c703f1c002f478ea60d9acaf165b
 ```
 {: .margin-bottom-3em}
 
-**7. ELB IP address:** **[Convert the DNS address provided above as the
-EXTERNAL-IP address to an IPV4
-address](https://aws.amazon.com/premiumsupport/knowledge-center/elb-find-load-balancer-IP/)**.
-Then use the obtained IPV4 address to visit the rapidsai-jupyter service in your
-browser!
-
+**7. ELB IP address:** **[Convert the DNS address provided above as the EXTERNAL-IP address to an IPV4 address](https://aws.amazon.com/premiumsupport/knowledge-center/elb-find-load-balancer-IP/)**.
+Then use the obtained IPV4 address to visit the rapidsai-jupyter service in your browser!
 {: .margin-bottom-3em}
 
 **8. Delete the cluster:** List and delete services running in the cluster to release resources
@@ -389,24 +342,15 @@ Delete the cluster and its associated nodes
 {% capture aws_sage %}
 ## <i class="fab fa-aws"></i> AWS Sagemaker
 
-RAPIDS also works with AWS SageMaker. We’ve written a **[detailed
-guide](https://medium.com/rapids-ai/running-rapids-experiments-at-scale-using-amazon-sagemaker-d516420f165b)**
-with **[examples](https://github.com/rapidsai/cloud-ml-examples/tree/main/aws)**
-for how to use Sagemaker with RAPIDS, but the simplest version is:
+RAPIDS also works with AWS SageMaker. We’ve written a **[detailed guide](https://medium.com/rapids-ai/running-rapids-experiments-at-scale-using-amazon-sagemaker-d516420f165b)** with **[examples](https://github.com/rapidsai/cloud-ml-examples/tree/main/aws)** for how to use Sagemaker with RAPIDS, but the simplest version is:
 
 **1. Start.** Start a Sagemaker hosted Jupyter notebook instance on AWS.
 
-**2. Clone.** **[Clone the example
-repository](https://github.com/shashankprasanna/sagemaker-rapids.git)** which
-includes all required setup and some example data and code.
+**2. Clone.** **[Clone the example repository](https://github.com/shashankprasanna/sagemaker-rapids.git)** which includes all required setup and some example data and code.
 
 **3. Run.** Start running the sagemaker-rapids.ipynb jupyter notebook.
 
-For more details, including on running large-scale HPO jobs on Sagemaker with
-RAPIDS, check out the **[detailed
-guide](https://medium.com/rapids-ai/running-rapids-experiments-at-scale-using-amazon-sagemaker-d516420f165b)**
-and **[examples.](https://github.com/rapidsai/cloud-ml-examples/tree/main/aws)**
-
+For more details, including on running large-scale HPO jobs on Sagemaker with RAPIDS, check out the **[detailed guide](https://medium.com/rapids-ai/running-rapids-experiments-at-scale-using-amazon-sagemaker-d516420f165b)** and **[examples.](https://github.com/rapidsai/cloud-ml-examples/tree/main/aws)**
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
 
@@ -487,36 +431,26 @@ RAPIDS can be deployed on Microsoft Azure via several methods:
 {% capture az_single %}
 ## <i class="fab fa-microsoft"></i> Azure Single Instance (VM)
 
-There are multiple ways you can deploy RAPIDS on a single VM instance, but the
-easiest is to use the RAPIDS docker image:
+There are multiple ways you can deploy RAPIDS on a single VM instance, but the easiest is to use the RAPIDS docker image:
 
-**1. Initiate VM.** **[Initiate a VM
-instance](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-portal)**
-using a VM supported by RAPIDS. See the introduction section for a list of
-supported instance types. It is recommended to use an image that already
-includes the required NVIDIA drivers, such as **[this
-one.](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/nvidia.ngc_azure_17_11?tab=Overview)**
+**1. Initiate VM.** **[Initiate a VM instance](https://docs.microsoft.com/en-us/azure/virtual-machines/linux/quick-create-portal)** using a VM supported by RAPIDS. See the introduction section for a list of supported instance types. It is recommended to use an image that already includes the required NVIDIA drivers, such as **[this one.](https://azuremarketplace.microsoft.com/en-us/marketplace/apps/nvidia.ngc_azure_17_11?tab=Overview)**
 
 **2. Credentials.** Using the credentials supplied by Azure, log into the instance via SSH.
 
 **3. Docker Permissions.** **[Setup docker user permissions.](https://docs.docker.com/engine/install/linux-postinstall/)**
 
 **4. Install.** **[Install RAPIDS docker image](https://rapids.ai/start.html)**.
-The docker container can be customized by using the options provided in the
-**[Getting Started](https://rapids.ai/start.html)** page of RAPIDS. Example of
-an image that can be used is provided below: 
+The docker container can be customized by using the options provided in the **[Getting Started](https://rapids.ai/start.html)** page of RAPIDS. Example of an image that can be used is provided below: 
 
-```shell >>> docker pull
+```shell 
+>>> docker pull
 rapidsai/rapidsai:cuda11.2-runtime-ubuntu18.04 >>> docker run --gpus all --rm
 -it -p 8888:8888 -p 8787:8787 -p 8786:8786 \
 rapidsai/rapidsai:cuda11.2-runtime-ubuntu18.04-py3.7
 ```
 {: .margin-bottom-3em}
 
-**5. Test RAPIDS.** Test it! The RAPIDS docker image will start a Jupyter
-notebook instance automatically. You can log into it by going to the IP address
-provided by Azure on port 8888.
-
+**5. Test RAPIDS.** Test it! The RAPIDS docker image will start a Jupyter notebook instance automatically. You can log into it by going to the IP address provided by Azure on port 8888.
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
 
@@ -525,7 +459,7 @@ provided by Azure on port 8888.
 {% capture az_dask %}
 ## <i class="fab fa-microsoft"></i> Azure Cluster via Dask
 
-RAPIDS can be deployed on a Dask cluster on Azure ML Compute using dask-cloudprovider.
+RAPIDS can be deployed on a Dask cluster on Azure ML Compute using dask-cloud provider.
 
 **1. Install.** Install Azure tools (azure-cli).
 
@@ -675,28 +609,19 @@ You can now visit the external IP of the rapidsai-jupyter service in your browse
 {% capture az_ml %}
 ## <i class="fab fa-microsoft"></i> Azure Machine Learning (Azure ML)
 
-RAPIDS can be deployed at scale using Azure Machine Learning Service--and easily
-scales up to any size needed. We have written a **[detailed
-guide](https://medium.com/rapids-ai/rapids-on-microsoft-azure-machine-learning-b51d5d5fde2b)**
-with **[helper
-scripts](https://github.com/rapidsai/cloud-ml-examples/tree/main/azure)** to get
-everything deployed, but the high level procedure is:
+RAPIDS can be deployed at scale using Azure Machine Learning Service and easily scales up to any size needed. We have written a **[detailed guide](https://medium.com/rapids-ai/rapids-on-microsoft-azure-machine-learning-b51d5d5fde2b)** with **[helper scripts](https://github.com/rapidsai/cloud-ml-examples/tree/main/azure)** to get everything deployed, but the high level procedure is:
 
 **1. Create.** Create your Azure Resource Group.
 
 **2. Workspace.** Within the Resource Group, create an Azure Machine Learning service Workspace.
 
-**3. Config.** Within the Workspace, download the config.json file and verify
-that subscription_id, resource_group, and workspace_name are set correctly for
-your environment.
+**3. Config.** Within the Workspace, download the config.json file and verify that subscription_id, resource_group, and workspace_name are set correctly for your environment.
 
-**4. Quota.** Within your Workspace, check your Usage + Quota to ensure you have
-enough quota to launch your desired cluster size.
+**4. Quota.** Within your Workspace, check your Usage + Quota to ensure you have enough quota to launch your desired cluster size.
 
 **5. Clone.** From your local machine, clone the RAPIDS demonstration code and helper scripts.
 
-**6. Run Utility.** Run the RAPIDS helper utility script to initialize the Azure
-Machine Learning service Workspace:
+**6. Run Utility.** Run the RAPIDS helper utility script to initialize the Azure Machine Learning service Workspace:
 
 ```shell
 >>> ./start_azureml.py \
@@ -709,11 +634,7 @@ Machine Learning service Workspace:
 
 **7. Start.** Open your browser to http://localhost:8888 and get started!
 
-See **[the
-guide](https://medium.com/rapids-ai/rapids-on-microsoft-azure-machine-learning-b51d5d5fde2b#fee3)**
-or **[GitHub](https://github.com/rapidsai/cloud-ml-examples/tree/main/azure)**
-for more details.
-
+See **[the guide](https://medium.com/rapids-ai/rapids-on-microsoft-azure-machine-learning-b51d5d5fde2b#fee3)** or **[GitHub](https://github.com/rapidsai/cloud-ml-examples/tree/main/azure)** for more details.
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
 
@@ -811,7 +732,6 @@ RAPIDS can be deployed on Google Cloud as a single instance:
 {: .margin-bottom-3em}
 
 **6. Test RAPIDS.** The above command should start your docker container. To test the container, start a python instance and then import any one of the RAPIDS libraries in it.
-
 
 **[Jump to Top <i class="fad fa-chevron-double-up"></i>](#deploy)**
 
@@ -968,6 +888,7 @@ RAPIDS can be deployed on Google’s Cloud AI platform. This deployment can rang
 **3. Create and Run.** Select a "New Instance" and select the "RAPIDS 0.18 [EXPERIMENTAL]" environment (comes with Conda installed):
 - Select 'Install NVIDIA GPU driver automatically for me'
 - Create and launch your notebook service
+
 
 To create an instance wtih A100s:
 - Select 'New Instance' -> 'Customize instance'
