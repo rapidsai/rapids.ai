@@ -186,7 +186,7 @@ RAPIDS can be deployed on a multi-node ECS cluster using Dask’s dask-cloud pro
 {: .margin-bottom-3em}
 
 **3. Create an EC2 cluster:** In the AWS console, visit the ECS dashboard. From the “Clusters” section on the left hand side, click “Create Cluster” then:
-- Make sure to select an EC 2 Linux + Networking cluster so that we can specify our networking options.
+- Make sure to select an EC2 Linux + Networking cluster so that we can specify our networking options.
 - Give the cluster a name EX. `rapids-cluster`.
 - Change the instance type to one that supports RAPIDS-supported GPUs (see introduction section for list of supported instance types). For this example, we will use `p3.2xlarge`, each of which comes with one NVIDIA V100 GPU.
 - In the networking section, select the default VPC and all the subnets available in that VPC.
