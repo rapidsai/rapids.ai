@@ -7,7 +7,7 @@ button_link: "https://dask.org/"
 layout: default
 ---
 
-![Dask]({{ site.baseurl }}{% link /assets/images/dask.svg %}){: .projects-logo}
+![Dask]({{ site.baseurl }}{% link /assets/images/dask_logo.png %}){: .projects-logo}
 
 
 # Scale Python with Ease 

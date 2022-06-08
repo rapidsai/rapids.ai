@@ -116,7 +116,7 @@ strong {
     position: relative;
     left: 50%;
     width: 50%;
-    transform: translate(-50%);
+    transform: translate(50%);
 }
 
 .full-image-center {
@@ -133,9 +133,8 @@ strong {
 
 .third-image-center {
     position: relative;
-    left: 33%;
     width: 33%;
-    transform: translate(-50%);
+    transform: translate(66%);
 }
 
 .quarter-image-center {
