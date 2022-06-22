@@ -109,7 +109,6 @@ All provisioned systems need to be RAPIDS capable. Here's what is required:
 
 <i class="fas fa-desktop text-purple"></i> **OS:** Ubuntu 18.04/20.04 or CentOS 7/8 with <code>gcc/++</code> 9.0+
 {: .no-tb-margins }
-- <i class="fas fa-bullhorn text-purple"></i> See **[RDN 8](https://docs.rapids.ai/notices/rdn0008){: target="_blank"}** for recent changes to <code>gcc/++</code> 9.0 requirements<br/>
 - <i class="fas fa-info-circle text-purple"></i> RHEL 7/8 support is provided through CentOS 7/8 builds/installs
 - <i class="fas fa-desktop text-purple"></i> Experimental WSL2 on Windows11 **[See separate install guide <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://developer.nvidia.com/blog/run-rapids-on-microsoft-windows-10-using-wsl-2-the-windows-subsystem-for-linux/){: target="_blank"}**
 
