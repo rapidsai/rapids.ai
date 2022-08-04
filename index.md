@@ -72,12 +72,9 @@ for column in gdf.columns:
 Find more details on our **[Get Started Page <i class="fas fa-angle-double-right"></i>](start.html)**
 
 ## <i class="fas fa-bolt"></i> Try Now Online
-Jump right into a GPU powered RAPIDS notebook, online, with either **[SageMaker Studio Lab](https://studiolab.sagemaker.aws/)** or **[Colab](https://colab.research.google.com/){: target="_blank"}** 
-(currently only supports **[RAPIDS v21.12](https://docs.rapids.ai/notices/rsn0014/)**):
+Jump right into a GPU powered RAPIDS notebook, online, with **[SageMaker Studio Lab](https://studiolab.sagemaker.aws/)** (free account required):
 
 [![SageMaker Studio Lab]({{ site.baseurl }}{% link /assets/images/Open-StudioLab.png%})](smsl.html){: target="_blank"}{: .half-image}
-
-[![Colab]({{ site.baseurl }}{% link /assets/images/Open-Colab.png%})](https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true){: target="_blank"}{: .half-image}
 
 {% endcapture %}
 
