@@ -499,7 +499,6 @@
                 }
                 this.active_additional_packages = [...this.active_additional_packages, package];
 				if (this.active_additional_packages.includes("TensorFlow")&& this.active_cuda_ver !== "11.2") this.active_cuda_ver = "11.2";
-				console.log(this.active_additional_packages);
             },
             copyToClipboard() {
                 var range = document.createRange();
