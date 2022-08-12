@@ -130,13 +130,13 @@
             // all possible values
             python_vers: ["3.8", "3.9"],
             cuda_vers: ["11.0", "11.2", "11.4", "11.5"],
-            os_vers: ["Ubuntu 18.04", "Ubuntu 20.04", "CentOS 7", "CentOS 8"],
+            os_vers: ["Ubuntu 18.04", "Ubuntu 20.04", "CentOS 7", "RockyLinux8"],
             methods: ["Conda", "Docker", "Source"],
             releases: ["Stable", "Nightly"],
             arches: ["amd", "arm"],
             img_types: ["core", "standard", "clx"],
             packages: ["Standard", "cuDF", "cuML", "cuGraph", "cuSpatial", "cuXFilter", "cuSignal", "cuCIM"],
-            additional_packages: ["Dask SQL", "JupyterLab", "Plotly Dash", "Graphistry", "PyCaret", "TensorFlow"], // "Xarray-Spatial", "RTXpy" will return later
+            additional_packages: ["Dask SQL", "JupyterLab", "Plotly Dash", "Graphistry", "PyCaret", "TensorFlow", "Xarray-Spatial"], // , "RTXpy" will return later
             img_options: ["notebooks", "development"],
             note_prefix: "<i class='fas fa-info-circle text-blue'></i>",
             rapids_meta_pkgs: ["cuDF", "cuML", "cuGraph", "cuSpatial", "cuXFilter", "cuSignal", "cuCIM"],
@@ -149,6 +149,7 @@
             getOSHTML(os_ver) {
                 var icon_class = "ubuntu"
                 if (os_ver.includes("CentOS")) icon_class = "centos";
+				if (os_ver.includes("RockyLinux")) icon_class = "linux";
                 return os_ver + "&nbsp;<i class='fab fa-" + icon_class + "'></i>";
             },
             getMethodHTML(method) {
@@ -334,7 +335,7 @@
                 }
 
                 if (this.active_additional_packages.length) {
-                    notes = [...notes, "Third-party packages are not tested."];
+                    notes = [...notes, "Third-party packages are not tested.  TensorFlow requires CUDA 11.2.", "PyTorch can be found in 'Base w/ CLX' Docker as it requires CUDA 11.3 or 11.6"];
                 }
 
                 return notes.map(note => this.note_prefix + " " + note);
@@ -381,6 +382,9 @@
                     isDisabled = true;
                 }
                 if (this.active_arch === "arm" && cuda_version === "11.0") isDisabled = true;
+				if (this.active_additional_packages.includes("TensorFlow") && cuda_version !== "11.2") isDisabled = true;
+
+				//if (this.active_additional_packages.length > 0 && this.active_additional_packages.indexOf("tensorflow") > -1 && cuda_version !== "11.2") isDisabled = true;
                 return isDisabled;
             },
             disableUnsupportedPython(python_version) {
@@ -417,7 +421,7 @@
             archClickHandler(e, arch) {
                 if (this.isDisabled(e.target)) return;
                 if (arch === "arm") this.active_img_type = "core";
-                if (arch === "arm" && this.active_os_ver === "CentOS 7") this.active_os_ver = "Ubuntu 20.04";
+                if (arch === "arm" && (this.active_os_ver === "CentOS 7" || this.active_os_ver === "RockyLinux 8")) this.active_os_ver = "Ubuntu 20.04";
                 if (arch === "arm" && this.active_cuda_ver === "11.0") this.active_cuda_ver = "11.2";
                 this.active_arch = arch;
             },
@@ -434,6 +438,9 @@
                 if (method !== "Docker") {
                     this.active_img_options = ["notebooks"];
                     this.active_img_type = "core";
+                }
+				if (method !== "Conda") {
+                    this.active_additional_packages = [];
                 }
                 this.active_method = method;
             },
@@ -491,6 +498,8 @@
                     return;
                 }
                 this.active_additional_packages = [...this.active_additional_packages, package];
+				if (this.active_additional_packages.includes("TensorFlow")&& this.active_cuda_ver !== "11.2") this.active_cuda_ver = "11.2";
+				console.log(this.active_additional_packages);
             },
             copyToClipboard() {
                 var range = document.createRange();
