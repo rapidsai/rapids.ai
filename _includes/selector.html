@@ -66,6 +66,15 @@
                     </div>
                 </div>
                 <div class="docker-options-container" x-show="active_method === 'Docker'">
+					<div class="options-section">
+                        <div class="option-label">Image Location</div>
+                        <template x-for="loc in img_loc">
+                            <div x-on:click="(e) => imgLocClickHandler(e, loc)"
+                                x-bind:class="{'active': loc === active_img_loc, 'disabled': disableUnsupportedImgLoc(loc)}"
+                                class="option" x-html="getImgLoc(loc)">
+                            </div>
+                        </template>
+                    </div>
                     <div class="options-section">
                         <div class="option-label">Image OS</div>
                         <template x-for="version in os_vers">
@@ -123,6 +132,7 @@
             active_release: "Stable",
             active_arch: "amd",
             active_img_type: "core",
+			active_img_loc: "NGC",
             active_packages: ["Standard"],
             active_img_options: ["notebooks"],
             active_additional_packages: [],
@@ -134,6 +144,7 @@
             methods: ["Conda", "Docker", "Source"],
             releases: ["Stable", "Nightly"],
             arches: ["amd", "arm"],
+			img_loc: ["NGC", "Dockerhub"],
             img_types: ["core", "standard", "clx"],
             packages: ["Standard", "cuDF", "cuML", "cuGraph", "cuSpatial", "cuXFilter", "cuSignal", "cuCIM"],
             additional_packages: ["Dask SQL", "JupyterLab", "Plotly Dash", "Graphistry", "PyCaret", "TensorFlow", "Xarray-Spatial"], // , "RTXpy" will return later
@@ -154,7 +165,7 @@
             },
             getMethodHTML(method) {
                 var icon_class = "box-open fas";
-                if (method.includes("Docker")) icon_class = "docker fab";
+                if (method.includes("Docker")) icon_class = "regular fa-container-storage";
                 if (method.includes("Source")) icon_class = "cogs fas";
                 return method + "&nbsp;<i class='fa-" + icon_class + "'></i>";
             },
@@ -245,6 +256,9 @@
                 var isDevel = this.active_img_options.includes("development");
                 var isNightly = this.active_release === "Nightly";
                 var isArm = this.active_arch === "arm";
+				var imgLoc = "nvcr.io/nvidia/";
+				if (this.active_img_loc === "NGC") imgLoc = "nvcr.io/nvidia/"
+				if (this.active_img_loc === "Dockerhub") imgLoc = ""
                 var imgVariant = "";
                 if (this.active_img_type === "core") imgVariant = "core";
                 if (this.active_img_type === "clx") imgVariant = "clx";
@@ -254,7 +268,7 @@
                 var portOptions = (hasNotebooks ? ["8888:8888", "8787:8787", "8786:8786"] : [])
                     .map(opt => this.highlightFlag("-p") + " " + opt + " ").join("");
 
-                var imgRepo = [
+                var imgRepo = imgLoc+[
                     "rapidsai/rapidsai",
                     imgVariant,
                     (isDevel ? "dev" : ""),
@@ -313,6 +327,11 @@
                 if (option === "notebooks") return "Include Jupyter Notebooks";
                 if (option === "development") return "Development Image";
                 return option;
+            },
+			getImgLoc(loc) {
+                if (loc === "NGC") return 'NGC&nbsp;<i class="fa-regular fa-share-nodes"></i>';
+                if (loc === "Dockerhub") return 'Docker Hub&nbsp;<i class="fa-docker fab"></i>';
+                return loc;
             },
             getDockerNotes() {
                 var core_pkgs = this.rapids_meta_pkgs;
@@ -383,8 +402,6 @@
                 }
                 if (this.active_arch === "arm" && cuda_version === "11.0") isDisabled = true;
 				if (this.active_additional_packages.includes("TensorFlow") && cuda_version !== "11.2") isDisabled = true;
-
-				//if (this.active_additional_packages.length > 0 && this.active_additional_packages.indexOf("tensorflow") > -1 && cuda_version !== "11.2") isDisabled = true;
                 return isDisabled;
             },
             disableUnsupportedPython(python_version) {
@@ -404,6 +421,10 @@
             },
             disableUnsupportedImgOption(option) {
                 var isDisabled = false;
+                return isDisabled;
+            },
+			disableUnsupportedImgLoc(loc) {
+				var isDisabled = false;
                 return isDisabled;
             },
             isDisabled(e) {
@@ -447,6 +468,10 @@
             imgOSClickHandler(e, version) {
                 if (this.isDisabled(e.target)) return;
                 this.active_os_ver = version;
+            },
+			imgLocClickHandler(e, loc) {
+                if (this.isDisabled(e.target)) return;
+                this.active_img_loc = loc;
             },
             imgOptionClickHandler(e, option) {
                 if (this.isDisabled(e.target)) return;
