@@ -1,317 +1,505 @@
-<section class="{{ include.background }} padding-top-{{ include.padding-top }} padding-bottom-{{ include.padding-bottom }}">
-    <div class="container-padding">
+<section
+    class="{{ include.background }} padding-top-{{ include.padding-top }} padding-bottom-{{ include.padding-bottom }}">
+    <div class="container-padding" x-data="rapids_selector">
         <div class="selector">
             <div class="options">
-                <!--  COMMENTING THIS OUT IN CASE WE NEED TO ADD NOTICE
-                      AGAIN IN THE FUTURE
-                <div class="note method padding-bottom-4em">
-                    <div class="option-label">NOTICES</div>
-                    <div class="option-notice">
-                        <span>
-                            <i class="fas fa-exclamation-triangle text-white"></i> Changes to builds with conda using <a href="https://docs.rapids.ai/notices/rdn0002">gcc 7.5</a>
-                        </span>
-                    </div>
-                    <div class="option-notice">
-                        <span>
-                            <i class="fas fa-exclamation-triangle text-white"></i> CUDA 10.1/10.2 EOL in RAPIDS <a href="https://docs.rapids.ai/notices/rsn0006">v0.19</a>
-                        </span>
-                    </div>
-                    <div class="option-notice">
-                        <span>
-                            <i class="fas fa-exclamation-triangle text-white"></i> CUDA 11.2 support in RAPIDS <a href="https://docs.rapids.ai/notices/rsn0007">v0.19</a>
-                        </span>
-                    </div>
-                </div>
-                -->
-                <div class="preferred">
-                    <div class="option-label"></div>
-                    <div class="option-blank">
-                        <span>
-                            <i class="fas fa-level-up-alt fa-rotate-180 fa-down-6"></i> <i class="fas fa-check-square text-blue"></i> Preferred <i class="fas fa-level-down-alt fa-down-6"></i>
-                        </span>
-                    </div>
-                    <div class="option-blank">
-                        <span>
-                            <i class="fas fa-level-up-alt fa-rotate-180 fa-down-6"></i> <i class="fas fa-flask text-orange"></i> Advanced <i class="fas fa-level-down-alt fa-down-6"></i>
-                        </span>
-                    </div>
-                </div>
-                <div class="method padding-bottom-1em">
-                    <div class="option-label">Method</div>
-                    <div id="conda" class="option" title="Conda install">Conda&nbsp;<i class="fas fa-box-open"></i> <span class="context"> <i class="fas fa-check-square text-blue"></i> Preferred Install Method</span></div>
-                    <div id="runtime" class="option" title="Docker image with example notebooks">Docker + Examples&nbsp;<i class="fab fa-docker"></i><span class="context"> <i class="fas fa-check-square text-blue"></i> Preferred Install Method</span></div>
-                    <div id="devel" class="option advanced" title="Docker image with developer tools and from source build environment ">Docker + Dev Env&nbsp;<i class="fab fa-docker"></i> <span class="context"> <i class="fas fa-flask text-orange"></i> Advanced Install Method</span></div>
-                    <div id="source" class="option advanced" title="From source build">Source&nbsp;<i class="fas fa-cogs"></i><span class="context"> <i class="fas fa-flask text-orange"></i> Advanced Install Method</span></div>
-                </div>
-                <div class="release">
+                <div class="options-section">
                     <div class="option-label">Release</div>
-                    <div id="stable" class="option">Stable ({{ site.data.releases.stable-version }})</div>
-                    <div id="nightly" class="option">Nightly ({{ site.data.releases.nightly-version }}a)</div>
+                    <template x-for="release in releases">
+                        <div x-on:click="(e) => releaseClickHandler(e, release)"
+                            x-bind:class="{'active': release === active_release, 'disabled': disableUnsupportedRelease(release)}"
+                            class="option" x-text="getReleaseText(release)">
+                        </div>
+                    </template>
                 </div>
-                <div class="pkg">
-                    <div class="option-label">Packages</div>
-                    <div id="all" class="option">All Packages</div>
-                    <div id="cudf" class="option">cuDF</div>
-                    <div id="cuml" class="option">cuML</div>
-                    <div id="cugraph" class="option">cuGraph</div>
-                    <div id="cusignal" class="option">cuSignal</div>
-                    <div id="cuspatial" class="option">cuSpatial</div>
-                    <div id="cuxfilter" class="option">cuxfilter</div>
+                <div class="options-section">
+                    <div class="option-label">Arch</div>
+                    <template x-for="arch in arches">
+                        <div x-on:click="(e) => archClickHandler(e, arch)"
+                            x-bind:class="{'active': arch === active_arch}" class="option" x-text="arch"
+                            x-text="getArchText(arch)">
+                        </div>
+                    </template>
                 </div>
-                <div class="linux">
-                    <div class="option-label">Linux</div>
-                    <div id="ubuntu1804" class="option">Ubuntu 18.04&nbsp;<i class="fab fa-ubuntu"></i></div>
-                    <div id="ubuntu2004" class="option">Ubuntu 20.04&nbsp;<i class="fab fa-ubuntu"></i></div>
-                    <div id="centos7" class="option">CentOS 7&nbsp;<i class="fab fa-centos"></i></div>
-                    <div id="centos8" class="option">CentOS 8&nbsp;<i class="fab fa-centos"></i></div>
-                    <div id="rhel7" class="option">RHEL 7&8&nbsp;<i class="fab fa-redhat"></i></div>
-                </div>
-                <div class="python">
-                    <div class="option-label">Python</div>
-                    <div id="py38" class="option">Python 3.8</div>
-                    <div id="py39" class="option">Python 3.9</div>
-                </div>
-                <div class="cuda">
+                <div class="options-section">
                     <div class="option-label">CUDA</div>
-                    <div id="cuda110" class="option">CUDA 11.0</div>
-                    <div id="cuda112" class="option">CUDA 11.2</div>
-                    <div id="cuda114" class="option">CUDA 11.4</div>
-                    <div id="cuda115" class="option">CUDA 11.5</div>
+                    <template x-for="version in cuda_vers">
+                        <div x-on:click="(e) => cudaClickHandler(e, version)"
+                            x-bind:class="{'active': version === active_cuda_ver, 'disabled': disableUnsupportedCuda(version)}"
+                            class="option" x-text="'CUDA ' + version"></div>
+                    </template>
                 </div>
-                <div class="preferred">
-                    <div class="option-label"></div>
-                    <div class="option-blank"></div>
-                    <div class="option-blank"></div>
-                    <div class="option-blank"></div>
-                    <div class="option-blank"></div>
+                <div class="options-section">
+                    <div class="option-label">Python</div>
+                    <template x-for="version in python_vers">
+                        <div x-on:click="(e) => pythonClickHandler(e, version)"
+                            x-bind:class="{'active': version === active_python_ver, 'disabled': disableUnsupportedPython(version)}"
+                            class="option" x-text="'Python ' + version"></div>
+                    </template>
                 </div>
-                <div class="note">
+                <div class="options-section">
+                    <div class="option-label">Method</div>
+                    <template x-for="method in methods">
+                        <div x-on:click="(e) => methodClickHandler(e, method)"
+                            x-bind:class="{'active': method === active_method}" class="option"
+                            x-html="getMethodHTML(method)">
+                        </div>
+                    </template>
+                </div>
+                <div class="conda-options-container" x-show="active_method === 'Conda'">
+                    <div class="options-section">
+                        <div class="option-label">Packages</div>
+                        <template x-for="package in packages">
+                            <div x-on:click="(e) => packagesClickHandler(e, package)"
+                                x-bind:class="{'active': active_packages.includes(package)}" class="option"
+                                x-html="getPackageHTML(package)">
+                            </div>
+                        </template>
+                    </div>
+                    <div class="options-section">
+                        <div class="option-label">Additional Packages</div>
+                        <template x-for="package in additional_packages">
+                            <div x-on:click="(e) => additionalPackagesClickHandler(e, package)"
+                                x-bind:class="{'active': active_additional_packages.includes(package)}" class="option"
+                                x-text="package"></div>
+                        </template>
+                    </div>
+                </div>
+                <div class="docker-options-container" x-show="active_method === 'Docker'">
+                    <div class="options-section">
+                        <div class="option-label">Image OS</div>
+                        <template x-for="version in os_vers">
+                            <div x-on:click="(e) => imgOSClickHandler(e, version)"
+                                x-bind:class="{'active': version === active_os_ver, 'disabled': disableUnsupportedImgOS(version)}"
+                                class="option" x-html="getOSHTML(version)">
+                            </div>
+                        </template>
+                    </div>
+                    <div class="options-section">
+                        <div class="option-label">Image Type</div>
+                        <template x-for="type in img_types">
+                            <div x-on:click="(e) => imgTypeClickHandler(e, type)"
+                                x-bind:class="{'active': type === active_img_type, 'disabled': disableUnsupportedImgType(type)}"
+                                class="option" x-text="getImgTypeText(type)"></div>
+                        </template>
+                    </div>
+                    <div class="options-section">
+                        <div class="option-label">Image Options</div>
+                        <template x-for="option in img_options">
+                            <div x-on:click="(e) => imgOptionClickHandler(e, option)"
+                                x-bind:class="{'active': active_img_options.includes(option), 'disabled': disableUnsupportedImgOption(option)}"
+                                class="option" x-text="getImgOptionText(option)"></div>
+                        </template>
+                    </div>
+                </div>
+                <div class="note" x-show="getNoteHtml()">
                     <div class="option-label"></div>
                     <div class="option-blank">
-                        <span id="rhel7-conda-note" class="hidden option-note">
-                            <i class="fas fa-exclamation-triangle text-orange"></i> <b>NOTE:</b> RHEL 7 & 8 <code>conda</code> support is provided by builds and tests on CentOS 7 or 8.<br/>The same <code>conda create</code> commands should work with <code>gcc >=7.5</code> and the correct NVIDIA and CUDA drivers.
-                        </span>
-                        <span id="rhel7-source-note" class="hidden option-note">
-                            <i class="fas fa-exclamation-triangle text-orange"></i> <b>NOTE:</b> RHEL 7 & 8 from source build support is provided by following the build instructions for CentOS 7 or 8.<br/>The same methods should work with <code>gcc >=7.5</code> and the correct NVIDIA and CUDA drivers.
-                        </span>
-                        <span id="linux-conda-note" class="hidden option-note">
-                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> Ubuntu 18.04/20.04 & CentOS 7/8 use the same <code>conda create</code> commands.
-                        </span>
-                        <span id="linux-source-note" class="hidden option-note">
-                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> Ubuntu 18.04/20.04 & CentOS 7/8 use the same from source build instructions.
-                        </span>
-                        <span id="base-docker-note" class="hidden option-note">
-                            <i class="fas fa-info-circle text-blue"></i> <b>NOTE:</b> For docker images without examples or notebooks replace <code>runtime</code> with <code>base</code> in the commands below.
-                        </span>
+                        <div class="option-note-container" x-html="getNoteHtml()"></div>
                     </div>
                 </div>
             </div>
             <div class="cmd">
                 <div class="cmd-label">Command</div>
-                <div id="command" class="cmd-box"><div class="highlight"><pre class="highlight"><code><span class="gh"># Javascript is needed for this tool to run, please make sure it is enabled</span></code></pre></div></div>
+                <div class="cmd-box">
+                    <pre class="highlight"><code><span x-ref="cmd" x-html="getCmdHtml"></span></code></pre>
+                </div>
             </div>
         </div>
         <div class="selector-buttons">
-            <a id="copy-command" onclick="CopyToClipboard('command-code')" class="primary-btn">COPY COMMAND <i class="fas fa-clipboard"></i></a>
-            <a id="reset-selector" onclick="resetSelector()" class="primary-btn">RESET SELECTOR <i class="fas fa-undo"></i></a>
+            <a class="primary-btn" x-on:click="copyToClipboard">COPY COMMAND <i class="fas fa-clipboard"></i></a>
         </div>
     </div>
 </section>
 <script type="text/javascript">
-/* Adopted from https://pytorch.org/assets/quick-start-module.js */
-var pkg = ["cudf", "cuml", "cugraph", "cusignal", "cuspatial", "cuxfilter", "all"];
-var method = ["conda", "runtime", "source", "devel"];
-var release = ["stable", "nightly"];
-var linux = ["ubuntu1804", "ubuntu20.04", "centos7", "centos8", "rhel7"];
-var python = ["py38", "py39"];
-var cuda = ["cuda110", "cuda112"];
-var pkg_opts = $(".pkg > .option");
-var method_opts = $(".method > .option");
-var release_opts = $(".release > .option");
-var linux_opts = $(".linux > .option");
-var python_opts = $(".python > .option");
-var cuda_opts = $(".cuda > .option");
-var details = {
-    conda: "conda-install",
-    docker: "docker-container",
-    source: "build-from-source"
-}
-// Set initial choices
-var selections = {
-    pkg: "all",
-    method: "conda",
-    release: "stable",
-    linux: "ubuntu2004",
-    python: "py38",
-    cuda: "cuda115"
-};
-// Save default choices
-var default_selections = Object.assign({}, selections);
-// Setup listeners
-pkg_opts.on("click", function() {
-    processClick(pkg_opts, this, "pkg");
-});
-method_opts.on("click", function() {
-    processClick(method_opts, this, "method");
-});
-release_opts.on("click", function() {
-    processClick(release_opts, this, "release");
-});
-linux_opts.on("click", function() {
-    processClick(linux_opts, this, "linux");
-});
-python_opts.on("click", function() {
-    processClick(python_opts, this, "python");
-});
-cuda_opts.on("click", function() {
-    processClick(cuda_opts, this, "cuda");
-});
 
-// Initialize on start
-$(function() {
-    processClick();
-});
+    document.addEventListener('alpine:init', () => {
+        Alpine.data('rapids_selector', () => ({
+            // default values
+            active_python_ver: "3.9",
+            active_cuda_ver: "11.5",
+            active_os_ver: "Ubuntu 20.04",
+            active_method: "Conda",
+            active_release: "Stable",
+            active_arch: "amd",
+            active_img_type: "core",
+            active_packages: ["Standard"],
+            active_img_options: ["notebooks"],
+            active_additional_packages: [],
 
-// Reset all options
-function resetAll() {
-    $(method_opts).removeClass("disabled");
-    $(pkg_opts).removeClass("disabled");
-    $(release_opts).removeClass("disabled");
-    $(linux_opts).removeClass("disabled");
-    $(python_opts).removeClass("disabled");
-    $(cuda_opts).removeClass("disabled");
-    $(method_opts).removeClass("active");
-    $(pkg_opts).removeClass("active");
-    $(release_opts).removeClass("active");
-    $(linux_opts).removeClass("active");
-    $(python_opts).removeClass("active");
-    $(cuda_opts).removeClass("active");
-}
+            // all possible values
+            python_vers: ["3.8", "3.9"],
+            cuda_vers: ["11.0", "11.2", "11.4", "11.5"],
+            os_vers: ["Ubuntu 18.04", "Ubuntu 20.04", "CentOS 7", "CentOS 8"],
+            methods: ["Conda", "Docker", "Source"],
+            releases: ["Stable", "Nightly"],
+            arches: ["amd", "arm"],
+            img_types: ["core", "standard", "clx"],
+            packages: ["Standard", "cuDF", "cuML", "cuGraph", "cuSpatial", "cuXFilter", "cuSignal", "cuCIM"],
+            additional_packages: ["Dask SQL", "JupyterLab", "Plotly Dash", "Graphistry", "PyCaret", "TensorFlow"], // "Xarray-Spatial", "RTXpy" will return later
+            img_options: ["notebooks", "development"],
+            note_prefix: "<i class='fas fa-info-circle text-blue'></i>",
+            rapids_meta_pkgs: ["cuDF", "cuML", "cuGraph", "cuSpatial", "cuXFilter", "cuSignal", "cuCIM"],
+            getStableVersion() {
+                return "{{ site.data.releases.stable-version }}";
+            },
+            getNightlyVersion() {
+                return "{{ site.data.releases.nightly-version }}";
+            },
+            getOSHTML(os_ver) {
+                var icon_class = "ubuntu"
+                if (os_ver.includes("CentOS")) icon_class = "centos";
+                return os_ver + "&nbsp;<i class='fab fa-" + icon_class + "'></i>";
+            },
+            getMethodHTML(method) {
+                var icon_class = "box-open fas";
+                if (method.includes("Docker")) icon_class = "docker fab";
+                if (method.includes("Source")) icon_class = "cogs fas";
+                return method + "&nbsp;<i class='fa-" + icon_class + "'></i>";
+            },
+            getPackageHTML(pkg) {
 
-// Reset to default choices
-function resetSelector() {
-    selections = Object.assign({}, default_selections);
-    processClick();
-}
+                if (pkg === "Standard") {
+                    return pkg + "&nbsp;<i class='fas fa-check-square'></i>";
+                }
 
-// Process clicks on options
-function processClick(options, click, category) {
-    // Reset the board
-    resetAll();
+                return pkg;
+            },
+            getReleaseText(release) {
+                var version = this.getStableVersion();
+                if (release.includes("Nightly")) version = this.getNightlyVersion() + "a";
+                return release + " " + "(" + version + ")";
+            },
+            getArchText(arch) {
+                var text = "Arch not implemented yet!"
+                if (arch === "amd") text = "x86-64";
+                if (arch === "arm") text = "Arm Server (SBSA)";
+                return text;
+            },
+            highlightCmd(str) {
+                return "<span class='nb'>" + str + "</span>"
+            },
+            highlightFlag(str) {
+                return "<span class='nt'>" + str + "</span>"
+            },
+            highlightPkgOrImg(str) {
+                return "<span class='nv'>" + str + "</span>"
+            },
+            highlightCondaPkg(pkg) {
+                var channel_pkg_separator = "::";
+                var pkg_components = pkg.split(channel_pkg_separator);
+                if (pkg_components.length === 1) {
+                    return this.highlightPkgOrImg(pkg);
+                }
+                return pkg_components[0] + channel_pkg_separator + this.highlightPkgOrImg(pkg_components[1]);
+            },
+            getAdditionalPkgName(pkg) {
+                var dask_prefix = this.active_release === "Nightly" ? "dask/label/dev::" : "";
+                var pkg_names = {
+                    "Plotly Dash": "dash",
+                    "Dask SQL": dask_prefix + "dask-sql"
+                }
+                return (pkg_names[pkg] || pkg).toLowerCase();
+            },
+            getCondaCmdHtml() {
+                var rapids_version = this.active_release === "Stable" ? this.getStableVersion() : this.getNightlyVersion();
+                var rapids_channel = this.active_release === "Stable" ? "rapidsai" : "rapidsai-nightly";
+                var dask_prefix = this.active_release === "Nightly" ? "dask/label/dev::" : "";
+                var python_version = this.active_python_ver;
+                var cuda_version = this.active_cuda_ver;
+                var pkgs = this.active_packages;
+                var py_cuda_pkgs = [this.highlightPkgOrImg("python") + "=" + python_version, this.highlightPkgOrImg("cudatoolkit") + "=" + cuda_version].join(" ");
+                var conda_channels = [rapids_channel, "nvidia", "conda-forge"]
+                    .map(ch => this.highlightFlag("-c") + " " + ch + " ")
+                    .join("");
+                var indentation = "    ";
 
-    // Hide linux/rhel/docker notes
-    $("#rhel7-conda-note").addClass("hidden");
-    $("#rhel7-source-note").addClass("hidden");
-    $("#linux-conda-note").addClass("hidden");
-    $("#linux-source-note").addClass("hidden");
-    $("#base-docker-note").addClass("hidden");
+                if (this.active_packages.length === 1 && this.active_packages[0] === "Standard") {
+                    pkgs = ["rapids"];
+                }
 
-    // Record selection
-    if (click && category) {
-        selections[category] = click.id;
-    }
+                var pkgs_vers = pkgs.map(pkg => this.highlightPkgOrImg(pkg) + "=" + rapids_version + " ").join("").toLowerCase();
+                var all_pkgs = pkgs_vers + py_cuda_pkgs;
 
-    // Handle exclusions
-    if (selections["method"] == "conda") {
-        // Handle conda requests
-        if (selections["linux"] == "rhel7") {
-            // Display RHEL note
-            $("#rhel7-conda-note").removeClass("hidden");
-        } else {
-            // Display linux note
-            $("#linux-conda-note").removeClass("hidden");
-        }
-    } else if (selections["method"] == "runtime") {
-        // Handle docker runtime requests
-        if (selections["linux"] == "rhel7") {
-            selections["linux"] = "centos7";
-        }
-        // Display base note
-        $("#base-docker-note").removeClass("hidden");
-        $("#rhel7").addClass("disabled");
-        $(pkg_opts).addClass("disabled");
-        selections["pkg"] = "all";
-        $("#all").removeClass("disabled");
-    } else if (selections["method"] == "source") {
-        // Handle source requests
-        $("#all").addClass("disabled");
-        if (selections["pkg"] == "all") {
-            selections["pkg"] = "cudf";
-        }
-        if (selections["linux"] == "rhel7") {
-            // Display RHEL note
-            $("#rhel7-source-note").removeClass("hidden");
-        } else {
-            // Display linux note
-            $("#linux-source-note").removeClass("hidden");
-        }
-        $(python_opts).removeClass("active");
-        $(cuda_opts).removeClass("active");
-        $(python_opts).addClass("disabled");
-        $(cuda_opts).addClass("disabled");
-    } else if (selections["method"] == "devel") {
-        // Handle docker devel requests
-        if (selections["linux"] == "rhel7") {
-            selections["linux"] = "centos7";
-        }
-        selections["cuda"] = "cuda115";
-        $(cuda_opts).addClass("disabled");
-        $("#cuda115").removeClass("disabled");
-        selections["pkg"] = "all";
-        $("#rhel7").addClass("disabled");
-        $(pkg_opts).addClass("disabled");
-        $("#all").removeClass("disabled");
-        $(method_opts).removeClass("disabled");
-        $(release_opts).removeClass("disabled");
-    }
+                var conda_create_ln = this.highlightCmd('conda') + " create " + this.highlightFlag("-n") + " rapids-" + rapids_version + " " + conda_channels;
+                var pkgs_ln = indentation + all_pkgs;
+                var add_pkgs_ln = "";
 
-    // Mark active options
-    $("#" + selections["method"]).addClass("active");
-    $("#" + selections["pkg"]).addClass("active");
-    $("#" + selections["linux"]).addClass("active");
-    $("#" + selections["python"]).addClass("active");
-    $("#" + selections["cuda"]).addClass("active");
-    $("#" + selections["release"]).addClass("active");
+                if (this.active_additional_packages.length) {
+                    add_pkgs_ln = indentation + this.active_additional_packages
+                        .map(pkg => this.highlightCondaPkg(this.getAdditionalPkgName(pkg)))
+                        .join(" ");
+                }
 
-    showCommand();
-}
+                var lines = [
+                    conda_create_ln,
+                    pkgs_ln,
+                    add_pkgs_ln
+                ].filter(Boolean).join(" \\\n");
 
-function getSelections() {
-    if (selections["method"] == "source") {
-        return "" + selections["release"] + "-" + selections["pkg"] + "-" + selections["method"];
-    } else if (selections["method"] == "conda") {
-        return "" + selections["release"] + "-" + selections["pkg"] + "-" + selections["method"] + "-" + selections["python"] + "-" + selections["cuda"];
-    } else {
-        return "" + selections["release"] + "-" + selections["pkg"] + "-" + selections["method"] + "-" + selections["linux"] + "-" + selections["python"] + "-" + selections["cuda"];
-    }
-}
+                return lines;
+            },
+            getDockerCmdHtml() {
+                var hasNotebooks = this.active_img_options.includes("notebooks");
+                var isDevel = this.active_img_options.includes("development");
+                var isNightly = this.active_release === "Nightly";
+                var isArm = this.active_arch === "arm";
+                var imgVariant = "";
+                if (this.active_img_type === "core") imgVariant = "core";
+                if (this.active_img_type === "clx") imgVariant = "clx";
+                var imgType = "base";
+                if (hasNotebooks) imgType = "runtime";
+                if (isDevel) imgType = "devel";
+                var portOptions = (hasNotebooks ? ["8888:8888", "8787:8787", "8786:8786"] : [])
+                    .map(opt => this.highlightFlag("-p") + " " + opt + " ").join("");
 
-function showCommand() {
-    var key = getSelections();
-    var command = $("." + key).html();
-    var anchor = details[selections["method"]];
-    var txt = ("" + selections["method"] + " details").toUpperCase();
-    $("#command").html(command);
-    $("#command > div > pre > code ").attr("id", "command-code")
-}
+                var imgRepo = [
+                    "rapidsai/rapidsai",
+                    imgVariant,
+                    (isDevel ? "dev" : ""),
+                    (isNightly ? "nightly" : ""),
+                    (isArm ? "arm64" : ""),
+                ].filter(Boolean).join("-");
 
-function CopyToClipboard(containerid) {
-    if (document.selection) { //IE
-        var range = document.body.createTextRange();
-        range.moveToElementText(document.getElementById(containerid));
-        range.select();
-        document.execCommand("copy");
-    } else if (window.getSelection) { //others
-        var range = document.createRange();
-        range.selectNode(document.getElementById(containerid));
-        window.getSelection().removeAllRanges();
-        window.getSelection().addRange(range);
-        document.execCommand("copy");
-    }
-}
+                var imgTag = [
+                    (isNightly ? this.getNightlyVersion() : this.getStableVersion()),
+                    "cuda" + this.active_cuda_ver,
+                    imgType,
+                    this.active_os_ver.replace(" ", ""),
+                    "py" + this.active_python_ver
+                ].join("-");
+
+                var fullImg = (this.highlightPkgOrImg(imgRepo) + ":" + imgTag).toLowerCase();
+
+                var indent = "    ";
+                var cmd = this.highlightCmd("docker") + " pull " + fullImg + "\n" +
+                    this.highlightCmd("docker") + " run --" + this.highlightFlag("gpus") + " all --" + this.highlightFlag("rm") + " -" + this.highlightFlag("it") + " \\\n" +
+                    indent + "--" + this.highlightFlag("shm-size") + "=1g --" + this.highlightFlag("ulimit") + " memlock=-1" + " \\\n" +
+                    (portOptions ? indent + portOptions + "\\\n" : "") +
+                    indent + fullImg;
+                return cmd;
+            },
+            getSourceCmdHtml() {
+                var isStable = this.active_release === "Stable";
+                var version = isStable ? this.getStableVersion() : this.getNightlyVersion();
+                var links = [
+                    "https://github.com/rapidsai/cudf/blob/branch-" + version + "/CONTRIBUTING.md",
+                    "https://github.com/rapidsai/cuml/blob/branch-" + version + "/README.md",
+                    "https://github.com/rapidsai/cugraph/blob/branch-" + version + "/SOURCEBUILD.md",
+                    "https://github.com/rapidsai/cuspatial/blob/branch-" + version + "/README.md",
+                    "https://github.com/rapidsai/cuxfilter/blob/branch-" + version + "/CONTRIBUTING.md",
+                    "https://github.com/rapidsai/cusignal#source-linux-os",
+                    "https://github.com/rapidsai/cucim/blob/branch-" + version + "/CONTRIBUTING.md#building-and-testing-cucim-from-source"
+                ];
+                var cmd = "<p class='selector__source-cmd'>For source build instructions, please view the links below:</p>";
+                cmd += "<ul class='selector__source-cmd__list'>";
+                for (var i = 0; i < links.length; i++) {
+                    var link = links[i];
+                    cmd += "<li class='selector__source-cmd__list-item'>";
+                    cmd += "<a class='selector__source-cmd__link' target='_blank' href='" + link + "'>" + link + "</a>";
+                    cmd += "</li>";
+                }
+                cmd += "</ul>";
+                return cmd;
+            },
+            getImgTypeText(type) {
+                if (type === "core") return "Basic"
+                if (type === "standard") return "Basic w/ Dask-SQL"
+                if (type === "clx") return "Basic w/ CLX"
+                return type;
+            },
+            getImgOptionText(option) {
+                if (option === "notebooks") return "Include Jupyter Notebooks";
+                if (option === "development") return "Development Image";
+                return option;
+            },
+            getDockerNotes() {
+                var core_pkgs = this.rapids_meta_pkgs;
+
+                if (this.active_img_type === "standard") {
+                    core_pkgs = [...core_pkgs, "dask-sql"];
+                }
+                if (this.active_img_type === "clx") {
+                    core_pkgs = [...core_pkgs, "clx"];
+                }
+                var pkgs_html = core_pkgs.map(pkg => "<code>" + pkg + "</code>").join(", ");
+                return [this.note_prefix + " The selected image contains the following packages:<br>" + pkgs_html];
+            },
+            getCondaNotes() {
+                var notes = [];
+                notes = [...notes, "RAPIDS currently doesn't support <code>channel_priority: strict</code>; use <code>channel_priority: flexible</code> instead"];
+                if (this.active_packages.length === 1 && this.active_packages[0] === "Standard") {
+                    var pkgs_html = this.rapids_meta_pkgs.map(pkg => "<code>" + pkg + "</code>").join(", ");
+                    notes = [...notes, "The <code>Standard</code> selection contains the following packages:<br>" + pkgs_html];
+                }
+
+                if (this.active_additional_packages.length) {
+                    notes = [...notes, "Third-party packages are not tested."];
+                }
+
+                return notes.map(note => this.note_prefix + " " + note);
+            },
+            getArmNotes() {
+                return [this.note_prefix + " ARM support does not currently include Jetson products."];
+            },
+            getNoteHtml() {
+                var notes = [];
+
+                if (this.active_arch === "arm") {
+                    notes.push(...this.getArmNotes());
+                }
+
+                if (this.active_method === "Docker") {
+                    notes.push(...this.getDockerNotes());
+                }
+
+                if (this.active_method === "Conda") {
+                    notes.push(...this.getCondaNotes());
+                }
+
+                return notes.map(note => `<div class="option-note">${note}</div>`).join("");
+            },
+            getCmdHtml() {
+                if (this.active_method === "Docker")
+                    return this.getDockerCmdHtml();
+                if (this.active_method === "Conda")
+                    return this.getCondaCmdHtml();
+                if (this.active_method === "Source")
+                    return this.getSourceCmdHtml();
+                return "Not implemented yet!";
+            },
+            getNewestCudaVer() {
+                return this.cuda_vers[this.cuda_vers.length - 1];
+            },
+            disableUnsupportedRelease(release) {
+                var isDisabled = false;
+                return isDisabled;
+            },
+            disableUnsupportedCuda(cuda_version) {
+                var isDisabled = false;
+                if (this.active_img_options.includes("development") && cuda_version !== this.getNewestCudaVer()) {
+                    isDisabled = true;
+                }
+                if (this.active_arch === "arm" && cuda_version === "11.0") isDisabled = true;
+                return isDisabled;
+            },
+            disableUnsupportedPython(python_version) {
+                var isDisabled = false;
+                return isDisabled;
+            },
+            disableUnsupportedImgOS(os) {
+                var isDisabled = false;
+                if (this.active_arch === "arm" && os === "CentOS 7") isDisabled = true;
+                if (this.active_release === "Nightly" && os === "CentOS 8") isDisabled = true;
+                return isDisabled;
+            },
+            disableUnsupportedImgType(type) {
+                var isDisabled = false;
+                if (this.active_arch === "arm" && type !== "core") isDisabled = true;
+                return isDisabled;
+            },
+            disableUnsupportedImgOption(option) {
+                var isDisabled = false;
+                return isDisabled;
+            },
+            isDisabled(e) {
+                return e.classList.contains("disabled");
+            },
+            releaseClickHandler(e, release) {
+                if (this.isDisabled(e.target)) return;
+                if (release === "Nightly" && this.active_os_ver === "CentOS 8") this.active_os_ver = "CentOS 7";
+                this.active_release = release;
+            },
+            imgTypeClickHandler(e, type) {
+                if (this.isDisabled(e.target)) return;
+                this.active_img_type = type;
+            },
+            archClickHandler(e, arch) {
+                if (this.isDisabled(e.target)) return;
+                if (arch === "arm") this.active_img_type = "core";
+                if (arch === "arm" && this.active_os_ver === "CentOS 7") this.active_os_ver = "Ubuntu 20.04";
+                if (arch === "arm" && this.active_cuda_ver === "11.0") this.active_cuda_ver = "11.2";
+                this.active_arch = arch;
+            },
+            cudaClickHandler(e, version) {
+                if (this.isDisabled(e.target)) return;
+                this.active_cuda_ver = version;
+            },
+            pythonClickHandler(e, version) {
+                if (this.isDisabled(e.target)) return;
+                this.active_python_ver = version;
+            },
+            methodClickHandler(e, method) {
+                if (this.isDisabled(e.target)) return;
+                if (method !== "Docker") {
+                    this.active_img_options = ["notebooks"];
+                    this.active_img_type = "core";
+                }
+                this.active_method = method;
+            },
+            imgOSClickHandler(e, version) {
+                if (this.isDisabled(e.target)) return;
+                this.active_os_ver = version;
+            },
+            imgOptionClickHandler(e, option) {
+                if (this.isDisabled(e.target)) return;
+
+                // development images have notebooks
+                if (option === "development" && this.active_img_options.length === 0) {
+                    this.active_img_options = ["notebooks", "development"];
+                    this.active_cuda_ver = this.getNewestCudaVer();
+                    return;
+                }
+
+                if (option === "notebooks" && this.active_img_options.length === 2) {
+                    this.active_img_options = [];
+                    return;
+                }
+
+                if (this.active_img_options.includes(option)) {
+                    this.active_img_options = this.active_img_options.filter(el => el !== option);
+                    return;
+                }
+
+                this.active_img_options = [...this.active_img_options, option];
+                if (this.active_img_options.includes("development")) {
+                    this.active_cuda_ver = this.getNewestCudaVer();
+                }
+            },
+            /**
+            * Determines which packages are selected. "Standard" can only be
+            * selected individually. All other packages can be selected together.
+            **/
+            packagesClickHandler(e, package) {
+                if (package === "Standard") {
+                    this.active_packages = [package];
+                    return;
+                }
+
+                this.active_packages = this.active_packages.filter(el => el !== "Standard");
+
+                if (this.active_packages.includes(package)) {
+                    if (this.active_packages.length === 1) return;
+                    this.active_packages = this.active_packages.filter(el => el !== package);
+                    return;
+                }
+                this.active_packages = [...this.active_packages, package];
+            },
+            additionalPackagesClickHandler(e, package) {
+                if (this.active_additional_packages.includes(package)) {
+                    this.active_additional_packages = this.active_additional_packages.filter(el => el !== package);
+                    return;
+                }
+                this.active_additional_packages = [...this.active_additional_packages, package];
+            },
+            copyToClipboard() {
+                var range = document.createRange();
+                range.selectNode(this.$refs.cmd);
+                window.getSelection().removeAllRanges();
+                window.getSelection().addRange(range);
+                document.execCommand("copy");
+                window.getSelection().removeAllRanges();
+            },
+        }))
+    })
 </script>
-<!--
-    FYI commands moved to "selector-commands-*.html" one for each release type:
-      - selector-commands-stable.html
-      - selector-commands-nightly.html
--->

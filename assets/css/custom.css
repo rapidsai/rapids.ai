@@ -116,7 +116,7 @@ strong {
     position: relative;
     left: 50%;
     width: 50%;
-    transform: translate(-50%);
+    transform: translate(50%);
 }
 
 .full-image-center {
@@ -133,9 +133,8 @@ strong {
 
 .third-image-center {
     position: relative;
-    left: 33%;
     width: 33%;
-    transform: translate(-50%);
+    transform: translate(66%);
 }
 
 .quarter-image-center {
@@ -886,7 +885,7 @@ a.blue-btn:hover,
     width: 100%;
 }
 
-.selector .options div {
+.selector .options-section {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -898,6 +897,8 @@ a.blue-btn:hover,
     text-transform: uppercase;
     font-weight: 600;
     margin-top: 0.6em;
+    margin-right: 0.6em;
+    text-align: right;
 }
 
 .selector .options .option {
@@ -913,16 +914,16 @@ a.blue-btn:hover,
 
 .selector .options .option:hover, .selector .options .option.active:hover {
     background: #ffb500;
-    -webkit-transition: all 0.3s ease-in-out;
-    -moz-transition: all 0.3s ease-in-out;
-    -o-transition: all 0.3s ease-in-out;
-    transition: all 0.3s ease-in-out;
+    -webkit-transition: background-color 0.3s ease-in-out;
+    -moz-transition: background-color 0.3s ease-in-out;
+    -o-transition: background-color 0.3s ease-in-out;
+    transition: background-color 0.3s ease-in-out;
 }
 
 .selector .options .note code {
     background: #e3e3e3;
     color: #000000;
-    padding: 0.2em;
+    padding: 0.1em 0.1em 0.15em;
 }
 
 .selector .options .option-blank {
@@ -993,6 +994,25 @@ i.fa-down-6 {
     cursor: not-allowed;
 }
 
+p.selector__source-cmd {
+    color: #3c3c3c;
+    margin-bottom: 0.4em;
+}
+
+.selector__source-cmd__link {
+    text-decoration: underline;
+    color: #080013;
+}
+
+.selector__source-cmd__list,
+p.selector__source-cmd {
+    font-size: 1em;
+}
+
+.selector__source-cmd__list-item {
+    margin-bottom: 0.2em;
+}
+
 .cmd {
     display: flex;
 }
@@ -1049,6 +1069,10 @@ a.blue-btn,
 
 .selector .option.active .fas {
     color: #3c3c3c;
+}
+
+.option-note {
+    margin-bottom: 10px;
 }
 
 /* blog posts */
@@ -1253,6 +1277,7 @@ code.tag {
 
     .selector .options .option-label, .selector .cmd .cmd-label {
         width: 5em;
+        text-align: left;
     }
 
     .selector .options .option, .selector .options .option-blank, .selector .options .option-notice  {
@@ -1473,5 +1498,3 @@ code.tag {
         font-size: 0.9em;
     }
 }
-
-

@@ -107,7 +107,6 @@ All provisioned systems need to be RAPIDS capable. Here's what is required:
 
 <i class="fas fa-desktop text-purple"></i> **OS:** Ubuntu 18.04/20.04 or CentOS 7/8 with <code>gcc/++</code> 9.0+
 {: .no-tb-margins }
-- <i class="fas fa-bullhorn text-purple"></i> See **[RDN 8](https://docs.rapids.ai/notices/rdn0008){: target="_blank"}** for recent changes to <code>gcc/++</code> 9.0 requirements<br/>
 - <i class="fas fa-info-circle text-purple"></i> RHEL 7/8 support is provided through CentOS 7/8 builds/installs
 - <i class="fas fa-desktop text-purple"></i> Experimental WSL2 on Windows11 **[See separate install guide <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://developer.nvidia.com/blog/run-rapids-on-microsoft-windows-10-using-wsl-2-the-windows-subsystem-for-linux/){: target="_blank"}**
 
@@ -261,7 +260,7 @@ bash Miniconda3-latest-Linux-x86_64.sh
 ## <i class="fa-regular fa-binary"></i> Build From Source
 {: .section-title-halfs}
 
-To build RAPIDS **cuDF** from source, see the **[cuDF README](https://github.com/rapidsai/cudf/tree/main#development-setup){: target="_blank"}** for source environment setup and build instructions.  If you need to build other packages from source, first check their README documentation, and if further help is needed reach out on our [Slack Channel](https://join.slack.com/t/rapids-goai/shared_invite/zt-trnsul8g-Sblci8dk6dIoEeGpoFcFOQ). 
+To build RAPIDS from source, check each libraries` readme. For example the **[cuDF README](https://github.com/rapidsai/cudf/tree/main#development-setup){: target="_blank"}** has details for source environment setup and build instructions. Further links are provided in the selector tool. If additional help is needed reach out on our [Slack Channel](https://join.slack.com/t/rapids-goai/shared_invite/zt-trnsul8g-Sblci8dk6dIoEeGpoFcFOQ). 
 {: .padding-bottom-3em }
 
 ## <i class="fas fa-laptop-code"></i> Where is PIP?
@@ -303,8 +302,6 @@ RAPIDS is available in conda packages, docker images, and from source builds. Us
 	background="background-purple"
 	padding-top="0em" padding-bottom="10em"
 %}
-{% include selector-commands-stable.html %}
-{% include selector-commands-nightly.html %}
 
 
 <div id="next-steps"></div>
