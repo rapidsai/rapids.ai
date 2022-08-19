@@ -67,6 +67,15 @@
                 </div>
                 <div class="docker-options-container" x-show="active_method === 'Docker'">
                     <div class="options-section">
+                        <div class="option-label">Image Location</div>
+                        <template x-for="loc in img_loc">
+                            <div x-on:click="(e) => imgLocClickHandler(e, loc)"
+                                x-bind:class="{'active': loc === active_img_loc, 'disabled': disableUnsupportedImgLoc(loc)}"
+                                class="option" x-html="getImgLoc(loc)">
+                            </div>
+                        </template>
+                    </div>
+                    <div class="options-section">
                         <div class="option-label">Image OS</div>
                         <template x-for="version in os_vers">
                             <div x-on:click="(e) => imgOSClickHandler(e, version)"
@@ -123,6 +132,7 @@
             active_release: "Stable",
             active_arch: "amd",
             active_img_type: "core",
+            active_img_loc: "NGC",
             active_packages: ["Standard"],
             active_img_options: ["notebooks"],
             active_additional_packages: [],
@@ -130,13 +140,14 @@
             // all possible values
             python_vers: ["3.8", "3.9"],
             cuda_vers: ["11.0", "11.2", "11.4", "11.5"],
-            os_vers: ["Ubuntu 18.04", "Ubuntu 20.04", "CentOS 7", "CentOS 8"],
+            os_vers: ["Ubuntu 18.04", "Ubuntu 20.04", "CentOS 7", "Rocky Linux 8"],
             methods: ["Conda", "Docker", "Source"],
             releases: ["Stable", "Nightly"],
             arches: ["amd", "arm"],
+            img_loc: ["NGC", "Dockerhub"],
             img_types: ["core", "standard", "clx"],
             packages: ["Standard", "cuDF", "cuML", "cuGraph", "cuSpatial", "cuXFilter", "cuSignal", "cuCIM"],
-            additional_packages: ["Dask SQL", "JupyterLab", "Plotly Dash", "Graphistry", "PyCaret", "TensorFlow"], // "Xarray-Spatial", "RTXpy" will return later
+            additional_packages: ["Dask SQL", "JupyterLab", "Plotly Dash", "Graphistry", "PyCaret", "TensorFlow", "Xarray-Spatial"], // , "RTXpy" will return later
             img_options: ["notebooks", "development"],
             note_prefix: "<i class='fas fa-info-circle text-blue'></i>",
             rapids_meta_pkgs: ["cuDF", "cuML", "cuGraph", "cuSpatial", "cuXFilter", "cuSignal", "cuCIM"],
@@ -149,11 +160,12 @@
             getOSHTML(os_ver) {
                 var icon_class = "ubuntu"
                 if (os_ver.includes("CentOS")) icon_class = "centos";
+                if (os_ver.includes("Rocky Linux")) icon_class = "linux";
                 return os_ver + "&nbsp;<i class='fab fa-" + icon_class + "'></i>";
             },
             getMethodHTML(method) {
                 var icon_class = "box-open fas";
-                if (method.includes("Docker")) icon_class = "docker fab";
+                if (method.includes("Docker")) icon_class = "regular fa-container-storage";
                 if (method.includes("Source")) icon_class = "cogs fas";
                 return method + "&nbsp;<i class='fa-" + icon_class + "'></i>";
             },
@@ -244,6 +256,8 @@
                 var isDevel = this.active_img_options.includes("development");
                 var isNightly = this.active_release === "Nightly";
                 var isArm = this.active_arch === "arm";
+                var imgLoc = "";
+                if (this.active_img_loc === "NGC") imgLoc = "nvcr.io/nvidia/"
                 var imgVariant = "";
                 if (this.active_img_type === "core") imgVariant = "core";
                 if (this.active_img_type === "clx") imgVariant = "clx";
@@ -254,7 +268,7 @@
                     .map(opt => this.highlightFlag("-p") + " " + opt + " ").join("");
 
                 var imgRepo = [
-                    "rapidsai/rapidsai",
+                    imgLoc + "rapidsai/rapidsai",
                     imgVariant,
                     (isDevel ? "dev" : ""),
                     (isNightly ? "nightly" : ""),
@@ -313,6 +327,11 @@
                 if (option === "development") return "Development Image";
                 return option;
             },
+            getImgLoc(loc) {
+                if (loc === "NGC") return 'NGC <i class="fa-regular fa-share-nodes"></i>';
+                if (loc === "Dockerhub") return 'Docker Hub <i class="fa-docker fab"></i>';
+                return loc;
+            },
             getDockerNotes() {
                 var core_pkgs = this.rapids_meta_pkgs;
 
@@ -335,6 +354,10 @@
 
                 if (this.active_additional_packages.length) {
                     notes = [...notes, "Third-party packages are not tested."];
+
+                    if (this.active_additional_packages.includes("TensorFlow")) {
+                        notes = [...notes, "TensorFlow requires CUDA 11.2."];
+                    }
                 }
 
                 return notes.map(note => this.note_prefix + " " + note);
@@ -381,6 +404,7 @@
                     isDisabled = true;
                 }
                 if (this.active_arch === "arm" && cuda_version === "11.0") isDisabled = true;
+                if (this.active_additional_packages.includes("TensorFlow") && cuda_version !== "11.2") isDisabled = true;
                 return isDisabled;
             },
             disableUnsupportedPython(python_version) {
@@ -402,6 +426,10 @@
                 var isDisabled = false;
                 return isDisabled;
             },
+            disableUnsupportedImgLoc(loc) {
+                var isDisabled = false;
+                return isDisabled;
+            },
             isDisabled(e) {
                 return e.classList.contains("disabled");
             },
@@ -417,7 +445,7 @@
             archClickHandler(e, arch) {
                 if (this.isDisabled(e.target)) return;
                 if (arch === "arm") this.active_img_type = "core";
-                if (arch === "arm" && this.active_os_ver === "CentOS 7") this.active_os_ver = "Ubuntu 20.04";
+                if (arch === "arm" && (this.active_os_ver === "CentOS 7" || this.active_os_ver === "Rocky Linux 8")) this.active_os_ver = "Ubuntu 20.04";
                 if (arch === "arm" && this.active_cuda_ver === "11.0") this.active_cuda_ver = "11.2";
                 this.active_arch = arch;
             },
@@ -435,11 +463,18 @@
                     this.active_img_options = ["notebooks"];
                     this.active_img_type = "core";
                 }
+                if (method !== "Conda") {
+                    this.active_additional_packages = [];
+                }
                 this.active_method = method;
             },
             imgOSClickHandler(e, version) {
                 if (this.isDisabled(e.target)) return;
                 this.active_os_ver = version;
+            },
+            imgLocClickHandler(e, loc) {
+                if (this.isDisabled(e.target)) return;
+                this.active_img_loc = loc;
             },
             imgOptionClickHandler(e, option) {
                 if (this.isDisabled(e.target)) return;
@@ -491,6 +526,7 @@
                     return;
                 }
                 this.active_additional_packages = [...this.active_additional_packages, package];
+                if (this.active_additional_packages.includes("TensorFlow") && this.active_cuda_ver !== "11.2") this.active_cuda_ver = "11.2";
             },
             copyToClipboard() {
                 var range = document.createRange();
