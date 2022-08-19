@@ -140,7 +140,7 @@
             // all possible values
             python_vers: ["3.8", "3.9"],
             cuda_vers: ["11.0", "11.2", "11.4", "11.5"],
-            os_vers: ["Ubuntu 18.04", "Ubuntu 20.04", "CentOS 7", "RockyLinux8"],
+            os_vers: ["Ubuntu 18.04", "Ubuntu 20.04", "CentOS 7", "Rocky Linux 8"],
             methods: ["Conda", "Docker", "Source"],
             releases: ["Stable", "Nightly"],
             arches: ["amd", "arm"],
@@ -160,7 +160,7 @@
             getOSHTML(os_ver) {
                 var icon_class = "ubuntu"
                 if (os_ver.includes("CentOS")) icon_class = "centos";
-                if (os_ver.includes("RockyLinux")) icon_class = "linux";
+                if (os_ver.includes("Rocky Linux")) icon_class = "linux";
                 return os_ver + "&nbsp;<i class='fab fa-" + icon_class + "'></i>";
             },
             getMethodHTML(method) {
@@ -442,7 +442,7 @@
             archClickHandler(e, arch) {
                 if (this.isDisabled(e.target)) return;
                 if (arch === "arm") this.active_img_type = "core";
-                if (arch === "arm" && (this.active_os_ver === "CentOS 7" || this.active_os_ver === "RockyLinux 8")) this.active_os_ver = "Ubuntu 20.04";
+                if (arch === "arm" && (this.active_os_ver === "CentOS 7" || this.active_os_ver === "Rocky Linux 8")) this.active_os_ver = "Ubuntu 20.04";
                 if (arch === "arm" && this.active_cuda_ver === "11.0") this.active_cuda_ver = "11.2";
                 this.active_arch = arch;
             },
