@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <div class="docker-options-container" x-show="active_method === 'Docker'">
-					<div class="options-section">
+                    <div class="options-section">
                         <div class="option-label">Image Location</div>
                         <template x-for="loc in img_loc">
                             <div x-on:click="(e) => imgLocClickHandler(e, loc)"
@@ -144,7 +144,7 @@
             methods: ["Conda", "Docker", "Source"],
             releases: ["Stable", "Nightly"],
             arches: ["amd", "arm"],
-			img_loc: ["NGC", "Dockerhub"],
+            img_loc: ["NGC", "Dockerhub"],
             img_types: ["core", "standard", "clx"],
             packages: ["Standard", "cuDF", "cuML", "cuGraph", "cuSpatial", "cuXFilter", "cuSignal", "cuCIM"],
             additional_packages: ["Dask SQL", "JupyterLab", "Plotly Dash", "Graphistry", "PyCaret", "TensorFlow", "Xarray-Spatial"], // , "RTXpy" will return later
@@ -160,7 +160,7 @@
             getOSHTML(os_ver) {
                 var icon_class = "ubuntu"
                 if (os_ver.includes("CentOS")) icon_class = "centos";
-				if (os_ver.includes("RockyLinux")) icon_class = "linux";
+                if (os_ver.includes("RockyLinux")) icon_class = "linux";
                 return os_ver + "&nbsp;<i class='fab fa-" + icon_class + "'></i>";
             },
             getMethodHTML(method) {
@@ -256,9 +256,9 @@
                 var isDevel = this.active_img_options.includes("development");
                 var isNightly = this.active_release === "Nightly";
                 var isArm = this.active_arch === "arm";
-				var imgLoc = "nvcr.io/nvidia/";
-				if (this.active_img_loc === "NGC") imgLoc = "nvcr.io/nvidia/"
-				if (this.active_img_loc === "Dockerhub") imgLoc = ""
+                var imgLoc = "nvcr.io/nvidia/";
+                if (this.active_img_loc === "NGC") imgLoc = "nvcr.io/nvidia/"
+                if (this.active_img_loc === "Dockerhub") imgLoc = ""
                 var imgVariant = "";
                 if (this.active_img_type === "core") imgVariant = "core";
                 if (this.active_img_type === "clx") imgVariant = "clx";
@@ -268,7 +268,7 @@
                 var portOptions = (hasNotebooks ? ["8888:8888", "8787:8787", "8786:8786"] : [])
                     .map(opt => this.highlightFlag("-p") + " " + opt + " ").join("");
 
-                var imgRepo = imgLoc+[
+                var imgRepo = imgLoc + [
                     "rapidsai/rapidsai",
                     imgVariant,
                     (isDevel ? "dev" : ""),
@@ -328,7 +328,7 @@
                 if (option === "development") return "Development Image";
                 return option;
             },
-			getImgLoc(loc) {
+            getImgLoc(loc) {
                 if (loc === "NGC") return 'NGC&nbsp;<i class="fa-regular fa-share-nodes"></i>';
                 if (loc === "Dockerhub") return 'Docker Hub&nbsp;<i class="fa-docker fab"></i>';
                 return loc;
@@ -401,7 +401,7 @@
                     isDisabled = true;
                 }
                 if (this.active_arch === "arm" && cuda_version === "11.0") isDisabled = true;
-				if (this.active_additional_packages.includes("TensorFlow") && cuda_version !== "11.2") isDisabled = true;
+                if (this.active_additional_packages.includes("TensorFlow") && cuda_version !== "11.2") isDisabled = true;
                 return isDisabled;
             },
             disableUnsupportedPython(python_version) {
@@ -423,8 +423,8 @@
                 var isDisabled = false;
                 return isDisabled;
             },
-			disableUnsupportedImgLoc(loc) {
-				var isDisabled = false;
+            disableUnsupportedImgLoc(loc) {
+                var isDisabled = false;
                 return isDisabled;
             },
             isDisabled(e) {
@@ -460,7 +460,7 @@
                     this.active_img_options = ["notebooks"];
                     this.active_img_type = "core";
                 }
-				if (method !== "Conda") {
+                if (method !== "Conda") {
                     this.active_additional_packages = [];
                 }
                 this.active_method = method;
@@ -469,7 +469,7 @@
                 if (this.isDisabled(e.target)) return;
                 this.active_os_ver = version;
             },
-			imgLocClickHandler(e, loc) {
+            imgLocClickHandler(e, loc) {
                 if (this.isDisabled(e.target)) return;
                 this.active_img_loc = loc;
             },
@@ -523,7 +523,7 @@
                     return;
                 }
                 this.active_additional_packages = [...this.active_additional_packages, package];
-				if (this.active_additional_packages.includes("TensorFlow")&& this.active_cuda_ver !== "11.2") this.active_cuda_ver = "11.2";
+                if (this.active_additional_packages.includes("TensorFlow") && this.active_cuda_ver !== "11.2") this.active_cuda_ver = "11.2";
             },
             copyToClipboard() {
                 var range = document.createRange();
