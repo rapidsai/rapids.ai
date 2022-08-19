@@ -354,7 +354,7 @@
                 }
 
                 if (this.active_additional_packages.length) {
-                    notes = [...notes, "Third-party packages are not tested.  TensorFlow requires CUDA 11.2.", "PyTorch can be found in 'Base w/ CLX' Docker as it requires CUDA 11.3 or 11.6"];
+                    notes = [...notes, "Third-party packages are not tested.", "TensorFlow requires CUDA 11.2."];
                 }
 
                 return notes.map(note => this.note_prefix + " " + note);
