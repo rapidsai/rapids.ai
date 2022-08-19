@@ -353,7 +353,11 @@
                 }
 
                 if (this.active_additional_packages.length) {
-                    notes = [...notes, "Third-party packages are not tested.", "TensorFlow requires CUDA 11.2."];
+                    notes = [...notes, "Third-party packages are not tested."];
+
+                    if (this.active_additional_packages.includes("TensorFlow")) {
+                        notes = [...notes, "TensorFlow requires CUDA 11.2."];
+                    }
                 }
 
                 return notes.map(note => this.note_prefix + " " + note);
