@@ -105,9 +105,9 @@ All provisioned systems need to be RAPIDS capable. Here's what is required:
 
 <i class="fas fa-microchip text-purple"></i> **GPU:** NVIDIA Pascal™ or better with **[compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 6.0+ **[More details <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://medium.com/dropout-analytics/which-gpus-work-with-rapids-ai-f562ef29c75f){: target="_blank"}**
 
-<i class="fas fa-desktop text-purple"></i> **OS:** Ubuntu 18.04/20.04 or CentOS 7/8 with <code>gcc/++</code> 9.0+
+<i class="fas fa-desktop text-purple"></i> **OS:** Ubuntu 18.04/20.04 or CentOS 7 / Rocky Linux 8 with <code>gcc/++</code> 9.0+
 {: .no-tb-margins }
-- <i class="fas fa-info-circle text-purple"></i> RHEL 7/8 support is provided through CentOS 7/8 builds/installs
+- <i class="fas fa-info-circle text-purple"></i> RHEL 7/8 support is provided through CentOS 7 / Rocky Linux 8 builds/installs
 - <i class="fas fa-desktop text-purple"></i> Experimental WSL2 on Windows11 **[See separate install guide <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://developer.nvidia.com/blog/run-rapids-on-microsoft-windows-10-using-wsl-2-the-windows-subsystem-for-linux/){: target="_blank"}**
 
 <i class="fas fa-download text-purple"></i> **CUDA & NVIDIA Drivers:** One of the following supported versions:
@@ -171,7 +171,7 @@ We suggest taking a look at the sample workflow in our Docker container, which i
 # Step 2: Install Environment
 {: .section-title-full }
 
-For most installations, you will need a Conda or Docker environments installed for RAPIDS. Note, these examples are for Ubuntu. Please modify appropriately for CentOS or RHEL.
+For most installations, you will need a Conda or Docker environments installed for RAPIDS. Note, these examples are for Ubuntu. Please modify appropriately for CentOS / Rocky Linux.
 
 {% endcapture %}
 {% include slopecap.html
