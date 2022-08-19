@@ -41,12 +41,10 @@ for column in df.columns:
 
 ## <i class="fa-solid fa-arrow-pointer"></i> Test Drive RAPIDS Now
 
-Jump right into a GPU powered RAPIDS notebook, online, with either **[SageMaker Studio Lab](https://studiolab.sagemaker.aws/)** or **[Colab](https://colab.research.google.com/){: target="_blank"}** 
-(currently only supports **[RAPIDS v21.12](https://docs.rapids.ai/notices/rsn0014/)**):
+Jump right into a GPU powered RAPIDS notebook, online, with **[SageMaker Studio Lab](https://studiolab.sagemaker.aws/)** (free account required):
 
 <a href="smsl.html" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/Open-StudioLab.png%}" alt="Studio Lab"> </a>
 
-<a href="https://colab.research.google.com/drive/1rY7Ln6rEE1pOlfSHCYOVaqt8OvDO35J0#forceEdit=true&offline=true&sandboxMode=true" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/Open-Colab.png%}" alt="CoLab"> </a>
 
 {% endcapture %}
 {% capture gs_overview %}
