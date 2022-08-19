@@ -256,9 +256,8 @@
                 var isDevel = this.active_img_options.includes("development");
                 var isNightly = this.active_release === "Nightly";
                 var isArm = this.active_arch === "arm";
-                var imgLoc = "nvcr.io/nvidia/";
+                var imgLoc = "";
                 if (this.active_img_loc === "NGC") imgLoc = "nvcr.io/nvidia/"
-                if (this.active_img_loc === "Dockerhub") imgLoc = ""
                 var imgVariant = "";
                 if (this.active_img_type === "core") imgVariant = "core";
                 if (this.active_img_type === "clx") imgVariant = "clx";
@@ -268,8 +267,8 @@
                 var portOptions = (hasNotebooks ? ["8888:8888", "8787:8787", "8786:8786"] : [])
                     .map(opt => this.highlightFlag("-p") + " " + opt + " ").join("");
 
-                var imgRepo = imgLoc + [
-                    "rapidsai/rapidsai",
+                var imgRepo = [
+                    imgLoc + "rapidsai/rapidsai",
                     imgVariant,
                     (isDevel ? "dev" : ""),
                     (isNightly ? "nightly" : ""),
@@ -329,8 +328,8 @@
                 return option;
             },
             getImgLoc(loc) {
-                if (loc === "NGC") return 'NGC&nbsp;<i class="fa-regular fa-share-nodes"></i>';
-                if (loc === "Dockerhub") return 'Docker Hub&nbsp;<i class="fa-docker fab"></i>';
+                if (loc === "NGC") return 'NGC <i class="fa-regular fa-share-nodes"></i>';
+                if (loc === "Dockerhub") return 'Docker Hub <i class="fa-docker fab"></i>';
                 return loc;
             },
             getDockerNotes() {
