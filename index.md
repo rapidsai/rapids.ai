@@ -72,10 +72,52 @@ for column in gdf.columns:
 Find more details on our **[Get Started Page <i class="fas fa-angle-double-right"></i>](start.html)**
 
 ## <i class="fas fa-bolt"></i> Try Now Online
-Jump right into a GPU powered RAPIDS notebook, online, with **[SageMaker Studio Lab](https://studiolab.sagemaker.aws/)** (free account required):
+<div class="row">
+{% capture tin_free_left %}
+For <span style="color:#7306ff">**FREE**</span> to test us out <br>
+(free account required)
+{% endcapture %}
+{% capture tin_free_right%}
+<a href="smsl.html" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/Open-StudioLab.png%}" alt="Studio Lab"> </a>
+{% endcapture %}
+{% include section-halfs.html
+    padding-top="1em" padding-bottom="0em"
+    content-left-half=tin_free_left
+    content-right-half=tin_free_right
+%}
+<hr style="width:100%;text-align:left;margin-left:0;border-top: 2px solid #7306ff;">
+</div>
+<div class="row">
+{% capture tin_quick_left %}
+<a href="https://www.paperspace.com/gpu-cloud" target="_blank"> <img class="quarter-image-center " src="{{ site.baseurl }}{% link /assets/images/paperspace_small.png %}" alt="Paperspace"> </a>
+{% endcapture %}
+{% capture tin_quick_right%}
+In <span style="color:#7306ff">**Quick Start Instances**</span> for workflows and model deployments
+{% endcapture %}
+{% include section-halfs.html
+    padding-top="1em" padding-bottom="0em"
+    content-left-half=tin_quick_left
+    content-right-half=tin_quick_right
+%}
+<hr style="width:100%;text-align:left;margin-left:0;border-top: 2px solid #7306ff;">
+</div>
+<div class="row">
+{% capture tin_ent_left %}
+On <span style="color:#7306ff">**Self Customized, GPU Infrastructure**</span> for Enterprise Users
 
-[![SageMaker Studio Lab]({{ site.baseurl }}{% link /assets/images/Open-StudioLab.png%})](smsl.html){: target="_blank"}{: .half-image}
 
+{% endcapture %}
+{% capture tin_ent_right%}
+<a href="https://www.nvidia.com/en-us/launchpad/?nvid=nv-int-txtad-579773-vt27#cid=an01_nv-int-txtad_en-us" target="_blank"> <img class="center " src="{{ site.baseurl }}{% link /assets/images/launchpad-logo.png %}" alt="Launchpad"> </a>
+
+{% endcapture %}
+{% include section-halfs.html
+    padding-top="1em" padding-bottom="1em"
+    content-left-half=tin_ent_left
+    content-right-half=tin_ent_right
+%}
+
+</div>
 {% endcapture %}
 
 {% capture start_right %}
