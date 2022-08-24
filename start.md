@@ -43,7 +43,7 @@ for column in df.columns:
 
 <div class="row">
 {% capture tin_free_left %}
-For <span style="color:#7306ff">**FREE**</span> to test us out <br>
+For **FREE** to test us out <br>
 (free account required)
 {% endcapture %}
 {% capture tin_free_right%}
@@ -62,7 +62,7 @@ For <span style="color:#7306ff">**FREE**</span> to test us out <br>
 <a href="https://www.paperspace.com/gpu-cloud" target="_blank"> <img class="quarter-image-center " src="{{ site.baseurl }}{% link /assets/images/paperspace_small.png %}" alt="Paperspace"> </a>
 {% endcapture %}
 {% capture tin_quick_right%}
-In <span style="color:#7306ff">**Quick Start Instances**</span> for workflows and model deployments
+In **Quick Start Instances** for workflows and model deployments
 {% endcapture %}
 {% include section-halfs.html
     background="background-white"
@@ -74,7 +74,7 @@ In <span style="color:#7306ff">**Quick Start Instances**</span> for workflows an
 </div>
 <div class="row">
 {% capture tin_ent_left %}
-On <span style="color:#7306ff">**Self Customized, GPU Infrastructure**</span> for Enterprise Users
+On **Self Customized, GPU Infrastructure** for Enterprise Users
 
 
 {% endcapture %}
