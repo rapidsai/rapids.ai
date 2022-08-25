@@ -467,6 +467,9 @@
                 if (method !== "Conda") {
                     this.active_additional_packages = [];
                 }
+                if (method === "Docker") {
+                    this.active_release = "Stable"
+                }
                 this.active_method = method;
             },
             imgOSClickHandler(e, version) {
