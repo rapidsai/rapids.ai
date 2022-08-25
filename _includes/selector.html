@@ -396,7 +396,7 @@
             },
             disableUnsupportedRelease(release) {
                 var isDisabled = false;
-				if (this.active_img_loc === "NGC" && this.active_method === "Docker" && release === "Nightly") isDisabled = true;
+                if (this.active_img_loc === "NGC" && this.active_method === "Docker" && release === "Nightly") isDisabled = true;
                 return isDisabled;
             },
             disableUnsupportedCuda(cuda_version) {
@@ -475,9 +475,9 @@
             },
             imgLocClickHandler(e, loc) {
                 if (this.isDisabled(e.target)) return;
-				
-				if (loc === "NGC" && this.active_release !== "Stable") this.active_release = "Stable";
-				
+
+                if (loc === "NGC" && this.active_release !== "Stable") this.active_release = "Stable";
+
                 this.active_img_loc = loc;
             },
             imgOptionClickHandler(e, option) {
