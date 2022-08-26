@@ -58,7 +58,7 @@ Windows users can now tap into GPU accelerated data science on their local machi
 ## <i class="fab fa-docker"></i> Differences between Docker Install Methods
 > <i class="fab fa-windows text-white"></i> **Install Docker Desktop in Windows** and enable the WSL2 backend, this will enable Docker in WSL2 and supports GPUs but only works if Docker Desktop is running. [[Learn more](https://www.docker.com/blog/wsl-2-gpu-support-for-docker-desktop-on-nvidia-gpus/)].
 
-> <i class="fab fa-linux text-white"></i> **Install Docker + nvidia-docker directly in WSL2** following the current instructions on the RAPIDS site. The big caveat here is that WSL2 does not have systemd so Docker will not start automatically even if you follow all the post-install steps. You have to manually run sudo service docker start after each reboot or do this.  [[Learn more](https://stackoverflow.com/a/65814529)].
+> <i class="fab fa-linux text-white"></i> **Install Docker + nvidia-docker directly in WSL2** following the current instructions on the RAPIDS site. Note that WSL2 does not have systemd so Docker will not start automatically. You have to manually run `sudo service docker start` after each reboot.  [[Learn more](https://stackoverflow.com/a/65814529)].
 
 ## <i class="fa-solid fa-screwdriver-wrench"></i> Troubleshooting
 
