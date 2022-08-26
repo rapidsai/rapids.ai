@@ -44,7 +44,7 @@ Windows users can now tap into GPU accelerated data science on their local machi
 
 > <i class="fas fa-download text-white"></i> **WSL2 Instance:** Ubuntu 20.04 instance for WSL2.  Others may work, but only Ubuntu 20.04 is officially supported.
 
-## <i class="fad fa-terminal"></i> Known Limitations
+## <i class="fad fa-terminal"></i> Limitations
 
 > <i class="fas fa-info-circle text-white"></i> Only single node, single GPU is currently supported. 
 
