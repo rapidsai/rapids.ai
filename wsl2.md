@@ -42,7 +42,7 @@ Windows users can now tap into GPU accelerated data science on their local machi
 > <i class="fas fa-microchip text-white"></i> **GPU:** Only GPUs with [Compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"} 7.0 or higher are supported on RAPIDS in WSL2.
 8GB or more of RAM
 
-> <i class="fas fa-download text-white"></i> **WSL2 Instance:** Ubuntu instance for WSL2.  Others may work, but only Ubuntu is officially supported.
+> <i class="fas fa-download text-white"></i> **WSL2 Instance:** Ubuntu 20.04 instance for WSL2.  Others may work, but only Ubuntu 20.04 is officially supported.
 
 ## <i class="fad fa-terminal"></i> Known Limitations
 
@@ -96,9 +96,9 @@ Windows users can now tap into GPU accelerated data science on their local machi
 {% capture yd_left %}
 ## <i class="fas fa-laptop-code"></i> Conda <br>(Preffered Method)
 
-1. Install WSL2 [using Microsoft's instructions](https://docs.microsoft.com/en-us/windows/wsl/install){: target="_blank"}.
+1. Install WSL2 and the Ubuntu 20.04 package [using Microsoft's instructions](https://docs.microsoft.com/en-us/windows/wsl/install){: target="_blank"}.
 2. Install the [latest NVIDIA Drivers](https://www.nvidia.com/download/index.aspx){: target="_blank"}.
-3. Install and log into your WSL2 Linux instance.
+3. Log into your WSL2 Linux instance.
 4. Install Conda on your WSL2 Linux Instance using [our Conda instructions](https://rapids.ai/start.html#environment){: target="_blank"}.
 5. Install RAPIDS via Conda, as well as some third party RAPIDS ecosystem tools, [using the RAPIDS Release Selector tool](https://rapids.ai/start.html#get-rapids){: target="_blank"}. (third party libraries in WSL2 is outside the scope of RAPIDS support, but it’s good to report results to let the community know).
 6. Install additional git hub repos and enablements [from the Learn More section](https://rapids.ai/start.html#next-steps){: target="_blank"}.
@@ -113,10 +113,10 @@ Windows users can now tap into GPU accelerated data science on their local machi
 {% capture yd_mid %}
 ## <i class="fab fa-docker text-purple"></i> Docker Desktop <br>(Docker Method #1)
 
-1. Install WSL2 [using Microsoft's instructions](https://docs.microsoft.com/en-us/windows/wsl/install){: target="_blank"}.
+1. Install WSL2 and the Ubuntu 20.04 package [using Microsoft's instructions](https://docs.microsoft.com/en-us/windows/wsl/install){: target="_blank"}.
 2. Install the [latest NVIDIA Drivers](https://www.nvidia.com/download/index.aspx){: target="_blank"}.
 3. Install latest Docker Desktop for Windows [according to your applicable licensing terms](https://docs.docker.com/desktop/install/windows-install/){: target="_blank"}.
-4. Install and log into your WSL2 Linux instance.
+4. Log into your WSL2 Linux instance.
 5. Generate and run the RAPIDS `docker pull` and `docker run` commands based on your desired configuration [using the RAPIDS Release Selector](https://rapids.ai/start.html#get-rapids){: target="_blank"}. 
 6. Inside your docker instance, run this code to check that your RAPIDS installation is working:
 	```
@@ -129,9 +129,9 @@ Windows users can now tap into GPU accelerated data science on their local machi
 {% endcapture %}
 {% capture yd_right %}
 ## <i class="fab fa-docker text-purple"></i> Docker on WSL2 <br>(Docker Method #2)
-1. Install WSL2 [using Microsoft's instructions](https://docs.microsoft.com/en-us/windows/wsl/install){: target="_blank"}.
+1. Install WSL2 and the Ubuntu 20.04 package [using Microsoft's instructions](https://docs.microsoft.com/en-us/windows/wsl/install){: target="_blank"}.
 2. Install the [latest NVIDIA Drivers](https://www.nvidia.com/download/index.aspx){: target="_blank"}.
-3. Install and log into your WSL2 Linux instance.
+3. Log into your WSL2 Linux instance.
 4. Install the Docker Environment on your WSL2 Linux instance [using the Docker instructions](https://rapids.ai/start.html#environment){: target="_blank"}.  You may need  to add `sudo` before any Docker command.
 5. Generate and run the RAPIDS `docker pull` and `docker run` commands based on your desired configuration [using the RAPIDS Release Selector](https://rapids.ai/start.html#get-rapids){: target="_blank"}. You may need  to add `sudo` before any Docker command.
 6. Inside your docker instance, run this code to check that your RAPIDS installation is working:
