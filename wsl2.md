@@ -37,7 +37,7 @@ Windows users can now tap into GPU accelerated data science on their local machi
 
 > <i class="fas fa-desktop text-white"></i> **OS:** Windows 11.  Some Windows 10 versions (2004+) may work, but YMMV
 
-> <i class="fas fa-info-circle text-white"></i> **WSL Version:** WSL2.  This will not work if you use WSL1
+> <i class="fas fa-info-circle text-white"></i> **WSL Version:** WSL2.  WSL1 is not supported.
 
 > <i class="fas fa-microchip text-white"></i> **GPU:** Only GPUs with [Compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"} 7.0 or higher are supported on RAPIDS in WSL2.
 8GB or more of RAM
