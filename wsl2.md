@@ -15,7 +15,7 @@ layout: default
 
 {% capture intro_content %}
 
-Windows users can now tap into GPU accelerated data science on their local machines using RAPIDS on Windows Subsystem for Linux2 (WSL2)!  WSL2 is a Windows 11 feature that enables users to run native Linux command-line tools directly on Windows. Using this feature does not require a dual boot environment, taking away complexity and hopefully saving you time. Your computer will need an NVIDIA GPU with [Compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"} 7.0 or higher. 
+Windows users can now tap into GPU accelerated data science on their local machines using RAPIDS on Windows Subsystem for Linux2 (WSL2)!  WSL2 is a Windows feature that enables users to run native Linux command-line tools directly on Windows. Using this feature does not require a dual boot environment, removing complexity and saving you time. Your computer will need an NVIDIA GPU with [Compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"} 7.0 or higher. 
 {: .subtitle}
 
 {% endcapture %}
@@ -35,22 +35,21 @@ Windows users can now tap into GPU accelerated data science on their local machi
 {% capture start_left %}
 ## Starting Prerequisites
 
-> <i class="fas fa-desktop text-white"></i> **OS:** Windows 11.  Some Windows 10 versions (2004+) may work, but YMMV
+> <i class="fas fa-desktop text-white"></i> **OS:** Windows 11.
 
 > <i class="fas fa-info-circle text-white"></i> **WSL Version:** WSL2.  WSL1 is not supported.
 
-> <i class="fas fa-microchip text-white"></i> **GPU:** Only GPUs with [Compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"} 7.0 or higher are supported on RAPIDS in WSL2.
-8GB or more of RAM
+> <i class="fas fa-microchip text-white"></i> **GPU:** Only GPUs with [Compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"} 7.0 or higher are supported on RAPIDS in WSL2.  GPUs with 16GB or more of RAM is recommended
 
-> <i class="fas fa-download text-white"></i> **WSL2 Instance:** Ubuntu 20.04 instance for WSL2.  Others may work, but only Ubuntu 20.04 is officially supported.
+> <i class="fas fa-download text-white"></i> **WSL2 Instance:** Ubuntu 20.04 instance for WSL2.
 
 ## <i class="fad fa-terminal"></i> Limitations
 
-> <i class="fas fa-info-circle text-white"></i> Only single node, single GPU is currently supported. 
+> <i class="fas fa-info-circle text-white"></i> Only single GPU is supported. 
 
-> <i class="fas fa-info-circle text-white"></i> GPU Direct Storage is not currently supported.
+> <i class="fas fa-info-circle text-white"></i> GPU Direct Storage is not supported.
 
-> <i class="fas fa-info-circle text-white"></i> At least 8 GB of memory and a relatively fast CPU are strongly recommended https://docs.microsoft.com/en-us/windows/wsl/install
+> <i class="fas fa-info-circle text-white"></i> At least 8 GB of RAM and a relatively fast CPU are strongly recommended https://docs.microsoft.com/en-us/windows/wsl/install
 
 {% endcapture %}
 
@@ -107,7 +106,6 @@ Windows users can now tap into GPU accelerated data science on their local machi
 	import cudf
 	print(cudf.Series([1, 2, 3]))
 	```
-8. Enjoy running RAPIDS!
 
 {% endcapture %}
 {% capture yd_mid %}
@@ -124,7 +122,6 @@ Windows users can now tap into GPU accelerated data science on their local machi
 	print(cudf.Series([1, 2, 3]))
 	```
 7. Install additional Github repos, enablements, and 3rd party tools [from the Learn More section](https://rapids.ai/start.html#next-steps){: target="_blank"}.
-8. Enjoy running RAPIDS!
 
 {% endcapture %}
 {% capture yd_right %}
@@ -140,7 +137,6 @@ Windows users can now tap into GPU accelerated data science on their local machi
 	print(cudf.Series([1, 2, 3]))
 	```
 7. Install additional Github repos, enablements, and 3rd party tools [from the Learn More section](https://rapids.ai/start.html#next-steps){: target="_blank"}.
-8. Enjoy running RAPIDS!
 {% endcapture %}
 {% include slopecap.html 
     background="background-white" 
