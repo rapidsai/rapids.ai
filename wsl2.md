@@ -46,7 +46,7 @@ Windows users can now tap into GPU accelerated data science on their local machi
 
 ## <i class="fad fa-terminal"></i> Known Limitations
 
-> <i class="fas fa-info-circle text-white"></i> While you may have success with MultiGPU processing using TCP, on a single node, neither its usage nor advanced MultiGPU communications (ucx, nvlink, RAFT), is currently supported. YMMV
+> <i class="fas fa-info-circle text-white"></i> Only single node, single GPU is currently supported. 
 
 > <i class="fas fa-info-circle text-white"></i> GPU Direct Storage is not currently supported.
 
