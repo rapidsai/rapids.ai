@@ -15,7 +15,7 @@ layout: default
 
 {% capture intro_content %}
 
-Windows users can now tap into GPU accelerated data science on their local machines using RAPIDS on Windows Subsystem for Linux2 (WSL2)!  
+Windows users can now tap into GPU accelerated data science on their local machines using RAPIDS on Windows Subsystem for Linux2 (WSL2)!  WSL2 is a Windows 11 feature that enables users to run native Linux command-line tools directly on Windows. Using this feature does not require a dual boot environment, taking away complexity and hopefully saving you time. Your computer will need an NVIDIA GPU with [Compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"} 7.0 or higher. 
 {: .subtitle}
 
 {% endcapture %}
