@@ -39,7 +39,7 @@ Windows users can now tap into GPU accelerated data science on their local machi
 
 > <i class="fas fa-info-circle text-white"></i> **WSL Version:** WSL2.  This will not work if you use WSL1
 
-> <i class="fas fa-microchip text-white"></i> **GPU:** [Compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"} 7.0 or higher.  P series and 10xx cards may run RAPIDS on bare metal Linux but will not currently work with RAPIDS on WSL2
+> <i class="fas fa-microchip text-white"></i> **GPU:** Only GPUs with [Compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"} 7.0 or higher are supported on RAPIDS in WSL2.
 8GB or more of RAM
 
 > <i class="fas fa-download text-white"></i> **WSL2 Instance:** Ubuntu instance for WSL2.  Others may work, but only Ubuntu is officially supported.
