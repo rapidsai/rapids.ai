@@ -173,7 +173,7 @@ We suggest taking a look at the sample workflow in our Docker container, which i
 # Step 2: Install Environment
 {: .section-title-full }
 
-For most installations, you will need a Conda or Docker environments installed for RAPIDS. Note, these examples are structured for installing on Ubuntu. Please modify appropriately for CentOS / Rocky Linux.  Windows 11 has a **[separate install guide.](wsl2.html)**
+For most installations, you will need a Conda or Docker environments installed for RAPIDS. Note, these examples are structured for installing on Ubuntu. Please modify appropriately for CentOS / Rocky Linux.  Windows 11 has a **[separate installation guide](wsl2.html)**.
 
 {% endcapture %}
 {% include slopecap.html
