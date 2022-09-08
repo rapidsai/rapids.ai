@@ -93,7 +93,7 @@ Windows users can now tap into GPU accelerated data science on their local machi
 {% endcapture %}
 
 {% capture yd_left %}
-## <i class="fas fa-laptop-code"></i> Conda <br>(Preffered Method)
+## <i class="fas fa-laptop-code"></i> Conda <br>(Preferred Method)
 
 1. Install WSL2 and the Ubuntu 20.04 package [using Microsoft's instructions](https://docs.microsoft.com/en-us/windows/wsl/install){: target="_blank"}.
 2. Install the [latest NVIDIA Drivers](https://www.nvidia.com/download/index.aspx){: target="_blank"}.
