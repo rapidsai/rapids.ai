@@ -28,7 +28,7 @@ Windows users can now tap into GPU accelerated data science on their local machi
 
 <div id="prereqs"></div>
 {% capture start_single %}
-# Before You Install
+# Before Installing
 {: .section-title-full .text-white}
 {% endcapture %}
 
