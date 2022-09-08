@@ -33,7 +33,7 @@ Windows users can now tap into GPU accelerated data science on their local machi
 {% endcapture %}
 
 {% capture start_left %}
-## Starting Prerequisites
+## Prerequisites
 
 > <i class="fas fa-desktop text-white"></i> **OS:** Windows 11.
 
