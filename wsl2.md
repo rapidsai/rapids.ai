@@ -1,7 +1,7 @@
 ---
 title: "RAPIDS + WSL2"
 description: "Use RAPIDS on Windows with WSL2"
-tagline: "Power of RAPIDS, now on Windows"
+tagline: "The power of RAPIDS, now available for Windows"
 button_text: "Install Now"
 button_link: "#install"
 layout: default
