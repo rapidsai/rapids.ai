@@ -100,7 +100,7 @@ Windows users can now tap into GPU accelerated data science on their local machi
 3. Log into your WSL2 Linux instance.
 4. Install Conda on your WSL2 Linux Instance using [our Conda instructions](https://rapids.ai/start.html#environment){: target="_blank"}.
 5. Install RAPIDS via Conda, as well as some third party RAPIDS ecosystem tools, [using the RAPIDS Release Selector tool](https://rapids.ai/start.html#get-rapids){: target="_blank"}. (third party libraries in WSL2 is outside the scope of RAPIDS support, but it’s good to report results to let the community know).
-6. Install additional git hub repos and enablements [from the Learn More section](https://rapids.ai/start.html#next-steps){: target="_blank"}.
+6. Install additional GitHub repositories and enablements [from the Learn More section](https://rapids.ai/start.html#next-steps){: target="_blank"}.
 7. Run this code to check that your RAPIDS installation is working:
 	```
 	import cudf
