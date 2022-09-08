@@ -62,7 +62,7 @@ Windows users can now tap into GPU accelerated data science on their local machi
 
 ## <i class="fa-solid fa-screwdriver-wrench"></i> Troubleshooting
 
-> When conda solving, if you get an `http 000 connection error` when accessing the repository data and nothing installs, run `wsl --shutdown` and then restart the WSL Linux instance. [[Source](https://stackoverflow.com/questions/67923183/miniconda-on-wsl2-ubuntu-20-04-fails-with-condahttperror-http-000-connection)]
+> When installing with conda, if an `http 000 connection error` occurs when accessing the repository data, run `wsl --shutdown` and then restart the WSL instance. [More information](https://stackoverflow.com/questions/67923183/miniconda-on-wsl2-ubuntu-20-04-fails-with-condahttperror-http-000-connection)
 
 ## <i class="far fa-comments text-white"></i> Connect 
 > Join our community conversations about RAPIDS on WSL2 using **[Twitter](https://twitter.com/rapidsai){: target="_blank"}**, **[Slack]({{ site.slack_invite }}){: target="_blank"}**, or ask question on **[Stack Overflow](https://stackoverflow.com/tags/rapids){: target="_blank"}**.
