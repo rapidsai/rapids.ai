@@ -54,7 +54,7 @@ Windows users can now tap into GPU accelerated data science on their local machi
 {% endcapture %}
 
 {% capture start_right %}
-## <i class="fab fa-docker"></i> Differences between Docker Install Methods
+## <i class="fab fa-docker"></i> Choose a Docker Installation Method
 > <i class="fab fa-windows text-white"></i> **Install Docker Desktop in Windows** and enable the WSL2 backend. 
  Docker packages run in WSL2 will only work if Docker Desktop is correctly set up and running in Windows.  [[Learn more](https://docs.docker.com/desktop/windows/wsl/)]. 
 
