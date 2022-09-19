@@ -425,7 +425,7 @@ RAPIDS works extremely well in traditional HPC environments where GPUs are often
 
 {% endcapture %}
 
-{% capture com3_left %}
+{% capture com3_top_left %}
 ![spark]({{ site.baseurl }}{% link /assets/images/spark-logo-trademark.png %}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + Spark
 
@@ -434,13 +434,21 @@ NVIDIA is bringing RAPIDS to Apache Spark to accelerate ETL workflows with GPUs.
 
 {% endcapture %}
 
-{% capture com3_right %}
+{% capture com3_top_right %}
 ![monai]({{ site.baseurl }}{% link /assets/images/MONAI-logo_color.png%}){: .third-image-center}
 ## <i class="fas fa-code-branch"></i> RAPIDS + MONAI
 
 The Medical Open Network for AI ([MONAI](https://monai.io/)) has been named by some the PyTorch of healthcare.
 RAPIDS cuCIM has been integrated into the MONAI Transforms component to accelerate the data pathology training pipeline on GPU.
 <br> **[Learn more on MONAI latest highlights <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://docs.monai.io/en/latest/highlights.html)**
+
+{% endcapture %}
+{% capture com3_bottom_left %}
+![pip]({{ site.baseurl }}{% link /assets/images/pypip.png%}){: .third-image-center}
+## <i class="fas fa-code-branch"></i> RAPIDS + PIP
+
+RAPIDS users can once again install RAPIDS via pip! This is an experimental release. These packages are still experimental! They come from a snapshot build of RAPIDS 22.10. 
+<br> **[Learn the more about RAPIDS and Pip <i class="fa fa-angle-double-right" aria-hidden="true"></i>](pip.html)**
 
 {% endcapture %}
 
@@ -461,11 +469,13 @@ RAPIDS cuCIM has been integrated into the MONAI Transforms component to accelera
     content-bottom-left-half=com2_bottom_left
     content-bottom-right-half=com2_bottom_right
 %}
-{% include section-halfs.html
+{% include section-double-halfs.html
     background="background-white"
     padding-top="0em" padding-bottom="1em"
-    content-left-half=com3_left
-    content-right-half=com3_right
+    content-top-left-half=com3_top_left
+    content-top-right-half=com3_top_right
+    content-bottom-left-half=com3_bottom_left
+    content-bottom-right-half=com3_bottom_right
 %}
 
 # Contributors

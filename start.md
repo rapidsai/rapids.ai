@@ -51,7 +51,7 @@ Jump right into a GPU powered RAPIDS notebook, online, with **[SageMaker Studio 
 # Installation Overview
 {: .section-title-full}
 
-In four steps, easily install RAPIDS on a local system or cloud instance with a CUDA enabled GPU for either **[Conda](#conda)** or **[Docker](#docker)** and then explore our user guides and examples.
+In four steps, easily install RAPIDS on a local system or cloud instance with a CUDA enabled GPU for either **[Conda](#conda)** or **[Docker](#docker)** and then explore our user guides and examples.  You can also **[try our pip packages (Experimental)](pip.html)**
 
 {% endcapture %}
 {% capture gs_left %}
@@ -60,7 +60,7 @@ In four steps, easily install RAPIDS on a local system or cloud instance with a 
 - Choose a cloud or local system
 
 ## **[<i class="fad fa-chevron-double-down"></i> Step 2: Install Environment](#environment)**
-- Choose to use Conda or Docker
+- Choose to use Conda, Docker, or **[try pip (Experimental)](pip.html)**.
 - Choose to Build from source 
 
 {% endcapture %}
@@ -268,7 +268,7 @@ To build RAPIDS from source, check each libraries` readme. For example the **[cu
 ## <i class="fas fa-laptop-code"></i> Where is PIP?
 {: .section-title-halfs}
 
-Refer to this **[blog post](https://medium.com/rapids-ai/rapids-0-7-release-drops-pip-packages-47fc966e9472){: target="_blank"}** for details on why PIP is not currently supported. PIP may be supported in future releases. 
+Pip installation of RAPIDS is coming back!  You can **[try our pip packages (Experimental) here](pip.html)**
 {% endcapture %}
 {% include section-halfs.html
     background="background-white"
