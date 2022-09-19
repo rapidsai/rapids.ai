@@ -56,7 +56,7 @@ RAPIDS users can once again install RAPIDS via pip!  This is an experimental rel
 ## <i class="fad fa-terminal text-white"></i> Installation Command
 
 
-	pip install -i https://pypi.k8s.rapids.ai/simple rmm-cu11 cudf-cu11
+	pip install rmm-cu11 cudf-cu11 -f https://pypi.k8s.rapids.ai/simple
 
 The RAPIDS pip packages are hosted in a private repo, but will found on public repos soon.  Please check back for any updates!
 
