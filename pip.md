@@ -15,7 +15,7 @@ layout: default
 
 {% capture intro_content %}
 
-RAPIDS users can once again install RAPIDS via pip!  This is an **experimental release**.  cuDF pip packages are available **[right now ](#install)** with cuML and cuGraph coming soon!  Packages are a snapshot build of RAPIDS 22.10. The team is continuing to improve these packages and work toward a 22.10 release. [If you find issues, please file them in the RAPIDS cuDF Repo](https://github.com/rapidsai/cudf/issues/new/choose){: target="_blank"}.
+RAPIDS users can once again install RAPIDS via pip!  This is an **experimental release**.  cuDF pip packages are available **[right now ](#install)** with cuML and cuGraph coming in late September!  Packages are a snapshot build of RAPIDS 22.10. The team is continuing to improve these packages and work toward a 22.10 release. [If you find issues, please file them in the RAPIDS cuDF Repo](https://github.com/rapidsai/cudf/issues/new/choose){: target="_blank"}.
 {: .subtitle}
 
 {% endcapture %}
