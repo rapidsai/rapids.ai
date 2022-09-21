@@ -15,7 +15,7 @@ layout: default
 
 {% capture intro_content %}
 
-RAPIDS users can once again install RAPIDS via pip!  This is an **experimental release**.  RMM and cuDF pip packages are available **[right now ](#install)** with cuML and cuGraph coming in late September!  Packages are a snapshot build of RAPIDS 22.10. The team is continuing to improve these packages and work toward a 22.10 release. [If you find issues, please file them in the RAPIDS cuDF Repo](https://github.com/rapidsai/cudf/issues/new/choose){: target="_blank"}.
+RAPIDS users can once again install RAPIDS via pip!  This is an **experimental release**.  RMM and cuDF pip packages are available **[right now ](#install)** with cuML, cuGraph, and raft coming in late September!  Packages are a snapshot build of RAPIDS 22.10. The team is continuing to improve these packages and work toward a 22.10 release. [If you find issues, please file them in the RAPIDS cuDF Repo](https://github.com/rapidsai/cudf/issues/new/choose){: target="_blank"}.
 {: .subtitle}
 
 {% endcapture %}
@@ -60,7 +60,7 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 
 > <i class="fas fa-info-circle text-white"></i> The RAPIDS pip packages are hosted in a private repo, but will be found on public repos soon.  
 
-> <i class="fas fa-info-circle text-white"></i> In the first release, cuDF and RMM are available. Experimental cuML and cuGraph wheels will be out in late September.  Please check back for any updates!
+> <i class="fas fa-info-circle text-white"></i> In the first release, cuDF and RMM are available. Experimental cuML, cuGraph, and raft wheels will be out in late September.  Please check back for any updates!
 
 ## <i class="fa-solid fa-screwdriver-wrench text-white"></i> Troubleshooting
 
