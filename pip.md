@@ -48,7 +48,7 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
   
 > <i class="fas fa-download text-white"></i> **CUDA:** >= 11.2, with at least the v460.27.03 driver
 
-> <i class="fab fa-python text-white"></i> **Python and pip version:** Python 3.8 or 3.9 using pip 20.3+ with PEP600 support.
+> <i class="fab fa-python text-white"></i> **Python and pip version:** Python 3.8 or 3.9 using pip 20.3+ with **[PEP600 support](https://peps.python.org/pep-0600/){: target="_blank"}**.
 
 {% endcapture %}
 
@@ -62,7 +62,7 @@ The RAPIDS pip packages are hosted in a private repo, but will be found on publi
 
 ## <i class="fa-solid fa-screwdriver-wrench text-white"></i> Troubleshooting
 
-> <i class="fas fa-info-circle text-white"></i> RAPIDS pip packages require PEP600 support.  Some users may need to update pip using 
+> <i class="fas fa-info-circle text-white"></i> RAPIDS pip packages require a recent version of pip that **[supports PEP600](https://peps.python.org/pep-0600/https://peps.python.org/pep-0600/){: target="_blank"}**.  Some users may need to update pip using 
 	
 	pip install -U pip
 
