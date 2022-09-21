@@ -15,7 +15,7 @@ layout: default
 
 {% capture intro_content %}
 
-RAPIDS users can once again install RAPIDS via pip!  This is an **experimental release**.  cuDF pip packages are available **[right now ](#install)** with cuML and cuGraph coming in late September!  Packages are a snapshot build of RAPIDS 22.10. The team is continuing to improve these packages and work toward a 22.10 release. [If you find issues, please file them in the RAPIDS cuDF Repo](https://github.com/rapidsai/cudf/issues/new/choose){: target="_blank"}.
+RAPIDS users can once again install RAPIDS via pip!  This is an **experimental release**.  RMM and cuDF pip packages are available **[right now ](#install)** with cuML and cuGraph coming in late September!  Packages are a snapshot build of RAPIDS 22.10. The team is continuing to improve these packages and work toward a 22.10 release. [If you find issues, please file them in the RAPIDS cuDF Repo](https://github.com/rapidsai/cudf/issues/new/choose){: target="_blank"}.
 {: .subtitle}
 
 {% endcapture %}
@@ -58,17 +58,19 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 
 	pip install rmm-cu11 cudf-cu11 -i https://pypi.k8s.rapids.ai/simple
 
-The RAPIDS pip packages are hosted in a private repo, but will be found on public repos soon.  Please check back for any updates!
+> <i class="fas fa-info-circle text-white"></i> The RAPIDS pip packages are hosted in a private repo, but will be found on public repos soon.  
+
+> <i class="fas fa-info-circle text-white"></i> In the first release, cuDF and RMM are available. Experimental cuML and cuGraph wheels will be out in late September.  Please check back for any updates!
 
 ## <i class="fa-solid fa-screwdriver-wrench text-white"></i> Troubleshooting
 
-> <i class="fas fa-info-circle text-white"></i> RAPIDS pip packages require a recent version of pip that **[supports PEP600](https://peps.python.org/pep-0600/https://peps.python.org/pep-0600/){: target="_blank"}**.  Some users may need to update pip using 
+> <i class="fas fa-chevron-circle-right text-white"></i> RAPIDS pip packages require a recent version of pip that **[supports PEP600](https://peps.python.org/pep-0600/https://peps.python.org/pep-0600/){: target="_blank"}**.  Some users may need to update pip using 
 	
 	pip install -U pip
 
 > before using the installation command above.
 
-> <i class="fas fa-info-circle text-white"></i> Infiniband is not supported yet in this release
+> <i class="fas fa-chevron-circle-right text-white"></i> Infiniband is not supported yet in this release
 
 ## <i class="far fa-comments text-white"></i> Connect 
 
