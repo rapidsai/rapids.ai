@@ -112,7 +112,7 @@ All provisioned systems need to be RAPIDS capable. Here's what is required:
 {: .no-tb-margins }
 > <i class="fas fa-info-circle text-purple"></i> RHEL 7/8 support is provided through CentOS 7 / Rocky Linux 8 builds/installs
 
-<i class="fas fa-download text-purple"></i> **CUDA & NVIDIA Drivers:** One of the following supported versions:
+<i class="fas fa-download text-purple"></i> **CUDA & NVIDIA Drivers:** Install the [Latest CUDA & NVIDIA Drivers](https://www.nvidia.com/download/index.aspx){: target="_blank"} or one of the following supported versions:
 {: .no-tb-margins }
 
 - <i class="fas fa-check-circle text-purple"></i> [11.0](https://developer.nvidia.com/cuda-11.0-update1-download-archive){: target="_blank"} & v450.80.02+
