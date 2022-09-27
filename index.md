@@ -107,7 +107,7 @@ On **Self Customized, GPU Infrastructure** for Enterprise Users
 
 
 {% endcapture %}
-{% capture tin_ent_right%}
+{% capture tin_ent_right %}
 <a href="https://www.nvidia.com/en-us/launchpad/?nvid=nv-int-txtad-579773-vt27#cid=an01_nv-int-txtad_en-us" target="_blank"> <img class="center " src="{{ site.baseurl }}{% link /assets/images/launchpad-logo.png %}" alt="Launchpad"> </a>
 
 {% endcapture %}
