@@ -429,6 +429,7 @@
             },
             disableUnsupportedImgLoc(loc) {
                 var isDisabled = false;
+				if (this.active_arch === "arm" && loc !== "Dockerhub") isDisabled = true;
                 return isDisabled;
             },
             isDisabled(e) {
@@ -448,6 +449,7 @@
                 if (arch === "arm") this.active_img_type = "core";
                 if (arch === "arm" && this.active_os_ver === "CentOS 7") this.active_os_ver = "Ubuntu 20.04";
                 if (arch === "arm" && this.active_cuda_ver === "11.0") this.active_cuda_ver = "11.2";
+				if (arch === "arm" && this.active_method === "Docker") this.active_img_loc = "Dockerhub";
                 this.active_arch = arch;
             },
             cudaClickHandler(e, version) {
