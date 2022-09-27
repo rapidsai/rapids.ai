@@ -77,7 +77,7 @@ Find more details on our **[Get Started Page <i class="fas fa-angle-double-right
 For **FREE** to test us out <br>
 (free account required)
 {% endcapture %}
-{% capture tin_free_right%}
+{% capture tin_free_right %}
 <a href="smsl.html" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/Open-StudioLab.png%}" alt="Studio Lab"> </a>
 {% endcapture %}
 {% include section-halfs.html
