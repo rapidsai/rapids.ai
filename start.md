@@ -43,10 +43,10 @@ for column in df.columns:
 
 <div class="row">
 {% capture tin_free_left %}
-For **FREE** to test us out <br>
-(free account required)
+Try RAPIDS in a free, cloud-hosted notebook<br>
+(account required)
 {% endcapture %}
-{% capture tin_free_right%}
+{% capture tin_free_right %}
 <a href="smsl.html" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/Open-StudioLab.png%}" alt="Studio Lab"> </a>
 {% endcapture %}
 {% include section-halfs.html
@@ -61,7 +61,7 @@ For **FREE** to test us out <br>
 {% capture tin_quick_left %}
 <a href="https://www.paperspace.com/gpu-cloud" target="_blank"> <img class="quarter-image-center " src="{{ site.baseurl }}{% link /assets/images/paperspace_small.png %}" alt="Paperspace"> </a>
 {% endcapture %}
-{% capture tin_quick_right%}
+{% capture tin_quick_right %}
 In **Quick Start Instances** for workflows and model deployments
 {% endcapture %}
 {% include section-halfs.html
@@ -74,11 +74,11 @@ In **Quick Start Instances** for workflows and model deployments
 </div>
 <div class="row">
 {% capture tin_ent_left %}
-On **Self Customized, GPU Infrastructure** for Enterprise Users
+On **Customized GPU Infrastructure** for Enterprise
 
 
 {% endcapture %}
-{% capture tin_ent_right%}
+{% capture tin_ent_right %}
 <a href="https://www.nvidia.com/en-us/launchpad/?nvid=nv-int-txtad-579773-vt27#cid=an01_nv-int-txtad_en-us" target="_blank"> <img class="center " src="{{ site.baseurl }}{% link /assets/images/launchpad-logo.png %}" alt="Launchpad"> </a>
 
 {% endcapture %}
