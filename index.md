@@ -74,8 +74,8 @@ Find more details on our **[Get Started Page <i class="fas fa-angle-double-right
 ## <i class="fas fa-bolt"></i> Try Now Online
 <div class="row">
 {% capture tin_free_left %}
-For **FREE** to test us out <br>
-(free account required)
+Try RAPIDS in a free, cloud-hosted notebook<br>
+(account required)
 {% endcapture %}
 {% capture tin_free_right %}
 <a href="smsl.html" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/Open-StudioLab.png%}" alt="Studio Lab"> </a>
@@ -103,7 +103,7 @@ In **Quick Start Instances** for workflows and model deployments
 </div>
 <div class="row">
 {% capture tin_ent_left %}
-On **Self Customized, GPU Infrastructure** for Enterprise Users
+On **Customized GPU Infrastructure** for Enterprise
 
 
 {% endcapture %}
