@@ -472,6 +472,8 @@
                 if (method === "Docker") {
                     this.active_release = "Stable"
                 }
+				if (method === "Docker" && this.active_arch === "arm") this.active_img_loc = "Dockerhub";
+
                 this.active_method = method;
             },
             imgOSClickHandler(e, version) {
@@ -482,7 +484,7 @@
                 if (this.isDisabled(e.target)) return;
 
                 if (loc === "NGC" && this.active_release !== "Stable") this.active_release = "Stable";
-
+				
                 this.active_img_loc = loc;
             },
             imgOptionClickHandler(e, option) {
