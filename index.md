@@ -91,7 +91,7 @@ Try RAPIDS in a free, cloud-hosted notebook<br>
 {% capture tin_quick_left %}
 <a href="https://www.paperspace.com/gpu-cloud" target="_blank"> <img class="quarter-image-center " src="{{ site.baseurl }}{% link /assets/images/paperspace_small.png %}" alt="Paperspace"> </a>
 {% endcapture %}
-{% capture tin_quick_right%}
+{% capture tin_quick_right %}
 In **Quick Start Instances** for workflows and model deployments
 {% endcapture %}
 {% include section-halfs.html
