@@ -51,10 +51,12 @@ Jump right into a GPU powered RAPIDS notebook, online, with **[SageMaker Studio 
 # Installation Overview
 {: .section-title-full}
 
-In four steps, easily install RAPIDS on a local system or cloud instance with a CUDA enabled GPU for either **[Conda](#conda)** or **[Docker](#docker)** and then explore our user guides and examples.  **Pip packages are returning soon! Check back here later in September for experimental access!**
+You can quickly install RAPIDS on a local system or cloud instance with a CUDA enabled GPU using either **[Conda](#conda)**, **[Docker](#docker)**, or **Pip** and then explore our user guides and examples. 
 
 {% endcapture %}
 {% capture gs_left %}
+Use the **[quickstart guide](#requirements)** below to easily install RAPIDS in 4 Easy Steps.
+
 ## **[<i class="fad fa-chevron-double-down"></i> Step 1: Provision A System](#requirements)** 
 - Check system requirements
 - Choose a cloud or local system
@@ -65,6 +67,8 @@ In four steps, easily install RAPIDS on a local system or cloud instance with a 
 
 {% endcapture %}
 {% capture gs_right%}
+Use **[our comprehensive installation guide](start.html)** for a more custom install
+
 ## **[<i class="fad fa-chevron-double-down"></i> Step 3: Install RAPIDS](#get-rapids)**
 - Select and install RAPIDS libraries
 
@@ -112,19 +116,14 @@ All provisioned systems need to be RAPIDS capable. Here's what is required:
 {: .no-tb-margins }
 > <i class="fas fa-info-circle text-purple"></i> RHEL 7/8 support is provided through CentOS 7 / Rocky Linux 8 builds/installs
 
-<i class="fas fa-download text-purple"></i> **CUDA & NVIDIA Drivers:** One of the following supported versions:
+<i class="fas fa-download text-purple"></i> **CUDA & NVIDIA Drivers:** Install the [Latest CUDA & NVIDIA Drivers](https://www.nvidia.com/download/index.aspx){: target="_blank"}
 {: .no-tb-margins }
-
-- <i class="fas fa-check-circle text-purple"></i> [11.0](https://developer.nvidia.com/cuda-11.0-update1-download-archive){: target="_blank"} & v450.80.02+
-- <i class="fas fa-check-circle text-purple"></i> [11.2](https://developer.nvidia.com/cuda-11.2.0-download-archive){: target="_blank"} & v460.27.03+
-- <i class="fas fa-check-circle text-purple"></i> [11.4](https://developer.nvidia.com/cuda-11-4-0-download-archive){: target="_blank"} & v470.42.01+
-- <i class="fas fa-check-circle text-purple"></i> [11.5](https://developer.nvidia.com/cuda-11-5-0-download-archive){: target="_blank"} & v495.29.05+
 
 {% endcapture %}
 {% capture req_mid %}
 ## <i class="fa-regular fa-cloud"></i> RAPIDS Cloud Systems
 
-Learn how to deploy RAPIDS on <br> **[Cloud Service Providers <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://rapids.ai/cloud){: target="_blank"}**
+You can deploy RAPIDS on <br> **[Cloud Service Providers <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://rapids.ai/cloud){: target="_blank"}**
 
 <a href="cloud.html#aws" target="_blank"> <img class="quarter-image-center" src="{{ site.baseurl }}{% link /assets/images/AWS-logo.png %}" alt="AWS"> </a>
 
@@ -173,7 +172,7 @@ We suggest taking a look at the sample workflow in our Docker container, which i
 # Step 2: Install Environment
 {: .section-title-full }
 
-For most installations, you will need a Conda or Docker environments installed for RAPIDS. Note, these examples are structured for installing on Ubuntu. Please modify appropriately for CentOS / Rocky Linux.  Windows 11 has a **[separate installation guide](wsl2.html)**.
+You will need a Conda or Docker environments installed for RAPIDS. Note, these examples are structured for installing on Ubuntu. Please modify appropriately for CentOS / Rocky Linux.  Windows 11 has a **[separate installation guide](wsl2.html)**.
 
 {% endcapture %}
 {% include slopecap.html
@@ -191,22 +190,14 @@ For most installations, you will need a Conda or Docker environments installed f
 ## <i class="fab fa-docker text-purple"></i> Docker
 {: .section-title-halfs}
 
-RAPIDS requires both Docker CE v19.03+ and **[nvidia-container-toolkit](https://github.com/NVIDIA/nvidia-docker#quickstart){: target="_blank"}** installed.
+RAPIDS requires both Docker CE (v19.03+) and **[nvidia-container-toolkit](https://github.com/NVIDIA/nvidia-docker#quickstart){: target="_blank"}**.
+
 {: .no-tb-margins }
 
-- <i class="fas fa-history text-purple"></i> Legacy Support: Docker CE v17-18 and **[nvidia-docker2](https://github.com/NVIDIA/nvidia-docker/wiki/Installation-(version-2.0)){: target="_blank"}**
-
-
-**1. Download and Install.** Copy command below to download and install the latest Docker CE Edition:
+**1. Download and Install.** Copy command below to download and install the latest Docker CE Edition and NVIDIA Docker:
 
 ```
 curl https://get.docker.com | sh
-```
-{: .margin-bottom-3em}
-
-**2. Install Latest NVIDIA Docker.** For example, this is the Ubuntu Example:
-
-```
 distribution=$(. /etc/os-release;echo $ID$VERSION_ID)
 curl -s -L https://nvidia.github.io/nvidia-docker/gpgkey | sudo apt-key add -
 curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.list | sudo tee /etc/apt/sources.list.d/nvidia-docker.list
@@ -216,7 +207,7 @@ sudo apt-get install -y nvidia-docker2
 ```   
 {: .margin-bottom-3em}
 
-**3. Start Docker.** In new terminal window run:
+**2. Start Docker.** In new terminal window run:
 ```
 sudo service docker stop
 sudo service docker start
@@ -224,16 +215,10 @@ sudo service docker start
 {: .margin-bottom-3em}
 
 
-**4a. Test NVIDIA Docker:**
+**3. Test NVIDIA Docker:**
 
 ```
 docker run --gpus all nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark
-```
-{: .margin-bottom-3em}
-
-**4b. Legacy Docker Users.** Docker CE v18 & **[nvidia-docker2](https://github.com/NVIDIA/nvidia-docker/wiki/Installation-(version-2.0)){: target="_blank"}** users will need to replace the following for compatibility:
-```bash
-'docker run --gpus all' with 'docker run --runtime=nvidia'
 ```
 {: .margin-bottom-3em}
 
@@ -245,7 +230,8 @@ docker run --gpus all nvcr.io/nvidia/k8s/cuda-sample:nbody nbody -gpu -benchmark
 ## <i class="fas fa-laptop-code"></i> Conda
 {: .section-title-halfs}
 
-RAPIDS can use either a minimal conda installation with **[Miniconda](https://conda.io/miniconda.html){: target="_blank"}** or a full installation of **[Anaconda](https://www.anaconda.com/download){: target="_blank"}**. Below is a quick installation guide using miniconda.
+RAPIDS can be installed using **[Miniconda](https://conda.io/miniconda.html){: target="_blank"}**.
+
 
 **1. Download and Run Install Script**. Copy the command below to download and run the miniconda install script:
 ```
@@ -259,16 +245,14 @@ bash Miniconda3-latest-Linux-x86_64.sh
 **3. Start Conda.** Open a new terminal window, which should now show Conda initialized.
 {: .padding-bottom-3em }
 
-## <i class="fa-regular fa-binary"></i> Build From Source
+## <i class="fas fa-laptop-code"></i> PIP
 {: .section-title-halfs}
 
-To build RAPIDS from source, check each libraries` readme. For example the **[cuDF README](https://github.com/rapidsai/cudf/tree/main#development-setup){: target="_blank"}** has details for source environment setup and build instructions. Further links are provided in the selector tool. If additional help is needed reach out on our [Slack Channel](https://join.slack.com/t/rapids-goai/shared_invite/zt-trnsul8g-Sblci8dk6dIoEeGpoFcFOQ). 
-{: .padding-bottom-3em }
+RAPIDS can be installed using pip
+```
+pip install rmm-cu11 cudf-cu11 -i https://pypi.k8s.rapids.ai/simple
+```
 
-## <i class="fas fa-laptop-code"></i> Where is PIP?
-{: .section-title-halfs}
-
-**Pip packages are returning soon! Check back here later in September for experimental access!**  For details on why PIP is not currently supported, please refer to this **[blog post](https://medium.com/rapids-ai/rapids-0-7-release-drops-pip-packages-47fc966e9472){: target="_blank"}**. 
 {% endcapture %}
 {% include section-halfs.html
     background="background-white"
