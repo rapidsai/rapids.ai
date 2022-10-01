@@ -53,61 +53,126 @@ RAPIDS is an open source project. Supported by NVIDIA, it also relies on Numba, 
     content-bottom-right-third=about_bottom_right
 %}
 
+{% include slopecap.html
+    background="background-gray"
+    position="top"
+    slope="down"
+%}
 
+# Install RAPIDS Quickly 
+You can quickly Try RAPIDS out on your local machine or a provisioned cloud instance! For Docker, ARM, or a more detailed install, please go the **[Install RAPIDS Page <i class="fas fa-angle-double-right"></i>](start.html)**
+{: .section-title-full .padding-top-2em background="background-gray"}
 
 {% capture start_left %}
-# Getting Started
+
 {: .section-title-halfs}
+## Local Machine
+Be sure your machine has 
+- A compatible NVIDIA GPU 
+- Ubuntu 18.04/20.04, CentOS, RockyLinux8 or **[inside WSL2 on Windows 11 <i class="fa fa-angle-double-right" aria-hidden="true"></i>](wsl2.html){: target="_blank"}**
 
-The RAPIDS data science framework is designed to have a familiar look and feel to data scientist working in Python. Here’s a code snippet where we read in a CSV file and output some descriptive statistics:
+**1. Install Latest CUDA & NVIDIA Drivers:** [Latest CUDA & NVIDIA Drivers](https://www.nvidia.com/download/index.aspx){: target="_blank"}
+{: .no-tb-margins }
 
-```python
-import cudf
-
-gdf = cudf.read_csv('path/to/file.csv')
-for column in gdf.columns:
-    print(gdf[column].mean())
-
+**2. Download and Run Conda Install Script:**
 ```
-Find more details on our **[Get Started Page <i class="fas fa-angle-double-right"></i>](start.html)**
+wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh
+```
+{: .margin-bottom-3em}
 
-## <i class="fas fa-bolt"></i> Try Now Online
-Jump right into a GPU powered RAPIDS notebook, online, with **[SageMaker Studio Lab](https://studiolab.sagemaker.aws/)** (free account required):
+**3. Install RAPIDS:** 
+```
+conda create -n rapids-22.08 -c rapidsai -c nvidia -c conda-forge  \
+    rapids=22.08 python=3.9 cudatoolkit=11.5
+```
 
-[![SageMaker Studio Lab]({{ site.baseurl }}{% link /assets/images/Open-StudioLab.png%})](smsl.html){: target="_blank"}{: .half-image}
+## Next Steps 
 
-{% endcapture %}
-
-{% capture start_right %}
-## <i class="far fa-bookmark"></i> 10 Minutes to cuDF and Dask-cuDF
-{: .section-subtitle-top-1}
-
-Modeled after 10 Minutes to Pandas, this is a short introduction to cuDF that is geared mainly for new users. <br> **[Go to guide <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://docs.rapids.ai/api/cudf/stable/user_guide/10min.html){: target="_blank"}**
-
-## <i class="far fa-bookmark"></i> Multi-GPU with Dask-cuDF
-{: .section-subtitle-top-1}
-
-A short introduction to multi-GPU solutions with a distributed DataFrame via Dask-cuDF. <br> **[Go to guide <i class="fas fa-angle-double-right"></i>](https://docs.rapids.ai/api/cudf/stable/basics/dask-cudf.html){: target="_blank"}**
-
-
-## <i class="far fa-bookmark"></i> Example Notebooks
+### <i class="far fa-bookmark"></i> Example Notebooks
 {: .section-subtitle-top-1}
 
 A GitHub repository with our introductory examples of XGBoost, cuML demos, cuGraph demos, and more. <br> **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks){: target="_blank"}**
 
 
-## <i class="far fa-bookmark"></i> Example Community Notebooks
+### <i class="far fa-bookmark"></i> Example Community Notebooks
 {: .section-subtitle-top-1}
 
 A second GitHub repository with our extended collection of community contributed notebook examples. <br> **[Go to repo <i class="fas fa-angle-double-right"></i>](https://github.com/rapidsai/notebooks-contrib){: target="_blank"}**
 
 
 {% endcapture %}
-{% include slopecap.html
-    background="background-gray"
-    position="top"
-    slope="down"
-%}
+
+{% capture start_right %}
+
+
+
+
+## <i class="fas fa-bolt"></i> Try Now Online
+
+<div class="row">
+	{% capture tin_free_left %}
+	Try RAPIDS in a free, cloud-hosted notebook<br>
+	(account required)
+	{% endcapture %}
+	{% capture tin_free_right %}
+	<a href="smsl.html" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/Open-StudioLab.png%}" alt="Studio Lab"> </a>
+	{% endcapture %}
+	{% include section-halfs.html
+		padding-top="1em" padding-bottom="0em"
+		content-left-half=tin_free_left
+		content-right-half=tin_free_right
+	%}
+	<hr style="width:100%;text-align:left;margin-left:0;border-top: 2px solid #7306ff;">
+</div>
+<div class="row">
+	{% capture tin_quick_left %}
+	<a href="https://www.paperspace.com/gpu-cloud" target="_blank"> <img class="quarter-image-center " src="{{ site.baseurl }}{% link /assets/images/paperspace_small.png %}" alt="Paperspace"> </a>
+	{% endcapture %}
+	{% capture tin_quick_right %}
+	In **Quick Start Instances** for workflows and model deployments
+	{% endcapture %}
+	{% include section-halfs.html
+		padding-top="1em" padding-bottom="0em"
+		content-left-half=tin_quick_left
+		content-right-half=tin_quick_right
+	%}
+	<hr style="width:100%;text-align:left;margin-left:0;border-top: 2px solid #7306ff;">
+</div>
+<div class="row">
+	{% capture tin_ent_left %}
+	On **Customized GPU Infrastructure** for Enterprise
+
+
+	{% endcapture %}
+	{% capture tin_ent_right %}
+	<a href="https://www.nvidia.com/en-us/launchpad/?nvid=nv-int-txtad-579773-vt27#cid=an01_nv-int-txtad_en-us" target="_blank"> <img class="center " src="{{ site.baseurl }}{% link /assets/images/launchpad-logo.png %}" alt="Launchpad"> </a>
+
+	{% endcapture %}
+	{% include section-halfs.html
+		padding-top="1em" padding-bottom="1em"
+		content-left-half=tin_ent_left
+		content-right-half=tin_ent_right
+	%}
+
+</div>
+
+
+
+
+### <i class="far fa-bookmark"></i> 10 Minutes to cuDF and Dask-cuDF
+{: .section-subtitle-top-1}
+
+Modeled after 10 Minutes to Pandas, this is a short introduction to cuDF that is geared mainly for new users. <br> **[Go to guide <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://docs.rapids.ai/api/cudf/stable/user_guide/10min.html){: target="_blank"}**
+
+### <i class="far fa-bookmark"></i> Multi-GPU with Dask-cuDF
+{: .section-subtitle-top-1}
+
+A short introduction to multi-GPU solutions with a distributed DataFrame via Dask-cuDF. <br> **[Go to guide <i class="fas fa-angle-double-right"></i>](https://docs.rapids.ai/api/cudf/stable/basics/dask-cudf.html){: target="_blank"}**
+
+
+{% endcapture %}
+
 {% include section-halfs.html
     background="background-gray"
     padding-top="1em" padding-bottom="1em"
