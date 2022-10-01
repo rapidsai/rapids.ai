@@ -55,13 +55,14 @@ RAPIDS is an open source project. Supported by NVIDIA, it also relies on Numba, 
 
 {% include slopecap.html
     background="background-gray"
+	padding-bottom="2em"
     position="top"
     slope="down"
 %}
 
 # Install RAPIDS Quickly 
 You can quickly Try RAPIDS out on your local machine or a provisioned cloud instance! For Docker, ARM, or a more detailed install, please go the **[Install RAPIDS Page <i class="fas fa-angle-double-right"></i>](start.html)**
-{: .section-title-full .padding-top-2em background="background-gray"}
+{: .section-title-full .padding-top-2em .padding-bottom-2em }
 
 {% capture start_left %}
 
@@ -111,49 +112,49 @@ A second GitHub repository with our extended collection of community contributed
 ## <i class="fas fa-bolt"></i> Try Now Online
 
 <div class="row">
-	{% capture tin_free_left %}
-	Try RAPIDS in a free, cloud-hosted notebook<br>
-	(account required)
-	{% endcapture %}
-	{% capture tin_free_right %}
-	<a href="smsl.html" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/Open-StudioLab.png%}" alt="Studio Lab"> </a>
-	{% endcapture %}
-	{% include section-halfs.html
-		padding-top="1em" padding-bottom="0em"
-		content-left-half=tin_free_left
-		content-right-half=tin_free_right
-	%}
-	<hr style="width:100%;text-align:left;margin-left:0;border-top: 2px solid #7306ff;">
+{% capture tin_free_left %}
+Try RAPIDS in a free, cloud-hosted notebook<br>
+(account required)
+{% endcapture %}
+{% capture tin_free_right %}
+<a href="smsl.html" target="_blank"> <img src="{{ site.baseurl }}{% link /assets/images/Open-StudioLab.png%}" alt="Studio Lab"> </a>
+{% endcapture %}
+{% include section-halfs.html
+	padding-top="1em" padding-bottom="0em"
+	content-left-half=tin_free_left
+	content-right-half=tin_free_right
+%}
+<hr style="width:100%;text-align:left;margin-left:0;border-top: 2px solid #7306ff;">
 </div>
 <div class="row">
-	{% capture tin_quick_left %}
-	<a href="https://www.paperspace.com/gpu-cloud" target="_blank"> <img class="quarter-image-center " src="{{ site.baseurl }}{% link /assets/images/paperspace_small.png %}" alt="Paperspace"> </a>
-	{% endcapture %}
-	{% capture tin_quick_right %}
-	In **Quick Start Instances** for workflows and model deployments
-	{% endcapture %}
-	{% include section-halfs.html
-		padding-top="1em" padding-bottom="0em"
-		content-left-half=tin_quick_left
-		content-right-half=tin_quick_right
-	%}
-	<hr style="width:100%;text-align:left;margin-left:0;border-top: 2px solid #7306ff;">
+{% capture tin_quick_left %}
+<a href="https://www.paperspace.com/gpu-cloud" target="_blank"> <img class="quarter-image-center " src="{{ site.baseurl }}{% link /assets/images/paperspace_small.png %}" alt="Paperspace"> </a>
+{% endcapture %}
+{% capture tin_quick_right %}
+In **Quick Start Instances** for workflows and model deployments
+{% endcapture %}
+{% include section-halfs.html
+	padding-top="1em" padding-bottom="0em"
+	content-left-half=tin_quick_left
+	content-right-half=tin_quick_right
+%}
+<hr style="width:100%;text-align:left;margin-left:0;border-top: 2px solid #7306ff;">
 </div>
 <div class="row">
-	{% capture tin_ent_left %}
-	On **Customized GPU Infrastructure** for Enterprise
+{% capture tin_ent_left %}
+On **Customized GPU Infrastructure** for Enterprise
 
 
-	{% endcapture %}
-	{% capture tin_ent_right %}
-	<a href="https://www.nvidia.com/en-us/launchpad/?nvid=nv-int-txtad-579773-vt27#cid=an01_nv-int-txtad_en-us" target="_blank"> <img class="center " src="{{ site.baseurl }}{% link /assets/images/launchpad-logo.png %}" alt="Launchpad"> </a>
+{% endcapture %}
+{% capture tin_ent_right %}
+<a href="https://www.nvidia.com/en-us/launchpad/?nvid=nv-int-txtad-579773-vt27#cid=an01_nv-int-txtad_en-us" target="_blank"> <img class="center " src="{{ site.baseurl }}{% link /assets/images/launchpad-logo.png %}" alt="Launchpad"> </a>
 
-	{% endcapture %}
-	{% include section-halfs.html
-		padding-top="1em" padding-bottom="1em"
-		content-left-half=tin_ent_left
-		content-right-half=tin_ent_right
-	%}
+{% endcapture %}
+{% include section-halfs.html
+	padding-top="1em" padding-bottom="1em"
+	content-left-half=tin_ent_left
+	content-right-half=tin_ent_right
+%}
 
 </div>
 
