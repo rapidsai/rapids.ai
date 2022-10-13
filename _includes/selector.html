@@ -139,7 +139,7 @@
 
             // all possible values
             python_vers: ["3.8", "3.9"],
-            cuda_vers: ["11.0", "11.2", "11.4", "11.5"],
+            cuda_vers: ["11.2", "11.4", "11.5"],
             os_vers: ["Ubuntu 18.04", "Ubuntu 20.04", "CentOS 7", "Rocky Linux 8"],
             methods: ["Conda", "Docker", "Source"],
             releases: ["Stable", "Nightly"],
@@ -328,8 +328,8 @@
                 return option;
             },
             getImgLoc(loc) {
-                if (loc === "NGC") return 'NGC <i class="fa-regular fa-share-nodes"></i>';
-                if (loc === "Dockerhub") return 'Docker Hub <i class="fa-docker fab"></i>';
+                if (loc === "NGC") return 'NGC (Stable Only) <i class="fa-regular fa-share-nodes"></i>';
+                if (loc === "Dockerhub") return 'Docker Hub (Stable and Nightly) <i class="fa-docker fab"></i>';
                 return loc;
             },
             getDockerNotes() {
