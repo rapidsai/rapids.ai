@@ -15,7 +15,8 @@ layout: default
 
 {% capture intro_content %}
 
-RAPIDS users can once again install RAPIDS via pip!  This is an **experimental release** supporting single GPU usage.  cuDF, dask-cuDF, cuML, cuGraph, RMM and RAFT release 22.10 pip packages are available **[right now ](#install)** The team is continuing to improve these packages and work toward a 22.10 release. [If you find issues, please file them in the respective RAPIDS Repo](https://github.com/rapidsai){: target="_blank"}.
+RAPIDS users can once again install RAPIDS via pip!  This is an **experimental release** supporting single GPU usage.  cuDF, dask-cuDF, cuML, cuGraph, RMM and RAFT release 22.10 pip packages are available **[right now](#install)**.  The team is continuing to improve these packages and work toward a 22.10 release.  
+[If you find issues, please file them in the respective RAPIDS Repo](https://github.com/rapidsai){: target="_blank"}.
 {: .subtitle}
 
 {% endcapture %}
