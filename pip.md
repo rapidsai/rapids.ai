@@ -15,7 +15,8 @@ layout: default
 
 {% capture intro_content %}
 
-RAPIDS users can once again install RAPIDS via pip!  This is an **experimental release** supporting single GPU usage.  cuDF, dask-cuDF, cuML, cuGraph, RMM and RAFT release 22.10 pip packages are available **[right now](#install)**.  The team is continuing to improve these packages and work toward a 22.10 release.  
+RAPIDS users can once again install RAPIDS via pip!  This is an **experimental release** supporting single GPU usage.  cuDF, dask-cuDF, cuML, cuGraph, RMM and RAFT release 22.10 pip packages are available **[right now](#install)**.  The team is excited to get these packages out into the wild and see how the RAPIDS community uses them!
+
 [If you find issues, please file them in the respective RAPIDS Repo](https://github.com/rapidsai){: target="_blank"}.
 {: .subtitle}
 
@@ -45,7 +46,7 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 
 >>> <i class="fas fa-chevron-circle-right text-white"></i> In addition, WSL2 pip installations require following **[this guide to install the CUDA Toolkit without drivers.](https://docs.nvidia.com/cuda/wsl-user-guide/index.html#cuda-support-for-wsl2){: target="_blank"}** 
 
-> <i class="fas fa-info-circle text-white"></i> **Manylinux Version:** 2_32. Requires glibc >.= 2.32
+> <i class="fas fa-info-circle text-white"></i> **Manylinux Version:** 2_32. Requires glibc >= 2.32
 
 > <i class="fas fa-microchip text-white"></i> **GPU:** Only GPUs with **[Compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 7.0 or higher are supported.
   
