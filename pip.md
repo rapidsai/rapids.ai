@@ -15,7 +15,7 @@ layout: default
 
 {% capture intro_content %}
 
-RAPIDS users can once again install RAPIDS via pip!  This is an **experimental release**.  RMM and cuDF pip packages are available **[right now ](#install)** with cuML, cuGraph, and raft coming in late September!  Packages are a snapshot build of RAPIDS 22.10. The team is continuing to improve these packages and work toward a 22.10 release. [If you find issues, please file them in the RAPIDS cuDF Repo](https://github.com/rapidsai/cudf/issues/new/choose){: target="_blank"}.
+RAPIDS users can once again install RAPIDS via pip!  This is an **experimental release** supporting single GPU usage.  cuDF, dask-cuDF, cuML, cuGraph, RMM and RAFT release 22.10 pip packages are available **[right now ](#install)** The team is continuing to improve these packages and work toward a 22.10 release. [If you find issues, please file them in the respective RAPIDS Repo](https://github.com/rapidsai){: target="_blank"}.
 {: .subtitle}
 
 {% endcapture %}
@@ -40,9 +40,11 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 
 >> <i class="fa-brands fa-ubuntu text-white"></i> Ubuntu 18.04/20.04 or CentOS 7 / Rocky Linux 8 with <code>gcc/++</code> 9.0+
 	
->> <i class="fas fa-desktop text-white"></i> Windows 11 using WSL2  **[See separate install guide <i class="fa fa-angle-double-right" aria-hidden="true"></i>](wsl2.html){: target="_blank"}**
+>> <i class="fas fa-desktop text-white"></i> Windows 11 using WSL2  **[See separate install guide <i class="fa fa-angle-double-right" aria-hidden="true"></i>](wsl2.html){: target="_blank"}** 
 
-> <i class="fas fa-info-circle text-white"></i> **Manylinux Version:** 2_24. Requires glibc >.= 2.17
+>>> <i class="fas fa-chevron-circle-right text-white"></i> In addition, WSL2 pip installations require following **[this guide to install the CUDA Toolkit without drivers.](https://docs.nvidia.com/cuda/wsl-user-guide/index.html#cuda-support-for-wsl2){: target="_blank"}** 
+
+> <i class="fas fa-info-circle text-white"></i> **Manylinux Version:** 2_32. Requires glibc >.= 2.32
 
 > <i class="fas fa-microchip text-white"></i> **GPU:** Only GPUs with **[Compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 7.0 or higher are supported.
   
@@ -50,19 +52,32 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 
 > <i class="fab fa-python text-white"></i> **Python and pip version:** Python 3.8 or 3.9 using pip 20.3+ with **[PEP600 support](https://peps.python.org/pep-0600/){: target="_blank"}**.
 
+## <i class="far fa-comments text-white"></i> Connect 
+
+> Join our community conversations about RAPIDS and pip using **[Twitter](https://twitter.com/rapidsai){: target="_blank"}**, **[Slack]({{ site.slack_invite }}){: target="_blank"}**, or ask a question on **[StackOverflow](https://stackoverflow.com/tags/rapids){: target="_blank"}**.
+
+> If you find issues, please file them in the respective RAPIDS repo:
+
+>> **[cuDF](https://github.com/rapidsai/cudf/issues/new/choose ){: target="_blank"}** | 
+>> **[cuML](https://github.com/rapidsai/cuml/issues/new/choose ){: target="_blank"}** | 
+>> **[cuGraph](https://github.com/rapidsai/cugraph/issues/new/choose ){: target="_blank"}** | 
+>> **[RMM](https://github.com/rapidsai/rmm/issues/new/choose ){: target="_blank"}** | 
+>> **[RAFT](https://github.com/rapidsai/raft/issues/new/choose ){: target="_blank"}**
 {% endcapture %}
 
 {% capture start_right %}
-## <i class="fad fa-terminal text-white"></i> Installation Command
+## <i class="fad fa-terminal text-white"></i> Installation Commands
 
 
-	pip install rmm-cu11 cudf-cu11 -i https://pypi.k8s.rapids.ai/simple
+	pip install --index-url=https://pypi.ngc.nvidia.com/ --trusted-host pypi.ngc.nvidia.com cudf-cu11 dask-cudf-cu11
+	pip install --index-url=https://pypi.ngc.nvidia.com/ --trusted-host pypi.ngc.nvidia.com cuml-cu11
+    pip install --index-url=https://pypi.ngc.nvidia.com/ --trusted-host pypi.ngc.nvidia.com cugraph-cu11
 
-> <i class="fas fa-info-circle text-white"></i> The RAPIDS pip packages are hosted in a private repo, but will be found on public repos soon.  
+> <i class="fas fa-info-circle text-white"></i> The RAPIDS pip packages are hosted on the NVIDIA NGC index today. 
 
-> <i class="fas fa-info-circle text-white"></i> In the first release, cuDF and RMM are available. Experimental cuML, cuGraph, and raft wheels will be out in late September.  Please check back for any updates!
+> <i class="fas fa-info-circle text-white"></i> Please check back here for any updates!
 
-## <i class="fa-solid fa-screwdriver-wrench text-white"></i> Troubleshooting
+## <i class="fa-solid fa-screwdriver-wrench text-white"></i> Troubleshooting and Known Issues
 
 > <i class="fas fa-chevron-circle-right text-white"></i> RAPIDS pip packages require a recent version of pip that **[supports PEP600](https://peps.python.org/pep-0600/https://peps.python.org/pep-0600/){: target="_blank"}**.  Some users may need to update pip using 
 	
@@ -72,11 +87,13 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 
 > <i class="fas fa-chevron-circle-right text-white"></i> Infiniband is not supported yet in this release
 
-## <i class="far fa-comments text-white"></i> Connect 
+> <i class="fas fa-chevron-circle-right text-white"></i> These packages are not compatible with Tensorflow pip packages. Please use DLFW containers or conda packages instead.
 
-> Join our community conversations about RAPIDS and pip using **[Twitter](https://twitter.com/rapidsai){: target="_blank"}**, **[Slack]({{ site.slack_invite }}){: target="_blank"}**, or ask a question on **[StackOverflow](https://stackoverflow.com/tags/rapids){: target="_blank"}**.
+> <i class="fas fa-chevron-circle-right text-white"></i> Dask / Jupyter / Tornado 6.2 dependency conflicts can occur. Install jupyter-client 7.3.4 if the error below occurs:
 
-> If you find issues, please **[file them in the RAPIDS cuDF Repo](https://github.com/rapidsai/cudf/issues/new/choose ){: target="_blank"}**.
+      behaviour is the source of the following dependency conflicts.
+      jupyter-client 7.4.2 requires tornado>=6.2, but you have tornado 6.1 which is incompatible.
+
 
 {% endcapture %}
 
