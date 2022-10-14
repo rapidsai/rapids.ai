@@ -271,7 +271,7 @@ To build RAPIDS from source, check each libraries` readme. For example the **[cu
 ## <i class="fas fa-laptop-code"></i> Where is PIP?
 {: .section-title-halfs}
 
-Pip installation of RAPIDS back (experimental access)!  You can **[try our pip packages (Experimental) here](pip.html)**
+Pip installation of RAPIDS is back!  You can **[try our experimental pip packages here](pip.html)**
 
 {% endcapture %}
 {% include section-halfs.html
