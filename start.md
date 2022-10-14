@@ -17,8 +17,8 @@ The RAPIDS data science framework is a collection of libraries for executing end
 
 {% endcapture %}
 {% include section-single.html
-    background="background-white" 
-    padding-top="0em" padding-bottom="0em" 
+    background="background-white"
+    padding-top="0em" padding-bottom="0em"
     content-single=intro
 %}
 
@@ -51,17 +51,20 @@ Jump right into a GPU powered RAPIDS notebook, online, with **[SageMaker Studio 
 # Installation Overview
 {: .section-title-full}
 
-In four steps, easily install RAPIDS on a local system or cloud instance with a CUDA enabled GPU for either **[Conda](#conda)** or **[Docker](#docker)** and then explore our user guides and examples.  You can also **[try our pip packages (Experimental)](pip.html)**
+In four steps, easily install RAPIDS on a local system or cloud instance with a CUDA enabled GPU for either **[Conda](#conda)** or **[Docker](#docker)** and then explore our user guides and examples.  **[Pip packages are here with experimental access!](pip.html)**
+
 
 {% endcapture %}
 {% capture gs_left %}
-## **[<i class="fad fa-chevron-double-down"></i> Step 1: Provision A System](#requirements)** 
+## **[<i class="fad fa-chevron-double-down"></i> Step 1: Provision A System](#requirements)**
 - Check system requirements
 - Choose a cloud or local system
 
 ## **[<i class="fad fa-chevron-double-down"></i> Step 2: Install Environment](#environment)**
+
 - Choose to use Conda, Docker, or **[try pip (Experimental)](pip.html)**.
 - Choose to Build from source 
+
 
 {% endcapture %}
 {% capture gs_right%}
@@ -153,13 +156,13 @@ We suggest taking a look at the sample workflow in our Docker container, which i
     slope="down"
 %}
 {% include section-single.html
-    background="background-gray" 
-    padding-top="3em" padding-bottom="0em" 
+    background="background-gray"
+    padding-top="3em" padding-bottom="0em"
     content-single=prov
 %}
-{% include section-thirds.html 
-    background="background-gray" 
-    padding-top="0em" padding-bottom="10em" 
+{% include section-thirds.html
+    background="background-gray"
+    padding-top="0em" padding-bottom="10em"
     content-left-third=req_left
     content-middle-third=req_mid
     content-right-third=req_right
@@ -213,7 +216,7 @@ curl -s -L https://nvidia.github.io/nvidia-docker/$distribution/nvidia-docker.li
 curl -s -L https://nvidia.github.io/libnvidia-container/experimental/$distribution/libnvidia-container-experimental.list | sudo tee /etc/apt/sources.list.d/libnvidia-container-experimental.list
 sudo apt-get update
 sudo apt-get install -y nvidia-docker2
-```   
+```
 {: .margin-bottom-3em}
 
 **3. Start Docker.** In new terminal window run:
@@ -262,13 +265,14 @@ bash Miniconda3-latest-Linux-x86_64.sh
 ## <i class="fa-regular fa-binary"></i> Build From Source
 {: .section-title-halfs}
 
-To build RAPIDS from source, check each libraries` readme. For example the **[cuDF README](https://github.com/rapidsai/cudf/tree/main#development-setup){: target="_blank"}** has details for source environment setup and build instructions. Further links are provided in the selector tool. If additional help is needed reach out on our [Slack Channel](https://join.slack.com/t/rapids-goai/shared_invite/zt-trnsul8g-Sblci8dk6dIoEeGpoFcFOQ). 
+To build RAPIDS from source, check each libraries` readme. For example the **[cuDF README](https://github.com/rapidsai/cudf/tree/main#development-setup){: target="_blank"}** has details for source environment setup and build instructions. Further links are provided in the selector tool. If additional help is needed reach out on our [Slack Channel](https://join.slack.com/t/rapids-goai/shared_invite/zt-trnsul8g-Sblci8dk6dIoEeGpoFcFOQ).
 {: .padding-bottom-3em }
 
 ## <i class="fas fa-laptop-code"></i> Where is PIP?
 {: .section-title-halfs}
 
-Pip installation of RAPIDS is coming back!  You can **[try our pip packages (Experimental) here](pip.html)**
+Pip installation of RAPIDS back (experimental access)!  You can **[try our pip packages (Experimental) here](pip.html)**
+
 {% endcapture %}
 {% include section-halfs.html
     background="background-white"
@@ -333,7 +337,7 @@ Once installation has been successful, explore the capabilities of RAPIDS with t
 ## <i class="far fa-bookmark"></i> Get Example Notebooks
 
 
-**1. Install Jupyter Lab.** If it or Jupyter Notebook is not already installed. 
+**1. Install Jupyter Lab.** If it or Jupyter Notebook is not already installed.
 
 **2. Get Notebooks.** See links to the RAPIDS Notebooks and Community Notebooks below.
 
@@ -383,7 +387,7 @@ To start the container in an MNMG environment:
 
 ```bash
 docker run -t -d --gpus all --shm-size=1g --ulimit memlock=-1 -v $PWD:/ws <container label>
-``` 
+```
 {: .margin-bottom-3em}
 
 The standard docker command may be sufficient, but the additional arguments ensures more stability.  See the **[NCCL docs](https://docs.nvidia.com/deeplearning/nccl/user-guide/docs/troubleshooting.html#sharing-data){: target="_blank"}** and **[UCX docs](https://github.com/openucx/ucx/blob/master/docs/source/running.md#running-in-docker-containers){: target="_blank"}** for more details on MNMG usage.
