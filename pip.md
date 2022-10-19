@@ -71,9 +71,9 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 ## <i class="fad fa-terminal text-white"></i> Installation Commands
 
 
-	pip install --index-url=https://pypi.ngc.nvidia.com/ --trusted-host pypi.ngc.nvidia.com cudf-cu11 dask-cudf-cu11
-	pip install --index-url=https://pypi.ngc.nvidia.com/ --trusted-host pypi.ngc.nvidia.com cuml-cu11
-    pip install --index-url=https://pypi.ngc.nvidia.com/ --trusted-host pypi.ngc.nvidia.com cugraph-cu11
+	pip install cudf-cu11 dask-cudf-cu11 --extra-index-url=https://pypi.ngc.nvidia.com
+	pip install cuml-cu11 --extra-index-url=https://pypi.ngc.nvidia.com
+	pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com
 
 > <i class="fas fa-info-circle text-white"></i> The RAPIDS pip packages are hosted on the NVIDIA NGC index today. 
 
@@ -89,7 +89,7 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 
 > <i class="fas fa-chevron-circle-right text-white"></i> Infiniband is not supported yet in this release
 
-> <i class="fas fa-chevron-circle-right text-white"></i> These packages are not compatible with Tensorflow pip packages. Please use DLFW containers or conda packages instead.
+> <i class="fas fa-chevron-circle-right text-white"></i> These packages are not compatible with Tensorflow pip packages. Please use the <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/containers/tensorflow">NGC containers</a> or conda packages instead.
 
 > <i class="fas fa-chevron-circle-right text-white"></i> Dask / Jupyter / Tornado 6.2 dependency conflicts can occur. Install jupyter-client 7.3.4 if the error below occurs:
 
