@@ -81,10 +81,12 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 
 ## <i class="fa-solid fa-screwdriver-wrench text-white"></i> Troubleshooting and Known Issues
 
-> <i class="fas fa-info-circle text-white"></i> The most common `pip install` error, shown below, can result from several different conditions
+> <i class="fas fa-info-circle text-white"></i> The following `pip install` error message can result from a number of different conditions:
 
     ERROR: Could not find a version that satisfies the requirement cudf-cu11 (from versions: 0.0.1, 22.10.0)
     ERROR: No matching distribution found for cudf-cu11
+
+> Check the suggestions below for possible resolutions.
 
 > <i class="fas fa-chevron-circle-right text-white"></i> Your Python version must be 3.8 or 3.9.
 
