@@ -77,11 +77,9 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 
 > <i class="fas fa-info-circle text-white"></i> The RAPIDS pip packages are hosted on the NVIDIA NGC index today. 
 
-> <i class="fas fa-info-circle text-white"></i> Please check back here for any updates!
-
 ## <i class="fa-solid fa-screwdriver-wrench text-white"></i> Troubleshooting and Known Issues
 
-> <i class="fas fa-info-circle text-white"></i> The following `pip install` error message can result from a number of different conditions:
+> <i class="fas fa-info-circle text-white"></i> The following error message is common:
 
     ERROR: Could not find a version that satisfies the requirement cudf-cu11 (from versions: 0.0.1, 22.10.0)
     ERROR: No matching distribution found for cudf-cu11
