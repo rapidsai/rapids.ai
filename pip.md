@@ -46,7 +46,7 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 
 >>> <i class="fas fa-chevron-circle-right text-white"></i> In addition, WSL2 pip installations require following **[this guide to install the CUDA Toolkit without drivers.](https://docs.nvidia.com/cuda/wsl-user-guide/index.html#cuda-support-for-wsl2){: target="_blank"}** 
 
-> <i class="fas fa-info-circle text-white"></i> **Glibc version:** The x86_64 wheels require glibc >= 2.17, and the aarch64 wheels require glibc >= 2.31.
+> <i class="fas fa-info-circle text-white"></i> **Glibc version:** x86_64 wheels require glibc >= 2.17 and aarch64 wheels require glibc >= 2.31.
 
 > <i class="fas fa-microchip text-white"></i> **GPU:** Only GPUs with **[Compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 7.0 or higher are supported.
   
@@ -86,7 +86,7 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
     ERROR: Could not find a version that satisfies the requirement cudf-cu11 (from versions: 0.0.1, 22.10.0)
     ERROR: No matching distribution found for cudf-cu11
 
-> <i class="fas fa-info-circle text-white"></i> Your Python version must be 3.8 or 3.9.
+> <i class="fas fa-chevron-circle-right text-white"></i> Your Python version must be 3.8 or 3.9.
 
 > <i class="fas fa-chevron-circle-right text-white"></i> RAPIDS pip packages require a recent version of pip that **[supports PEP600](https://peps.python.org/pep-0600/https://peps.python.org/pep-0600/){: target="_blank"}**.  Some users may need to update pip:
 	
