@@ -48,7 +48,7 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 
 > <i class="fas fa-info-circle text-white"></i> **Glibc version:** x86_64 wheels require glibc >= 2.17 and aarch64 wheels require glibc >= 2.31.
 
-> <i class="fas fa-microchip text-white"></i> **GPU:** Only GPUs with **[Compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 7.0 or higher are supported.
+> <i class="fas fa-microchip text-white"></i> **GPU:** Only GPUs with **[Compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 7.0 or higher (i.e. Pascal generation or newer) are supported.
   
 > <i class="fas fa-download text-white"></i> **CUDA:** >= 11.2, with at least the v460.27.03 driver
 
@@ -79,7 +79,7 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 
 ## <i class="fa-solid fa-screwdriver-wrench text-white"></i> Troubleshooting and Known Issues
 
-> <i class="fas fa-info-circle text-white"></i> The following error message is common:
+> <i class="fas fa-info-circle text-white"></i> The following error message indicates a problem with your environment:
 
     ERROR: Could not find a version that satisfies the requirement cudf-cu11 (from versions: 0.0.1, 22.10.0)
     ERROR: No matching distribution found for cudf-cu11
