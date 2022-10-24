@@ -97,10 +97,10 @@ Windows users can now tap into GPU accelerated data science on their local machi
 
 1. Install WSL2 and the Ubuntu 20.04 package [using Microsoft's instructions](https://docs.microsoft.com/en-us/windows/wsl/install){: target="_blank"}.
 2. Install the [latest NVIDIA Drivers](https://www.nvidia.com/download/index.aspx){: target="_blank"} on the Windows host.
-3. Log into your WSL2 Linux instance.
-4. Install Conda on your WSL2 Linux Instance using [our Conda instructions](https://rapids.ai/start.html#environment){: target="_blank"}.
+3. Log in to the WSL2 Linux instance.
+4. Install Conda in the WSL2 Linux Instance using [our Conda instructions](https://rapids.ai/start.html#environment){: target="_blank"}.
 5. Install RAPIDS via Conda, [using the RAPIDS Release Selector tool](https://rapids.ai/start.html#get-rapids){: target="_blank"}.
-6. Run this code to check that your RAPIDS installation is working:
+6. Run this code to check that the RAPIDS installation is working:
 	```
 	import cudf
 	print(cudf.Series([1, 2, 3]))
@@ -113,14 +113,15 @@ Windows users can now tap into GPU accelerated data science on their local machi
 
 1. Install WSL2 and the Ubuntu 20.04 package [using Microsoft's instructions](https://docs.microsoft.com/en-us/windows/wsl/install){: target="_blank"}.
 2. Install the [latest NVIDIA Drivers](https://www.nvidia.com/download/index.aspx){: target="_blank"} on the Windows host.
-3. Log into your WSL2 Linux instance.
-4. Install RAPIDS pip packages on your WSL2 Linux Instance using [our pip instructions](https://rapids.ai/pip.html#install){: target="_blank"}.
-5. Run this code to check that your RAPIDS installation is working:
+3. Log in to the WSL2 Linux instance.
+4. Follow **[this guide to install the CUDA Toolkit without drivers](https://docs.nvidia.com/cuda/wsl-user-guide/index.html#cuda-support-for-wsl2){: target="_blank"}** into the WSL2 instance.
+5. Install RAPIDS pip packages on the WSL2 Linux Instance using the [pip instructions](https://rapids.ai/pip.html#install){: target="_blank"}.
+6. Run this code to check that the RAPIDS installation is working:
 	```
 	import cudf
 	print(cudf.Series([1, 2, 3]))
 	```
-6. Install additional GitHub repos, enablements, and 3rd party tools [from the Learn More section](https://rapids.ai/start.html#next-steps){: target="_blank"}.
+7. Install additional GitHub repos, enablements, and 3rd party tools [from the Learn More section](https://rapids.ai/start.html#next-steps){: target="_blank"}.
 
 {% endcapture %}
 {% capture yd_right %}
@@ -129,9 +130,9 @@ Windows users can now tap into GPU accelerated data science on their local machi
 1. Install WSL2 and the Ubuntu 20.04 package [using Microsoft's instructions](https://docs.microsoft.com/en-us/windows/wsl/install){: target="_blank"}.
 2. Install the [latest NVIDIA Drivers](https://www.nvidia.com/download/index.aspx){: target="_blank"} on the Windows host.
 3. Install latest Docker Desktop for Windows [according to your applicable licensing terms](https://docs.docker.com/desktop/install/windows-install/){: target="_blank"}.
-4. Log into your WSL2 Linux instance.
+4. Log in to the WSL2 Linux instance.
 5. Generate and run the RAPIDS `docker pull` and `docker run` commands based on your desired configuration [using the RAPIDS Release Selector](https://rapids.ai/start.html#get-rapids){: target="_blank"}.
-6. Inside your docker instance, run this code to check that your RAPIDS installation is working:
+6. Inside the Docker instance, run this code to check that the RAPIDS installation is working:
 	```
 	import cudf
 	print(cudf.Series([1, 2, 3]))
