@@ -221,7 +221,7 @@
                 var cuda_version = this.active_cuda_ver;
                 var pkgs = this.active_packages;
                 var py_cuda_pkgs = [this.highlightPkgOrImg("python") + "=" + python_version, this.highlightPkgOrImg("cudatoolkit") + "=" + cuda_version].join(" ");
-                var conda_channels = [rapids_channel, "nvidia", "conda-forge"]
+                var conda_channels = [rapids_channel, "conda-forge", "nvidia"]
                     .map(ch => this.highlightFlag("-c") + " " + ch + " ")
                     .join("");
                 var indentation = "    ";
