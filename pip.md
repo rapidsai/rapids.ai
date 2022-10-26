@@ -83,8 +83,6 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 
 ## <i class="fa-solid fa-screwdriver-wrench text-white"></i> Troubleshooting and Known Issues
 
-> <i class="fas fa-chevron-circle-right text-white"></i> Your CUDA version must be at least 11.5 or higher.
-
 > <i class="fas fa-info-circle text-white"></i> The following error message indicates a problem with your environment:
 
     ERROR: Could not find a version that satisfies the requirement cudf-cu11 (from versions: 0.0.1, 22.10.0)
