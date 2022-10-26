@@ -77,7 +77,7 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 
 > <i class="fas fa-info-circle text-white"></i> The RAPIDS pip packages are hosted on the NVIDIA NGC index today. 
 
-> <i class="fas fa-info-circle text-white"></i> On aarch64, cupy needs to be installed separately
+> <i class="fas fa-info-circle text-white"></i> On aarch64, cupy needs to be installed separately:
 
 	pip install cupy-cuda11x -f https://pip.cupy.dev/aarch64
 
