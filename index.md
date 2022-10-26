@@ -448,7 +448,7 @@ RAPIDS cuCIM has been integrated into the MONAI Transforms component to accelera
 ## <i class="fas fa-code-branch"></i> RAPIDS + PIP
 
 RAPIDS users can once again install RAPIDS via pip! Early-access experimental pip packages are now available!
-<br> **[Learn the more about RAPIDS and Pip <i class="fa fa-angle-double-right" aria-hidden="true"></i>](pip.html)**
+<br> **[Learn more about RAPIDS and pip <i class="fa fa-angle-double-right" aria-hidden="true"></i>](pip.html)**
 
 {% endcapture %}
 
