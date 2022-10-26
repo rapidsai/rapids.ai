@@ -145,7 +145,7 @@ Anyone can join our community and contribute to to RAPIDS in a five step onboard
 
 > **<i class="fas fa-download text-purple"></i> 1. Install** RAPIDS using **[Docker or Conda](https://rapids.ai/start.html#get-rapids){: target="_blank"}**. Or try RAPIDSAI with **[SageMaker Studio Lab](smsl.html){: target="_blank"}** (free account required).
 
-> **<i class="far fa-comments text-purple"></i>  2. Join** our community conversations on **[Twitter](https://twitter.com/rapidsai){: target="_blank"}**, **[Google Groups](https://groups.google.com/forum/#!forum/rapidsai){: target="_blank"}**, and **[Slack]({{ site.slack_invite }}){: target="_blank"}**.
+> **<i class="far fa-comments text-purple"></i>  2. Join** our community conversations on **[Twitter](https://twitter.com/rapidsai){: target="_blank"}** and **[Slack]({{ site.slack_invite }}){: target="_blank"}**.
 
 > **<i class="fas fa-search text-purple"></i> 3. Explore** our **[docs](https://docs.rapids.ai/){: target="_blank"}**, **[walk through videos](https://www.youtube.com/channel/UCsoi4wfweA3I5FsPgyQnnqw?view_as=subscriber){: target="_blank"}**, **[blog posts](https://medium.com/rapids-ai){: target="_blank"}**, **[tutorial notebooks](https://github.com/rapidsai/notebooks-contrib#getting-started-notebooks){: target="_blank"}**, and our **[examples workflows](https://github.com/rapidsai/notebooks-contrib#intermediate-notebooks){: target="_blank"}**.
 
@@ -191,5 +191,3 @@ Anyone can join our community and contribute to to RAPIDS in a five step onboard
 {% include cta-footer-help.html
    background="background-darkpurple"
 %}
-
-
