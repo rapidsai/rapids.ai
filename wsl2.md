@@ -39,7 +39,7 @@ Windows users can now tap into GPU accelerated data science on their local machi
 
 > <i class="fas fa-info-circle text-white"></i> **WSL Version:** WSL 2. WSL 1 is not supported.
 
-> <i class="fas fa-microchip text-white"></i> **GPU:** Only GPUs with [Compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"} 7.0 or higher are supported on RAPIDS in WSL 2. GPUs with 16GB or more of RAM is recommended
+> <i class="fas fa-microchip text-white"></i> **GPU:** Only GPUs with [Compute Capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"} 7.0 or higher are supported on RAPIDS in WSL 2. 16GB or more of GPU RAM is recommended.
 
 > <i class="fas fa-download text-white"></i> **WSL 2 Instance:** Ubuntu 20.04 instance for WSL 2.
 
@@ -55,7 +55,7 @@ Windows users can now tap into GPU accelerated data science on their local machi
 
 > <i class="fas fa-info-circle text-white"></i> GPU Direct Storage is not supported.
 
-> <i class="fas fa-info-circle text-white"></i> At least 8 GB of RAM and a relatively fast CPU are strongly recommended https://docs.microsoft.com/en-us/windows/wsl/install
+> <i class="fas fa-info-circle text-white"></i> At least 8 GB of RAM and a relatively fast CPU are strongly recommended.
 
 ## <i class="fa-solid fa-screwdriver-wrench"></i> Troubleshooting
 
