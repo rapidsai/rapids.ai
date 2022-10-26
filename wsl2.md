@@ -103,7 +103,7 @@ Windows users can now tap into GPU accelerated data science on their local machi
 
 {% endcapture %}
 {% capture yd_mid %}
-## <i class="fab fa-docker text-purple"></i> pip
+## <i class="fab fa-python text-purple"></i> pip
 
 1. Install WSL 2 and the Ubuntu 20.04 package [using Microsoft's instructions](https://docs.microsoft.com/en-us/windows/wsl/install){: target="_blank"}.
 2. Install the [latest NVIDIA Drivers](https://www.nvidia.com/download/index.aspx){: target="_blank"} on the Windows host.
