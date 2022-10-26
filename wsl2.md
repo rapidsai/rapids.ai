@@ -33,16 +33,22 @@ Windows users can now tap into GPU accelerated data science on their local machi
 {% endcapture %}
 
 {% capture start_left %}
-## Prerequisites
+## <i class="fas fa-check"></i> Prerequisites
 
 > <i class="fas fa-desktop text-white"></i> **OS:** Windows 11.
 
-> <i class="fas fa-info-circle text-white"></i> **WSL Version:** WSL 2.  WSL 1 is not supported.
+> <i class="fas fa-info-circle text-white"></i> **WSL Version:** WSL 2. WSL 1 is not supported.
 
-> <i class="fas fa-microchip text-white"></i> **GPU:** Only GPUs with [Compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"} 7.0 or higher are supported on RAPIDS in WSL 2.  GPUs with 16GB or more of RAM is recommended
+> <i class="fas fa-microchip text-white"></i> **GPU:** Only GPUs with [Compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"} 7.0 or higher are supported on RAPIDS in WSL 2. GPUs with 16GB or more of RAM is recommended
 
 > <i class="fas fa-download text-white"></i> **WSL 2 Instance:** Ubuntu 20.04 instance for WSL 2.
 
+## <i class="far fa-comments text-white"></i> Connect
+> Join our community conversations about RAPIDS on WSL 2 using **[Twitter](https://twitter.com/rapidsai){: target="_blank"}**, **[Slack]({{ site.slack_invite }}){: target="_blank"}**, or ask a question on **[StackOverflow](https://stackoverflow.com/tags/rapids){: target="_blank"}**.
+
+{% endcapture %}
+
+{% capture start_right %}
 ## <i class="fad fa-terminal"></i> Limitations
 
 > <i class="fas fa-info-circle text-white"></i> Only single GPU is supported.
@@ -51,21 +57,9 @@ Windows users can now tap into GPU accelerated data science on their local machi
 
 > <i class="fas fa-info-circle text-white"></i> At least 8 GB of RAM and a relatively fast CPU are strongly recommended https://docs.microsoft.com/en-us/windows/wsl/install
 
-{% endcapture %}
-
-{% capture start_right %}
-## <i class="fab fa-docker"></i> Choose a Docker Installation Method
-> <i class="fab fa-windows text-white"></i> **Install Docker Desktop in Windows** and enable the WSL 2 backend.
- Docker packages run in WSL 2 will only work if Docker Desktop is correctly set up and running in Windows.  [Learn more](https://docs.docker.com/desktop/windows/wsl/).
-
-> <i class="fab fa-linux text-white"></i> **Install Docker + nvidia-docker directly in WSL 2** following the current instructions on the RAPIDS site. Note that WSL 2 does not have systemd so Docker will not start automatically. You have to manually run `sudo service docker start` after each reboot.  [[Learn more](https://stackoverflow.com/a/65814529)].
-
 ## <i class="fa-solid fa-screwdriver-wrench"></i> Troubleshooting
 
 > When installing with conda, if an `http 000 connection error` occurs when accessing the repository data, run `wsl --shutdown` and then restart the WSL instance. [More information](https://stackoverflow.com/questions/67923183/miniconda-on-wsl2-ubuntu-20-04-fails-with-condahttperror-http-000-connection)
-
-## <i class="far fa-comments text-white"></i> Connect
-> Join our community conversations about RAPIDS on WSL 2 using **[Twitter](https://twitter.com/rapidsai){: target="_blank"}**, **[Slack]({{ site.slack_invite }}){: target="_blank"}**, or ask a question on **[StackOverflow](https://stackoverflow.com/tags/rapids){: target="_blank"}**.
 
 {% endcapture %}
 
