@@ -50,7 +50,7 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 
 > <i class="fas fa-microchip text-white"></i> **GPU:** Only GPUs with **[Compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 6.0 or higher (i.e. Pascal generation or newer) are supported.
 
-> <i class="fas fa-download text-white"></i> **CUDA >= 11.5**, with at least the v495.29.05 driver
+> <i class="fas fa-download text-white"></i> **CUDA >= 11.5**, with at least the v495.29.05 driver. To use CUDA 11.2, 11.3, or 11.4, please see Troubleshooting and Known Issues.
 
 > <i class="fab fa-python text-white"></i> **Python and pip version:** Python 3.8 or 3.9 using pip 20.3+ with **[PEP600 support](https://peps.python.org/pep-0600/){: target="_blank"}**.
 
@@ -82,6 +82,10 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 	pip install cupy-cuda11x -f https://pip.cupy.dev/aarch64
 
 ## <i class="fa-solid fa-screwdriver-wrench text-white"></i> Troubleshooting and Known Issues
+
+> <i class="fas fa-info-circle text-white"></i> When installing these packages with CUDA 11.2, 11.3, or 11.4, you may experience a "Failed to import CuPy" error. To resolve this error, please uninstall cupy-cuda115 and install cupy-cuda11x
+
+    pip uninstall cupy-cuda115; pip install cupy-cuda11x
 
 > <i class="fas fa-info-circle text-white"></i> The following error message indicates a problem with your environment:
 
