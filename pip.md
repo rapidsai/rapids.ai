@@ -46,7 +46,7 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 
 >>> <i class="fas fa-chevron-circle-right text-white"></i> In addition, WSL2 pip installations require following **[this guide to install the CUDA Toolkit without drivers.](https://docs.nvidia.com/cuda/wsl-user-guide/index.html#cuda-support-for-wsl2){: target="_blank"}**
 
-> <i class="fas fa-info-circle text-white"></i> **Glibc version:** x86_64 wheels require glibc >= 2.17 and aarch64 wheels require glibc >= 2.31.
+> <i class="fas fa-info-circle text-white"></i> **Glibc version:** x86_64 wheels require glibc >= 2.17 and ARM architecture (aarch64) wheels require glibc >= 2.31 (only ARM Server Base System Architecture is supported).
 
 > <i class="fas fa-microchip text-white"></i> **GPU:** Only GPUs with **[Compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 6.0 or higher (i.e. Pascal generation or newer) are supported.
 
@@ -77,7 +77,7 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 
 > <i class="fas fa-info-circle text-white"></i> The RAPIDS pip packages are hosted on the NVIDIA NGC index today.
 
-> <i class="fas fa-info-circle text-white"></i> On aarch64, cupy needs to be installed separately:
+> <i class="fas fa-info-circle text-white"></i> On ARM architecture (aarch64), cupy needs to be installed separately:
 
 	pip install cupy-cuda11x -f https://pip.cupy.dev/aarch64
 
