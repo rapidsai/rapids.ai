@@ -1,0 +1,16 @@
+name: Validate Markdown links
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  xrefcheck:
+    name: Check links
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - uses: serokell/xrefcheck-action@v1
+      with:
+        xrefcheck-version: 0.2.2
+        xrefcheck-args: --ignored dependencies
