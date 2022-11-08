@@ -68,18 +68,6 @@ Font Awesome Icons are fun, but use them accordingly. They are one of the few ex
 #### Twitter and Medium 
 Twitter and Medium sections content are updated from the `post.json` file posted the `postsurl` repo specified in `_config.yml`, which is updated a few times a day with an external job. 
 
-
-### Experimental feature examples
-
-These examples are made possible by the new Jekyll site and can either be used in the production site or not.
-
->**NOTE:** With the merge of PROD & STAGING the links below do not work as they have been hidden.
-
-- [Job Board](https://rapidsai.github.io/rapids.ai/jobs.html) - [raw Markdown file](/jobs.md) (uses new short header)
-  - [Job Post](https://rapidsai.github.io/rapids.ai/job/2019/01/01/c-developers.html) - [raw Markdown file](/_posts/2019-01-01-c-developers.md)
-- [Site Blog](https://rapidsai.github.io/rapids.ai/blog.html) - [raw Markdown file](/blog.md) (uses new short header)
-  - [Jiwei's Converted Medium Post to Markdown](https://rapidsai.github.io/rapids.ai/blog/2019/01/15/make-sense-of-the-universe-with-rapids-ai.html) - [raw Markdown file](/_posts/2019-01-15-make-sense-of-the-universe-with-rapids-ai.md)
-
 ### TODO
 
 Will create these as issues in the future, but wanted to capture where we are at the moment.
@@ -87,7 +75,6 @@ Will create these as issues in the future, but wanted to capture where we are at
 - [ ] Add featured section in blogs
 - [ ] Add pagination to blogs
 - [ ] Port over blogs
-
 
 ## Contributing
 
