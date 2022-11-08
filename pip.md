@@ -15,7 +15,7 @@ layout: default
 
 {% capture intro_content %}
 
-RAPIDS users can once again install RAPIDS via pip!  This is an **experimental release** supporting single GPU usage.  cuDF, dask-cuDF, cuML, cuGraph, RMM and RAFT release 22.10 pip packages are available **[right now](#install)**.  The team is excited to get these packages out into the wild and see how the RAPIDS community uses them!
+RAPIDS users can once again install RAPIDS via pip!  This is an **experimental release** supporting single GPU usage.  cuDF, dask-cuDF, cuML, cuGraph, RMM and RAFT release 22.10 pip packages are available **[for x86_x64 and ARM SBSA right now](#install)**.  The team is excited to get these packages out into the wild and see how the RAPIDS community uses them!
 
 [If you find issues, please file them in the respective RAPIDS Repositories](https://github.com/rapidsai){: target="_blank"}.
 {: .subtitle}
@@ -40,13 +40,17 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 
 > <i class="fas fa-desktop text-white"></i> **OS:** One of the following OS versions:
 
->> <i class="fa-brands fa-ubuntu text-white"></i> Ubuntu 18.04/20.04 or CentOS 7 / Rocky Linux 8 with <code>gcc/++</code> 9.0+
-
->> <i class="fas fa-desktop text-white"></i> Windows 11 using WSL2  **[See separate install guide <i class="fa fa-angle-double-right" aria-hidden="true"></i>](wsl2.html){: target="_blank"}**
-
+>> <i class="fa-brands fa-ubuntu text-white"></i> Ubuntu 18.04/20.04 or CentOS 7 / Rocky Linux 8 with <code>gcc/++</code> 9.0+  <br>
+>> <i class="fas fa-desktop text-white"></i> Windows 11 using WSL2  **[See separate install guide <i class="fa fa-angle-double-right" aria-hidden="true"></i>](wsl2.html){: target="_blank"}** <br>
 >>> <i class="fas fa-chevron-circle-right text-white"></i> In addition, WSL2 pip installations require following **[this guide to install the CUDA Toolkit without drivers.](https://docs.nvidia.com/cuda/wsl-user-guide/index.html#cuda-support-for-wsl2){: target="_blank"}**
 
-> <i class="fas fa-info-circle text-white"></i> **Glibc version:** x86_64 wheels require glibc >= 2.17 and ARM architecture (aarch64) wheels require glibc >= 2.31 (only ARM Server Base System Architecture is supported).
+> <i class="fas fa-microchip text-white"></i> **Architecture:** One of the following Architectures:<br>
+>> <i class="fas fa-chevron-circle-right text-white"></i> x86_64 <br>
+>> <i class="fas fa-chevron-circle-right text-white"></i> **[ARM SBSA](https://developer.arm.com/documentation/102378/0201/Armv8-x-A-and-the-SBSA){: target="_blank"}**.  Jetson support coming soon!
+
+> <i class="fas fa-info-circle text-white"></i> **Glibc version:**  <br>
+>> <i class="fas fa-chevron-circle-right text-white"></i> x86_64: glibc >= 2.17 <br>
+>> <i class="fas fa-chevron-circle-right text-white"></i> ARM SBSA (aarch64): glibc >= 2.31
 
 > <i class="fas fa-microchip text-white"></i> **GPU:** Only GPUs with **[Compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 6.0 or higher (i.e. Pascal generation or newer) are supported.
 
@@ -54,6 +58,7 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 
 > <i class="fab fa-python text-white"></i> **Python and pip version:** Python 3.8 or 3.9 using pip 20.3+ with **[PEP600 support](https://peps.python.org/pep-0600/){: target="_blank"}**.
 
+<br>
 ## <i class="far fa-comments text-white"></i> Connect
 
 > Join our community conversations about RAPIDS and pip using **[Twitter](https://twitter.com/rapidsai){: target="_blank"}**, **[Slack]({{ site.slack_invite }}){: target="_blank"}**, or ask a question on **[StackOverflow](https://stackoverflow.com/tags/rapids){: target="_blank"}**.
@@ -75,12 +80,12 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 	pip install cuml-cu11 --extra-index-url=https://pypi.ngc.nvidia.com
 	pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com
 
-> <i class="fas fa-info-circle text-white"></i> The RAPIDS pip packages are hosted on the NVIDIA NGC index today.
-
-> <i class="fas fa-info-circle text-white"></i> On ARM architecture (aarch64), cupy needs to be installed separately:
+> <i class="fas fa-info-circle text-white"></i> The RAPIDS pip packages are hosted on the NVIDIA NGC index today.  <br>
+> <i class="fas fa-info-circle text-white"></i> On ARM SBSA, install cupy separately using this command:
 
 	pip install cupy-cuda11x -f https://pip.cupy.dev/aarch64
 
+<br>
 ## <i class="fa-solid fa-screwdriver-wrench text-white"></i> Troubleshooting and Known Issues
 
 > <i class="fas fa-info-circle text-white"></i> When installing these packages with CUDA 11.2, 11.3, or 11.4, you may experience a "Failed to import CuPy" error. To resolve this error, please uninstall cupy-cuda115 and install cupy-cuda11x:
@@ -94,16 +99,13 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 
 > Check the suggestions below for possible resolutions.
 
-> <i class="fas fa-chevron-circle-right text-white"></i> Your Python version must be 3.8 or 3.9.
-
+> <i class="fas fa-chevron-circle-right text-white"></i> Your Python version must be 3.8 or 3.9. <br>
 > <i class="fas fa-chevron-circle-right text-white"></i> RAPIDS pip packages require a recent version of pip that **[supports PEP600](https://peps.python.org/pep-0600/){: target="_blank"}**.  Some users may need to update pip:
 
 	pip install -U pip
 
-> <i class="fas fa-chevron-circle-right text-white"></i> Infiniband is not supported yet in this release
-
-> <i class="fas fa-chevron-circle-right text-white"></i> These packages are not compatible with Tensorflow pip packages. Please use the <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/containers/tensorflow">NGC containers</a> or conda packages instead.
-
+> <i class="fas fa-chevron-circle-right text-white"></i> Infiniband is not supported yet in this release <br>
+> <i class="fas fa-chevron-circle-right text-white"></i> These packages are not compatible with Tensorflow pip packages. Please use the <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/containers/tensorflow">NGC containers</a> or conda packages instead. <br>
 > <i class="fas fa-chevron-circle-right text-white"></i> Dask / Jupyter / Tornado 6.2 dependency conflicts can occur. Install jupyter-client 7.3.4 if the error below occurs:
 
       ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
