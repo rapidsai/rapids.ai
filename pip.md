@@ -105,7 +105,7 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 	pip install -U pip
 
 > <i class="fas fa-chevron-circle-right text-white"></i> Infiniband is not supported yet in this release <br>
-> <i class="fas fa-chevron-circle-right text-white"></i> These packages are not compatible with Tensorflow pip packages. Please use the <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/containers/tensorflow">NGC containers</a> or conda packages instead. <br>
+> <i class="fas fa-chevron-circle-right text-white"></i> These packages are not compatible with TensorFlow pip packages. Please use the <a href="https://catalog.ngc.nvidia.com/orgs/nvidia/containers/tensorflow">NGC containers</a> or conda packages instead. <br>
 > <i class="fas fa-chevron-circle-right text-white"></i> Dask / Jupyter / Tornado 6.2 dependency conflicts can occur. Install jupyter-client 7.3.4 if the error below occurs:
 
       ERROR: pip's dependency resolver does not currently take into account all the packages that are installed. This behaviour is the source of the following dependency conflicts.
