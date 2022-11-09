@@ -44,7 +44,7 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 >> <i class="fas fa-desktop text-white"></i> Windows 11 using WSL2  **[See separate install guide <i class="fa fa-angle-double-right" aria-hidden="true"></i>](wsl2.html){: target="_blank"}** <br>
 >>> <i class="fas fa-chevron-circle-right text-white"></i> In addition, WSL2 pip installations require following **[this guide to install the CUDA Toolkit without drivers.](https://docs.nvidia.com/cuda/wsl-user-guide/index.html#cuda-support-for-wsl2){: target="_blank"}**
 
-> <i class="fas fa-microchip text-white"></i> **Architecture:** One of the following Architectures:<br>
+> <i class="fas fa-microchip text-white"></i> **Architecture:** One of the following architectures:<br>
 >> <i class="fas fa-chevron-circle-right text-white"></i> x86_64 <br>
 >> <i class="fas fa-chevron-circle-right text-white"></i> **[ARM SBSA](https://developer.arm.com/documentation/102378/0201/Armv8-x-A-and-the-SBSA){: target="_blank"}**.  Jetson support coming soon!
 
