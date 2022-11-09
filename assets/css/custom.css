@@ -664,28 +664,6 @@ a h2:hover,
     font-weight: bold;
 }
 
-.projects-logo-bsql {
-    position: relative;
-    left: 50%;
-    width: 400px;
-    transform: translate(-50%)
-}
-
-.blazingsql-icon {
-    text-align: center;
-    width: 100%;
-    font-size: 5em;
-    padding-top: 0.2em;
-    color: #9944ff;
-    text-shadow: 1px 1px 2px #521798;
-}
-.image-blazingsql-benefits{
-    position: relative;
-    left: 50%;
-    max-width: 320px;
-    transform: translate(-50%)
-}
-
 /* cloud table */
 
 .cloud-table {
@@ -1446,16 +1424,6 @@ code.tag {
 
     .author-meta {
         padding-left: 0em;
-    }
-
-    /* projects */
-
-    .projects-logo-bsql {
-        position: relative;
-        left: 50%;
-        width: 270px;
-        margin: 2em 0em;
-        transform: translate(-50%)
     }
 
     /* selector */
