@@ -21,8 +21,8 @@ NVIDIA Merlin is an open source library designed to accelerate recommender syste
 {% endcapture %}
 
 {% include section-single.html
-    background="background-white" 
-    padding-top="0em" padding-bottom="0em" 
+    background="background-white"
+    padding-top="0em" padding-bottom="0em"
     content-single=intro_content
 %}
 
@@ -30,18 +30,18 @@ NVIDIA Merlin is an open source library designed to accelerate recommender syste
 ## <i class="fas fa-layer-group"></i> Accelerated ETL
 As the ETL component of the Merlin ecosystem, NVTabular is a feature engineering and preprocessing library for tabular data. It is designed to quickly and easily manipulate terabyte scale datasets that are used to train deep learning based recommender systems. NVTabular uses RAPIDS’ `dask_cudf` to perform GPU-accelerated transformation.
 
-**[Read more about NVTabular’s  features <i class="fas fa-angle-double-right"></i>](https://nvidia.github.io/NVTabular/main/core_features.html){: target="_blank"}**
+**[Read more about NVTabular’s  features <i class="fas fa-angle-double-right"></i>](https://nvidia-merlin.github.io/NVTabular/main/core_features.html){: target="_blank"}**
 
 {% endcapture %}
 {% capture yd_mid %}
 ## <i class="far fa-chart-network"></i> Accelerated Training
-When training deep learning recommender system models, data loading can be a bottleneck. Merlin accelerates the training of deep learning recommender systems using RAPIDS’ cuDF and DaskcuDF to read asynchronous parquet files. This is used to speed-up existing TensorFlow and PyTorch training pipelines **or** used with HugeCTR to train deep learning recommender systems written in CUDA C++. 
+When training deep learning recommender system models, data loading can be a bottleneck. Merlin accelerates the training of deep learning recommender systems using RAPIDS’ cuDF and DaskcuDF to read asynchronous parquet files. This is used to speed-up existing TensorFlow and PyTorch training pipelines **or** used with HugeCTR to train deep learning recommender systems written in CUDA C++.
 
-**[Read more about accelerated training <i class="fas fa-angle-double-right"></i>](https://nvidia.github.io/NVTabular/main/training/index.html){: target="_blank"}**
+**[Read more about accelerated training <i class="fas fa-angle-double-right"></i>](https://nvidia-merlin.github.io/NVTabular/main/training/index.html){: target="_blank"}**
 
 {% endcapture %}
 {% capture yd_right %}
-## <i class="fal fa-waveform-path"></i> Accelerated Inference 
+## <i class="fal fa-waveform-path"></i> Accelerated Inference
 NVTabular and HugeCTR both support the Triton Inference Server to provide GPU-accelerated inference. The Triton Inference Server simplifies the deployment of AI models to production at scale. It is an inference serving software that is open source and lets teams deploy trained AI models from any framework. The NVTabular ETL workflow and trained deep learning models can be easily deployed to production with only a few steps.
 
 **[Read more about inference from examples <i class="fas fa-angle-double-right"></i>](https://github.com/NVIDIA/NVTabular/tree/main/examples/inference_triton){: target="_blank"}**
@@ -49,9 +49,9 @@ NVTabular and HugeCTR both support the Triton Inference Server to provide GPU-ac
 
 {% endcapture %}
 
-{% include section-thirds.html 
-    background="background-white" 
-    padding-top="0em" padding-bottom="10em" 
+{% include section-thirds.html
+    background="background-white"
+    padding-top="0em" padding-bottom="10em"
     content-left-third=yd_left
     content-middle-third=yd_mid
     content-right-third=yd_right
@@ -66,7 +66,7 @@ NVTabular and HugeCTR both support the Triton Inference Server to provide GPU-ac
 It is easy to get started with Merlin. There are many examples and blog posts to reference.
 
 ## <i class="fas fa-bolt"></i> Try Now Online
-Try on Kaggle with: 
+Try on Kaggle with:
 <br>
 **[GPU-accelerated ETL with NVTabular <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://www.kaggle.com/benediktschifferer/faster-etl-for-tabular-data){: target="_blank"}**
 <br>
@@ -77,7 +77,7 @@ Try on Kaggle with:
 {% capture start_right %}
 ## <i class="far fa-bookmark"></i> Try Our Notebook Examples
 {: .section-subtitle-top-1}
-NVTabular and HugeCTR both provide a collection of examples based on a variety of recommender system datasets that are publicly available. Checkout the **[NVTabular notebooks](https://github.com/NVIDIA/NVTabular/tree/main/examples){: target="_blank"}** and **[HugeCTR notebooks](https://github.com/NVIDIA/HugeCTR/tree/master/notebooks){: target="_blank"}**. 
+NVTabular and HugeCTR both provide a collection of examples based on a variety of recommender system datasets that are publicly available. Checkout the **[NVTabular notebooks](https://github.com/NVIDIA/NVTabular/tree/main/examples){: target="_blank"}** and **[HugeCTR notebooks](https://github.com/NVIDIA/HugeCTR/tree/master/notebooks){: target="_blank"}**.
 
 ## <i class="fab fa-docker"></i> Pull Our Docker Container
 Merlin published docker containers with pre-installed versions of the latest release on **[NVIDIA's NGC repository](https://ngc.nvidia.com/catalog/containers?orderBy=modifiedDESC&pageNumber=0&query=%20label%3A%22Merlin%22&quickFilter=containers&filters=){: target="_blank"}**. Pull the container and try out Merlin yourself.
@@ -90,17 +90,17 @@ Access our current installations, guides, and tutorials in latest documentations
 Learn more about recommender systems and Merlin on our **[Blog](https://medium.com/nvidia-merlin){: target="_blank"}**.
 
 {% endcapture %}
-{% include slopecap.html 
-    background="background-gray" 
-    position="top" 
-    slope="up" 
+{% include slopecap.html
+    background="background-gray"
+    position="top"
+    slope="up"
 %}
-{% include section-halfs.html 
-    background="background-gray" 
-    padding-top="10em" padding-bottom="5em" 
-    content-left-half=start_left 
-    content-right-half=start_right 
-%} 
+{% include section-halfs.html
+    background="background-gray"
+    padding-top="10em" padding-bottom="5em"
+    content-left-half=start_left
+    content-right-half=start_right
+%}
 
 
 {% capture nv_l %}
@@ -124,8 +124,8 @@ MLPerf is a consortium of AI leaders from academia, research labs, and industry 
 {% endcapture %}
 
 {% include section-halfs.html
-    background="background-gray" 
-    padding-top="3em" padding-bottom="10em" 
+    background="background-gray"
+    padding-top="3em" padding-bottom="10em"
     content-left-half=nv_l
     content-right-half=nv_r
 %}
@@ -135,17 +135,17 @@ MLPerf is a consortium of AI leaders from academia, research labs, and industry 
 {: .section-title-full .text-white}
 
 {% endcapture %}
-{% include slopecap.html 
-    background="background-darkpurple" 
-    position="top" 
-    slope="down" 
+{% include slopecap.html
+    background="background-darkpurple"
+    position="top"
+    slope="down"
 %}
 {% include section-single.html
-    background="background-darkpurple" 
-    padding-top="3em" padding-bottom="0em" 
+    background="background-darkpurple"
+    padding-top="3em" padding-bottom="0em"
     content-single=end_bottom
 %}
 
-{% include cta-footer-merlin.html 
-   background="background-darkpurple" 
+{% include cta-footer-merlin.html
+   background="background-darkpurple"
 %}
