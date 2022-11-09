@@ -84,12 +84,6 @@ Jump right into a GPU powered RAPIDS notebook, online, with **[SageMaker Studio 
 
 Modeled after 10 Minutes to Pandas, this is a short introduction to cuDF that is geared mainly for new users. <br> **[Go to guide <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://docs.rapids.ai/api/cudf/stable/user_guide/10min.html){: target="_blank"}**
 
-## <i class="far fa-bookmark"></i> Multi-GPU with Dask-cuDF
-{: .section-subtitle-top-1}
-
-A short introduction to multi-GPU solutions with a distributed DataFrame via Dask-cuDF. <br> **[Go to guide <i class="fas fa-angle-double-right"></i>](https://docs.rapids.ai/api/cudf/stable/basics/dask-cudf.html){: target="_blank"}**
-
-
 ## <i class="far fa-bookmark"></i> Example Notebooks
 {: .section-subtitle-top-1}
 
