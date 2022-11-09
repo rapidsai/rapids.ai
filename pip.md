@@ -48,7 +48,7 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 >> <i class="fas fa-chevron-circle-right text-white"></i> x86_64 <br>
 >> <i class="fas fa-chevron-circle-right text-white"></i> **[ARM SBSA](https://developer.arm.com/documentation/102378/0201/Armv8-x-A-and-the-SBSA){: target="_blank"}**.  Jetson support coming soon!
 
-> <i class="fas fa-info-circle text-white"></i> **Glibc version:**  <br>
+> <i class="fas fa-info-circle text-white"></i> **glibc version:**  <br>
 >> <i class="fas fa-chevron-circle-right text-white"></i> x86_64: glibc >= 2.17 <br>
 >> <i class="fas fa-chevron-circle-right text-white"></i> ARM SBSA (aarch64): glibc >= 2.31
 
