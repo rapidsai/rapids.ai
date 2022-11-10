@@ -44,7 +44,7 @@ When training deep learning recommender system models, data loading can be a bot
 ## <i class="fal fa-waveform-path"></i> Accelerated Inference
 NVTabular and HugeCTR both support the Triton Inference Server to provide GPU-accelerated inference. The Triton Inference Server simplifies the deployment of AI models to production at scale. It is an inference serving software that is open source and lets teams deploy trained AI models from any framework. The NVTabular ETL workflow and trained deep learning models can be easily deployed to production with only a few steps.
 
-**[Read more about inference from examples <i class="fas fa-angle-double-right"></i>](https://github.com/NVIDIA/NVTabular/tree/main/examples/inference_triton){: target="_blank"}**
+**[Read more about inference from examples <i class="fas fa-angle-double-right"></i>](https://github.com/NVIDIA-Merlin/Merlin/tree/main/examples/getting-started-movielens){: target="_blank"}**
 
 
 {% endcapture %}
