@@ -1,0 +1,709 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<!-- REQUIRED FOR EVERY PAGE -->
+
+<head>
+  <meta charset="utf-8">
+  <title>RAPIDS.ai | GPU accelerated data science</title>
+  <meta name="description" content="RAPIDS.ai | GPU accelerated data science">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="RAPIDS.ai | GPU accelerated data science">
+  <meta property="og:description" content="Open source GPU accelerated data science libraries">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rapids.ai/">
+  <meta property="og:image" content="images/RAPIDS-logo-white.png">
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="https://rapids.ai/" />
+  <meta name="twitter:title" content="RAPIDS.ai | GPU accelerated data science" />
+  <meta name="twitter:description" content="Open source GPU accelerated data science libraries" />
+  <meta name="twitter:image" content="images/RAPIDS-logo-white.png" />
+
+  <link rel="apple-touch-icon" href="images/icons/icon-512x512.png">
+
+  <link rel="manifest" href="manifest.json">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <meta name="theme-color" content="#fafafa">
+
+  <script src="https://kit.fontawesome.com/1690513e32.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js" integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+
+<body>
+  <!-- Inserts nav.html template -->
+  <nav x-data="{ nav: '' }" x-init="
+    fetch('includes/nav.html')
+    .then(data => { 
+      if (data.ok) {
+        return data.text()
+      }
+      nav = '' // load blank
+      throw new Error('Failed to load header.html')
+    })
+    .then(data => {nav = data})
+    .catch(error => {console.error(error)})">
+    <nav x-html="nav"></nav>
+  </nav>
+
+  <!-- Hero Header-->
+  <section class="hero is-medium hero-rapids-bg mb-5">
+    <div class="hero-body has-text-centered">
+      <img class="hero-img" src="images/rapids-logo-whitetxt.svg">
+      <p class="title has-text-white">
+        Open Source GPU Data Science
+      </p>
+      <button class="button-rapids-teal"><a href="#">Get Started</a></button>
+    </div>
+    <div class="top-slant-container">
+      <div class="top-slant-up has-background-white"></div>
+    </div>
+  </section>
+
+ <!-- Announcements -->
+  <section class="hero-announce-container">
+          <a href="#" class="hero-announce"><span class="announce-icon"><i class="fa-regular fa-bell"></i></span> <button class="button-rapids-purple"> RAPIDS 11.22 release is live!</button></a>
+          <a href="#" class="hero-announce"><span class="announce-icon"><i class="fa-regular fa-bell"></i></span> <button class="button-rapids-purple"> EOL for CUDA 11.0 in v22.10</button></a>
+  </section>
+
+
+  <!-- Intro -->
+  <section class="section padding-bottom-slant">
+    <div class="container">
+      
+      <h1 class="has-text-centered mb-5">GPU accelerated data science</h1>
+      <div class="columns">
+        <div class="column is-one-third">
+          <h2><i class="fa-light fa-square-code"></i> What is RAPIDS </h2>
+          <p> NVIDIA GPU based data science libraries in such as cuDF (similar to Pandas), cuML (similar to
+            scikit-learn), and cuGraph (similar to networkX). Learn more about our 14+ libraries and more about
+            hardware-software requirements. </p>
+        </div>
+        <div class="column is-one-third">
+          <h2><i class="fa-light fa-square-code"></i> Why Use RAPIDS</h2>
+          <p> Spend less time training and moving data, more time optimizing and working. 20x - 100billion X performance
+            increase over CPU with TCOs up to 7x. RAPIDS enables End to end GPU data science, with familiar APIs and
+            libraries that seamlessly work together. Use RAPIDS with a local desktop, in the cloud, or scale out on
+            large clusters. Learn more about RAPIDS acceleration. </p>
+        </div>
+        <div class="column is-one-third">
+          <h2><i class="fa-light fa-square-code"></i> Open Source </h2>
+          <p>RAPIDS is an open source project, with our repositories freely available on GitHub. Being open source
+            enables a whole ecosystem of contributors, adopters, and integrators using RAPIDS to build their own
+            projects. Find out more in our ecosystems page, what RAPID enables, and what it can do for your project with
+            our example use cases. </p>
+        </div>
+      </div>
+
+      <div class="columns mt-5">
+        <div class="column is-one-third">
+          <h2><i class="fa-light fa-square-code"></i> Pandas to cuDF</h2>
+          cuDF is nearly a drop in replacement to Pandas for most use cases yet has greatly improved performance.
+
+          <canvas id="cuDFchart" width="400" height="200"></canvas>
+
+        </div>
+        <div class="column is-one-third">
+          <h2><i class="fa-light fa-square-code"></i> scikit-learn to cuML </h2>
+          cuML is nearly a drop in replacement to scikit-learn for most use cases yet has greatly improved performance.
+
+          <canvas id="cuMLchart" width="400" height="200"></canvas>
+
+        </div>
+        <div class="column is-one-third">
+          <h2><i class="fa-light fa-square-code"></i> NetworkX to cuGraph </h2>
+          cuGraph is nearly a drop in replacement to networkX for most use cases yet has greatly improved performance.
+
+          <canvas id="cuGraphChart" width="400" height="200"></canvas>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="top-slant-container">
+    <div class="top-slant-down has-background-rapids-gray"></div>
+  </div>
+
+
+  <!-- Get Started -->
+  <section class="section has-background-rapids-gray padding-bottom-slant">
+    <div class="container">
+      <h1 class="mb-5">Quick Start</h1>
+      <div class="columns">
+        <div class="column is-half">
+          <h2><i class="fa-light fa-square-code"></i> Quick Local Install </h2>
+          <p>RAPIDS offers several installation methods, the quickest is shown below.</p>
+
+          <h3 class="mt-5">Requirements</h3>
+          <p><strong>A.</strong> Compatible NVIDIA GPUs</p>
+          <p><strong>B.</strong> Ubuntu 18.04/20.04, CentOS, Rocky Linux 8 or via WSL2 on Windows 11.</p>
+          <p><strong>C.</strong> The latest CUDA and NVIDIA drivers. Check yours with: <code>nvidia-smi</code>
+
+          <h3 class="mt-6">Install with Conda</h3>
+          <p><strong>1.</strong> Download and run the conda install script: </p>
+          <pre class="highlight"><code>wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
+          <br>
+          <p><strong>2.</strong> Then quick install rapids with:</p>
+          <pre class="highlight"><code>conda create -n rapids-22.08 -c rapidsai -c nvidia -c conda-forge  \
+             rapids=22.08 python=3.9 cudatoolkit=11.5</code></pre>
+
+          <h3 class="mt-6">Install with PIP</h3>
+          <p><strong>1.</strong> Install via pip channels:</p>
+          <pre class="highlight"><code>pip install cudf-cu11 dask-cudf-cu11 --extra-index-url=https://pypi.ngc.nvidia.com
+pip install cuml-cu11 --extra-index-url=https://pypi.ngc.nvidia.com
+pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></pre>
+
+          <h3 class="mt-6">Install with Docker</h3>
+          <p><strong>1.</strong> Docker has several unique configuration options, jump to the installation selector for
+            directions.</p>
+
+        </div>
+        <div class="column is-half">
+          <h2><i class="fa-light fa-square-code"></i> Try Online </h2>
+          <p>Try out RAPIDS with cloud based hardware from one of these featured channels. </p>
+          <br>
+          <h3>Amazon Sagemaker Studio Lab</h3>
+          <p>Enables notebook based environments in a free trial - account required.</p>
+          <br>
+          <h3>PaperSpace</h3>
+          <p>Use Quick Start Instances</p>
+          <br>
+          <h3>NVIDIA LaunchPad</h3>
+          <p>Free short term use to try and learn with hands-on labs.</p>
+
+          <h2 class="mt-6"><i class="fa-light fa-square-code"></i> Do I need an Advanced Install?</h2>
+          <p> If you have an uncommon OS, hardware configuration, environment, or need specific versioning such as
+            <code>CUDA
+            11.5</code> or <code>Python 3.7</code> then you should use the installation selector in our advanced
+            installations page.</p>
+          <br>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Guides -->
+  <div class="top-slant-container">
+    <div class="top-slant-up has-background-rapids-purple-primary"></div>
+  </div>
+
+  <section class="section padding-bottom-slant padding-top-slant has-background-rapids-purple-primary">
+    <div class="container">
+      <h1 class="has-text-white mb-5">Guides and Tutorials</h1>
+      <div class="columns">
+        <div class="column is-half">
+          <h2 class="has-text-white"><i class="fa-light fa-square-code"></i> First Time Users </h2>
+          <p class="has-text-white"> Description of notebook goes here with link <a href="#">Try Out Now <i
+                class="fa-solid fa-arrow-up-right"></i> </a> </p>
+          <br>
+
+          <h2 class="has-text-white"><i class="fa-light fa-square-code"></i> Example Notebook </h2>
+          <p class="has-text-white"> Description of notebook goes here with link <a href="#">Try Out Now <i
+                class="fa-solid fa-arrow-up-right"></i> </a> </p>
+          <br>
+
+          <h2 class="has-text-white"><i class="fa-light fa-square-code"></i> Example Notebook </h2>
+          <p class="has-text-white"> Description of notebook goes here with link <a href="#">Try Out Now <i
+                class="fa-solid fa-arrow-up-right"></i> </a> </p>
+          <br>
+
+        </div>
+        <div class="column is-half">
+          <h2 class="has-text-white"><i class="fa-light fa-square-code"></i> RAPIDS Libraries </h2>
+          <p class="has-text-white"> Link to Ecosystem page <a href="#">Libraries <i
+                class="fa-solid fa-arrow-up-right"></i> </a> </p>
+          <br>
+
+          <h2 class="has-text-white"><i class="fa-light fa-square-code"></i> RAPIDS Documentation </h2>
+          <p class="has-text-white"> For API information <a href="#"> documentation <i
+                class="fa-solid fa-arrow-up-right"></i> </a> </p>
+          <br>
+
+          <h2 class="has-text-white"><i class="fa-light fa-square-code"></i> Advanced Guides</h2>
+          <p class="has-text-white"> For advanced information <a href="#"> GitHub Links and readmes <i
+                class="fa-solid fa-arrow-up-right"></i>
+            </a> </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="bottom-slant-container">
+    <div class="bottom-slant-down has-background-rapids-purple-primary"></div>
+  </div>
+
+
+  <!-- News -->
+  <section class="section padding-bottom-slant padding-top-slant has-background-rapids-gray">
+
+    <div class="container">
+      <h1 class="mb-5">Latest News</h1>
+      <div class="columns">
+        <div class="column is-one-third">
+          <h2><i class="fa-light fa-square-code"></i> Service Notices </h2>
+          <p> EOL for CUDA 11.0 in v22.10 Learn more in the <a href="#"> New Notice Section <i
+                class="fa-solid fa-arrow-up-right"></i></a> </p>
+        </div>
+        <div class="column is-one-third">
+          <h2><i class="fa-light fa-square-code"></i> Featured Talks </h2>
+          <p> Check out these featured GTC 2022 talks. Find more in the <a href="#"> Talk Section <i
+                class="fa-solid fa-arrow-up-right"></i></a> </p>
+        </div>
+        <div class="column is-one-third">
+          <h2><i class="fa-light fa-square-code"></i> Featured Post </h2>
+          <p>Long lasting post. Find more in the <a href="#"> Posts Section <i
+                class="fa-solid fa-arrow-up-right"></i></a> </p>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Posts -->
+    <div x-data="{ posts: '' }" x-init="
+      fetch('https://rapidsai.github.io/site-data/posts.json')
+      .then(json => { 
+        if (json.ok) {
+            return json.json()
+        }
+        posts = '' // load blank
+        throw new Error('Failed to load posts.json')
+      })
+      .then(json => {
+        posts = json.medium.slice(0,3)
+      })
+      .catch(error => {console.error(error)})">
+
+      <div class="container mt-5">
+        <h2><i class="fa-light fa-square-code"></i> Latest Tweets </h2>
+        <div class="columns">
+          <template x-for="article in posts">
+            <div class="column is-one-third">
+              <a x-bind:href="article.mediumLink" target="_blank">
+                <h3><i class="fa-regular fa-bookmark"></i> <span x-text="article.title"></span></h3>
+              </a>
+              <p class="post-text">
+                <i class="fa-sharp fa-solid fa-quote-left"></i> <span x-text="article.text"></span> <i
+                  class="fa-sharp fa-solid fa-quote-right"></i>
+                <span class="post-action"> - Post by <span x-text="article.poster"></span> </span>
+              </p>
+            </div>
+          </template>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Tweets -->
+    <div x-data="{ posts: '' }" x-init="
+      fetch('https://rapidsai.github.io/site-data/posts.json')
+      .then(json => { 
+        if (json.ok) {
+            return json.json()
+        }
+        posts = '' // load blank
+        throw new Error('Failed to load posts.json')
+      })
+      .then(json => {
+        posts = json.twitter.slice(0,3)
+      })
+      .catch(error => {console.error(error)})">
+
+      <div class="container mt-5">
+        <h2><i class="fa-light fa-square-code"></i> Latest Posts </h2>
+        <div class="columns">
+          <template x-for="tweets in posts">
+            <div class="column is-one-third">
+              <a x-bind:href="tweets.link" target="_blank">
+                <h3><i class="fab fa-twitter"></i> <span x-text="tweets.name"></span></h3>
+              </a>
+              <p class="post-text">
+                <i class="fa-sharp fa-solid fa-quote-left"></i> <span x-text="tweets.text"></span> <i
+                  class="fa-sharp fa-solid fa-quote-right"></i>
+                <span class="post-action"> - Tweet by <a href="https://twitter.com/rapidsai"
+                    target="_blank">@rapidsai</a> </span>
+              </p>
+            </div>
+          </template>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="top-slant-container">
+    <div class="top-slant-up has-background-white"></div>
+  </div>
+
+  <!-- Ecosystem-->
+  <section class="section">
+    <div class="container">
+      <h1 class="mb-5">Ecosystem</h1>
+      <div class="columns">
+        <div class="column is-half">
+          <h2><i class="fa-light fa-square-code"></i> Core RAPIDS Projects </h2>
+          <p>Find out details on the core RAPIDS projects like cuDF, cuML, cuGraph, and more on our Ecosystem page. Or jump to our GitHub page or documentation for specific details <a href="#"> See RAPIDS Projects <i class="fa-solid fa-arrow-up-right"></i></a> </p>
+        </div>
+        <div class="column is-half">
+          <h2><i class="fa-light fa-square-code"></i> Built with RAPIDS </h2>
+          <p>See all the projects using RAPIDS and all those that integrate well with RAPIDS in our integrations and projects section <a href="#"> See Projects <i class="fa-solid fa-arrow-up-right"></i></a> </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Logos -->
+  <section class="section">
+
+    <div class="container">
+      <h2><i class="fa-light fa-square-code"></i> Open Source Community </h2>
+      <div class="is-flex is-flex-wrap-wrap is-justify-content-space-between">
+        <div class="img-w100">
+          <a href="https://arrow.apache.org/" target="_blank"> <img src="images/apache-arrow_Color.png"
+              alt="Apache Arrow"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://dask.org/" target="_blank"> <img src="images/dask_logo.png" alt="Dask"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://nuclio.io" target="_blank"> <img src="images/nuclio-logo.png" alt="nuclio"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://numba.pydata.org/" target="_blank"> <img src="images/numba_logo.png" alt="Numba"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://scikit-learn.org/stable/index.html" target="_blank"> <img src="images/scikit-learn_Color.png" alt="scikitlearn"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://xgboost.ai/" target="_blank"> <img src="images/xgboost_logo.png" alt="XGboost"> </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-6">
+      <h2><i class="fa-light fa-square-code"></i> Adopters </h2>
+      <div class="is-flex is-flex-wrap-wrap is-justify-content-space-between">
+        <div class="img-w100">
+          <a href="https://anyscale.com/" target="_blank"> <img src="images/Anyscale-logo.png" alt="anyscale"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://www.boozallen.com" target="_blank"> <img src="images/booz-allen-hamilton-logo.png"
+              alt="booz-allen-hamilton"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://github.com/capitalone" target="_blank"> <img src="images/capital_one_logo.png"
+              alt="capitalOne"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://github.com/databricks" target="_blank"> <img src="images/databricks-logo.png" alt="databricks">
+          </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://www.deepwavedigital.com" target="_blank"> <img src="images/deepwave-digital.png"
+              alt="deepwave-digital"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://github.com/graphistry" target="_blank"> <img src="images/graphistry.png" alt="graphistry"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://github.com/h2oai" target="_blank"> <img src="images/gpu-ventures-h2o-ai-logo.png" alt="h20ai">
+          </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://ibm.github.io/" target="_blank"> <img src="images/ibm-logo.png" alt="ibm"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://www.iguazio.com/docs/" target="_blank"> <img src="images/iguazio_logo.png" alt="iguzaio"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://github.com/INRIA" target="_blank"> <img src="images/inria-logo.png" alt="inria"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://github.com/kineticadb" target="_blank"> <img src="images/kinetica_logo.png" alt="kinetica">
+          </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://paperspace.com" target="_blank"> <img src="images/paperspace.png" alt="paperspace"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://plotly.com/dash/" target="_blank"> <img src="images/Plotly_Dash_logo.png" alt="plotly dash">
+          </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://www.preferred-networks.jp/en/" target="_blank"> <img src="images/PFN-logo.png"
+              alt="preferred-networks"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://pytorch.org/" target="_blank"> <img src="images/PyTorch_logo.png" alt="pytorch"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://ray.io/" target="_blank"> <img src="images/ray-logo.png" alt="ray"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://www.saturncloud.io" target="_blank"> <img src="images/saturn-cloud-logo.png"
+              alt="saturn-cloud"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://github.com/uber" target="_blank"> <img src="images/uber_logo_2018.png" alt="uber"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://ursalabs.org/" target="_blank"> <img src="images/ursa_logo.png" alt="ursa"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://corporate.walmart.com/tech" target="_blank"> <img src="images/Walmart-logo.png" alt="walmart">
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container mt-6">
+      <h2><i class="fa-light fa-square-code"></i> Contributors </h2>
+      <div class="is-flex is-flex-wrap-wrap is-justify-content-space-between">
+        <div class="img-w100">
+          <a href="https://www.anaconda.com/anaconda-community/" target="_blank"> <img src="images/anaconda.png" alt="anaconda"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://github.com/capitalone" target="_blank"> <img src="images/capital_one_logo.png" alt="capitalOne"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://github.com/chainer" target="_blank"> <img src="images/Chainer-logo.png" alt="chainer"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://cupy.chainer.org/" target="_blank"> <img src="images/cupy-logo.png" alt="cuPY"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://github.com/deepwavedigital" target="_blank"> <img src="images/deepwave-digital.png" alt="deepwave-digital"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://gunrock.github.io/docs/" target="_blank"> <img src="images/Gunrock_Color.png" alt="gunrock">
+          </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://developer.nvidia.com/open-source" target="_blank"> <img src="images/nvidia-logo-vert.png" alt="nvidia"> </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://github.com/quansight-labs" target="_blank"> <img src="images/quansight.png" alt="quantsight">
+          </a>
+        </div>
+        <div class="img-w100">
+          <a href="https://corporate.walmart.com/tech" target="_blank"> <img src="images/Walmart-logo.png" alt="walmart">
+          </a>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="bottom-slant-container">
+    <div class="bottom-slant-down has-background-white"></div>
+  </div>
+
+<!-- Learn More CTA -->
+<section class="section has-background-rapids-gray padding-top-slant padding-bottom-slant">
+
+  <div class="container">
+    <h1 class="mb-5">Learn More</h1>
+    <div class="columns">
+      <div class="column is-one-third">
+        <h2><i class="fa-light fa-square-code"></i> About RAPIDS</h2>
+        <p> Learn more about the history and goals of RAPIDS starting with Apache Arrow, GoAi, and its relationship with NVIDIA. </p>
+      </div>
+      <div class="column is-one-third">
+        <h2><i class="fa-light fa-square-code"></i> How to Connect</h2>
+        <p> Find business and enterprise connection resources, community resources, and guides for RAPIDS evangelism. </p>
+      </div>
+      <div class="column is-one-third">
+        <h2><i class="fa-light fa-square-code"></i> Industry Use Cases </h2>
+        <p>Hear about success stories, resources for integrating with RAPIDS and deployment strategies. </p>
+      </div>
+    </div>
+  </div>
+
+  </section>
+
+  <!-- Inserts footer.html template -->
+  <div x-data="{ footer: '' }" x-init="
+    fetch('includes/footer.html')
+    .then(data => { 
+      if (data.ok) {
+        return data.text()
+      }
+      footer = '' // load blank
+      throw new Error('Failed to load footer.html')
+    })
+    .then(data => {footer = data})
+    .catch(error => {console.error(error)})">
+    <footer x-html="footer"></footer>
+  </div>
+
+  <!-- Global JS -->
+  <script src="js/main.js"></script>
+
+  <!-- Chart.js perf charts -->
+  <script>
+    const ctx = document.getElementById('cuDFchart');
+    const cuDFchart = new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['pandas', 'cuDF'],
+            datasets: [{
+                label: 'Performance i7 6700 cpu vs single GPU V100',
+                data: [100, 10],
+                backgroundColor: [
+                    'rgb(6, 152, 255, 0.60)',
+                    'rgb(115, 6, 255, .60)'
+                ]
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                      display: false,
+                      borderWidth: 0
+                    }
+                },
+                x: {
+                  grid: {
+                    display: false,
+                    drawTicks: false,
+                    borderWidth: 2
+                  }
+                }
+            },
+            plugins: {
+              legend: {
+                display: false
+              },
+              title: {
+                display: true,
+                text: 'Pandas vs cuDF Performance'
+              }
+            },
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 20,
+                    bottom: 20
+                }
+            }
+        }
+    });
+
+    const ctx2 = document.getElementById('cuMLchart');
+    const cuMLchart = new Chart(ctx2, {
+        type: 'bar',
+        data: {
+            labels: ['scikit-learn', 'cuML'],
+            datasets: [{
+                label: 'Performance i7 6700 cpu vs single GPU V100',
+                data: [150, 10],
+                backgroundColor: [
+                    'rgb(6, 152, 255, 0.60)',
+                    'rgb(115, 6, 255, .60)'
+                ]
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                      display: false,
+                      borderWidth: 0
+                    }
+                },
+                x: {
+                  grid: {
+                    display: false,
+                    drawTicks: false,
+                    borderWidth: 2
+                  }
+                }
+            },
+            plugins: {
+              legend: {
+                display: false
+              },
+              title: {
+                display: true,
+                text: 'scikit-learn vs cuML Performance'
+              }
+            },
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 20,
+                    bottom: 20
+                }
+            }
+        }
+    });
+
+    const ctx3 = document.getElementById('cuGraphChart');
+    const cuGraphChart = new Chart(ctx3, {
+        type: 'bar',
+        data: {
+            labels: ['networkx', 'cuGraph'],
+            datasets: [{
+                label: 'Performance i7 6700 cpu vs single GPU V100',
+                data: [300, 10],
+                backgroundColor: [
+                    'rgb(6, 152, 255, 0.60)',
+                    'rgb(115, 6, 255, .60)'
+                ]
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    beginAtZero: true,
+                    grid: {
+                      display: false,
+                      borderWidth: 0
+                    }
+                },
+                x: {
+                  grid: {
+                    display: false,
+                    drawTicks: false,
+                    borderWidth: 2
+                  }
+                }
+            },
+            plugins: {
+              legend: {
+                display: false
+              },
+              title: {
+                display: true,
+                text: 'networkx vs cuGraph Performance'
+              }
+            },
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 20,
+                    bottom: 20
+                }
+            }
+        }
+    });
+  </script>
+
+</body>
+
+</html>
