@@ -78,6 +78,7 @@ code {
   background-color: #efefef;
 }
 
+/* Note: copy-button class applied by js */
 .copy-button {
   position: absolute;
   top: -2rem;
@@ -92,6 +93,7 @@ code {
   box-shadow: 0px 3px 2px rgb(0 0 0 / 20%) inset;
 }
 
+/* Note: copy-button-white class applied by js if 'use-white-copy' class present */
 .copy-button-white {
   position: absolute;
   top: -2rem;
@@ -110,7 +112,7 @@ code {
   border-bottom-color: white;
   border-bottom-width: 1px;
   border-bottom-style: outset;
-  line-height: 1.2rem; 
+  line-height: 1.2rem;
 }
 
 .mt-6 {
@@ -163,23 +165,26 @@ code {
 
 
 
-/* /// menu size transitions /// */
+/* /// mobile menu height transitions /// */
 @media screen and (max-width: 1023px) {
   .navbar-menu {
     background-color: #7400ff;
     display: block;
     padding: 0;
     height: 0;
+    margin-left: 1rem;
     transition: height 0.5s ease;
   }
 
   .navbar-menu.is-active {
-    display: block;
     height: 40rem;
-    margin-left: 1rem;
     transition: height 0.5s ease;
   }
-  
+
+  .navbar-link {
+    border-bottom: 1px solid white;
+  }
+
   .navbar.is-fixed-top .navbar-menu,
   .navbar.is-fixed-top-touch .navbar-menu {
     overflow: hidden;
@@ -188,16 +193,39 @@ code {
 
 
 /* /// navbar /// */
+@media screen and (min-width: 1024px) {
+
+  .navbar-item.has-dropdown.is-active .navbar-link,
+  .navbar-item.has-dropdown:focus .navbar-link,
+  .navbar-item.has-dropdown:hover .navbar-link {
+    background-color: inherit;
+  }
+
+  .navbar-dropdown {
+    background-color: rgb(139 47 255);
+    border-top: none;
+    box-shadow: 0 4px 4px rgb(10 10 10 / 20%);
+    display: none;
+  }
+
+}
+
+
 .navbar-link {
   color: white;
- }
+}
 
 .navbar-link:hover {
   background-color: inherit;
   color: #b49fd6 !important;
   transition: color 0.2s ease-out;
- }
+}
 
+.navbar-link:not(.is-arrowless)::after {
+  border-color: white;
+  margin-top: -0.375em;
+  right: 1.125em;
+}
 
 .navbar-item img {
   max-height: 2.5rem;
@@ -307,12 +335,12 @@ button:hover {
   padding-bottom: 7rem;
 }
 
-.hero-announce-container  {
+.hero-announce-container {
   display: flex;
   justify-content: center;
 }
 
-.hero-announce  {
+.hero-announce {
   position: relative;
   font-size: 0.85rem;
   padding-left: 0.5rem;
