@@ -7,7 +7,14 @@ var codeBlocks = document.querySelectorAll('pre.highlight');
 
 codeBlocks.forEach(function (codeBlock) {
   var copyButton = document.createElement('button');
-  copyButton.className = 'copy-button';
+
+  // checks for white style
+  if(codeBlock.classList.contains('use-white-copy')){
+    copyButton.className = 'copy-button-white';
+  } else {
+    copyButton.className = 'copy-button';
+  }
+
   copyButton.type = 'button';
   copyButton.ariaLabel = 'Copy code to clipboard';
   copyButton.innerText = 'Copy';
