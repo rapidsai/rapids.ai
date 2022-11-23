@@ -92,6 +92,20 @@ code {
   box-shadow: 0px 3px 2px rgb(0 0 0 / 20%) inset;
 }
 
+.copy-button-white {
+  position: absolute;
+  top: -2rem;
+  right: 0;
+  border-radius: 0;
+  border-top-left-radius: 0.5rem;
+  border-top-right-radius: 0.5rem;
+  border-width: 2px;
+  border-bottom-width: 0;
+  color: white;
+  border-color: white;
+  box-shadow: 0px 3px 2px rgb(0 0 0 / 20%) inset;
+}
+
 .border-bottom-white {
   border-bottom-color: white;
   border-bottom-width: 1px;
@@ -161,11 +175,11 @@ code {
 
   .navbar-menu.is-active {
     display: block;
-    height: 20rem;
+    height: 40rem;
     margin-left: 1rem;
     transition: height 0.5s ease;
   }
-
+  
   .navbar.is-fixed-top .navbar-menu,
   .navbar.is-fixed-top-touch .navbar-menu {
     overflow: hidden;
@@ -174,14 +188,23 @@ code {
 
 
 /* /// navbar /// */
+.navbar-link {
+  color: white;
+ }
+
+.navbar-link:hover {
+  background-color: inherit;
+  color: #b49fd6 !important;
+  transition: color 0.2s ease-out;
+ }
+
+
 .navbar-item img {
   max-height: 2.5rem;
 }
 
 .navbar-start a.has-text-white:focus,
-.navbar-start a.has-text-white:hover,
-.navbar-end a.has-text-white:focus,
-.navbar-end a.has-text-white:hover {
+.navbar-start a.has-text-white:hover {
   background-color: inherit;
   color: #b49fd6 !important;
   transition: color 0.2s ease-out;
@@ -196,9 +219,6 @@ code {
   padding-right: 0.75rem;
 }
 
-.navbar-item:last-child {
-  padding-right: 2rem;
-}
 
 /* /// footer /// */
 .footer {
