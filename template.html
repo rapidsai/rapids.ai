@@ -2,6 +2,7 @@
 <html class="no-js" lang="">
 
 <!-- REQUIRED FOR EVERY PAGE -->
+
 <head>
   <meta charset="utf-8">
   <title>RAPIDS.ai | GPU accelerated data science</title>
@@ -172,7 +173,8 @@
           <h2><i class="fa-light fa-square-code icon"></i> Code Block</h2>
           <p> Example code:</p>
           <!-- Code samples must use <pre><code> tags together, specific code highlight must be in <span> tags -->
-          <pre class="highlight"><code>git clone https://github.com/rapidsai/notebooks.git git submodule update --init --remote --no-single-branch --depth 1</code></pre>
+          <pre
+            class="highlight"><code>git clone https://github.com/rapidsai/notebooks.git git submodule update --init --remote --no-single-branch --depth 1</code></pre>
         </div>
         <div class="column is-1">
           <h2> 1 Col </h2>
@@ -342,18 +344,18 @@
 
   <!-- Posts -->
   <div x-data="{ posts: '' }" x-init="
-fetch('https://rapidsai.github.io/site-data/posts.json')
-.then(json => { 
-  if (json.ok) {
-      return json.json()
-  }
-  posts = '' // load blank
-  throw new Error('Failed to load posts.json')
-})
-.then(json => {
-  posts = json.medium.slice(0,3)
-})
-.catch(error => {console.error(error)})">
+    fetch('https://rapidsai.github.io/site-data/posts.json')
+    .then(json => { 
+      if (json.ok) {
+          return json.json()
+      }
+      posts = '' // load blank
+      throw new Error('Failed to load posts.json')
+    })
+    .then(json => {
+      posts = json.medium.slice(0,3)
+    })
+    .catch(error => {console.error(error)})">
 
     <section class="section">
       <div class="container">
@@ -362,10 +364,11 @@ fetch('https://rapidsai.github.io/site-data/posts.json')
           <template x-for="article in posts">
             <div class="column is-one-third">
               <a x-bind:href="article.mediumLink" target="_blank">
-                <h3><i class="fa-regular fa-bookmark"></i> <span x-text="article.title"></span></h3> 
+                <h3><i class="fa-regular fa-bookmark"></i> <span x-text="article.title"></span></h3>
               </a>
               <p class="post-text">
-                <i class="fa-sharp fa-solid fa-quote-left"></i> <span x-text="article.text"></span> <i class="fa-sharp fa-solid fa-quote-right"></i>
+                <i class="fa-sharp fa-solid fa-quote-left"></i> <span x-text="article.text"></span> <i
+                  class="fa-sharp fa-solid fa-quote-right"></i>
                 <span class="post-action"> - Post by <span x-text="article.poster"></span> </span>
               </p>
             </div>
@@ -378,20 +381,20 @@ fetch('https://rapidsai.github.io/site-data/posts.json')
 
   <!-- Tweets -->
   <div x-data="{ posts: '' }" x-init="
-fetch('https://rapidsai.github.io/site-data/posts.json')
-.then(json => { 
-  if (json.ok) {
-      return json.json()
-  }
-  posts = '' // load blank
-  throw new Error('Failed to load posts.json')
-})
-.then(json => {
-  posts = json.twitter.slice(0,3)
-})
-.catch(error => {console.error(error)})">
+    fetch('https://rapidsai.github.io/site-data/posts.json')
+    .then(json => { 
+      if (json.ok) {
+          return json.json()
+      }
+      posts = '' // load blank
+      throw new Error('Failed to load posts.json')
+    })
+    .then(json => {
+      posts = json.twitter.slice(0,3)
+    })
+    .catch(error => {console.error(error)})">
 
-    <section class="section">
+    <section class="section mb-6">
       <div class="container">
         <h1>Dynamic Tweets</h1>
         <div class="columns">
@@ -401,9 +404,11 @@ fetch('https://rapidsai.github.io/site-data/posts.json')
                 <h3><i class="fab fa-twitter"></i> <span x-text="tweets.name"></span></h3>
               </a>
               <p class="post-text">
-                <i class="fa-sharp fa-solid fa-quote-left"></i> <span x-text="tweets.text"></span> <i class="fa-sharp fa-solid fa-quote-right"></i>
-                <span class="post-action"> - Tweet by <a href="https://twitter.com/rapidsai" target="_blank">@rapidsai</a> </span>
-              </p>              
+                <i class="fa-sharp fa-solid fa-quote-left"></i> <span x-text="tweets.text"></span> <i
+                  class="fa-sharp fa-solid fa-quote-right"></i>
+                <span class="post-action"> - Tweet by <a href="https://twitter.com/rapidsai"
+                    target="_blank">@rapidsai</a> </span>
+              </p>
             </div>
           </template>
         </div>
@@ -412,39 +417,7 @@ fetch('https://rapidsai.github.io/site-data/posts.json')
 
   </div>
 
-
-  <!-- Inserts contributors.html template -->
-  <div x-data="{ section: '' }" x-init="
-  fetch('includes/contributors.html')
-  .then(data => { 
-    if (data.ok) {
-      return data.text()
-    }
-    section = '' // load blank
-    throw new Error('Failed to load contributors.html')
-  })
-  .then(data => {section = data})
-  .catch(error => {console.error(error)})">
-    <template x-html="section"></template>
-  </div>
-
-
-  <!-- Inserts adopters.html template -->
-  <div x-data="{ section: '' }" x-init="
-  fetch('includes/adopters.html')
-  .then(data => { 
-    if (data.ok) {
-      return data.text()
-    }
-    section = '' // load blank
-    throw new Error('Failed to load adopters.html')
-  })
-  .then(data => {section = data})
-  .catch(error => {console.error(error)})">
-    <template x-html="section"></template>
-  </div>
-
-
+  <section class="padding-bottom-slant"> 
   <!-- Inserts open-source.html template -->
   <div x-data="{ section: '' }" x-init="
     fetch('includes/open-source.html')
@@ -457,9 +430,25 @@ fetch('https://rapidsai.github.io/site-data/posts.json')
     })
     .then(data => {section = data})
     .catch(error => {console.error(error)})">
-    <template x-html="section"></template>
+    <div x-html="section"></div>
   </div>
 
+  <!-- Inserts adopters-contributors.html template -->
+  <div x-data="{ section: '' }" x-init="
+    fetch('includes/adopters-contributors.html')
+    .then(data => { 
+      if (data.ok) {
+        return data.text()
+      }
+      section = '' // load blank
+      throw new Error('Failed to load adopters-contributors.html')
+    })
+    .then(data => {section = data})
+    .catch(error => {console.error(error)})">
+    <div x-html="section"></div>
+  </div>
+
+  </section>
 
   <!-- Inserts footer.html template -->
   <div x-data="{footer: '' }" x-init="

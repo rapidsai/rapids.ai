@@ -18,13 +18,11 @@ a {
   color: #37c9dd;
   cursor: pointer;
   font-weight: 700;
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
   transition: all 0.4s ease-out;
 }
 
 a:hover {
-  color: #30acbc;
-  text-shadow: none;
+  color: #409da9;
   transition: all 0.4s ease-out;
 }
 
@@ -65,7 +63,7 @@ pre {
   position: relative;
   background-color: #efefef;
   padding: 1em;
-  border-top: 2px solid #720dff;
+  border-top: 2px solid #dedede;
   word-break: break-word;
   white-space: pre-wrap;
   margin-right: 1rem;
@@ -76,6 +74,16 @@ pre {
 code {
   color: #151515;
   background-color: #efefef;
+}
+
+a button {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease-out;
+}
+
+a button:hover{
+  text-shadow: none;
+  transition: all 0.4s ease-out;
 }
 
 /* Note: copy-button class applied by js */
@@ -90,7 +98,7 @@ code {
   border-bottom-width: 0;
   color: #720dff;
   border-color: #720dff;
-  box-shadow: 0px 3px 2px rgb(0 0 0 / 20%) inset;
+  box-shadow: 0px 3px 2px rgb(0 0 0 / 30%) inset;
 }
 
 /* Note: copy-button-white class applied by js if 'use-white-copy' class present */
@@ -105,7 +113,7 @@ code {
   border-bottom-width: 0;
   color: white;
   border-color: white;
-  box-shadow: 0px 3px 2px rgb(0 0 0 / 20%) inset;
+  box-shadow: 0px 3px 2px rgb(0 0 0 / 30%) inset;
 }
 
 .border-bottom-white {
