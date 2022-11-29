@@ -81,9 +81,61 @@ a button {
   transition: all 0.4s ease-out;
 }
 
-a button:hover{
+a button:hover {
   text-shadow: none;
   transition: all 0.4s ease-out;
+}
+
+/* /// button style /// */
+button {
+  background-color: transparent;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: calc(0.5em - 1px);
+  text-align: center;
+  white-space: nowrap;
+  border-style: solid;
+  border-color: #dbdbdb;
+  color: white;
+  border-width: 3px;
+  border-radius: 0.5rem;
+  border-top-right-radius: 0;
+  font-weight: 600;
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+  transition: all 0.55s ease-out;
+
+  /* spent too much time on this */
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.05),
+    0 3px 5px rgba(0, 0, 0, 0.07),
+    0 6px 10px rgba(0, 0, 0, 0.1),
+    0 3px 5px rgba(0, 0, 0, 0.2) inset;
+}
+
+button:hover {
+  text-shadow: none;
+  box-shadow: none;
+  transition: all 0.35s ease-out;
+}
+
+.button-rapids-white {
+  color: white;
+  border-color: white;
+}
+
+.button-rapids-purple {
+  color: #7400ff;
+  border-color: #7400ff;
+}
+
+.button-rapids-teal {
+  color: #1ebdd2;
+  border-color: #1ebdd2;
 }
 
 /* Note: copy-button class applied by js */
@@ -115,62 +167,6 @@ a button:hover{
   border-color: white;
   box-shadow: 0px 3px 2px rgb(0 0 0 / 30%) inset;
 }
-
-.border-bottom-white {
-  border-bottom-color: white;
-  border-bottom-width: 1px;
-  border-bottom-style: outset;
-  line-height: 1.2rem;
-}
-
-.mt-6 {
-  margin-top: 2.5rem !important;
-}
-
-.mb-6 {
-  margin-bottom: 2.5rem !important;
-}
-
-.mt-7 {
-  margin-top: 3.5rem !important;
-}
-
-.mb-7 {
-  margin-bottom: 3.5rem !important;
-}
-
-.mt-8 {
-  margin-top: 4.5rem !important;
-}
-
-.mb-8 {
-  margin-bottom: 4.5rem !important;
-}
-
-.pt-6 {
-  padding-top: 2.5rem !important;
-}
-
-.pb-6 {
-  padding-bottom: 2.5rem !important;
-}
-
-.pt-7 {
-  padding-top: 3.5rem !important;
-}
-
-.pb-7 {
-  padding-bottom: 3.5rem !important;
-}
-
-.pt-8 {
-  padding-top: 4.5rem !important;
-}
-
-.pb-8 {
-  padding-bottom: 4.5rem !important;
-}
-
 
 
 /* /// mobile menu height transitions /// */
@@ -217,7 +213,6 @@ a button:hover{
   }
 
 }
-
 
 .navbar-link {
   color: white;
@@ -271,58 +266,6 @@ a button:hover{
   color: rgb(255 255 255 / 85%);
   padding-left: 0.1rem;
   padding-right: 0.1rem;
-}
-
-/* /// button style /// */
-button {
-  background-color: transparent;
-  cursor: pointer;
-  justify-content: center;
-  padding-bottom: calc(0.5em - 1px);
-  padding-left: 1em;
-  padding-right: 1em;
-  padding-top: calc(0.5em - 1px);
-  text-align: center;
-  white-space: nowrap;
-  border-style: solid;
-  border-color: #dbdbdb;
-  color: white;
-  border-width: 3px;
-  border-radius: 0.5rem;
-  border-top-right-radius: 0;
-  font-weight: 600;
-  font-family: 'Open Sans';
-  text-transform: uppercase;
-  transition: all 0.55s ease-out;
-
-  /* spent too much time on this */
-  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
-  box-shadow:
-    0 1px 2px rgba(0, 0, 0, 0.05),
-    0 3px 5px rgba(0, 0, 0, 0.07),
-    0 6px 10px rgba(0, 0, 0, 0.1),
-    0 3px 5px rgba(0, 0, 0, 0.2) inset;
-}
-
-button:hover {
-  text-shadow: none;
-  box-shadow: none;
-  transition: all 0.35s ease-out;
-}
-
-.button-rapids-white {
-  color: white;
-  border-color: white;
-}
-
-.button-rapids-purple {
-  color: #7400ff;
-  border-color: #7400ff;
-}
-
-.button-rapids-teal {
-  color: #1ebdd2;
-  border-color: #1ebdd2;
 }
 
 
@@ -414,6 +357,62 @@ button:hover {
 }
 
 
+/* /// misc /// */
+
+.border-top-white {
+  border-top-color: white;
+  border-top-width: 0.1rem;
+  border-top-style: solid;
+}
+
+.border-bottom-white {
+  border-bottom-color: white;
+  border-bottom-width: 0.1rem;
+  border-bottom-style: solid;
+}
+
+.tags-container {
+  width: 100%;
+  margin-top: -0.5rem;
+}
+
+.tags-item {
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  border-width: 0.13rem;
+  border-style: solid;
+  text-align: center;
+  padding-top: 0.1rem;
+  padding-bottom: 0.1rem;
+  padding-left: 0.4rem;
+  padding-right: 0.4rem;
+  margin-right: 0.35rem;
+  display: inline-block;
+}
+
+/* /// border colors /// */
+.has-border-rapids-purple-primary {
+  border-color:#720dff
+}
+
+.has-border-rapids-pink {
+  border-color: #d216d2;
+}
+
+.has-border-rapids-orange {
+  border-color: #ffb500;
+}
+
+.has-border-rapids-teal {
+  border-color: #36c9dd;
+}
+
+.has-border-white {
+  border-color: white;
+}
+
+
 /* /// posts /// */
 .post-text {
   color: #777777;
@@ -472,6 +471,55 @@ button:hover {
   width: 400px;
 }
 
+/* /// extra spacers /// */
+.mt-6 {
+  margin-top: 2.5rem !important;
+}
+
+.mb-6 {
+  margin-bottom: 2.5rem !important;
+}
+
+.mt-7 {
+  margin-top: 3.5rem !important;
+}
+
+.mb-7 {
+  margin-bottom: 3.5rem !important;
+}
+
+.mt-8 {
+  margin-top: 4.5rem !important;
+}
+
+.mb-8 {
+  margin-bottom: 4.5rem !important;
+}
+
+.pt-6 {
+  padding-top: 2.5rem !important;
+}
+
+.pb-6 {
+  padding-bottom: 2.5rem !important;
+}
+
+.pt-7 {
+  padding-top: 3.5rem !important;
+}
+
+.pb-7 {
+  padding-bottom: 3.5rem !important;
+}
+
+.pt-8 {
+  padding-top: 4.5rem !important;
+}
+
+.pb-8 {
+  padding-bottom: 4.5rem !important;
+}
+
 
 /* /// colors /// */
 .has-background-rapids-gray {
@@ -500,10 +548,6 @@ button:hover {
 
 .has-background-rapids-teal {
   background-color: #36c9dd;
-}
-
-.has-text-rapids-purple-primary {
-  color: #7400ff;
 }
 
 .has-text-rapids-purple-primary {
