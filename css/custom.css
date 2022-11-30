@@ -359,36 +359,40 @@ button:hover {
 
 /* /// misc /// */
 
-.border-top-white {
-  border-top-color: white;
-  border-top-width: 0.1rem;
+.border-top {
+  border-width: 0.13rem;
   border-top-style: solid;
 }
 
-.border-bottom-white {
-  border-bottom-color: white;
-  border-bottom-width: 0.1rem;
+.border-bottom {
+  border-width: 0.13rem;
   border-bottom-style: solid;
 }
 
 .tags-container {
   width: 100%;
-  margin-top: -0.5rem;
+  margin-top: -0.2rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: right;
 }
 
 .tags-item {
   font-size: 0.7rem;
   font-weight: 600;
-  border-radius: 0.5rem;
   border-width: 0.13rem;
-  border-style: solid;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
   text-align: center;
-  padding-top: 0.1rem;
-  padding-bottom: 0.1rem;
-  padding-left: 0.4rem;
-  padding-right: 0.4rem;
-  margin-right: 0.35rem;
-  display: inline-block;
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+  padding-left: 0.45rem;
+  padding-right: 0.45rem;
+  margin-left: 0.4rem;
+  margin-top: -0.1rem;
 }
 
 /* /// border colors /// */
@@ -409,7 +413,7 @@ button:hover {
 }
 
 .has-border-white {
-  border-color: white;
+  border-color: rgb(228, 228, 228);
 }
 
 
