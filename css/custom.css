@@ -419,15 +419,14 @@ button:hover {
 
 /* /// posts /// */
 .post-text {
-  color: #777777;
-  line-height: 1.2rem;
-  font-style: italic;
+  color: #5e5e5e;
+  line-height: 1.5rem;
   overflow: hidden;
   text-overflow: ellipsis;
 }
 
 .post-action {
-  color: #4d4d4c;
+  color: #7306ff;
   font-size: 1.2rem;
   margin-top: 0.5rem;
   font-variant: all-small-caps;
