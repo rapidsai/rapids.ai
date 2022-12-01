@@ -72,7 +72,7 @@
   <!-- Intro -->
   <section class="section">
     <div class="container">
-      <h1 class="has-text-centered mb-4">Latest RAPIDS News</h1>
+      <h1 class="has-text-centered mb-5">Latest RAPIDS News</h1>
       <div class="columns">
         <div class="column is-full">
           <p class="subtitle has-text-centered"> The latest and featured notices, posts, videos, tweets and other
@@ -109,13 +109,33 @@
 
   </section>
 
+  <div class="top-slant-container">
+    <div class="top-slant-down has-background-white"></div>
+  </div>
 
-  
-    <!-- Posts -->
-    <div class="top-slant-container">
-      <div class="top-slant-down has-background-white"></div>
+  <section class="section">
+    <!-- Events -->
+    <div class="container">
+      <h2><i class="fa-light fa-square-code"></i> Upcoming Events </h2>
+      <div class="columns">
+        <div class="column is-one-third">
+          <h3> Meetup SF 11.12.22</h3>
+          <p> Sign up for a meetup with local RAPIDS folks for a chance to talk to developers. <a href="#"> Details Here<i class="fa-solid fa-arrow-up-right"></i></a> </p>
+        </div>
+        <div class="column is-one-third">
+          <h3> Meetup SF 11.12.22</h3>
+          <p> Sign up for a meetup with local RAPIDS folks for a chance to talk to developers. <a href="#"> Details Here<i class="fa-solid fa-arrow-up-right"></i></a> </p>
+        </div>
+        <div class="column is-one-third">
+          <h3> Meetup SF 11.12.22</h3>
+          <p> Sign up for a meetup with local RAPIDS folks for a chance to talk to developers. <a href="#"> Details Here<i class="fa-solid fa-arrow-up-right"></i></a> </p>
+        </div>
+      </div>
     </div>
 
+  </section>
+
+    <!-- Posts -->
     <div x-data="{ posts: [{},{}] }" x-init="
     fetch('https://rapidsai.github.io/site-data/posts.json')
     .then(json => { 
@@ -131,21 +151,21 @@
     })
     .catch(error => {console.error(error)})">
 
-      <section class="section padding-bottom-slant">
+      <section class="section">
 
-        <div class="container mt-7">
+        <div class="container mt-6">
           <h2><i class="fa-light fa-square-code"></i> Latest Tweets </h2>
           
           <div class="columns">
             <template x-for="article in posts[0]">
               <div class="column is-one-third">
                 <a x-bind:href="article.mediumLink" target="_blank">
-                  <h3><i class="fa-regular fa-bookmark"></i> <span x-text="article.title"></span></h3>
+                  <h3><i class="fa-regular fa-bookmark"></i> <span x-text="article.title"></span> <i class="fa-solid fa-arrow-up-right"></i></h3>
                 </a>
                 <p class="post-text">
-                  <i class="fa-sharp fa-solid fa-quote-left"></i> <span x-text="article.text"></span> <i
-                    class="fa-sharp fa-solid fa-quote-right"></i>
-                  <span class="post-action"> - Post by <span x-text="article.poster"></span> </span>
+                  <i class="fa-sharp fa-solid fa-quote-left"></i> &nbsp; <span x-text="article.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right"></i>
+                  <br>
+                  <span class="post-action">Post by <span x-text="article.poster"></span> </span>
                 </p>
               </div>
             </template>
@@ -155,12 +175,12 @@
             <template x-for="article in posts[1]">
               <div class="column is-one-third">
                 <a x-bind:href="article.mediumLink" target="_blank">
-                  <h3><i class="fa-regular fa-bookmark"></i> <span x-text="article.title"></span></h3>
+                  <h3><i class="fa-regular fa-bookmark"></i> <span x-text="article.title"></span> <i class="fa-solid fa-arrow-up-right"></i></h3>
                 </a>
                 <p class="post-text">
-                  <i class="fa-sharp fa-solid fa-quote-left"></i> <span x-text="article.text"></span> <i
-                    class="fa-sharp fa-solid fa-quote-right"></i>
-                  <span class="post-action"> - Post by <span x-text="article.poster"></span> </span>
+                  <i class="fa-sharp fa-solid fa-quote-left"></i> &nbsp; <span x-text="article.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right"></i>
+                  <br>
+                  <span class="post-action">Post by <span x-text="article.poster"></span> </span>
                 </p>
               </div>
             </template>
@@ -172,12 +192,7 @@
 
     </div>
 
-
     <!-- Tweets -->
-    <div class="top-slant-container">
-      <div class="top-slant-up has-background-white"></div>
-    </div>
-
     <div x-data="{ posts: [{},{}] }" x-init="
     fetch('https://rapidsai.github.io/site-data/posts.json')
     .then(json => { 
@@ -194,19 +209,19 @@
     .catch(error => {console.error(error)})">
       <section class="section padding-bottom-slant">
 
-        <div class="container mt-7">
+        <div class="container mt-6">
           <h2><i class="fa-light fa-square-code"></i> Latest Posts </h2>
           
           <div class="columns">
             <template x-for="tweets in posts[0]">
               <div class="column is-one-third">
                 <a x-bind:href="tweets.link" target="_blank">
-                  <h3><i class="fab fa-twitter"></i> <span x-text="tweets.name"></span></h3>
+                  <h3><i class="fab fa-twitter"></i> <span x-text="tweets.name"></span> <i class="fa-solid fa-arrow-up-right"></i></h3>
                 </a>
                 <p class="post-text">
-                  <i class="fa-sharp fa-solid fa-quote-left"></i> <span x-text="tweets.text"></span> <i
-                    class="fa-sharp fa-solid fa-quote-right"></i>
-                  <span class="post-action"> - Tweet by <a href="https://twitter.com/rapidsai" target="_blank">@rapidsai</a> </span>
+                  <i class="fa-sharp fa-solid fa-quote-left"></i> &nbsp; <span x-text="tweets.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right"></i>
+                  <br>
+                  <span class="post-action">Tweet by <a href="https://twitter.com/rapidsai" target="_blank">@rapidsai</a> </span>
                 </p>
               </div>
             </template>
@@ -216,12 +231,12 @@
             <template x-for="tweets in posts[1]">
               <div class="column is-one-third">
                 <a x-bind:href="tweets.link" target="_blank">
-                  <h3><i class="fab fa-twitter"></i> <span x-text="tweets.name"></span></h3>
+                  <h3><i class="fab fa-twitter"></i> <span x-text="tweets.name"></span> <i class="fa-solid fa-arrow-up-right"></i></h3>
                 </a>
                 <p class="post-text">
-                  <i class="fa-sharp fa-solid fa-quote-left"></i> <span x-text="tweets.text"></span> <i
-                    class="fa-sharp fa-solid fa-quote-right"></i>
-                  <span class="post-action"> - Tweet by <a href="https://twitter.com/rapidsai" target="_blank">@rapidsai</a> </span>
+                  <i class="fa-sharp fa-solid fa-quote-left"></i> &nbsp; <span x-text="tweets.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right"></i>
+                  <br>
+                  <span class="post-action">Tweet by <a href="https://twitter.com/rapidsai" target="_blank">@rapidsai</a> </span>
                 </p>
               </div>
             </template>

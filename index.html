@@ -256,12 +256,12 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
           <template x-for="article in posts">
             <div class="column is-one-third">
               <a x-bind:href="article.mediumLink" target="_blank">
-                <h3><i class="fa-regular fa-bookmark"></i> <span x-text="article.title"></span></h3>
+                <h3><i class="fa-regular fa-bookmark"></i> <span x-text="article.title"></span> <i class="fa-solid fa-arrow-up-right"></i></h3>
               </a>
               <p class="post-text">
-                <i class="fa-sharp fa-solid fa-quote-left"></i> <span x-text="article.text"></span> <i
-                  class="fa-sharp fa-solid fa-quote-right"></i>
-                <span class="post-action"> - Post by <span x-text="article.poster"></span> </span>
+                <i class="fa-sharp fa-solid fa-quote-left"></i> &nbsp; <span x-text="article.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right"></i>
+                <br>
+                <span class="post-action">Post by <span x-text="article.poster"></span> </span>
               </p>
             </div>
           </template>
@@ -291,13 +291,12 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
           <template x-for="tweets in posts">
             <div class="column is-one-third">
               <a x-bind:href="tweets.link" target="_blank">
-                <h3><i class="fab fa-twitter"></i> <span x-text="tweets.name"></span></h3>
+                <h3><i class="fab fa-twitter"></i> <span x-text="tweets.name"></span> <i class="fa-solid fa-arrow-up-right"></i></h3>
               </a>
               <p class="post-text">
-                <i class="fa-sharp fa-solid fa-quote-left"></i> <span x-text="tweets.text"></span> <i
-                  class="fa-sharp fa-solid fa-quote-right"></i>
-                <span class="post-action"> - Tweet by <a href="https://twitter.com/rapidsai"
-                    target="_blank">@rapidsai</a> </span>
+                <i class="fa-sharp fa-solid fa-quote-left"></i> &nbsp; <span x-text="tweets.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right"></i>
+                <br>
+                <span class="post-action">Tweet by <a href="https://twitter.com/rapidsai" target="_blank">@rapidsai</a> </span>
               </p>
             </div>
           </template>
