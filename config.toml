@@ -1,0 +1,3 @@
+baseURL = 'http://rapids.ai/'
+languageCode = 'en-us'
+title = 'RAPIDS.ai'
