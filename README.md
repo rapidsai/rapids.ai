@@ -15,7 +15,7 @@ Refer to the [Bulma Documentation](https://bulma.io/documentation/) for referenc
 - [Container Class](https://bulma.io/documentation/layout/container/)
 - [Spacing, Margin, and Padding Helpers](https://bulma.io/documentation/helpers/spacing-helpers/)
 
-Hugo uses templates, layouts, and directories to build pages. The `/layouts/_defaults` folder contains `Baseof.html` for the root page chrome layout, followed by `section.html` for directory `index.html` files, then `single.html` for sub pages. The `/layout/index.html` page is for the `/content/index.html` page only, but still uses `Baseof.html` for chrome. Note: `partials` can only be used as part of template `layouts`, and `shortcodes` can only be used as part of `content` sections/pages. All in all, more complicated than it needs to be...
+Hugo uses templates, layouts, and directories to build pages. The `/layouts/_defaults` folder contains `Baseof.html` for the root page chrome layout, followed by `section.html` for directory `_index.html` files, then `single.html` for sub pages. The `/layout/index.html` page is for the `/content/_index.html` page only, but still uses `Baseof.html` for chrome. Note: `partials` can only be used as part of template `layouts`, and `shortcodes` can only be used as part of `content` sections/pages. All in all, more complicated than it needs to be...
 
 
 ## Requirements
