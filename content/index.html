@@ -1,18 +1,13 @@
 ---
 title: RAPIDS.ai | GPU accelerated data science 
-slug: "Home"
 description: homepage
 ---
 
-{{ partial "hero.html" (dict "context" . "hero-text" "Page Not Found" "button-link" "#" "button-text" "Go Back") }}
+  <!-- Hero Shortcode -->
+  {{< hero hero-text="GPU Accelerated Data Science" button-link="#" button-text="Blank" >}}
 
-  <!-- Announcements -->
-  <section class="hero-announce-container">
-    <a href="#" class="hero-announce"><span class="announce-icon"><i class="fa-regular fa-bell"></i></span> <button
-        class="button-rapids-purple"> RAPIDS 11.22 release is live!</button></a>
-    <a href="#" class="hero-announce"><span class="announce-icon"><i class="fa-regular fa-bell"></i></span> <button
-        class="button-rapids-purple"> EOL for CUDA 11.0 in v22.10</button></a>
-  </section>
+  <!-- Annoucements Shortcode (0-3x)-->
+  {{< announcements text-1="CUDA 11.0 EOL 11.12.22" link-1="#" text-2="CUDA 11.8 Support 11.12.22" link-2="#" text-3="CUDA 11.8 Support 11.12.22" link-3="#" >}}
 
 
   <!-- Intro -->
@@ -276,37 +271,9 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
   </section>
 
   <section class="section">
+    {{< open-source >}}
 
-    <!-- Inserts open-source.html template -->
-    <div x-data="{ section: '' }" x-init="
-      fetch('includes/open-source.html')
-      .then(data => { 
-        if (data.ok) {
-          return data.text()
-        }
-        section = '' // load blank
-        throw new Error('Failed to load open-source.html')
-      })
-      .then(data => {section = data})
-      .catch(error => {console.error(error)})">
-        <div x-html="section"></div>
-    </div>
-
-    <!-- Inserts adopters-contributors.html template -->
-    <div x-data="{ section: '' }" x-init="
-      fetch('includes/adopters-contributors.html')
-      .then(data => { 
-        if (data.ok) {
-          return data.text()
-        }
-        section = '' // load blank
-        throw new Error('Failed to load adopters-contributors.html')
-      })
-      .then(data => {section = data})
-      .catch(error => {console.error(error)})">
-        <div x-html="section"></div>
-    </div>
-
+    {{< adopters-contributors >}}
   </section>
 
   <div class="bottom-slant-container">
