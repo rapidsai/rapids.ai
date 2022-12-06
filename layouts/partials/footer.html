@@ -1,7 +1,7 @@
-<!-- TEMPLATE: Not a stand alone page -->
 <div class="top-slant-container">
     <div class="top-slant-up has-background-rapids-purple-secondary2"></div>
 </div>
+
 <div class="footer has-background-rapids-purple-secondary2">
     <div class="footer-row has-text-centered">
         <img class="footer-logo" src="images/RAPIDS-logo-white-only.png">
@@ -15,15 +15,15 @@
     </div>
     <br>
     <div class="footer-row has-text-centered">
-        <a class="footer-item" href="index.html"><i class="fa-regular fa-house-blank"></i> Home</a>
+        <a class="footer-item" href="/"><i class="fa-regular fa-house-blank"></i> Home</a>
         <span class="footer-item"> | </span>
-        <a class="footer-item" href="ecosystem.html"><i class="fa-light fa-solar-system"></i> Ecosystem</a>
+        <a class="footer-item" href="/ecosystem"><i class="fa-light fa-solar-system"></i> Ecosystem</a>
         <span class="footer-item"> | </span>
-        <a class="footer-item" href="learn-more.html"><i class="fa-regular fa-circle-info"></i> Learn More</a>
+        <a class="footer-item" href="/learn-more"><i class="fa-regular fa-circle-info"></i> Learn More</a>
         <span class="footer-item"> | </span>
-        <a class="footer-item" href="latest-news.html"><i class="fa-regular fa-bell"></i> Latest News</a>
+        <a class="footer-item" href="/latest-news"><i class="fa-regular fa-bell"></i> Latest News</a>
         <span class="footer-item"> | </span>
-        <a class="footer-item" href="latest-news.html"><i class="fa-light fa-hand-point-right"></i> User Guides</a>
+        <a class="footer-item" href="https://docs.rapids.ai/user-guide"><i class="fa-light fa-hand-point-right"></i> User Guides</a>
         <span class="footer-item"> | </span>
         <a class="footer-item" href="https://docs.rapids.ai/install"><i class="fa-light fa-download"></i> Install</a>
         <span class="footer-item"> | </span>
@@ -35,16 +35,17 @@
         <a class="footer-item" href="#"><i class="fa-regular fa-chart-line"></i> Visualization</a>
     </div>
     <div class="footer-row has-text-centered">
-        <a class="footer-item" href="branding.html"><i class="fa-light fa-file-circle-info"></i> Branding and Guides</a>
+        <a class="footer-item" href="/branding"><i class="fa-light fa-file-circle-info"></i> Branding and Guides</a>
         <span class="footer-item"> | </span>
         <a class="footer-item" href="#"><i class="fa-light fa-file-invoice"></i> Terms</a>
         <span class="footer-item"> | </span>
         <a class="footer-item" href="#"><i class="fa-regular fa-binary-lock"></i> Privacy</a>
     </div>
+
     <div class="footer-row has-text-centered has-text-white">
         <span x-data="{ year: ''}" x-init="year = new Date().getFullYear();">
             <br>
-            <strong>© Copyright RAPIDS <span x-text="year"></span></strong>
+            <strong>© Copyright RAPIDS {{ now.Format "2006" }}</strong>
         </span>
     </div>
 </div>
