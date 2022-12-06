@@ -1,0 +1,398 @@
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <title>
+    
+      RAPIDS.ai | News
+    
+  </title>
+  <meta name="description" content="RAPIDS.ai | GPU accelerated data science">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="RAPIDS.ai | GPU accelerated data science">
+  <meta property="og:description" content="Open source GPU accelerated data science libraries">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rapids.ai/">
+  <meta property="og:image" content="/images/RAPIDS-logo-white.png">
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="https://rapids.ai/" />
+  <meta name="twitter:title" content="RAPIDS.ai | GPU accelerated data science" />
+  <meta name="twitter:description" content="Open source GPU accelerated data science libraries" />
+  <meta name="twitter:image" content="/images/RAPIDS-logo-white.png" />
+
+  <link rel="apple-touch-icon" href="/images/icons/icon-512x512.png">
+
+  <link rel="manifest" href="manifest.json">
+
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <link rel="stylesheet" href="/css/custom.css">
+
+  <meta name="theme-color" content="#fafafa">
+
+  <script src="https://kit.fontawesome.com/1690513e32.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
+    integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+</head>
+  <body>
+    <div class="navbar is-fixed-top has-shadow has-background-rapids-purple-primary" role="navigation" aria-label="main navigation">
+    
+    <div class="navbar-brand">
+        <a class="navbar-item" href="/">
+            <img src="/images/RAPIDS-logo.png">
+        </a>
+
+        <a class="navbar-burger has-text-white" aria-label="menu" aria-expanded="false"
+            x-on:click="document.getElementById('navMenu').classList.toggle('is-active')">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navMenu" class="navbar-menu">
+        <div class="navbar-start">
+
+            <div class="navbar-item has-dropdown is-hoverable has-text-white">
+                <a class="navbar-link has-text-white" href="/ecosystem">Ecosystem </a>
+              
+                  <div class="navbar-dropdown">
+                    <a href="/ecosystem#overview" class="navbar-item has-text-white">Overview </a>
+                    <a href="/ecosystem#hardware" class="navbar-item has-text-white">Hardware </a>
+                    <a href="/ecosystem#software" class="navbar-item has-text-white">Software </a>
+                    <a href="/ecosystem#developers" class="navbar-item has-text-white">Developers </a>
+                  </div>
+            </div>
+
+            <div class="navbar-item has-dropdown is-hoverable has-text-white">
+                <a class="navbar-link has-text-white" href="/learn-more">Learn More </a>
+              
+                  <div class="navbar-dropdown">
+                    <a href="/learn-more#about" class="navbar-item has-text-white">About RAPIDS </a>
+                    <a href="/learn-more#use-cases" class="navbar-item has-text-white">Use Cases and Topics </a>
+                    <a href="/learn-more#engagement" class="navbar-item has-text-white">Engagement </a>
+                  </div>
+            </div>
+
+            <a class="navbar-item navbar-link is-arrowless has-text-white" href="/latest-news">Latest News </a>
+
+            <a class="navbar-item navbar-link is-arrowless has-text-white" href="https://docs.rapids.ai/user-guide">User Guides </a>
+
+            <a class="navbar-item navbar-link is-arrowless has-text-white" href="https://docs.rapids.ai/install">Install </a>
+
+            <a class="navbar-item navbar-link is-arrowless has-text-white" href="https://docs.rapids.ai/">Docs </a>
+
+            <a class="navbar-item navbar-link is-arrowless has-text-white" href="https://github.com/rapidsai">GitHub </a>
+        </div>
+    </div>
+
+</div>
+    
+    
+  <!-- Hero Shortcode -->
+  <section class="hero is-medium hero-rapids-bg mb-5">
+    <div class="hero-body has-text-centered">
+      <img class="hero-img" src="/images/rapids-logo-whitetxt.svg">
+      <p class="title has-text-white">
+        Latest News
+      </p>
+      <button class="button-rapids-teal"><a href="#">Blank</a></button>
+    </div>
+    <div class="top-slant-container">
+      <div class="top-slant-up has-background-white"></div>
+    </div>
+  </section>
+
+  <!-- Intro -->
+  <section class="section">
+    <div class="container">
+      <h1 class="has-text-centered mb-5">Latest RAPIDS News</h1>
+      <div class="columns">
+        <div class="column is-full">
+          <p class="subtitle has-text-centered"> The latest and featured notices, posts, videos, tweets and other
+            content. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Notices -->
+  <div id="RSN"></div>
+  <section class="section padding-bottom-slant">
+
+    <div class="container">
+      <h2><i class="fa-light fa-square-code"></i> Service Notices </h2>
+      <div class="columns">
+        <div class="column is-one-third">
+          <h3> RSN21 Service Notice </h3>
+          <p> EOL for CUDA 11.0 in v22.10 Learn more in the <a href="#"> Details <i
+                class="fa-solid fa-arrow-up-right"></i></a> </p>
+        </div>
+        <div class="column is-one-third">
+          <h3>RSN 20 Service Notice </h3>
+          <p> EOL for CUDA 11.0 in v22.10 Learn more in the <a href="#"> Details <i
+                class="fa-solid fa-arrow-up-right"></i></a> </p>
+        </div>
+        <div class="column is-one-third">
+          <h3> RSN 18 Service Notice </h3>
+          <p> EOL for CUDA 11.0 in v22.10 Learn more in the <a href="#"> Details <i
+                class="fa-solid fa-arrow-up-right"></i></a> </p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <div class="top-slant-container">
+    <div class="top-slant-down has-background-white"></div>
+  </div>
+
+  <section class="section">
+    <!-- Events -->
+    <div class="container">
+      <h2><i class="fa-light fa-square-code"></i> Upcoming Events </h2>
+      <div class="columns">
+        <div class="column is-one-third">
+          <h3> Meetup SF 11.12.22</h3>
+          <p> Sign up for a meetup with local RAPIDS folks for a chance to talk to developers. <a href="#"> Details Here<i class="fa-solid fa-arrow-up-right"></i></a> </p>
+        </div>
+        <div class="column is-one-third">
+          <h3> Meetup SF 11.12.22</h3>
+          <p> Sign up for a meetup with local RAPIDS folks for a chance to talk to developers. <a href="#"> Details Here<i class="fa-solid fa-arrow-up-right"></i></a> </p>
+        </div>
+        <div class="column is-one-third">
+          <h3> Meetup SF 11.12.22</h3>
+          <p> Sign up for a meetup with local RAPIDS folks for a chance to talk to developers. <a href="#"> Details Here<i class="fa-solid fa-arrow-up-right"></i></a> </p>
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+    <!-- Posts -->
+    <div x-data="{ posts: [{},{}] }" x-init="
+    fetch('https://rapidsai.github.io/site-data/posts.json')
+    .then(json => { 
+      if (json.ok) {
+          return json.json()
+      }
+      posts = '' // load blank
+      throw new Error('Failed to load posts.json')
+    })
+    .then(json => {
+      posts[0] = json.medium.slice(0,3)
+      posts[1] = json.medium.slice(3,6)
+    })
+    .catch(error => {console.error(error)})">
+
+      <section class="section">
+
+        <div class="container mt-6">
+          <h2><i class="fa-light fa-square-code"></i> Latest Tweets </h2>
+          
+          <div class="columns">
+            <template x-for="article in posts[0]">
+              <div class="column is-one-third">
+                <a x-bind:href="article.mediumLink" target="_blank">
+                  <h3><i class="fa-regular fa-bookmark"></i> <span x-text="article.title"></span> <i class="fa-solid fa-arrow-up-right"></i></h3>
+                </a>
+                <p class="post-text">
+                  <i class="fa-sharp fa-solid fa-quote-left"></i> &nbsp; <span x-text="article.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right"></i>
+                  <br>
+                  <span class="post-action">Post by <span x-text="article.poster"></span> </span>
+                </p>
+              </div>
+            </template>
+          </div>
+
+          <div class="columns">
+            <template x-for="article in posts[1]">
+              <div class="column is-one-third">
+                <a x-bind:href="article.mediumLink" target="_blank">
+                  <h3><i class="fa-regular fa-bookmark"></i> <span x-text="article.title"></span> <i class="fa-solid fa-arrow-up-right"></i></h3>
+                </a>
+                <p class="post-text">
+                  <i class="fa-sharp fa-solid fa-quote-left"></i> &nbsp; <span x-text="article.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right"></i>
+                  <br>
+                  <span class="post-action">Post by <span x-text="article.poster"></span> </span>
+                </p>
+              </div>
+            </template>
+          </div>
+        
+        </div>
+      
+      </section>
+
+    </div>
+
+    <!-- Tweets -->
+    <div x-data="{ posts: [{},{}] }" x-init="
+    fetch('https://rapidsai.github.io/site-data/posts.json')
+    .then(json => { 
+      if (json.ok) {
+          return json.json()
+      }
+      posts = '' // load blank
+      throw new Error('Failed to load posts.json')
+    })
+    .then(json => {
+      posts[0] = json.twitter.slice(0,3)
+      posts[1] = json.twitter.slice(3,6)
+    })
+    .catch(error => {console.error(error)})">
+      <section class="section padding-bottom-slant">
+
+        <div class="container mt-6">
+          <h2><i class="fa-light fa-square-code"></i> Latest Posts </h2>
+          
+          <div class="columns">
+            <template x-for="tweets in posts[0]">
+              <div class="column is-one-third">
+                <a x-bind:href="tweets.link" target="_blank">
+                  <h3><i class="fab fa-twitter"></i> <span x-text="tweets.name"></span> <i class="fa-solid fa-arrow-up-right"></i></h3>
+                </a>
+                <p class="post-text">
+                  <i class="fa-sharp fa-solid fa-quote-left"></i> &nbsp; <span x-text="tweets.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right"></i>
+                  <br>
+                  <span class="post-action">Tweet by <a href="https://twitter.com/rapidsai" target="_blank">@rapidsai</a> </span>
+                </p>
+              </div>
+            </template>
+          </div>
+
+          <div class="columns">
+            <template x-for="tweets in posts[1]">
+              <div class="column is-one-third">
+                <a x-bind:href="tweets.link" target="_blank">
+                  <h3><i class="fab fa-twitter"></i> <span x-text="tweets.name"></span> <i class="fa-solid fa-arrow-up-right"></i></h3>
+                </a>
+                <p class="post-text">
+                  <i class="fa-sharp fa-solid fa-quote-left"></i> &nbsp; <span x-text="tweets.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right"></i>
+                  <br>
+                  <span class="post-action">Tweet by <a href="https://twitter.com/rapidsai" target="_blank">@rapidsai</a> </span>
+                </p>
+              </div>
+            </template>
+          </div>
+       
+        </div>
+      
+      </section>
+
+    </div>
+
+
+
+  <!-- Featured -->
+  <div class="top-slant-container">
+    <div class="top-slant-down has-background-white"></div>
+  </div>
+
+  <section class="section padding-bottom-slant">
+
+    <div class="container">
+      <h1 class="has-text-centered mb-5">Featured Content </h1>
+      <div class="columns">
+        <div class="column is-one-third">
+          <img class="image img-half img-center" src="/images/HPO-space-2.png">
+          <h2> GTC 2022 Talk - How GPUS are Better </h2>
+          <p> Numba is the Just-In-Time compiler used in RAPIDS cuDF to implement high-performance User-Defined Functions (UDFs) by turning user-supplied Python functions into CUDA kernels... </p>
+          <a href="#"> Read More <i class="fa-solid fa-arrow-up-right"></i></a> 
+        </div>
+        <div class="column is-one-third">
+          <img class="image img-half img-center" src="/images/XGboost-benchmark.png">
+          <h2> GTC 2022 Talk </h2>
+          <p> Check out these featured GTC 2022 talks. Find more in the link below.  </p>
+          <a href="#"> Talk Section <i class="fa-solid fa-arrow-up-right"></i></a>
+        </div>
+        <div class="column is-one-third">
+          <img class="image img-half img-center" src="/images/NumFocus_Color.png">
+          <h2> Weather Notebook 22 </h2>
+          <p>  Our latest weather notebook shows off our new nested JSON support in cuDF.</p>
+          <a href="#"> View Notebook in Studio Lab <i class="fa-solid fa-arrow-up-right"></i></a> 
+        </div>
+      </div>
+
+      <div class="columns">
+        <div class="column is-one-third">
+          <img class="image img-half img-center" src="/images/RAPIDS404.gif">
+          <h2> Video - GPU 101 </h2>
+          <p> Numba is the Just-In-Time compiler used in RAPIDS cuDF to implement high-performance User-Defined Functions (UDFs) by turning user-supplied Python functions into CUDA kernels... </p>
+          <a href="#"> See More <i class="fa-solid fa-arrow-up-right"></i></a> 
+        </div>
+        <div class="column is-one-third">
+          <img class="image img-half img-center" src="/images/rapids-end-to-end-performance-chart-oss-page-r4.svg">
+          <h2> Featured Talks </h2>
+          <p> Check out these featured GTC 2022 talks. Find more in the link belwo.  </p>
+          <a href="#"> Talk Section <i class="fa-solid fa-arrow-up-right"></i></a>
+        </div>
+        <div class="column is-one-third">
+          <img class="image img-center" src="/images/GCP-logo.png">
+          <h2> Google Talk on GCP </h2>
+          <p>Long lasting post. Find more in the link below. </p>
+          <a href="#"> Posts Section <i class="fa-solid fa-arrow-up-right"></i></a> 
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+  <!-- Global JS -->
+  <script src="/js/main.js"></script>
+
+
+    <div class="top-slant-container">
+    <div class="top-slant-up has-background-rapids-purple-secondary2"></div>
+</div>
+
+<div class="footer has-background-rapids-purple-secondary2">
+    <div class="footer-row has-text-centered">
+        <img class="footer-logo" src="/images/RAPIDS-logo-white-only.png">
+    </div>
+    <div class="footer-row has-text-centered">
+        <a class="footer-item" href="https://join.slack.com/t/rapids-goai/shared_invite/zt-trnsul8g-Sblci8dk6dIoEeGpoFcFOQ" target="_blank"><i class="fa-brands fa-slack"></i> Slack</a>
+        <span class="footer-item"> | </span>
+        <a class="footer-item" href="https://stackoverflow.com/tags/rapids"><i class="fa-brands fa-stack-overflow"></i> Stack Overflow</a>
+        <span class="footer-item"> | </span>
+        <a class="footer-item" href="https://twitter.com/rapidsai"><i class="fa-brands fa-twitter"></i> Twitter</a>
+    </div>
+    <br>
+    <div class="footer-row has-text-centered">
+        <a class="footer-item" href="/"><i class="fa-regular fa-house-blank"></i> Home</a>
+        <span class="footer-item"> | </span>
+        <a class="footer-item" href="/ecosystem"><i class="fa-light fa-solar-system"></i> Ecosystem</a>
+        <span class="footer-item"> | </span>
+        <a class="footer-item" href="/learn-more"><i class="fa-regular fa-circle-info"></i> Learn More</a>
+        <span class="footer-item"> | </span>
+        <a class="footer-item" href="/latest-news"><i class="fa-regular fa-bell"></i> Latest News</a>
+        <span class="footer-item"> | </span>
+        <a class="footer-item" href="https://docs.rapids.ai/user-guide"><i class="fa-light fa-hand-point-right"></i> User Guides</a>
+        <span class="footer-item"> | </span>
+        <a class="footer-item" href="https://docs.rapids.ai/install"><i class="fa-light fa-download"></i> Install</a>
+        <span class="footer-item"> | </span>
+        <a class="footer-item" href="https://docs.rapids.ai/"><i class="fa-light fa-file-code"> </i> Docs</a>
+        <span class="footer-item"> | </span>
+        <a class="footer-item" href="https://github.com/rapidsai"><i class="fa-brands fa-github"></i> GitHub</a>
+    </div>
+    <div class="footer-row has-text-centered">
+        <a class="footer-item" href="#"><i class="fa-regular fa-chart-line"></i> Visualization</a>
+    </div>
+    <div class="footer-row has-text-centered">
+        <a class="footer-item" href="/branding"><i class="fa-light fa-file-circle-info"></i> Branding and Guides</a>
+        <span class="footer-item"> | </span>
+        <a class="footer-item" href="#"><i class="fa-light fa-file-invoice"></i> Terms</a>
+        <span class="footer-item"> | </span>
+        <a class="footer-item" href="#"><i class="fa-regular fa-binary-lock"></i> Privacy</a>
+    </div>
+
+    <div class="footer-row has-text-centered has-text-white"><br>
+        <strong>© Copyright RAPIDS 2022</strong>
+    </div>
+</div>
+  </body>
+</html>

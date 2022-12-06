@@ -249,7 +249,7 @@ description: RAPIDS libraries, frameworks, extensions and more
      
       <div class="columns">
         <div class="column is-one-half">
-          <img class="image img-w100" src="images/dask_logo.png">
+          <img class="image img-w100" src="/images/dask_logo.png">
           <h2 ><i class="fa-light fa-square-code"></i> Dask </h2>
           <div class="tags-container border-top has-border-rapids-purple-primary ">
             <span class="tags-item has-text-rapids-purple-primary  has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> PANDAS </span>
@@ -261,7 +261,7 @@ description: RAPIDS libraries, frameworks, extensions and more
           <a href="#">Documentation <i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
         <div class="column is-one-half">
-          <img class="image img-w100" src="images/RAPIDS-SQL.png">
+          <img class="image img-w100" src="/images/RAPIDS-SQL.png">
           <h2 ><i class="fa-light fa-square-code"></i> Dask SQL </h2>
           <div class="tags-container border-top has-border-rapids-purple-primary ">
             <span class="tags-item has-text-rapids-purple-primary  has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> PANDAS </span>
@@ -275,7 +275,7 @@ description: RAPIDS libraries, frameworks, extensions and more
       </div>
       <div class="columns">
         <div class="column is-one-half">
-          <img class="image img-w100" src="images/xgboost_logo.png">
+          <img class="image img-w100" src="/images/xgboost_logo.png">
           <h2 ><i class="fa-light fa-square-code"></i> XGboost </h2>
           <div class="tags-container border-top has-border-rapids-purple-primary ">
             <span class="tags-item has-text-rapids-purple-primary  has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> PANDAS </span>
@@ -287,7 +287,7 @@ description: RAPIDS libraries, frameworks, extensions and more
           <a href="#">Documentation <i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
         <div class="column is-one-half">
-          <img class="image img-w100" src="images/RAPIDS-cloud.png">
+          <img class="image img-w100" src="/images/RAPIDS-cloud.png">
           <h2 ><i class="fa-light fa-square-code"></i> Cloud Instances </h2>
           <div class="tags-container border-top has-border-rapids-purple-primary ">
             <span class="tags-item has-text-rapids-purple-primary  has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> PANDAS </span>
@@ -301,7 +301,7 @@ description: RAPIDS libraries, frameworks, extensions and more
       </div>
       <div class="columns">
         <div class="column is-one-half">
-          <img class="image img-w100" src="images/csp+hpo.png">
+          <img class="image img-w100" src="/images/csp+hpo.png">
           <h2 ><i class="fa-light fa-square-code"></i> Hyperparameter Optimization </h2>
           <div class="tags-container border-top has-border-rapids-purple-primary ">
             <span class="tags-item has-text-rapids-purple-primary  has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> PANDAS </span>
@@ -313,7 +313,7 @@ description: RAPIDS libraries, frameworks, extensions and more
           <a href="#">Documentation <i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
         <div class="column is-one-half">
-          <img class="image img-w100" src="images/slurm-logo.png">
+          <img class="image img-w100" src="/images/slurm-logo.png">
           <h2 ><i class="fa-light fa-square-code"></i> High Performance Computing </h2>
           <div class="tags-container border-top has-border-rapids-purple-primary ">
             <span class="tags-item has-text-rapids-purple-primary  has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> PANDAS </span>
@@ -326,7 +326,7 @@ description: RAPIDS libraries, frameworks, extensions and more
       </div>
       <div class="columns">
         <div class="column is-one-half">
-          <img class="image img-w100" src="images/MONAI-logo_color.png">
+          <img class="image img-w100" src="/images/MONAI-logo_color.png">
           <h2 ><i class="fa-light fa-square-code"></i> Monai </h2>
           <div class="tags-container border-top has-border-rapids-purple-primary ">
             <span class="tags-item has-text-rapids-purple-primary  has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> PANDAS </span>
@@ -337,7 +337,7 @@ description: RAPIDS libraries, frameworks, extensions and more
           <a href="#">Documentation <i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
         <div class="column is-one-half">
-          <img class="image img-w100" src="images/spark-logo-trademark.png">
+          <img class="image img-w100" src="/images/spark-logo-trademark.png">
           <h2 ><i class="fa-light fa-square-code"></i> Apache Spark </h2>
           <div class="tags-container border-top has-border-rapids-purple-primary ">
             <span class="tags-item has-text-rapids-purple-primary  has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> PANDAS </span>
@@ -351,7 +351,7 @@ description: RAPIDS libraries, frameworks, extensions and more
       </div>
       <div class="columns">
         <div class="column is-one-half">
-          <img class="image img-w100" src="images/RAPIDS-logo-purple.png">
+          <img class="image img-w100" src="/images/RAPIDS-logo-purple.png">
           <h2 ><i class="fa-light fa-square-code"></i> Visualization </h2>
           <div class="tags-container border-top has-border-rapids-purple-primary ">
             <span class="tags-item has-text-rapids-purple-primary  has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> PANDAS </span>
@@ -499,24 +499,5 @@ description: RAPIDS libraries, frameworks, extensions and more
     </div>
   </section>
 
-  <!-- Inserts footer.html template -->
-  <div x-data="{ footer: '' }" x-init="
-    fetch('includes/footer.html')
-    .then(data => { 
-      if (data.ok) {
-        return data.text()
-      }
-      footer = '' // load blank
-      throw new Error('Failed to load footer.html')
-    })
-    .then(data => {footer = data})
-    .catch(error => {console.error(error)})">
-    <footer x-html="footer"></footer>
-  </div>
-
   <!-- Global JS -->
-  <script src="js/main.js"></script>
-
-</body>
-
-</html>
+  <script src="/js/main.js"></script>
