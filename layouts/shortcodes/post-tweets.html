@@ -1,0 +1,109 @@
+<!-- Load Apline.js -->
+<script src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+
+<!-- Posts -->
+<div x-data="{ posts: [{},{}] }" x-init="
+fetch('https://rapidsai.github.io/site-data/posts.json')
+.then(json => { 
+  if (json.ok) {
+      return json.json()
+  }
+  posts = '' // load blank
+  throw new Error('Failed to load posts.json')
+})
+.then(json => {
+  posts[0] = json.medium.slice(0,3)
+  posts[1] = json.medium.slice(3,6)
+})
+.catch(error => {console.error(error)})">
+
+    <div class="container mt-6">
+      <h2><i class="fa-light fa-square-code"></i> Latest Posts </h2>
+      
+      <div class="columns">
+        <template x-for="article in posts[0]">
+          <div class="column is-one-third">
+            <a x-bind:href="article.mediumLink" target="_blank">
+              <h3><i class="fa-regular fa-bookmark"></i> <span x-text="article.title"></span> <i class="fa-solid fa-arrow-up-right"></i></h3>
+            </a>
+            <p class="post-text">
+              <i class="fa-sharp fa-solid fa-quote-left"></i> &nbsp; <span x-text="article.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right"></i>
+              <br>
+              <span class="post-action">Post by <span x-text="article.poster"></span> </span>
+            </p>
+          </div>
+        </template>
+      </div>
+
+      <div class="columns">
+        <template x-for="article in posts[1]">
+          <div class="column is-one-third">
+            <a x-bind:href="article.mediumLink" target="_blank">
+              <h3><i class="fa-regular fa-bookmark"></i> <span x-text="article.title"></span> <i class="fa-solid fa-arrow-up-right"></i></h3>
+            </a>
+            <p class="post-text">
+              <i class="fa-sharp fa-solid fa-quote-left"></i> &nbsp; <span x-text="article.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right"></i>
+              <br>
+              <span class="post-action">Post by <span x-text="article.poster"></span> </span>
+            </p>
+          </div>
+        </template>
+      </div>
+    
+    </div>
+
+</div>
+
+<!-- Tweets -->
+<div x-data="{ posts: [{},{}] }" x-init="
+fetch('https://rapidsai.github.io/site-data/posts.json')
+.then(json => { 
+  if (json.ok) {
+      return json.json()
+  }
+  posts = '' // load blank
+  throw new Error('Failed to load posts.json')
+})
+.then(json => {
+  posts[0] = json.twitter.slice(0,3)
+  posts[1] = json.twitter.slice(3,6)
+  console.log(posts)
+})
+.catch(error => {console.error(error)})">
+
+    <div class="container mt-6">
+      <h2><i class="fa-light fa-square-code"></i> Latest Tweets </h2>
+      
+      <div class="columns">
+        <template x-for="tweets in posts[0]">
+          <div class="column is-one-third">
+            <a x-bind:href="tweets.link" target="_blank">
+              <h3><i class="fab fa-twitter"></i> <span x-text="tweets.name"></span> <i class="fa-solid fa-arrow-up-right"></i></h3>
+            </a>
+            <p class="post-text">
+              <i class="fa-sharp fa-solid fa-quote-left"></i> &nbsp; <span x-text="tweets.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right"></i>
+              <br>
+              <span class="post-action">Tweet by <a href="https://twitter.com/rapidsai" target="_blank">@rapidsai</a> </span>
+            </p>
+          </div>
+        </template>
+      </div>
+
+      <div class="columns">
+        <template x-for="tweets in posts[1]">
+          <div class="column is-one-third">
+            <a x-bind:href="tweets.link" target="_blank">
+              <h3><i class="fab fa-twitter"></i> <span x-text="tweets.name"></span> <i class="fa-solid fa-arrow-up-right"></i></h3>
+            </a>
+            <p class="post-text">
+              <i class="fa-sharp fa-solid fa-quote-left"></i> &nbsp; <span x-text="tweets.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right"></i>
+              <br>
+              <span class="post-action">Tweet by <a href="https://twitter.com/rapidsai" target="_blank">@rapidsai</a> </span>
+            </p>
+          </div>
+        </template>
+      </div>
+
+    </div>
+
+</div>
