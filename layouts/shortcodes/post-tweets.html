@@ -67,7 +67,6 @@ fetch('https://rapidsai.github.io/site-data/posts.json')
 .then(json => {
   posts[0] = json.twitter.slice(0,3)
   posts[1] = json.twitter.slice(3,6)
-  console.log(posts)
 })
 .catch(error => {console.error(error)})">
 
