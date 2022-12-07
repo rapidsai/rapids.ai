@@ -69,7 +69,7 @@ description: homepage
   </div>
 
   <!-- Quick Start -->
-  <section class="section has-background-rapids-purple-primary has-text-white">
+  <section class="section has-background-rapids-purple-primary has-text-white padding-bottom-slant">
     <div class="container">
       <h1 class="mb-5 has-text-white">Quick Start</h1>
       <div class="columns">
@@ -149,102 +149,8 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
     <div class="bottom-slant-up has-background-rapids-purple-primary"></div>
   </div>
 
-  <!-- News -->
-  <section class="section padding-bottom-slant padding-top-slant has-background-rapids-gray">
-
-    <div class="container">
-      <h1 class="mb-5">Latest News</h1>
-      <div class="columns">
-        <div class="column is-half">
-          <h2><i class="fa-light fa-square-code"></i> RAPIDS Service Notices </h2>
-          <p> Get the full list of RSN that may effect your projects at the <a href="#"> RNS Section <i class="fa-solid fa-arrow-up-right"></i></a> </p>
-        </div>
-        <div class="column is-half">
-          <h2><i class="fa-light fa-square-code"></i> Featured Content </h2>
-          <p> Check out our featured content, including videos, talks, posts, guides and more in the<a href="#"> Featured Content Section <i class="fa-solid fa-arrow-up-right"></i></a> </p>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- Posts -->
-    <div x-data="{ posts: '' }" x-init="
-      fetch('https://rapidsai.github.io/site-data/posts.json')
-      .then(json => { 
-        if (json.ok) {
-            return json.json()
-        }
-        posts = '' // load blank
-        throw new Error('Failed to load posts.json')
-      })
-      .then(json => {
-        posts = json.medium.slice(0,3)
-      })
-      .catch(error => {console.error(error)})">
-
-      <div class="container mt-5">
-        <h2><i class="fa-light fa-square-code"></i> Recent Posts </h2>
-        <div class="columns">
-          <template x-for="article in posts">
-            <div class="column is-one-third">
-              <a x-bind:href="article.mediumLink" target="_blank">
-                <h3><i class="fa-regular fa-bookmark"></i> <span x-text="article.title"></span> <i class="fa-solid fa-arrow-up-right"></i></h3>
-              </a>
-              <p class="post-text">
-                <i class="fa-sharp fa-solid fa-quote-left"></i> &nbsp; <span x-text="article.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right"></i>
-                <br>
-                <span class="post-action">Post by <span x-text="article.poster"></span> </span>
-              </p>
-            </div>
-          </template>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Tweets -->
-    <div x-data="{ posts: '' }" x-init="
-      fetch('https://rapidsai.github.io/site-data/posts.json')
-      .then(json => { 
-        if (json.ok) {
-            return json.json()
-        }
-        posts = '' // load blank
-        throw new Error('Failed to load posts.json')
-      })
-      .then(json => {
-        posts = json.twitter.slice(0,3)
-      })
-      .catch(error => {console.error(error)})">
-
-      <div class="container mt-5">
-        <h2><i class="fa-light fa-square-code"></i> Recent Tweets </h2>
-        <div class="columns">
-          <template x-for="tweets in posts">
-            <div class="column is-one-third">
-              <a x-bind:href="tweets.link" target="_blank">
-                <h3><i class="fab fa-twitter"></i> <span x-text="tweets.name"></span> <i class="fa-solid fa-arrow-up-right"></i></h3>
-              </a>
-              <p class="post-text">
-                <i class="fa-sharp fa-solid fa-quote-left"></i> &nbsp; <span x-text="tweets.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right"></i>
-                <br>
-                <span class="post-action">Tweet by <a href="https://twitter.com/rapidsai" target="_blank">@rapidsai</a> </span>
-              </p>
-            </div>
-          </template>
-        </div>
-      </div>
-
-    </div>
-
-  </section>
-
-  <div class="top-slant-container">
-    <div class="top-slant-up has-background-white"></div>
-  </div>
-
   <!-- Ecosystem-->
-  <section class="section">
+  <section class="section padding-top-slant">
     <div class="container">
       <h1 >Ecosystem</h1>
       <div class="columns">
@@ -280,8 +186,8 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
     <div class="bottom-slant-down has-background-white"></div>
   </div>
 
-  <!-- Learn More CTA -->
-  <section class="section has-background-rapids-gray padding-top-slant padding-bottom-slant">
+  <!-- Learn More -->
+  <section class="section padding-top-slant padding-bottom-slant">
 
     <div class="container">
       <h1 class="mb-5">Learn More</h1>
@@ -309,13 +215,41 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
 
   </section>
 
+  <div class="bottom-slant-container">
+    <div class="bottom-slant-down has-background-white"></div>
+  </div>
+
+  <!-- News -->
+  <section class="section padding-top-slant padding-bottom-slant has-background-rapids-gray">
+
+    <div class="container">
+      <h1 class="mb-5">Latest News</h1>
+      <div class="columns">
+        <div class="column is-half">
+          <h2><i class="fa-light fa-square-code"></i> RAPIDS Service Notices </h2>
+          <p> Get the full list of RSN that may effect your projects at the <a href="#"> RNS Section <i class="fa-solid fa-arrow-up-right"></i></a> </p>
+        </div>
+        <div class="column is-half">
+          <h2><i class="fa-light fa-square-code"></i> Featured Content </h2>
+          <p> Check out our featured content, including videos, talks, posts, guides and more in the<a href="#"> Featured Content Section <i class="fa-solid fa-arrow-up-right"></i></a> </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Posts and Tweets -->
+    {{< post-tweets >}}
+
+  </section>
+
   <!-- Global JS -->
   <script src="js/main.js"></script>
 
   <!-- Chart.js perf charts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.umd.min.js" integrity="sha512-HyprZz2W40JOnIBIXDYHCFlkSscDdYaNe2FYl34g1DOmE9J+zEPoT4HHHZ2b3+milFBtiKVWb4sorDVVp+iuqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
   <script>
     const ctx = document.getElementById('cuDFchart');
-    const cuDFchart = new Chart(ctx, {
+    new Chart(ctx, {
       type: 'bar',
       data: {
         labels: ['pandas', 'cuDF'],
@@ -366,7 +300,7 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
     });
 
     const ctx2 = document.getElementById('cuMLchart');
-    const cuMLchart = new Chart(ctx2, {
+    new Chart(ctx2, {
       type: 'bar',
       data: {
         labels: ['scikit-learn', 'cuML'],
@@ -417,7 +351,7 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
     });
 
     const ctx3 = document.getElementById('cuGraphChart');
-    const cuGraphChart = new Chart(ctx3, {
+    new Chart(ctx3, {
       type: 'bar',
       data: {
         labels: ['networkx', 'cuGraph'],
