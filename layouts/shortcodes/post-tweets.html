@@ -15,19 +15,19 @@ fetch('https://rapidsai.github.io/site-data/posts.json')
 .catch(error => {console.error(error)})">
 
     <div class="container mt-6">
-      <h2><i class="fa-light fa-square-code"></i> Latest Posts </h2>
+      <h2><i class="fa-regular fa-message-quote"></i> Latest Posts </h2>
       
       <div class="columns">
         <template x-for="article in posts[0]">
           <div class="column is-one-third">
             <a x-bind:href="article.mediumLink" target="_blank">
-              <h3><i class="fa-regular fa-bookmark"></i> <span x-text="article.title"></span> <i class="fa-solid fa-arrow-up-right"></i></h3>
+              <h3><span x-text="article.title"></span></h3>
+              <p class="post-text">
+                <i class="fa-sharp fa-solid fa-quote-left has-text-rapids-purple-secondary2"></i> &nbsp; <span x-text="article.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right has-text-rapids-purple-secondary2"></i>
+                <br>
+                <span class="post-action">Post by <span x-text="article.poster"></span> </span>
+              </p>
             </a>
-            <p class="post-text">
-              <i class="fa-sharp fa-solid fa-quote-left"></i> &nbsp; <span x-text="article.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right"></i>
-              <br>
-              <span class="post-action">Post by <span x-text="article.poster"></span> </span>
-            </p>
           </div>
         </template>
       </div>
@@ -36,13 +36,13 @@ fetch('https://rapidsai.github.io/site-data/posts.json')
         <template x-for="article in posts[1]">
           <div class="column is-one-third">
             <a x-bind:href="article.mediumLink" target="_blank">
-              <h3><i class="fa-regular fa-bookmark"></i> <span x-text="article.title"></span> <i class="fa-solid fa-arrow-up-right"></i></h3>
+              <h3> <span x-text="article.title"></span> </h3>
+              <p class="post-text">
+                <i class="fa-sharp fa-solid fa-quote-left has-text-rapids-purple-secondary2"></i> &nbsp; <span x-text="article.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right has-text-rapids-purple-secondary2"></i>
+                <br>
+                <span class="post-action">Post by <span x-text="article.poster"></span> </span>
+              </p>
             </a>
-            <p class="post-text">
-              <i class="fa-sharp fa-solid fa-quote-left"></i> &nbsp; <span x-text="article.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right"></i>
-              <br>
-              <span class="post-action">Post by <span x-text="article.poster"></span> </span>
-            </p>
           </div>
         </template>
       </div>
@@ -68,19 +68,18 @@ fetch('https://rapidsai.github.io/site-data/posts.json')
 .catch(error => {console.error(error)})">
 
     <div class="container mt-6">
-      <h2><i class="fa-light fa-square-code"></i> Latest Tweets </h2>
+      <h2><i class="fa-brands fa-twitter"></i> Latest Tweets </h2>
       
       <div class="columns">
         <template x-for="tweets in posts[0]">
           <div class="column is-one-third">
             <a x-bind:href="tweets.link" target="_blank">
-              <h3><i class="fab fa-twitter"></i> <span x-text="tweets.name"></span> <i class="fa-solid fa-arrow-up-right"></i></h3>
+              <p class="post-text">
+                <i class="fa-sharp fa-solid fa-quote-left has-text-rapids-purple-secondary2"></i> &nbsp; <span x-text="tweets.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right has-text-rapids-purple-secondary2"></i>
+                <br>
+                <span class="post-action">Tweet by <span x-text="tweets.name"></span> </span>
+              </p>
             </a>
-            <p class="post-text">
-              <i class="fa-sharp fa-solid fa-quote-left"></i> &nbsp; <span x-text="tweets.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right"></i>
-              <br>
-              <span class="post-action">Tweet by <a href="https://twitter.com/rapidsai" target="_blank">@rapidsai</a> </span>
-            </p>
           </div>
         </template>
       </div>
@@ -89,13 +88,12 @@ fetch('https://rapidsai.github.io/site-data/posts.json')
         <template x-for="tweets in posts[1]">
           <div class="column is-one-third">
             <a x-bind:href="tweets.link" target="_blank">
-              <h3><i class="fab fa-twitter"></i> <span x-text="tweets.name"></span> <i class="fa-solid fa-arrow-up-right"></i></h3>
+              <p class="post-text">
+                <i class="fa-sharp fa-solid fa-quote-left has-text-rapids-purple-secondary2"></i> &nbsp; <span x-text="tweets.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right has-text-rapids-purple-secondary2"></i>
+                <br>
+                <span class="post-action">Tweet by <span x-text="tweets.name"></span></span>
+              </p>
             </a>
-            <p class="post-text">
-              <i class="fa-sharp fa-solid fa-quote-left"></i> &nbsp; <span x-text="tweets.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right"></i>
-              <br>
-              <span class="post-action">Tweet by <a href="https://twitter.com/rapidsai" target="_blank">@rapidsai</a> </span>
-            </p>
           </div>
         </template>
       </div>
