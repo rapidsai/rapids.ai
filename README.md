@@ -27,7 +27,7 @@ Font Icons are used from [Font Awesome](https://fontawesome.com/), and include P
 
 
 ## Hosting, Development and Previews
-After installing Hugo, run `hugo server` to see a developer preview and `hugo` to build for production. You can also preview pages locally after building, but may need to use `python -m http.server` or similar for all functionality.
+After installing Hugo, run `hugo server` to see a developer preview and `hugo` to build for production. You can also preview pages locally from the `/public` dir after building, but may need to use `python -m http.server` or similar for all functionality.
 
-Hosting is currently with GitHub Pages using the root `gh-pages` branch. To contribute, [fork the repository](https://github.com/rapidsai/rapids.ai/fork) and create a [pull request](https://github.com/rapidsai/rapids.ai/pulls) with the changes. Note, to have a preview of the PR via `https://{username}.github.io/{repository}`, you would need to use the `gh-pages` branch to have it build through GitHub Pages defaults. Note: [Netlify](https://www.netlify.com/) is planned for future hosting.
+Hosting is currently done through [Netlify](https://www.netlify.com/), which should create a preview when PRs are pushed to the main repository. 
 
