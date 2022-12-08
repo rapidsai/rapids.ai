@@ -9,42 +9,15 @@ description: Latest and Featured News about RAPIDS
   <!-- Intro -->
   <section class="section">
     <div class="container">
-      <h1 class="has-text-centered mb-5">Latest RAPIDS News</h1>
-      <div class="columns">
-        <div class="column is-full">
-          <p class="subtitle has-text-centered"> The latest and featured notices, posts, videos, tweets and other
-            content. </p>
-        </div>
-      </div>
+      <h1 class="has-text-centered">Latest RAPIDS News</h1>
+      <p class="subheading has-text-centered"> The latest and featured notices, posts, videos, tweets and other content. </p>
     </div>
   </section>
 
   <!-- Service Notices -->
-  <div id="RSN"></div>
   <section class="section padding-bottom-slant">
 
-    {{< rsn  >}}
-
-    <div class="container">
-      <h2><i class="fa-light fa-square-code"></i> Service Notices </h2>
-      <div class="columns">
-        <div class="column is-one-third">
-          <h3> RSN21 Service Notice </h3>
-          <p> EOL for CUDA 11.0 in v22.10 Learn more in the <a href="#"> Details <i
-                class="fa-solid fa-arrow-up-right"></i></a> </p>
-        </div>
-        <div class="column is-one-third">
-          <h3>RSN 20 Service Notice </h3>
-          <p> EOL for CUDA 11.0 in v22.10 Learn more in the <a href="#"> Details <i
-                class="fa-solid fa-arrow-up-right"></i></a> </p>
-        </div>
-        <div class="column is-one-third">
-          <h3> RSN 18 Service Notice </h3>
-          <p> EOL for CUDA 11.0 in v22.10 Learn more in the <a href="#"> Details <i
-                class="fa-solid fa-arrow-up-right"></i></a> </p>
-        </div>
-      </div>
-    </div>
+    {{< rsn-short  >}}
 
   </section>
 
@@ -53,24 +26,9 @@ description: Latest and Featured News about RAPIDS
   </div>
 
   <section class="section padding-bottom-slant">
+    
     <!-- Events -->
-    <div class="container pb-6">
-      <h2><i class="fa-light fa-square-code"></i> Upcoming Events </h2>
-      <div class="columns">
-        <div class="column is-one-third">
-          <h3> Meetup SF 11.12.22</h3>
-          <p> Sign up for a meetup with local RAPIDS folks for a chance to talk to developers. <a href="#"> Details Here<i class="fa-solid fa-arrow-up-right"></i></a> </p>
-        </div>
-        <div class="column is-one-third">
-          <h3> Meetup SF 11.12.22</h3>
-          <p> Sign up for a meetup with local RAPIDS folks for a chance to talk to developers. <a href="#"> Details Here<i class="fa-solid fa-arrow-up-right"></i></a> </p>
-        </div>
-        <div class="column is-one-third">
-          <h3> Meetup SF 11.12.22</h3>
-          <p> Sign up for a meetup with local RAPIDS folks for a chance to talk to developers. <a href="#"> Details Here<i class="fa-solid fa-arrow-up-right"></i></a> </p>
-        </div>
-      </div>
-    </div>
+    {{< events-short >}}
 
     <!-- Posts and Tweets -->
     {{< post-tweets >}}
