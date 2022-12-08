@@ -6,8 +6,10 @@
       RAPIDS.ai | Ecosystem
     
   </title>
+
   <meta name="description" content="RAPIDS.ai | GPU accelerated data science">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fafafa">
 
   <meta property="og:title" content="RAPIDS.ai | GPU accelerated data science">
   <meta property="og:description" content="Open source GPU accelerated data science libraries">
@@ -23,20 +25,22 @@
 
   <link rel="apple-touch-icon" href="/images/icons/icon-512x512.png">
 
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="../manifest.json">
 
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
   <link rel="stylesheet" href="/css/custom.css">
 
-  <meta name="theme-color" content="#fafafa">
-
-  <script src="https://kit.fontawesome.com/1690513e32.js"></script>
+  
   <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
-    integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+
+  
+  <script src="https://kit.fontawesome.com/1690513e32.js"></script>
+
 </head>
   <body>
     <div class="navbar is-fixed-top has-shadow has-background-rapids-purple-primary" role="navigation" aria-label="main navigation">
@@ -100,7 +104,7 @@
       <p class="title has-text-white">
         Ecosystem
       </p>
-      <button class="button-rapids-teal"><a href="#">Blank</a></button>
+      <button class="button-rapids-teal"><a href="https://docs.rapids.ai/api">Go to Documentation</a></button>
     </div>
     <div class="top-slant-container">
       <div class="top-slant-up has-background-white"></div>
@@ -114,20 +118,20 @@
       <h1 class="has-text-centered mb-5"> An ecosystem of hardware, <br> software, and developers</h1>
       <div class="columns">
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> Hardware </h2>
+          <h2><i class="fa-regular fa-microchip"></i> Hardware </h2>
           <p> RAPIDS is used with NVIDIA GPU hardware. There is a wide range of compatible hardware, from commercial
             gaming cards, enterprise level multi-gpu systems, and cloud based resources. Find out more on NVIDA's
             product page and our compatibility list. </p>
         </div>
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> Software </h2>
+          <h2><i class="fa-regular fa-code"></i> Software </h2>
           <p> RAPIDS is comprised of a growing list of libraries and APIs to use for your specific area. Based on Apache
             arrow, they all work well together while providing GPU accelerated performance. See details below. </p>
           <br>
           [ Graphic on how all these sections fit ]
         </div>
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> Developers </h2>
+          <h2><i class="fa-regular fa-laptop-code"></i>  Developers </h2>
           <p> Part of a wide open source and growing community, several projects have built off of RAPIDS or integrated
             with RAPIDS to take advantage of its ease and performance. See more below. </p>
         </div>
@@ -137,29 +141,28 @@
   </section>
 
   <!-- Hardware -->
+  <div id="hardware"></div>
   <div class="bottom-slant-container">
     <div class="bottom-slant-up has-background-white"></div>
   </div>
 
-  <div id="hardware"></div>
   <section class="section has-background-white padding-top-slant padding-bottom-slant">
     
     <div class="container">
-      <h1 class="mb-5"> Hardware </h1>
+      <h1> Hardware </h1>
+      <p class="subheading mb-5">The GPU hardware the enables RAPIDS acceleration.</p>
+
       <div class="columns">
         <div class="column is-one-half">
-          <h2><i class="fa-light fa-square-code"></i> Systems </h2>
+          <h2><i class="fa-regular fa-server"></i> Systems </h2>
           <p> RAPIDS is used with NVIDIA GPU hardware. There is a wide range of compatible hardware, from commercial
             gaming cards, enterprise level multi-gpu systems, and cloud based resources. Find out more on NVIDA's
-            product page and our compatibility list. </p>
-          <br>
-          [ Graphic / chart ]
+            product page and our compatibility list. <a href="https://www.nvidia.com/en-us/deep-learning-ai/solutions/data-science/"> NVIDIA Data Science Hardware <i class="fa-solid fa-arrow-up-right"></i></a></p>
         </div>
         <div class="column is-one-half">
-          <h2><i class="fa-light fa-square-code"></i> Performance </h2>
+          <h2><i class="fa-light fa-bolt-lightning"></i> Performance </h2>
           <p> RAPIDS is used with NVIDIA GPU hardware. There is a wide range of compatible hardware, from commercial
-            gaming cards, enterprise level multi-gpu systems, and cloud based resources. Find out more on NVIDA's
-            product page and our compatibility list. </p>
+            gaming cards, enterprise level multi-gpu systems, and cloud based resources. Find more details on the<a href="https://docs.rapids.ai/benchmarks"> Benchmark Documentation <i class="fa-solid fa-arrow-up-right"></i></a></p>
         </div>
       </div>
     </div>
@@ -168,18 +171,21 @@
 
   <!-- Software RAPIDS Libs  -->
   <div id="software"></div>
+  <div id="rapids-core"></div>
   <div class="top-slant-container">
     <div class="top-slant-down has-background-rapids-purple-primary"></div>
   </div>
 
-  <div id="rapids-core"></div>
   <section class="section has-background-rapids-purple-primary">
     <div class="container">
 
-      <h1 class="has-text-white mb-5">RAPIDS Core</h1>
+      <h1 class="has-text-white">Software</h1>
+      <h1 class="has-text-white">RAPIDS Core</h1>
+      <p class="subheading has-text-white mb-5">The core components to the RAPIDS ecosystem.</p>
+
       <div class="columns">
         <div class="column is-one-third">
-          <h2 class="has-text-white"><i class="fa-light fa-square-code"></i> cuDF</h2>
+          <h2 class="has-text-white"><i class="fa-regular fa-star"></i> cuDF</h2>
           <div class="tags-container border-top has-border-white">
             <span class="tags-item has-text-white has-border-white"><i class="fa-solid fa-tag"></i> PANDAS </span>
             <span class="tags-item has-text-white has-border-white"><i class="fa-solid fa-tag"></i> DATAFRAME </span>
@@ -197,7 +203,7 @@
           <a href="#">Documentation <i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
         <div class="column is-one-third">
-          <h2 class="has-text-white border-bottom-white"><i class="fa-light fa-square-code"></i> cuML</h2>
+          <h2 class="has-text-white border-bottom-white"><i class="fa-regular fa-star"></i> cuML</h2>
           <div class="tags-container border-top has-border-white">
             <span class="tags-item has-text-white has-border-white"><i class="fa-solid fa-tag"></i> PANDAS </span>
             <span class="tags-item has-text-white has-border-white"><i class="fa-solid fa-tag"></i> DATAFRAME </span>
@@ -215,7 +221,7 @@
           <a href="#">Documentation <i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
         <div class="column is-one-third">
-          <h2 class="has-text-white border-bottom-white"><i class="fa-light fa-square-code"></i> cuGraph</h2>
+          <h2 class="has-text-white border-bottom-white"><i class="fa-regular fa-star"></i> cuGraph</h2>
           <div class="tags-container border-top has-border-white">
             <span class="tags-item has-text-white has-border-white"><i class="fa-solid fa-tag"></i> PANDAS </span>
             <span class="tags-item has-text-white has-border-white"><i class="fa-solid fa-tag"></i> DATAFRAME </span>
@@ -235,10 +241,12 @@
       </div>
 
       <div id="rapids-extended"></div>
-      <h1 class="has-text-white mt-6 mb-5">RAPIDS Extended</h1> 
+      <h1 class="has-text-white mt-6">RAPIDS Extended</h1> 
+      <p class="subheading has-text-white mb-5">Projects extending the functionality and capabilities of RAPIDS.</p>
+
       <div class="columns">
         <div class="column is-one-third">
-          <h2 class="has-text-white border-bottom-white"><i class="fa-light fa-square-code"></i> cuSpatial</h2>
+          <h2 class="has-text-white border-bottom-white"><i class="fa-regular fa-terminal"></i> cuSpatial</h2>
           <div class="tags-container border-top has-border-white">
             <span class="tags-item has-text-white has-border-white"><i class="fa-solid fa-tag"></i> PANDAS </span>
             <span class="tags-item has-text-white has-border-white"><i class="fa-solid fa-tag"></i> DATAFRAME </span>
@@ -256,7 +264,7 @@
           <a href="#">Documentation <i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
         <div class="column is-one-third">
-          <h2 class="has-text-white border-bottom-white"><i class="fa-light fa-square-code"></i> kvikIO </h2>
+          <h2 class="has-text-white border-bottom-white"><i class="fa-regular fa-terminal"></i> kvikIO </h2>
           <div class="tags-container border-top has-border-white">
             <span class="tags-item has-text-white has-border-white"><i class="fa-solid fa-tag"></i> PANDAS </span>
             <span class="tags-item has-text-white has-border-white"><i class="fa-solid fa-tag"></i> DATAFRAME </span>
@@ -274,7 +282,7 @@
           <a href="#">Documentation <i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
         <div class="column is-one-third">
-          <h2 class="has-text-white border-bottom-white"><i class="fa-light fa-square-code"></i> cuSignal </h2>
+          <h2 class="has-text-white border-bottom-white"><i class="fa-regular fa-terminal"></i> cuSignal </h2>
           <div class="tags-container border-top has-border-white">
             <span class="tags-item has-text-white has-border-white"><i class="fa-solid fa-tag"></i> PANDAS </span>
             <span class="tags-item has-text-white has-border-white"><i class="fa-solid fa-tag"></i> DATAFRAME </span>
@@ -289,7 +297,7 @@
 
       <div class="columns mt-5">
         <div class="column is-one-third">
-          <h2 class="has-text-white border-bottom-white"><i class="fa-light fa-square-code"></i> cuxfilter </h2>
+          <h2 class="has-text-white border-bottom-white"><i class="fa-regular fa-terminal"></i> cuxfilter </h2>
           <div class="tags-container border-top has-border-white">
             <span class="tags-item has-text-white has-border-white"><i class="fa-solid fa-tag"></i> PANDAS </span>
             <span class="tags-item has-text-white has-border-white"><i class="fa-solid fa-tag"></i> DATAFRAME </span>
@@ -301,7 +309,7 @@
 
         </div>
         <div class="column is-one-third">
-          <h2 class="has-text-white border-bottom-white"><i class="fa-light fa-square-code"></i> cuCIM </h2>
+          <h2 class="has-text-white border-bottom-white"><i class="fa-regular fa-terminal"></i> cuCIM </h2>
           <div class="tags-container border-top has-border-white">
             <span class="tags-item has-text-white has-border-white"><i class="fa-solid fa-tag"></i> PANDAS </span>
             <span class="tags-item has-text-white has-border-white"><i class="fa-solid fa-tag"></i> DATAFRAME </span>
@@ -313,7 +321,7 @@
 
         </div>
         <div class="column is-one-third">
-          <h2 class="has-text-white border-bottom-white"><i class="fa-light fa-square-code"></i> RAFT</h2>
+          <h2 class="has-text-white border-bottom-white"><i class="fa-regular fa-terminal"></i> RAFT</h2>
           <div class="tags-container border-top has-border-white">
             <span class="tags-item has-text-white has-border-white"><i class="fa-solid fa-tag"></i> PANDAS </span>
             <span class="tags-item has-text-white has-border-white"><i class="fa-solid fa-tag"></i> DATAFRAME </span>
@@ -327,7 +335,7 @@
 
       <div class="columns mt-5">
         <div class="column is-one-third">
-          <h2 class="has-text-white border-bottom-white"><i class="fa-light fa-square-code"></i> Many More...</h2>
+          <h2 class="has-text-white border-bottom-white"><i class="fa-regular fa-terminal"></i> Many More...</h2>
           <p class="has-text-white"> Visit our GitHub Project page or our documentation page for a more extensive list of
             projects.</p>
         </div>
@@ -338,20 +346,21 @@
     </div>
   </section>
 
+  <div id="rapids-integration"></div>
   <div class="bottom-slant-container">
     <div class="bottom-slant-up has-background-rapids-purple-primary"></div>
   </div>
 
   <!-- RAPIDS Integrated -->
-  <div id="rapids-integration"></div>
   <section class="section has-background-rapids-gray padding-top-slant padding-bottom-slant" >
     <div class="container">
       <h1>RAPIDS Integration</h1>
+      <p class="subheading mb-5">Projects that added RAPIDS acceleration as an optional feature. </p>
      
       <div class="columns">
         <div class="column is-one-half">
           <img class="image img-w100" src="/images/dask_logo.png">
-          <h2 ><i class="fa-light fa-square-code"></i> Dask </h2>
+          <h2 ><i class="fa-regular fa-code-merge"></i> Dask </h2>
           <div class="tags-container border-top has-border-rapids-purple-primary ">
             <span class="tags-item has-text-rapids-purple-primary  has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> PANDAS </span>
             <span class="tags-item has-text-rapids-purple-primary has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> DATAFRAME </span>
@@ -363,7 +372,7 @@
         </div>
         <div class="column is-one-half">
           <img class="image img-w100" src="/images/RAPIDS-SQL.png">
-          <h2 ><i class="fa-light fa-square-code"></i> Dask SQL </h2>
+          <h2 ><i class="fa-regular fa-code-merge"></i> Dask SQL </h2>
           <div class="tags-container border-top has-border-rapids-purple-primary ">
             <span class="tags-item has-text-rapids-purple-primary  has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> PANDAS </span>
             <span class="tags-item has-text-rapids-purple-primary has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> DATAFRAME </span>
@@ -377,7 +386,7 @@
       <div class="columns">
         <div class="column is-one-half">
           <img class="image img-w100" src="/images/xgboost_logo.png">
-          <h2 ><i class="fa-light fa-square-code"></i> XGboost </h2>
+          <h2 ><i class="fa-regular fa-code-merge"></i> XGboost </h2>
           <div class="tags-container border-top has-border-rapids-purple-primary ">
             <span class="tags-item has-text-rapids-purple-primary  has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> PANDAS </span>
             <span class="tags-item has-text-rapids-purple-primary has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> DATAFRAME </span>
@@ -389,7 +398,7 @@
         </div>
         <div class="column is-one-half">
           <img class="image img-w100" src="/images/RAPIDS-cloud.png">
-          <h2 ><i class="fa-light fa-square-code"></i> Cloud Instances </h2>
+          <h2 ><i class="fa-regular fa-code-merge"></i> Cloud Instances </h2>
           <div class="tags-container border-top has-border-rapids-purple-primary ">
             <span class="tags-item has-text-rapids-purple-primary  has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> PANDAS </span>
             <span class="tags-item has-text-rapids-purple-primary has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> DATAFRAME </span>
@@ -403,7 +412,7 @@
       <div class="columns">
         <div class="column is-one-half">
           <img class="image img-w100" src="/images/csp+hpo.png">
-          <h2 ><i class="fa-light fa-square-code"></i> Hyperparameter Optimization </h2>
+          <h2 ><i class="fa-regular fa-code-merge"></i> Hyperparameter Optimization </h2>
           <div class="tags-container border-top has-border-rapids-purple-primary ">
             <span class="tags-item has-text-rapids-purple-primary  has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> PANDAS </span>
             <span class="tags-item has-text-rapids-purple-primary has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> DATAFRAME </span>
@@ -415,7 +424,7 @@
         </div>
         <div class="column is-one-half">
           <img class="image img-w100" src="/images/slurm-logo.png">
-          <h2 ><i class="fa-light fa-square-code"></i> High Performance Computing </h2>
+          <h2 ><i class="fa-regular fa-code-merge"></i> High Performance Computing </h2>
           <div class="tags-container border-top has-border-rapids-purple-primary ">
             <span class="tags-item has-text-rapids-purple-primary  has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> PANDAS </span>
             <span class="tags-item has-text-rapids-purple-primary has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> DATAFRAME </span>
@@ -428,7 +437,7 @@
       <div class="columns">
         <div class="column is-one-half">
           <img class="image img-w100" src="/images/MONAI-logo_color.png">
-          <h2 ><i class="fa-light fa-square-code"></i> Monai </h2>
+          <h2 ><i class="fa-regular fa-code-merge"></i> Monai </h2>
           <div class="tags-container border-top has-border-rapids-purple-primary ">
             <span class="tags-item has-text-rapids-purple-primary  has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> PANDAS </span>
             <span class="tags-item has-text-rapids-purple-primary has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> DATAFRAME </span>
@@ -439,7 +448,7 @@
         </div>
         <div class="column is-one-half">
           <img class="image img-w100" src="/images/spark-logo-trademark.png">
-          <h2 ><i class="fa-light fa-square-code"></i> Apache Spark </h2>
+          <h2 ><i class="fa-regular fa-code-merge"></i> Apache Spark </h2>
           <div class="tags-container border-top has-border-rapids-purple-primary ">
             <span class="tags-item has-text-rapids-purple-primary  has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> PANDAS </span>
             <span class="tags-item has-text-rapids-purple-primary has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> DATAFRAME </span>
@@ -453,7 +462,7 @@
       <div class="columns">
         <div class="column is-one-half">
           <img class="image img-w100" src="/images/RAPIDS-logo-purple.png">
-          <h2 ><i class="fa-light fa-square-code"></i> Visualization </h2>
+          <h2 ><i class="fa-regular fa-code-merge"></i> Visualization </h2>
           <div class="tags-container border-top has-border-rapids-purple-primary ">
             <span class="tags-item has-text-rapids-purple-primary  has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> PANDAS </span>
             <span class="tags-item has-text-rapids-purple-primary has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> DATAFRAME </span>
@@ -469,19 +478,20 @@
 
   </section>
 
+  <div id="rapids-accelerated"></div>
   <div class="bottom-slant-container">
     <div class="bottom-slant-down has-background-rapids-gray"></div>
   </div>
 
   <!-- RAPIDS Accelerated -->
-  <div id="rapids-accelerated"></div>
   <section class="section padding-top-slant" >
     <div class="container">
-      <h1 class="mb-5">RAPIDS Accelerated </h1>
-     
+      <h1>RAPIDS Accelerated </h1>
+      <p class="subheading mb-5">Projects taking advantage and building with RAPIDS components.</p>
+
       <div class="columns">
         <div class="column is-one-half">
-          <h2 ><i class="fa-light fa-square-code"></i> Triton </h2>
+          <h2 ><i class="fa-regular fa-gauge-high"></i> Triton </h2>
           <div class="tags-container border-top has-border-rapids-purple-primary ">
             <span class="tags-item has-text-rapids-purple-primary  has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> PANDAS </span>
             <span class="tags-item has-text-rapids-purple-primary has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> DATAFRAME </span>
@@ -492,7 +502,7 @@
           <a href="#">Documentation <i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
         <div class="column is-one-half">
-          <h2 ><i class="fa-light fa-square-code"></i> Merlin </h2>
+          <h2 ><i class="fa-regular fa-gauge-high"></i> Merlin </h2>
           <div class="tags-container border-top has-border-rapids-purple-primary ">
             <span class="tags-item has-text-rapids-purple-primary  has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> PANDAS </span>
             <span class="tags-item has-text-rapids-purple-primary has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> DATAFRAME </span>
@@ -505,7 +515,7 @@
       </div>
       <div class="columns">
         <div class="column is-one-half">
-          <h2 ><i class="fa-light fa-square-code"></i> cuOpt</h2>
+          <h2 ><i class="fa-regular fa-gauge-high"></i> cuOpt</h2>
           <div class="tags-container border-top has-border-rapids-purple-primary ">
             <span class="tags-item has-text-rapids-purple-primary  has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> PANDAS </span>
             <span class="tags-item has-text-rapids-purple-primary has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> DATAFRAME </span>
@@ -516,7 +526,7 @@
           <a href="#">Documentation <i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
         <div class="column is-one-half">
-          <h2 ><i class="fa-light fa-square-code"></i> Morpheus </h2>
+          <h2 ><i class="fa-regular fa-gauge-high"></i> Morpheus </h2>
           <div class="tags-container border-top has-border-rapids-purple-primary ">
             <span class="tags-item has-text-rapids-purple-primary  has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> PANDAS </span>
             <span class="tags-item has-text-rapids-purple-primary has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> DATAFRAME </span>
@@ -529,7 +539,7 @@
       </div>
       <div class="columns">
         <div class="column is-one-half">
-          <h2 ><i class="fa-light fa-square-code"></i> Clara </h2>
+          <h2 ><i class="fa-regular fa-gauge-high"></i> Clara </h2>
           <div class="tags-container border-top has-border-rapids-purple-primary ">
             <span class="tags-item has-text-rapids-purple-primary  has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> PANDAS </span>
             <span class="tags-item has-text-rapids-purple-primary has-border-rapids-purple-primary "><i class="fa-solid fa-tag"></i> DATAFRAME </span>
@@ -555,15 +565,16 @@
   <section class="section has-background-white padding-top-slant padding-bottom-slant">
    
      <div class="container">
-      <h1 class="mb-5">RAPIDS Workflows </h1>
-    
+      <h1>RAPIDS Workflows </h1>
+      <p class="subheading mb-5">Complex pipelines that utilize RAPIDS components. </p>
+
       <div class="columns">
         <div class="column is-one-half">
-          <h2><i class="fa-light fa-square-code"></i> Data Science Workflows </h2>
+          <h2><i class="fa-regular fa-split"></i> Data Science Workflows </h2>
           <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps.</p>
         </div>
         <div class="column is-one-half">
-          <h2><i class="fa-light fa-square-code"></i> MLOps Guides</h2>
+          <h2><i class="fa-regular fa-panel-fire"></i> MLOps Guides</h2>
           <p>Capitalize on low hanging fruit to identify a ballpark value added activity to beta test. Override the digital divide with additional clickthroughs from DevOps.</p>
         </div>
       </div>
@@ -572,27 +583,29 @@
   </section>
 
   <!-- Developers  -->
+  <div id="developers"></div>
   <div class="top-slant-container">
     <div class="top-slant-down has-background-rapids-gray"></div>
   </div>
 
-  <div id="developers"></div>
   <section class="section has-background-rapids-gray padding-bottom-slant">
     <div class="container">
-      <h1 class="mb-5"> Developers </h1>
+      <h1> Developers </h1>
+      <p class="subheading mb-5">Guides and resources for RAPIDS developers.</p>
+
       <div class="columns">
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> Development Guides </h2>
+          <h2><i class="fa-regular fa-chalkboard-user"></i> Development Guides </h2>
           <p> RAPIDS can be installed in local GPU desktops, multi-gpu DGX systems, massive cloud based clusters, and more. Each of these systems have unique requirements and library compatibility. </p>
           <a href="#"> Find out more on our deployment Documentation<i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> GPUCI and Testing </h2>
+          <h2><i class="fa-regular fa-cubes"></i> GPUCI and Testing </h2>
           <p> RAPIDS has several partners that enable MLOPs and turnkey access to ready to use infrastructure.</p>
           <a href="#">Additional Info <i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> Contribution Guides </h2>
+          <h2><i class="fa-regular fa-code-pull-request"></i>Contribution Guides </h2>
           <p> RAPIDS can utilize multiple architectures for different needs. </p>
           <a href="#">Additional Info <i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
@@ -623,7 +636,7 @@
     <div class="footer-row has-text-centered">
         <a class="footer-item" href="/"><i class="fa-regular fa-house-blank"></i> Home</a>
         <span class="footer-item"> | </span>
-        <a class="footer-item" href="/ecosystem"><i class="fa-light fa-solar-system"></i> Ecosystem</a>
+        <a class="footer-item" href="/ecosystem"><i class="fa-light fa-chart-network"></i> Ecosystem</a>
         <span class="footer-item"> | </span>
         <a class="footer-item" href="/learn-more"><i class="fa-regular fa-circle-info"></i> Learn More</a>
         <span class="footer-item"> | </span>
@@ -638,7 +651,11 @@
         <a class="footer-item" href="https://github.com/rapidsai"><i class="fa-brands fa-github"></i> GitHub</a>
     </div>
     <div class="footer-row has-text-centered">
-        <a class="footer-item" href="#"><i class="fa-regular fa-chart-line"></i> Visualization</a>
+        <a class="footer-item" href="/notices"><i class="fa-regular fa-triangle-exclamation"></i> Service Notices</a>
+        <span class="footer-item"> | </span>
+        <a class="footer-item" href="/events"><i class="fa-regular fa-calendar-week"></i> Events</a>
+        <span class="footer-item"> | </span>
+        <a class="footer-item" href="/visualization"><i class="fa-regular fa-chart-line"></i> Visualization</a>
     </div>
     <div class="footer-row has-text-centered">
         <a class="footer-item" href="/branding"><i class="fa-light fa-file-circle-info"></i> Branding and Guides</a>

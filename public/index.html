@@ -1,14 +1,16 @@
 <html class="no-js" lang="">
 <head>
-	<meta name="generator" content="Hugo 0.107.0">
+	<meta name="generator" content="Hugo 0.108.0">
   <meta charset="utf-8">
   <title>
     
       RAPIDS.ai | GPU accelerated data science
     
   </title>
+
   <meta name="description" content="RAPIDS.ai | GPU accelerated data science">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fafafa">
 
   <meta property="og:title" content="RAPIDS.ai | GPU accelerated data science">
   <meta property="og:description" content="Open source GPU accelerated data science libraries">
@@ -24,20 +26,22 @@
 
   <link rel="apple-touch-icon" href="/images/icons/icon-512x512.png">
 
-  <link rel="manifest" href="manifest.json">
+  <link rel="manifest" href="../manifest.json">
 
   <link rel="stylesheet" href="/css/normalize.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
   <link rel="stylesheet" href="/css/custom.css">
 
-  <meta name="theme-color" content="#fafafa">
-
-  <script src="https://kit.fontawesome.com/1690513e32.js"></script>
+  
   <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/3.9.1/chart.min.js"
-    integrity="sha512-ElRFoEQdI5Ht6kZvyzXhYG9NqjtkmlkfYk0wr6wHxU9JEHakS7UJZNeml5ALk+8IKlU6jDgMabC3vkumRokgJA=="
-    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  
+  <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.2/papaparse.min.js"></script>
+
+  
+  <script src="https://kit.fontawesome.com/1690513e32.js"></script>
+
 </head>
   <body>
     <div class="navbar is-fixed-top has-shadow has-background-rapids-purple-primary" role="navigation" aria-label="main navigation">
@@ -101,7 +105,7 @@
       <p class="title has-text-white">
         GPU Accelerated Data Science
       </p>
-      <button class="button-rapids-teal"><a href="#">Blank</a></button>
+      <button class="button-rapids-teal"><a href="#quick-start">Quick Start</a></button>
     </div>
     <div class="top-slant-container">
       <div class="top-slant-up has-background-white"></div>
@@ -112,15 +116,15 @@
   
   <section class="hero-announce-container">
       
-      <a href="#" class="hero-announce">
+      <a href="/notices" class="hero-announce">
           <span class="announce-icon"><i class="fa-regular fa-bell"></i></span>
           <button class="button-rapids-purple">
-              CUDA 11.0 EOL 11.12.22
+              22.12 Released!
           </button>
       </a>
       
       
-      <a href="#"  class="hero-announce">
+      <a href="/notices"  class="hero-announce">
           <span class="announce-icon"><i class="fa-regular fa-bell"></i></span>
           <button class="button-rapids-purple"> 
               CUDA 11.8 Support 11.12.22
@@ -128,7 +132,7 @@
       </a>
       
       
-      <a href="#"  class="hero-announce">
+      <a href="/notices"  class="hero-announce">
           <span class="announce-icon"><i class="fa-regular fa-bell"></i></span>
           <button class="button-rapids-purple"> 
               CUDA 11.8 Support 11.12.22
@@ -138,7 +142,6 @@
   </section>
 
 
-
   <!-- Intro -->
   <section class="section padding-bottom-slant">
     <div class="container">
@@ -146,44 +149,41 @@
       <h1 class="has-text-centered mb-5">GPU accelerated data science</h1>
       <div class="columns">
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> What is RAPIDS </h2>
-          <p> NVIDIA GPU based data science libraries in such as cuDF (similar to Pandas), cuML (similar to
-            scikit-learn), and cuGraph (similar to networkX). Learn more about our 14+ libraries and more about
-            hardware-software requirements. </p>
+          <h2><i class="fa-light fa-caret-right"></i> What is RAPIDS </h2>
+          <p> RAPIDS is a suite of projects built on NVIDIA's <a href="https://developer.nvidia.com/machine-learning">CUDA-X</a>, enabling accelerated end-to-end data science and analytics pipelines entirely on GPUs. It relies on NVIDIA® CUDA® primitives for low-level compute optimization, but exposes that GPU parallelism and high-bandwidth memory speed through familiar, user-friendly Python and C++ interfaces. Find more information on our <a href="/learn-more/#about">About Section<i class="fa-solid fa-arrow-up-right"></i> </a>
+          </p>
         </div>
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> Why Use RAPIDS</h2>
-          <p> Spend less time training and moving data, more time optimizing and working. 20x - 100billion X performance
-            increase over CPU with TCOs up to 7x. RAPIDS enables End to end GPU data science, with familiar APIs and
-            libraries that seamlessly work together. Use RAPIDS with a local desktop, in the cloud, or scale out on
-            large clusters. Learn more about RAPIDS acceleration. </p>
+          <h2><i class="fa-light fa-bolt-lightning"></i> Why Use RAPIDS</h2>
+          <p> Spend less time training and moving data, spend more time optimizing and developing. Often more than a <strong>10x</strong> performance
+            increase over CPU with TCOs up to <strong>7x</strong>. RAPIDS enables End to end GPU data science with a broad range of libraries that seamlessly work together for any <a href="https://docs.rapids.ai/deployment/stable/">deployment type and scale</a>. Learn more about where to use RAPIDS on our <a href="/learn-more/#use-cases">Use Cases Section<i class="fa-solid fa-arrow-up-right"></i> </a>
+          </p>
         </div>
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> Open Source </h2>
-          <p>RAPIDS is an open source project, with our repositories freely available on GitHub. Being open source
-            enables a whole ecosystem of contributors, adopters, and integrators using RAPIDS to build their own
-            projects. Find out more in our ecosystems page, what RAPID enables, and what it can do for your project with
-            our example use cases. </p>
+          <h2><i class="fa-light fa-chart-network"></i> Open Source Ecosystem </h2>
+          <p>RAPIDS is an open source project, with our repositories freely available on <a href="https://github.com/rapidsai">GitHub</a>. Being open source enables a whole ecosystem of contributors, adopters, and integrators using RAPIDS to build their own
+            projects. Find out more in our <a href="/learn-more/#about">Ecosystems Page<i class="fa-solid fa-arrow-up-right"></i> </a>
+          </p>
         </div>
       </div>
 
       <div class="columns mt-5">
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> Pandas to cuDF</h2>
+          <h2><i class="fa-thin fa-objects-column"></i> Pandas to cuDF</h2>
           cuDF is nearly a drop in replacement to Pandas for most use cases yet has greatly improved performance.
 
           <canvas id="cuDFchart" width="400" height="200"></canvas>
 
         </div>
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> scikit-learn to cuML </h2>
+          <h2><i class="fa-light fa-microchip-ai"></i> scikit-learn to cuML </h2>
           cuML is nearly a drop in replacement to scikit-learn for most use cases yet has greatly improved performance.
 
           <canvas id="cuMLchart" width="400" height="200"></canvas>
 
         </div>
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> NetworkX to cuGraph </h2>
+          <h2><i class="fa-light fa-circle-nodes"></i> NetworkX to cuGraph </h2>
           cuGraph is nearly a drop in replacement to networkX for most use cases yet has greatly improved performance.
 
           <canvas id="cuGraphChart" width="400" height="200"></canvas>
@@ -198,12 +198,13 @@
   </div>
 
   <!-- Quick Start -->
-  <section class="section has-background-rapids-purple-primary has-text-white">
+  <div id="quick-start"></div>
+  <section class="section has-background-rapids-purple-primary has-text-white padding-bottom-slant">
     <div class="container">
       <h1 class="mb-5 has-text-white">Quick Start</h1>
       <div class="columns">
         <div class="column is-half">
-          <h2 class="has-text-white"><i class="fa-light fa-square-code"></i> Quick Local Install </h2>
+          <h2 class="has-text-white"><i class="fa-light fa-download"></i> Quick Local Install </h2>
           <p>RAPIDS offers several installation methods, the quickest is shown below.</p>
 
           <h3 class="mt-5 has-text-white">Requirements</h3>
@@ -226,14 +227,14 @@ bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
 pip install cuml-cu11 --extra-index-url=https://pypi.ngc.nvidia.com
 pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></pre>
 
-          <h2 class="mt-6 has-text-white"><i class="fa-light fa-square-code"></i> Do I need an Advanced Install?</h2>
+          <h2 class="mt-6 has-text-white"><i class="fa-light fa-gears"></i> Do I need an Advanced Install?</h2>
           <p> If you want to use <strong>Docker</strong>, have an uncommon OS, hardware configuration, environment, or
             need specific versioning such as <code>CUDA 11.5</code> or <code>Python 3.7</code> then you should use the installation selector in our
             <a href="#">Advanced Installations Page <i class="fa-solid fa-arrow-up-right"></i> </a>
           </p>
         </div>
         <div class="column is-half">
-          <h2 class="has-text-white"><i class="fa-light fa-square-code"></i> Try RAPIDS Online </h2>
+          <h2 class="has-text-white"><i class="fa-light fa-cloud-arrow-down"></i> Try RAPIDS Online </h2>
           <p>Don't have access to a GPU system right now? Try out RAPIDS with cloud based hardware from one of these featured channels. </p>
           <br>
 
@@ -249,7 +250,7 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
           <p>Free short term use to try and learn with hands-on labs.</p>
           <br>
 
-          <h2 class="mt-6 has-text-white"><i class="fa-light fa-square-code"></i> User Guides and Tutorials </h2>
+          <h2 class="mt-6 has-text-white"><i class="fa-regular fa-chalkboard-user"></i> User Guides and Tutorials </h2>
           <p>After installing, the best place to start is by looking through these useful guides and tutorial notebooks.
           </p>
           <br>
@@ -278,121 +279,27 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
     <div class="bottom-slant-up has-background-rapids-purple-primary"></div>
   </div>
 
-  <!-- News -->
-  <section class="section padding-bottom-slant padding-top-slant has-background-rapids-gray">
-
-    <div class="container">
-      <h1 class="mb-5">Latest News</h1>
-      <div class="columns">
-        <div class="column is-half">
-          <h2><i class="fa-light fa-square-code"></i> RAPIDS Service Notices </h2>
-          <p> Get the full list of RSN that may effect your projects at the <a href="#"> RNS Section <i class="fa-solid fa-arrow-up-right"></i></a> </p>
-        </div>
-        <div class="column is-half">
-          <h2><i class="fa-light fa-square-code"></i> Featured Content </h2>
-          <p> Check out our featured content, including videos, talks, posts, guides and more in the<a href="#"> Featured Content Section <i class="fa-solid fa-arrow-up-right"></i></a> </p>
-        </div>
-      </div>
-    </div>
-
-
-    <!-- Posts -->
-    <div x-data="{ posts: '' }" x-init="
-      fetch('https://rapidsai.github.io/site-data/posts.json')
-      .then(json => { 
-        if (json.ok) {
-            return json.json()
-        }
-        posts = '' // load blank
-        throw new Error('Failed to load posts.json')
-      })
-      .then(json => {
-        posts = json.medium.slice(0,3)
-      })
-      .catch(error => {console.error(error)})">
-
-      <div class="container mt-5">
-        <h2><i class="fa-light fa-square-code"></i> Recent Posts </h2>
-        <div class="columns">
-          <template x-for="article in posts">
-            <div class="column is-one-third">
-              <a x-bind:href="article.mediumLink" target="_blank">
-                <h3><i class="fa-regular fa-bookmark"></i> <span x-text="article.title"></span> <i class="fa-solid fa-arrow-up-right"></i></h3>
-              </a>
-              <p class="post-text">
-                <i class="fa-sharp fa-solid fa-quote-left"></i> &nbsp; <span x-text="article.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right"></i>
-                <br>
-                <span class="post-action">Post by <span x-text="article.poster"></span> </span>
-              </p>
-            </div>
-          </template>
-        </div>
-      </div>
-
-    </div>
-
-    <!-- Tweets -->
-    <div x-data="{ posts: '' }" x-init="
-      fetch('https://rapidsai.github.io/site-data/posts.json')
-      .then(json => { 
-        if (json.ok) {
-            return json.json()
-        }
-        posts = '' // load blank
-        throw new Error('Failed to load posts.json')
-      })
-      .then(json => {
-        posts = json.twitter.slice(0,3)
-      })
-      .catch(error => {console.error(error)})">
-
-      <div class="container mt-5">
-        <h2><i class="fa-light fa-square-code"></i> Recent Tweets </h2>
-        <div class="columns">
-          <template x-for="tweets in posts">
-            <div class="column is-one-third">
-              <a x-bind:href="tweets.link" target="_blank">
-                <h3><i class="fab fa-twitter"></i> <span x-text="tweets.name"></span> <i class="fa-solid fa-arrow-up-right"></i></h3>
-              </a>
-              <p class="post-text">
-                <i class="fa-sharp fa-solid fa-quote-left"></i> &nbsp; <span x-text="tweets.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right"></i>
-                <br>
-                <span class="post-action">Tweet by <a href="https://twitter.com/rapidsai" target="_blank">@rapidsai</a> </span>
-              </p>
-            </div>
-          </template>
-        </div>
-      </div>
-
-    </div>
-
-  </section>
-
-  <div class="top-slant-container">
-    <div class="top-slant-up has-background-white"></div>
-  </div>
-
   <!-- Ecosystem-->
-  <section class="section">
+  <section class="section padding-top-slant">
     <div class="container">
       <h1 >Ecosystem</h1>
       <div class="columns">
         <div class="column is-third">
-          <h2><i class="fa-light fa-square-code"></i> Hardware </h2>
+          <h2><i class="fa-regular fa-microchip"></i> Hardware </h2>
           <p>Find out details on the core RAPIDS projects like cuDF, cuML, cuGraph, and more on our Ecosystem page. Or
-            jump to our GitHub page or documentation for specific details <a href="#"> See Hardware Section<i class="fa-solid fa-arrow-up-right"></i></a>
+            jump to our GitHub page or documentation for specific details <a href="/ecosystem#hardware"> See Hardware Section<i class="fa-solid fa-arrow-up-right"></i></a>
           </p>
         </div>
         <div class="column is-third">
-          <h2><i class="fa-light fa-square-code"></i> Software </h2>
+          <h2><i class="fa-regular fa-code"></i> Software </h2>
           <p>See all the projects using RAPIDS and all those that integrate well with RAPIDS in our integrations and
-            projects section <a href="#"> See RAPIDS Software Section <i class="fa-solid fa-arrow-up-right"></i></a>
+            projects section <a href="/ecosystem#software"> See RAPIDS Software Section <i class="fa-solid fa-arrow-up-right"></i></a>
           </p>
         </div>
         <div class="column is-third">
-          <h2><i class="fa-light fa-square-code"></i> Developers </h2>
+          <h2><i class="fa-regular fa-laptop-code"></i> Developers </h2>
           <p>See all the projects using RAPIDS and all those that integrate well with RAPIDS in our integrations and
-            projects section <a href="#"> See Developers Section <i class="fa-solid fa-arrow-up-right"></i></a>
+            projects section <a href="/ecosystem#developers"> See Developers Section <i class="fa-solid fa-arrow-up-right"></i></a>
           </p>
         </div>
       </div>
@@ -402,7 +309,7 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
   <section class="section">
     <div class="container">
     
-      <h1>Open Source</h1>
+      <h2>Open Source</h2>
       <div class="is-flex is-flex-wrap-wrap is-justify-content-space-between">
           <a href="https://arrow.apache.org/" target="_blank" class="img-w100" > <img src="/images/apache-arrow_Color.png" alt="Apache Arrow"></a>
           <a href="https://dask.org/" target="_blank" class="img-w100"> <img src="/images/dask_logo.png" alt="Dask"> </a>
@@ -416,7 +323,7 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
 
     <div class="container">
     
-      <h1 class="mt-6">Adopters and Contributors</h1>
+      <h2 class="mt-6">Adopters and Contributors</h2>
       <div class="is-flex is-flex-wrap-wrap is-justify-content-space-between">
           <a href="https://anyscale.com/" target="_blank" class="img-w100"> <img src="/images/Anyscale-logo.png" alt="anyscale"> </a>
           <a href="https://www.boozallen.com" target="_blank" class="img-w100"> <img src="/images/booz-allen-hamilton-logo.png" alt="booz-allen-hamilton"> </a>
@@ -459,28 +366,28 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
     <div class="bottom-slant-down has-background-white"></div>
   </div>
 
-  <!-- Learn More CTA -->
-  <section class="section has-background-rapids-gray padding-top-slant padding-bottom-slant">
+  <!-- Learn More -->
+  <section class="section padding-top-slant padding-bottom-slant">
 
     <div class="container">
       <h1 class="mb-5">Learn More</h1>
       <div class="columns">
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> About RAPIDS</h2>
+          <h2><i class="fa-regular fa-circle-info"></i> About RAPIDS</h2>
           <p> Learn more about the history and goals of RAPIDS starting with Apache Arrow, GoAi, and its relationship with NVIDIA. 
-            <a href="#"> About Section <i class="fa-solid fa-arrow-up-right"></i></a>
+            <a href="/learn-more"> About Section <i class="fa-solid fa-arrow-up-right"></i></a>
           </p>
         </div>
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> Use Cases </h2>
+          <h2><i class="fa-regular fa-chart-user"></i> Use Cases </h2>
           <p> Find business and enterprise connection resources, community resources, and guides for RAPIDS evangelism.
-            <a href="#"> Use Cases and Topics Section <i class="fa-solid fa-arrow-up-right"></i></a>
+            <a href="/learn-more#use-cases"> Use Cases and Topics Section <i class="fa-solid fa-arrow-up-right"></i></a>
            </p>
         </div>
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> Engagement </h2>
+          <h2><i class="fa-regular fa-message-exclamation"></i> Engagement </h2>
           <p>Hear about success stories, resources for integrating with RAPIDS and deployment strategies. 
-            <a href="#"> Engage with RAPIDS Section <i class="fa-solid fa-arrow-up-right"></i></a>
+            <a href="/learn-more/#engagement"> Engage with RAPIDS Section <i class="fa-solid fa-arrow-up-right"></i></a>
           </p>
         </div>
       </div>
@@ -488,13 +395,181 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
 
   </section>
 
+  <div class="bottom-slant-container">
+    <div class="bottom-slant-down has-background-white"></div>
+  </div>
+
+  <!-- News -->
+  <section class="section padding-top-slant padding-bottom-slant has-background-rapids-gray">
+
+    <div class="container">
+      <h1 class="mb-5">Latest News</h1>
+      <div class="columns">
+        <div class="column is-half">
+          <h2><i class="fa-regular fa-triangle-exclamation"></i> RAPIDS Service Notices </h2>
+          <p> Get the full list of RSN that may effect your projects at the <a href="/notices"> RNS Section <i class="fa-solid fa-arrow-up-right"></i></a> </p>
+        </div>
+        <div class="column is-half">
+          <h2><i class="fa-regular fa-books"></i> Featured Content </h2>
+          <p> Check out our featured content, including videos, talks, posts, guides and more in the<a href="/latest-news#featured"> Featured Content Section <i class="fa-solid fa-arrow-up-right"></i></a> </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Posts and Tweets -->
+    
+    <div x-data="{ posts: [{},{}] }" x-init="
+    fetch('https://rapidsai.github.io/site-data/posts.json')
+    .then(json => { 
+      if (json.ok) {
+          return json.json()
+      }
+      posts = '' // load blank
+      throw new Error('Failed to load posts.json')
+    })
+    .then(json => {
+      posts[0] = json.medium.slice(0,3)
+      posts[1] = json.medium.slice(3,6)
+    })
+    .catch(error => {console.error(error)})">
+    
+        <div class="container mt-6">
+          <h2><i class="fa-regular fa-message-quote"></i> Latest Posts </h2>
+          
+          <div class="columns">
+            <template x-for="article in posts[0]">
+              <div class="column is-one-third">
+                <a x-bind:href="article.mediumLink" target="_blank">
+                  <h3><span x-text="article.title"></span></h3>
+                  <p class="post-text">
+                    <i class="fa-sharp fa-solid fa-quote-left has-text-rapids-purple-secondary2"></i> &nbsp; <span x-text="article.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right has-text-rapids-purple-secondary2"></i>
+                    <br>
+                    <span class="post-action">Post by <span x-text="article.poster"></span> </span>
+                  </p>
+                </a>
+              </div>
+            </template>
+          </div>
+    
+          <div class="columns">
+            <template x-for="article in posts[1]">
+              <div class="column is-one-third">
+                <a x-bind:href="article.mediumLink" target="_blank">
+                  <h3> <span x-text="article.title"></span> </h3>
+                  <p class="post-text">
+                    <i class="fa-sharp fa-solid fa-quote-left has-text-rapids-purple-secondary2"></i> &nbsp; <span x-text="article.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right has-text-rapids-purple-secondary2"></i>
+                    <br>
+                    <span class="post-action">Post by <span x-text="article.poster"></span> </span>
+                  </p>
+                </a>
+              </div>
+            </template>
+          </div>
+        
+        </div>
+    
+    </div>
+    
+    
+    <div x-data="{ posts: [{},{}] }" x-init="
+    fetch('https://rapidsai.github.io/site-data/posts.json')
+    .then(json => { 
+      if (json.ok) {
+          return json.json()
+      }
+      posts = '' // load blank
+      throw new Error('Failed to load posts.json')
+    })
+    .then(json => {
+      posts[0] = json.twitter.slice(0,3)
+      posts[1] = json.twitter.slice(3,6)
+    })
+    .catch(error => {console.error(error)})">
+    
+        <div class="container mt-6">
+          <h2><i class="fa-brands fa-twitter"></i> Latest Tweets </h2>
+          
+          <div class="columns">
+            <template x-for="tweets in posts[0]">
+              <div class="column is-one-third">
+                <a x-bind:href="tweets.link" target="_blank">
+                  <p class="post-text">
+                    <i class="fa-sharp fa-solid fa-quote-left has-text-rapids-purple-secondary2"></i> &nbsp; <span x-text="tweets.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right has-text-rapids-purple-secondary2"></i>
+                    <br>
+                    <span class="post-action">Tweet by <span x-text="tweets.name"></span> </span>
+                  </p>
+                </a>
+              </div>
+            </template>
+          </div>
+    
+          <div class="columns">
+            <template x-for="tweets in posts[1]">
+              <div class="column is-one-third">
+                <a x-bind:href="tweets.link" target="_blank">
+                  <p class="post-text">
+                    <i class="fa-sharp fa-solid fa-quote-left has-text-rapids-purple-secondary2"></i> &nbsp; <span x-text="tweets.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right has-text-rapids-purple-secondary2"></i>
+                    <br>
+                    <span class="post-action">Tweet by <span x-text="tweets.name"></span></span>
+                  </p>
+                </a>
+              </div>
+            </template>
+          </div>
+    
+        </div>
+    
+    </div>
+
+  </section>
+
   <!-- Global JS -->
   <script src="js/main.js"></script>
 
+  <!-- Adds Copy Button to Pre.Highlight -->
+  <script>
+     
+     
+  
+    
+    var codeBlocks = document.querySelectorAll('pre.highlight');
+  
+    codeBlocks.forEach(function (codeBlock) {
+      var copyButton = document.createElement('button');
+  
+      
+      if(codeBlock.classList.contains('use-white-copy')){
+        copyButton.className = 'copy-button-white';
+      } else {
+        copyButton.className = 'copy-button';
+      }
+  
+      copyButton.type = 'button';
+      copyButton.ariaLabel = 'Copy code to clipboard';
+      copyButton.innerText = 'Copy';
+  
+      codeBlock.append(copyButton);
+  
+      copyButton.addEventListener('click', function () {
+        var code = codeBlock.querySelector('code').innerText.trim();
+        window.navigator.clipboard.writeText(code);
+  
+        copyButton.innerText = 'Copied';
+        var fourSeconds = 3000;
+  
+        setTimeout(function () {
+          copyButton.innerText = 'Copy';
+        }, fourSeconds);
+      });
+    });
+  </script>
+
   <!-- Chart.js perf charts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.umd.min.js" integrity="sha512-HyprZz2W40JOnIBIXDYHCFlkSscDdYaNe2FYl34g1DOmE9J+zEPoT4HHHZ2b3+milFBtiKVWb4sorDVVp+iuqA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  
   <script>
     const ctx = document.getElementById('cuDFchart');
-    const cuDFchart = new Chart(ctx, {
+    new Chart(ctx, {
       type: 'bar',
       data: {
         labels: ['pandas', 'cuDF'],
@@ -545,7 +620,7 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
     });
 
     const ctx2 = document.getElementById('cuMLchart');
-    const cuMLchart = new Chart(ctx2, {
+    new Chart(ctx2, {
       type: 'bar',
       data: {
         labels: ['scikit-learn', 'cuML'],
@@ -596,7 +671,7 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
     });
 
     const ctx3 = document.getElementById('cuGraphChart');
-    const cuGraphChart = new Chart(ctx3, {
+    new Chart(ctx3, {
       type: 'bar',
       data: {
         labels: ['networkx', 'cuGraph'],
@@ -666,7 +741,7 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
     <div class="footer-row has-text-centered">
         <a class="footer-item" href="/"><i class="fa-regular fa-house-blank"></i> Home</a>
         <span class="footer-item"> | </span>
-        <a class="footer-item" href="/ecosystem"><i class="fa-light fa-solar-system"></i> Ecosystem</a>
+        <a class="footer-item" href="/ecosystem"><i class="fa-light fa-chart-network"></i> Ecosystem</a>
         <span class="footer-item"> | </span>
         <a class="footer-item" href="/learn-more"><i class="fa-regular fa-circle-info"></i> Learn More</a>
         <span class="footer-item"> | </span>
@@ -681,7 +756,11 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
         <a class="footer-item" href="https://github.com/rapidsai"><i class="fa-brands fa-github"></i> GitHub</a>
     </div>
     <div class="footer-row has-text-centered">
-        <a class="footer-item" href="#"><i class="fa-regular fa-chart-line"></i> Visualization</a>
+        <a class="footer-item" href="/notices"><i class="fa-regular fa-triangle-exclamation"></i> Service Notices</a>
+        <span class="footer-item"> | </span>
+        <a class="footer-item" href="/events"><i class="fa-regular fa-calendar-week"></i> Events</a>
+        <span class="footer-item"> | </span>
+        <a class="footer-item" href="/visualization"><i class="fa-regular fa-chart-line"></i> Visualization</a>
     </div>
     <div class="footer-row has-text-centered">
         <a class="footer-item" href="/branding"><i class="fa-light fa-file-circle-info"></i> Branding and Guides</a>

@@ -6,6 +6,7 @@
 
 /* /// general /// */
 body {
+  font-display: fallback;
   font-family: 'Open Sans', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -53,6 +54,10 @@ h2 {
 
 h3 {
   font-weight: bold;
+}
+
+.subheading {
+  font-size: 1.3rem;
 }
 
 strong {
@@ -421,8 +426,9 @@ button:hover {
 
 /* /// posts /// */
 .post-text {
-  color: #5e5e5e;
-  line-height: 1.5rem;
+  color: #666666;
+  font-weight: 400;
+  line-height: 1.4rem;
   overflow: hidden;
   text-overflow: ellipsis;
 }

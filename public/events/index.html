@@ -3,7 +3,7 @@
   <meta charset="utf-8">
   <title>
     
-      RAPIDS.ai | Learn More
+      RAPIDS.ai | Events
     
   </title>
 
@@ -97,160 +97,47 @@
 </div>
     
     
-  <!-- Hero Shortcode -->
-  <section class="hero is-medium hero-rapids-bg mb-5">
-    <div class="hero-body has-text-centered">
-      <img class="hero-img" src="/images/rapids-logo-whitetxt.svg">
-      <p class="title has-text-white">
-        Learn More
-      </p>
-      <button class="button-rapids-teal"><a href="#">Download Slide Deck</a></button>
-    </div>
-    <div class="top-slant-container">
-      <div class="top-slant-up has-background-white"></div>
-    </div>
-  </section>
-
-  <!-- Intro -->
-  <div id="about"></div>
-  <section class="section padding-bottom-slant">
-    <div class="container">
-      <h1 class="has-text-centered mb-5"> Learn about use cases, <br> and engagement with RAPIDS </h1>
-      <div class="columns">
-        <div class="column is-one-third">
-          <h2><i class="fa-regular fa-circle-info"></i>  About </h2>
-          <p> The RAPIDS suite of open source software libraries and APIs gives you the ability to execute end-to-end
-            data science and analytics pipelines entirely on GPUs. Licensed under Apache 2.0, RAPIDS is supported by
-            NVIDIA's extensive hardware and data science experience. RAPIDS utilizes NVIDIA CUDA primitives for
-            low-level compute optimization, and exposes GPU parallelism and high-bandwidth memory speed through
-            user-friendly interfaces.</p>
-          <a href="#">Learn more with our RAPIDS 101 Slide Deck<i class="fa-solid fa-arrow-up-right"></i> </a>
-        </div>
-        <div class="column is-one-third">
-          <h2><i class="fa-regular fa-chart-user"></i> Use Cases </h2>
-          <p> Lear more about RAPIDS success stories, use cases, applications, and other topics related to accelerated data science. 
-        </div>
-        <div class="column is-one-third">
-          <h2><i class="fa-regular fa-message-exclamation"></i> Engagement </h2>
-          <p> Get in contact with RAPIDS, NVIDIA enterprise services, and the broader developer community through these channels. 
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- Use Cases -->
-  <div id="use-cases"></div>
+<!-- Hero Shortcode -->
+<section class="hero is-medium hero-rapids-bg mb-5">
+  <div class="hero-body has-text-centered">
+    <img class="hero-img" src="/images/rapids-logo-whitetxt.svg">
+    <p class="title has-text-white">
+      RAPIDS Events
+    </p>
+    <button class="button-rapids-teal"><a href="#">Blank</a></button>
+  </div>
   <div class="top-slant-container">
-    <div class="top-slant-up has-background-rapids-gray"></div>
+    <div class="top-slant-up has-background-white"></div>
   </div>
+</section>
 
-  <section class="section has-background-rapids-gray pb-8">
+<section class="section padding-bottom-slant">
     <div class="container">
+        <h1 class="mb-5">List of Upcoming and Past RAPIDS Events</h1>
 
-      <h1 class="mb-4">Enterprise Use Cases</h1>
-      <div class="columns">
-        <div class="column is-one-half">
-          <h2><i class="fa-light fa-square-code"></i> RAPIDS in Business X</h2>
-          <p> Read about some featured RAPIDS enterprise users and their success using RAPIDS for this business.</p>
-          <a href="#">Read More on Our Post<i class="fa-solid fa-arrow-up-right"></i> </a>
+        <!-- Full RSN list -->
+        <div x-data="{ fullResults: {} }" x-init="Papa.parse('https://docs.google.com/spreadsheets/d/e/2PACX-1vTUSMyTJWjiYtuV6nvoQIDFSrt6yf00Mt4J9ZaXUMgVi1bAIhcOfnASLhsIH2PhZEbuMCg7Olv9bcZF/pub?output=csv', {
+                download: true,
+                header: true,
+                complete: function(results) {
+                    fullResults = results.data
+            }})
+            ">
+                <template x-for="event in fullResults">
+                    <div class="columns mt-4">
+                        <div class="column is-two-thirds mt-5">
+                            <h2> <span x-text="event.Title"></span> | <span x-text="event.Date"></span>  </h2>
+                            <h3> <span x-text="event.Type"></span> </h3>
+                            <p> <span x-text="event.Description"></span> </p>
+                            <a x-bing:href="event.Link" target="_blank"> Learn More <i class="fa-solid fa-arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                </template>
+            </div> 
         </div>
-        <div class="column is-one-half">
-          <h2><i class="fa-light fa-square-code"></i> RAPIDS in Business Y</h2>
-          <p> Read about some featured RAPIDS enterprise users and their success using RAPIDS for this business.</p>
-          <a href="#">Read More on Our Post<i class="fa-solid fa-arrow-up-right"></i> </a>
-        </div>
-      </div>
-      <div class="columns">
-        <div class="column is-one-half">
-          <h2><i class="fa-light fa-square-code"></i> Y Integrated with RAPIDS</h2>
-          <p> Read about some featured RAPIDS enterprise users and their success using RAPIDS for this business.</p>
-          <a href="#">Read More on Our Post<i class="fa-solid fa-arrow-up-right"></i> </a>
-        </div>
-        <div class="column is-one-half">
-          <h2><i class="fa-light fa-square-code"></i> Z Integrated with RAPIDS</h2>
-          <p> Read about some featured RAPIDS enterprise users and their success using RAPIDS for this business.</p>
-          <a href="#">Read More on Our Post<i class="fa-solid fa-arrow-up-right"></i> </a>
-        </div>
-      </div>
-
-      <div class="columns">
-        <div class="column is-one-half">
-          <h2><i class="fa-light fa-square-code"></i> Deployment Strategies</h2>
-          <p> Learn which method of deployment suites your industry and use case needs. </p>
-          <p> Find out about - NVIDIA Launchpad, Cloud partners, or work with our SA team.</p>
-          <a href="#">Read more here<i class="fa-solid fa-arrow-up-right"></i> </a>
-        </div>
-        <div class="column is-one-half">
-          <h2><i class="fa-light fa-square-code"></i> Industry Based Examples</h2>
-          <p> Here are some helpful guides to start using RAPIDS based on your industry.</p>
-          <a href="#">Read More on Our Post<i class="fa-solid fa-arrow-up-right"></i> </a>
-        </div>
-      </div>
-
-      <h1 class="mt-7 mb-4">Data Science Research</h1>
-      <div class="columns">
-        <div class="column is-one-half">
-          <h2><i class="fa-light fa-square-code"></i> RAPIDS KGMON Competition</h2>
-          <p> Learn more about KGMON and its top level competition results using GPU acceleration and RAPIDS.</p>
-          <a href="#">Read More on Our Post<i class="fa-solid fa-arrow-up-right"></i> </a>
-        </div>
-        <div class="column is-one-half">
-          <h2><i class="fa-light fa-square-code"></i> Featured Research Papers</h2>
-          <p> Many researchers have used RAPIDS as part of their projects, and you can find a list of featured papers below</p>
-          <a href="#">Read More on Our Post<i class="fa-solid fa-arrow-up-right"></i> </a> <br>
-          <a href="#">RAPIDS Citation Guide <i class="fa-solid fa-arrow-up-right"></i> </a>
-        </div>
-      </div>
-
-      <div class="columns">
-        <div class="column is-one-half">
-          <h2><i class="fa-light fa-square-code"></i> Data Science Blue Print</h2>
-          <p> Here are some helpful guides to start using RAPIDS for your data science needs.</p>
-          <a href="#">Read More on Our Post<i class="fa-solid fa-arrow-up-right"></i> </a>
-        </div>
-      </div>
 
     </div>
-  </section>
-
-  <div id="engagement"></div>
-  <div class="bottom-slant-container">
-    <div class="bottom-slant-down has-background-rapids-gray"></div>
-  </div>
-
-  <!-- Engagement -->
-  <section class="section padding-top-slant padding-bottom-slant">
-
-    <div class="container">
-      <h1 class="mb-5"> Engage with RAPIDS </h1>
-      <div class="columns">
-        <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> Business </h2>
-          <p>For higher levels of support, learn more about NVIDIA NVAIE, the enterprise AI suite. </p>
-          <a href="#"> Read more about NVAIE<i class="fa-solid fa-arrow-up-right"></i> </a>
-        </div>
-        <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> Community </h2>
-          <p> Reach out and engage with the RAPIDS community on the following networks: </p>
-          <a href="#">Slack<i class="fa-solid fa-arrow-up-right"></i> </a> <br>
-          <a href="#">Stack Overflow<i class="fa-solid fa-arrow-up-right"></i> </a> <br>
-          <a href="#">Twitter<i class="fa-solid fa-arrow-up-right"></i> </a> <br>
-          <a href="#">NVdevBlogs<i class="fa-solid fa-arrow-up-right"></i> </a> <br>
-        </div>
-        <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> Evangelism </h2>
-          <p> Promote and foster more use of RAPIDS with the following resources: </p>
-          <a href="#">Teaching Kit<i class="fa-solid fa-arrow-up-right"></i> </a> <br>
-          <a href="#">RAPIDS Meetup Quick Start Guide<i class="fa-solid fa-arrow-up-right"></i> </a>
-        </div>
-      </div>
-    </div>
-
-  </section>
-
-  <!-- Global JS -->
-  <script src="/js/main.js"></script>
-
+</section>
 
     <div class="top-slant-container">
     <div class="top-slant-up has-background-rapids-purple-secondary2"></div>
