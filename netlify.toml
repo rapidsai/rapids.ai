@@ -28,5 +28,3 @@ HUGO_VERSION = "0.108.0"
 
 [context.next.environment]
 HUGO_ENABLEGITINFO = "true"
-
-[[redirects]]
