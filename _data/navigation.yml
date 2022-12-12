@@ -1,18 +1,18 @@
 - nav: HOME
   name: index
-  link: /index.html
+  link: /
 
 - nav: ABOUT
   name: about
-  link: /about.html
+  link: /about
 
 - nav: GET STARTED
   name: start
-  link: /start.html
+  link: /start
 
 - nav: COMMUNITY
   name: community
-  link: /community.html
+  link: /community
 
 - nav: BLOG
   name: blog
