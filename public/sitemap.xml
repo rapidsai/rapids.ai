@@ -3,25 +3,35 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>http://rapids.ai/categories/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>http://rapids.ai/branding/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>http://rapids.ai/ecosystem/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>http://rapids.ai/events/</loc>
+    <loc>http://rapids.ai/featured/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>http://rapids.ai/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>http://rapids.ai/learn-more/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
-    <loc>http://rapids.ai/latest-news/</loc>
-  </url><url>
-    <loc>http://rapids.ai/notices/</loc>
-  </url><url>
-    <loc>http://rapids.ai/template/</loc>
-  </url><url>
-    <loc>http://rapids.ai/visualization/</loc>
+    <loc>http://rapids.ai/news/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url><url>
     <loc>http://rapids.ai/tags/</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
   </url>
 </urlset>
