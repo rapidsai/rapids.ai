@@ -6,8 +6,9 @@ description: homepage
   <!-- Hero Shortcode -->
   {{< hero hero-text="GPU Accelerated Data Science" button-link="#quick-start" button-text="Quick Start" >}}
 
-  <!-- Annoucements Shortcode (0-3x)-->
-  {{< announcements text-1="22.12 Released!" link-1="/notices" text-2="CUDA 11.8 Support 11.12.22" link-2="/notices" text-3="CUDA 11.8 Support 11.12.22" link-3="/notices" >}}
+  <!-- Announcements Shortcode (0-3x)-->
+  <!-- UPDATE HERE -->
+  {{< announcements text-1="22.12 Released!" link-1="https://docs.rapids.ai/notices" text-2="CUDA 11.8 Support 11.12.22" link-2="https://docs.rapids.ai/notices" text-3="Ubuntu 18.04 support dropped" link-3="https://docs.rapids.ai/notices" >}}
 
   <!-- Intro -->
   <section class="section padding-bottom-slant">
@@ -17,43 +18,48 @@ description: homepage
       <div class="columns">
         <div class="column is-one-third">
           <h2><i class="fa-light fa-caret-right"></i> What is RAPIDS </h2>
-          <p> RAPIDS is a suite of projects built on NVIDIA's <a href="https://developer.nvidia.com/machine-learning">CUDA-X</a>, enabling accelerated end-to-end data science and analytics pipelines entirely on GPUs. It relies on NVIDIA® CUDA® primitives for low-level compute optimization, but exposes that GPU parallelism and high-bandwidth memory speed through familiar, user-friendly Python and C++ interfaces. Find more information on our <a href="/learn-more/#about">About Section<i class="fa-solid fa-arrow-up-right"></i> </a>
-          </p>
+          <p> RAPIDS is unmatched speed with closely-matched APIs with over a dozen libraries. Built on the shoulders of giants including NVIDIA CUDA and Apache Arrow, unlock the speed of GPUs with code you already know. </p>
+           <a href="/learn-more/#about">Learn more on the About Section <i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
         <div class="column is-one-third">
           <h2><i class="fa-light fa-bolt-lightning"></i> Why Use RAPIDS</h2>
-          <p> Spend less time training and moving data, spend more time optimizing and developing. Often more than a <strong>10x</strong> performance
-            increase over CPU with TCOs up to <strong>7x</strong>. RAPIDS enables End to end GPU data science with a broad range of libraries that seamlessly work together for any <a href="https://docs.rapids.ai/deployment/stable/">deployment type and scale</a>. Learn more about where to use RAPIDS on our <a href="/learn-more/#use-cases">Use Cases Section<i class="fa-solid fa-arrow-up-right"></i> </a>
-          </p>
+          <p> RAPIDS allows, fluid, creative interaction with data for everyone from BI users to AI researchers on the cutting edge. Unmatched speed means less time and less cost moving data and training models in the cloud. </p>
+          <a href="/learn-more/#use-cases">Find out more from RAPIDS Use Cases <i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
         <div class="column is-one-third">
           <h2><i class="fa-light fa-chart-network"></i> Open Source Ecosystem </h2>
-          <p>RAPIDS is an open source project, with our repositories freely available on <a href="https://github.com/rapidsai">GitHub</a>. Being open source enables a whole ecosystem of contributors, adopters, and integrators using RAPIDS to build their own
-            projects. Find out more in our <a href="/learn-more/#about">Ecosystems Page<i class="fa-solid fa-arrow-up-right"></i> </a>
-          </p>
+          <p>RAPIDS is Open Source and available on GitHub. Our mission is to empower and advance the open-source GPU data science ecosystem and work toward flawless integration. </p>
+          <a href="https://github.com/rapidsai">Jump to the RAPIDS GitHub <i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
       </div>
 
       <div class="columns mt-5">
         <div class="column is-one-third">
-          <h2><i class="fa-thin fa-objects-column"></i> Pandas to cuDF</h2>
-          cuDF is nearly a drop in replacement to Pandas for most use cases yet has greatly improved performance.
+          <h2><i class="fa-thin fa-objects-column"></i> Faster Pandas <br> with cuDF</h2>
+          <p>cuDF is nearly a drop in replacement to Pandas for most use cases yet has greatly improved performance.</p>
 
           <canvas id="cuDFchart" width="400" height="200"></canvas>
+          <p>*A100 vs i7-6000</p>
+          <a href="#">Try out this notebook benchmark <i class="fa-solid fa-arrow-up-right"></i> </a>
 
         </div>
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-microchip-ai"></i> scikit-learn to cuML </h2>
-          cuML is nearly a drop in replacement to scikit-learn for most use cases yet has greatly improved performance.
+          <h2><i class="fa-light fa-microchip-ai"></i> Faster Scikit-learn <br> with cuML</h2>
+          <p>cuML is nearly a drop in replacement to scikit-learn for most use cases yet has greatly improved performance.</p>
+          
 
           <canvas id="cuMLchart" width="400" height="200"></canvas>
+          <p>*A100 vs i7-6000</p>
+          <a href="#">Try out this notebook benchmark <i class="fa-solid fa-arrow-up-right"></i> </a>
 
         </div>
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-circle-nodes"></i> NetworkX to cuGraph </h2>
-          cuGraph is nearly a drop in replacement to networkX for most use cases yet has greatly improved performance.
+          <h2><i class="fa-light fa-circle-nodes"></i> Faster networkX <br> with cuGraph</h2>
+          <p>cuGraph is nearly a drop in replacement to networkX for most use cases yet has greatly improved performance.</p>
 
           <canvas id="cuGraphChart" width="400" height="200"></canvas>
+          <p>*A100 vs i7-6000</p>
+          <a href="#">Try out this notebook benchmark <i class="fa-solid fa-arrow-up-right"></i> </a>
 
         </div>
       </div>

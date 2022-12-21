@@ -2,3 +2,8 @@ baseURL = 'http://rapids.ai/'
 languageCode = 'en-us'
 title = 'RAPIDS.ai'
 enableRobotsTXT = true
+
+[sitemap]
+  changefreq = 'monthly'
+  filename = 'sitemap.xml'
+  priority = 0.5
