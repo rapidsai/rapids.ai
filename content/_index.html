@@ -78,12 +78,12 @@ description: homepage
       <div class="columns">
         <div class="column is-half">
           <h2 class="has-text-white"><i class="fa-light fa-download"></i> Quick Local Install </h2>
-          <p>RAPIDS offers several installation methods, the quickest is shown below.</p>
+          <p>RAPIDS offers several installation methods, the quickest is shown below. For more detailed guides go to our <a href="https://docs.rapids.ai/install">install</a> page. </p>
 
           <h3 class="mt-5 has-text-white">Requirements</h3>
           <p><strong>A.</strong> Compatible NVIDIA GPUs</p>
-          <p><strong>B.</strong> Ubuntu 18.04/20.04, CentOS, Rocky Linux 8 or via WSL2 on Windows 11.</p>
-          <p><strong>C.</strong> The latest CUDA and NVIDIA drivers. Check yours with: <code>nvidia-smi</code>
+          <p><strong>B.</strong> Ubuntu 20.04, CentOS, Rocky Linux 8 or via WSL2 on Windows 11.</p>
+          <p><strong>C.</strong> Recent CUDA <strong>and</strong> NVIDIA drivers. Check yours with the: <code>nvidia-smi</code> command.
 
           <h3 class="mt-6 has-text-white">Install with Conda</h3>
           <p><strong>1.</strong> Download and run the conda install script: </p>
@@ -103,46 +103,49 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
           <h2 class="mt-6 has-text-white"><i class="fa-light fa-gears"></i> Do I need an Advanced Install?</h2>
           <p> If you want to use <strong>Docker</strong>, have an uncommon OS, hardware configuration, environment, or
             need specific versioning such as <code>CUDA 11.5</code> or <code>Python 3.7</code> then you should use the installation selector in our
-            <a href="#">Advanced Installations Page <i class="fa-solid fa-arrow-up-right"></i> </a>
+            <a href="https://docs.rapids.ai/install">Advanced Installations Page <i class="fa-solid fa-arrow-up-right"></i> </a>
           </p>
         </div>
         <div class="column is-half">
           <h2 class="has-text-white"><i class="fa-light fa-cloud-arrow-down"></i> Try RAPIDS Online </h2>
-          <p>Don't have access to a GPU system right now? Try out RAPIDS with cloud based hardware from one of these featured channels. </p>
+          <p>Don't have access to a GPU system right now? Try out RAPIDS with cloud based hardware from one of these featured channels: </p>
           <br>
 
-          <h3 class="has-text-white">Amazon Sagemaker Studio Lab</h3>
-          <p>Enables notebook based environments in a free trial - account required.</p>
-          <br>
-
-          <h3 class="has-text-white">PaperSpace</h3>
-          <p>Use Quick Start Instances</p>
-          <br>
-
-          <h3 class="has-text-white"> NVIDIA LaunchPad</h3>
-          <p>Free short term use to try and learn with hands-on labs.</p>
-          <br>
+          <div class="columns">
+            <div class="column is-half">
+              <a href="#" target="_blank">
+                <img src="/images/OpenAmazonStudioLab.png" class="img-w200">
+                <h3 class="has-text-white">Amazon Sagemaker Studio Lab</h3>
+                <p>Enables notebook based environments in a free trial with required account <i class="fa-solid fa-arrow-up-right"></i></p>
+              </a>
+            </div>
+            <div class="column is-half">
+              <a href="#" target="_blank">
+                <img src="/images/OpenGoogleColab.png" class="img-w200">
+                <h3 class="has-text-white">Google CoLab</h3>
+                <p>Enables notebook based environments with required account <i class="fa-solid fa-arrow-up-right"></i></p>
+              </a>       
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column is-half">
+              <a href="#" target="_blank">
+                <img src="/images/paperspace.png" class="img-w150">
+                <h3 class="has-text-white">PaperSpace</h3>
+                <p>Use Quick Start Instances through a limited free account <i class="fa-solid fa-arrow-up-right"></i></p>
+              </a>
+            </div>
+            <div class="column is-half">
+              <a href="#" target="_blank">
+                <img src="/images/nv-launchpad.png" class="img-w150">
+                <h3 class="has-text-white"> NVIDIA LaunchPad</h3>
+                <p>Free short term use to try and learn with hands-on lab environment<i class="fa-solid fa-arrow-up-right"></i></p>
+              </a>  
+            </div>
+          </div>
 
           <h2 class="mt-6 has-text-white"><i class="fa-regular fa-chalkboard-user"></i> User Guides and Tutorials </h2>
-          <p>After installing, the best place to start is by looking through these useful guides and tutorial notebooks.
-          </p>
-          <br>
-
-          <h3 class="has-text-white"> First Time Users </h3>
-          <p> Description of notebook goes here with link <a href="#">Try Out Now <i
-                class="fa-solid fa-arrow-up-right"></i> </a> </p>
-          <br>
-
-          <h3 class="has-text-white"> Example Notebook </h3>
-          <p> Description of notebook goes here with link <a href="#">Try Out Now <i
-                class="fa-solid fa-arrow-up-right"></i> </a> </p>
-          <br>
-
-          <h3 class="has-text-white">User Guide Page</h3>
-          <p> Find more detailed and extensive guides on our<a href="#"> User Guide Page<i
-                class="fa-solid fa-arrow-up-right"></i> </a> </p>
-          <br>
-
+          <p>After installing, the best place to start is by looking through our useful guides and tutorial notebooks. These are helpful for first time users and experts alike on our <a href="https://docs.rapids.ai/user-guide"> User Guides Page<i class="fa-solid fa-arrow-up-right"></i> </a> </p> </p>
         </div>
       </div>
     </div>
