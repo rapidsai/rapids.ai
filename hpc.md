@@ -109,7 +109,7 @@ import cudf
 import dask.dataframe as dd
 from dask.distributed import Client
 
-client = Client(scheduler_file="$LOCAL_DIRECTORY/scheduler.json")
+client = Client(scheduler_file="$LOCAL_DIRECTORY/dask-scheduler.json")
 cdf = cudf.datasets.timeseries()
 
 ddf = dd.from_pandas(cdf, npartitions=10)
