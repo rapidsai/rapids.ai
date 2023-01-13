@@ -1,0 +1,6 @@
+---
+layout: none
+---
+
+# Redirects from what the browser requests to what we serve
+/slack-invite      {{ site.slack_invite }}

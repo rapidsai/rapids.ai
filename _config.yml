@@ -3,6 +3,7 @@ title: RAPIDS
 postsurl: "https://rapidsai.github.io/site-data/posts.json"
 slack_invite: "https://join.slack.com/t/rapids-goai/shared_invite/zt-trnsul8g-Sblci8dk6dIoEeGpoFcFOQ"
 exclude: ['_drafts', 'README.md', '.gitignore', 'CNAME']
+include: ['_redirects']
 plugins:
   - jekyll-redirect-from
 
