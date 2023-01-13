@@ -12,9 +12,6 @@ collections:
     output: false
   posts:
     output: false
-  redirects:
-    output: true
-    permalink: /:path/
 
 defaults:
   - scope:
