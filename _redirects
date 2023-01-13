@@ -3,4 +3,5 @@ layout: none
 ---
 
 # Redirects from what the browser requests to what we serve
-/slack-invite      {{ site.slack_invite }}
+/slack-invite       {{ site.slack_invite }}
+/smsl               https://studiolab.sagemaker.aws/import/github/rapidsai-community/rapids-smsl/blob/main/rapids-smsl.ipynb
