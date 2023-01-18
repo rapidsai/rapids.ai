@@ -106,7 +106,7 @@ In four steps, easily install RAPIDS on a local system or cloud instance with a 
 
 All provisioned systems need to be RAPIDS capable. Here's what is required:
 
-<i class="fas fa-microchip text-purple"></i> **GPU:** NVIDIA Pascal™ or better with **[compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 6.0+ **[More details <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://medium.com/dropout-analytics/which-gpus-work-with-rapids-ai-f562ef29c75f){: target="_blank"}**
+<i class="fas fa-microchip text-purple"></i> **GPU:** NVIDIA Pascal™ or better with **[compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 6.0+
 
 <i class="fas fa-desktop text-purple"></i> **OS:** One of the following OS versions:
 > <i class="fa-brands fa-ubuntu text-purple"></i>Ubuntu 18.04/20.04 or CentOS 7 / Rocky Linux 8 with <code>gcc/++</code> 9.0+
