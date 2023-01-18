@@ -286,7 +286,7 @@ Pip installation of RAPIDS is back!  You can **[try our experimental pip package
 # Step 3: Install RAPIDS
 {: .section-title-full}
 
-RAPIDS is available in conda packages, docker images, and from source builds. Use the tool below to select your preferred method, packages, and environment to install RAPIDS. Certain combinations may not be possible and are dimmed automatically. Be sure you've met the **[system requirements](#requirements)** above and see the **[Next Steps](#next-steps)** below.
+RAPIDS is available in conda packages, docker images, and from source builds. Use the tool below to select your preferred method, packages, and environment to install RAPIDS. Certain combinations may not be possible and are dimmed automatically. Be sure you've met the **[System Requirements](#requirements)** above and see the **[Next Steps](#next-steps)** below.
 {: .padding-bottom-3em }
 
 ## **Release Selector**
