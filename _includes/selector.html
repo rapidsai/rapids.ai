@@ -324,7 +324,7 @@
             },
             getImgOptionText(option) {
                 if (option === "notebooks") return "Include Jupyter Notebooks";
-                if (option === "development") return "Development Image";
+                if (option === "development") return "Development Image (only on Docker Hub)";
                 return option;
             },
             getImgLoc(loc) {
@@ -425,6 +425,8 @@
             },
             disableUnsupportedImgOption(option) {
                 var isDisabled = false;
+                var isNGC = this.active_img_loc === "NGC"
+                if (isNGC && option === "development") isDisabled = true;
                 return isDisabled;
             },
             disableUnsupportedImgLoc(loc) {
@@ -480,6 +482,11 @@
                 if (this.isDisabled(e.target)) return;
 
                 if (loc === "NGC" && this.active_release !== "Stable") this.active_release = "Stable";
+
+                // Disable development option when clicking NGC
+                if (loc === "NGC" && this.active_img_options.includes("development")) {
+                    this.active_img_options = this.active_img_options.filter(el => el !== "development")
+                }
 
                 this.active_img_loc = loc;
             },
