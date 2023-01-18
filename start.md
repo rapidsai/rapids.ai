@@ -63,7 +63,7 @@ In four steps, easily install RAPIDS on a local system or cloud instance with a 
 ## **[<i class="fad fa-chevron-double-down"></i> Step 2: Install Environment](#environment)**
 
 - Choose to use Conda, Docker, or **[try pip (Experimental)](pip.html)**.
-- Choose to Build from source 
+- Choose to Build from source
 
 
 {% endcapture %}
@@ -286,7 +286,7 @@ Pip installation of RAPIDS is back!  You can **[try our experimental pip package
 # Step 3: Install RAPIDS
 {: .section-title-full}
 
-RAPIDS is available in conda packages, docker images, and from source builds. Use the tool below to select your preferred method, packages, and environment to install RAPIDS. Certain combinations may not be possible and are dimmed automatically. Be sure you've met the required **[Prerequisites above](#requirements)** and see the **[Next Steps](#next-steps)** below.
+RAPIDS is available in conda packages, docker images, and from source builds. Use the tool below to select your preferred method, packages, and environment to install RAPIDS. Certain combinations may not be possible and are dimmed automatically. Be sure you've met the **[system requirements](#requirements)** above and see the **[Next Steps](#next-steps)** below.
 {: .padding-bottom-3em }
 
 ## **Release Selector**
