@@ -5,7 +5,6 @@ tagline: "Get RAPIDS Now"
 button_text: "SELECT RELEASE"
 button_link: "#get-rapids"
 layout: default
-redirect_from: "/documentation.html" # redirect from old page to ensure existing links still work
 ---
 
 # Getting Started
