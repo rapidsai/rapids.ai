@@ -80,7 +80,7 @@ Try on Kaggle with:
 NVTabular and HugeCTR both provide a collection of examples based on a variety of recommender system datasets that are publicly available. Checkout the **[NVTabular notebooks](https://github.com/NVIDIA/NVTabular/tree/main/examples){: target="_blank"}** and **[HugeCTR notebooks](https://github.com/NVIDIA/HugeCTR/tree/master/notebooks){: target="_blank"}**.
 
 ## <i class="fab fa-docker"></i> Pull Our Docker Container
-Merlin published docker containers with pre-installed versions of the latest release on **[NVIDIA's NGC repository](https://ngc.nvidia.com/catalog/containers?orderBy=modifiedDESC&pageNumber=0&query=%20label%3A%22Merlin%22&quickFilter=containers&filters=){: target="_blank"}**. Pull the container and try out Merlin yourself.
+Merlin published docker containers with pre-installed versions of the latest release on **[NVIDIA's NGC repository](https://catalog.ngc.nvidia.com/containers?filters=&orderBy=dateModifiedDESC&query=label:%22Merlin%22&page=0&pageSize=25){: target="_blank"}**. Pull the container and try out Merlin yourself.
 
 
 ## <i class="far fa-file-code"></i> See The Latest Docs
