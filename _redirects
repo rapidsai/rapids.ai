@@ -4,6 +4,7 @@ layout: none
 
 # Redirects from what the browser requests to what we serve
 /cloud              https://docs.rapids.ai/deployment/stable/cloud/
+/cloud.html         https://docs.rapids.ai/deployment/stable/cloud/
 /smsl               https://studiolab.sagemaker.aws/import/github/rapidsai-community/rapids-smsl/blob/main/rapids-smsl.ipynb
 /slack-invite       {{ site.slack_invite }}
 /documentation.html /start
