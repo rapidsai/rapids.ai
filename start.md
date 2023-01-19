@@ -105,7 +105,7 @@ In four steps, easily install RAPIDS on a local system or cloud instance with a 
 
 All provisioned systems need to be RAPIDS capable. Here's what is required:
 
-<i class="fas fa-microchip text-purple"></i> **GPU:** NVIDIA Pascal™ or better with **[compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 6.0+ **[More details <i class="fa fa-angle-double-right" aria-hidden="true"></i>](https://medium.com/dropout-analytics/which-gpus-work-with-rapids-ai-f562ef29c75f){: target="_blank"}**
+<i class="fas fa-microchip text-purple"></i> **GPU:** NVIDIA Pascal™ or better with **[compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 6.0+
 
 <i class="fas fa-desktop text-purple"></i> **OS:** One of the following OS versions:
 > <i class="fa-brands fa-ubuntu text-purple"></i>Ubuntu 18.04/20.04 or CentOS 7 / Rocky Linux 8 with <code>gcc/++</code> 9.0+
@@ -117,9 +117,10 @@ All provisioned systems need to be RAPIDS capable. Here's what is required:
 <i class="fas fa-download text-purple"></i> **CUDA & NVIDIA Drivers:** One of the following supported versions:
 {: .no-tb-margins }
 
-- <i class="fas fa-check-circle text-purple"></i> [11.2](https://developer.nvidia.com/cuda-11.2.0-download-archive){: target="_blank"} & v460.27.03+
-- <i class="fas fa-check-circle text-purple"></i> [11.4](https://developer.nvidia.com/cuda-11-4-0-download-archive){: target="_blank"} & v470.42.01+
-- <i class="fas fa-check-circle text-purple"></i> [11.5](https://developer.nvidia.com/cuda-11-5-0-download-archive){: target="_blank"} & v495.29.05+
+- <i class="fas fa-check-circle text-purple"></i> [CUDA 11.2](https://developer.nvidia.com/cuda-11.2.0-download-archive){: target="_blank"} with Driver 460.27.03 or newer
+- <i class="fas fa-check-circle text-purple"></i> [CUDA 11.4](https://developer.nvidia.com/cuda-11-4-0-download-archive){: target="_blank"} with Driver 470.42.01 or newer
+- <i class="fas fa-check-circle text-purple"></i> [CUDA 11.5](https://developer.nvidia.com/cuda-11-5-0-download-archive){: target="_blank"} with Driver 495.29.05 or newer
+- Note: RAPIDS is tested with and officially supports the versions listed above. Newer CUDA and driver versions may also work with RAPIDS. See [CUDA compatibility](https://docs.nvidia.com/deploy/cuda-compatibility/index.html) for details.
 
 {% endcapture %}
 {% capture req_mid %}
