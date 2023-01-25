@@ -7,27 +7,72 @@ description: Use cases and enterprise topics
   {{< hero hero-text="Learn More" button-link="#" button-text="Download Slide Deck" >}}
 
   <!-- Intro -->
-  <div id="about"></div>
-  <section class="section padding-bottom-slant">
+  <section class="section mb-6">
     <div class="container">
-      <h1 class="has-text-centered mb-5"> Learn about use cases, <br> and engagement with RAPIDS </h1>
+      <h1 class="has-text-centered mb-5"> Learn about the project, use cases, <br> and engagement with RAPIDS </h1>
       <div class="columns">
         <div class="column is-one-third">
-          <h2><i class="fa-regular fa-circle-info"></i>  About </h2>
-          <p> The RAPIDS suite of open source software libraries and APIs gives you the ability to execute end-to-end
-            data science and analytics pipelines entirely on GPUs. Licensed under Apache 2.0, RAPIDS is supported by
-            NVIDIA's extensive hardware and data science experience. RAPIDS utilizes NVIDIA CUDA primitives for
-            low-level compute optimization, and exposes GPU parallelism and high-bandwidth memory speed through
-            user-friendly interfaces.</p>
-          <a href="#">Learn more with our RAPIDS 101 Slide Deck<i class="fa-solid fa-arrow-up-right"></i> </a>
+          <h2><i class="fa-regular fa-circle-info"></i> About </h2>
+          <p>RAPIDS is a collection of open source software libraries and APIs that gives you the ability to execute end-to-end
+            data science and analytics pipelines entirely on GPUs. </p>
         </div>
         <div class="column is-one-third">
           <h2><i class="fa-regular fa-chart-user"></i> Use Cases </h2>
-          <p> Lear more about RAPIDS success stories, use cases, applications, and other topics related to accelerated data science. </p>
+          <p> Lear more about RAPIDS success stories, use cases, applications, data science research and other topics related to GPU accelerated data science. </p>
         </div>
         <div class="column is-one-third">
-          <h2><i class="fa-regular fa-message-exclamation"></i> Engagement </h2>
+          <h2><i class="fa-regular fa-message-exclamation"></i> Get Involved </h2>
           <p> Get in contact with RAPIDS, NVIDIA enterprise services, and the broader developer community through these channels. </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="bottom-slant-container">
+    <div class="bottom-slant-down has-background-white"></div>
+  </div>
+
+  <!-- About  -->
+  <div id="about"></div>
+  <section class="section padding-top-slant padding-bottom-slant">
+    <div class="container">
+      <h1 class="mb-5"> About The Project</h1>
+      <div class="columns">
+        <div class="column is-one-third">
+          <h2><i class="fa-light fa-house-laptop"></i> Familiar </h2>
+          <p>Utilizing NVIDIA CUDA primitives for low-level compute optimization, RAPIDS exposes GPU parallelism and high-bandwidth memory speed through user-friendly interfaces:</p>
+          <div class="content">
+            <ul> 
+              <li>dataframe and ETL processing Pandas-like cuDF</li>
+              <li>machine learning with SciKit-Learn like cuML</li>
+              <li>graph processing with NetworkX like cuGraph</li>
+              <li>spatial analytics with GeoPands like cuSpatial</li>
+              <li>image processing with scikit-image like cuCIM</li>
+              <li>low level compute primitives with RAFT</li>
+              <li>signal processing with SciPy like cuSignal</li>
+              <li>seamless cross-filtered dashboards with cuxfilter</li>
+            </ul>
+
+            and more...
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <h2><i class="fa-light fa-layer-plus"></i> Scalable </h2>
+          <p> RAPIDS delivers impressive acceleration from on a single GPU desktop system all the way to MNMG (multi-node multi-GPU) configurations on an expansive range of NVIDIA hardware.  </p>
+          <div class="content">
+            <ul> 
+              <li>single GPU with cuDF</li>
+              <li>Multi-GPU with Dask-cuDF</li>
+              <li>Large clusters with RAPIDS-Spark</li>
+              <li>HPC with RAPIDS and Slurm</li>
+            </ul>
+
+            and more...
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <h2><i class="fa-light fa-message-code"></i> Open Source </h2>
+          <p> RAPIDS had its start from the Apache Arrow and GoAi projects based on a columnar, in-memory data structure that delivers efficient and fast data interchange with flexibility to support complex data models. With NVIDIA backing, it has maintained a focus on open source development (typically Apache 2.0 licensed) and collaboration with a broad community of cutting edge data science projects. </p>
         </div>
       </div>
     </div>
@@ -45,70 +90,47 @@ description: Use cases and enterprise topics
       <h1 class="mb-4">Enterprise Use Cases</h1>
       <div class="columns">
         <div class="column is-one-half">
-          <h2><i class="fa-light fa-square-code"></i> RAPIDS in Business X</h2>
-          <p> Read about some featured RAPIDS enterprise users and their success using RAPIDS for this business.</p>
-          <a href="#">Read More on Our Post<i class="fa-solid fa-arrow-up-right"></i> </a>
+          <h2><i class="fa-light fa-cart-shopping-fast"></i> Walmart + RAPIDS ML</h2>
+          <p> When you are a global-scale company, precision is everything. Learn how Walmart implemented XGBoost to increase forecast accuracy and potentially save billions of dollars.</p>
+          <a href="https://www.datanami.com/2019/03/22/how-walmart-uses-gpus-for-better-demand-forecasting/">Read More <i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
         <div class="column is-one-half">
-          <h2><i class="fa-light fa-square-code"></i> RAPIDS in Business Y</h2>
-          <p> Read about some featured RAPIDS enterprise users and their success using RAPIDS for this business.</p>
-          <a href="#">Read More on Our Post<i class="fa-solid fa-arrow-up-right"></i> </a>
+          <h2><i class="fa-light fa-bee"></i> Bumble + RAPIDS ML</h2>
+          <p> Buzzwords is Bumble's open-source GPU-powered topic modelling tool, developed in house and building upon the work found in BERTopic and Top2Vec. Buzzwords uses cuML's UMAP and HDDBSCAN algorithms. Start using Buzzwords and learn more here.</p>
+          <a href="https://medium.com/bumble-tech/multilingual-gpu-powered-topic-modelling-at-scale-dc8bd08609ef">Read More <i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
       </div>
       <div class="columns">
         <div class="column is-one-half">
-          <h2><i class="fa-light fa-square-code"></i> Y Integrated with RAPIDS</h2>
-          <p> Read about some featured RAPIDS enterprise users and their success using RAPIDS for this business.</p>
-          <a href="#">Read More on Our Post<i class="fa-solid fa-arrow-up-right"></i> </a>
+          <h2><i class="fa-light fa-circle-phone-hangup"></i> AT&T + RAPIDS ETL</h2>
+          <p> AT&T was able to do more faster by moving data science workloads to GPU.</p>
+          <a href="https://www.nvidia.com/en-us/on-demand/session/gtcfall22-a41235/">Learn More <i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
         <div class="column is-one-half">
-          <h2><i class="fa-light fa-square-code"></i> Z Integrated with RAPIDS</h2>
-          <p> Read about some featured RAPIDS enterprise users and their success using RAPIDS for this business.</p>
-          <a href="#">Read More on Our Post<i class="fa-solid fa-arrow-up-right"></i> </a>
-        </div>
-      </div>
-
-      <div class="columns">
-        <div class="column is-one-half">
-          <h2><i class="fa-light fa-square-code"></i> Deployment Strategies</h2>
-          <p> Learn which method of deployment suites your industry and use case needs. </p>
-          <p> Find out about - NVIDIA Launchpad, Cloud partners, or work with our SA team.</p>
-          <a href="#">Read more here<i class="fa-solid fa-arrow-up-right"></i> </a>
-        </div>
-        <div class="column is-one-half">
-          <h2><i class="fa-light fa-square-code"></i> Industry Based Examples</h2>
-          <p> Here are some helpful guides to start using RAPIDS based on your industry.</p>
-          <a href="#">Read More on Our Post<i class="fa-solid fa-arrow-up-right"></i> </a>
+          <h2><i class="fa-brands fa-aws"></i> Amazon + RAPIDS Graph Analytics</h2>
+          <p> See how RAPIDS is enabling work on the very cutting edge by enabling Graph Neural Networks (GNN) .</p>
+          <a href="https://www.nvidia.com/en-us/on-demand/session/gtcfall22-a41386/">Read More <i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
       </div>
 
       <h1 class="mt-7 mb-4">Data Science Research</h1>
       <div class="columns">
         <div class="column is-one-half">
-          <h2><i class="fa-light fa-square-code"></i> RAPIDS KGMON Competition</h2>
-          <p> Learn more about KGMON and its top level competition results using GPU acceleration and RAPIDS.</p>
-          <a href="#">Read More on Our Post<i class="fa-solid fa-arrow-up-right"></i> </a>
+          <h2><i class="fa-light fa-chess-queen"></i> KGMON + RAPIDS</h2>
+          <p> Learn about Kaggle Grandmasters of NVIDIA (KGMoN), and learn how they use RAPIDS to build winning recommender systems, predict degradation rates in RNA molecules, identify melanoma in medical imaging, and more.</p>
+          <a href="https://www.nvidia.com/en-us/ai-data-science/kaggle-grandmasters/">Read More the KGMON Page<i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
         <div class="column is-one-half">
-          <h2><i class="fa-light fa-square-code"></i> Featured Research Papers</h2>
-          <p> Many researchers have used RAPIDS as part of their projects, and you can find a list of featured papers below</p>
-          <a href="#">Read More on Our Post<i class="fa-solid fa-arrow-up-right"></i> </a> <br>
-          <a href="#">RAPIDS Citation Guide <i class="fa-solid fa-arrow-up-right"></i> </a>
-        </div>
-      </div>
-
-      <div class="columns">
-        <div class="column is-one-half">
-          <h2><i class="fa-light fa-square-code"></i> Data Science Blue Print</h2>
-          <p> Here are some helpful guides to start using RAPIDS for your data science needs.</p>
-          <a href="#">Read More on Our Post<i class="fa-solid fa-arrow-up-right"></i> </a>
+          <h2><i class="fa-light fa-book-bookmark"></i> Research Papers</h2>
+          <p> Using RAPIDS in your data science research and development? Let us know and use the below guide for citations: </p> 
+          <a href="/branding">RAPIDS Citation Guide <i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
       </div>
 
     </div>
   </section>
 
-  <div id="engagement"></div>
+  <div id="get-invovled"></div>
   <div class="bottom-slant-container">
     <div class="bottom-slant-down has-background-rapids-gray"></div>
   </div>
@@ -117,26 +139,27 @@ description: Use cases and enterprise topics
   <section class="section padding-top-slant padding-bottom-slant">
 
     <div class="container">
-      <h1 class="mb-5"> Engage with RAPIDS </h1>
+      <h1 class="mb-5"> Get Involved </h1>
       <div class="columns">
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> Business </h2>
-          <p>For higher levels of support, learn more about NVIDIA NVAIE, the enterprise AI suite. </p>
-          <a href="#"> Read more about NVAIE<i class="fa-solid fa-arrow-up-right"></i> </a>
+          <h2><i class="fa-light fa-briefcase"></i> Business </h2>
+          <p>Use RAPIDS directly or through NVIDIA AI Enterprise (NVAIE), which provides extensive optimization, certified hardware profiles, and direct IT support. </p>
+          <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/"> Read more about NVAIE <i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> Community </h2>
-          <p> Reach out and engage with the RAPIDS community on the following networks: </p>
-          <a href="#">Slack<i class="fa-solid fa-arrow-up-right"></i> </a> <br>
-          <a href="#">Stack Overflow<i class="fa-solid fa-arrow-up-right"></i> </a> <br>
-          <a href="#">Twitter<i class="fa-solid fa-arrow-up-right"></i> </a> <br>
-          <a href="#">NVdevBlogs<i class="fa-solid fa-arrow-up-right"></i> </a> <br>
+          <h2><i class="fa-light fa-users-line"></i> Community </h2>
+          <p> Reach out and engage with the RAPIDS community on the following channels: </p>
+          <a href="https://join.slack.com/t/rapids-goai/shared_invite/zt-trnsul8g-Sblci8dk6dIoEeGpoFcFOQ" target="_blank"><i class="fa-brands fa-slack"></i> GoAi Slack Channel <i class="fa-solid fa-arrow-up-right"></i> </a> |
+          <a href="https://stackoverflow.com/tags/rapids"><i class="fa-brands fa-stack-overflow"></i> Stack Overflow <i class="fa-solid fa-arrow-up-right"></i> </a> <br>
+          <a href="https://twitter.com/rapidsai"><i class="fa-brands fa-twitter"></i> Twitter <i class="fa-solid fa-arrow-up-right"></i> </a> |
+          <a href="https://developer.nvidia.com/blog/tag/rapids/"><i class="fa-light fa-square-rss"></i> NVIDIA Developer Blogs <i class="fa-solid fa-arrow-up-right"></i> </a> <br>
         </div>
         <div class="column is-one-third">
-          <h2><i class="fa-light fa-square-code"></i> Evangelism </h2>
-          <p> Promote and foster more use of RAPIDS with the following resources: </p>
-          <a href="#">Teaching Kit<i class="fa-solid fa-arrow-up-right"></i> </a> <br>
-          <a href="#">RAPIDS Meetup Quick Start Guide<i class="fa-solid fa-arrow-up-right"></i> </a>
+          <h2><i class="fa-light fa-bullhorn"></i> Evangelism </h2>
+          <p> Promote and foster more use of RAPIDS with these Deep Learning Institute (DLI)</a> courses: </p>
+          <a href="https://courses.nvidia.com/courses/course-v1:DLI+S-DS-01+V1/" target="_blank">Accelerating End-to-End Data Science Workflows <i class="fa-solid fa-arrow-up-right"></i> </a> <br>
+          <a href="https://courses.nvidia.com/courses/course-v1:DLI+S-DS-01+V1/" target="_blank">Fundamentals of Accelerated Data Science <i class="fa-solid fa-arrow-up-right"></i> </a> 
+
         </div>
       </div>
     </div>
