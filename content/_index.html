@@ -18,18 +18,18 @@ description: homepage
       <div class="columns">
         <div class="column is-one-third">
           <h2><i class="fa-light fa-caret-right"></i> What is RAPIDS </h2>
-          <p> RAPIDS is unmatched speed with closely-matched APIs with over a dozen libraries. Built on the shoulders of giants including NVIDIA CUDA and Apache Arrow, unlock the speed of GPUs with code you already know. </p>
+          <p> RAPIDS is unmatched speed with closely-matched APIs of over a dozen libraries. Built on the shoulders of giants including <a href="https://developer.nvidia.com/cuda-toolkit" target="_blank">NVIDIA CUDA</a> and <a href="https://arrow.apache.org/" target="_blank">Apache Arrow</a>, unlock the speed of GPUs with code you already know. </p>
            <a href="/learn-more/#about">Learn more on the About Section <i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
         <div class="column is-one-third">
           <h2><i class="fa-light fa-bolt-lightning"></i> Why Use RAPIDS</h2>
-          <p> RAPIDS allows, fluid, creative interaction with data for everyone from BI users to AI researchers on the cutting edge. Unmatched speed means less time and less cost moving data and training models in the cloud. </p>
+          <p> RAPIDS allows fluid, creative interaction with data for everyone from BI users to AI researchers on the cutting edge. Unmatched speed means less time and less cost moving data and training models. </p>
           <a href="/learn-more/#use-cases">Find out more from RAPIDS Use Cases <i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
         <div class="column is-one-third">
           <h2><i class="fa-light fa-chart-network"></i> Open Source Ecosystem </h2>
-          <p>RAPIDS is Open Source and available on GitHub. Our mission is to empower and advance the open-source GPU data science ecosystem and work toward flawless integration. </p>
-          <a href="https://github.com/rapidsai">Jump to the RAPIDS GitHub <i class="fa-solid fa-arrow-up-right"></i> </a>
+          <p>RAPIDS is Open Source and available on <a href="https://github.com/rapidsai" taget="_blank">GitHub</a>. Our mission is to empower and advance the open-source GPU data science ecosystem and work toward flawless integration. </p>
+          <a href="https://github.com/rapidsai">Jump to RAPIDS on GitHub <i class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
       </div>
 
@@ -47,7 +47,6 @@ description: homepage
           <h2><i class="fa-light fa-microchip-ai"></i> Faster Scikit-learn <br> with cuML</h2>
           <p>cuML is nearly a drop in replacement to scikit-learn for most use cases and has greatly improved performance.</p>
           
-
           <canvas id="cuMLchart" width="400" height="200"></canvas>
           <p>*A100 vs i7-6000</p>
           <a href="#">Try out this notebook benchmark <i class="fa-solid fa-arrow-up-right"></i> </a>
@@ -78,12 +77,12 @@ description: homepage
       <div class="columns">
         <div class="column is-half">
           <h2 class="has-text-white"><i class="fa-light fa-download"></i> Quick Local Install </h2>
-          <p>RAPIDS offers several installation methods, the quickest is shown below. For more detailed guides go to our <a href="https://docs.rapids.ai/install">install</a> page. </p>
+          <p>RAPIDS offers several installation methods, the quickest is shown below. For more detailed guides go to our <a href="https://docs.rapids.ai/install">install page <i class="fa-solid fa-arrow-up-right"></i></a> </p>
 
           <h3 class="mt-5 has-text-white">Requirements</h3>
-          <p><strong>A.</strong> Compatible NVIDIA GPUs</p>
-          <p><strong>B.</strong> Ubuntu 20.04, CentOS, Rocky Linux 8 or via WSL2 on Windows 11.</p>
-          <p><strong>C.</strong> Recent CUDA <strong>and</strong> NVIDIA drivers. Check yours with the: <code>nvidia-smi</code> command.
+          <p><strong>A.</strong> NVIDIA Pascal™ or better GPU with a <a href="https://developer.nvidia.com/cuda-gpus" taget="_blank">compute capability 6.0 and above <i class="fa-solid fa-arrow-up-right"></i></a></p>
+          <p><strong>B.</strong> Ubuntu 20.04, CentOS, Rocky Linux 8 or via WSL2 on Windows 11</p>
+          <p><strong>C.</strong> Recent <a href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html" target="_blank"> CUDA-version <em>and</em> NVIDIA-driver pairs</a>. Check yours with: <code>nvidia-smi</code>
 
           <h3 class="mt-6 has-text-white">Install with Conda</h3>
           <p><strong>1.</strong> Download and run the conda install script: </p>
@@ -100,9 +99,12 @@ bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
 pip install cuml-cu11 --extra-index-url=https://pypi.ngc.nvidia.com
 pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></pre>
 
+            <h3 class="mt-6 has-text-white">Install with Docker</h3>
+            <p>Use the <a href="https://docs.rapids.ai/install">install page selector <i class="fa-solid fa-arrow-up-right"></i> </a></p>
+
           <h2 class="mt-8 has-text-white"><i class="fa-light fa-gears"></i> Do I need an Advanced Install?</h2>
-          <p> If you want to use <strong>Docker</strong>, have an uncommon OS, hardware configuration, environment, or
-            need specific versioning such as <code>CUDA 11.5</code> or <code>Python 3.7</code> then you should use the installation selector in our
+          <p> If you want to use Docker, WSL2, have an uncommon OS, hardware configuration, environment, or
+            need specific versioning such as <code>CUDA 11.6</code> or <code>Python 3.8</code> then you should use the installation selector in our
             <a href="https://docs.rapids.ai/install">Advanced Installations Page <i class="fa-solid fa-arrow-up-right"></i> </a>
           </p>
         </div>
@@ -115,33 +117,33 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
             <div class="column is-half">
                 <img src="/images/OpenAmazonStudioLab.png" class="img-w200">
                 <h3 class="has-text-white">Amazon Sagemaker Studio Lab</h3>
-                <h3> <a href="#" target="_blank">LAUNCH <i class="fa-solid fa-arrow-up-right"></i> </a></h3>
+                <h3> <a href="https://studiolab.sagemaker.aws/" target="_blank">LAUNCH AWS<i class="fa-solid fa-arrow-up-right"></i> </a></h3>
                 <p>Enables notebook based environments in a free trial with required account.</p>
             </div>
             <div class="column is-half">
                 <img src="/images/OpenGoogleColab.png" class="img-w200">
                 <h3 class="has-text-white">Google CoLab</h3>
-                <h3> <a href="#" target="_blank">LAUNCH <i class="fa-solid fa-arrow-up-right"></i> </a></h3>
-                <p>Enables notebook based environments with required account <i class="fa-solid fa-arrow-up-right"></i></p>      
+                <h3> <a href="https://colab.research.google.com/drive/13sspqiEZwso4NYTbsflpPyNFaVAAxUgr" target="_blank">LAUNCH Google<i class="fa-solid fa-arrow-up-right"></i> </a></h3>
+                <p>Enables notebook based environments with required account. </p>      
             </div>
           </div>
           <div class="columns">
             <div class="column is-half">
                 <img src="/images/paperspace.png" class="img-w150">
                 <h3 class="has-text-white">PaperSpace</h3>
-                <h3> <a href="#" target="_blank">LAUNCH <i class="fa-solid fa-arrow-up-right"></i> </a></h3>
-                <p>Use Quick Start Instances through a limited free account <i class="fa-solid fa-arrow-up-right"></i></p>
+                <h3> <a href="https://www.paperspace.com/gpu-cloud" target="_blank">LAUNCH PaperSpace<i class="fa-solid fa-arrow-up-right"></i> </a></h3>
+                <p>Use Quick Start Instances through a limited free account.</p>
             </div>
             <div class="column is-half">
                 <img src="/images/nv-launchpad.png" class="img-w150">
                 <h3 class="has-text-white"> NVIDIA LaunchPad</h3>
-                <h3> <a href="#" target="_blank">LAUNCH <i class="fa-solid fa-arrow-up-right"></i> </a></h3>
-                <p>Free short term use to try and learn with hands-on lab environment<i class="fa-solid fa-arrow-up-right"></i></p>
+                <h3> <a href="https://www.nvidia.com/en-us/launchpad/" target="_blank">LAUNCH NVIDIA<i class="fa-solid fa-arrow-up-right"></i> </a></h3>
+                <p>Free short term use to try and learn with hands-on lab environment.</p>
             </div>
           </div>
 
           <h2 class="mt-8 has-text-white"><i class="fa-regular fa-chalkboard-user"></i> User Guides and Tutorials </h2>
-          <p>After installing, the best place to start is by looking through our useful guides and tutorial notebooks. These are helpful for first time users and experts alike on our <a href="https://docs.rapids.ai/user-guide"> User Guides Page<i class="fa-solid fa-arrow-up-right"></i> </a> </p> </p>
+          <p>After installing, the best place to start is by looking through our useful guides and tutorials. These are helpful for first time users and experts alike on our <a href="https://docs.rapids.ai/user-guide"> User Guides Page<i class="fa-solid fa-arrow-up-right"></i> </a> </p> </p>
         </div>
       </div>
     </div>
@@ -158,20 +160,17 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
       <div class="columns">
         <div class="column is-third">
           <h2><i class="fa-regular fa-microchip"></i> Hardware </h2>
-          <p>Find out details on the core RAPIDS projects like cuDF, cuML, cuGraph, and more on our Ecosystem page. Or
-            jump to our GitHub page or documentation for specific details <a href="/ecosystem#hardware"> See Hardware Section<i class="fa-solid fa-arrow-up-right"></i></a>
+          <p> NVIDIA's industry leading hardware provides the platform for RAPIDS high performance. Get details on the newest GPU's, server architectures, and cloud offerings in our <a href="/ecosystem#hardware"> Ecosystem Hardware Section<i class="fa-solid fa-arrow-up-right"></i></a>
           </p>
         </div>
         <div class="column is-third">
           <h2><i class="fa-regular fa-code"></i> Software </h2>
-          <p>See all the projects using RAPIDS and all those that integrate well with RAPIDS in our integrations and
-            projects section <a href="/ecosystem#software"> See RAPIDS Software Section <i class="fa-solid fa-arrow-up-right"></i></a>
+          <p>Find out details on the core RAPIDS projects like cuDF, cuML, cuGraph and more. Also learn about  all those using or integrated with RAPIDS in our <a href="/ecosystem#software"> Ecosystem Software Section <i class="fa-solid fa-arrow-up-right"></i></a>
           </p>
         </div>
         <div class="column is-third">
           <h2><i class="fa-regular fa-laptop-code"></i> Developers </h2>
-          <p>See all the projects using RAPIDS and all those that integrate well with RAPIDS in our integrations and
-            projects section <a href="/ecosystem#developers"> See Developers Section <i class="fa-solid fa-arrow-up-right"></i></a>
+          <p> Get involved with RAPIDS projects, reach out to its developers, find maintainer and contribution guides in our <a href="/ecosystem#developers"> Ecosystem Developers Section <i class="fa-solid fa-arrow-up-right"></i></a>
           </p>
         </div>
       </div>
@@ -196,20 +195,20 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
       <div class="columns">
         <div class="column is-one-third">
           <h2><i class="fa-regular fa-circle-info"></i> About RAPIDS</h2>
-          <p> Learn more about the history and goals of RAPIDS starting with Apache Arrow, GoAi, and its relationship with NVIDIA. 
+          <p> Learn more about RAPIDS' start with Apache Arrow, GoAi, some of its key benefits, and featured projects in our
             <a href="/learn-more"> About Section <i class="fa-solid fa-arrow-up-right"></i></a>
           </p>
         </div>
         <div class="column is-one-third">
           <h2><i class="fa-regular fa-chart-user"></i> Use Cases </h2>
-          <p> Find business and enterprise connection resources, community resources, and guides for RAPIDS evangelism.
-            <a href="/learn-more#use-cases"> Use Cases and Topics Section <i class="fa-solid fa-arrow-up-right"></i></a>
+          <p> Hear about success stories, resources for integrating RAPIDs workflows in your business, and deployment strategies in our
+            <a href="/learn-more#use-cases"> Use Cases Section <i class="fa-solid fa-arrow-up-right"></i></a>
            </p>
         </div>
         <div class="column is-one-third">
-          <h2><i class="fa-regular fa-message-exclamation"></i> Engagement </h2>
-          <p>Hear about success stories, resources for integrating with RAPIDS and deployment strategies. 
-            <a href="/learn-more/#engagement"> Engage with RAPIDS Section <i class="fa-solid fa-arrow-up-right"></i></a>
+          <h2><i class="fa-regular fa-message-exclamation"></i> Get Involved </h2>
+          <p> Find business and enterprise connection resources, community resources, and guides for RAPIDS evangelism in our 
+            <a href="/learn-more/#get-invovled"> Get Involved Section <i class="fa-solid fa-arrow-up-right"></i></a>
           </p>
         </div>
       </div>
@@ -224,16 +223,16 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></p
   <!-- News -->
   <section class="section padding-top-slant padding-bottom-slant has-background-rapids-gray">
 
-    <div class="container">
+    <div class="container mb-8">
       <h1 class="mb-5">Latest News</h1>
       <div class="columns">
         <div class="column is-half">
           <h2><i class="fa-regular fa-triangle-exclamation"></i> RAPIDS Service Notices </h2>
-          <p> Get the full list of RSN that may effect your projects at the <a href="/notices"> RNS Section <i class="fa-solid fa-arrow-up-right"></i></a> </p>
+          <p> Get the full list of developer update and notices (RSN) that may effect your projects on the <a href="https://docs.rapids.ai/notices" taget="_blank"> RNS Documentation Page <i class="fa-solid fa-arrow-up-right"></i></a> </p>
         </div>
         <div class="column is-half">
           <h2><i class="fa-regular fa-books"></i> Featured Content </h2>
-          <p> Check out our featured content, including videos, talks, posts, guides and more in the<a href="/latest-news#featured"> Featured Content Section <i class="fa-solid fa-arrow-up-right"></i></a> </p>
+          <p> Check out our featured content, including videos, talks, posts, guides and more in the <a href="/featured"> Featured Content Page <i class="fa-solid fa-arrow-up-right"></i></a> </p>
         </div>
       </div>
     </div>
