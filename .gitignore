@@ -3,3 +3,4 @@ _site
 .jekyll-metadata
 .netlify
 .hugo_build.lock
+public
