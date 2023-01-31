@@ -3,6 +3,8 @@ languageCode = 'en-us'
 title = 'RAPIDS.ai'
 enableRobotsTXT = true
 
+disableKinds = ["taxonomy", "term"]
+
 [sitemap]
   changefreq = 'monthly'
   filename = 'sitemap.xml'
