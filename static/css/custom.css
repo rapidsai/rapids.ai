@@ -186,7 +186,7 @@ button:hover {
   }
 
   .navbar-menu.is-active {
-    height: 40rem;
+    height: 47rem;
     transition: height 0.5s ease;
   }
 
