@@ -1,16 +1,19 @@
 <div class="navbar is-fixed-top has-shadow has-background-rapids-purple-primary" role="navigation" aria-label="main navigation">
     
-    <div class="navbar-brand">
-        <a class="navbar-item" href="/">
-            <img src="/images/RAPIDS-logo.png">
-        </a>
+    <div x-data="{}">
+      <div class="navbar-brand">
+          <a class="navbar-item" href="/">
+              <img src="/images/RAPIDS-logo.png">
+          </a>
 
-        <a class="navbar-burger has-text-white" aria-label="menu" aria-expanded="false"
-            x-on:click="document.getElementById('navMenu').classList.toggle('is-active')">
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-            <span aria-hidden="true"></span>
-        </a>
+            <a class="navbar-burger has-text-white" aria-label="menu" aria-expanded="false"
+                x-on:click="document.getElementById('navMenu').classList.toggle('is-active');">
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+          </a>
+
+      </div>
     </div>
 
     <div id="navMenu" class="navbar-menu">

@@ -1,1 +1,1 @@
-console.log("// NVIDIA GPUs FTW")
+// console.log("NVIDIA GPUs FTW")
