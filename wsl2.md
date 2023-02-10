@@ -41,7 +41,7 @@ Windows users can now tap into GPU accelerated data science on their local machi
 
 > <i class="fas fa-microchip text-white"></i> **GPU:** Only GPUs with [Compute Capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"} 7.0 or higher are supported on RAPIDS in WSL 2. 16GB or more of GPU RAM is recommended.
 
-> <i class="fas fa-download text-white"></i> **WSL 2 Instance:** Ubuntu 20.04 instance for WSL 2.
+> <i class="fas fa-download text-white"></i> **WSL 2 Instance:** Ubuntu 20.04/22.04 instance for WSL 2.
 
 ## <i class="far fa-comments text-white"></i> Connect
 > Join our community conversations about RAPIDS on WSL 2 using **[Twitter](https://twitter.com/rapidsai){: target="_blank"}**, **[Slack]({{ site.slack_invite }}){: target="_blank"}**, or ask a question on **[StackOverflow](https://stackoverflow.com/tags/rapids){: target="_blank"}**.
@@ -89,7 +89,7 @@ Windows users can now tap into GPU accelerated data science on their local machi
 {% capture yd_left %}
 ## <i class="fas fa-laptop-code"></i> Conda <br>(Preferred Method)
 
-1. Install WSL 2 and the Ubuntu 20.04 package [using Microsoft's instructions](https://docs.microsoft.com/en-us/windows/wsl/install){: target="_blank"}.
+1. Install WSL 2 and the Ubuntu 20.04/22.04 package [using Microsoft's instructions](https://docs.microsoft.com/en-us/windows/wsl/install){: target="_blank"}.
 2. Install the [latest NVIDIA Drivers](https://www.nvidia.com/download/index.aspx){: target="_blank"} on the Windows host.
 3. Log in to the WSL 2 Linux instance.
 4. Install Conda in the WSL 2 Linux Instance using [our Conda instructions](https://rapids.ai/start.html#environment){: target="_blank"}.
@@ -105,7 +105,7 @@ Windows users can now tap into GPU accelerated data science on their local machi
 {% capture yd_mid %}
 ## <i class="fab fa-python text-purple"></i> pip
 
-1. Install WSL 2 and the Ubuntu 20.04 package [using Microsoft's instructions](https://docs.microsoft.com/en-us/windows/wsl/install){: target="_blank"}.
+1. Install WSL 2 and the Ubuntu 20.04/22.04 package [using Microsoft's instructions](https://docs.microsoft.com/en-us/windows/wsl/install){: target="_blank"}.
 2. Install the [latest NVIDIA Drivers](https://www.nvidia.com/download/index.aspx){: target="_blank"} on the Windows host.
 3. Log in to the WSL 2 Linux instance.
 4. Follow **[this guide to install the CUDA Toolkit without drivers](https://docs.nvidia.com/cuda/wsl-user-guide/index.html#cuda-support-for-wsl2){: target="_blank"}** into the WSL 2 instance.
@@ -121,7 +121,7 @@ Windows users can now tap into GPU accelerated data science on their local machi
 {% capture yd_right %}
 ## <i class="fab fa-docker text-purple"></i> Docker Desktop
 
-1. Install WSL 2 and the Ubuntu 20.04 package [using Microsoft's instructions](https://docs.microsoft.com/en-us/windows/wsl/install){: target="_blank"}.
+1. Install WSL 2 and the Ubuntu 20.04/22.04 package [using Microsoft's instructions](https://docs.microsoft.com/en-us/windows/wsl/install){: target="_blank"}.
 2. Install the [latest NVIDIA Drivers](https://www.nvidia.com/download/index.aspx){: target="_blank"} on the Windows host.
 3. Install latest Docker Desktop for Windows [according to your applicable licensing terms](https://docs.docker.com/desktop/install/windows-install/){: target="_blank"}.
 4. Log in to the WSL 2 Linux instance.
