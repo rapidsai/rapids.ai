@@ -83,7 +83,7 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 
 ## <i class="fa-solid fa-screwdriver-wrench text-white"></i> Troubleshooting and Known Issues
 
-> <i class="fas fa-info-circle text-white"></i> If you experience a "Failed to import CuPy" error, please uninstall any existing versions of cupy and install cupy-cuda11x:
+> <i class="fas fa-info-circle text-white"></i> If you experience a "Failed to import CuPy" error, please uninstall any existing versions of cupy and install cupy-cuda11x. For example:
 
     pip uninstall cupy-cuda115; pip install cupy-cuda11x
 
