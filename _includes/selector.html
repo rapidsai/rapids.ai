@@ -414,7 +414,6 @@
             disableUnsupportedImgOS(os) {
                 var isDisabled = false;
                 if (this.active_arch === "arm" && os === "CentOS 7") isDisabled = true;
-                if (this.active_release === "Nightly" && os === "CentOS 8") isDisabled = true;
                 return isDisabled;
             },
             disableUnsupportedImgType(type) {
@@ -437,7 +436,6 @@
             },
             releaseClickHandler(e, release) {
                 if (this.isDisabled(e.target)) return;
-                if (release === "Nightly" && this.active_os_ver === "CentOS 8") this.active_os_ver = "CentOS 7";
                 this.active_release = release;
             },
             imgTypeClickHandler(e, type) {
