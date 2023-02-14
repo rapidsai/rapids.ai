@@ -44,7 +44,7 @@ RAPIDS users can once again install RAPIDS via pip!  This is an **experimental r
 
 >> <i class="fas fa-desktop text-white"></i> Windows 11 using WSL2  **[See separate install guide <i class="fa fa-angle-double-right" aria-hidden="true"></i>](wsl2.html){: target="_blank"}**
 
->>> <i class="fas fa-chevron-circle-right text-white"></i> In addition, WSL2 pip installations require following **[this guide to install the CUDA Toolkit without drivers.](https://developer.nvidia.com/cuda-11-8-0-download-archive?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_local){: target="_blank"}**
+>>> <i class="fas fa-chevron-circle-right text-white"></i> In addition, WSL2 pip installations require following **[this guide to install the CUDA Toolkit without drivers.](https://developer.nvidia.com/cuda-11-8-0-download-archive?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_network){: target="_blank"}**
 
 > <i class="fas fa-info-circle text-white"></i> **Glibc version:** x86_64 wheels require glibc >= 2.17 and ARM architecture (aarch64) wheels require glibc >= 2.31 (only ARM Server Base System Architecture is supported).
 
