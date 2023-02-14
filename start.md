@@ -108,7 +108,7 @@ All provisioned systems need to be RAPIDS capable. Here's what is required:
 <i class="fas fa-microchip text-purple"></i> **GPU:** NVIDIA Pascal™ or better with **[compute capability](https://developer.nvidia.com/cuda-gpus){: target="_blank"}** 6.0+
 
 <i class="fas fa-desktop text-purple"></i> **OS:** One of the following OS versions:
-> <i class="fa-brands fa-ubuntu text-purple"></i>Ubuntu 18.04/20.04 or CentOS 7 / Rocky Linux 8 with <code>gcc/++</code> 9.0+
+> <i class="fa-brands fa-ubuntu text-purple"></i>Ubuntu 20.04/22.04 or CentOS 7 / Rocky Linux 8 with <code>gcc/++</code> 9.0+
 {: .no-tb-margins }
 > <i class="fas fa-desktop text-purple"></i> Windows 11 using WSL2  **[See separate install guide <i class="fa fa-angle-double-right" aria-hidden="true"></i>](wsl2.html){: target="_blank"}**
 {: .no-tb-margins }
@@ -120,6 +120,7 @@ All provisioned systems need to be RAPIDS capable. Here's what is required:
 - <i class="fas fa-check-circle text-purple"></i> [CUDA 11.2](https://developer.nvidia.com/cuda-11.2.0-download-archive){: target="_blank"} with Driver 460.27.03 or newer
 - <i class="fas fa-check-circle text-purple"></i> [CUDA 11.4](https://developer.nvidia.com/cuda-11-4-0-download-archive){: target="_blank"} with Driver 470.42.01 or newer
 - <i class="fas fa-check-circle text-purple"></i> [CUDA 11.5](https://developer.nvidia.com/cuda-11-5-0-download-archive){: target="_blank"} with Driver 495.29.05 or newer
+- <i class="fas fa-check-circle text-purple"></i> [CUDA 11.8](https://developer.nvidia.com/cuda-11-8-0-download-archive){: target="_blank"} with Driver 520.61.05 or newer
 - Note: RAPIDS is tested with and officially supports the versions listed above. Newer CUDA and driver versions may also work with RAPIDS. See [CUDA compatibility](https://docs.nvidia.com/deploy/cuda-compatibility/index.html) for details.
 
 {% endcapture %}
