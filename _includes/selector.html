@@ -469,6 +469,9 @@
                 }
                 if (method === "Docker") {
                     this.active_release = "Stable"
+                    if (this.active_os_ver === 'Ubuntu 22.04') {
+                        this.active_cuda_ver = '11.8';
+                    }
                 }
                 this.active_method = method;
             },
