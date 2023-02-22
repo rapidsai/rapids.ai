@@ -2,6 +2,8 @@ baseURL = 'http://rapids.ai/'
 languageCode = 'en-us'
 title = 'RAPIDS.ai'
 enableRobotsTXT = true
+googleAnalytics = 'G-RKXFW6CM42'
+
 
 disableKinds = ["taxonomy", "term"]
 
