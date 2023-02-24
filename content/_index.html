@@ -8,9 +8,11 @@ description: homepage
 
   <!-- Announcements Shortcode (0-3x)-->
   <!-- UPDATE HERE -->
-  {{< announcements text-1="22.12 Released!" link-1="https://docs.rapids.ai/notices" text-2="CUDA 11.8 Support 11.12.22"
-    link-2="https://docs.rapids.ai/notices" text-3="Ubuntu 18.04 support dropped"
-    link-3="https://docs.rapids.ai/notices">}}
+  {{< announcements 
+    text-1="RAPIDS 23.02 Released!" link-1="https://docs.rapids.ai/install#selector"
+    text-2="NVIDIA GTC March 20-23!" link-2="https://www.nvidia.com/gtc/"  
+    text-3="Deprecation for Ubuntu 18.04 in v22.12" link-3="https://docs.rapids.ai/notices/rsn0024/" 
+  >}}
 
     <!-- Intro -->
     <section class="section padding-bottom-slant">
@@ -102,13 +104,13 @@ bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
             <br>
             <p><strong>2.</strong> Then quick install rapids with:</p>
             <pre
-              class="highlight use-white-copy"><code>conda create -n rapids-22.08 -c rapidsai -c nvidia -c conda-forge \ rapids=22.08 python=3.9 cudatoolkit=11.5</code></pre>
+              class="highlight use-white-copy"><code>conda create -n rapids-23.02 -c rapidsai -c conda-forge -c nvidia  \ rapids=23.02 python=3.10 cudatoolkit=11.8</code></pre>
 
             <h3 class="mt-6 has-text-white">Install with PIP</h3>
             <p><strong>1.</strong> Install via pip channels:</p>
-            <pre class="highlight use-white-copy"><code>pip install cudf-cu11 dask-cudf-cu11 --extra-index-url=https://pypi.ngc.nvidia.com
-pip install cuml-cu11 --extra-index-url=https://pypi.ngc.nvidia.com
-pip install cugraph-cu11 --extra-index-url=https://pypi.ngc.nvidia.com</code></pre>
+            <pre class="highlight use-white-copy"><code>pip install cudf-cu11 dask-cudf-cu11 --extra-index-url=https://pypi.nvidia.com 
+pip install cuml-cu11 --extra-index-url=https://pypi.nvidia.com
+pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
 
             <h3 class="mt-6 has-text-white">Install with Docker</h3>
             <p>Use the <a href="https://docs.rapids.ai/install#docker">install page selector <i
