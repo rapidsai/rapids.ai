@@ -9,9 +9,9 @@ description: homepage
   <!-- Announcements Shortcode (0-3x)-->
   <!-- UPDATE HERE -->
   {{< announcements 
-    text-1="RAPIDS 23.02 Released!" link-1="https://docs.rapids.ai/install#selector"
-    text-2="NVIDIA GTC March 20-23!" link-2="https://www.nvidia.com/gtc/"  
-    text-3="Deprecation for Ubuntu 18.04 in v22.12" link-3="https://docs.rapids.ai/notices/rsn0024/" 
+    text-1="RAPIDS 23.02 Released" link-1="https://docs.rapids.ai/install#selector"
+    text-2="NVIDIA GTC March 20-23" link-2="https://www.nvidia.com/gtc/"  
+    text-3="Support for Python 3.10 in 23.02" link-3="https://docs.rapids.ai/notices/rsn0023/" 
   >}}
 
     <!-- Intro -->
@@ -92,9 +92,9 @@ description: homepage
             <h3 class="mt-5 has-text-white">Requirements</h3>
             <p><strong>A.</strong> NVIDIA Pascal™ or better GPU with a <a href="https://developer.nvidia.com/cuda-gpus"
                 taget="_blank">compute capability 6.0 and above <i class="fa-solid fa-arrow-up-right"></i></a></p>
-            <p><strong>B.</strong> Ubuntu 20.04, CentOS, Rocky Linux 8 or via WSL2 on Windows 11</p>
+            <p><strong>B.</strong> Ubuntu 20.04 or 22.04, CentOS 7, Rocky Linux 8, or WSL2 on Windows 11</p>
             <p><strong>C.</strong> Recent <a href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html"
-                target="_blank"> CUDA-version <em>and</em> NVIDIA-driver pairs</a>. Check yours with:
+                target="_blank"> CUDA version <em>and</em> NVIDIA driver pairs</a>. Check yours with:
               <code>nvidia-smi</code>
 
             <h3 class="mt-6 has-text-white">Install with Conda</h3>
@@ -102,11 +102,11 @@ description: homepage
             <pre class="highlight use-white-copy"><code>wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
             <br>
-            <p><strong>2.</strong> Then quick install rapids with:</p>
+            <p><strong>2.</strong> Then quick install RAPIDS with:</p>
             <pre
               class="highlight use-white-copy"><code>conda create -n rapids-23.02 -c rapidsai -c conda-forge -c nvidia  \ rapids=23.02 python=3.10 cudatoolkit=11.8</code></pre>
 
-            <h3 class="mt-6 has-text-white">Install with PIP</h3>
+            <h3 class="mt-6 has-text-white">Install with pip</h3>
             <p><strong>1.</strong> Install via pip channels:</p>
             <pre class="highlight use-white-copy"><code>pip install cudf-cu11 dask-cudf-cu11 --extra-index-url=https://pypi.nvidia.com 
 pip install cuml-cu11 --extra-index-url=https://pypi.nvidia.com
@@ -139,8 +139,8 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
                 <img src="/images/OpenGoogleColab.png" class="img-w200">
                 <h3 class="has-text-white">Google CoLab</h3>
                 <h3> <a href="https://colab.research.google.com/drive/13sspqiEZwso4NYTbsflpPyNFaVAAxUgr"
-                    target="_blank">LAUNCH Google CoLab (PIP) <i class="fa-solid fa-arrow-up-right"></i> </a></h3>
-                <p>Jump right into a GPU enabled notebook environment with required account. Also availbe with <a
+                    target="_blank">LAUNCH Google CoLab (pip) <i class="fa-solid fa-arrow-up-right"></i> </a></h3>
+                <p>Jump right into a GPU enabled notebook environment with required account. Also available with <a
                     href="https://colab.research.google.com/drive/13sspqiEZwso4NYTbsflpPyNFaVAAxUgr"
                     target="_blank">Conda</a>. </p>
               </div>
@@ -389,7 +389,7 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
           data: {
             labels: ['100k fit','100k membership','200k fit','200k membership','400k fit','400k membership'],
             datasets: [{
-              label: 'cuML vs scikit-learn HBSCAN speedup',
+              label: 'cuML vs scikit-learn HDBSCAN speedup',
               data: [8,4727,13,20664, 14, 62478],
               backgroundColor: [
                 'rgb(115, 6, 255, .60)'

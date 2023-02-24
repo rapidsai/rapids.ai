@@ -1,4 +1,4 @@
-baseURL = 'http://rapids.ai/'
+baseURL = 'https://rapids.ai/'
 languageCode = 'en-us'
 title = 'RAPIDS.ai'
 enableRobotsTXT = true
