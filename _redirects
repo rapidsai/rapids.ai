@@ -1,7 +1,7 @@
-/about             https://rapids.ai/learn-more/#about
-/about.html        https://rapids.ai/learn-more/#about
-/community         https://rapids.ai/learn-more/#get-involved
-/community.html    https://rapids.ai/learn-more/#get-involved
+/about             /learn-more/#about
+/about.html        /learn-more/#about
+/community         /learn-more/#get-involved
+/community.html    /learn-more/#get-involved
 /dask              https://docs.dask.org/en/stable/gpu.html
 /dask.html         https://docs.dask.org/en/stable/gpu.html
 /hpc               https://docs.rapids.ai/deployment/stable/hpc.html
