@@ -1,103 +1,69 @@
 <!-- Posts -->
-<div x-data="{ posts: [{},{}] }" x-init="
-fetch('https://rapidsai.github.io/site-data/posts.json')
-.then(json => { 
-  if (json.ok) {
-      return json.json()
-  }
-  posts = '' // load blank
-  throw new Error('Failed to load posts.json')
-})
-.then(json => {
-  posts[0] = json.medium.slice(0,3)
-  posts[1] = json.medium.slice(3,6)
-})
-.catch(error => {console.error(error)})">
+<div>
+  <div class="container">
+    <h2 class="mt-5"><i class="fa-regular fa-message-quote"></i> Latest Posts </h2>
 
-    <div class="container">
-      <h2 class="mt-5"><i class="fa-regular fa-message-quote"></i> Latest Posts </h2>
-      
-      <div class="columns">
-        <template x-for="article in posts[0]">
-          <div class="column is-one-third">
-            <a x-bind:href="article.mediumLink" target="_blank">
-              <h3><span x-text="article.title"></span> <i class="fa-solid fa-arrow-up-right"></i> </h3>
-              <p class="post-text">
-                <i class="fa-sharp fa-solid fa-quote-left has-text-rapids-purple-secondary2"></i> &nbsp; <span x-text="article.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right has-text-rapids-purple-secondary2"></i>
-                <br>
-                <span class="post-action">Post by <span x-text="article.poster"></span> </span>
-              </p>
-            </a>
-          </div>
-        </template>
+    {{ range $index, $post := first 6 $.Site.Data.posts.medium }}
+    {{ if (modBool $index 3) }}
+      {{ $cssModifier := "mt-5" }}
+      {{ if (eq $index 0) }}
+        {{ $cssModifier = "" }}
+      {{end}}
+    <div class='columns {{ $cssModifier }}'>
+    {{end}}
+      <div class="column is-one-third">
+        <a href="{{ .link }}" target="_blank">
+          <h3>
+            {{ .title }} <i class="fa-solid fa-arrow-up-right"></i>
+          </h3>
+          <p class="post-text">
+            <i class="fa-sharp fa-solid fa-quote-left has-text-rapids-purple-secondary2"></i>
+            &nbsp;
+            {{ .text}}
+            &nbsp;
+            <i class="fa-sharp fa-solid fa-quote-right has-text-rapids-purple-secondary2"></i>
+            <br>
+            <span class="post-action">Post by {{ .poster }}</span>
+          </p>
+        </a>
       </div>
-
-      <div class="columns mt-5">
-        <template x-for="article in posts[1]">
-          <div class="column is-one-third">
-            <a x-bind:href="article.mediumLink" target="_blank">
-              <h3> <span x-text="article.title"></span> <i class="fa-solid fa-arrow-up-right"></i> </h3>
-              <p class="post-text">
-                <i class="fa-sharp fa-solid fa-quote-left has-text-rapids-purple-secondary2"></i> &nbsp; <span x-text="article.text"></span> &nbsp; <i class="fa-sharp fa-solid fa-quote-right has-text-rapids-purple-secondary2"></i>
-                <br>
-                <span class="post-action">Post by <span x-text="article.poster"></span> </span>
-              </p>
-            </a>
-          </div>
-        </template>
-      </div>
-    
+    {{ if (eq (mod $index 3) 2) }}
     </div>
-
+    {{ end }}
+    {{ end }}
+  </div>
 </div>
 
 <!-- Tweets -->
-<div x-data="{ posts: [{},{}] }" x-init="
-fetch('https://rapidsai.github.io/site-data/posts.json')
-.then(json => { 
-  if (json.ok) {
-      return json.json()
-  }
-  posts = '' // load blank
-  throw new Error('Failed to load posts.json')
-})
-.then(json => {
-  posts[0] = json.twitter.slice(0,3)
-  posts[1] = json.twitter.slice(3,6)
-})
-.catch(error => {console.error(error)})">
+<div>
+  <div class="container">
+    <h2 class="mt-8"><i class="fa-brands fa-twitter"></i> Latest Tweets </h2>
 
-    <div class="container">
-      <h2 class="mt-8"><i class="fa-brands fa-twitter"></i> Latest Tweets </h2>
-      
-      <div class="columns">
-        <template x-for="tweets in posts[0]">
-          <div class="column is-one-third">
-            <a x-bind:href="tweets.link" target="_blank">
-              <p class="post-text">
-                <i class="fa-sharp fa-solid fa-quote-left has-text-rapids-purple-secondary2"></i> &nbsp; <span x-text="tweets.text"></span> <i class="fa-solid fa-arrow-up-right"></i> &nbsp; <i class="fa-sharp fa-solid fa-quote-right has-text-rapids-purple-secondary2"> </i>
-                <br>
-                <span class="post-action">Tweet by <span x-text="tweets.name"></span> </span>
-              </p>
-            </a>
-          </div>
-        </template>
+    {{ range $index, $post := first 6 $.Site.Data.posts.twitter }}
+    {{ if (modBool $index 3) }}
+      {{ $cssModifier := "mt-5" }}
+      {{ if (eq $index 0) }}
+        {{ $cssModifier = "" }}
+      {{end}}
+    <div class='columns {{ $cssModifier }}'>
+    {{end}}
+      <div class="column is-one-third">
+        <a href="{{ .link }}" target="_blank">
+          <p class="post-text">
+            <i class="fa-sharp fa-solid fa-quote-left has-text-rapids-purple-secondary2"></i>
+            &nbsp;
+            {{ .text }}
+            <i class="fa-solid fa-arrow-up-right"></i>
+            &nbsp;
+            <i class="fa-sharp fa-solid fa-quote-right has-text-rapids-purple-secondary2"></i>
+            <br>
+            <span class="post-action">Tweet by {{ .name }}</span>
+          </p>
+        </a>
       </div>
-
-      <div class="columns mt-5">
-        <template x-for="tweets in posts[1]">
-          <div class="column is-one-third">
-            <a x-bind:href="tweets.link" target="_blank">
-              <p class="post-text">
-                <i class="fa-sharp fa-solid fa-quote-left has-text-rapids-purple-secondary2"></i> &nbsp; <span x-text="tweets.text"></span> <i class="fa-solid fa-arrow-up-right"></i> &nbsp; <i class="fa-sharp fa-solid fa-quote-right has-text-rapids-purple-secondary2"></i>
-                <br>
-                <span class="post-action">Tweet by <span x-text="tweets.name"></span></span>
-              </p>
-            </a>
-          </div>
-        </template>
-      </div>
-
+    {{ if (eq (mod $index 3) 2) }}
     </div>
-
+    {{ end }}
+    {{ end }}
+  </div>
 </div>
