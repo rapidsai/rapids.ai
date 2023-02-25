@@ -483,6 +483,10 @@ button:hover {
 }
 
 /* /// extra spacers /// */
+.is-size-6-half {
+  font-size: 0.9rem;
+}
+
 .mt-6 {
   margin-top: 2.5rem !important;
 }
