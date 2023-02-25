@@ -483,13 +483,10 @@ button:hover {
 }
 
 /* /// extra spacers /// */
-<<<<<<< HEAD
-=======
 .is-size-6-half {
   font-size: 0.9rem;
 }
 
->>>>>>> gh-pages
 .mt-6 {
   margin-top: 2.5rem !important;
 }
