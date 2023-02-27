@@ -3,10 +3,6 @@
 Code and content for the [RAPIDS.ai](https://rapids.ai) static public website. This is a refactor from the previous Jekyll backed version to use the [Hugo](https://gohugo.io/about/) static site framework and the [Bulma](https://bulma.io/) css framework. On occasion it uses [Apline.js](https://alpinejs.dev/start-here).
 
 
-## External Content
-Some content is pulled from external sources. Tweets and Blog Posts are generated from the [Data Source Repo](https://rapidsai.github.io/site-data/posts.json). In the future most of this type of content will be managed via [Netlify Hugo CMS](https://www.netlifycms.org/docs/hugo/).
-
-
 ## Design and Layout
 Use the [Template Design Guide](template.html) and [RAPIDS Brand Guide](brand.html) for reference with starting new pages.
 
