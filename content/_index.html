@@ -46,34 +46,19 @@ description: homepage
         <div class="columns mt-5">
           <div class="column is-one-third">
             <h2><i class="fa-thin fa-objects-column"></i> Faster Pandas <br> with cuDF</h2>
-<<<<<<< HEAD
-            <p>cuDF is nearly a drop in replacement to Pandas for most use cases and has greatly improved performance. </p> <br>
-            <a href="https://github.com/rapidsai/cudf/tree/branch-23.04/docs/cudf/source/user_guide/performance_comparisons.ipynb">Try out this notebook benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
-            
-            <canvas id="cuDFchart" width="400" height="350"></canvas>
-            <p class="is-size-7 has-text-grey">* Benchmark on AMD EPYC 7642 48-Core (single CPU core) w/ 512GB Memory and NVIDIA A100 80GB (single GPU)</p>
-=======
             <p>cuDF is a near a drop in replacement to Pandas for most use cases and has greatly improved performance. </p> <br>
             <a href="https://github.com/rapidsai/cudf/tree/branch-23.04/docs/cudf/source/user_guide/performance_comparisons.ipynb">Try out this notebook benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
             
             <canvas id="cuDFchart" width="400" height="350"></canvas>
             <p class="is-size-7 has-text-grey">* Benchmark on AMD EPYC 7642 (using 1x 2.3GHz CPU core) w/ 512GB and NVIDIA A100 80GB (1x GPU) w/ pandas v1.5 and cuDF v23.02</p>
->>>>>>> gh-pages
           </div>
           <div class="column is-one-third">
             <h2><i class="fa-light fa-microchip-ai"></i> Faster scikit-learn <br> with cuML</h2>
             <p>cuML brings huge speedups to ML modeling with an API that matches scikit-learn.</p> <br>
-<<<<<<< HEAD
-            <a href="https://github.com/rapidsai/cuml/blob/branch-23.04/notebooks/tools/hdbscan_soft_clustering_benchmark.ipynb">Try out this notebook benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
-
-            <canvas id="cuMLchart" width="400" height="350"></canvas>
-            <p class="is-size-7 has-text-grey">* Benchmark on AMD EPYC 7642 48-Core (single CPU core) w/ 512GB Memory and NVIDIA A100 80GB (single GPU)</p>
-=======
             <a href="https://github.com/rapidsai/cuml/tree/branch-23.04/python/cuml/benchmark">Try out this notebook benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
 
             <canvas id="cuMLchart" width="400" height="350"></canvas>
             <p class="is-size-7 has-text-grey">* Benchmark on AMD EPYC 7642 (using 1x 2.3GHz CPU core) w/ 512GB and NVIDIA A100 80GB (1x GPU) w/ scikit-learn v1.2 and cuML v23.02</p>
->>>>>>> gh-pages
           </div>
           <div class="column is-one-third">
             <h2><i class="fa-light fa-circle-nodes"></i> Faster networkX <br> with cuGraph</h2>
@@ -81,11 +66,7 @@ description: homepage
             <a href="https://github.com/rapidsai/cugraph/blob/branch-23.04/notebooks/cugraph_benchmarks/synth_release.ipynb">Try out this notebook benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
 
             <canvas id="cuGraphChart" width="400" height="350"></canvas>
-<<<<<<< HEAD
-            <p class="is-size-7 has-text-grey">* Benchmark on AMD EPYC 7642 48-Core (single CPU core) w/ 512GB Memory and NVIDIA A100 80GB (single GPU)</p>
-=======
             <p class="is-size-7 has-text-grey">* Benchmark on AMD EPYC 7642 (using 1x 2.3GHz CPU core) w/ 512GB and NVIDIA A100 80GB (1x GPU) w/ networkX v3.0 and cuGraph v23.02</p>
->>>>>>> gh-pages
           </div>
         </div>
       </div>
@@ -337,10 +318,10 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
         new Chart(ctx, {
           type: 'bar',
           data: {
-            labels: ['groupBy', 'value counts', 'merge', 'numeric UDF', 'string UDF',],
+            labels: ['string UDF','numeric UDF','merge','value counts','groupBy'],
             datasets: [{
               label: 'cuDF vs pandas speedup',
-              data: [78, 72, 53, 47, 16],
+              data: [16,47,53,72,78],
               backgroundColor: [
                 'rgb(115, 6, 255, .60)'
               ]
@@ -392,17 +373,10 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
         new Chart(ctx2, {
           type: 'bar',
           data: {
-<<<<<<< HEAD
-            labels: ['100k fit','100k membership','200k fit','200k membership','400k fit','400k membership'],
-            datasets: [{
-              label: 'cuML vs scikit-learn HDBSCAN speedup',
-              data: [8,4727,13,20664, 14, 62478],
-=======
             labels: ['DBSCAN','Nearest Neighbors','KMeans','PCA','Linear Regression'],
             datasets: [{
               label: 'cuML vs scikit-learn speedup',
               data: [3,5,6,24,27],
->>>>>>> gh-pages
               backgroundColor: [
                 'rgb(115, 6, 255, .60)'
               ]
@@ -411,11 +385,7 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
           options: {
             scales: {
               y: {
-<<<<<<< HEAD
-                type: 'logarithmic',
-=======
                 type: 'linear',
->>>>>>> gh-pages
                 beginAtZero: true,
                 grid: {
                   display: false,
@@ -440,11 +410,7 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
               },
               title: {
                 display: true,
-<<<<<<< HEAD
-                text: 'HBSCAN with n-size x 15, minSample 50'
-=======
                 text: 'Performance on 100,000 samples and 256 features'
->>>>>>> gh-pages
               }
             },
             layout: {
