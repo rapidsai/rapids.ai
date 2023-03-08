@@ -1,10 +1,20 @@
----
-layout: none
----
-
-# Redirects from what the browser requests to what we serve
-/cloud              https://docs.rapids.ai/deployment/stable/cloud/
-/cloud.html         https://docs.rapids.ai/deployment/stable/cloud/
-/smsl               https://studiolab.sagemaker.aws/import/github/rapidsai-community/rapids-smsl/blob/main/rapids-smsl.ipynb
-/slack-invite       {{ site.slack_invite }}
-/documentation.html /start
+/about             https://rapids.ai/learn-more/#about
+/about.html        https://rapids.ai/learn-more/#about
+/community         https://rapids.ai/learn-more/#get-involved
+/community.html    https://rapids.ai/learn-more/#get-involved
+/dask              https://docs.dask.org/en/stable/gpu.html
+/dask.html         https://docs.dask.org/en/stable/gpu.html
+/hpc               https://docs.rapids.ai/deployment/stable/hpc.html
+/hpc.html          https://docs.rapids.ai/deployment/stable/hpc.html
+/hpo               https://docs.rapids.ai/deployment/stable/examples/index.html
+/hpo.html          https://docs.rapids.ai/deployment/stable/examples/index.html
+/pip               https://docs.rapids.ai/install#pip
+/pip.html          https://docs.rapids.ai/install#pip
+/plotly            https://docs.rapids.ai/visualization
+/plotly.html       https://docs.rapids.ai/visualization
+/start             https://docs.rapids.ai/install
+/start.html        https://docs.rapids.ai/install
+/wsl2              https://docs.rapids.ai/install#WSL2
+/wsl2.html         https://docs.rapids.ai/install#WSL2
+/xgboost           https://xgboost.readthedocs.io/en/stable/gpu/index.html
+/xgboost.html      https://xgboost.readthedocs.io/en/stable/gpu/index.html
