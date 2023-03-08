@@ -1,0 +1,50 @@
+<!-- TEMPLATE: Not a stand alone page -->
+<div class="navbar is-fixed-top has-shadow has-background-rapids-purple-primary" role="navigation"
+    aria-label="main navigation">
+    <div class="navbar-brand">
+        <a class="navbar-item" href="https://rapids.ai">
+            <img src="images/RAPIDS-logo.png">
+        </a>
+
+        <a class="navbar-burger has-text-white" aria-label="menu" aria-expanded="false"
+            x-on:click="document.getElementById('navMenu').classList.toggle('is-active')">
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+        </a>
+    </div>
+
+    <div id="navMenu" class="navbar-menu">
+        <div class="navbar-start">
+            <a class="navbar-item has-text-white" href="index.html">
+                Home
+            </a>
+
+            <a class="navbar-item has-text-white" href="ecosystem.html">
+               Ecosystem
+            </a>
+
+            <a class="navbar-item has-text-white" href="learn-more.html">
+               Learn More
+            </a>
+
+            <a class="navbar-item has-text-white" href="latest-news.html">
+              Latest News
+            </a>
+        </div>
+        <div class="navbar-end">
+            <a class="navbar-item has-text-white" href="https://docs.rapids.ai/">
+                <i class="fa-light fa-file-code"> </i> &nbsp; Docs
+            </a>
+
+            <a class="navbar-item has-text-white" href="https://docs.rapids.ai/install">
+                <i class="fa-light fa-download"></i> &nbsp; Install
+            </a>
+
+            <a class="navbar-item has-text-white" href="https://github.com/rapidsai">
+                <i class="fa-brands fa-github"></i> &nbsp; GitHub
+            </a>
+        </div>
+
+    </div>
+</div>

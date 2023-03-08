@@ -1,0 +1,12 @@
+{
+  "short_name": "RAPIDS",
+  "name": "RAPIDS.ai",
+  "icons": [{
+    "src": "icon.png",
+    "type": "image/png",
+    "sizes": "512x512"
+  }],
+  "start_url": "/?utm_source=homescreen",
+  "background_color": "#fafafa",
+  "theme_color": "#fafafa"
+}

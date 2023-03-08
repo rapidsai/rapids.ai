@@ -1,0 +1,100 @@
+<!doctype html>
+<html class="no-js" lang="">
+
+<!-- REQUIRED FOR EVERY PAGE -->
+<head>
+  <meta charset="utf-8">
+  <title>RAPIDS.ai | GPU accelerated data science</title>
+  <meta name="description" content="RAPIDS.ai | GPU accelerated data science">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta property="og:title" content="RAPIDS.ai | GPU accelerated data science">
+  <meta property="og:description" content="Open source GPU accelerated data science libraries">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rapids.ai/">
+  <meta property="og:image" content="images/RAPIDS-logo-white.png">
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="https://rapids.ai/" />
+  <meta name="twitter:title" content="RAPIDS.ai | GPU accelerated data science" />
+  <meta name="twitter:description" content="Open source GPU accelerated data science libraries" />
+  <meta name="twitter:image" content="images/RAPIDS-logo-white.png" />
+
+  <link rel="apple-touch-icon" href="images/icons/icon-512x512.png">
+
+  <link rel="manifest" href="manifest.json">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <link rel="stylesheet" href="css/custom.css">
+
+  <meta name="theme-color" content="#fafafa">
+
+  <script src="https://kit.fontawesome.com/1690513e32.js"></script>
+  <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+</head>
+
+<body>
+  <!-- Inserts nav.html template -->
+  <nav x-data="{ nav: '' }" x-init="
+    fetch('includes/nav.html')
+    .then(data => { 
+      if (data.ok) {
+        return data.text()
+      }
+      nav = '' // load blank
+      throw new Error('Failed to load header.html')
+    })
+    .then(data => {nav = data})
+    .catch(error => {console.error(error)})">
+    <nav x-html="nav"></nav>
+  </nav>
+
+  <!-- Hero Header-->
+  <section class="hero is-medium hero-rapids-bg mb-5">
+    <div class="hero-body has-text-centered">
+      <img class="hero-img" src="images/rapids-logo-whitetxt.svg">
+      <p class="title has-text-white">
+        Open Source GPU Data Science
+      </p>
+      <button class="button-rapids-teal"><a href="#">Get Started</a></button>
+    </div>
+    <div class="top-slant-container">
+      <div class="top-slant-up has-background-white"></div>
+    </div>
+  </section>
+
+  <!-- Content -->
+  <section class="section">
+    <div class="container">
+      <h1 class="has-text-centered">This Page Intentionally Left Blank</h1>
+      <div class="columns">
+        <div class="column is-full has-text-centered">
+          ..wait, then is it really blank?
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Inserts footer.html template -->
+  <div x-data="{ footer: '' }" x-init="
+    fetch('includes/footer.html')
+    .then(data => { 
+      if (data.ok) {
+        return data.text()
+      }
+      footer = '' // load blank
+      throw new Error('Failed to load footer.html')
+    })
+    .then(data => {footer = data})
+    .catch(error => {console.error(error)})">
+    <footer x-html="footer"></footer>
+  </div>
+
+  <!-- Global JS -->
+  <script src="js/main.js"></script>
+
+</body>
+
+</html>
