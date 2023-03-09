@@ -1,6 +1,6 @@
 .DS_Store
 _site
 .jekyll-metadata
-
-# Local Netlify folder
 .netlify
+.hugo_build.lock
+public

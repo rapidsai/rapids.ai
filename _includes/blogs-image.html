@@ -1,5 +1,0 @@
-{% unless include.link contains 'http' %}
-<img alt="{{ include.name }}" src="{{ site.baseurl | append: include.link }}"/>
-{% else %}
-<img alt="{{ include.name }}" src="{{ include.link }}"/>
-{% endunless %}

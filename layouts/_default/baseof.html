@@ -1,0 +1,58 @@
+<html class="no-js" lang="">
+<head>
+  <meta charset="utf-8">
+  <title>
+    {{ block "title" . }}
+      {{ .Title }}
+    {{ end }}
+  </title>
+
+  <meta name="description" content="RAPIDS.ai | GPU accelerated data science">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#fafafa">
+
+  <meta property="og:title" content="RAPIDS.ai | GPU accelerated data science">
+  <meta property="og:description" content="Open source GPU accelerated data science libraries">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rapids.ai/">
+  <meta property="og:image" content="/images/RAPIDS-logo-white.png">
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="https://rapids.ai/" />
+  <meta name="twitter:title" content="RAPIDS.ai | GPU accelerated data science" />
+  <meta name="twitter:description" content="Open source GPU accelerated data science libraries" />
+  <meta name="twitter:image" content="/images/RAPIDS-logo-white.png" />
+
+  <link rel="apple-touch-icon" href="/images/icons/icon-512x512.png">
+
+  <link rel="manifest" href="../manifest.json">
+
+  <link rel="stylesheet" href="/css/normalize.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,600,700">
+  <link rel="stylesheet" href="/css/custom.css">
+
+  <!-- Load Alpine.js -->
+  <script defer src="https://unpkg.com/alpinejs@3.10.2/dist/cdn.min.js"></script>
+
+  <!-- Load Font Awesome -->
+  <script src="https://kit.fontawesome.com/1690513e32.js"></script>
+
+  <!-- Google tag (gtag.js v4) -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-RKXFW6CM42"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'G-RKXFW6CM42');
+  </script>
+</head>
+  <body>
+    {{ partial "nav.html" . }}
+    {{ block "main" . }}
+      <!-- Main -->
+    {{ end }}
+    {{ partial "footer.html" . }}
+  </body>
+</html>

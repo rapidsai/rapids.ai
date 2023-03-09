@@ -1,9 +1,0 @@
-# Versions for site
-#
-# NOTE: Must use "" to prevent losing data like 0.10 -> 0.1
-legacy-version: "22.12"
-legacy-date: "DEC 2022"
-stable-version: "23.02"
-stable-date: "FEB 2023"
-nightly-version: "23.04"
-nightly-date: "APR 2023"

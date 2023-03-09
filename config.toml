@@ -1,0 +1,13 @@
+baseURL = 'https://rapids.ai/'
+languageCode = 'en-us'
+title = 'RAPIDS.ai'
+enableRobotsTXT = true
+googleAnalytics = 'G-RKXFW6CM42'
+
+
+disableKinds = ["taxonomy", "term"]
+
+[sitemap]
+  changefreq = 'monthly'
+  filename = 'sitemap.xml'
+  priority = 0.5

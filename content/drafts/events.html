@@ -1,0 +1,36 @@
+---
+title: RAPIDS.ai | Events
+description: Upcoming and past RAPIDS events
+draft: true
+---
+
+<!-- Hero Shortcode -->
+{{< hero hero-text="RAPIDS Events" button-link="#" button-text="Blank" >}}
+
+<section class="section padding-bottom-slant">
+    <div class="container">
+        <h1 class="mb-5">List of Upcoming and Past RAPIDS Events</h1>
+
+        <!-- Full RSN list -->
+        <div x-data="{ fullResults: {} }" x-init="Papa.parse('https://docs.google.com/spreadsheets/d/e/2PACX-1vTUSMyTJWjiYtuV6nvoQIDFSrt6yf00Mt4J9ZaXUMgVi1bAIhcOfnASLhsIH2PhZEbuMCg7Olv9bcZF/pub?output=csv', {
+                download: true,
+                header: true,
+                complete: function(results) {
+                    fullResults = results.data
+            }})
+            ">
+                <template x-for="event in fullResults">
+                    <div class="columns mt-4">
+                        <div class="column is-two-thirds mt-5">
+                            <h2> <span x-text="event.Title"></span> | <span x-text="event.Date"></span>  </h2>
+                            <h3> <span x-text="event.Type"></span> </h3>
+                            <p> <span x-text="event.Description"></span> </p>
+                            <a x-bing:href="event.Link" target="_blank"> Learn More <i class="fa-solid fa-arrow-up-right"></i></a>
+                        </div>
+                    </div>
+                </template>
+            </div> 
+        </div>
+
+    </div>
+</section>
