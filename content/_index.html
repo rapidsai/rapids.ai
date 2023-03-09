@@ -1,5 +1,5 @@
 ---
-title: RAPIDS.ai | GPU accelerated data science
+title: RAPIDS | GPU Accelerated Data Science
 description: homepage
 ---
 
@@ -8,10 +8,10 @@ description: homepage
 
   <!-- Announcements Shortcode (0-3x)-->
   <!-- UPDATE HERE -->
-  {{< announcements 
+  {{< announcements
     text-1="RAPIDS 23.02 Released" link-1="https://docs.rapids.ai/install#selector"
-    text-2="NVIDIA GTC March 20-23" link-2="https://www.nvidia.com/gtc/"  
-    text-3="Support for Python 3.10 in 23.02" link-3="https://docs.rapids.ai/notices/rsn0023/" 
+    text-2="NVIDIA GTC March 20-23" link-2="https://www.nvidia.com/gtc/"
+    text-3="Support for Python 3.10 in 23.02" link-3="https://docs.rapids.ai/notices/rsn0023/"
   >}}
 
     <!-- Intro -->
@@ -47,7 +47,7 @@ description: homepage
             <h2><i class="fa-thin fa-objects-column"></i> Faster Pandas <br> with cuDF</h2>
             <p>cuDF is a near drop in replacement to pandas for most use cases and has greatly improved performance. </p> <br>
             <a href="https://github.com/rapidsai/cudf/tree/branch-23.04/docs/cudf/source/user_guide/performance_comparisons.ipynb"  target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
-            
+
             <canvas id="cuDFchart" width="400" height="350"></canvas>
             <p class="is-size-7 has-text-grey">* Benchmark on AMD EPYC 7642 (using 1x 2.3GHz CPU core) w/ 512GB and NVIDIA A100 80GB (1x GPU) w/ pandas v1.5 and cuDF v23.02</p>
           </div>
@@ -93,7 +93,7 @@ description: homepage
             <code>nvidia-smi</code>
 
             <h3 class="mt-6 has-text-white">Install with Conda</h3>
-            <p><strong>1.</strong> If conda is not installed, download and run the conda install script</p>
+            <p><strong>1.</strong> If conda is not installed, download and run the install script:</p>
             <pre class="highlight use-white-copy"><code>wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
             <br>
@@ -102,7 +102,7 @@ bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
 
             <h3 class="mt-6 has-text-white">Install with pip</h3>
             <p><strong>1.</strong> Install via pip channels:</p>
-            <pre class="highlight use-white-copy"><code>pip install cudf-cu11 dask-cudf-cu11 --extra-index-url=https://pypi.nvidia.com 
+            <pre class="highlight use-white-copy"><code>pip install cudf-cu11 dask-cudf-cu11 --extra-index-url=https://pypi.nvidia.com
 pip install cuml-cu11 --extra-index-url=https://pypi.nvidia.com
 pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
 
@@ -114,7 +114,7 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
 
             <h2 class="mt-8 has-text-white"><i class="fa-light fa-gears"></i> Do I need an Advanced Install?</h2>
             <p> If you want to use Docker, WSL2, have an uncommon OS, hardware configuration, environment, or
-              need specific versioning such as <code>CUDA 11.5</code> or <code>Python 3.8</code> then you should use the
+              need specific versions such as <code>CUDA 11.5</code> or <code>Python 3.8</code> then you should use the
               installation selector in our
               <a href="https://docs.rapids.ai/install" target="_blank">Advanced Installations Page <i class="fa-solid fa-arrow-up-right"></i> </a>
             </p>
@@ -274,7 +274,7 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
         <div class="columns">
           <div class="column is-half">
             <h2><i class="fa-regular fa-triangle-exclamation"></i> RAPIDS Support Notices </h2>
-            <p> Get the full list of developer updates and notices (RSN) that may effect your projects on the <a
+            <p> Get the full list of developer updates and notices (RSN) that may affect your projects on the <a
                 href="https://docs.rapids.ai/notices" target="_blank"> RSN Documentation Page <i class="fa-solid fa-arrow-up-right"></i></a> </p>
           </div>
           <div class="column is-half">

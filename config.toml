@@ -1,6 +1,6 @@
 baseURL = 'https://rapids.ai/'
 languageCode = 'en-us'
-title = 'RAPIDS.ai'
+title = 'RAPIDS'
 enableRobotsTXT = true
 googleAnalytics = 'G-RKXFW6CM42'
 
