@@ -35,9 +35,9 @@ description: homepage
           </div>
           <div class="column is-one-third">
             <h2><i class="fa-light fa-chart-network"></i> Open Source Ecosystem </h2>
-            <p>RAPIDS is Open Source and available on <a href="https://github.com/rapidsai" taget="_blank">GitHub</a>.
+            <p>RAPIDS is Open Source and available on <a href="https://github.com/rapidsai" target="_blank">GitHub</a>.
               Our mission is to empower and advance the open-source GPU data science data engineering ecosystem. </p>
-            <a href="https://github.com/rapidsai">Jump to RAPIDS on GitHub <i class="fa-solid fa-arrow-up-right"></i>
+            <a href="https://github.com/rapidsai"  target="_blank">Jump to RAPIDS on GitHub <i class="fa-solid fa-arrow-up-right"></i>
             </a>
           </div>
         </div>
@@ -46,7 +46,7 @@ description: homepage
           <div class="column is-one-third">
             <h2><i class="fa-thin fa-objects-column"></i> Faster Pandas <br> with cuDF</h2>
             <p>cuDF is a near a drop in replacement to Pandas for most use cases and has greatly improved performance. </p> <br>
-            <a href="https://github.com/rapidsai/cudf/tree/branch-23.04/docs/cudf/source/user_guide/performance_comparisons.ipynb">Try out this notebook benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
+            <a href="https://github.com/rapidsai/cudf/tree/branch-23.04/docs/cudf/source/user_guide/performance_comparisons.ipynb"  target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
             
             <canvas id="cuDFchart" width="400" height="350"></canvas>
             <p class="is-size-7 has-text-grey">* Benchmark on AMD EPYC 7642 (using 1x 2.3GHz CPU core) w/ 512GB and NVIDIA A100 80GB (1x GPU) w/ pandas v1.5 and cuDF v23.02</p>
@@ -54,7 +54,7 @@ description: homepage
           <div class="column is-one-third">
             <h2><i class="fa-light fa-microchip-ai"></i> Faster scikit-learn <br> with cuML</h2>
             <p>cuML brings huge speedups to ML modeling with an API that matches scikit-learn.</p> <br>
-            <a href="https://github.com/rapidsai/cuml/tree/branch-23.04/python/cuml/benchmark">Try out this notebook benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
+            <a href="https://github.com/rapidsai/cuml/tree/branch-23.04/python/cuml/benchmark"  target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
 
             <canvas id="cuMLchart" width="400" height="350"></canvas>
             <p class="is-size-7 has-text-grey">* Benchmark on AMD EPYC 7642 (using 1x 2.3GHz CPU core) w/ 512GB and NVIDIA A100 80GB (1x GPU) w/ scikit-learn v1.2 and cuML v23.02</p>
@@ -62,7 +62,7 @@ description: homepage
           <div class="column is-one-third">
             <h2><i class="fa-light fa-circle-nodes"></i> Faster networkX <br> with cuGraph</h2>
             <p>cuGraph makes migration from NetworkX easy, accelerates graph analytics, and allows scaling far beyond existing tools. </p>
-            <a href="https://github.com/rapidsai/cugraph/blob/branch-23.04/notebooks/cugraph_benchmarks/synth_release.ipynb">Try out this notebook benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
+            <a href="https://github.com/rapidsai/cugraph/blob/branch-23.04/notebooks/cugraph_benchmarks/synth_release.ipynb"  target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
 
             <canvas id="cuGraphChart" width="400" height="350"></canvas>
             <p class="is-size-7 has-text-grey">* Benchmark on AMD EPYC 7642 (using 1x 2.3GHz CPU core) w/ 512GB and NVIDIA A100 80GB (1x GPU) w/ networkX v3.0 and cuGraph v23.02</p>
@@ -84,16 +84,16 @@ description: homepage
           <div class="column is-half">
             <h2 class="has-text-white"><i class="fa-light fa-download"></i> Quick Local Install </h2>
             <p>RAPIDS offers several installation methods, the quickest is shown below. For more detailed guides go to
-              our <a href="https://docs.rapids.ai/install">advanced install page <i class="fa-solid fa-arrow-up-right"></i></a> </p>
+              our <a href="https://docs.rapids.ai/install"  target="_blank">advanced install page <i class="fa-solid fa-arrow-up-right"></i></a> </p>
 
             <h3 class="mt-5 has-text-white">Requirements</h3>
-            <p><strong>A.</strong> NVIDIA Pascal™ or better GPU with a <a href="https://developer.nvidia.com/cuda-gpus" taget="_blank">compute capability 6.0 and above <i class="fa-solid fa-arrow-up-right"></i></a></p>
+            <p><strong>A.</strong> NVIDIA Pascal™ or better GPU with a <a href="https://developer.nvidia.com/cuda-gpus" target="_blank">compute capability 6.0 and above <i class="fa-solid fa-arrow-up-right"></i></a></p>
             <p><strong>B.</strong> Ubuntu 20.04 or 22.04, CentOS 7, Rocky Linux 8, or WSL2 on Windows 11</p>
             <p><strong>C.</strong> Recent <a href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html" target="_blank"> CUDA version <em>and</em> NVIDIA driver pairs</a>. Check yours with:
             <code>nvidia-smi</code>
 
             <h3 class="mt-6 has-text-white">Install with Conda</h3>
-            <p><strong>1.</strong> Download and run the conda install script (if you don't have conda installed already): </p>
+            <p><strong>1.</strong> If conda is not already installed, download and run the conda install script</p>
             <pre class="highlight use-white-copy"><code>wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
             <br>
@@ -107,16 +107,16 @@ pip install cuml-cu11 --extra-index-url=https://pypi.nvidia.com
 pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
 
             <h3 class="mt-6 has-text-white">Install with Docker</h3>
-            <p>Check that you have the <a href="https://docs.rapids.ai/install#docker">required environment</a> and then use the <a href="https://docs.rapids.ai/install#selector">install selector <i class="fa-solid fa-arrow-up-right"></i> </a></p>
+            <p>Check that you have the <a href="https://docs.rapids.ai/install#docker"  target="_blank">required environment</a> and then use the <a href="https://docs.rapids.ai/install#selector"  target="_blank">install selector <i class="fa-solid fa-arrow-up-right"></i> </a></p>
 
             <h3 class="mt-6 has-text-white">Install on Windows</h3>
-            <p>Use the Windows <a href="https://docs.rapids.ai/install#WSL2">WSL2 installation instructions <i class="fa-solid fa-arrow-up-right"></i> </a></p>
+            <p>Use the Windows <a href="https://docs.rapids.ai/install#WSL2" target="_blank">WSL2 installation instructions <i class="fa-solid fa-arrow-up-right"></i> </a></p>
 
             <h2 class="mt-8 has-text-white"><i class="fa-light fa-gears"></i> Do I need an Advanced Install?</h2>
             <p> If you want to use Docker, WSL2, have an uncommon OS, hardware configuration, environment, or
               need specific versioning such as <code>CUDA 11.5</code> or <code>Python 3.8</code> then you should use the
               installation selector in our
-              <a href="https://docs.rapids.ai/install">Advanced Installations Page <i class="fa-solid fa-arrow-up-right"></i> </a>
+              <a href="https://docs.rapids.ai/install" target="_blank">Advanced Installations Page <i class="fa-solid fa-arrow-up-right"></i> </a>
             </p>
           </div>
           <div class="column is-half">
@@ -342,7 +342,7 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
               },
               title: {
                 display: true,
-                text: 'Performance on 300,000,000 x 2 dataframe'
+                text: 'Performance on 300,000,000 row x 2 col dataframe'
               }
             },
             layout: {
