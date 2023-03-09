@@ -1,6 +1,6 @@
 /* ============================
-   Custom CSS for RAPIDS.ai
-   Overrides for base Bluma.css
+   Custom CSS for rapids.ai
+   Overrides for base Bulma.css
    =========================== */
 
 
@@ -588,4 +588,3 @@ button:hover {
 .has-text-rapids-teal {
   color: #36c9dd;
 }
-
