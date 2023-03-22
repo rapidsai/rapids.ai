@@ -1,50 +1,48 @@
-- link: https://twitter.com/1047296373555519488/status/1585680522591686656
+- link: https://twitter.com/RAPIDSai/status/1636072093560496128?cxt=HHwWgIDTudO5v7QtAAAA
   screen_name: RAPIDSai
   name: RAPIDS AI
   type: post
   text:
-    Checkout everything exciting going on in the world of RAPIDS in our brand
-    new release blog! https://t.co/4MzQ7wTQ4D
-  link: https://t.co/4MzQ7wTQ4D
-  date: Thu Oct 27 17:11:11 +0000 2022
-- link: https://twitter.com/1047296373555519488/status/1585318235930402817
+        The Merlin team is always building something exciting! Take a look.
+  media: https://t.co/WDSWfTG7xf
+  date: Mar 15 2023
+- link: https://twitter.com/jeffheaton/status/1635605820476997632?cxt=HHwWgIC-of6067ItAAAA
+  screen_name: jeffheaton
+  name: jeffheaton
+  type: retweet
+  text:
+        Installing RAPIDS on WSL2 for amazing pandas performance with an NVIDIA RTX 6000 Ada. 
+  media: https://t.co/MINhUtRzTR
+  date: Mar 14 2023
+- link: https://twitter.com/RAPIDSai/status/1635691597508800512?cxt=HHwWgMDT-e61krMtAAAA
+  screen_name: RAPIDSai
+  name: RAPIDS AI
+  type: post
+  text: 
+        Check out this talk to dramatically speed up your spatial workflows. GTC is free!
+  media: https://t.co/LPLMNc29UW
+  date: Mar 14 2023
+- link: https://twitter.com/RAPIDSai/status/1633961442016894976?cxt=HHwWgIDRgcjR_6wtAAAA
   screen_name: RAPIDSai
   name: RAPIDS AI
   type: post
   text:
-    Do more on GPUs with less code - check out @gmarkall's new blog on the @numba_jit
-    high-level API https://t.co/MINhUtRzTR
-  link: https://t.co/MINhUtRzTR
-  date: Wed Oct 26 17:11:35 +0000 2022
-- link: https://twitter.com/1047296373555519488/status/1585299072667201538
-  screen_name: RAPIDSai
-  name: RAPIDS AI
-  type: post
-  text: Seeing is believing! https://t.co/BABXKUbk2M
-  link: https://t.co/BABXKUbk2M
-  date: Wed Oct 26 15:55:27 +0000 2022
-- link: https://twitter.com/1047296373555519488/status/1583140322036441089
-  screen_name: RAPIDSai
-  name: RAPIDS AI
-  type: post
-  text: RAPIDS available via pip on an experimental basis. Send tweet. https://t.co/LPLMNc29UW
-  link: https://t.co/LPLMNc29UW
-  date: Thu Oct 20 16:57:20 +0000 2022
-- link: https://twitter.com/1047296373555519488/status/1582410586804977672
-  screen_name: RAPIDSai
-  name: RAPIDS AI
-  type: post
-  text:
-    The truly amazing work of the cuDF team on absolutely crushing strings on
-    GPUs - a notorious non-fan of strings, ha... https://t.co/vulZhoTKlY
+        We've got so much stuff in our latest release, including cuML that can run on CPU or GPU!
   link: https://t.co/vulZhoTKlY
-  date: Tue Oct 18 16:37:38 +0000 2022
-- link: https://twitter.com/1047296373555519488/status/1582051360299659280
+  date: Mar 9 2023
+- link: https://twitter.com/RAPIDSai/status/1629166509909213184?cxt=HHwWgIDQ8eOT-5stAAAA
   screen_name: RAPIDSai
   name: RAPIDS AI
   type: post
   text:
-    Check out @miguelusque, who's been using RAPIDS from the start, give a talk
-    on the 27th! https://t.co/vmNryKfRXj
-  link: https://t.co/vmNryKfRXj
-  date: Mon Oct 17 16:50:12 +0000 2022
+        In the time I spent trying to think of clever tweet, I could have done something clever with RAPIDS on data set that wouldn't have fit on disks in my dorm. Good thing no one has a robot to write tweet copy?
+  media: https://t.co/8TmOjAgVoE
+  date: Feb 24 2023
+- link: https://twitter.com/RAPIDSai/status/1628504326791647232?cxt=HHwWgMDSmdODzpktAAAA
+  screen_name: RAPIDSai
+  name: RAPIDS AI
+  type: post
+  text:
+        Please tag us in all your pretty pictures. If we get enough good stuff, who knows? Maybe we'll start an instagram.
+  media: https://t.co/yt9Z4zWTvI
+  date: Feb 22 2023
