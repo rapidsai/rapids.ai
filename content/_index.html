@@ -83,8 +83,8 @@ description: homepage
         <div class="columns">
           <div class="column is-half">
             <h2 class="has-text-white"><i class="fa-light fa-download"></i> Quick Local Install </h2>
-            <p>RAPIDS offers several installation methods, the quickest is shown below. For more detailed guides go to
-              our <a href="https://docs.rapids.ai/install"  target="_blank">advanced install page <i class="fa-solid fa-arrow-up-right"></i></a> </p>
+            <p>RAPIDS offers several installation methods, the quickest method, for instances meeting the requirements, is shown below. For detailed and advanced installations, including setting up from Cloud instances, please go to our
+              our <a href="https://docs.rapids.ai/install"  target="_blank">Installation Guide<i class="fa-solid fa-arrow-up-right"></i></a> </p>
 
             <h3 class="mt-5 has-text-white">Requirements</h3>
             <p><strong>A.</strong> NVIDIA Pascal™ or better GPU with a <a href="https://developer.nvidia.com/cuda-gpus" target="_blank">compute capability 6.0 and above <i class="fa-solid fa-arrow-up-right"></i></a></p>
@@ -97,8 +97,9 @@ description: homepage
             <pre class="highlight use-white-copy"><code>wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
             <br>
-            <p><strong>2.</strong> Then quick install RAPIDS with:</p>
-            <pre class="highlight use-white-copy"><code>conda create -n rapids-23.02 -c rapidsai -c conda-forge -c nvidia  \ rapids=23.02 python=3.10 cudatoolkit=11.8</code></pre>
+            <p><strong>2.</strong> Then quick install and activate RAPIDS with:</p>
+            <pre class="highlight use-white-copy"><code>conda create -n rapids-23.02 -c rapidsai -c conda-forge -c nvidia  \ rapids=23.02 python=3.10 cudatoolkit=11.8
+conda activate rapids-23.02</code></pre>
 
             <h3 class="mt-6 has-text-white">Install with pip</h3>
             <p><strong>1.</strong> Install via pip channels:</p>
@@ -112,11 +113,11 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
             <h3 class="mt-6 has-text-white">Install on Windows</h3>
             <p>Use the Windows <a href="https://docs.rapids.ai/install#WSL2" target="_blank">WSL2 installation instructions <i class="fa-solid fa-arrow-up-right"></i> </a></p>
 
-            <h2 class="mt-8 has-text-white"><i class="fa-light fa-gears"></i> Do I need an Advanced Install?</h2>
+            <h2 class="mt-8 has-text-white"><i class="fa-light fa-gears"></i> Do I need to use the Installation Guide?</h2>
             <p> If you want to use Docker, WSL2, have an uncommon OS, hardware configuration, environment, or
               need specific versions such as <code>CUDA 11.5</code> or <code>Python 3.8</code> then you should use the
               installation selector in our
-              <a href="https://docs.rapids.ai/install" target="_blank">Advanced Installations Page <i class="fa-solid fa-arrow-up-right"></i> </a>
+              <a href="https://docs.rapids.ai/install" target="_blank">Installations Guide <i class="fa-solid fa-arrow-up-right"></i> </a>
             </p>
           </div>
           <div class="column is-half">
@@ -129,12 +130,12 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
                 <img src="/images/OpenGoogleColab.png" class="img-w200">
                 <h3 class="has-text-white">Google CoLab</h3>
                 <h3> <a href="https://colab.research.google.com/drive/13sspqiEZwso4NYTbsflpPyNFaVAAxUgr" target="_blank">LAUNCH Google CoLab (pip) <i class="fa-solid fa-arrow-up-right"></i> </a></h3>
-                <p>Jump right into a GPU enabled notebook environment with required account. Also available with <a  href="https://colab.research.google.com/drive/1TAAi_szMfWqRfHVfjGSqnGVLr_ztzUM9" target="_blank">Conda</a>. </p>
+                <p>Jump right into a GPU enabled notebook environment with required account. Also available with <a  href="https://colab.research.google.com/drive/1TAAi_szMfWqRfHVfjGSqnGVLr_ztzUM9" target="_blank">Conda (v22.12)</a>. </p>
               </div>
               <div class="column is-half">
                 <img src="/images/OpenAmazonStudioLab.png" class="img-w200">
                 <h3 class="has-text-white">Amazon Sagemaker Studio Lab</h3>
-                <h3> <a href="https://studiolab.sagemaker.aws/" target="_blank">LAUNCH Studio Lab <i class="fa-solid fa-arrow-up-right"></i> </a></h3>
+                <h3> <a href="https://studiolab.sagemaker.aws/" target="_blank">LAUNCH Sage Maker Studio Lab <i class="fa-solid fa-arrow-up-right"></i> </a></h3>
                 <p>Enables notebook based environments in a free trial with required account.</p>
               </div>
             </div>
