@@ -93,7 +93,9 @@ description: homepage
             <code>nvidia-smi</code>
 
             <h3 class="mt-6 has-text-white">Install with Conda</h3>
-            <p><strong>1.</strong> If conda is not installed, download and run the install script:</p>
+            <p><strong>1.</strong> If not installed, download and run the install script. <br> 
+             This will install the latest miniconda: 
+            </p>
             <pre class="highlight use-white-copy"><code>wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
             <br>
@@ -101,7 +103,7 @@ bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
             <pre class="highlight use-white-copy"><code>conda create -n rapids-23.04 -c rapidsai -c conda-forge -c nvidia  \ rapids=23.04 python=3.10 cudatoolkit=11.8</code></pre>
 
             <h3 class="mt-6 has-text-white">Install with pip</h3>
-            <p><strong>1.</strong> Install via pip channels:</p>
+            <p><strong>1.</strong> Install via pip channels. <br> Not all RAPIDS libraries are currently available:</p>
             <pre class="highlight use-white-copy"><code>pip install cudf-cu11 dask-cudf-cu11 --extra-index-url=https://pypi.nvidia.com
 pip install cuml-cu11 --extra-index-url=https://pypi.nvidia.com
 pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
