@@ -4,14 +4,14 @@ description: homepage
 ---
 
 <!-- Hero Shortcode -->
-{{< hero hero-text="GPU Accelerated Data Science" button-link="#quick-start" button-text="Quick Start">}}
+{{< hero hero-text="GPU Accelerated Data Science" button-link="#quick-start" button-text="Quick Start" >}}
 
   <!-- Announcements Shortcode (0-3x)-->
   <!-- UPDATE HERE -->
   {{< announcements
     text-1="RAPIDS 23.04 Released" link-1="https://docs.rapids.ai/install#selector"
-    text-2="NVIDIA GTC March 20-23" link-2="https://www.nvidia.com/gtc/"
-    text-3="Support for Python 3.10 in 23.02" link-3="https://docs.rapids.ai/notices/rsn0023/"
+    text-2="Check out RAPIDS @ GTC'23 On-Demand" link-2="https://www.nvidia.com/en-us/on-demand/search/?facet.event_year[]=2023&facet.mimetype[]=event%20session&layout=list&page=1&q=rapids&sort=relevance&sortDir=desc"
+    text-3="Important New Platform Support Changes" link-3="https://docs.rapids.ai/notices"
   >}}
 
     <!-- Intro -->
@@ -93,7 +93,9 @@ description: homepage
             <code>nvidia-smi</code>
 
             <h3 class="mt-6 has-text-white">Install with Conda</h3>
-            <p><strong>1.</strong> If conda is not installed, download and run the install script:</p>
+            <p><strong>1.</strong> If not installed, download and run the install script. <br> 
+             This will install the latest miniconda: 
+            </p>
             <pre class="highlight use-white-copy"><code>wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
             <br>
@@ -101,7 +103,7 @@ bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
             <pre class="highlight use-white-copy"><code>conda create -n rapids-23.04 -c rapidsai -c conda-forge -c nvidia  \ rapids=23.04 python=3.10 cudatoolkit=11.8</code></pre>
 
             <h3 class="mt-6 has-text-white">Install with pip</h3>
-            <p><strong>1.</strong> Install via pip channels:</p>
+            <p><strong>1.</strong> Install via pip channels. <br> Not all RAPIDS libraries are currently available:</p>
             <pre class="highlight use-white-copy"><code>pip install cudf-cu11 dask-cudf-cu11 --extra-index-url=https://pypi.nvidia.com
 pip install cuml-cu11 --extra-index-url=https://pypi.nvidia.com
 pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
@@ -110,7 +112,7 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
             <p>Check that you have the <a href="https://docs.rapids.ai/install#docker"  target="_blank">required environment</a> and then use the <a href="https://docs.rapids.ai/install#selector"  target="_blank">install selector <i class="fa-solid fa-arrow-up-right"></i> </a></p>
 
             <h3 class="mt-6 has-text-white">Install on Windows</h3>
-            <p>Use the Windows <a href="https://docs.rapids.ai/install#WSL2" target="_blank">WSL2 installation instructions <i class="fa-solid fa-arrow-up-right"></i> </a></p>
+            <p>Use the Windows <a href="https://docs.rapids.ai/install#wsl2" target="_blank">WSL2 installation instructions <i class="fa-solid fa-arrow-up-right"></i> </a></p>
 
             <h2 class="mt-8 has-text-white"><i class="fa-light fa-gears"></i> Do I need an Advanced Install?</h2>
             <p> If you want to use Docker, WSL2, have an uncommon OS, hardware configuration, environment, or
@@ -220,9 +222,9 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
     </section>
 
     <section class="section">
-      {{< open-source>}}
+      {{< open-source >}}
 
-      {{< adopters-contributors>}}
+      {{< adopters-contributors >}}
     </section>
 
     <div class="bottom-slant-container">
@@ -272,7 +274,11 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
       <div class="container mb-8">
         <h1 class="mb-5">Latest News</h1>
         <div class="columns">
-          <div class="column is-half">
+          <div class="column is-one-third">
+            <h2><i class="fa-brands fa-twitter"></i> RAPIDS Twitter </h2>
+            <p> Follow the latest from the RAPIDS Twitter community with <a href="https://twitter.com/RAPIDSai" target="_blank">@RAPIDSai <i class="fa-solid fa-arrow-up-right"></i></a> </p>
+          </div>
+          <div class="column is-one-third">
             <h2><i class="fa-regular fa-triangle-exclamation"></i> RAPIDS Support Notices </h2>
             <p> Get the full list of developer updates and notices (RSN) that may affect your projects on the <a
                 href="https://docs.rapids.ai/notices" target="_blank"> RSN Documentation Page <i class="fa-solid fa-arrow-up-right"></i></a> </p>
@@ -284,8 +290,8 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
         </div>
       </div>
 
-      <!-- Posts and Tweets -->
-      {{< post-tweets>}}
+      <!-- Blog Posts -->
+      {{< post >}}
 
     </section>
 
@@ -293,7 +299,7 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
     <script src="js/main.js"></script>
 
     <!-- Adds Copy Button to Pre.Highlight -->
-    {{< copy-btn>}}
+    {{< copy-btn >}}
 
       <!-- Chart.js perf charts -->
       <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.umd.min.js"
