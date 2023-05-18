@@ -25,3 +25,9 @@
 /wsl2.html             https://docs.rapids.ai/install#WSL2
 /xgboost               https://xgboost.readthedocs.io/en/stable/gpu/index.html
 /xgboost.html          https://xgboost.readthedocs.io/en/stable/gpu/index.html
+
+
+/cudf/ /cudf/stable/
+/cudf/stable/* https://d1664dvumjb44w.cloudfront.net/cudf/23.06/html/:splat 200
+/cudf/23.06/* https://d1664dvumjb44w.cloudfront.net/cudf/23.06/html/:splat 200
+/cudf/23.04/* https://d1664dvumjb44w.cloudfront.net/cudf/23.04/html/:splat 200
