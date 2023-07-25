@@ -7,15 +7,15 @@
   text: When analyzing data, sometimes the relationships between the data elements
     are important along with the scope of the question being asked. In those cases,
     it is better to represent the data as a graph and apply graph analytics. An example
-    coming out of the COVID pand...
-  title: Introduction to Graph Analysis using cuGraph
+    coming out of the COVID...
+  title: "Introduction to Graph Analysis using cuGraph"
 - date: Wed, 21 Jun 2023 15:53:26 GMT
   link: https://medium.com/rapids-ai/rapids-23-06-release-accelerating-data-science-6b09018c0527
   poster: Alex Ravenel
-  text: "RAPIDS\u2019 23.06 release is now available! This release adds a number of\
-    \ features and improvements we are excited about, including: Get started with\
-    \ the quick start installation instructions for conda, pip, or docker or read\
-    \ on to see more details on this months\u2019 upgrad..."
+  text: "RAPIDS\u2019 23.06 release is now available! This release adds a number of
+    features and improvements we are excited about, including: Get started with
+    the quick start installation instructions for conda, pip, or docker or read
+    on to see more details on this months\u2019..."
   title: "RAPIDS 23.06 Release\u200A\u2014\u200AAccelerating Data Science"
 - date: Tue, 23 May 2023 15:02:01 GMT
   link: https://medium.com/rapids-ai/cuspatial-23-04-7d8014570d8d
@@ -23,8 +23,8 @@
   text: cuSpatial continues barreling towards complete spatial relationship predicate
     (DE-9IM) support and Cartesian distance between any two geometries. In support
     of these goals cuSpatial 23.04 includes multiple new features, as well as a new
-    notebook that shows off the ca...
-  title: cuSpatial 23.04
+    notebook that shows off the...
+  title: "cuSpatial 23.04"
 - date: Thu, 11 May 2023 16:01:54 GMT
   link: https://medium.com/rapids-ai/intro-to-graph-neural-networks-with-cugraph-pyg-6fe32c93a2d0
   poster: Alex Barghi
@@ -32,47 +32,47 @@
     in machine learning. GNNs combine a rich array of feature data (similar to the
     input of a traditional neural network) with network structure (represented as
     a graph). Depending on the work...
-  title: Intro to Graph Neural Networks with cuGraph-PyG
+  title: "Intro to Graph Neural Networks with cuGraph-PyG"
 - date: Tue, 09 May 2023 18:37:21 GMT
   link: https://medium.com/rapids-ai/rapids-release-23-04-ed03055d378f
   poster: Alex Ravenel
   text: RAPIDS 23.04 is out! We are excited about this release, which includes major
     updates to cuSpatial, continued improvements to graph neural network functionality
     in our graph libraries, some performance improvements (and benchmarking!) in cuDF,
-    and a number of improvem...
-  title: RAPIDS Release 23.04
+    and a number of...
+  title: "RAPIDS Release 23.04"
 - date: Thu, 09 Mar 2023 22:40:44 GMT
   link: https://medium.com/rapids-ai/rapids-release-23-02-1518cfaed17f
   poster: Paul Mahler
-  text: "First Release of the\_Year RAPIDS Release 23.02 is live. We are most excited\
-    \ to highlight several quality-of-life improvements. We have a new web presence\
-    \ for RAPIDS; we believe this will make learning, using, and adding to RAPIDS\
-    \ easier and more enjoyable than ever b..."
+  text: "First Release of the\_Year RAPIDS Release 23.02 is live. We are most excited
+     to highlight several quality-of-life improvements. We have a new web presence
+     for RAPIDS; we believe this will make learning, using, and adding to RAPIDS
+     easier and more enjoyable than ever..."
   title: RAPIDS Release 23.02
 - date: Wed, 22 Feb 2023 16:40:19 GMT
   link: https://medium.com/rapids-ai/faster-resampling-with-imbalanced-learn-and-cuml-6cfc1dae63bf
   poster: Nick Becker
-  text: "Imbalanced-learn is the most popular open source library for resampling datasets\
-    \ with class imbalance. With more than 3 million downloads in the past month alone,\
-    \ it\u2019s a critical piece of the data analysis and machine learning ecosystem.\
-    \ RAPIDS cuML is a suite of fas..."
+  text: "Imbalanced-learn is the most popular open source library for resampling datasets
+     with class imbalance. With more than 3 million downloads in the past month alone,
+     it\u2019s a critical piece of the data analysis and machine learning ecosystem.
+     RAPIDS cuML is a suite of..."
   title: Faster Resampling with Imbalanced-learn and cuML
 - date: Wed, 01 Feb 2023 19:27:59 GMT
   link: https://medium.com/rapids-ai/easy-cpu-gpu-arrays-and-dataframes-run-your-dask-code-where-youd-like-e349d92351d
   poster: Rick Zamora
-  text: "It\u2019s now easy to switch between CPU (NumPy / Pandas) and GPU (CuPy /\
-    \ cuDF) in\_Dask. As of Dask 2022.10.0, users can optionally select the backend\
-    \ engine for input IO and data creation. In the short-term, the goal of the backend-configuration\
-    \ system is to enable Dask ..."
-  title: "Easy CPU/GPU Arrays and DataFrames\u200A\u2014\u200ARun your Dask code where\
-    \ you\u2019d like"
+  text: "It\u2019s now easy to switch between CPU (NumPy / Pandas) and GPU (CuPy /
+     cuDF) in\_Dask. As of Dask 2022.10.0, users can optionally select the backend
+     engine for input IO and data creation. In the short-term, the goal of the backend-configuration
+     system is to enable Dask..."
+  title: "Easy CPU/GPU Arrays and DataFrames\u200A\u2014\u200ARun your Dask code where
+     you\u2019d like"
 - date: Thu, 19 Jan 2023 16:48:53 GMT
   link: https://medium.com/rapids-ai/faster-topic-modeling-with-bertopic-and-rapids-cuml-5c7559aba898
   poster: Maarten Grootendorst
   text: BERTopic is a topic modeling framework that brings neural network embeddings
     and classical machine learning techniques together into a state-of-the-art solution.
     The library provides a friendly user interface for many different tasks, including
-    guided, supervised, se...
+    guided, supervised...
   title: Faster Topic Modeling with BERTopic and RAPIDS cuML
 - date: Thu, 12 Jan 2023 20:58:28 GMT
   link: https://medium.com/rapids-ai/pytorch-rapids-rmm-maximize-the-memory-efficiency-of-your-workflows-f475107ba4d4
@@ -80,5 +80,5 @@
   text: GPU-accelerated machine learning is producing fascinating results across a
     wide range of fields on a seemingly daily basis. While neural networks are usually
     the focus of attention, data pre-processing and preparation is just as important
-    and often a bottleneck in ma...
-  title: 'PyTorch + Rapids RMM: Maximize the Memory Efficiency of your Workflows'
+    and often a bottleneck in...
+  title: "PyTorch + Rapids RMM: Maximize the Memory Efficiency of your Workflows"
