@@ -101,7 +101,7 @@ bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
             <pre class="highlight use-white-copy"><code>conda create --solver=libmamba -n rapids-23.08 -c rapidsai -c conda-forge -c nvidia rapids=23.08 python=3.10 cudatoolkit=11.8</code></pre>
 
             <h3 class="mt-6 has-text-white">Install with pip</h3>
-            <p><strong>1.</strong> Install via pip channels. <br> Not all RAPIDS libraries are currently available:</p>
+            <p><strong>1.</strong> Install via pip channels:</p>
             <pre class="highlight use-white-copy"><code>pip install cudf-cu11 dask-cudf-cu11 --extra-index-url=https://pypi.nvidia.com
 pip install cuml-cu11 --extra-index-url=https://pypi.nvidia.com
 pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
