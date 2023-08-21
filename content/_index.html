@@ -9,8 +9,8 @@ description: homepage
   <!-- Announcements Shortcode (0-3x)-->
   <!-- UPDATE HERE -->
   {{< announcements
-    text-1="RAPIDS 23.04 Released" link-1="https://docs.rapids.ai/install#selector"
-    text-2="Check out RAPIDS @ GTC'23 On-Demand" link-2="https://www.nvidia.com/en-us/on-demand/search/?facet.event_year[]=2023&facet.mimetype[]=event%20session&layout=list&page=1&q=rapids&sort=relevance&sortDir=desc"
+    text-1="RAPIDS 23.08 Released" link-1="https://docs.rapids.ai/install#selector"
+    text-2="Check out RAPIDS @ GTC'23 On-Demand" link-2="https://www.nvidia.com/en-us/on-demand/playlist/playList-3319e41b-9ee0-4471-aa54-9b6633c4ee10/"
     text-3="Important New Platform Support Changes" link-3="https://docs.rapids.ai/notices"
   >}}
 
@@ -22,9 +22,7 @@ description: homepage
         <div class="columns">
           <div class="column is-one-third">
             <h2><i class="fa-light fa-caret-right"></i> What is RAPIDS </h2>
-            <p> RAPIDS provides unmatched speed with familiar APIs that match the most popular PyData libraries. Built
-              on the shoulders of giants including <a href="https://developer.nvidia.com/cuda-toolkit" target="_blank">NVIDIA CUDA</a> and <a href="https://arrow.apache.org/" target="_blank">Apache
-                Arrow</a>, it unlocks the speed of GPUs with code you already know. </p>
+            <p> RAPIDS provides unmatched speed with familiar APIs that match the most popular PyData libraries. Built on state-of-the-art foundations like <a href="https://developer.nvidia.com/cuda-toolkit" target="_blank">NVIDIA CUDA</a> and <a href="https://arrow.apache.org/" target="_blank">Apache Arrow</a>, it unlocks the speed of GPUs with code you already know. </p>
             <a href="/learn-more/#about">Learn more on the About Section <i class="fa-solid fa-arrow-up-right"></i> </a>
           </div>
           <div class="column is-one-third">
@@ -47,7 +45,7 @@ description: homepage
           <div class="column is-one-third">
             <h2><i class="fa-thin fa-objects-column"></i> Faster Pandas <br> with cuDF</h2>
             <p>cuDF is a near drop in replacement to pandas for most use cases and has greatly improved performance. </p> <br>
-            <a href="https://github.com/rapidsai/cudf/tree/branch-23.04/docs/cudf/source/user_guide/performance_comparisons.ipynb"  target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
+            <a href="https://github.com/rapidsai/cudf/blob/branch-23.08/docs/cudf/source/user_guide/performance-comparisons/performance-comparisons.ipynb"  target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
 
             <canvas id="cuDFchart" width="400" height="350"></canvas>
             <p class="is-size-7 has-text-grey">* Benchmark on AMD EPYC 7642 (using 1x 2.3GHz CPU core) w/ 512GB and NVIDIA A100 80GB (1x GPU) w/ pandas v1.5 and cuDF v23.02</p>
@@ -55,7 +53,7 @@ description: homepage
           <div class="column is-one-third">
             <h2><i class="fa-light fa-microchip-ai"></i> Faster scikit-learn <br> with cuML</h2>
             <p>cuML brings huge speedups to ML modeling with an API that matches scikit-learn.</p> <br>
-            <a href="https://github.com/rapidsai/cuml/tree/branch-23.04/python/cuml/benchmark"  target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
+            <a href="https://github.com/rapidsai/cuml/tree/branch-23.08/python/cuml/benchmark"  target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
 
             <canvas id="cuMLchart" width="400" height="350"></canvas>
             <p class="is-size-7 has-text-grey">* Benchmark on AMD EPYC 7642 (using 1x 2.3GHz CPU core) w/ 512GB and NVIDIA A100 80GB (1x GPU) w/ scikit-learn v1.2 and cuML v23.02</p>
@@ -63,7 +61,7 @@ description: homepage
           <div class="column is-one-third">
             <h2><i class="fa-light fa-circle-nodes"></i> Faster networkX <br> with cuGraph</h2>
             <p>cuGraph makes migration from networkX easy, accelerates graph analytics, and allows scaling far beyond existing tools. </p>
-            <a href="https://github.com/rapidsai/cugraph/blob/branch-23.04/notebooks/cugraph_benchmarks/synth_release.ipynb"  target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
+            <a href="https://github.com/rapidsai/cugraph/blob/branch-23.08/notebooks/cugraph_benchmarks/synth_release.ipynb"  target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
 
             <canvas id="cuGraphChart" width="400" height="350"></canvas>
             <p class="is-size-7 has-text-grey">* Benchmark on AMD EPYC 7642 (using 1x 2.3GHz CPU core) w/ 512GB and NVIDIA A100 80GB (1x GPU) w/ networkX v3.0 and cuGraph v23.02</p>
@@ -84,7 +82,7 @@ description: homepage
         <div class="columns">
           <div class="column is-half">
             <h2 class="has-text-white"><i class="fa-light fa-download"></i> Quick Local Install </h2>
-            <p>RAPIDS offers several installation methods, the quickest is shown below. For more detailed guides go to
+            <p>RAPIDS offers several installation methods, the quickest is shown below. <br> For more detailed guides go to
               our <a href="https://docs.rapids.ai/install"  target="_blank">advanced install page <i class="fa-solid fa-arrow-up-right"></i></a> </p>
 
             <h3 class="mt-5 has-text-white">Requirements</h3>
@@ -94,17 +92,17 @@ description: homepage
             <code>nvidia-smi</code>
 
             <h3 class="mt-6 has-text-white">Install with Conda</h3>
-            <p><strong>1.</strong> If not installed, download and run the install script. <br> 
-             This will install the latest miniconda: 
+            <p><strong>1.</strong> If not installed, download and run the install script. <br>
+             This will install the latest miniconda:
             </p>
             <pre class="highlight use-white-copy"><code>wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
             <br>
             <p><strong>2.</strong> Then quick install RAPIDS with:</p>
-            <pre class="highlight use-white-copy"><code>conda create -n rapids-23.04 -c rapidsai -c conda-forge -c nvidia  \ rapids=23.04 python=3.10 cudatoolkit=11.8</code></pre>
+            <pre class="highlight use-white-copy"><code>conda create --solver=libmamba -n rapids-23.08 -c rapidsai -c conda-forge -c nvidia rapids=23.08 python=3.10 cudatoolkit=11.8</code></pre>
 
             <h3 class="mt-6 has-text-white">Install with pip</h3>
-            <p><strong>1.</strong> Install via pip channels. <br> Not all RAPIDS libraries are currently available:</p>
+            <p><strong>1.</strong> Install via pip channels:</p>
             <pre class="highlight use-white-copy"><code>pip install cudf-cu11 dask-cudf-cu11 --extra-index-url=https://pypi.nvidia.com
 pip install cuml-cu11 --extra-index-url=https://pypi.nvidia.com
 pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
@@ -277,7 +275,7 @@ pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
         <div class="columns">
           <div class="column is-one-third">
             <h2><i class="fa-brands fa-twitter"></i> RAPIDS Twitter </h2>
-            <p> Follow the latest from the RAPIDS twitter community with <a href="https://twitter.com/RAPIDSai" target="_blank">@RAPIDSai <i class="fa-solid fa-arrow-up-right"></i></a> </p>
+            <p> Follow the latest from the RAPIDS Twitter community with <a href="https://twitter.com/RAPIDSai" target="_blank">@RAPIDSai <i class="fa-solid fa-arrow-up-right"></i></a> </p>
           </div>
           <div class="column is-one-third">
             <h2><i class="fa-regular fa-triangle-exclamation"></i> RAPIDS Support Notices </h2>
