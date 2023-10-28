@@ -1,0 +1,12 @@
+{
+  "name": "rapids-site",
+  "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+  "forwardPorts": [1313],
+  "features": {
+    "ghcr.io/eitsupi/devcontainer-features/jq-likes:2": {
+      "jqVersion": "latest",
+      "yqVersion": "latest"
+    }
+  },
+  "postCreateCommand": "./scripts/devcontainer-init.sh"
+}
