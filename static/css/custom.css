@@ -370,16 +370,6 @@ button:hover {
 
 /* /// misc /// */
 
-.border-top {
-  border-width: 0.13rem;
-  border-top-style: solid;
-}
-
-.border-bottom {
-  border-width: 0.13rem;
-  border-bottom-style: solid;
-}
-
 .tags-container {
   width: 100%;
   margin-top: -0.2rem;
@@ -408,7 +398,7 @@ button:hover {
 
 /* /// border colors /// */
 .has-border-rapids-purple-primary {
-  border-color:#720dff
+  border-color:#720dff!important;
 }
 
 .has-border-rapids-pink {
@@ -423,8 +413,8 @@ button:hover {
   border-color: #36c9dd;
 }
 
-.has-border-white {
-  border-color: rgb(228, 228, 228);
+.border-white {
+  border-color: rgb(228, 228, 228)!important;
 }
 
 
