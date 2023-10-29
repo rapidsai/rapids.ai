@@ -486,11 +486,16 @@ button:hover {
   width: 400px;
 }
 
-/* /// extra spacers /// */
-.is-size-6-half {
+/* /// extra font sizes /// */
+.fs-6-half {
   font-size: 0.9rem;
 }
 
+.fs-7 {
+  font-size: 0.75rem;
+}
+
+/* /// extra spacers /// */
 .mt-6 {
   margin-top: 2.5rem !important;
 }
