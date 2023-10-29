@@ -9,9 +9,9 @@
       {{ if (eq $index 0) }}
         {{ $cssModifier = "" }}
       {{end}}
-    <div class='columns {{ $cssModifier }}'>
+    <div class='row {{ $cssModifier }}'>
     {{end}}
-      <div class="column is-one-third">
+      <div class="col-md-4">
         <a href="{{ .link }}" target="_blank">
           <h3>
             {{ .title }} <i class="fa-solid fa-arrow-up-right"></i>
