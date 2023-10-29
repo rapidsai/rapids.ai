@@ -15,6 +15,10 @@ body {
   line-height: 1.6;
 }
 
+img {
+  max-width: 100%;
+}
+
 a {
   color: #37c9dd;
   cursor: pointer;
