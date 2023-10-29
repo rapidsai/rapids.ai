@@ -77,7 +77,7 @@ pre {
   white-space: pre-wrap;
   margin-right: 1rem;
   overflow: visible;
-  box-shadow: 0px 3px 2px rgb(0 0 0 / 20%);
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
 }
 
 code {
@@ -159,7 +159,7 @@ button:hover {
   border-bottom-width: 0;
   color: #720dff;
   border-color: #720dff;
-  box-shadow: 0px 3px 2px rgb(0 0 0 / 30%) inset;
+  box-shadow: 0px 3px 2px rgba(0,0,0, 0.3) inset;
 }
 
 /* Note: copy-button-white class applied by js if 'use-white-copy' class present */
@@ -174,7 +174,7 @@ button:hover {
   border-bottom-width: 0;
   color: white;
   border-color: white;
-  box-shadow: 0px 3px 2px rgb(0 0 0 / 30%) inset;
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.3) inset;
 }
 
 
@@ -215,9 +215,9 @@ button:hover {
   }
 
   .navbar-dropdown {
-    background-color: rgb(139 47 255);
+    background-color: rgb(139, 47, 255);
     border-top: none;
-    box-shadow: 0 4px 4px rgb(10 10 10 / 20%);
+    box-shadow: 0 4px 4px rgba(10, 10, 10, 0.2);
     display: none;
   }
 
@@ -272,7 +272,7 @@ button:hover {
 }
 
 .footer-item {
-  color: rgb(255 255 255 / 85%);
+  color: rgba(255, 255, 255, 0.85);
   padding-left: 0.1rem;
   padding-right: 0.1rem;
 }
@@ -486,6 +486,12 @@ button:hover {
 }
 
 /* /// extra spacers /// */
+.section {
+  @extend .px-5;
+  @extend .py-4;
+  @extend .py-md-5;
+}
+
 .mt-6 {
   margin-top: 2.5rem !important;
 }
