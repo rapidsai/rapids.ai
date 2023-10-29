@@ -1,9 +1,16 @@
 # scss
 
-This directory contains `.scss` files for the RAPIDS website.
+This directory contains SCSS files for the RAPIDS website.
 
-All RAPIDS styles should go in the `rapidsai/` subdirectory.
+## Special Files
 
-The `rapidsai/*` subdirectory files can be imported in the `_styles_project.scss` file, which is used for adding additional styles to the Docsy theme as mentioned in their [documentation](https://www.docsy.dev/docs/adding-content/lookandfeel/).
+There are two special files in this directory, listed below and described in the Docsy documentation [here](https://www.docsy.dev/docs/adding-content/lookandfeel/):
 
-In some cases, it may be necessary to override Docsy's default `.scss` files that are located [here](https://github.com/google/docsy/tree/v0.7.1/assets/scss). In these instances, the Docsy files can be copied directly into the `assets/scss` directory and modified as needed. This should be used as a last resort though, only after adding additional styles to the `rapidsai/` directory has been deemed insufficient.
+- `_variables_project.scss` - used for setting SCSS variables _before_ Bootstrap (which is used by Docsy) generates all of its classes. This is useful for modifying Bootstrap's generated classes according to their utility API docs [here](https://getbootstrap.com/docs/5.2/utilities/api/) or setting other customization variables as described [here](https://getbootstrap.com/docs/5.2/customize/overview/)
+- `_styles_project.scss` - used for adding additional SCSS styles to the final generated stylesheet. These styles can use the generated Bootstrap styles based on the contents of `_variables_project.scss`
+
+## Other Files
+
+RAPIDS-specific styles should go in the `rapidsai/` subdirectory. These files can then be imported into the `_styles_project.scss` file.
+
+Aside from the special files listed above, the root `assets/scss` directory is reserved for overriding SCSS files from the Docsy theme. In some cases, it may be necessary to override Docsy's default `.scss` files that are located [here](https://github.com/google/docsy/tree/v0.7.1/assets/scss). In these instances, the Docsy files can be copied directly into the `assets/scss` directory and modified as needed. This should be used as a last resort though, only after adding additional styles to the `rapidsai/` directory has been deemed insufficient.

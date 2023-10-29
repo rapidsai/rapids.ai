@@ -360,11 +360,11 @@ button:hover {
 }
 
 .padding-bottom-slant {
-  padding-bottom: 10.5rem;
+  padding-bottom: 10.5rem!important;
 }
 
 .padding-top-slant {
-  padding-top: 10.5rem;
+  padding-top: 10.5rem!important;
 }
 
 
@@ -476,70 +476,12 @@ button:hover {
   width: 400px;
 }
 
-/* /// extra font sizes /// */
-.fs-6-half {
-  font-size: 0.9rem;
-}
-
-.fs-7 {
-  font-size: 0.75rem;
-}
-
 /* /// extra spacers /// */
 .section {
-  @extend .px-5;
-  @extend .py-4;
-  @extend .py-md-5;
+  @extend .px-7;
+  @extend .py-5;
+  @extend .py-md-7;
 }
-
-.mt-6 {
-  margin-top: 2.5rem !important;
-}
-
-.mb-6 {
-  margin-bottom: 2.5rem !important;
-}
-
-.mt-7 {
-  margin-top: 3.5rem !important;
-}
-
-.mb-7 {
-  margin-bottom: 3.5rem !important;
-}
-
-.mt-8 {
-  margin-top: 4.5rem !important;
-}
-
-.mb-8 {
-  margin-bottom: 4.5rem !important;
-}
-
-.pt-6 {
-  padding-top: 2.5rem !important;
-}
-
-.pb-6 {
-  padding-bottom: 2.5rem !important;
-}
-
-.pt-7 {
-  padding-top: 3.5rem !important;
-}
-
-.pb-7 {
-  padding-bottom: 3.5rem !important;
-}
-
-.pt-8 {
-  padding-top: 4.5rem !important;
-}
-
-.pb-8 {
-  padding-bottom: 4.5rem !important;
-}
-
 
 /* /// colors /// */
 .has-background-rapids-gray {
