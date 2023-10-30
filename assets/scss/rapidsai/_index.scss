@@ -291,8 +291,11 @@ button:hover {
 }
 
 .hero-body {
-  padding-top: 7rem;
-  padding-bottom: 7rem;
+  padding: 7rem 1.5rem;
+
+  @include media-breakpoint-up(md) {
+    padding: 9rem 4.5rem;
+  }
 }
 
 .hero-announce-container {
