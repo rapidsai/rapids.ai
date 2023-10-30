@@ -1,7 +1,6 @@
-/*
-The variables below configure Bootstrap to work like Bulma since the RAPIDS
-website initially used Bulma.
-*/
+// The variables below configure Bootstrap to work like Bulma since the RAPIDS
+// website initially used Bulma.
+
 
 $h1-font-size:                $font-size-base * 3;
 $h2-font-size:                $font-size-base * 2.5;
@@ -35,3 +34,7 @@ $spacers: (
   8: $spacer * 3.5,
   9: $spacer * 4.5,
 );
+
+// Disable responsive font sizing:
+// https://getbootstrap.com/docs/5.2/getting-started/rfs/
+$enable-rfs: false;
