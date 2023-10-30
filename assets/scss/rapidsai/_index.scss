@@ -15,6 +15,33 @@ body {
   line-height: 1.6;
 }
 
+blockquote,
+body,
+dd,
+dl,
+dt,
+fieldset,
+figure,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+hr,
+html,
+iframe,
+legend,
+li,
+ol,
+p,
+pre,
+textarea,
+ul {
+  margin: 0;
+  padding: 0;
+}
+
 img {
   max-width: 100%;
 }
@@ -58,6 +85,11 @@ h2 {
 
 h3 {
   font-weight: bold;
+}
+
+h3, h4, h5, h6 {
+  @extend .fs-6;
+  line-height: 1.6;
 }
 
 .subheading {
@@ -116,6 +148,7 @@ button {
   font-family: 'Open Sans';
   text-transform: uppercase;
   transition: all 0.55s ease-out;
+  line-height: 1.15;
 
   /* spent too much time on this */
   text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
@@ -175,6 +208,7 @@ button:hover {
   color: white;
   border-color: white;
   box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.3) inset;
+  line-height: 1.15;
 }
 
 
