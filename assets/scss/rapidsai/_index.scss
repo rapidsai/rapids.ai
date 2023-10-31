@@ -110,6 +110,7 @@ pre {
   margin-right: 1rem;
   overflow: visible;
   box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
+  color: #4a4a4a
 }
 
 code {
@@ -208,7 +209,7 @@ button:hover {
   color: white;
   border-color: white;
   box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.3) inset;
-  line-height: 1.15;
+  @extend .lh-xs;
 }
 
 
