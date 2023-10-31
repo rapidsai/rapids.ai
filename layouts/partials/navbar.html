@@ -1,0 +1,52 @@
+<nav x-data="{isOpen: false}" class="navigation container-fluid" role="navigation" aria-label="main navigation">
+  <div class="navigation-brand">
+    <a class="navigation-item" href="/">
+      <img class="navigation-logo" src="/images/RAPIDS-logo.png">
+    </a>
+
+    <button @click="isOpen = ! isOpen" class="navigation-burger" type="button" aria-controls="navigation-menu"
+    :aria-expanded="isOpen" aria-label="Toggle main navigation"></button>
+  </div>
+
+  <div :style="isOpen && {height: $el.scrollHeight+'px'}" class="navigation-menu" id="navigation-menu">
+    <div class="navigation-item navigation-item--dropdown">
+      <a class="navigation-link" href="/ecosystem">Ecosystem </a>
+
+      <div class="navigation-dropdown">
+        <a href="/ecosystem#overview" class="navigation-item">Overview </a>
+        <a href="/ecosystem#hardware" class="navigation-item">Hardware </a>
+        <a href="/ecosystem#software" class="navigation-item">Software </a>
+        <a href="/ecosystem#developers" class="navigation-item">Developers </a>
+      </div>
+    </div>
+
+    <div class="navigation-item navigation-item--dropdown">
+      <a class="navigation-link" href="/learn-more">Learn More </a>
+
+      <div class="navigation-dropdown">
+        <a href="/learn-more#about" class="navigation-item">About RAPIDS </a>
+        <a href="/learn-more#use-cases" class="navigation-item">Use Cases </a>
+        <a href="/learn-more#get-involved" class="navigation-item">Get Involved </a>
+      </div>
+    </div>
+
+    <div class="navigation-item navigation-item--dropdown">
+      <a class="navigation-link" href="/news"> News </a>
+
+      <div class="navigation-dropdown">
+        <a href="/featured" class="navigation-item">Featured Content </a>
+        <a href="https://medium.com/rapids-ai" target="_blank" class="navigation-item">Blog Posts </a>
+        <a href="https://docs.rapids.ai/notices" target="_blank" class="navigation-item">Support Notices </a>
+      </div>
+    </div>
+
+    <a class="navigation-item navigation-link" href="https://docs.rapids.ai/user-guide" target="_blank">User Guides </a>
+
+    <a class="navigation-item navigation-link" href="https://docs.rapids.ai/install" target="_blank">Install </a>
+
+    <a class="navigation-item navigation-link" href="https://docs.rapids.ai/" target="_blank">Docs </a>
+
+    <a class="navigation-item navigation-link" href="https://github.com/rapidsai" target="_blank">GitHub </a>
+  </div>
+
+</nav>
