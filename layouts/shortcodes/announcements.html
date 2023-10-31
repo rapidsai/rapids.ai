@@ -2,7 +2,10 @@
 <section class="hero-announce-container">
     {{ if isset .Params "text-1" }}
     <a href="{{ .Get "link-1" }} " target='_blank' class="hero-announce">
-        <span class="announce-icon"><i class="fa-regular fa-bell"></i></span>
+        <span class="announce-icon fa-stack">
+            <i class="fa-solid fa-circle fa-stack-2x"></i>
+            <i class="fa-regular fa-bell fa-stack-1x fa-inverse"></i>
+        </span>
         <button class="button-rapids-purple">
             {{ .Get "text-1" }}
         </button>
@@ -10,16 +13,22 @@
     {{ end }}
     {{ if isset .Params "text-2" }}
     <a href="{{ .Get "link-2" }} " target='_blank' class="hero-announce">
-        <span class="announce-icon"><i class="fa-regular fa-bell"></i></span>
-        <button class="button-rapids-purple"> 
+        <span class="announce-icon fa-stack">
+            <i class="fa-solid fa-circle fa-stack-2x"></i>
+            <i class="fa-regular fa-bell fa-stack-1x fa-inverse"></i>
+        </span>
+        <button class="button-rapids-purple">
             {{ .Get "text-2" }}
         </button>
     </a>
     {{ end }}
     {{ if isset .Params "text-3" }}
     <a href="{{ .Get "link-3" }} " target='_blank' class="hero-announce">
-        <span class="announce-icon"><i class="fa-regular fa-bell"></i></span>
-        <button class="button-rapids-purple"> 
+        <span class="announce-icon fa-stack">
+            <i class="fa-solid fa-circle fa-stack-2x"></i>
+            <i class="fa-regular fa-bell fa-stack-1x fa-inverse"></i>
+        </span>
+        <button class="button-rapids-purple">
             {{ .Get "text-3" }}
         </button>
     </a>

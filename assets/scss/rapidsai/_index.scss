@@ -265,15 +265,11 @@ button:hover {
 }
 
 .announce-icon {
-  position: absolute;
+  position: absolute !important; // override .fa-stack position
   font-size: 0.75rem;
-  top: -0.65rem;
-  left: 0;
-  border-radius: 1rem;
-  border-style: none;
-  color: white;
-  padding: 0.25rem 0.3rem;
-  background-color: #7400ff;
+  top: -0.75rem;
+  left: -0.3rem;
+  color: #7400ff;
 }
 
 /* /// slant graphics /// */
