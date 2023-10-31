@@ -1,6 +1,13 @@
+/*
+This file works by:
+  - Settings RAPIDS-specific Bootstrap variables
+  - Importing Docsy Bootstrap variables
+  - Importing the necessary Bootstrap files to use their Utility API
+    - Utility API: https://getbootstrap.com/docs/5.2/utilities/api/
+*/
+
 // The variables below configure Bootstrap to work like Bulma since the RAPIDS
 // website initially used Bulma.
-
 
 $h1-font-size: $font-size-base * 3;
 $h2-font-size: $font-size-base * 2.5;
@@ -35,22 +42,30 @@ $spacers: (
   9: $spacer * 4.5,
 );
 
-$line-height-xs: 1.15;
-$line-height-sm: 1.25;
-$line-height-base: 1.5;
-$line-height-lg: 2;
-
-$utilities: (
-  "line-height": (property: line-height,
-    class: lh,
-    values: (1: 1,
-      xs: $line-height-xs,
-      sm: $line-height-sm,
-      base: $line-height-base,
-      lg: $line-height-lg,
-    )),
-);
-
 // Disable responsive font sizing:
 // https://getbootstrap.com/docs/5.2/getting-started/rfs/
 $enable-rfs: false;
+
+// Import Docsy variables
+@import "variables";
+// Import necessary bootstrap files to use utility API
+@import "../vendor/bootstrap/scss/functions";
+@import "../vendor/bootstrap/scss/variables";
+@import "../vendor/bootstrap/scss/maps";
+@import "../vendor/bootstrap/scss/mixins";
+@import "../vendor/bootstrap/scss/utilities";
+
+$additional_line_heights: (
+  xs: 1.15
+);
+$merged_line_heights: (
+  "line-height": map-merge(map-get($utilities, "line-height"),
+    (values: map-merge(map-get(map-get($utilities, "line-height"), "values"),
+        $additional_line_heights,
+      ),
+    ),
+  ),
+);
+
+$merged_maps: map-merge-multiple($merged_line_heights);
+$utilities: map-merge($utilities, $merged_maps);
