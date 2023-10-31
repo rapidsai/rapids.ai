@@ -1,10 +1,9 @@
 # <div align="left"><img src="https://rapids.ai/assets/images/rapids_logo.png" width="90px"/> &nbsp; [RAPIDS.ai](https://rapids.ai.com) Website
 
-Code and content for the [RAPIDS.ai](https://rapids.ai) static public website. This is a refactor from the previous Jekyll backed version to use the [Hugo](https://gohugo.io/about/) static site framework and the [Bulma](https://bulma.io/) css framework. On occasion it uses [Apline.js](https://alpinejs.dev/start-here).
+This repository contains the source code and content for the [RAPIDS.ai](https://rapids.ai) website. The site uses [Hugo](https://gohugo.io/about/) for generating static HTML and [Bulma](https://bulma.io/) as a CSS framework. On occasion it uses [Apline.js](https://alpinejs.dev/start-here).
 
 
 ## Design and Layout
-Use the [Template Design Guide](template.html) and [RAPIDS Brand Guide](brand.html) for reference with starting new pages.
 
 Refer to the [Bulma Documentation](https://bulma.io/documentation/) for reference to the CSS class names and components. Note: many CSS classes are overwritten through `custom.css`.
 - [Column System](https://bulma.io/documentation/columns/basics/)
@@ -15,16 +14,21 @@ Hugo uses templates, layouts, and directories to build pages. The `/layouts/_def
 
 
 ## Requirements
-The site required Hugo in order to be built. Follow the [Hugo documentation](https://gohugo.io/about/) for assistance.
 
 All logos and images are located in the [images](/static/images) folder. Externally (no website) referenced files should be placed in the [assets](/assets) folder.
 
 Font Icons are used from [Font Awesome](https://fontawesome.com/), and include Pro account icons.
 
-In the future it will employ the more optimized assets and hugo pipe features.
+In the future it will employ the more optimized assets and Hugo pipe features.
 
-## Hosting, Development and Previews
-After installing Hugo, run `hugo server` to see a developer preview and `hugo` to build for production. You can also preview pages locally from the `/public` dir after building, but may need to use `python -m http.server` or similar for all functionality.
+## Pull Request Previews
 
-Hosting is currently done through [Netlify](https://www.netlify.com/), which should create a preview when PRs are pushed to the main repository. 
+[Netlify](https://www.netlify.com/) will create a preview environment when PRs are opened.
 
+## Contributing
+
+You can use the included devcontainer for local development.
+
+Start the container and run `hugo serve` to start a development server.
+
+The development server can be viewed in a browser at <http://localhost:1313>.
