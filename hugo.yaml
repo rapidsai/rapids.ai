@@ -2,7 +2,10 @@ baseURL: https://rapids.ai/
 languageCode: en-us
 title: RAPIDS
 enableRobotsTXT: true
-googleAnalytics: G-RKXFW6CM42
+
+services:
+  googleAnalytics:
+    ID: G-RKXFW6CM42
 
 disableKinds: [taxonomy, term]
 
