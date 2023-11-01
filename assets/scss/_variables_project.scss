@@ -57,6 +57,9 @@ $grid-breakpoints: (
 // https://getbootstrap.com/docs/5.2/getting-started/rfs/
 $enable-rfs: false;
 
+// Disable Docsy Google Fonts since we load them ourself
+$td-enable-google-fonts: false;
+
 // Import Docsy variables
 @import "variables";
 // Import necessary bootstrap files to use utility API
