@@ -431,11 +431,7 @@ button:hover {
 
 /* /// extra spacers /// */
 .section {
-  padding: map-get($spacers, 5) 0;
-
-  @include media-breakpoint-up(md) {
-    padding: map-get($spacers, 7) 0;
-  }
+  padding: map-get($spacers, 7) 0;
 }
 
 /* /// colors /// */
