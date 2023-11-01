@@ -9,28 +9,28 @@ description: cuDF Pandas Accelerator Mode
   <!-- Intro -->
   <section class="section mb-6">
     <div class="container">
-      <h1 class="has-text-centered">OPEN BETA: ACCELERATING PANDAS <br> WITH ZERO CODE CHANGE</h1>
+      <h1 class="has-text-centered">OPEN BETA: ACCELERATING PANDAS <br> WITH ZERO CODE CHANGE </h1>
       <p class="subheading has-text-centered mb-8"> A unified CPU/GPU experience that brings best-in-class performance to your Pandas workflows</p>
 
       <div class="columns">
         <div class="column is-one-third">
-          <h2><i class="fa-regular fa-circle-info"></i> Zero Code Change Acceleration </h2>
-          <p>Just load the cuDF IPython/Jupyter Notebook extension or use the cuDF Python module option.</p>
+          <h2><i class="fa-light fa-merge"></i> Zero Code Change Acceleration </h2>
+          <p>Write your code with the full flexibility of pandas. Just load cudf.pandas to accelerate on the GPU, with automatic CPU fallback if needed.</p>
 
-          <br><br>
-          <h2><i class="fa-regular fa-circle-info"></i> One Code Path <br> Differing Hardware</h2>
+          <br>
+          <h2 class="mt-4"><i class="fa-light fa-laptop-binary"></i> One Code Path <br> Differing Hardware </h2>
           <p>Develop, test, and run in production with a single code path, regardless of hardware.</p>
         </div>
         <div class="column is-one-third">
-          <h2><i class="fa-regular fa-chart-user"></i> Third-Party Library Compatible </h2>
-          <p>pandas accelerator mode is compatible with most third-party libraries that operate on pandas objects — it will even accelerate pandas operations within these libraries.</p>
+          <h2><i class="fa-light fa-boxes-stacked"></i> Third-Party Library Compatible </h2>
+          <p>pandas accelerator mode is compatible with most third-party libraries that operate on pandas objects — it will even accelerate pandas operations <strong>within</strong> these libraries.</p>
         
           <br>
-          <h2><i class="fa-regular fa-chart-user"></i> Designed for When Pandas is Too Slow</h2>
-          <p>Keep using pandas rather than learning new frameworks or paradigms as your data grows. Just accelerate it on a GPU.</p>
+          <h2 class="mt-4"><i class="fa-light fa-bolt-lightning"></i> Designed to Accelerate the Entire pandas Ecosystem </h2>
+          <p>Bringing the speed of cuDF to pandas users and the ecosystem built for them. With GPUs, you can keep using pandas as your data grows.</p>
         </div>
         <div class="column is-one-third">
-          <iframe width="560" height="315" src="https://www.youtube.com/embed/i-wpzS9ZsCs?si=LgTFznUmbUS5J4Zk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          <iframe width="500" height="350" src="https://www.youtube.com/embed/i-wpzS9ZsCs?si=LgTFznUmbUS5J4Zk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
       </div>
 
@@ -43,35 +43,50 @@ description: cuDF Pandas Accelerator Mode
 
   <section class="section padding-top-slant padding-bottom-slant">
     <div class="container">
-      <h1 class="mb-5"> Bringing the Speed of cuDF <br> to Every Pandas User </h1>
+      <h1 class="mb-4"> Bringing the Speed of cuDF <br> to Every Pandas User </h1>
       <div class="columns">
-        <div class="column is-one-third">
-          <h2><i class="fa-light fa-house-laptop"></i> How it Works </h2>
-          <p>When using cuDF's pandas accelerator mode, operations execute on the GPU where possible and on the CPU otherwise, synchronizing under the hood as needed.</p>
-
-          <br><br>
-
-          <h2><i class="fa-light fa-layer-plus"></i> How to Use It  </h2>
+        <div class="column is-one-half">
+          <h2><i class="fa-light fa-square-info"></i> How to Use It  </h2>
           <p>To accelerate IPython or Jupyter Notebooks, use the magic:</p>
-          <code>%load_ext cudf.pandas <br> import pandas as pd &nbsp;&nbsp;</code>
+          <code>%load_ext cudf.pandas </code> <br>
+          <code>import pandas as pd &nbsp;</code>
           
           <br><br>
 
           <p>To accelerate a Python script, use the Python module flag on the command line:</p>
           <code>python -m cudf.pandas script.py</code>
 
+          <br><br>
+          
+          <p>Or, explicitly enable cudf.pandas via import if you can't use command line flags:</p>
+          <code> import cudf.pandas &nbsp; </code> <br>
+          <code> cudf.pandas.install() </code> <br>
+          <code> import pandas as pd &nbsp;</code>
+      
         </div>
-        <div class="column is-one-third">
-          <h2><i class="fa-light fa-layer-plus"></i> Simple Integration </h2>
-          <img src="/images/Cudf-Pandas.png " class="img-full">
-        </div>
-        <div class="column is-one-third">
-          <h2><i class="fa-light fa-layer-plus"></i> 150X Zero Code Change </h2>
-          <canvas id="perfchart" width="350" height="250"></canvas>
-          <p class="is-size-7 has-text-grey">* GraceHopper GPU vs Intel Xeon Platinum 8480CL CPU</p>
-          <a href="#"  target="_blank">Learn More<i class="fa-solid fa-arrow-up-right"></i> </a>
+        <div class="column is-one-half">
+          <h2><i class="fa-light fa-gauge-high"></i> 150x Faster, Zero Code Change </h2>
+          <canvas id="perfchart" width="200" height="120"></canvas>
+          <p class="is-size-7 has-text-grey">* GraceHopper GPU vs Intel Xeon Platinum 8480CL CPU <a href="#"  target="_blank">Learn More <i class="fa-solid fa-arrow-up-right"></i> </a></p>
         </div>
       </div>
+
+      <h1 class="mt-7 mb-4"> How It Works </h1>
+      <div class="columns">
+        <div class="column is-one-half">
+          <h2><i class="fa-sharp fa-light fa-gear-complex-code"></i> Under the Hood </h2>
+          <p>When using cuDF's pandas accelerator mode, operations execute on the GPU where possible and on the CPU otherwise, synchronizing under the hood as needed.</p>
+          <br>
+          <p>When cudf.pandas is enabled, <strong>import pandas</strong> imports a magic module that dispatches to cuDF or pandas depending on whether the operation can be accelerated by the GPU.</p>
+          <br>
+          <p>This applies to pandas usage in both your code and third-party libraries you're using, ensuring it works with all of your pandas-based tools. </p>
+        </div>
+        <div class="column is-one-half">
+          <h2><i class="fa-light fa-diagram-subtask"></i> Execution Flow </h2>
+          <img src="/images/Cudf-Pandas.png " class="img-full">
+        </div>
+      </div>
+
     </div>
   </section>
 
@@ -87,21 +102,20 @@ description: cuDF Pandas Accelerator Mode
       <h1 class="mb-4">Get Started</h1>
       <div class="columns">
         <div class="column is-one-half">
-          <h2><i class="fa-light fa-cart-shopping-fast"></i> Try Now on Colab</h2>
-          <img src="/images/OpenGoogleColab.png" class="img-w200">
+          <h2><i class="fa-light fa-bookmark"></i> Try Now on Colab</h2>
+          <a href="https://nvda.ws/rapids-cudf" target="_blank"><img src="/images/OpenGoogleColab.png" class="img-w200"></a>
           <h3> <a href="https://nvda.ws/rapids-cudf" target="_blank">LAUNCH Google CoLab <i class="fa-solid fa-arrow-up-right"></i> </a></h3>
-          <p>Take cuDF's new pandas accelerator mode for a test-drive in a free GPU-enabled notebook environment using your Google account. cuDF's pandas accelerator mode works smoothly with all of the other RAPIDS libraries.</p>
+          <p>Take cuDF's new pandas accelerator mode for a test-drive in a free GPU-enabled notebook environment using your Google account.</p>
           <br>
-          <p>Visit the RAPIDS <a href="https://rapids.ai/#quick-start" target="_blank">Quick Start</a> to get started with any RAPIDS library on your favorite platform.</p>
+          <p>cuDF's pandas accelerator mode works smoothly with all of the other RAPIDS libraries. Visit the RAPIDS <a href="https://rapids.ai/#quick-start" target="_blank">Quick Start</a> to get started with any RAPIDS library on your favorite platform.</p>
         </div>
         <div class="column is-one-half">
-          <h2><i class="fa-light fa-bee"></i> Learning More</h2>
-          <p>cuDF Pandas Accelerator Mode is in open beta and under active development <a href="#" target="_blank">Learn More Here <i class="fa-solid fa-arrow-up-right"></i> </a> </p>
-
+          <h2><i class="fa-light fa-head-side-gear"></i> Learn More</h2>
+          <p>cuDF pandas accelerator mode is in open beta and under active development. It's ready for wide use, but has a few known limitations and edge cases. You can <a href="#" target="_blank">learn more through the documentation <i class="fa-solid fa-arrow-up-right"></i> </a> </p>
           <br>
-          <p>Pandas accelerator mode has some known limitations and edge cases <a href="#" target="_blank">Learn More <i class="fa-solid fa-arrow-up-right"></i> </a> </p>
+          <p>Prefer conference presentations to documentation? Get all the details about how cudf.pandas works, how we test it, and why we developed it in the <a href="#" target="_blank">Bringing Zero-Code Change Acceleration to PyData with RAPIDS cuDF and cuML</a> session at the AI and Data Science Virtual Summit. </p>
           <br>
-          <p>Want to contribute or share feedback, reach out <a href="#" target="_blank">On Github <i class="fa-solid fa-arrow-up-right"></i> </a> </p>
+          <p>Want to contribute or share feedback, reach out <a href="#" target="_blank">on GitHub <i class="fa-solid fa-arrow-up-right"></i> </a> </p>
           
         </div>
       </div>
@@ -122,6 +136,7 @@ description: cuDF Pandas Accelerator Mode
           data: {
             labels: ['Join','Advanced groupBy'],
             datasets: [{
+              barPercentage: 0.4,
               label: 'cuDF-pandas vs pandas speedup',
               data: [336,144],
               backgroundColor: [
