@@ -55,17 +55,17 @@ $enable-rfs: false;
 @import "../vendor/bootstrap/scss/mixins";
 @import "../vendor/bootstrap/scss/utilities";
 
-$additional_line_heights: (
+$additional-line-heights: (
   xs: 1.15
 );
-$merged_line_heights: (
+$merged-line-heights: (
   "line-height": map-merge(map-get($utilities, "line-height"),
     (values: map-merge(map-get(map-get($utilities, "line-height"), "values"),
-        $additional_line_heights,
+        $additional-line-heights,
       ),
     ),
   ),
 );
 
-$merged_maps: map-merge-multiple($merged_line_heights);
-$utilities: map-merge($utilities, $merged_maps);
+$merged-maps: map-merge-multiple($merged-line-heights);
+$utilities: map-merge($utilities, $merged-maps);

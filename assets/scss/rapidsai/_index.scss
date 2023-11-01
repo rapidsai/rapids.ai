@@ -88,7 +88,7 @@ h3 {
 }
 
 h3, h4, h5, h6 {
-  @extend .fs-6;
+  font-size: map-get($font-sizes, 6);
   line-height: 1.6;
 }
 
@@ -209,7 +209,7 @@ button:hover {
   color: white;
   border-color: white;
   box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.3) inset;
-  @extend .lh-xs;
+  line-height: map-get($additional-line-heights, "xs");
 }
 
 /* /// footer /// */
@@ -429,9 +429,11 @@ button:hover {
 
 /* /// extra spacers /// */
 .section {
-  @extend .px-7;
-  @extend .py-5;
-  @extend .py-md-7;
+  padding: map-get($spacers, 5) map-get($spacers, 7);
+
+  @include media-breakpoint-up(md) {
+    padding: map-get($spacers, 7) map-get($spacers, 7);
+  }
 }
 
 /* /// colors /// */
