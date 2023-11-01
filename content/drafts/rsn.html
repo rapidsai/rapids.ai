@@ -22,7 +22,7 @@ draft: true
                 ">
                     <template x-for="notices in fullResults">
                         <div class="row mt-4" x-bind:id="notices.Index">
-                            <div class="col-md-9 mt-5">
+                            <div class="col-md-9 py-3 mt-5">
                                 <h2> <span x-text="notices.Index"></span>: <span x-text="notices.Status"></span> </h2>
                                 <h3> <span x-text="notices.Title"></span> </h3>
                                 <h3> RAPIDS Version: <span x-text="notices.Version"></span></h3>
