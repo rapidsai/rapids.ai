@@ -1,14 +1,15 @@
 /*
 This file works by:
+  - Importing Docsy Bootstrap forward variables
   - Settings RAPIDS-specific Bootstrap variables
-  - Importing Docsy Bootstrap variables
+  - Importing Docsy Bootstrap main variables
   - Importing the necessary Bootstrap files to use their Utility API
     - Utility API: https://getbootstrap.com/docs/5.2/utilities/api/
 */
 
-// The variables below configure Bootstrap to work like Bulma since the RAPIDS
-// website initially used Bulma.
+@import "_variables_forward";
 
+// Configure font sizes according to Bulma
 $h1-font-size: $font-size-base * 3;
 $h2-font-size: $font-size-base * 2.5;
 $h3-font-size: $font-size-base * 2;
@@ -29,6 +30,7 @@ $font-sizes: (
   8: $h8-font-size,
 );
 
+// Configure spacers according to Bulma
 $spacers: (
   0: 0,
   1: $spacer * 0.25,
@@ -40,6 +42,15 @@ $spacers: (
   7: $spacer * 3,
   8: $spacer * 3.5,
   9: $spacer * 4.5,
+);
+
+// Configure breakpoints according to Bulma
+$grid-breakpoints: (
+  sm: 0,
+  md: 769px,
+  lg: 1024px,
+  xl: 1216px,
+  xxl: 1408px
 );
 
 // Disable responsive font sizing:
@@ -54,6 +65,14 @@ $enable-rfs: false;
 @import "../vendor/bootstrap/scss/maps";
 @import "../vendor/bootstrap/scss/mixins";
 @import "../vendor/bootstrap/scss/utilities";
+
+// Configure container widths according to Bulma
+$container-max-widths: (
+  md: 100%,
+  lg: 960px + ($grid-gutter-width / 1rem * 16px),
+  xl: 1152px + ($grid-gutter-width / 1rem * 16px),
+  xxl: 1344px + ($grid-gutter-width / 1rem * 16px),
+);
 
 $additional-line-heights: (
   xs: 1.15
