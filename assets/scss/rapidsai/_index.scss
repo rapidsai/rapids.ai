@@ -180,6 +180,10 @@ button:hover {
   border-color: #1ebdd2;
 }
 
+.section {
+  padding: map-get($spacers, 7) 0;
+}
+
 /* Note: copy-button class applied by js */
 .copy-button {
   position: absolute;
@@ -312,11 +316,11 @@ button:hover {
 }
 
 .padding-bottom-slant {
-  padding-bottom: 10.5rem!important;
+  padding-bottom: 10.5rem;
 }
 
 .padding-top-slant {
-  padding-top: 10.5rem!important;
+  padding-top: 10.5rem;
 }
 
 
@@ -349,6 +353,8 @@ button:hover {
 }
 
 /* /// border colors /// */
+// TODO: generate utility classes for custom colors
+// so that "!important" can be removed.
 .has-border-rapids-purple-primary {
   border-color:#720dff!important;
 }
@@ -426,11 +432,6 @@ button:hover {
 
 .img-w400 {
   width: 400px;
-}
-
-/* /// extra spacers /// */
-.section {
-  padding: map-get($spacers, 7) 0;
 }
 
 /* /// colors /// */
