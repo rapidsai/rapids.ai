@@ -3,6 +3,7 @@ publish = "public"
 command = "./build.sh"
 
 [build.environment]
+GO_VERSION = "1.21.3"
 HUGO_VERSION = "0.119.0"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
