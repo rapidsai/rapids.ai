@@ -4,6 +4,7 @@ cascade:
   draft: true
 ---
 
+## Overview
 This is a docs page!
 
 Yes, it doesn't look great at the moment. We'll need to continue to refactor some styles from the Bulma -> Bootstrap migration.
@@ -18,3 +19,11 @@ Things to fix (non-exhaustive list):
 - Navbar offset (or potentially keeping the navbar statically placed on doc pages)
 - remove footer slant on doc pages
 - Remove heading transformations (e.g. to uppercase)
+
+## Another Section
+
+More stuff
+
+## One More Section
+
+Additional things
