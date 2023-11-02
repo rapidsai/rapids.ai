@@ -14,6 +14,12 @@ body {
   line-height: 1.6;
 }
 
+// TODO: remove this block.
+// These styles were a part of our previously used `normalize.css` file. That
+// file has been removed, but I copied these styles over in particular to avoid
+// having to make additional changes to the site. In the future, we should
+// remove this block and fix the styles on our landing pages accordingly. The
+// presence of these styles makes our documentation pages look bad.
 blockquote,
 body,
 dd,
