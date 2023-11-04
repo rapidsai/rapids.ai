@@ -20,31 +20,32 @@ body {
 // having to make additional changes to the site. In the future, we should
 // remove this block and fix the styles on our landing pages accordingly. The
 // presence of these styles makes our documentation pages look bad.
-blockquote,
-body,
-dd,
-dl,
-dt,
-fieldset,
-figure,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-hr,
-html,
-iframe,
-legend,
-li,
-ol,
-p,
-pre,
-textarea,
-ul {
-  margin: 0;
-  padding: 0;
+.landing-page, .td-404 {
+  blockquote,
+  body,
+  dd,
+  dl,
+  dt,
+  fieldset,
+  figure,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  hr,
+  html,
+  iframe,
+  legend,
+  li,
+  ol,
+  p,
+  textarea,
+  ul {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 img {
@@ -69,13 +70,25 @@ a:hover {
 
 h1,
 h2,
-h3 {
-  color: var(--bs-rapids-purple-primary);
-  font-weight: 300;
-  letter-spacing: normal;
+h3,
+h4,
+h5,
+h6 {
   font-family: sans-serif;
-  text-transform: uppercase;
-  margin-bottom: 0;
+}
+
+// TODO: remove this block
+// We should determine if any of these styles will be global styles for all
+// headings. Other style variants should be applied with utility classes
+// directly to HTML elements. If there are too many existing elements to apply
+// utility classes to, we should break down some of our existing patterns into
+// reusable HTML components to keep things DRY.
+.landing-page, .td-404 {
+  h1, h2, h3 {
+    color: var(--bs-rapids-purple-primary);
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
 }
 
 h1 {
