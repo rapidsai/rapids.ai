@@ -1,6 +1,9 @@
+{{ $no_slant := slice "docs" }}
+{{ if not (in $no_slant $.Page.Type) }}
 <div class="top-slant-container">
     <div class="top-slant-up bg-rapids-purple-secondary"></div>
 </div>
+{{ end }}
 
 <footer class="row footer bg-rapids-purple-secondary">
     <div class="col">
