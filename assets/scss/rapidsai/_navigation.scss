@@ -48,6 +48,14 @@
   }
 }
 
+.navigation__item:last-child {
+  margin-bottom: 0.5rem;
+
+  @include media-breakpoint-up(lg) {
+    margin-bottom: 0;
+  }
+}
+
 .navigation__link {
   color: white;
   display: flex;
