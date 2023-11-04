@@ -5,7 +5,7 @@
   left: 0;
   right: 0;
   z-index: $zindex-fixed;
-  @extend .has-background-rapids-purple-primary;
+  background-color: var(--bs-rapids-purple-primary);
 
   @include media-breakpoint-up(lg) {
     display: flex;

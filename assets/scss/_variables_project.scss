@@ -64,7 +64,26 @@ $td-enable-google-fonts: false;
 @import "variables";
 // Import necessary bootstrap files to use utility API
 @import "../vendor/bootstrap/scss/functions";
+
+// Custom colors declarations have to come after "functions" import, but before
+// "variables".
+// See https://getbootstrap.com/docs/5.2/migration/#new-_mapsscss
+
+// Optional variable overrides here
+$custom-theme-colors: (
+  "rapids-gray": #f8f8f8,
+  "rapids-purple-primary": #7400ff,
+  "rapids-purple-secondary": #984dfb,
+  "rapids-teal": #1ebdd2,
+);
+
 @import "../vendor/bootstrap/scss/variables";
+
+// Custom color merges have to come after "variables" import, but before
+// "maps".
+// See https://getbootstrap.com/docs/5.2/migration/#new-_mapsscss
+$theme-colors: map-merge($theme-colors, $custom-theme-colors);
+
 @import "../vendor/bootstrap/scss/maps";
 @import "../vendor/bootstrap/scss/mixins";
 @import "../vendor/bootstrap/scss/utilities";

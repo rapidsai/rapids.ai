@@ -70,7 +70,7 @@ a:hover {
 h1,
 h2,
 h3 {
-  color: #7306ff;
+  color: var(--bs-rapids-purple-primary);
   font-weight: 300;
   letter-spacing: normal;
   font-family: sans-serif;
@@ -182,21 +182,6 @@ button:hover {
   transition: all 0.35s ease-out;
 }
 
-.button-rapids-white {
-  color: white;
-  border-color: white;
-}
-
-.button-rapids-purple {
-  color: #7400ff;
-  border-color: #7400ff;
-}
-
-.button-rapids-teal {
-  color: #1ebdd2;
-  border-color: #1ebdd2;
-}
-
 .section {
   padding: map-get($spacers, 7) 0;
 }
@@ -213,7 +198,7 @@ button:hover {
   border-bottom-width: 0;
   color: #720dff;
   border-color: #720dff;
-  box-shadow: 0px 3px 2px rgba(0,0,0, 0.3) inset;
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.3) inset;
 }
 
 /* Note: copy-button-white class applied by js if 'use-white-copy' class present */
@@ -369,30 +354,6 @@ button:hover {
   margin-top: -0.1rem;
 }
 
-/* /// border colors /// */
-// TODO: generate utility classes for custom colors
-// so that "!important" can be removed.
-.has-border-rapids-purple-primary {
-  border-color:#720dff!important;
-}
-
-.has-border-rapids-pink {
-  border-color: #d216d2;
-}
-
-.has-border-rapids-orange {
-  border-color: #ffb500;
-}
-
-.has-border-rapids-teal {
-  border-color: #36c9dd;
-}
-
-.border-white {
-  border-color: rgb(228, 228, 228)!important;
-}
-
-
 /* /// posts /// */
 .post-text {
   color: #666666;
@@ -403,7 +364,7 @@ button:hover {
 }
 
 .post-action {
-  color: #7306ff;
+  color: var(--bs-rapids-purple-primary);
   font-size: 1.2rem;
   margin-top: 0.5rem;
   font-variant: all-small-caps;
@@ -457,58 +418,6 @@ button:hover {
   background-size: cover;
   border-radius: 0.5rem;
   border-top-right-radius: 0;
-}
-
-.has-background-rapids-gray {
-  background-color: #f8f8f8;
-}
-
-.has-background-rapids-purple-primary {
-  background-color: #7400ff;
-}
-
-.has-background-rapids-purple-secondary1 {
-  background-color: #8735fb;
-}
-
-.has-background-rapids-purple-secondary2 {
-  background-color: #984dfb;
-}
-
-.has-background-rapids-pink {
-  background-color: #d216d2;
-}
-
-.has-background-rapids-orange {
-  background-color: #ffb500;
-}
-
-.has-background-rapids-teal {
-  background-color: #36c9dd;
-}
-
-.has-text-rapids-purple-primary {
-  color: #7400ff;
-}
-
-.has-text-rapids-purple-secondary1 {
-  color: #8735fb;
-}
-
-.has-text-rapids-purple-secondary2 {
-  color: #984dfb;
-}
-
-.has-text-rapids-pink {
-  color: #d216d2;
-}
-
-.has-text-rapids-orange {
-  color: #ffb500;
-}
-
-.has-text-rapids-teal {
-  color: #36c9dd;
 }
 
 /* /// misc additions /// */
