@@ -1,0 +1,40 @@
+.hero-rapids-bg {
+  background: url(../images/header-bg.svg) top center no-repeat;
+  background-size: cover;
+  min-height: 300px;
+}
+
+.hero-img {
+  width: 225px;
+  margin: 0 auto;
+}
+
+.hero-body {
+  padding: 7rem 1.5rem;
+
+  @include media-breakpoint-up(md) {
+    padding: 9rem 4.5rem;
+  }
+}
+
+.hero-announce-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.hero-announce {
+  position: relative;
+  font-size: 0.85rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  margin-top: 1rem;
+}
+
+.hero-announce-icon {
+  position: absolute !important; // override .fa-stack position
+  font-size: 0.75rem;
+  top: -0.75rem;
+  left: -0.3rem;
+  color: #7400ff;
+}
