@@ -1,8 +1,11 @@
 baseURL: https://rapids.ai/
 languageCode: en-us
-title: RAPIDS
+title: RAPIDS | GPU Accelerated Data Science
 enableRobotsTXT: true
-googleAnalytics: G-RKXFW6CM42
+
+services:
+  googleAnalytics:
+    ID: G-RKXFW6CM42
 
 disableKinds: [taxonomy, term]
 
@@ -10,3 +13,22 @@ sitemap:
   changefreq: monthly
   filename: sitemap.xml
   priority: 0.5
+
+params:
+  title: RAPIDS | GPU Accelerated Data Science
+  description: Open source GPU accelerated data science libraries
+  images:
+    - /images/RAPIDS-logo-white.png
+  social:
+    twitter: rapidsai
+
+module:
+  proxy: direct
+  hugoVersion:
+    extended: true
+    min: 0.73.0
+  imports:
+    - path: github.com/google/docsy
+      disable: false
+    - path: github.com/google/docsy/dependencies
+      disable: false

@@ -1,46 +1,50 @@
 {{ define "main"}}
 
 <!-- Hero NOTE: match with hero shortcode -->
-<section class="hero is-medium hero-rapids-bg mb-5">
-  <div class="hero-body has-text-centered">
-    <img class="hero-img" src="/images/rapids-logo-whitetxt.svg">
-    <p class="title has-text-white">
-      Page Not Found
-    </p>
-    <button class="button-rapids-teal"><a href="https://www.rapids.ai">Head Back</a></button>
-  </div>
-  <div class="top-slant-container">
-    <div class="top-slant-up has-background-white"></div>
+<section class="row hero-rapids-bg mb-5">
+  <div class="col">
+    <div class="hero-body text-center">
+      <img class="hero-img" src="/images/rapids-logo-whitetxt.svg">
+      <p class="fw-semibold fs-3 lh-xs text-white mb-2">
+        Page Not Found
+      </p>
+      <button class="button-rapids-teal"><a href="https://www.rapids.ai">Head Back</a></button>
+    </div>
+    <div class="top-slant-container">
+      <div class="top-slant-up bg-white"></div>
+    </div>
   </div>
 </section>
 
 <!-- Double Col -->
-<section class="section">
-  <div class="container">
-    <h1>Page Not Found...</h1>
-    <div class="columns">
-      <div class="column is-half">
-        <p><strong>Looks like that link, page, or file does not exist. <br> Check the URL again and see if it is correct.</strong> <br> 
-          If something is broken, please let us know by <a href="https://github.com/rapidsai/rapids.ai/issues">filing a GitHub issue <i class="fa-solid fa-arrow-up-right"></i> </a>
-        </p>
+<section class="row section">
+  <div class="col">
+    <div class="container">
+      <h1>Page Not Found...</h1>
+      <div class="row">
+        <div class="col-md-6 py-3">
+          <p><strong>Looks like that link, page, or file does not exist. <br> Check the URL again and see if it is correct.</strong> <br>
+            If something is broken, please let us know by <a href="https://github.com/rapidsai/rapids.ai/issues">filing a GitHub issue <i class="fa-solid fa-arrow-up-right"></i> </a>
+          </p>
 
-        <h2 class="mt-5"><i class="fa-regular fa-joystick"></i> Jump Back In</h2>
-        <p>
-          Even if we do say so ourselves, we have some great <a href="https://docs.rapids.ai/">documentation <i class="fa-solid fa-arrow-up-right"></i></a>
-        </p>
-        <p>
-          Reach out to us on <a href="https://twitter.com/rapidsai"> Twitter <i class="fa-solid fa-arrow-up-right"></i> </a>
-        </p>
-        <p>
-          Or just go back <a href="/">home <i class="fa-solid fa-arrow-up-right"></i></a>
-        </p>
+          <h2 class="mt-5"><i class="fa-regular fa-joystick"></i> Jump Back In</h2>
+          <p>
+            Even if we do say so ourselves, we have some great <a href="https://docs.rapids.ai/">documentation <i class="fa-solid fa-arrow-up-right"></i></a>
+          </p>
+          <p>
+            Reach out to us on <a href="https://twitter.com/rapidsai"> Twitter <i class="fa-solid fa-arrow-up-right"></i> </a>
+          </p>
+          <p>
+            Or just go back <a href="/">home <i class="fa-solid fa-arrow-up-right"></i></a>
+          </p>
 
+        </div>
+        <div class="col-md-6 py-3">
+          <img class="image img-half img-center" src="/images/RAPIDS404.gif" alt="404gif" />
+        </div>
       </div>
-      <div class="column is-half">
-        <img class="image img-half img-center" src="/images/RAPIDS404.gif" alt="404gif" />
-      </div>
+
     </div>
-
   </div>
 </section>
 

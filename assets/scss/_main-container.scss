@@ -1,0 +1,40 @@
+/*
+This file is copied from the link below in order to comment out Docsy's default
+section padding.
+https://github.com/google/docsy/blob/v0.7.1/assets/scss/_main-container.scss
+*/
+
+// The outer page container i.e. common styles for any page.
+.td-outer {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+// The outer page container for the default base template.
+// .td-default {
+//   main {
+//     > section:first-of-type {
+//       @include media-breakpoint-up(md) {
+//         padding-top: 8rem;
+//       }
+//     }
+
+//     section {
+//       @extend .td-block-padding;
+//     }
+//   }
+// }
+
+.td-main {
+  flex-grow: 1;
+}
+
+// .td-404 main,
+// .td-main main {
+//   padding-top: 1.5rem;
+//   padding-bottom: 2rem;
+//   @include media-breakpoint-up(md) {
+//     padding-top: 5.5rem;
+//   }
+// }

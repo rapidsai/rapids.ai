@@ -1,8 +1,18 @@
 [build]
 publish = "public"
-command = "hugo --gc --minify && cp _redirects public"
+command = "./build.sh"
 
 [build.environment]
+GO_VERSION = "1.21.3"
 HUGO_VERSION = "0.119.0"
 HUGO_ENV = "production"
 HUGO_ENABLEGITINFO = "true"
+
+# Build drafts on PR previews
+[context.deploy-preview]
+  command = "./build.sh --buildDrafts"
+
+# Setting HUGO_ENV != "production" prevents
+# Google Analytics from being loaded on PR previews
+[context.deploy-preview.environment]
+  HUGO_ENV = "staging"
