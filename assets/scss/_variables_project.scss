@@ -1,0 +1,93 @@
+/*
+This file works by:
+  - Importing Docsy Bootstrap forward variables
+  - Settings RAPIDS-specific Bootstrap variables
+  - Importing Docsy Bootstrap main variables
+  - Importing the necessary Bootstrap files to use their Utility API
+    - Utility API: https://getbootstrap.com/docs/5.2/utilities/api/
+*/
+
+@import "_variables_forward";
+
+// Configure font sizes according to Bulma
+$h1-font-size: $font-size-base * 3;
+$h2-font-size: $font-size-base * 2.5;
+$h3-font-size: $font-size-base * 2;
+$h4-font-size: $font-size-base * 1.5;
+$h5-font-size: $font-size-base * 1.25;
+$h6-font-size: $font-size-base;
+$h7-font-size: $font-size-base * 0.9;
+$h8-font-size: $font-size-base * 0.75;
+
+$font-sizes: (
+  1: $h1-font-size,
+  2: $h2-font-size,
+  3: $h3-font-size,
+  4: $h4-font-size,
+  5: $h5-font-size,
+  6: $h6-font-size,
+  7: $h7-font-size,
+  8: $h8-font-size,
+);
+
+// Configure spacers according to Bulma
+$spacers: (
+  0: 0,
+  1: $spacer * 0.25,
+  2: $spacer * 0.5,
+  3: $spacer * 0.75,
+  4: $spacer,
+  5: $spacer * 1.5,
+  6: $spacer * 2.5,
+  7: $spacer * 3,
+  8: $spacer * 3.5,
+  9: $spacer * 4.5,
+);
+
+// Configure breakpoints according to Bulma
+$grid-breakpoints: (
+  sm: 0,
+  md: 769px,
+  lg: 1024px,
+  xl: 1216px,
+  xxl: 1408px
+);
+
+// Disable responsive font sizing:
+// https://getbootstrap.com/docs/5.2/getting-started/rfs/
+$enable-rfs: false;
+
+// Disable Docsy Google Fonts since we load them ourself
+$td-enable-google-fonts: false;
+
+// Import Docsy variables
+@import "variables";
+// Import necessary bootstrap files to use utility API
+@import "../vendor/bootstrap/scss/functions";
+@import "../vendor/bootstrap/scss/variables";
+@import "../vendor/bootstrap/scss/maps";
+@import "../vendor/bootstrap/scss/mixins";
+@import "../vendor/bootstrap/scss/utilities";
+
+// Configure container widths according to Bulma
+$container-max-widths: (
+  md: 100%,
+  lg: 960px + ($grid-gutter-width / 1rem * 16px),
+  xl: 1152px + ($grid-gutter-width / 1rem * 16px),
+  xxl: 1344px + ($grid-gutter-width / 1rem * 16px),
+);
+
+$additional-line-heights: (
+  xs: 1.15
+);
+$merged-line-heights: (
+  "line-height": map-merge(map-get($utilities, "line-height"),
+    (values: map-merge(map-get(map-get($utilities, "line-height"), "values"),
+        $additional-line-heights,
+      ),
+    ),
+  ),
+);
+
+$merged-maps: map-merge-multiple($merged-line-heights);
+$utilities: map-merge($utilities, $merged-maps);
