@@ -1,0 +1,234 @@
+---
+title: cuDF Pandas | RAPIDS
+description: cuDF pandas Accelerator Mode
+---
+
+  <!-- Hero Shortcode -->
+  {{< hero hero-text="cuDF pandas Accelerator Mode" button-link="#get-started" button-text="Get Started" >}}
+
+  <!-- Intro -->
+  <section class="row section mb-6">
+    <div class="col">
+      <div class="container">
+
+        <h1 class="text-center mb-10"> OPEN BETA: ACCELERATING PANDAS <br> WITH ZERO CODE CHANGE </h1>
+        <div class="row">
+          <div class="col-md-4 py-3">
+            <h2><i class="fa-light fa-file-binary"></i> Zero Code Change Acceleration </h2>
+            <p>Write your code with the full flexibility of pandas. Just load cudf.pandas to accelerate on the GPU, with automatic CPU fallback if needed.</p>
+  
+            <br>
+
+            <h2 class="mt-4"><i class="fa-light fa-laptop-binary"></i> One Code Path <br> Differing Hardware </h2>
+            <p>Develop, test, and run in production with a single code path, regardless of hardware.</p>
+          </div>
+          <div class="col-md-4 py-3">
+            <h2><i class="fa-light fa-boxes-stacked"></i> Third-Party Library Compatible </h2>
+            <p>pandas accelerator mode is compatible with most third-party libraries that operate on pandas objects — it will even accelerate pandas operations <strong>within</strong> these libraries.</p>
+          
+            <br>
+
+            <h2 class="mt-4"><i class="fa-light fa-bolt-lightning"></i> Accelerates the Entire pandas Ecosystem </h2>
+            <p>Bringing the speed of cuDF to pandas users and the ecosystem built for them. With GPUs, you can keep using pandas as your data grows.</p>
+          </div>
+          <div class="col-md-4 py-3">
+            <iframe width="500" height="320" src="https://www.youtube.com/embed/kmj1QOY71Ps?si=ToajeDGStxJynNdl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <div class="bottom-slant-container">
+    <div class="bottom-slant-down bg-white"></div>
+  </div>
+
+  <!-- How it works -->
+  <section class="row section padding-top-slant padding-bottom-slant">
+    <div class="col">
+      <div class="container">
+
+        <h1 class="mb-4"> Bringing the Speed of cuDF <br> to Every Pandas User </h1>
+        <div class="row">
+          <div class="col-md-6 py-3">
+            <h2><i class="fa-light fa-square-info"></i> How to Use It  </h2>
+            <p>To accelerate IPython or Jupyter Notebooks, use the magic:</p>
+            
+            <code class="code-sample mt-3">
+              %load_ext cudf.pandas <br>
+              import pandas as pd <br>
+              ...
+            </code>
+            
+            <br><br>
+  
+            <p>To accelerate a Python script, use the Python module flag on the command line:</p>
+
+            <code class="code-sample mt-3">python -m cudf.pandas script.py</code>
+  
+            <br><br>
+            
+            <p>Or, explicitly enable cudf.pandas via import if you can't use command line flags:</p>
+            <code class="code-sample mt-3"> 
+              import cudf.pandas <br>
+              cudf.pandas.install() <br><br>
+              import pandas as pd <br>
+              ...
+            </code>
+        
+          </div>
+          <div class="col-md-6 py-3">
+            <h2><i class="fa-light fa-gauge-high"></i> 150x Faster, Zero Code Change </h2>
+            <canvas id="perfchart" width="500" height="375"></canvas>
+            <p class="fs-7 fw-lighter text-center">* GraceHopper GPU vs Intel Xeon Platinum 8480CL CPU <a href="https://developer.nvidia.com/blog/rapids-cudf-accelerates-pandas-nearly-150x-with-zero-code-changes/"  target="_blank">Learn More <i class="fa-solid fa-arrow-up-right"></i> </a></p>
+          </div>
+        </div>
+        
+        <h1 class="mt-10 mb-4"> How It Works</h1>
+        <div class="row">
+          <div class="col-md-6 py-3">
+            <h2><i class="fa-sharp fa-light fa-gear-complex-code"></i> Under the Hood </h2>
+            <p>When cudf.pandas is enabled, import pandas (or any of its submodules) imports a magic module, rather than “regular” pandas. This magic module contains proxy types and proxy functions:</p>
+            
+            <code class="code-sample mt-3">
+              In [1]: %load_ext cudf.pandas <br>
+              In [2]: import pandas as pd <br><br>
+
+              In [3]: pd <br>
+              Out[3]: &lt;module 'pandas' (ModuleAccelerator(fast=cudf, slow=pandas))&gt;
+            </code>
+
+            <br><br>
+
+            <p>Operations on proxy types and functions execute on the GPU where possible and on the CPU otherwise, synchronizing under the hood as needed. This applies to pandas operations in both your code and in third-party libraries you may be using.</p>
+
+            <br>
+
+            <p>All cudf.pandas objects are a proxy to either a GPU (cuDF) or CPU (pandas) object at any given time. Operations are first attempted on the GPU (copying from CPU if necessary). If that fails, the operation is attempted on the CPU (copying from GPU if necessary).</p>
+
+            <br>
+
+            <p>When using cudf.pandas, cuDF's pandas compatibility mode is automatically enabled, ensuring consistency with pandas-specific semantics like default sort ordering.</p>
+          </div>
+          <div class="col-md-6 py-3">
+            <h2><i class="fa-light fa-diagram-subtask"></i> Execution Flow </h2>
+            <img src="/images/Cudf-Pandas.png " class="img-full">
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Get Started -->
+  <div id="get-started"></div>
+  <div class="top-slant-container">
+    <div class="top-slant-up has-background-rapids-gray"></div>
+  </div>
+
+  <section class="row section padding-top-slant padding-bottom-slant">
+    <div class="col">
+      <div class="container">
+
+        <h1 class="mb-4"> Bringing the Speed of cuDF <br> to Every Pandas User </h1>
+        <div class="row">
+          <div class="col py-3">
+            <h2><i class="fa-light fa-bookmark"></i> Try Now on Colab</h2>
+            <a href="https://nvda.ws/rapids-cudf" target="_blank"><img src="/images/OpenGoogleColab.png" class="img-w200"></a>
+            <p>Take cuDF's new pandas accelerator mode for a test-drive in a free GPU-enabled notebook environment using your Google account by <a href="https://nvda.ws/rapids-cudf" target="_blank">launching on CoLab <i class="fa-solid fa-arrow-up-right"></i> </a></p>
+            <br>
+            <p>cuDF's pandas accelerator mode works smoothly with all of the other RAPIDS libraries. Visit the RAPIDS <a href="https://rapids.ai/#quick-start" target="_blank">Quick Start</a> to get started with any RAPIDS library on your favorite platform.</p>
+          </div>
+          <div class="col py-3">
+            <h2><i class="fa-light fa-head-side-gear"></i> Learn More</h2>
+            <p>cuDF pandas accelerator mode is in open beta and under active development. It's ready for wide use, but has a few known limitations and edge cases. You can <a href="https://docs.rapids.ai/api/cudf/nightly/" target="_blank">learn more through the documentation</a> and <a href="https://developer.nvidia.com/blog/rapids-cudf-accelerates-pandas-nearly-150x-with-zero-code-changes/" target="_blank">the release blog <i class="fa-solid fa-arrow-up-right"></i> </a> </p>
+            <br>
+            <p>Prefer conference presentations to documentation? Get all the details about how cudf.pandas works, how we test it, and why we developed it at the <a href="https://www.nvidia.com/en-us/events/ai-data-science-virtual-summit/" target="_blank">AI and Data Science Virtual Summit <i class="fa-solid fa-arrow-up-right"></i> </a> </p>
+            <br>
+            <p>Want to contribute or share feedback, reach out <a href="https://github.com/rapidsai/cudf" target="_blank">on GitHub <i class="fa-solid fa-arrow-up-right"></i> </a> </p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+<!-- Global JS -->
+<script src="/js/main.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.umd.min.js"
+      integrity="sha512-HyprZz2W40JOnIBIXDYHCFlkSscDdYaNe2FYl34g1DOmE9J+zEPoT4HHHZ2b3+milFBtiKVWb4sorDVVp+iuqA=="
+      crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+    <script>
+      const ctx = document.getElementById('perfchart');
+      new Chart(ctx, {
+        type: 'bar',
+        data: {
+          labels: ['Join ','Advanced groupBy '],
+          datasets: [ 
+          {
+            label: 'stand alone pandas',
+            barPercentage: 0.6,
+            data: [336, 288],
+            backgroundColor: 'rgb(33, 150, 243, 0.8)',
+            minBarLength: 4
+          },
+          {
+            label: 'cuDF pandas accelerator mode',
+            barPercentage: 0.6,
+            data: [1, 2],
+            backgroundColor: 'rgb(115, 6, 255, 0.8)',
+            minBarLength: 4,
+          }]
+        },
+        options: {
+          indexAxis: 'y',
+          scales: {
+            x: {
+              type: 'linear',
+              beginAtZero: true, 
+              grid: {
+                display: true,
+                borderWidth: 0
+              },
+              title: {
+                display: true,
+                text: 'Time (s)'
+              }
+            },
+            y: {
+              ticks: {
+                    font: {
+                        weight: 'bold'
+                    }
+              },
+              grid: {
+                display: false,
+                drawTicks: false,
+                borderWidth: 3
+              }
+            }
+          },
+          plugins: {
+            legend: {
+              display: true
+            },
+            title: {
+              display: true,
+              text: '5GB DuckDB Data Benchmark'
+            }
+          },
+          layout: {
+            padding: {
+              left: 0,
+              right: 0,
+              top: 0,
+              bottom: 0
+            }
+          }
+        }
+      });
+</script>
+

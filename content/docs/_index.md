@@ -1,29 +1,16 @@
 ---
-title: Documentation
-cascade:
-  draft: true
+title: Docs | RAPIDS
+description: Documentation Resources
+draft: true
 ---
 
-## Overview
-This is a docs page!
+  <!-- Hero Shortcode -->
+  {{< hero hero-text="Documentation" button-link="#" button-text="Docs" >}}
 
-Yes, it doesn't look great at the moment. We'll need to continue to refactor some styles from the Bulma -> Bootstrap migration.
+## Heading
+text text text
 
-That won't take long.
 
-When it's done, our documentation pages on rapids.ai will look like this: https://www.docsy.dev/docs/.
 
-Things to fix (non-exhaustive list):
-
-- Element spacing
-- Navbar offset (or potentially keeping the navbar statically placed on doc pages)
-- remove footer slant on doc pages
-- Remove heading transformations (e.g. to uppercase)
-
-## Another Section
-
-More stuff
-
-## One More Section
-
-Additional things
+  <!-- Global JS -->
+  <script src="/js/main.js"></script>

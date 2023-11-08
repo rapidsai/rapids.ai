@@ -15,7 +15,15 @@ title: RAPIDS | GPU Accelerated Data Science
             <i class="fa-solid fa-circle fa-stack-2x"></i>
             <i class="fa-sharp fa-regular fa-bell-on fa-bounce fa-stack-1x fa-inverse"></i>
           </span>
-          <button class="button-rapids-purple"><strong>November 8th - Free Event</strong> <br/> AI and Data Science Virtual Summit Hosted by NVIDIA</button>
+          <button class="button-rapids-purple"><strong>TODAY - Free Event</strong> <br/> AI and Data Science Virtual Summit Hosted by NVIDIA</button>
+        </a>
+
+        <a href="/learn-more/cudf-pandas" target='_blank' class="hero-announce">
+          <span class="announce-icon fa-stack">
+            <i class="fa-solid fa-circle fa-stack-2x"></i>
+            <i class="fa-sharp fa-regular fa-bell-on fa-bounce fa-stack-1x fa-inverse"></i>
+          </span>
+          <button class="button-rapids-purple"><strong>New</strong> <br> cuDF pandas accelerator</button>
         </a>
       </div>
     </div>
@@ -25,10 +33,10 @@ title: RAPIDS | GPU Accelerated Data Science
 
   <!-- Announcements Shortcode (0-3x)-->
   <!-- UPDATE HERE -->
-  {{< announcements
+  <!-- {{< announcements
     text-2="RAPIDS 23.10 Released" link-2="https://docs.rapids.ai/install#selector"
     text-3="Notice: Depreciation for Pascal GPUs" link-3="https://docs.rapids.ai/notices"
-  >}}
+  >}} -->
 
     <!-- Intro -->
     <section class="row section padding-bottom-slant">
@@ -39,29 +47,38 @@ title: RAPIDS | GPU Accelerated Data Science
           <div class="row">
             <div class="col-md-4 py-3">
               <h2><i class="fa-light fa-caret-right"></i> What is RAPIDS </h2>
-              <p> RAPIDS provides unmatched speed with familiar APIs that match the most popular PyData libraries. Built on state-of-the-art foundations like <a href="https://developer.nvidia.com/cuda-toolkit" target="_blank">NVIDIA CUDA</a> and <a href="https://arrow.apache.org/" target="_blank">Apache Arrow</a>, it unlocks the speed of GPUs with code you already know. </p>
-              <a href="/learn-more/#about">Learn more on the About Section <i class="fa-solid fa-arrow-up-right"></i> </a>
+              <p> RAPIDS provides unmatched speed with familiar APIs that match the most popular PyData libraries. Built on state-of-the-art foundations like <a href="https://developer.nvidia.com/cuda-toolkit" target="_blank">NVIDIA CUDA</a> and <a href="https://arrow.apache.org/" target="_blank">Apache Arrow</a>, it unlocks the speed of GPUs with code you already know. <a href="/learn-more/#about">Jump to About Section <i class="fa-solid fa-arrow-up-right"></i> </a></p>
+
             </div>
             <div class="col-md-4 py-3">
               <h2><i class="fa-light fa-bolt-lightning"></i> Why Use RAPIDS</h2>
               <p> RAPIDS allows fluid, creative interaction with data for everyone from BI users to AI researchers on the
-                cutting edge. GPU acceleration means less time and less cost moving data and training models. </p>
-              <a href="/learn-more/#use-cases">Find out more from RAPIDS Use Cases <i class="fa-solid fa-arrow-up-right"></i> </a>
+                cutting edge. GPU acceleration means less time and less cost moving data and training models. <a href="/learn-more/#use-cases">Jump to RAPIDS Use Cases <i class="fa-solid fa-arrow-up-right"></i> </a></p>
             </div>
             <div class="col-md-4 py-3">
               <h2><i class="fa-light fa-chart-network"></i> Open Source Ecosystem </h2>
               <p>RAPIDS is Open Source and available on <a href="https://github.com/rapidsai" target="_blank">GitHub</a>.
-                Our mission is to empower and advance the open-source GPU data science data engineering ecosystem. </p>
-              <a href="https://github.com/rapidsai"  target="_blank">Jump to RAPIDS on GitHub <i class="fa-solid fa-arrow-up-right"></i>
-              </a>
+                Our mission is to empower and advance the open-source GPU data science data engineering ecosystem. <a href="https://github.com/rapidsai" target="_blank">Jump to RAPIDS GitHub <i class="fa-solid fa-arrow-up-right"></i> </a></p>
             </div>
           </div>
+
+          <br>
+
+          <div class="row has-background-rapids-image ">
+            <div class="col-md-12 py-5">
+              <h2 class="text-white"><i class="fa-light fa-gauge-circle-bolt"></i> NEW: Pandas Accelerator Mode for cuDF </h2>
+              <p class="text-white">Use cuDF's new pandas Accelerator Mode to speed up pandas workflows with zero code change.
+              <a href="/learn-more/cudf-pandas"> Learn More on the Launch Page <i class="fa-solid fa-arrow-up-right"></i></a> </p>
+            </div>
+          </div>
+
+          <br>
 
           <div id="benchmarks"></div>
           <div class="row mt-5">
             <div class="col-md-4 py-3">
               <h2><i class="fa-thin fa-objects-column"></i> Faster Pandas <br> with cuDF</h2>
-              <p>cuDF is a near drop in replacement to pandas for most use cases and has greatly improved performance. </p> <br>
+              <p>cuDF accelerates pandas with no code change and brings greatly improved performance.</p> <br>
               <a href="https://github.com/rapidsai/cudf/blob/branch-23.10/docs/cudf/source/user_guide/performance-comparisons/performance-comparisons.ipynb"  target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
 
               <canvas id="cuDFchart" width="400" height="350"></canvas>
@@ -101,8 +118,11 @@ title: RAPIDS | GPU Accelerated Data Science
           <div class="row">
             <div class="col-md-6 py-3">
               <h2 class="text-white"><i class="fa-light fa-download"></i> Quick Local Install </h2>
-              <p>RAPIDS offers several installation methods, the quickest is shown below. <br> For more detailed guides go to
-                our <a href="https://docs.rapids.ai/install"  target="_blank">advanced install page <i class="fa-solid fa-arrow-up-right"></i></a> </p>
+              <p>RAPIDS offers several installation methods, the quickest is shown below.</p> 
+              
+              <br> 
+              
+              <p>For more detailed guides go to our <a href="https://docs.rapids.ai/install"  target="_blank">advanced install page <i class="fa-solid fa-arrow-up-right"></i></a> </p>
 
               <h3 class="mt-5 text-white">Requirements</h3>
               <p><strong>A.</strong> NVIDIA Pascal™ or better GPU with a <a href="https://developer.nvidia.com/cuda-gpus" target="_blank">compute capability 6.0 and above <i class="fa-solid fa-arrow-up-right"></i></a></p>
@@ -134,41 +154,43 @@ title: RAPIDS | GPU Accelerated Data Science
 
               <h2 class="mt-9 text-white"><i class="fa-light fa-gears"></i> Do I need an Advanced Install?</h2>
               <p> If you want to use Docker, WSL2, have an uncommon OS, hardware configuration, environment, or
-                need specific versions such as <code>CUDA 11.5</code> or <code>Python 3.8</code> then you should use the
+                need specific versions such as <code> CUDA 11.8 </code> or <code> Python 3.8 </code> then you should use the
                 installation selector in our
                 <a href="https://docs.rapids.ai/install" target="_blank">Advanced Installations Page <i class="fa-solid fa-arrow-up-right"></i> </a>
               </p>
             </div>
             <div class="col-md-6 py-3">
+              <h2 class="text-white"><i class="fa-light fa-gauge-circle-bolt"></i> Test Drive the new cuDF</h2>
+              <p>Try out cuDF's new pandas Accelerator Mode, with a free required account, right now by <a href="https://nvda.ws/rapids-cudf" target="_blank">Launching Google CoLab <i class="fa-solid fa-arrow-up-right"></i> </a> </p>
+
+              <br><br>
+
               <h2 class="text-white"><i class="fa-light fa-cloud-arrow-down"></i> Try RAPIDS Online </h2>
               <p>Don't have access to a GPU system right now? Try out RAPIDS with cloud based hardware from one of these featured channels: </p>
+              
               <br>
 
               <div class="row">
                 <div class="col-md-6 py-3">
                   <img src="/images/OpenGoogleColab.png" class="img-w200">
-                  <h3 class="text-white">Google CoLab</h3>
-                  <h3> <a href="https://colab.research.google.com/drive/13sspqiEZwso4NYTbsflpPyNFaVAAxUgr" target="_blank">LAUNCH Google CoLab (pip) <i class="fa-solid fa-arrow-up-right"></i> </a></h3>
-                  <p>Jump right into a GPU enabled notebook environment with required account. Also available with <a  href="https://colab.research.google.com/drive/1TAAi_szMfWqRfHVfjGSqnGVLr_ztzUM9" target="_blank">Conda</a>. </p>
+                  <h3> <a href="https://colab.research.google.com/drive/13sspqiEZwso4NYTbsflpPyNFaVAAxUgr" target="_blank">Google CoLab <i class="fa-solid fa-arrow-up-right"></i> </a></h3>
+                  <p>Jump right into a GPU enabled RAPIDS notebook environment with a free required account. Installed with pip, it is also available via <a  href="https://colab.research.google.com/drive/1TAAi_szMfWqRfHVfjGSqnGVLr_ztzUM9" target="_blank">Conda</a>. </p>
                 </div>
                 <div class="col-md-6 py-3">
                   <img src="/images/OpenAmazonStudioLab.png" class="img-w200">
-                  <h3 class="text-white">Amazon Sagemaker Studio Lab</h3>
-                  <h3> <a href="https://studiolab.sagemaker.aws/" target="_blank">LAUNCH Studio Lab <i class="fa-solid fa-arrow-up-right"></i> </a></h3>
-                  <p>Enables notebook based environments in a free trial with required account.</p>
+                  <h3> <a href="https://studiolab.sagemaker.aws/" target="_blank">Studio Lab <i class="fa-solid fa-arrow-up-right"></i> </a></h3>
+                  <p>Enables Amazon Sagemaker notebook based environments in a free trial with required account.</p>
                 </div>
               </div>
               <div class="row">
                 <div class="col-md-6 py-3">
                   <img src="/images/paperspace.png" class="img-w150">
-                  <h3 class="text-white">PaperSpace</h3>
-                  <h3> <a href="https://www.paperspace.com/gpu-cloud" target="_blank">LAUNCH PaperSpace <i class="fa-solid fa-arrow-up-right"></i> </a></h3>
+                  <h3> <a href="https://www.paperspace.com/gpu-cloud" target="_blank">PaperSpace <i class="fa-solid fa-arrow-up-right"></i> </a></h3>
                   <p>Use Quick Start Instances through a limited free account.</p>
                 </div>
                 <div class="col-md-6 py-3">
                   <img src="/images/nv-launchpad.png" class="img-w150">
-                  <h3 class="text-white"> NVIDIA LaunchPad</h3>
-                  <h3> <a href="https://www.nvidia.com/en-us/launchpad/" target="_blank">LAUNCH NVIDIA <i class="fa-solid fa-arrow-up-right"></i> </a></h3>
+                  <h3> <a href="https://www.nvidia.com/en-us/launchpad/" target="_blank">NVIDIA LaunchPad <i class="fa-solid fa-arrow-up-right"></i> </a></h3>
                   <p>Free short term use to try and learn with hands-on lab environment.</p>
                 </div>
               </div>
@@ -176,14 +198,12 @@ title: RAPIDS | GPU Accelerated Data Science
               <div class="row">
                 <div class="col-md-6 py-3">
                   <img src="/images/Microsoft-Azure-Logo.png" class="img-w150">
-                  <h3 class="text-white">Microsoft Azure</h3>
-                  <h3> <a href="https://azure.microsoft.com/en-us/free/" target="_blank">Go To Azure <i class="fa-solid fa-arrow-up-right"></i> </a></h3>
+                  <h3> <a href="https://azure.microsoft.com/en-us/free/" target="_blank">Microsoft Azure <i class="fa-solid fa-arrow-up-right"></i> </a></h3>
                   <p>Microsoft Azure Cloud infrastructure and services are available with RAPIDS.</p>
                 </div>
                 <div class="col-md-6 py-3">
                   <img src="/images/Oracle-logo.png" class="img-w150">
-                  <h3 class="text-white"> Oracle Cloud </h3>
-                  <h3> <a href="https://www.oracle.com/cloud/" target="_blank">Go To OCI <i class="fa-solid fa-arrow-up-right"></i> </a></h3>
+                  <h3> <a href="https://www.oracle.com/cloud/" target="_blank">Oracle Cloud <i class="fa-solid fa-arrow-up-right"></i> </a></h3>
                   <p>Oracle Cloud infrastructure and services are available with RAPIDS. </p>
                 </div>
               </div>
@@ -191,8 +211,7 @@ title: RAPIDS | GPU Accelerated Data Science
               <div class="row">
                 <div class="col-md-6 py-3">
                   <img src="/images/IBM-logoblk.png" class="img-w150">
-                  <h3 class="text-white">IBM Cloud</h3>
-                  <h3> <a href="https://www.ibm.com/cloud" target="_blank">Go To IBM <i class="fa-solid fa-arrow-up-right"></i> </a></h3>
+                  <h3> <a href="https://www.ibm.com/cloud" target="_blank">IBM Cloud <i class="fa-solid fa-arrow-up-right"></i> </a></h3>
                   <p>IBM Cloud infrastructure and services are available with RAPIDS.</p>
                 </div>
               </div>
@@ -260,23 +279,19 @@ title: RAPIDS | GPU Accelerated Data Science
           <div class="row">
             <div class="col-md-4 py-3">
               <h2><i class="fa-regular fa-circle-info"></i> About RAPIDS</h2>
-              <p> Learn more about RAPIDS' start with Apache Arrow and GoAi. Also find an overview of the capabilities of
-                RAPIDS, as well as featured projects in our
+              <p> Learn more about RAPIDS' start with Apache Arrow and GoAi. Also find an overview of the capabilities of RAPIDS, as well as featured projects in our
                 <a href="/learn-more"> About Section <i class="fa-solid fa-arrow-up-right"></i></a>
               </p>
             </div>
             <div class="col-md-4 py-3">
               <h2><i class="fa-regular fa-chart-user"></i> Use Cases </h2>
-              <p> Hear about success stories, resources for integrating RAPIDs workflows in your business, and deployment
-                strategies in our
+              <p> Hear about success stories, resources for integrating RAPIDs workflows in your business, and deployment strategies in our
                 <a href="/learn-more#use-cases"> Use Cases Section <i class="fa-solid fa-arrow-up-right"></i></a>
               </p>
             </div>
             <div class="col-md-4 py-3">
               <h2><i class="fa-regular fa-message-exclamation"></i> Get Involved </h2>
-              <p> Use RAPIDS directly or through <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/" target="_blank">NVIDIA AI
-                  Enterprise</a>, which provides extensive optimization, certified hardware profiles, and direct IT
-                support. Find additional business resources, community resources, and guides for RAPIDS evangelism in our
+              <p> Use RAPIDS directly or through <a href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/" target="_blank">NVIDIA AI  Enterprise</a>, which provides extensive optimization, certified hardware profiles, and direct IT  support. Find additional business resources, community resources, and guides for RAPIDS evangelism in our
                 <a href="/learn-more/#get-involved"> Get Involved Section <i class="fa-solid fa-arrow-up-right"></i></a>
               </p>
             </div>
@@ -296,17 +311,17 @@ title: RAPIDS | GPU Accelerated Data Science
           <h1 class="mb-5">Latest News</h1>
           <div class="row">
             <div class="col-md-4 py-3">
-              <h2><i class="fa-brands fa-twitter"></i> RAPIDS Twitter </h2>
-              <p> Follow the latest from the RAPIDS Twitter community with <a href="https://twitter.com/RAPIDSai" target="_blank">@RAPIDSai <i class="fa-solid fa-arrow-up-right"></i></a> </p>
+              <h2><i class="fa-brands fa-twitter"></i> RAPIDS X/Twitter </h2>
+              <p> Follow the latest from the RAPIDS X/Twitter community with <a href="https://twitter.com/RAPIDSai" target="_blank">@RAPIDSai <i class="fa-solid fa-arrow-up-right"></i></a> </p>
             </div>
             <div class="col-md-4 py-3">
               <h2><i class="fa-regular fa-triangle-exclamation"></i> RAPIDS Support Notices </h2>
               <p> Get the full list of developer updates and notices (RSN) that may affect your projects on the <a
-                  href="https://docs.rapids.ai/notices" target="_blank"> RSN Documentation Page <i class="fa-solid fa-arrow-up-right"></i></a> </p>
+                  href="https://docs.rapids.ai/notices" target="_blank"> RSN Docs Page <i class="fa-solid fa-arrow-up-right"></i></a> </p>
             </div>
             <div class="col-md-4 py-3">
               <h2><i class="fa-regular fa-books"></i> RAPIDS News </h2>
-              <p> Find our highlighted content, including videos, talks, posts, guides and more in the <a href="/featured"> Featured Content Page <i class="fa-solid fa-arrow-up-right"></i></a> </p>
+              <p> Find our highlighted content, including talks, posts, guides and more on the <a href="https://developer.nvidia.com/blog/" target="_blank"> NVIDIA Dev Blog</a> and <a href="https://medium.com/rapids-ai" target="_blank">RAPIDS Blog <i class="fa-solid fa-arrow-up-right"></i></a> </p>
             </div>
           </div>
         </div>
@@ -337,7 +352,7 @@ title: RAPIDS | GPU Accelerated Data Science
               label: 'cuDF vs pandas speedup',
               data: [16,47,53,72,78],
               backgroundColor: [
-                'rgb(115, 6, 255, .60)'
+                'rgb(115, 6, 255, .80)'
               ]
             }]
           },
@@ -369,7 +384,7 @@ title: RAPIDS | GPU Accelerated Data Science
               },
               title: {
                 display: true,
-                text: 'Performance on 300,000,000 row x 2 col dataframe'
+                text: 'Performance on 100k-300K row x 2 col dataframes'
               }
             },
             layout: {
@@ -392,7 +407,7 @@ title: RAPIDS | GPU Accelerated Data Science
               label: 'cuML vs scikit-learn speedup',
               data: [3,5,6,24,27],
               backgroundColor: [
-                'rgb(115, 6, 255, .60)'
+                'rgb(115, 6, 255, .80)'
               ]
             }]
           },
@@ -424,7 +439,7 @@ title: RAPIDS | GPU Accelerated Data Science
               },
               title: {
                 display: true,
-                text: 'Performance on 100,000 samples and 256 features'
+                text: 'Performance on 100K samples and 256 features'
               }
             },
             layout: {
@@ -447,7 +462,7 @@ title: RAPIDS | GPU Accelerated Data Science
               label: 'cuGraph vs networkX speedup',
               data: [7,10,35,42,87],
               backgroundColor: [
-                'rgb(115, 6, 255, .60)'
+                'rgb(115, 6, 255, .80)'
               ]
             }]
           },
@@ -479,7 +494,7 @@ title: RAPIDS | GPU Accelerated Data Science
               },
               title: {
                 display: true,
-                text: 'Performance on ~8,192 vertices x ~ 262,144 edges'
+                text: 'Performance on ~8,192 vertices x ~262,144 edges'
               }
             },
             layout: {
