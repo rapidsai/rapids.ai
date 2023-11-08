@@ -33,10 +33,10 @@ title: RAPIDS | GPU Accelerated Data Science
 
   <!-- Announcements Shortcode (0-3x)-->
   <!-- UPDATE HERE -->
-  {{< announcements
+  <!-- {{< announcements
     text-2="RAPIDS 23.10 Released" link-2="https://docs.rapids.ai/install#selector"
     text-3="Notice: Depreciation for Pascal GPUs" link-3="https://docs.rapids.ai/notices"
-  >}}
+  >}} -->
 
     <!-- Intro -->
     <section class="row section padding-bottom-slant">
@@ -62,13 +62,17 @@ title: RAPIDS | GPU Accelerated Data Science
             </div>
           </div>
 
-          <div class="row">
+          <br>
+
+          <div class="row has-background-rapids-image ">
             <div class="col-md-12 py-5">
-              <h2 class="text-center"><i class="fa-light fa-gauge-circle-bolt"></i> NEW: Pandas Accelerator Mode for cuDF </h2>
-              <p class="text-center">Use cuDF's new pandas Accelerator Mode to speed up pandas workflows with zero code change.
-              <a href="/learn-more/cudf-pandas" >Learn more on the Launch Page <i class="fa-solid fa-arrow-up-right"></i></a> </p>
+              <h2 class="text-white"><i class="fa-light fa-gauge-circle-bolt"></i> NEW: Pandas Accelerator Mode for cuDF </h2>
+              <p class="text-white">Use cuDF's new pandas Accelerator Mode to speed up pandas workflows with zero code change.
+              <a href="/learn-more/cudf-pandas"> Learn More on the Launch Page <i class="fa-solid fa-arrow-up-right"></i></a> </p>
             </div>
           </div>
+
+          <br>
 
           <div id="benchmarks"></div>
           <div class="row mt-5">
@@ -348,7 +352,7 @@ title: RAPIDS | GPU Accelerated Data Science
               label: 'cuDF vs pandas speedup',
               data: [16,47,53,72,78],
               backgroundColor: [
-                'rgb(115, 6, 255, .60)'
+                'rgb(115, 6, 255, .80)'
               ]
             }]
           },
@@ -380,7 +384,7 @@ title: RAPIDS | GPU Accelerated Data Science
               },
               title: {
                 display: true,
-                text: 'Performance on 300,000,000 row x 2 col dataframe'
+                text: 'Performance on 100k-300K row x 2 col dataframes'
               }
             },
             layout: {
@@ -403,7 +407,7 @@ title: RAPIDS | GPU Accelerated Data Science
               label: 'cuML vs scikit-learn speedup',
               data: [3,5,6,24,27],
               backgroundColor: [
-                'rgb(115, 6, 255, .60)'
+                'rgb(115, 6, 255, .80)'
               ]
             }]
           },
@@ -435,7 +439,7 @@ title: RAPIDS | GPU Accelerated Data Science
               },
               title: {
                 display: true,
-                text: 'Performance on 100,000 samples and 256 features'
+                text: 'Performance on 100K samples and 256 features'
               }
             },
             layout: {
@@ -458,7 +462,7 @@ title: RAPIDS | GPU Accelerated Data Science
               label: 'cuGraph vs networkX speedup',
               data: [7,10,35,42,87],
               backgroundColor: [
-                'rgb(115, 6, 255, .60)'
+                'rgb(115, 6, 255, .80)'
               ]
             }]
           },
@@ -490,7 +494,7 @@ title: RAPIDS | GPU Accelerated Data Science
               },
               title: {
                 display: true,
-                text: 'Performance on ~8,192 vertices x ~ 262,144 edges'
+                text: 'Performance on ~8,192 vertices x ~262,144 edges'
               }
             },
             layout: {

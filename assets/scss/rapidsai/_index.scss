@@ -452,6 +452,13 @@ button:hover {
 }
 
 /* /// colors /// */
+.has-background-rapids-image {
+  background: url(../images/header-bg.svg) no-repeat;
+  background-size: cover;
+  border-radius: 0.5rem;
+  border-top-right-radius: 0;
+}
+
 .has-background-rapids-gray {
   background-color: #f8f8f8;
 }
