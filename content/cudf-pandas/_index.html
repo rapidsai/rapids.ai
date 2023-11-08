@@ -16,7 +16,7 @@ description: cuDF pandas Accelerator Mode
           <div class="col-md-4 py-3">
             <h2><i class="fa-light fa-file-binary"></i> Zero Code Change Acceleration </h2>
             <p>Write your code with the full flexibility of pandas. Just load cudf.pandas to accelerate on the GPU, with automatic CPU fallback if needed.</p>
-  
+
             <br>
 
             <h2 class="mt-4"><i class="fa-light fa-laptop-binary"></i> One Code Path <br> Differing Hardware </h2>
@@ -25,14 +25,14 @@ description: cuDF pandas Accelerator Mode
           <div class="col-md-4 py-3">
             <h2><i class="fa-light fa-boxes-stacked"></i> Third-Party Library Compatible </h2>
             <p>pandas accelerator mode is compatible with most third-party libraries that operate on pandas objects — it will even accelerate pandas operations <strong>within</strong> these libraries.</p>
-          
+
             <br>
 
             <h2 class="mt-4"><i class="fa-light fa-bolt-lightning"></i> Accelerates the Entire pandas Ecosystem </h2>
             <p>Bringing the speed of cuDF to pandas users and the ecosystem built for them. With GPUs, you can keep using pandas as your data grows.</p>
           </div>
           <div class="col-md-4 py-3">
-            <iframe width="500" height="320" src="https://www.youtube.com/embed/kmj1QOY71Ps?si=ToajeDGStxJynNdl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe style="max-width: 100%;" width="500" height="320" src="https://www.youtube.com/embed/kmj1QOY71Ps?si=ToajeDGStxJynNdl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
           </div>
         </div>
 
@@ -54,29 +54,29 @@ description: cuDF pandas Accelerator Mode
           <div class="col-md-6 py-3">
             <h2><i class="fa-light fa-square-info"></i> How to Use It  </h2>
             <p>To accelerate IPython or Jupyter Notebooks, use the magic:</p>
-            
+
             <code class="code-sample mt-3">
               %load_ext cudf.pandas <br>
               import pandas as pd <br>
               ...
             </code>
-            
+
             <br><br>
-  
+
             <p>To accelerate a Python script, use the Python module flag on the command line:</p>
 
             <code class="code-sample mt-3">python -m cudf.pandas script.py</code>
-  
+
             <br><br>
-            
+
             <p>Or, explicitly enable cudf.pandas via import if you can't use command line flags:</p>
-            <code class="code-sample mt-3"> 
+            <code class="code-sample mt-3">
               import cudf.pandas <br>
               cudf.pandas.install() <br><br>
               import pandas as pd <br>
               ...
             </code>
-        
+
           </div>
           <div class="col-md-6 py-3">
             <h2><i class="fa-light fa-gauge-high"></i> 150x Faster, Zero Code Change </h2>
@@ -84,13 +84,13 @@ description: cuDF pandas Accelerator Mode
             <p class="fs-7 fw-lighter text-center">* GraceHopper GPU vs Intel Xeon Platinum 8480CL CPU <a href="https://developer.nvidia.com/blog/rapids-cudf-accelerates-pandas-nearly-150x-with-zero-code-changes/"  target="_blank">Learn More <i class="fa-solid fa-arrow-up-right"></i> </a></p>
           </div>
         </div>
-        
+
         <h1 class="mt-10 mb-4"> How It Works</h1>
         <div class="row">
           <div class="col-md-6 py-3">
             <h2><i class="fa-sharp fa-light fa-gear-complex-code"></i> Under the Hood </h2>
             <p>When cudf.pandas is enabled, import pandas (or any of its submodules) imports a magic module, rather than “regular” pandas. This magic module contains proxy types and proxy functions:</p>
-            
+
             <code class="code-sample mt-3">
               In [1]: %load_ext cudf.pandas <br>
               In [2]: import pandas as pd <br><br>
@@ -127,7 +127,7 @@ description: cuDF pandas Accelerator Mode
     <div class="top-slant-up has-background-rapids-gray"></div>
   </div>
 
-  <section class="row section padding-top-slant padding-bottom-slant">
+  <section class="row section has-background-rapids-gray padding-top-slant padding-bottom-slant">
     <div class="col">
       <div class="container">
 
@@ -167,7 +167,7 @@ description: cuDF pandas Accelerator Mode
         type: 'bar',
         data: {
           labels: ['Join ','Advanced groupBy '],
-          datasets: [ 
+          datasets: [
           {
             label: 'stand alone pandas',
             barPercentage: 0.6,
@@ -188,7 +188,7 @@ description: cuDF pandas Accelerator Mode
           scales: {
             x: {
               type: 'linear',
-              beginAtZero: true, 
+              beginAtZero: true,
               grid: {
                 display: true,
                 borderWidth: 0
@@ -231,4 +231,3 @@ description: cuDF pandas Accelerator Mode
         }
       });
 </script>
-
