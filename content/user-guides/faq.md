@@ -1,10 +1,10 @@
 ---
-title: FAQ | RAPIDS
-description: Frequently Asked Questions
+title: RAPIDS FAQ
+linkTitle: Frequently Asked Questions
+description: Gateway to Questions
+type: docs
+weight: 1
 ---
-
-  <!-- Hero Shortcode -->
-  {{< hero hero-text="Frequently Asked Questions" button-link="#" button-text="FAQ" >}}
 
 ## Question 1
 text text 
@@ -16,7 +16,3 @@ text text
 ### SubQuestion
 text text
 
-
-
-  <!-- Global JS -->
-  <script src="/js/main.js"></script>

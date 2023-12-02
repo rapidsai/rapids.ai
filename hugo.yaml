@@ -14,6 +14,9 @@ sitemap:
   filename: sitemap.xml
   priority: 0.5
 
+rss_sections:
+  - notices
+
 params:
   title: RAPIDS | GPU Accelerated Data Science
   description: Open source GPU accelerated data science libraries
@@ -21,6 +24,9 @@ params:
     - /images/RAPIDS-logo-white.png
   social:
     twitter: rapidsai
+  ui:
+    sidebar_menu_compact: false
+    sidebar_menu_foldable: true
 
 module:
   proxy: direct

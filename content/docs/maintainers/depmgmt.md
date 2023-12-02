@@ -1,11 +1,10 @@
 ---
-layout: default
-nav_order: 2
-parent: Maintainer Docs
-title: Dependency Management
+title: Dependency Management 
+linkTitle: Dependency Management 
+description: Gateway to Questions
+type: docs
+weight: 10
 ---
-
-# Dependency Management Documentation
 
 ## Overview
 

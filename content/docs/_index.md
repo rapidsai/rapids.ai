@@ -1,16 +1,12 @@
 ---
-title: Docs | RAPIDS
-description: Documentation Resources
-draft: true
+title: RAPIDS Docs
+linkTitle: RAPIDS Documentation
+description: Gateway to the RAPIDS documentation content
+type: docs
+weight: 1
 ---
 
-  <!-- Hero Shortcode -->
-  {{< hero hero-text="Documentation" button-link="#" button-text="Docs" >}}
-
-## Heading
+## Overview
 text text text
 
-
-
-  <!-- Global JS -->
-  <script src="/js/main.js"></script>
+## Sections

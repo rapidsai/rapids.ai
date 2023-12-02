@@ -1,11 +1,10 @@
 ---
-layout: default
-nav_order: 1
-parent: Maintainer Docs
 title: Datasets
+linkTitle: Datasets
+description: Gateway to Questions
+type: docs
+weight: 10
 ---
-
-# Datasets
 
 ## Overview
 

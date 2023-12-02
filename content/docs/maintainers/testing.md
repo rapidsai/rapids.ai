@@ -1,11 +1,11 @@
 ---
-layout: default
-nav_order: 4
-parent: Maintainer Docs
 title: Testing Practices
+linkTitle: Testing Practices
+description: Gateway to Questions
+type: docs
+weight: 10
 ---
 
-# Testing Practices
 
 ## Overview
 
