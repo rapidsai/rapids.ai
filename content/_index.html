@@ -142,9 +142,12 @@ title: RAPIDS | GPU Accelerated Data Science
 
               <h3 class="mt-6 text-white">Install with pip</h3>
               <p><strong>1.</strong> Install via pip channels:</p>
-              <pre class="highlight use-white-copy"><code>pip install cudf-cu11 dask-cudf-cu11 --extra-index-url=https://pypi.nvidia.com
-  pip install cuml-cu11 --extra-index-url=https://pypi.nvidia.com
-  pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
+              <pre class="highlight use-white-copy"><code>pip install \
+  --extra-index-url=https://pypi.nvidia.com \
+  cudf-cu12==23.12.* \
+  dask-cudf-cu12==23.12.* \
+  cuml-cu12==23.12.* \
+  cugraph-cu12==23.12.*</code></pre>
 
               <h3 class="mt-6 text-white">Install with Docker</h3>
               <p>Check that you have the <a href="https://docs.rapids.ai/install#docker"  target="_blank">required environment</a> and then use the <a href="https://docs.rapids.ai/install#selector"  target="_blank">install selector <i class="fa-solid fa-arrow-up-right"></i> </a></p>
