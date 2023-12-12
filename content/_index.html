@@ -33,10 +33,10 @@ title: RAPIDS | GPU Accelerated Data Science
 
   <!-- Announcements Shortcode (0-3x)-->
   <!-- UPDATE HERE -->
-  <!-- {{< announcements
-    text-2="RAPIDS 23.10 Released" link-2="https://docs.rapids.ai/install#selector"
-    text-3="Notice: Depreciation for Pascal GPUs" link-3="https://docs.rapids.ai/notices"
-  >}} -->
+  {{< announcements
+    text-2="RAPIDS 23.12 Released" link-2="https://docs.rapids.ai/install#selector"
+    text-3="Notice: Deprecation for Pascal GPUs" link-3="https://docs.rapids.ai/notices/rsn0034/"
+  >}}
 
     <!-- Intro -->
     <section class="row section padding-bottom-slant">
@@ -79,7 +79,7 @@ title: RAPIDS | GPU Accelerated Data Science
             <div class="col-md-4 py-3">
               <h2><i class="fa-thin fa-objects-column"></i> Faster Pandas <br> with cuDF</h2>
               <p>cuDF accelerates pandas with no code change and brings greatly improved performance.</p> <br>
-              <a href="https://github.com/rapidsai/cudf/blob/branch-23.10/docs/cudf/source/user_guide/performance-comparisons/performance-comparisons.ipynb"  target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
+              <a href="https://github.com/rapidsai/cudf/blob/branch-23.12/docs/cudf/source/user_guide/performance-comparisons/performance-comparisons.ipynb"  target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
 
               <canvas id="cuDFchart" width="400" height="350"></canvas>
               <p class="fs-8 text-muted">* Benchmark on AMD EPYC 7642 (using 1x 2.3GHz CPU core) w/ 512GB and NVIDIA A100 80GB (1x GPU) w/ pandas v1.5 and cuDF v23.02</p>
@@ -87,7 +87,7 @@ title: RAPIDS | GPU Accelerated Data Science
             <div class="col-md-4 py-3">
               <h2><i class="fa-light fa-microchip-ai"></i> Faster scikit-learn <br> with cuML</h2>
               <p>cuML brings huge speedups to ML modeling with an API that matches scikit-learn.</p> <br>
-              <a href="https://github.com/rapidsai/cuml/tree/branch-23.10/python/cuml/benchmark"  target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
+              <a href="https://github.com/rapidsai/cuml/tree/branch-23.12/python/cuml/benchmark"  target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
 
               <canvas id="cuMLchart" width="400" height="350"></canvas>
               <p class="fs-8 text-muted">* Benchmark on AMD EPYC 7642 (using 1x 2.3GHz CPU core) w/ 512GB and NVIDIA A100 80GB (1x GPU) w/ scikit-learn v1.2 and cuML v23.02</p>
@@ -95,7 +95,7 @@ title: RAPIDS | GPU Accelerated Data Science
             <div class="col-md-4 py-3">
               <h2><i class="fa-light fa-circle-nodes"></i> Faster networkX <br> with cuGraph</h2>
               <p>cuGraph makes migration from networkX easy, accelerates graph analytics, and allows scaling far beyond existing tools. </p>
-              <a href="https://github.com/rapidsai/cugraph/blob/branch-23.10/notebooks/cugraph_benchmarks/synth_release.ipynb"  target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
+              <a href="https://github.com/rapidsai/cugraph/blob/branch-23.12/notebooks/cugraph_benchmarks/synth_release.ipynb"  target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
 
               <canvas id="cuGraphChart" width="400" height="350"></canvas>
               <p class="fs-8 text-muted">* Benchmark on AMD EPYC 7642 (using 1x 2.3GHz CPU core) w/ 512GB and NVIDIA A100 80GB (1x GPU) w/ networkX v3.0 and cuGraph v23.02</p>
@@ -138,13 +138,16 @@ title: RAPIDS | GPU Accelerated Data Science
   bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
               <br>
               <p><strong>2.</strong> Then quick install RAPIDS with:</p>
-              <pre class="highlight use-white-copy"><code>conda create --solver=libmamba -n rapids-23.10 -c rapidsai -c conda-forge -c nvidia rapids=23.10 python=3.10 cudatoolkit=11.8</code></pre>
+              <pre class="highlight use-white-copy"><code>conda create --solver=libmamba -n rapids-23.12 -c rapidsai -c conda-forge -c nvidia rapids=23.12 python=3.10 cudatoolkit=11.8</code></pre>
 
               <h3 class="mt-6 text-white">Install with pip</h3>
-              <p><strong>1.</strong> Install via pip channels:</p>
-              <pre class="highlight use-white-copy"><code>pip install cudf-cu11 dask-cudf-cu11 --extra-index-url=https://pypi.nvidia.com
-  pip install cuml-cu11 --extra-index-url=https://pypi.nvidia.com
-  pip install cugraph-cu11 --extra-index-url=https://pypi.nvidia.com</code></pre>
+              <p>Install via the NVIDIA PyPI index:</p>
+              <pre class="highlight use-white-copy"><code>pip install \
+  --extra-index-url=https://pypi.nvidia.com \
+  cudf-cu12==23.12.* \
+  dask-cudf-cu12==23.12.* \
+  cuml-cu12==23.12.* \
+  cugraph-cu12==23.12.*</code></pre>
 
               <h3 class="mt-6 text-white">Install with Docker</h3>
               <p>Check that you have the <a href="https://docs.rapids.ai/install#docker"  target="_blank">required environment</a> and then use the <a href="https://docs.rapids.ai/install#selector"  target="_blank">install selector <i class="fa-solid fa-arrow-up-right"></i> </a></p>
