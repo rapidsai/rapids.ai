@@ -1,7 +1,9 @@
 ---
 title: Docs | RAPIDS
 description: Documentation Resources
-draft: true
+cascade:
+  body_class: mt-8 mt-md-0 # accounts for fixed header
+  draft: true
 ---
 
   <!-- Hero Shortcode -->
