@@ -199,47 +199,6 @@ button:hover {
   padding: map-get($spacers, 7) 0;
 }
 
-/* /// images /// */
-.img-center {
-  margin: 0 auto;
-}
-
-.img-full {
-  width: 100%;
-}
-
-.img-half {
-  width: 50%;
-}
-
-.img-third {
-  width: 33%;
-}
-
-.img-quarter {
-  width: 25%;
-}
-
-.img-w100 {
-  width: 100px;
-}
-
-.img-w150 {
-  width: 150px;
-}
-
-.img-w200 {
-  width: 200px;
-}
-
-.img-w250 {
-  width: 250px;
-}
-
-.img-w400 {
-  width: 400px;
-}
-
 .has-background-rapids-image {
   background: url(../images/header-bg.svg) no-repeat;
   background-size: cover;
