@@ -1,4 +1,683 @@
 {{- define "main" -}}
-    <!-- Using Index layout -->
-    {{ .Content }}
+
+<!-- Hero Partial -->
+{{ partial "hero.html" (dict
+"text" "GPU Accelerated Data Science"
+"btn_text" "Quick Start"
+"btn_link" "#quick-start"
+) }}
+
+
+<!-- Special -->
+<section class="row">
+    <div class="col">
+        <div class="hero-announce-container">
+            <a href="https://www.nvidia.com/en-us/events/ai-data-science-virtual-summit/" target='_blank'
+                class="hero-announce">
+                <span class="hero-announce-icon fa-stack">
+                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                    <i class="fa-sharp fa-regular fa-bell-on fa-bounce fa-stack-1x fa-inverse"></i>
+                </span>
+                <button class="text-rapids-purple-primary border-rapids-purple-primary"><strong>Watch the
+                        replay:</strong> <br /> AI and Data Science Virtual Summit <br /> Hosted by NVIDIA</button>
+            </a>
+
+            <a href="/cudf-pandas" target='_blank' class="hero-announce">
+                <span class="hero-announce-icon fa-stack">
+                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                    <i class="fa-sharp fa-regular fa-bell-on fa-bounce fa-stack-1x fa-inverse"></i>
+                </span>
+                <button class="text-rapids-purple-primary border-rapids-purple-primary"><strong>Now in open
+                        beta:</strong> <br> cuDF pandas accelerator mode</button>
+            </a>
+        </div>
+    </div>
+</section>
+
+<br>
+
+<!-- Announcements -->
+{{ $announcements := slice
+    (dict
+        "text" "RAPIDS 23.12 Released"
+        "url" "https://docs.rapids.ai/install#selector"
+    )
+    (dict
+        "text" "Notice: Deprecation for Pascal GPUs"
+        "url" "https://docs.rapids.ai/notices/rsn0034/"
+    )
+}}
+<section class="row">
+    <div class="col">
+        <div class="hero-announce-container">
+            {{ range $announcements }}
+            <a href="{{ .url }} " target='_blank' class="hero-announce">
+                <span class="hero-announce-icon fa-stack">
+                    <i class="fa-solid fa-circle fa-stack-2x"></i>
+                    <i class="fa-regular fa-bell fa-stack-1x fa-inverse"></i>
+                </span>
+                <button class="text-rapids-purple-primary border-rapids-purple-primary">
+                    {{ .text }}
+                </button>
+            </a>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+
+<!-- Intro -->
+<section class="row section padding-bottom-slant">
+    <div class="col">
+        <div class="container">
+
+            <h1 class="text-center mb-5">Data Science at the speed of thought</h1>
+            <div class="row">
+                <div class="col-md-4 py-3">
+                    <h2><i class="fa-light fa-caret-right"></i> What is RAPIDS </h2>
+                    <p> RAPIDS provides unmatched speed with familiar APIs that match the most popular PyData libraries.
+                        Built on state-of-the-art foundations like <a href="https://developer.nvidia.com/cuda-toolkit"
+                            target="_blank">NVIDIA CUDA</a> and <a href="https://arrow.apache.org/"
+                            target="_blank">Apache Arrow</a>, it unlocks the speed of GPUs with code you already know.
+                        <a href="/learn-more/#about">Jump to About Section <i class="fa-solid fa-arrow-up-right"></i>
+                        </a></p>
+
+                </div>
+                <div class="col-md-4 py-3">
+                    <h2><i class="fa-light fa-bolt-lightning"></i> Why Use RAPIDS</h2>
+                    <p> RAPIDS allows fluid, creative interaction with data for everyone from BI users to AI researchers
+                        on the
+                        cutting edge. GPU acceleration means less time and less cost moving data and training models. <a
+                            href="/learn-more/#use-cases">Jump to RAPIDS Use Cases <i
+                                class="fa-solid fa-arrow-up-right"></i> </a></p>
+                </div>
+                <div class="col-md-4 py-3">
+                    <h2><i class="fa-light fa-chart-network"></i> Open Source Ecosystem </h2>
+                    <p>RAPIDS is Open Source and available on <a href="https://github.com/rapidsai"
+                            target="_blank">GitHub</a>.
+                        Our mission is to empower and advance the open-source GPU data science data engineering
+                        ecosystem. <a href="https://github.com/rapidsai" target="_blank">Jump to RAPIDS GitHub <i
+                                class="fa-solid fa-arrow-up-right"></i> </a></p>
+                </div>
+            </div>
+
+            <br>
+
+            <div class="row has-background-rapids-image ">
+                <div class="col-md-12 py-5">
+                    <h2 class="text-white"><i class="fa-light fa-gauge-circle-bolt"></i> NEW: Pandas Accelerator Mode
+                        for cuDF </h2>
+                    <p class="text-white">Use cuDF's new pandas Accelerator Mode to speed up pandas workflows with zero
+                        code change.
+                        <a href="/cudf-pandas"> Learn More on the Launch Page <i
+                                class="fa-solid fa-arrow-up-right"></i></a>
+                    </p>
+                </div>
+            </div>
+
+            <br>
+
+            <div id="benchmarks"></div>
+            <div class="row mt-5">
+                <div class="col-md-4 py-3">
+                    <h2><i class="fa-thin fa-objects-column"></i> Faster Pandas <br> with cuDF</h2>
+                    <p>cuDF accelerates pandas with no code change and brings greatly improved performance.</p> <br>
+                    <a href="https://github.com/rapidsai/cudf/blob/branch-23.12/docs/cudf/source/user_guide/performance-comparisons/performance-comparisons.ipynb"
+                        target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
+
+                    <canvas id="cuDFchart" width="400" height="350"></canvas>
+                    <p class="fs-8 text-muted">* Benchmark on AMD EPYC 7642 (using 1x 2.3GHz CPU core) w/ 512GB and
+                        NVIDIA A100 80GB (1x GPU) w/ pandas v1.5 and cuDF v23.02</p>
+                </div>
+                <div class="col-md-4 py-3">
+                    <h2><i class="fa-light fa-microchip-ai"></i> Faster scikit-learn <br> with cuML</h2>
+                    <p>cuML brings huge speedups to ML modeling with an API that matches scikit-learn.</p> <br>
+                    <a href="https://github.com/rapidsai/cuml/tree/branch-23.12/python/cuml/benchmark"
+                        target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
+
+                    <canvas id="cuMLchart" width="400" height="350"></canvas>
+                    <p class="fs-8 text-muted">* Benchmark on AMD EPYC 7642 (using 1x 2.3GHz CPU core) w/ 512GB and
+                        NVIDIA A100 80GB (1x GPU) w/ scikit-learn v1.2 and cuML v23.02</p>
+                </div>
+                <div class="col-md-4 py-3">
+                    <h2><i class="fa-light fa-circle-nodes"></i> Faster networkX <br> with cuGraph</h2>
+                    <p>cuGraph makes migration from networkX easy, accelerates graph analytics, and allows scaling far
+                        beyond existing tools. </p>
+                    <a href="https://github.com/rapidsai/cugraph/blob/branch-23.12/notebooks/cugraph_benchmarks/synth_release.ipynb"
+                        target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
+
+                    <canvas id="cuGraphChart" width="400" height="350"></canvas>
+                    <p class="fs-8 text-muted">* Benchmark on AMD EPYC 7642 (using 1x 2.3GHz CPU core) w/ 512GB and
+                        NVIDIA A100 80GB (1x GPU) w/ networkX v3.0 and cuGraph v23.02</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="top-slant-container">
+    <div class="top-slant-down bg-rapids-purple-primary"></div>
+</div>
+
+<!-- Quick Start -->
+<div id="quick-start"></div>
+<section class="row section bg-rapids-purple-primary text-white padding-bottom-slant">
+    <div class="col">
+        <div class="container">
+            <h1 class="mb-5 text-white">Quick Start</h1>
+            <div class="row">
+                <div class="col-md-6 py-3">
+                    <h2 class="text-white"><i class="fa-light fa-download"></i> Quick Local Install </h2>
+                    <p>RAPIDS offers several installation methods, the quickest is shown below.</p>
+
+                    <br>
+
+                    <p>For more detailed guides go to our <a href="https://docs.rapids.ai/install"
+                            target="_blank">advanced install page <i class="fa-solid fa-arrow-up-right"></i></a> </p>
+
+                    <h3 class="mt-5 text-white">Requirements</h3>
+                    <p><strong>A.</strong> NVIDIA Pascal™ or better GPU with a <a
+                            href="https://developer.nvidia.com/cuda-gpus" target="_blank">compute capability 6.0 and
+                            above <i class="fa-solid fa-arrow-up-right"></i></a></p>
+                    <p><strong>B.</strong> Ubuntu 20.04 or 22.04, CentOS 7, Rocky Linux 8, or WSL2 on Windows 11</p>
+                    <p><strong>C.</strong> Recent <a href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html"
+                            target="_blank"> CUDA version <em>and</em> NVIDIA driver pairs</a>. Check yours with:
+                        <code>nvidia-smi</code>
+
+                    <h3 class="mt-6 text-white">Install with Conda</h3>
+                    <p><strong>1.</strong> If not installed, download and run the install script. <br>
+                        This will install the latest miniconda:
+                    </p>
+                    <pre class="highlight use-white-copy"><code>wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
+                    <br>
+                    <p><strong>2.</strong> Then quick install RAPIDS with:</p>
+                    <pre
+                        class="highlight use-white-copy"><code>conda create --solver=libmamba -n rapids-23.12 -c rapidsai -c conda-forge -c nvidia rapids=23.12 python=3.10 cudatoolkit=11.8</code></pre>
+
+                    <h3 class="mt-6 text-white">Install with pip</h3>
+                    <p>Install via the NVIDIA PyPI index:</p>
+                    <pre class="highlight use-white-copy"><code>pip install \
+--extra-index-url=https://pypi.nvidia.com \
+cudf-cu12==23.12.* \
+dask-cudf-cu12==23.12.* \
+cuml-cu12==23.12.* \
+cugraph-cu12==23.12.*</code></pre>
+
+                    <h3 class="mt-6 text-white">Install with Docker</h3>
+                    <p>Check that you have the <a href="https://docs.rapids.ai/install#docker" target="_blank">required
+                            environment</a> and then use the <a href="https://docs.rapids.ai/install#selector"
+                            target="_blank">install selector <i class="fa-solid fa-arrow-up-right"></i> </a></p>
+
+                    <h3 class="mt-6 text-white">Install on Windows</h3>
+                    <p>Use the Windows <a href="https://docs.rapids.ai/install#wsl2" target="_blank">WSL2 installation
+                            instructions <i class="fa-solid fa-arrow-up-right"></i> </a></p>
+
+                    <h2 class="mt-9 text-white"><i class="fa-light fa-gears"></i> Do I need an Advanced Install?</h2>
+                    <p> If you want to use Docker, WSL2, have an uncommon OS, hardware configuration, environment, or
+                        need specific versions such as <code> CUDA 11.8 </code> or <code> Python 3.8 </code> then you
+                        should use the
+                        installation selector in our
+                        <a href="https://docs.rapids.ai/install" target="_blank">Advanced Installations Page <i
+                                class="fa-solid fa-arrow-up-right"></i> </a>
+                    </p>
+                </div>
+                <div class="col-md-6 py-3">
+                    <h2 class="text-white"><i class="fa-light fa-gauge-circle-bolt"></i> Test Drive the new cuDF</h2>
+                    <p>Try out cuDF's new pandas Accelerator Mode, with a free required account, right now by <a
+                            href="https://nvda.ws/rapids-cudf" target="_blank">Launching Google CoLab <i
+                                class="fa-solid fa-arrow-up-right"></i> </a> </p>
+
+                    <br><br>
+
+                    <h2 class="text-white"><i class="fa-light fa-cloud-arrow-down"></i> Try RAPIDS Online </h2>
+                    <p>Don't have access to a GPU system right now? Try out RAPIDS with cloud based hardware from one of
+                        these featured channels: </p>
+
+                    <br>
+                    {{ $row1 := slice
+                        (dict
+                            "id" "google-colab"
+                            "url_override" (site.GetPage "_partners/google-colab").Params.other_urls.pip_env
+                            "text" (printf "Jump right into a GPU enabled RAPIDS notebook environment with a free required account. Installed with pip, it is also available via <a href='%s' target='_blank'>Conda</a>." (site.GetPage "_partners/google-colab").Params.other_urls.conda_env)
+                        )
+                        (dict
+                            "id" "amazon-studio-lab"
+                            "text" "Enables Amazon Sagemaker notebook based environments in a free trial with required account."
+                        )
+                    }}
+                    {{ $row2 := slice
+                        (dict
+                            "id" "paperspace"
+                            "url_override" (site.GetPage "_partners/paperspace").Params.other_urls.gpu_cloud
+                            "text" "Use Quick Start Instances through a limited free account."
+                        )
+                        (dict
+                            "id" "nvidia-launchpad"
+                            "text" "Free short term use to try and learn with hands-on lab environment."
+                        )
+                    }}
+                    {{ $row3 := slice
+                        (dict
+                            "id" "azure"
+                            "text" "Microsoft Azure Cloud infrastructure and services are available with RAPIDS."
+                            "url_override" (site.GetPage "_partners/azure").Params.other_urls.free_account
+                        )
+                        (dict
+                            "id" "oracle"
+                            "text" "Oracle Cloud infrastructure and services are available with RAPIDS."
+                        )
+                    }}
+                    {{ $row4 := slice
+                        (dict
+                            "id" "ibm"
+                            "text" "IBM Cloud infrastructure and services are available with RAPIDS."
+                        )
+                    }}
+                    {{ $rows := slice $row1 $row2 $row3 $row4 }}
+
+                    {{ range $rowIndex, $rowPartners := $rows }}
+                    <div class="row">
+                        {{ range $_, $partner_obj := $rowPartners }}
+                        {{ $img_width := cond (eq $rowIndex 0) "200" "150"}}
+                        {{ $partner_resource := site.GetPage (printf "_partners/%s" $partner_obj.id ) }}
+                        {{ $resized_image := ($partner_resource.Resources.Get "logo.png" ).Resize (printf "%sx" $img_width) }}
+                        <div class="col-md-6 py-3">
+                            <img src="{{ $resized_image.RelPermalink }}">
+                            <h3>
+                                <a href="{{ $partner_obj.url_override | default $partner_resource.Params.homepage_url }}" target="_blank">{{
+                                    $partner_resource.Params.name }} <i class="fa-solid fa-arrow-up-right"></i></a>
+                            </h3>
+                            <p>{{ .text | safeHTML }}</p>
+                        </div>
+                        {{ end }}
+                    </div>
+                    {{ end }}
+
+                    <h2 class="mt-9 text-white"><i class="fa-regular fa-chalkboard-user"></i> User Guides and Tutorials
+                    </h2>
+                    <p>After installing, the best place to start is by looking through our more detailed tutorials and
+                        guides on the <a href="https://docs.rapids.ai/user-guide" target="_blank">User Guides Page <i
+                                class="fa-solid fa-arrow-up-right"></i> </a> </p>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="bottom-slant-container">
+    <div class="bottom-slant-up bg-rapids-purple-primary"></div>
+</div>
+
+<!-- Ecosystem-->
+<section class="row section padding-top-slant">
+    <div class="col">
+        <div class="container">
+            <h1>Ecosystem</h1>
+            <div class="row">
+                <div class="col-md-4 py-3">
+                    <h2><i class="fa-regular fa-microchip"></i> Hardware </h2>
+                    <p> NVIDIA's industry leading hardware provides the platform for RAPIDS high performance. Get
+                        details on the
+                        newest GPUs, server architectures, and cloud offerings in our <a href="/ecosystem"> Ecosystem
+                            Hardware Section <i class="fa-solid fa-arrow-up-right"></i></a>
+                    </p>
+                </div>
+                <div class="col-md-4 py-3">
+                    <h2><i class="fa-regular fa-code"></i> Software </h2>
+                    <p>Find out details on featured RAPIDS projects like cuDF, cuML, cuGraph, and more. Also learn about
+                        those using our integrated with RAPIDS in our <a href="/ecosystem#featured-software"> Ecosystem
+                            Software Section <i class="fa-solid fa-arrow-up-right"></i></a>
+                    </p>
+                </div>
+                <div class="col-md-4 py-3">
+                    <h2><i class="fa-regular fa-laptop-code"></i> Developers </h2>
+                    <p> Get involved with RAPIDS projects, reach out to its developers, find maintainer and contribution
+                        guides
+                        in our <a href="/ecosystem#developers"> Ecosystem Developers Section <i
+                                class="fa-solid fa-arrow-up-right"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="row section">
+    <div class="col">
+        <div class="container">
+
+            <h2>Open Source</h2>
+            <p>RAPIDS would not be possible without the collaboration of these important open source projects. Click on a logo to
+              learn more: </p>
+            <div class="d-flex flex-wrap justify-content-between mt-5">
+              {{ $row := slice "apache-arrow" "dask" "nuclio" "numba" "scikit-learn" "xgboost" }}
+              {{ range $row }}
+              {{ with site.GetPage (printf "_partners/%s" . ) }}
+              {{ $sm_logo := .Resources.Get "logo_400x.png" }}
+              {{ $default_logo := .Resources.Get "logo.png" }}
+              {{ $resized_image := ($sm_logo | default $default_logo).Resize "100x" }}
+              <a target="_blank" href="{{ .Params.github_repo_url | default .Params.github_org_url | default .Params.homepage_url }}">
+                <img src="{{ $resized_image.RelPermalink }}" alt="{{ .Params.name }} Logo">
+              </a>
+              {{ end }}
+              {{ end }}
+            </div>
+        </div>
+
+
+        <div class="container">
+
+            <h2 class="mt-6">Adopters and Contributors</h2>
+            <p class="mb-5"> RAPIDS has a strong ecosystem of adopters and contributors in a variety of industries and communities. Click on a logo to learn more:</p>
+
+            {{ $row1 := slice "anyscale" "booz-allen-hamilton" "databricks" "graphistry" "h2oai" "ibm" "iguazio" "inria" "kinetica" "paperspace" }}
+            {{ $row2 := slice "plotly-dash" "preferred-networks" "pytorch" "ray" "saturn-cloud" "uber" "ursa" }}
+            {{ $row3 := slice "anaconda" "capital-one" "chainer" "cupy" "deepwave-digital" "gunrock" "nvidia" "quansight" "walmart" }}
+            {{ $rows := slice $row1 $row2 $row3 }}
+
+            {{ range $rows }}
+            <div class="d-flex flex-wrap justify-content-between">
+                {{ range . }}
+                {{ with site.GetPage (printf "_partners/%s" . ) }}
+                  {{ $resized_image := (.Resources.Get "logo.png").Resize "100x" }}
+                  <a target="_blank" href="{{ .Params.github_org_url | default .Params.homepage_url }}">
+                      <img src="{{ $resized_image.RelPermalink }}" alt ="{{ .Params.name }} Logo">
+                  </a>
+                {{ end }}
+                {{ end }}
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+
+<div class="bottom-slant-container">
+    <div class="bottom-slant-down bg-white"></div>
+</div>
+
+<!-- Learn More -->
+<section class="row section padding-top-slant padding-bottom-slant">
+    <div class="col">
+        <div class="container">
+            <h1 class="mb-5">Learn More</h1>
+            <div class="row">
+                <div class="col-md-4 py-3">
+                    <h2><i class="fa-regular fa-circle-info"></i> About RAPIDS</h2>
+                    <p> Learn more about RAPIDS' start with Apache Arrow and GoAi. Also find an overview of the
+                        capabilities of RAPIDS, as well as featured projects in our
+                        <a href="/learn-more"> About Section <i class="fa-solid fa-arrow-up-right"></i></a>
+                    </p>
+                </div>
+                <div class="col-md-4 py-3">
+                    <h2><i class="fa-regular fa-chart-user"></i> Use Cases </h2>
+                    <p> Hear about success stories, resources for integrating RAPIDs workflows in your business, and
+                        deployment strategies in our
+                        <a href="/learn-more#use-cases"> Use Cases Section <i
+                                class="fa-solid fa-arrow-up-right"></i></a>
+                    </p>
+                </div>
+                <div class="col-md-4 py-3">
+                    <h2><i class="fa-regular fa-message-exclamation"></i> Get Involved </h2>
+                    <p> Use RAPIDS directly or through <a
+                            href="https://www.nvidia.com/en-us/data-center/products/ai-enterprise/"
+                            target="_blank">NVIDIA AI Enterprise</a>, which provides extensive optimization, certified
+                        hardware profiles, and direct IT support. Find additional business resources, community
+                        resources, and guides for RAPIDS evangelism in our
+                        <a href="/learn-more/#get-involved"> Get Involved Section <i
+                                class="fa-solid fa-arrow-up-right"></i></a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<div class="bottom-slant-container">
+    <div class="bottom-slant-down bg-white"></div>
+</div>
+
+<!-- News -->
+<section class="row section padding-top-slant padding-bottom-slant bg-rapids-gray">
+    <div class="col">
+        <div class="container mb-9">
+            <h1 class="mb-5">Latest News</h1>
+            <div class="row">
+                <div class="col-md-4 py-3">
+                    <h2><i class="fa-brands fa-twitter"></i> RAPIDS X/Twitter </h2>
+                    <p> Follow the latest from the RAPIDS X/Twitter community with <a
+                            href="https://twitter.com/RAPIDSai" target="_blank">@RAPIDSai <i
+                                class="fa-solid fa-arrow-up-right"></i></a> </p>
+                </div>
+                <div class="col-md-4 py-3">
+                    <h2><i class="fa-regular fa-triangle-exclamation"></i> RAPIDS Support Notices </h2>
+                    <p> Get the full list of developer updates and notices (RSN) that may affect your projects on the <a
+                            href="https://docs.rapids.ai/notices" target="_blank"> RSN Docs Page <i
+                                class="fa-solid fa-arrow-up-right"></i></a> </p>
+                </div>
+                <div class="col-md-4 py-3">
+                    <h2><i class="fa-regular fa-books"></i> RAPIDS News </h2>
+                    <p> Find our highlighted content, including talks, posts, guides and more on the <a
+                            href="https://developer.nvidia.com/blog/" target="_blank"> NVIDIA Dev Blog</a> and <a
+                            href="https://medium.com/rapids-ai" target="_blank">RAPIDS Blog <i
+                                class="fa-solid fa-arrow-up-right"></i></a> </p>
+                </div>
+            </div>
+
+            <!-- Blog Posts -->
+        </div>
+        {{ partial "post.html" }}
+    </div>
+</section>
+
+<!-- Adds Copy Button to Pre.Highlight -->
+<script>
+    /* Append Code Copy Button */
+    /* source: https://remarkablemark.org/blog/2021/06/01/add-copy-code-to-clipboard-button-to-jeyll-site/ */
+
+    // Code Block must use pre + 'highlight' tag
+    var codeBlocks = document.querySelectorAll('pre.highlight');
+
+    codeBlocks.forEach(function (codeBlock) {
+        var copyButton = document.createElement('button');
+
+        // checks for white style
+        if (codeBlock.classList.contains('use-white-copy')) {
+            copyButton.className = 'copy-button-white';
+        } else {
+            copyButton.className = 'copy-button';
+        }
+
+        copyButton.type = 'button';
+        copyButton.ariaLabel = 'Copy code to clipboard';
+        copyButton.innerText = 'Copy';
+
+        codeBlock.append(copyButton);
+
+        copyButton.addEventListener('click', function () {
+            var code = codeBlock.querySelector('code').innerText.trim();
+            window.navigator.clipboard.writeText(code);
+
+            copyButton.innerText = 'Copied';
+            var fourSeconds = 3000;
+
+            setTimeout(function () {
+                copyButton.innerText = 'Copy';
+            }, fourSeconds);
+        });
+    });
+</script>
+
+<!-- Chart.js perf charts -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.0.1/chart.umd.min.js"
+    integrity="sha512-HyprZz2W40JOnIBIXDYHCFlkSscDdYaNe2FYl34g1DOmE9J+zEPoT4HHHZ2b3+milFBtiKVWb4sorDVVp+iuqA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+    const ctx = document.getElementById('cuDFchart');
+    new Chart(ctx, {
+        type: 'bar',
+        data: {
+            labels: ['string UDF', 'numeric UDF', 'merge', 'value counts', 'groupBy'],
+            datasets: [{
+                label: 'cuDF vs pandas speedup',
+                data: [16, 47, 53, 72, 78],
+                backgroundColor: [
+                    'rgb(115, 6, 255, .80)'
+                ]
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    type: 'linear',
+                    beginAtZero: true,
+                    grid: {
+                        display: false,
+                        borderWidth: 0
+                    },
+                    title: {
+                        display: true,
+                        text: 'X Times Faster'
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false,
+                        drawTicks: false,
+                        borderWidth: 2
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                },
+                title: {
+                    display: true,
+                    text: 'Performance on 100k-300K row x 2 col dataframes'
+                }
+            },
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 20,
+                    bottom: 20
+                }
+            }
+        }
+    });
+
+    const ctx2 = document.getElementById('cuMLchart');
+    new Chart(ctx2, {
+        type: 'bar',
+        data: {
+            labels: ['DBSCAN', 'Nearest Neighbors', 'KMeans', 'PCA', 'Linear Regression'],
+            datasets: [{
+                label: 'cuML vs scikit-learn speedup',
+                data: [3, 5, 6, 24, 27],
+                backgroundColor: [
+                    'rgb(115, 6, 255, .80)'
+                ]
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    type: 'linear',
+                    beginAtZero: true,
+                    grid: {
+                        display: false,
+                        borderWidth: 0
+                    },
+                    title: {
+                        display: true,
+                        text: 'X Times Faster'
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false,
+                        drawTicks: false,
+                        borderWidth: 2
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                },
+                title: {
+                    display: true,
+                    text: 'Performance on 100K samples and 256 features'
+                }
+            },
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 20,
+                    bottom: 20
+                }
+            }
+        }
+    });
+
+    const ctx3 = document.getElementById('cuGraphChart');
+    new Chart(ctx3, {
+        type: 'bar',
+        data: {
+            labels: ['Jaccard', 'Core Number', 'Louvain', 'PageRank', 'Katz'],
+            datasets: [{
+                label: 'cuGraph vs networkX speedup',
+                data: [7, 10, 35, 42, 87],
+                backgroundColor: [
+                    'rgb(115, 6, 255, .80)'
+                ]
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    type: 'linear',
+                    beginAtZero: true,
+                    grid: {
+                        display: false,
+                        borderWidth: 0
+                    },
+                    title: {
+                        display: true,
+                        text: 'X Times Faster'
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false,
+                        drawTicks: false,
+                        borderWidth: 2
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                },
+                title: {
+                    display: true,
+                    text: 'Performance on ~8,192 vertices x ~262,144 edges'
+                }
+            },
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 20,
+                    bottom: 20
+                }
+            }
+        }
+    });
+</script>
 {{ end }}
