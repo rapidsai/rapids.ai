@@ -1,5 +1,7 @@
+@import "hugo:vars";
+
 .hero-rapids-bg {
-  background: url(../images/header-bg.svg) top center no-repeat;
+  background: url($header-bg-url) top center no-repeat;
   background-size: cover;
   min-height: 300px;
 }

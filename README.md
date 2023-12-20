@@ -1,4 +1,4 @@
-# <div align="left"><img src="https://rapids.ai/assets/images/rapids_logo.png" width="90px"/> &nbsp; [RAPIDS.ai](https://rapids.ai.com) Website
+# [RAPIDS.ai](https://rapids.ai.com) Website
 
 This repository contains the source code and content for the [RAPIDS.ai](https://rapids.ai) website.
 
