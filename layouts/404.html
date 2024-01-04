@@ -4,11 +4,11 @@
 <section class="row hero-rapids-bg mb-5">
   <div class="col">
     <div class="hero-body text-center">
-      <img class="hero-img" src="/images/rapids-logo-whitetxt.svg">
+      <img class="hero-img" src='{{ (resources.Get "images/rapids-logo-whitetxt.svg").RelPermalink }}'>
       <p class="fw-semibold fs-3 lh-xs text-white mb-2">
         Page Not Found
       </p>
-      <button class="button-rapids-teal"><a href="https://www.rapids.ai">Head Back</a></button>
+      <button class="text-rapids-teal border-rapids-teal"><a href="https://www.rapids.ai">Head Back</a></button>
     </div>
     <div class="top-slant-container">
       <div class="top-slant-up bg-white"></div>
@@ -40,7 +40,7 @@
 
         </div>
         <div class="col-md-6 py-3">
-          <img class="image img-half img-center" src="/images/RAPIDS404.gif" alt="404gif" />
+          <img class="d-block mx-auto w-50" src='{{ (resources.Get "images/RAPIDS404.gif").RelPermalink }}' alt="404gif" />
         </div>
       </div>
 

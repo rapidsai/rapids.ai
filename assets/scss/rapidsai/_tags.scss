@@ -1,0 +1,25 @@
+.tags-container {
+  width: 100%;
+  margin-top: -0.2rem;
+  margin-bottom: 0.5rem;
+  display: flex;
+  justify-content: right;
+}
+
+.tags-item {
+  font-size: 0.7rem;
+  font-weight: 600;
+  border-width: 0.13rem;
+  border-bottom-right-radius: 0.5rem;
+  border-bottom-left-radius: 0.5rem;
+  border-left-style: solid;
+  border-right-style: solid;
+  border-bottom-style: solid;
+  text-align: center;
+  padding-top: 0.15rem;
+  padding-bottom: 0.15rem;
+  padding-left: 0.45rem;
+  padding-right: 0.45rem;
+  margin-left: 0.4rem;
+  margin-top: -0.1rem;
+}

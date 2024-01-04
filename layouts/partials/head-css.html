@@ -1,0 +1,21 @@
+<!-- This partial was copied from Docsy source code to inject "images/header-bg.svg" url as Sass var -->
+<!-- see https://discourse.gohugo.io/t/42053/ -->
+
+{{ $options := (
+  dict "vars" (
+    (dict
+      "header-bg-url" (resources.Get "images/header-bg.svg").RelPermalink)
+    )
+  )
+}}
+
+{{ $scssMain := "scss/main.scss"}}
+{{ if not hugo.IsProduction }}
+{{/* Note the missing postCSS. This makes it snappier to develop in Chrome, but makes it look sub-optimal in other browsers. */}}
+{{ $css := resources.Get $scssMain | toCSS (merge (dict "enableSourceMap" true) $options) }}
+<link href="{{ $css.RelPermalink }}" rel="stylesheet">
+{{ else }}
+{{ $css := resources.Get $scssMain | toCSS (merge (dict "enableSourceMap" false) $options) | postCSS | minify | fingerprint }}
+<link rel="preload" href="{{ $css.RelPermalink }}" as="style">
+<link href="{{ $css.RelPermalink }}" rel="stylesheet" integrity="{{ $css.Data.integrity }}">
+{{ end }}

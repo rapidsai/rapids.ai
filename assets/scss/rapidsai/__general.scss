@@ -1,0 +1,209 @@
+@import "hugo:vars";
+
+/* ============================
+   Custom CSS for rapids.ai
+   =========================== */
+
+
+/* /// general /// */
+body {
+  font-display: fallback;
+  font-family: 'Open Sans', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #fff;
+  color: #212121;
+  line-height: 1.6;
+}
+
+// TODO: remove this block.
+// These styles were a part of our previously used `normalize.css` file. That
+// file has been removed, but I copied these styles over in particular to avoid
+// having to make additional changes to the site. In the future, we should
+// remove this block and fix the styles on our landing pages accordingly. The
+// presence of these styles makes our documentation pages look bad.
+.landing-page, .td-404 {
+  blockquote,
+  body,
+  dd,
+  dl,
+  dt,
+  fieldset,
+  figure,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  hr,
+  html,
+  iframe,
+  legend,
+  li,
+  ol,
+  p,
+  textarea,
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+a {
+  color: #37c9dd;
+  cursor: pointer;
+  font-weight: 700;
+  transition: all 0.4s ease-out;
+}
+
+a:hover {
+  color: #409da9;
+  transition: all 0.4s ease-out;
+}
+
+.title:not(:last-child) {
+  margin-bottom: 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: sans-serif;
+}
+
+// TODO: remove this block
+// We should determine if any of these styles will be global styles for all
+// headings. Other style variants should be applied with utility classes
+// directly to HTML elements. If there are too many existing elements to apply
+// utility classes to, we should break down some of our existing patterns into
+// reusable HTML components to keep things DRY.
+.landing-page, .td-404 {
+  h1, h2, h3 {
+    color: var(--bs-rapids-purple-primary);
+    text-transform: uppercase;
+    margin-bottom: 0;
+  }
+}
+
+h1 {
+  font-size: 2.5rem;
+  line-height: 2.5rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+  line-height: 2rem;
+}
+
+h3 {
+  font-weight: bold;
+}
+
+h3, h4, h5, h6 {
+  font-size: map-get($font-sizes, 6);
+  line-height: 1.6;
+}
+
+.subheading {
+  font-size: 1.3rem;
+}
+
+strong {
+  color: inherit;
+}
+
+pre {
+  position: relative;
+  background-color: #efefef;
+  padding: 1em;
+  border-top: 2px solid #dedede;
+  word-break: break-word;
+  white-space: pre-wrap;
+  margin-right: 1rem;
+  overflow: visible;
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
+  color: #4a4a4a
+}
+
+code {
+  color: #151515;
+  background-color: #efefef;
+}
+
+.code-sample {
+  display: block;
+  background-color: #efefef;
+  padding: 1em 2em;
+  border-top: 2px solid #7400ff;
+  word-break: break-word;
+  overflow: visible;
+  box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
+  color: #4a4a4a
+}
+
+a button {
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  transition: all 0.4s ease-out;
+}
+
+a button:hover {
+  text-shadow: none;
+  transition: all 0.4s ease-out;
+}
+
+/* /// button style /// */
+button {
+  background-color: transparent;
+  cursor: pointer;
+  justify-content: center;
+  padding-bottom: calc(0.5em - 1px);
+  padding-left: 1em;
+  padding-right: 1em;
+  padding-top: calc(0.5em - 1px);
+  text-align: center;
+  white-space: nowrap;
+  border-style: solid;
+  border-color: #dbdbdb;
+  color: white;
+  border-width: 3px;
+  border-radius: 0.5rem;
+  border-top-right-radius: 0;
+  font-weight: 600;
+  font-family: 'Open Sans';
+  text-transform: uppercase;
+  transition: all 0.55s ease-out;
+  line-height: 1.15;
+
+  /* spent too much time on this */
+  text-shadow: 0 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow:
+    0 1px 2px rgba(0, 0, 0, 0.1),
+    0 2px 2px rgba(0, 0, 0, 0.1),
+    0 4px 2px rgba(0, 0, 0, 0.1),
+    0 2px 2px rgba(0, 0, 0, 0.2) inset;
+}
+
+button:hover {
+  text-shadow: none;
+  box-shadow: none;
+  transition: all 0.35s ease-out;
+}
+
+.section {
+  padding: map-get($spacers, 7) 0;
+}
+
+.has-background-rapids-image {
+  background: url($header-bg-url) no-repeat;
+  background-size: cover;
+  border-radius: 0.5rem;
+  border-top-right-radius: 0;
+}

@@ -3,11 +3,8 @@ title: FAQ | RAPIDS
 description: Frequently Asked Questions
 ---
 
-  <!-- Hero Shortcode -->
-  {{< hero hero-text="Frequently Asked Questions" button-link="#" button-text="FAQ" >}}
-
 ## Question 1
-text text 
+text text
 
 ## Question 2
 text text

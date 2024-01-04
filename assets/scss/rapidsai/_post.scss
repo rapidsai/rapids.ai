@@ -1,0 +1,14 @@
+.post-text {
+  color: #666666;
+  font-weight: 400;
+  line-height: 1.4rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.post-action {
+  color: var(--bs-rapids-purple-primary);
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  font-variant: all-small-caps;
+}
