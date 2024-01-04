@@ -1,7 +1,7 @@
 <nav x-data="{isOpen: false}" class="navigation container-fluid" role="navigation" aria-label="main navigation">
   <div class="navigation__brand">
     <a class="navigation__item" href="/">
-      <img class="navigation__logo" src="/images/RAPIDS-logo.png">
+      <img class="navigation__logo" src='{{ (resources.Get "images/RAPIDS-logo.png").RelPermalink }}'>
     </a>
 
     <button @click="isOpen = ! isOpen" class="navigation__burger" type="button" aria-controls="navigation__menu"
