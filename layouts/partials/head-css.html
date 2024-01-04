@@ -1,10 +1,10 @@
-<!-- This partial was copied from Docsy source code to inject "branding/header-bg.svg" url as Sass var -->
+<!-- This partial was copied from Docsy source code to inject "images/header-bg.svg" url as Sass var -->
 <!-- see https://discourse.gohugo.io/t/42053/ -->
 
 {{ $options := (
   dict "vars" (
     (dict
-      "header-bg-url" ((site.GetPage "branding").Resources.Get "header-bg.svg").RelPermalink)
+      "header-bg-url" (resources.Get "images/header-bg.svg").RelPermalink)
     )
   )
 }}

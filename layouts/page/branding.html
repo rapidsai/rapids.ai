@@ -69,7 +69,7 @@
 
           <h2 class="mt-5"><i class="fa-light fa-image"></i> Background Image</h2>
           <p>High resolution background SVG, right click to save.</p>
-          <img src='{{ (.Resources.GetMatch "header-bg.svg").RelPermalink }}'>
+          <img src='{{ (resources.Get "images/header-bg.svg").RelPermalink }}'>
 
         </div>
       </div>
