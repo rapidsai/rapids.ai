@@ -48,6 +48,10 @@ body {
     margin: 0;
     padding: 0;
   }
+
+  a {
+    font-weight: 700;
+  }
 }
 
 img {
@@ -57,7 +61,6 @@ img {
 a {
   color: #37c9dd;
   cursor: pointer;
-  font-weight: 700;
   transition: all 0.4s ease-out;
 }
 
