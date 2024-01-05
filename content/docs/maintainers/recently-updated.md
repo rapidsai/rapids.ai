@@ -10,20 +10,6 @@ weight: 10
 
 A GitHub action that checks whether a pull-request is up-to-date with the latest changes from the source repository.
 
-### Intended audience
-
-Community
-{: .label .label-yellow}
-
-Developers
-{: .label .label-green}
-
-Project Leads
-{: .label .label-blue}
-
-Operations
-{: .label .label-purple}
-
 ## Summary
 
 GitHub Actions are configured to run tests on the _HEAD_ commit of pull requests (e.g. not the pull request's merge commit, which would be the result of merging the pull request into the target branch).

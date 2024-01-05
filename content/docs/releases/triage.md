@@ -10,14 +10,6 @@ weight: 10
 
 Summary of the issue triage methodology used for RAPIDS projects.
 
-### Intended audience
-
-Developers
-{: .label .label-green}
-
-Project Leads
-{: .label .label-blue}
-
 ## Triage goals
 
 RAPIDS projects are continuously triaging new issues and re-triaging existing issues frequently. This is to ensure that high priority issues are remedied in a timely manner and the community receives frequent updates on a filed issue.

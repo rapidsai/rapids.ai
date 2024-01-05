@@ -10,14 +10,6 @@ weight: 10
 
 Overview of the best practices for creating and updating issues for RAPIDS projects.
 
-### Intended audience
-
-Community
-{: .label .label-yellow}
-
-Developers
-{: .label .label-green}
-
 ### See also
 - [Contributing Code]({% link contributing/code.md %})
 - [Pull Requests]({% link contributing/prs.md %})

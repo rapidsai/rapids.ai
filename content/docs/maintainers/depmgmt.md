@@ -10,17 +10,6 @@ weight: 10
 
 Outlines how to test and change dependencies of the RAPIDS projects
 
-### Intended audience
-
-Developers
-{: .label .label-green}
-
-Project Leads
-{: .label .label-blue}
-
-Operations
-{: .label .label-purple}
-
 ## Adding a Dependency
 
 The [RAPIDS Integration repository](https://github.com/rapidsai/integration) contains all the information needed for adding a dependency to the RAPIDS projects. Which `meta.yaml` changed is based on the purpose of the package being installed. The purpose of each meta-package is listed below:

@@ -10,17 +10,6 @@ weight: 10
 
 Many tests depend on the presence of specific datasets in order to properly verify code correctness. Some datasets are small enough that they can be included with the source code, but others are relatively large and cannot practically coexist with the source. In both cases, a test author should not write a test to assume datasets are located in a particular place (either with a relative path, since the executable could be moved, or an absolute path, since different machines will likely use different absolute paths), and should instead allow for the location of the datasets to be provided by a user.
 
-### Intended audience
-
-Developers
-{: .label .label-green}
-
-Project Leads
-{: .label .label-blue}
-
-Operations
-{: .label .label-purple}
-
 ## Running Tests That Use Datasets
 
 Tests using the RAPIDS dataset locating utilities (see below) allow a user to specify the location of datasets using one of the following mechanisms:

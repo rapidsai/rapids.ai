@@ -11,15 +11,6 @@ This page outlines some helpful information about reproducing CI builds and test
 
 At this time, this information only applies to `conda` related builds and tests.
 
-### Intended audience
-{: .no_toc }
-
-Operations
-{: .label .label-purple}
-
-Developers
-{: .label .label-green}
-
 ## Table of contents
 {: .no_toc .text-delta }
 

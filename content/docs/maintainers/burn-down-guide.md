@@ -12,11 +12,6 @@ This is a guide for the steps required to perform at the start of [burn down]({%
 
 Given the current development version is `v0.A.0`, then the next version is `v0.B.0` where `B=A+1`.
 
-### Intended audience
-
-Operations
-{: .label .label-purple}
-
 # Tasks
 
 * Create `branch-0.B` branches

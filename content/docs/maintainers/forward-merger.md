@@ -13,17 +13,6 @@ The forward mergers are automated pull requests to merge a branch in burndown in
 
 The forward merger jobs are located here: [https://gpuci.gpuopenanalytics.com/job/rapidsai/job/forward-mergers/](https://gpuci.gpuopenanalytics.com/job/rapidsai/job/forward-mergers/)
 
-### Intended audience
-
-Developers
-{: .label .label-green}
-
-Project Leads
-{: .label .label-blue}
-
-Operations
-{: .label .label-purple}
-
 ## Forward Mergers
 
 During the release process, the branch for the next release is created and set as default. Once this happens, the forward-merger branch jobs are activated. Forward-mergers automatically merge any commits made to the release branch to the latest default branch during burn down.

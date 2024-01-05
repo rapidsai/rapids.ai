@@ -11,11 +11,6 @@ weight: 10
 
 Summary of the release planning process used by RAPIDS projects.
 
-### Intended audience
-
-Project Leads
-{: .label .label-blue}
-
 ### See also
 
 - [Versions and Tags]({% link resources/versions.md %})

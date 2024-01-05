@@ -10,14 +10,6 @@ weight: 10
 
 Summary of the automated merge process used for pull requests.
 
-### Intended audience
-
-Community
-{: .label .label-yellow}
-
-Developers
-{: .label .label-green}
-
 ## Summary
 
 Some RAPIDS repositories use an auto-merger to merge pull requests. The auto-merger serves two purposes:

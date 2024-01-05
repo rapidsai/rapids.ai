@@ -10,11 +10,6 @@ weight: 10
 
 Overview of creating a pull request for a RAPIDS project.
 
-### Intended audience
-
-Developers
-{: .label .label-green}
-
 ### See also
 
 - [Issues]({% link contributing/issues.md %})

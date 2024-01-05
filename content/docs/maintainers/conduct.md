@@ -11,17 +11,6 @@ weight: 10
 
 Define the code of conduct followed and enforced for all RAPIDS projects.
 
-### Intended audience
-
-Community
-{: .label .label-yellow}
-
-Developers
-{: .label .label-green}
-
-Project Leads
-{: .label .label-blue}
-
 ## Our Pledge
 
 In the interest of fostering an open and welcoming environment, we as

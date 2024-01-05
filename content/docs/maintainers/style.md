@@ -10,14 +10,6 @@ weight: 10
 
 Summary of style formats for various aspects of RAPIDS projects.
 
-### Intended audience
-
-Community
-{: .label .label-yellow}
-
-Developers
-{: .label .label-green}
-
 ## Code style
 
 ### Python

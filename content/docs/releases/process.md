@@ -10,14 +10,6 @@ weight: 10
 
 Summary of the RAPIDS release process for major and minor releases.
 
-### Intended audience
-
-Project Leads
-{: .label .label-blue}
-
-Operations
-{: .label .label-purple}
-
 ### See also
 
 * [Git branching model]({% link resources/git.md %})

@@ -11,17 +11,6 @@ weight: 10
 
 Summary of the testing practices used by RAPIDS projects.
 
-### Intended audience
-
-Developers
-{: .label .label-green}
-
-Project Leads
-{: .label .label-blue}
-
-Operations
-{: .label .label-purple}
-
 ## Infrastructure
 
 Overall goal, follow the open source ecosystem for infrastructure choices

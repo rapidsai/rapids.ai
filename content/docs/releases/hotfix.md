@@ -11,17 +11,6 @@ weight: 10
 
 Summary of the RAPIDS release process for hotfixes.
 
-### Intended audience
-
-Developers
-{: .label .label-green}
-
-Project Leads
-{: .label .label-blue}
-
-Operations
-{: .label .label-purple}
-
 ### See also
 
 * [Hotfix versioning]({% link resources/versions.md %})

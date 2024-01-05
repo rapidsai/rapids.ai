@@ -10,17 +10,6 @@ weight: 10
 
 Summary of the versioning and release methodology used by RAPIDS projects.
 
-### Intended audience
-
-Community
-{: .label .label-yellow}
-
-Developers
-{: .label .label-green}
-
-Project Leads
-{: .label .label-blue}
-
 ## Versioning method
 
 All RAPIDS projects use the [CalVer](https://calver.org/) versioning method for all releases starting with June 2021 release.

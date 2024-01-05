@@ -10,14 +10,6 @@ weight: 10
 
 Details on our git branching method used for RAPIDS and our style conventions for git commits.
 
-### Intended audience
-
-Community
-{: .label .label-yellow}
-
-Developers
-{: .label .label-green}
-
 ### See also
 
 * [Versioning and Tagging]({% link resources/versions.md %})

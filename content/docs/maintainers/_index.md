@@ -8,18 +8,6 @@ weight: 1
 
 RAPIDS projects use an established set of guidelines and procedures for all projects. These are available for the community to review and provide feedback on.
 
-
-### Intended audience
-
-Developers
-{: .label .label-green}
-
-Project Leads
-{: .label .label-blue}
-
-Operations
-{: .label .label-purple}
-
 ## Release v{{ site.data.releases.nightly.version }} Schedule
 
 **NOTE:** *Dates are subject to change at anytime. Completed release schedules are posted [here]({% link releases/schedule.md %}).*

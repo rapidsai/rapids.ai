@@ -15,14 +15,6 @@ Contributions can be made in three ways:
 - [Suggest a new feature or improvement]({% link contributing/issues.md %})
 - [Implement code for an issue](#your-first-issue)
 
-### Intended audience
-
-Community
-{: .label .label-yellow}
-
-Developers
-{: .label .label-green}
-
 ### See also
 
 - [Issues]({% link contributing/issues.md %})
