@@ -1,6 +1,5 @@
 ---
-title: Git Methodology
-linkTitle: Git Methodology
+title: GitHub Actions
 description: Gateway to Questions
 type: docs
 weight: 10
