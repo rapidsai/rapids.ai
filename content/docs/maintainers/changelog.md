@@ -1,12 +1,11 @@
 ---
-layout: default
-nav_order: 2
-parent: Resources
-grand_parent: Maintainer Docs
 title: Changelog Format
+linkTitle: Changelog Format
+description: Gateway to Questions
+type: docs
+weight: 10
 ---
 
-# Changelog Format
 
 ## Overview
 

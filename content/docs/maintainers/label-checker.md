@@ -1,12 +1,10 @@
 ---
-layout: default
-nav_order: 6
-parent: Resources
-grand_parent: Maintainer Docs
 title: Label Checker
+linkTitle: Label Checker
+description: Gateway to Questions
+type: docs
+weight: 10
 ---
-
-# Label Checker
 
 ## Overview
 

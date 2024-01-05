@@ -1,12 +1,11 @@
 ---
-layout: default
-nav_order: 1
-parent: Resources
-grand_parent: Maintainer Docs
 title: Code of Conduct
+linkTitle: Code of Conudct
+description: Gateway to Questions
+type: docs
+weight: 10
 ---
 
-# Contributor Covenant Code of Conduct
 
 ## Overview
 

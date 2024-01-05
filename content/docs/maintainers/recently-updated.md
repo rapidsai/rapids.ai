@@ -1,12 +1,10 @@
 ---
-layout: default
-nav_order: 6
-parent: Resources
-grand_parent: Maintainer Docs
 title: Recently Updated Check
+linkTitle: Recently Updated 
+description: Gateway to Questions
+type: docs
+weight: 10
 ---
-
-# _Recently Updated_ Check
 
 ## Overview
 

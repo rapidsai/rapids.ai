@@ -1,28 +1,10 @@
 ---
-layout: default
-nav_order: 3
-parent: Release Docs
-grand_parent: Maintainer Docs
 title: Release Schedule
+linkTitle: Release Schedule
+description: Gateway to the RAPIDS documentation content
+type: docs
+weight: 10
 ---
-
-### Intended audience
-{:.no_toc}
-
-Community
-{: .label .label-yellow}
-
-Developers
-{: .label .label-green}
-
-Operations
-{: .label .label-purple}
-
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
 
 ## Current release
 

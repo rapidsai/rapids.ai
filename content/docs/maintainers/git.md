@@ -1,12 +1,10 @@
 ---
-layout: default
-nav_order: 3
-parent: Resources
-grand_parent: Maintainer Docs
-title: Git Methodology 
+title: Git Methodology
+linkTitle: Git Methodology
+description: Gateway to Questions
+type: docs
+weight: 10
 ---
-
-# Git Methodology
 
 ## Overview
 

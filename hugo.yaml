@@ -14,6 +14,9 @@ sitemap:
   filename: sitemap.xml
   priority: 0.5
 
+rss_sections:
+  - notices
+
 params:
   offlineSearch: true
   title: RAPIDS | GPU Accelerated Data Science
@@ -22,6 +25,9 @@ params:
     - /images/RAPIDS-logo-white.png
   social:
     twitter: rapidsai
+  ui:
+    sidebar_menu_compact: false
+    sidebar_menu_foldable: true
 
 module:
   proxy: direct

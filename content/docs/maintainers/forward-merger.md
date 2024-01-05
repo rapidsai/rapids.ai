@@ -1,11 +1,11 @@
 ---
-layout: default
-nav_order: 3
-parent: Maintainer Docs
 title: Forward Mergers
+linkTitle: Forward Mergers
+description: Gateway to Questions
+type: docs
+weight: 10
 ---
 
-# Forward Mergers
 
 ## Overview
 

@@ -1,17 +1,12 @@
 ---
-layout: default
-nav_order: 3
-parent: Resources
-grand_parent: Maintainer Docs
 title: Reproducing CI Locally
+linkTitle: Reproducing CI Locally
+description: Gateway to Questions
+type: docs
+weight: 10
 ---
 
-# {{ page.title }}
-{:.no_toc}
-
 ## Overview
-{:.no_toc}
-
 This page outlines some helpful information about reproducing CI builds and tests locally.
 
 At this time, this information only applies to `conda` related builds and tests.

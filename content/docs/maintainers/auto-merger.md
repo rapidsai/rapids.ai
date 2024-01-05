@@ -1,12 +1,10 @@
 ---
-layout: default
-nav_order: 3
-parent: Resources
-grand_parent: Maintainer Docs
-title: Auto-Merger
+title: Auto Merger
+linkTitle: Auto Merger
+description: Gateway to Questions
+type: docs
+weight: 10
 ---
-
-# Auto-Merger
 
 ## Overview
 

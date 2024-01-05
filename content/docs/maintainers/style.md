@@ -1,12 +1,10 @@
 ---
-layout: default
-nav_order: 4
-parent: Resources
-grand_parent: Maintainer Docs
 title: Style Guide
+linkTitle: Style Guide
+description: Gateway to Questions
+type: docs
+weight: 10
 ---
-
-# Style Guide
 
 ## Overview
 

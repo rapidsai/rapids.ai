@@ -1,12 +1,10 @@
 ---
-layout: default
-nav_order: 3
-parent: Release Docs
-grand_parent: Maintainer Docs
 title: Release Process
+linkTitle: Release Docs
+description: Gateway to the RAPIDS documentation content
+type: docs
+weight: 10
 ---
-
-# Release Process
 
 ## Overview
 

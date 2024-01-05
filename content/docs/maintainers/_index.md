@@ -1,16 +1,13 @@
 ---
-layout: default
-title: Maintainer Docs
-nav_order: 6
-has_children: true
-permalink: maintainers
+title: Maintainers
+linkTitle: Maintainers
+description: Gateway to the RAPIDS documentation content
+type: docs
+weight: 1
 ---
 
-# RAPIDS Maintainers Docs
-{:.no_toc}
-
 RAPIDS projects use an established set of guidelines and procedures for all projects. These are available for the community to review and provide feedback on.
-{: .fs-6 .fw-300 }
+
 
 ### Intended audience
 

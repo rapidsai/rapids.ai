@@ -1,12 +1,11 @@
 ---
-layout: default
-nav_order: 3
-parent: Release Docs
-grand_parent: Maintainer Docs
-title: Hotfix Process
+title: HotFix Process
+linkTitle: Hotfixes
+description: Gateway to the RAPIDS documentation content
+type: docs
+weight: 10
 ---
 
-# Hotfix Process
 
 ## Overview
 

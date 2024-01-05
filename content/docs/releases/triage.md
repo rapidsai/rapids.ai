@@ -1,12 +1,10 @@
 ---
-layout: default
-nav_order: 1
-parent: Release Docs
-grand_parent: Maintainer Docs
 title: Issue Triage
+linkTitle: Issue Triage
+description: Gateway to the RAPIDS documentation content
+type: docs
+weight: 10
 ---
-
-# Issue Triage
 
 ## Overview
 

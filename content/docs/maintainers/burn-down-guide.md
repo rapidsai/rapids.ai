@@ -1,12 +1,10 @@
 ---
-layout: default
-nav_order: 9
-parent: Resources
-grand_parent: Maintainer Docs
 title: Burn Down Guide
+linkTitle: Burn Down Guide
+description: Gateway to Questions
+type: docs
+weight: 10
 ---
-
-# Burn down guide
 
 ## Overview
 
