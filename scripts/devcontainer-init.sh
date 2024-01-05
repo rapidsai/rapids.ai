@@ -8,7 +8,10 @@ wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_e
 tar -xzvf - -C ~/.local/bin hugo
 
 # Install Hugo/Go Modules
-hugo mod get
+# Dependency versions repeated here due to: https://github.com/gohugoio/hugo/issues/11857.
+# Once that is resolved, this command can be simplified to just:
+# hugo mod get
+hugo mod get github.com/google/docsy@v0.8.0
 
 # Install NodeJS version from `.nvmrc` file
 . "${NVM_DIR}/nvm.sh" --install
