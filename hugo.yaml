@@ -2,6 +2,7 @@ baseURL: https://rapids.ai/
 languageCode: en-us
 title: RAPIDS | GPU Accelerated Data Science
 enableRobotsTXT: true
+enableGitInfo: true
 
 services:
   googleAnalytics:
@@ -18,6 +19,7 @@ rss_sections:
   - notices
 
 params:
+  github_repo: https://github.com/rapidsai/rapids.ai
   offlineSearch: true
   title: RAPIDS | GPU Accelerated Data Science
   description: Open source GPU accelerated data science libraries
