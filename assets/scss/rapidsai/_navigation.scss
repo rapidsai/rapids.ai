@@ -41,6 +41,7 @@
 .navigation__item {
   color: white;
   position: relative;
+  font-weight: 700;
 
   @include media-breakpoint-up(lg) {
     display: flex;
