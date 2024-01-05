@@ -13,16 +13,9 @@ Some introductory text below the H1 title. Welcome to RAPIDS. Here is our docume
 ## Overview
 This is a docs page!
 
-Yes, it doesn't look great at the moment. We'll need to continue to refactor some styles from the Bulma -> Bootstrap migration.
+We'll need to continue to refactor things.
 
-That won't take long.
-
-When it's done, our documentation pages on rapids.ai will look like this: https://www.docsy.dev/docs/.
-
-Things to fix (non-exhaustive list):
-
-- Element spacing
-- Navbar offset (or potentially keeping the navbar statically placed on doc pages)
+When it's done, the documentation pages on rapids.ai will look like this: https://www.docsy.dev/docs/.
 
 Here's what a list looks like:
 
