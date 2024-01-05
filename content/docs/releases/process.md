@@ -12,12 +12,12 @@ Summary of the RAPIDS release process for major and minor releases.
 
 ### See also
 
-* [Git branching model]({% link resources/git.md %})
-* [Major and minor release versioning]({% link resources/versions.md %})
+* [Git branching model]({{< relref "../maintainers/git.md" >}})
+* [Major and minor release versioning]({{< relref "../maintainers/versions.md" >}})
 
 ## Git branching model
 
-RAPIDS uses a custom git branching model, adapted from git-flow to leverage the tools GitHub provides and also focus on release-driven development. From more details see our guide for our [git branching]({% link resources/git.md %}) methodology. 
+RAPIDS uses a custom git branching model, adapted from git-flow to leverage the tools GitHub provides and also focus on release-driven development. From more details see our guide for our [git branching]({{< relref "../maintainers/git.md" >}}) methodology.
 
 ### Migrating projects
 
@@ -37,7 +37,7 @@ The `burn down date` will always be several days before the `code freeze date` w
 
 ### Hotfixes
 
-Hotfixes have their own process and are described [here]({% link releases/hotfix.md %}).
+Hotfixes have their own process and are described [here]({{< relref "hotfix.md" >}}).
 
 ## Burn down
 
@@ -71,12 +71,12 @@ Operations
 3. Create release `M.C` project board
 4. Notify project leads process is complete
 
-Also see the [Burn down guide]({% link resources/burn-down-guide.md %})
+Also see the [Burn down guide]({{< relref "../maintainers/burn-down-guide.md" >}})
 
 
 ## Code freeze
 
-Code freeze is the process when the release undergoes thorough testing. Pull requests are no longer accepted into the development branch. An exception may be made for [hotfix]({% link releases/hotfix.md %}) issues. All pull requests from Burn Down should be merged before Code Freeze begins or be moved to the next release.
+Code freeze is the process when the release undergoes thorough testing. Pull requests are no longer accepted into the development branch. An exception may be made for [hotfix]({{< relref "hotfix.md" >}}) issues. All pull requests from Burn Down should be merged before Code Freeze begins or be moved to the next release.
 ### Timing
 
 For the selection of a `code freeze date`, the general guidelines should be followed:

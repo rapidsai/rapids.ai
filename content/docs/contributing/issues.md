@@ -1,6 +1,6 @@
 ---
 title: Issues
-linkTitle: Issues 
+linkTitle: Issues
 description: Gateway to the RAPIDS documentation content
 type: docs
 weight: 10
@@ -11,8 +11,8 @@ weight: 10
 Overview of the best practices for creating and updating issues for RAPIDS projects.
 
 ### See also
-- [Contributing Code]({% link contributing/code.md %})
-- [Pull Requests]({% link contributing/prs.md %})
+- [Contributing Code]({{< relref "code.md" >}})
+- [Pull Requests]({{< relref "prs.md" >}})
 
 ## Create an issue
 
@@ -64,7 +64,7 @@ If an issue is blocked due to another issue or pull request do the following:
 
 ## Lifecycle
 
-Issues are either assigned by team leads or picked in priority order. If you are unsure what to work on, follow this [guide]({% link contributing/code.md %}#what-do-i-work-on).
+Issues are either assigned by team leads or picked in priority order. If you are unsure what to work on, follow this [guide]({{< relref "code.md#what-do-i-work-on" >}}).
 
 When you begin work on an issue, update the labels to remove <span class="label" style="background: #bfd4f2; color: #44434d; text-transform: none">1 - On Deck</span> or <span class="label" style="background: #d4c5f9; color: #44434d; text-transform: none">0 - Backlog</span> and add <span class="label" style="background: #fef2c0; color: #44434d; text-transform: none">2 - In Progress</span>.
 

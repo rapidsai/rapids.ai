@@ -37,7 +37,7 @@ The chart below provides an overview of how each workflow file is used.
 | - `branch-*` Merges<br>- Releases | - `build.yaml`                  | ✅               | ❌              | ✅                                      |
 | - Nightlies                       | - `build.yaml`<br>- `test.yaml` | ✅               | ✅              | ✅                                      |
 
-Although release workflows don't run tests, they do go through a week of nightly testing to ensure everything works as expected. See [this page]({% link releases/process.md %}) for more details about the release process.
+Although release workflows don't run tests, they do go through a week of nightly testing to ensure everything works as expected. See [this page]({{< relref "../releases/process.md" >}}) for more details about the release process.
 
 ## How Nightlies Are Triggered
 

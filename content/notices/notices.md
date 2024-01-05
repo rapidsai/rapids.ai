@@ -13,7 +13,7 @@ Notices are our means to communicate and document changes in the project to cont
 {: .fs-6 .fw-300 }
 
 ## Notice Types
-
+<!-- TODO: fix/remove these links once notices are reorganized -->
 Type | Code | Intended Audience | Purpose
 --- | --- | --- | ---
 [RAPIDS Developer Notice]({% link notices/rdn.md %}) | **RDN** | Contributors & Core Developers | Communicate updates to development processes

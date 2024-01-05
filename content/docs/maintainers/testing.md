@@ -16,7 +16,7 @@ Summary of the testing practices used by RAPIDS projects.
 Overall goal, follow the open source ecosystem for infrastructure choices
 
 ### GitHub Actions
-See docs [here]({% link resources/github-actions.md %}).
+See docs [here]({{< relref "../maintainers/github-actions.md" >}}).
 
 ### GitHub
 
@@ -65,7 +65,7 @@ See docs [here]({% link resources/github-actions.md %}).
 
 ## Datasets
 
-- Many tests depend on the presence of specific datasets in order to properly verify code correctness. See [datasets]({% link maintainers/datasets.md %}) for more details.
+- Many tests depend on the presence of specific datasets in order to properly verify code correctness. See [datasets]({{< relref "datasets.md" >}}) for more details.
 
 ## Integration / Workflow Testing and Benchmarking
 

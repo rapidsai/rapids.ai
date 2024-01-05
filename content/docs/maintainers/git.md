@@ -12,9 +12,9 @@ Details on our git branching method used for RAPIDS and our style conventions fo
 
 ### See also
 
-* [Versioning and Tagging]({% link resources/versions.md %})
-* [Hotfix releases]({% link releases/hotfix.md %})
-* [Major and minor releases]({% link releases/process.md %})
+* [Versioning and Tagging]({{< relref "versions.md" >}})
+* [Hotfix releases]({{< relref "hotfix.md" >}})
+* [Major and minor releases]({{< relref "process.md" >}})
 
 ## Git branching
 
@@ -24,7 +24,7 @@ Our development approach involves protecting the `main` branch so that it become
 
 ### Development workflow
 
-All PRs are merged into a release branch named `branch-M.B` where `M` is the major version and `B` is the minor version number. Release branches are created from the previous release branch when the decision has been made to **freeze** the release. 
+All PRs are merged into a release branch named `branch-M.B` where `M` is the major version and `B` is the minor version number. Release branches are created from the previous release branch when the decision has been made to **freeze** the release.
 
 To **freeze** a release branch is to stop new development for the release, and focus on completing outstanding features and any bugs discovered from testing. Once this **freeze** happens a new branch `branch-M.C` (where `C=B+1`) is created so development can continue. Updates to `branch-M.B` can be merged as needed to `branch-M.C`, but generally will wait until the release is finished. This means that `branch-M.X` (where `X` is the highest minor version) the latest and greatest code.
 

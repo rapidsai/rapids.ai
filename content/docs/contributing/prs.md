@@ -1,6 +1,6 @@
 ---
 title: Pull Requests
-linkTitle: PRs 
+linkTitle: PRs
 description: Gateway to the RAPIDS documentation content
 type: docs
 weight: 10
@@ -12,9 +12,9 @@ Overview of creating a pull request for a RAPIDS project.
 
 ### See also
 
-- [Issues]({% link contributing/issues.md %})
-- [Code Contributions]({% link contributing/code.md %})
-- [Changelog]({% link resources/changelog.md %})
+- [Issues]({{< relref "issues.md" >}})
+- [Code Contributions]({{< relref "code.md" >}})
+- [Changelog]({{< relref "../maintainers/changelog.md" >}})
 
 ## Create a pull request
 
@@ -58,7 +58,7 @@ The description should provide any context not found in the issue description.
 
 ### Comments
 
-All pull request comments and reviews must follow the [Code of Conduct]({% link resources/conduct.md %})
+All pull request comments and reviews must follow the [Code of Conduct]({{< relref "../maintainers/conduct.md" >}})
 
 ## Lifecycle
 

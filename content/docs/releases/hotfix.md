@@ -13,8 +13,8 @@ Summary of the RAPIDS release process for hotfixes.
 
 ### See also
 
-* [Hotfix versioning]({% link resources/versions.md %})
-* [Major and minor releases]({% link releases/process.md %})
+* [Hotfix versioning]({{< relref "../maintainers/versions.md" >}})
+* [Major and minor releases]({{< relref "process.md" >}})
 
 ## Hotfixes
 
@@ -63,7 +63,7 @@ Developers
 
 Project Leads
 {: .label .label-blue}
-1. During [triage]({% link releases/triage.md %}), identify potential hotfixes
+1. During [triage]({{< relref "triage.md" >}}), identify potential hotfixes
 2. Ensure that the [hotfix criteria](#criteria) is met
 3. Assign the issue and track its progress
 4. Notify Operations that a hotfix is being worked on

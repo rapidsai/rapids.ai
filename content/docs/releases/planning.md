@@ -13,8 +13,8 @@ Summary of the release planning process used by RAPIDS projects.
 
 ### See also
 
-- [Versions and Tags]({% link resources/versions.md %})
-- [Release Process]({% link releases/process.md %})
+- [Versions and Tags]({{< relref "../maintainers/versions.md" >}})
+- [Release Process]({{< relref "process.md" >}})
 
 ## Planning process
 
@@ -23,7 +23,7 @@ Summary of the release planning process used by RAPIDS projects.
 **NOTE:** The processes below use the current release of `M.A`, the next release of `M.B` and future release `M.C` (where `B=A+1`, `C=B+1`) for examples.
 
 Releases are planned in two phases:
-1. `Fuzzy planning` from [Issue Triage]({% link releases/triage.md %}) which is ongoing.
+1. `Fuzzy planning` from [Issue Triage]({{< relref "triage.md" >}}) which is ongoing.
 2. `Focus planning` which starts when release `M.B` is **frozen**.
 
 ### Release boards
@@ -36,7 +36,7 @@ Each Release board has the following columns:
 
 | Column | Purpose |
 |:-------|:--------|
-| Issue-Needs prioritizing | Issues that have gone through the [Issue Triage]({% link releases/triage.md %}) process and need to be prioritized |
+| Issue-Needs prioritizing | Issues that have gone through the [Issue Triage]({{< relref "triage.md" >}}) process and need to be prioritized |
 | Issue-P0 | Issues that should be worked on first |
 | Issue-P1 | Issues that should be worked on only if all `P0` issues are complete or assigned |
 | Issue-P2 | Issues that should be worked on only if all `P1` issues are complete or assigned |
