@@ -176,9 +176,9 @@
                             target="_blank">advanced install page <i class="fa-solid fa-arrow-up-right"></i></a> </p>
 
                     <h3 class="mt-5 text-white">Requirements</h3>
-                    <p><strong>A.</strong> NVIDIA Volta™ or better GPU with a <a
-                            href="https://developer.nvidia.com/cuda-gpus" target="_blank">compute capability 7.0 and
-                            above <i class="fa-solid fa-arrow-up-right"></i></a></p>
+                    <p><strong>A.</strong> NVIDIA Volta™ or higher GPU with <a
+                            href="https://developer.nvidia.com/cuda-gpus" target="_blank">compute capability 7.0+
+                            <i class="fa-solid fa-arrow-up-right"></i></a></p>
                     <p><strong>B.</strong> Ubuntu 20.04 or 22.04, CentOS 7, Rocky Linux 8, or WSL2 on Windows 11</p>
                     <p><strong>C.</strong> Recent <a href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html"
                             target="_blank"> CUDA version <em>and</em> NVIDIA driver pairs</a>. Check yours with:
@@ -193,7 +193,7 @@ bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
                     <br>
                     <p><strong>2.</strong> Then quick install RAPIDS with:</p>
                     <pre
-                        class="highlight use-white-copy"><code>conda create --solver=libmamba -n rapids-24.02 -c rapidsai -c conda-forge -c nvidia rapids=24.02 python=3.10 cudatoolkit=11.8</code></pre>
+                        class="highlight use-white-copy"><code>conda create --solver=libmamba -n rapids-24.02 -c rapidsai -c conda-forge -c nvidia rapids=24.02 python=3.10 cuda-version=12.0</code></pre>
 
                     <h3 class="mt-6 text-white">Install with pip</h3>
                     <p>Install via the NVIDIA PyPI index:</p>
