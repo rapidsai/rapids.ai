@@ -56,7 +56,7 @@ conda create: error: argument --solver: invalid choice: 'libmamba' (choose from 
 To resolve this error please follow one of these steps:
 - If the Conda installation is version `22.11` or newer, run: `conda install -n base conda-libmamba-solver`
 - If the Conda installation is older than `22.11`, please update your [Conda or Miniconda to the latest version](https://conda.io/projects/conda/en/stable/user-guide/install/index.html){: target="_blank"}
-- Use [Mamba directly](https://mamba.readthedocs.io/en/latest/installation.html){: target="_blank"}
+- Use [Mamba directly](https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html){: target="_blank"}
 - Use the classic solver by removing `--solver=libmamba` from the `conda create` command provided by the selector
 
 <i class="fas fa-info-circle"></i> CUDA 12.0 ARM packages are not yet available:<br/>
@@ -190,9 +190,9 @@ For most installations, you will need a Conda or Docker environments installed f
 
 ## **Conda**
 RAPIDS can use several versions of conda:
-- Full installation with [Anaconda](https://www.anaconda.com/download){: target="_blank"} (with optional faster [libmamba solver](https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community/){: target="_blank"}).
-- Minimal installation with [Miniconda](https://conda.io/miniconda.html){: target="_blank"}
-- Faster environment solving installation with standalone [Mamba](https://mamba.readthedocs.io/en/latest/installation.html){: target="_blank"}.
+- Full installation with [Anaconda](https://www.anaconda.com/download){: target="_blank"} (with optional faster [libmamba solver](https://www.anaconda.com/blog/a-faster-conda-for-a-growing-community/)){: target="_blank"}.
+- Minimal installation with [Miniconda](https://docs.anaconda.com/free/miniconda/){: target="_blank"}
+- Faster environment solving installation with standalone [Mamba](https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html){: target="_blank"}.
 
 Below is a quick installation guide using miniconda.
 
@@ -338,7 +338,7 @@ Windows users can now tap into GPU accelerated data science on their local machi
 1. Install WSL2 and the Ubuntu 22.04 package [using Microsoft's instructions](https://docs.microsoft.com/en-us/windows/wsl/install){: target="_blank"}.
 2. Install the [latest NVIDIA Drivers](https://www.nvidia.com/download/index.aspx){: target="_blank"} on the Windows host.
 3. Log in to the WSL2 Linux instance.
-4. Follow [this helpful developer guide](https://docs.nvidia.com/cuda/wsl-user-guide/index.html#cuda-support-for-wsl2){: target="_blank"} and then install the WSL-specific [CUDA 11.8](https://developer.nvidia.com/cuda-11-8-0-download-archive?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_local){: target="_blank"} or [CUDA 12.0](https://developer.nvidia.com/cuda-12-0-1-download-archive?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_local){: target="_blank"} Toolkit without drivers into the WSL2 instance.
+4. Follow [this helpful developer guide](https://docs.nvidia.com/cuda/wsl-user-guide/index.html#cuda-support-for-wsl-2){: target="_blank"} and then install the WSL-specific [CUDA 11.8](https://developer.nvidia.com/cuda-11-8-0-download-archive?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_local){: target="_blank"} or [CUDA 12.0](https://developer.nvidia.com/cuda-12-0-1-download-archive?target_os=Linux&target_arch=x86_64&Distribution=WSL-Ubuntu&target_version=2.0&target_type=deb_local){: target="_blank"} Toolkit without drivers into the WSL2 instance.
 	- The installed CUDA Toolkit version must match the pip wheel version (`-cu11` or `-cu12`)
 5. Install RAPIDS pip packages on the WSL2 Linux Instance using the [release selector](#selector) commands.
 6. Run this code to check that the RAPIDS installation is working:
@@ -358,6 +358,6 @@ To build from source, check each [RAPIDS GitHub](https://github.com/rapidsai){: 
 <div id="next-steps"></div>
 
 # Next Steps
-After installing the RAPIDS libraries, the best place to get started is our [User Guide](/user-guide). Our [RAPIDS.ai](https://rapids.ai/){: target="_blank"} home page also provides a great deal of information, as does our [Blog Page](https://medium.com/rapids-ai){: target="_blank"} and the [NVIDIA Developer Blog](https://developer.nvidia.com/blog/?search_posts_filter=rapids){: target="_blank"}. We are also always available on our [RAPIDS GoAi Slack Channel]({{ site.social.slack.url }}).
+After installing the RAPIDS libraries, the best place to get started is our [User Guide](/user-guide). Our [RAPIDS.ai](https://rapids.ai/){: target="_blank"} home page also provides a great deal of information, as does our [Blog Page](https://medium.com/rapids-ai){: target="_blank"} and the [NVIDIA Developer Blog](https://developer.nvidia.com/blog/search-posts/?q=rapids){: target="_blank"}. We are also always available on our [RAPIDS GoAi Slack Channel]({{ site.social.slack.url }}).
 
 <br/><br/>
