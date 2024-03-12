@@ -57,14 +57,12 @@ Burn down ends at 11:59 PM PT on the final day of the process.
 **NOTE:** The processes below use the current release of `M.A`, the next release of `M.B` and future release `M.C` (where `B=A+1`, `C=B+1`) for examples.
 
 Project Leads
-{: .label .label-blue}
 
 1. Beginning of the `burn down date` remind development team to stop accepting new issues for the `M.B` release (unless they are critical bugs/issues)
 2. Work to merge existing pull requests targeting `M.B`
 3. Move any pull requests or issues that are no longer a part of the `M.B` release to the `M.C` project board or backlog (for backlog remove the issue from the project board)
 
 Operations
-{: .label .label-purple}
 
 1. Beginning of the `burn down date` announce the burn down of `branch-M.B`
 2. Fork `branch-M.B` into `branch-M.C` for the new development branch
@@ -93,7 +91,6 @@ For example, if Burn down runs from Wednesday Feb 3rd until Tuesday Feb 9th, the
 Generally the process for Code Freeze occurs around 10:00AM PT on the first day of Code Freeze.
 
 Project Leads
-{: .label .label-blue}
 
 1. Move any open pull requests targeting `branch-M.B` to target `branch-M.C` instead
 2. Wait for confirmation from operations on the branch switch
@@ -101,7 +98,6 @@ Project Leads
 4. Respond promptly to operations if any issues are found with the `M.B` release
 
 Operations
-{: .label .label-purple}
 
 1. Beginning of the `code freeze date` announce the code freeze of `branch-M.B`
 2. Switch GitHub default branch of project to `branch-M.C`
@@ -122,7 +118,6 @@ For the selection of a `release date`, the general guidelines should be followed
 **NOTE:** The processes below use the current release of `M.A`, the next release of `M.B` and future release `M.C` (where `B=A+1`, `C=B+1`) for examples.
 
 Project Leads
-{: .label .label-blue}
 
 1. Beginning of the `release date` work with developers to close all outstanding issues and PRs
 2. Assist operations team in testing and verifying documentation in release `M.B` PR
@@ -130,7 +125,6 @@ Project Leads
 4. Help operations team in spot checking the deliverables post-release
 
 Operations
-{: .label .label-purple}
 
 1. Beginning of the `release date` announce the release of `branch-M.B`
 2. Create release PR from `branch-M.B` that targets `main`

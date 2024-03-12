@@ -8,7 +8,6 @@ permalink: visualization
 # RAPIDS Visualization Guide
 
 RAPIDS libraries can easily fit in visualization workflows. This catalog of featured libraries offer direct cuDF support or easy integration.
-{: .fs-6 .fw-300 }
 
 <img src="/assets/images/datashader-census-rapids.png" style="width:870px">
 

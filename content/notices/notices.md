@@ -10,7 +10,6 @@ has_notice_pin_index: true # shows pinned notices at end
 # RAPIDS Notices <a href="{{ 'notices/feed.xml' | absolute_url }}"><i class="fas fa-rss" style="font-size: 1rem"></i></a>
 
 Notices are our means to communicate and document changes in the project to contributors, core developers, users, and the community.
-{: .fs-6 .fw-300 }
 
 ## Notice Types
 <!-- TODO: fix/remove these links once notices are reorganized -->

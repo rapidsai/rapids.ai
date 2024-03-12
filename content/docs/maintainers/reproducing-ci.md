@@ -11,12 +11,6 @@ This page outlines some helpful information about reproducing CI builds and test
 
 At this time, this information only applies to `conda` related builds and tests.
 
-## Table of contents
-{: .no_toc .text-delta }
-
-1. TOC
-{:toc}
-
 ## Reproducing CI Jobs
 
 The GitHub Actions jobs that power RAPIDS CI are simply a collection of shell scripts that are run inside of our [CI containers](https://github.com/rapidsai/ci-imgs).

@@ -8,7 +8,6 @@ description: |
 ---
 
 # RAPIDS Installation Guide
-{: .fs-8 }
 
 RAPIDS has several methods for installation, depending on the preferred environment and version.
 *New Users* should review the system and environment prerequisites.
@@ -133,7 +132,6 @@ All provisioned systems need to be RAPIDS capable. Here's what is required:
 - <i class="fas fa-check-circle"></i> RHEL 7/8 support is provided through CentOS 7 / Rocky Linux 8 builds/installs
 
 <i class="fas fa-download text-purple"></i> **CUDA & NVIDIA Drivers:** One of the following supported versions:
-{: .no-tb-margins }
 
 - <i class="fas fa-check-circle"></i> [CUDA 11.2](https://developer.nvidia.com/cuda-11.2.0-download-archive) with Driver 470.42.01 or newer
 - <i class="fas fa-check-circle"></i> [CUDA 11.4](https://developer.nvidia.com/cuda-11-4-0-download-archive) with Driver 470.42.01 or newer
@@ -161,7 +159,6 @@ All provisioned systems need to be RAPIDS capable. Here's what is required:
 
 ## **System Recommendations**
 Aside from the system requirements, other considerations for best performance include:
-{: .no-tb-margins }
 
 - <i class="fas fa-check-circle"></i> SSD drive (NVMe preferred)
 - <i class="fas fa-check-circle"></i> Approximately **2:1** ratio of system Memory to total GPU Memory (especially useful for Dask)

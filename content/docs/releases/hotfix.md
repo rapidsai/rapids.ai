@@ -51,7 +51,7 @@ Also consider the timing of when the next release is scheduled. If the freeze or
 - Next patch release `M.A.Y` (where `Y=X+1`)
 
 Developers
-{: .label .label-green}
+
 1. Hotfix issues will be assigned to you
 2. Create your branch from the `branch-M.A` branch
 3. Implement the fix succinctly
@@ -62,7 +62,7 @@ Developers
 5. Notify the project lead
 
 Project Leads
-{: .label .label-blue}
+
 1. During [triage]({{< relref "triage.md" >}}), identify potential hotfixes
 2. Ensure that the [hotfix criteria](#criteria) is met
 3. Assign the issue and track its progress
@@ -71,7 +71,7 @@ Project Leads
 6. Notify Operations that the hotfix pull request is ready for merging
 
 Operations
-{: .label .label-purple}
+
 1. Once notified by a Project Lead, review the pull request
 2. Begin testing of conda and containers for correctness and functionality
 3. Review documentation to ensure version numbers (updating to `M.A.Y`) and instructions are correct

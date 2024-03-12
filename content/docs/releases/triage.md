@@ -83,7 +83,6 @@ Each tracking board type has a filter that can be used on when using the `Add ca
 ### Initial triage
 
 Project Leads - Daily
-{: .label .label-blue}
 
 1. Ensure the issue type is correct, i.e. is the issue really a bug or is it a feature request?
 2. Review the content of the issue, has the filer provided all of the needed information for that issue type? If not, ask for clarification.
@@ -99,14 +98,12 @@ Once issues have been triaged, we can prioritize and schedule them for a release
 **IMPORTANT:** By leveraging the tracking boards for issues, project leads can _schedule_ issues by placing them in the appropriate column and then _prioritize_ issues by dragging & sorting the issues from highest priority at the top of the column to lowest at the bottom.
 
 Project Leads - Daily
-{: .label .label-blue}
 
 1. For each issue in the `Needs prioritizing` column, review the issue and prioritize it.
 2. For issues added to `Hotfix` and  `Next release` columns follow the steps below.
 3. Repeat this process for all 3 tracking boards.
 
 Project Leads - Weekly
-{: .label .label-blue}
 
 1. Archvie all issues in the `Closed` column.
 2. Review all issues in each column of `Next release`, `Future release`, and `Backlog` to make sure issues are still scheduled appropriately.

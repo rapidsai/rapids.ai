@@ -65,7 +65,6 @@ During `Fuzzy planning` issues are triaged and scheduled in their respective tra
 Once a **freeze** has occurred for the release that is a WIP (i.e. release `M.B`), then planning for release `M.C` will start.
 
 Project Leads
-{: .label .label-blue}
 
 1. Review all issues in the current WIP release `M.B` and find issues that will slip.
 2. Move issues that will not make the release `M.B` to the release board for `M.C`.
