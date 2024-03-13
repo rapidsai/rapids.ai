@@ -324,13 +324,13 @@ print(cudf.Series([1, 2, 3]))
 <div id="source"></div>
 
 ### **Build from Source**
-To build from source, check each [RAPIDS GitHub](https://github.com/rapidsai) README, such as the [cuDF's](https://github.com/rapidsai/cudf#buildinstall-from-source) source environment set up and build instructions. Further links are provided in the [selector tool](#selector). If additional help is needed reach out on our [Slack Channel]({{ site.social.slack.url }}).
+To build from source, check each [RAPIDS GitHub](https://github.com/rapidsai) README, such as the [cuDF's](https://github.com/rapidsai/cudf#buildinstall-from-source) source environment set up and build instructions. Further links are provided in the [selector tool](#selector). If additional help is needed reach out on our [Slack Channel](/slack-invite).
 
 
 <hr/>
 <div id="next-steps"></div>
 
 ## Next Steps
-After installing the RAPIDS libraries, the best place to get started is our [User Guide](/user-guide). Our [RAPIDS.ai](https://rapids.ai/) home page also provides a great deal of information, as does our [Blog Page](https://medium.com/rapids-ai) and the [NVIDIA Developer Blog](https://developer.nvidia.com/blog/?search_posts_filter=rapids). We are also always available on our [RAPIDS GoAi Slack Channel]({{ site.social.slack.url }}).
+After installing the RAPIDS libraries, the best place to get started is our [User Guide](/user-guide). Our [RAPIDS.ai](https://rapids.ai/) home page also provides a great deal of information, as does our [Blog Page](https://medium.com/rapids-ai) and the [NVIDIA Developer Blog](https://developer.nvidia.com/blog/?search_posts_filter=rapids). We are also always available on our [RAPIDS GoAi Slack Channel](/slack-invite).
 
 <br/><br/>
