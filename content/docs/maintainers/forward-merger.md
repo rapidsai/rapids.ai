@@ -23,7 +23,7 @@ It is important to note that the forward-merge jobs will sometimes fail due to m
 
 Using the example of `branch-{{< rapids_version "stable" >}}` release branch and a new default `branch-{{< rapids_version "nightly" >}}`.
 
-```
+```sh
 git checkout branch-{{< rapids_version "stable" >}}
 git pull <rapidsai remote>
 git checkout branch-{{< rapids_version "nightly" >}}
