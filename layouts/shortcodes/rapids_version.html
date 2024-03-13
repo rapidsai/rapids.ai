@@ -1,5 +1,1 @@
-{{- if ne (.Get 0) nil -}}
-{{- (index $.Site.Data.releases (.Get 0)).version -}}
-{{- else -}}
-{{- $.Site.Data.releases.stable.version -}}
-{{- end -}}
+{{- partial "rapids_version.html" (.Get 0) -}}
