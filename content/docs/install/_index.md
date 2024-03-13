@@ -16,7 +16,7 @@ RAPIDS has several methods for installation, depending on the preferred environm
 ## Install RAPIDS
 Use the selector tool below to select your preferred method, packages, and environment to install RAPIDS. Certain combinations may not be possible and are dimmed automatically.
 
-{% include selector.html %}
+{{< selector >}}
 
 <br/>
 <div id="troubleshooting"></div>

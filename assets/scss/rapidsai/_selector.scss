@@ -1,0 +1,137 @@
+.selector {
+  background-color: #9943ff;
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.selector__options-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.selector__options-container--narrow {
+  width: 97%;
+  margin: 0 auto;
+}
+
+.selector__option-label,
+.selector__cmd-label {
+  color: white;
+  width: 6em;
+  text-transform: uppercase;
+  font-weight: 600;
+  margin-top: 0.6em;
+  margin-right: 0.6em;
+  text-align: right;
+}
+
+.selector__option {
+  background: #e3e3e3;
+  color: #3c3c3c;
+  flex: 1 1;
+  margin: 0.2em;
+  padding: 0.3em;
+  cursor: pointer;
+  line-height: 1.5em;
+  box-shadow: 2px 2px 2px rgba(10, 10, 10, 0.4);
+  border-radius: 2px;
+}
+
+.selector__option.active {
+  background: #36c9dd;
+  font-weight: 600;
+  color: #424242;
+}
+
+.selector__option.disabled {
+  background: #a785e7 !important;
+  color: #706880;
+  cursor: not-allowed;
+  user-select: none;
+}
+
+.selector__option:hover,
+.selector__option.active:hover,
+.selector__copy-btn:hover {
+  background: #ffb500;
+  box-shadow: 1px 1px 0px rgba(10, 10, 10, 0.7);
+  transition: background-color 0.3s ease-in-out;
+  transition: box-shadow 0.1s ease-in-out;
+}
+
+.selector__note code {
+  background: #e3e3e3;
+  color: #000000;
+  padding: 0.08em 0.15em;
+  border-radius: 4px;
+}
+
+.selector__note-container {
+  color: white;
+  flex: 1 1;
+  margin: 0.2em;
+  padding: 0.3em;
+  line-height: 1.5em;
+  padding: 0 1em;
+  text-align: center;
+}
+
+.selector__note {
+  margin-top: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.selector__cmd-container {
+  display: flex;
+  margin-top: 2rem;
+}
+
+.selector__cmd-bg {
+  cursor: text;
+  overflow: auto;
+  width: calc(100% - 6em);
+  border-radius: 4px;
+}
+
+.selector__copy-btn {
+  background: #e3e3e3;
+  border-radius: 0.3rem;
+  color: #3c3c3c;
+  flex: 1 1;
+  margin: 0.5em;
+  padding: 0.6em;
+  cursor: pointer;
+  line-height: 1.5em;
+  box-shadow: 2px 2px 2px rgba(10, 10, 10, 0.4);
+}
+
+.selector__copy-container {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.selector__copy-btn {
+  margin: 0 1em;
+}
+
+.selector__cmd {
+  padding: 0.75rem;
+  margin: 0;
+  -webkit-overflow-scrolling: touch;
+  background-color: #f5f6fa;
+}
+
+.selector__cmd code {
+  padding: 0;
+  border: 0;
+}
+
+.selector__cmd .nb {
+  color: #920b60;
+}
+
+.selector__cmd .nt,
+.selector__cmd .nv {
+  color: #268bd2;
+}
