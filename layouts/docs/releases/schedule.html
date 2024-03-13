@@ -1,0 +1,116 @@
+{{- define "main" -}}
+{{ range $ind, $rel := $.Site.Data.releases }}
+<div>
+  <h2>
+    Release {{ .version }} Schedule
+  </h2>
+</div>
+
+<table class="table table-striped table-sm mb-6">
+{{ if isset $rel "dev" }}
+<thead>
+  <tr>
+    <th scope="col">Phase</th>
+    <th scope="col">Start</th>
+    <th scope="col">End</th>
+    <th scope="col">Duration</th>
+  </tr>
+</thead>
+<tbody class="table-group-divider">
+  <tr>
+    <th scope="row">Development</th>
+    <td>{{ time.Format "Mon, Jan 2, 2006" (time.AsTime $rel.dev.start) }}</td>
+    <td>{{ time.Format "Mon, Jan 2, 2006" (time.AsTime $rel.dev.end) }}</td>
+    <td>{{ $rel.dev.days }} days</td>
+  </tr>
+  <tr>
+    <th><a href="/docs/releases/process/#burn-down">Burn Down</a>
+    <td>{{ time.Format "Mon, Jan 2, 2006" (time.AsTime $rel.burndown.start) }}</td>
+    <td>{{ time.Format "Mon, Jan 2, 2006" (time.AsTime $rel.burndown.end) }}</td>
+    <td>{{ $rel.burndown.days }} days</td>
+  </tr>
+  <tr>
+    <th><a href="/docs/releases/process/#code-freeze">Code Freeze/Testing</a>
+    <td>{{ time.Format "Mon, Jan 2, 2006" (time.AsTime $rel.codefreeze.start) }}</td>
+    <td>{{ time.Format "Mon, Jan 2, 2006" (time.AsTime $rel.codefreeze.end) }}</td>
+    <td>{{ $rel.codefreeze.days }} days</td>
+  </tr>
+  <tr>
+    <th scope="row">Release</th>
+    <td>{{ time.Format "Mon, Jan 2, 2006" (time.AsTime $rel.release.start) }}</td>
+    <td>{{ time.Format "Mon, Jan 2, 2006" (time.AsTime $rel.release.end) }}</td>
+    <td>{{ $rel.release.days }} days</td>
+  </tr>
+</tbody>
+{{ else}}
+{{ if isset $rel "date" }}
+<thead>
+  <tr>
+    <th scope="col">Phase</th>
+    <th scope="col">Date</th>
+  </tr>
+</thead>
+<tbody class="table-group-divider">
+  <tr>
+    <th scope="row">Release</th>
+    <td>{{ time.Format "Mon, Jan 2, 2006" (time.AsTime $rel.date) }}</td>
+  </tr>
+</tbody>
+{{ else }}
+<thead>
+  <tr>
+    <th scope="col">Phase</th>
+    <th scope="col">Start</th>
+    <th scope="col">End</th>
+    <th scope="col">Duration</th>
+  </tr>
+</thead>
+<tbody class="table-group-divider">
+  <tr>
+    <th scope="row">Development (cuDF/RMM{{ if ge $rel.version "23.06" }}/rapids-cmake/cugraph-ops/raft{{ end }})</th>
+    <td>{{ time.Format "Mon, Jan 2, 2006" (time.AsTime $rel.cudf_dev.start) }}</td>
+    <td>{{ time.Format "Mon, Jan 2, 2006" (time.AsTime $rel.cudf_dev.end) }}</td>
+    <td>{{ $rel.cudf_dev.days }} days</td>
+  </tr>
+  <tr>
+    <th>Development (others)</th>
+    <td>{{ time.Format "Mon, Jan 2, 2006" (time.AsTime $rel.other_dev.start) }}</td>
+    <td>{{ time.Format "Mon, Jan 2, 2006" (time.AsTime $rel.other_dev.end) }}</td>
+    <td>{{ $rel.other_dev.days }} days</td>
+  </tr>
+  <tr>
+    <th><a href="/docs/releases/process/#burn-down">Burn Down</a> (cuDF/RMM{{ if ge $rel.version "23.06" }}/rapids-cmake/cugraph-ops/raft{{ end }})</th>
+    <td>{{ time.Format "Mon, Jan 2, 2006" (time.AsTime $rel.cudf_burndown.start) }}</td>
+    <td>{{ time.Format "Mon, Jan 2, 2006" (time.AsTime $rel.cudf_burndown.end) }}</td>
+    <td>{{ $rel.cudf_burndown.days }} days</td>
+  </tr>
+  <tr>
+    <th><a href="/docs/releases/process/#burn-down">Burn Down</a> (others)</th>
+    <td>{{ time.Format "Mon, Jan 2, 2006" (time.AsTime $rel.other_burndown.start) }}</td>
+    <td>{{ time.Format "Mon, Jan 2, 2006" (time.AsTime $rel.other_burndown.end) }}</td>
+    <td>{{ $rel.other_burndown.days }} days</td>
+  </tr>
+  <tr>
+    <th><a href="/docs/releases/process/#code-freeze">Code Freeze/Testing</a> (cuDF/RMM{{ if ge $rel.version "23.06" }}/rapids-cmake/cugraph-ops/raft{{ end }})</th>
+    <td>{{ time.Format "Mon, Jan 2, 2006" (time.AsTime $rel.cudf_codefreeze.start) }}</td>
+    <td>{{ time.Format "Mon, Jan 2, 2006" (time.AsTime $rel.cudf_codefreeze.end) }}</td>
+    <td>{{ $rel.cudf_codefreeze.days }} days</td>
+  </tr>
+  <tr>
+    <th><a href="/docs/releases/process/#code-freeze">Code Freeze/Testing</a> (others)</th>
+    <td>{{ time.Format "Mon, Jan 2, 2006" (time.AsTime $rel.other_codefreeze.start) }}</td>
+    <td>{{ time.Format "Mon, Jan 2, 2006" (time.AsTime $rel.other_codefreeze.end) }}</td>
+    <td>{{ $rel.other_codefreeze.days }} days</td>
+  </tr>
+  <tr>
+    <th>Release</th>
+    <td>{{ time.Format "Mon, Jan 2, 2006" (time.AsTime $rel.release.start) }}</td>
+    <td>{{ time.Format "Mon, Jan 2, 2006" (time.AsTime $rel.release.end) }}</td>
+    <td>{{ $rel.release.days }} days</td>
+  </tr>
+</tbody>
+{{ end }}
+{{ end }}
+</table>
+{{ end }}
+{{ end }}

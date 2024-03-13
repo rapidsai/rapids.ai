@@ -1,6 +1,5 @@
 ---
-title: Release Docs
-linkTitle: Release Docs
+title: Releases
 description: Gateway to the RAPIDS documentation content
 type: docs
 weight: 1
