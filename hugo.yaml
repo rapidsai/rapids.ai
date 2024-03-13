@@ -18,6 +18,11 @@ sitemap:
 rss_sections:
   - notices
 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
 params:
   github_repo: https://github.com/rapidsai/rapids.ai
   offlineSearch: true
