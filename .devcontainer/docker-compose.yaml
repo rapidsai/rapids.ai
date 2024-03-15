@@ -1,0 +1,10 @@
+version: '3.3'
+
+services:
+  devcontainer:
+    build:
+      context: .
+      dockerfile: devcontainer.Dockerfile
+    volumes:
+        - ..:/workspace/rapids.ai
+    command: /bin/sh -c "while sleep 1000; do :; done"
