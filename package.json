@@ -1,7 +1,11 @@
 {
+  "scripts": {
+    "vercel-build": "./vercel.sh"
+  },
   "devDependencies": {
-    "autoprefixer":"^10.4.16",
-    "postcss":"^8.4.31",
-    "postcss-cli":"^11.0.0"
+    "@vercel/routing-utils": "^3.1.0",
+    "autoprefixer": "^10.4.16",
+    "postcss": "^8.4.31",
+    "postcss-cli": "^11.0.0"
   }
 }
