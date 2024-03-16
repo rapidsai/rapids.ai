@@ -2,7 +2,7 @@
 title: API Docs
 linkTitle: API Documentation
 description: Gateway to the RAPIDS documentation content
-permalink: overview
+layout: api
 type: docs
 weight: 1
 ---
@@ -20,3 +20,12 @@ select the docs that fit your needs.
   <dd>Previous release docs; available for reference.</dd>
 </dl>
 
+<hr>
+
+## CHECK IT OUT!!!
+
+This is a demo of the proxied documentation for each library.
+
+Current `legacy`, `stable`, `nightly` docs are all available through convenient URLs (e.g. [/docs/cudf/legacy/](/docs/cudf/legacy/)).
+
+Any old documentation versions in our S3 bucket are also available via permanent versioned links (e.g. [/docs/cudf/23.02/](/docs/cudf/23.02/)).

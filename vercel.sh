@@ -44,11 +44,14 @@ build() {
   echo "printing env..."
   env | sort
 
+  echo "clean output directories..."
+  rm -rf ./.vercel/output ./public
+
   echo "building..."
   # TODO: disable draft building
   hugo --gc --minify --buildDrafts
   mkdir -p .vercel/output/
-  node scripts/generate-vercel-config.mjs > .vercel/output/config.json
+  node scripts/vercel/config.mjs > .vercel/output/config.json
   cp -r public .vercel/output/static
 }
 

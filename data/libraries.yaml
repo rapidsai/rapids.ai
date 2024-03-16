@@ -1,0 +1,228 @@
+# apis
+
+- name: cuDF
+  github_url: https://github.com/rapidsai/cudf
+  changelog_url: https://github.com/rapidsai/cudf/blob/main/CHANGELOG.md
+  type: api
+  versions: ["legacy", "stable", "nightly"]
+  description: >-
+    cuDF is a Python GPU DataFrame library (built on the [Apache
+    Arrow](http://arrow.apache.org/) columnar memory format) for loading,
+    joining, aggregating, filtering, and otherwise manipulating data.
+
+- name: dask-cuDF
+  github_url: https://github.com/rapidsai/cudf
+  changelog_url: https://github.com/rapidsai/cudf/blob/main/CHANGELOG.md
+  type: api
+  versions: ["legacy", "stable", "nightly"]
+  description: >-
+    Dask-cuDF extends Dask where necessary to allow its DataFrame partitions to
+    be processed using cuDF GPU DataFrames instead of Pandas DataFrames.
+    Dask-cuDF is used to leverage multiple gpus and multiple nodes for more
+    performance at larger scales.
+
+- name: cuML
+  github_url: https://github.com/rapidsai/cuml
+  changelog_url: https://github.com/rapidsai/cuml/blob/main/CHANGELOG.md
+  type: api
+  versions: ["legacy", "stable", "nightly"]
+  description: >-
+    cuML is a suite of libraries that implement machine learning algorithms and
+    mathematical primitives functions that share compatible APIs with other
+    RAPIDS projects.
+
+- name: cuGraph
+  github_url: https://github.com/rapidsai/cugraph
+  changelog_url: https://github.com/rapidsai/cugraph/blob/main/CHANGELOG.md
+  type: api
+  versions: ["legacy", "stable", "nightly"]
+  description: >-
+    cuGraph is a GPU accelerated graph analytics library, with functionality
+    like NetworkX, which is seamlessly integrated into the RAPIDS data science
+    platform. cuGraph supports GNNs with PyG, DGL packages and cugraph-ops (for
+    low level optimized operations) as well as cugraph-service for analytics on
+    a remote graph and WHOLEGRAPH for memory management.
+
+- name: cuxfilter
+  github_url: https://github.com/rapidsai/cuxfilter
+  changelog_url: https://github.com/rapidsai/cuxfilter/blob/main/CHANGELOG.md
+  type: api
+  versions: ["legacy", "stable", "nightly"]
+  description: >-
+    cuxfilter acts as a connector library, which provides the connections
+    between different visualization libraries and a GPU dataframe without much
+    hassle. This also allows the user to use charts from different libraries in
+    a single dashboard, while also providing the interaction.
+
+- name: cuSpatial
+  github_url: https://github.com/rapidsai/cuspatial
+  changelog_url: https://github.com/rapidsai/cuspatial/blob/main/CHANGELOG.md
+  type: api
+  versions: ["legacy", "stable", "nightly"]
+  description: >-
+    cuSpatial is a GPU-accelerated vector GIS library including binary
+    predicates (DE-9IM), point-in-polygon, spatial join, distances, and
+    trajectory analysis.
+
+- name: cuProj
+  github_url: https://github.com/rapidsai/cuspatial/tree/main/python/cuproj
+  changelog_url: https://github.com/rapidsai/cuspatial/blob/main/CHANGELOG.md # cuProj is housed within cuSpatial so updates remain in the cuSpatial changelog
+  type: api
+  versions: ["legacy", "stable", "nightly"]
+  description: >-
+    cuProj is a GPU-accelerated geographic and geodetic coordinate
+    transformation library which supports projecting coordinates between
+    coordinate reference systems (CRSes), compatible with PyProj.
+
+- name: cuSignal
+  github_url: https://github.com/cupy/cupy
+  changelog_url: https://docs.cupy.dev/en/latest/reference/scipy_signal.html
+  type: api
+  versions: []
+  description: >-
+    cuSignal functionality has been moved to CuPy. Please see the CuPy
+    documentation for more information.
+
+- name: cuDF-Java
+  github_url: https://github.com/rapidsai/cudf/tree/main/java
+  changelog_url: https://github.com/rapidsai/cudf/blob/main/CHANGELOG.md
+  type: api
+  versions: ["legacy", "stable"]
+  description: >-
+    Java bindings for the cuDF library.
+
+- name: cuCIM
+  github_url: https://github.com/rapidsai/cucim
+  changelog_url: https://github.com/rapidsai/cucim/blob/main/CHANGELOG.md
+  type: api
+  versions: ["legacy", "stable", "nightly"]
+  description: >-
+    The RAPIDS cuCIM is an extensible toolkit designed to provide GPU
+    accelerated I/O, computer vision & image processing primitives for
+    N-Dimensional images with a focus on biomedical imaging.
+
+- name: cuVS
+  github_url: https://github.com/rapidsai/cuvs
+  changelog_url: https://github.com/rapidsai/cuvs/blob/main/CHANGELOG.md
+  type: api
+  versions: ["nightly"]
+  description: >-
+    cuVS is a library for GPU-accelerated vector search and clustering.
+
+- name: KvikIO
+  github_url: https://github.com/rapidsai/kvikio
+  changelog_url: https://github.com/rapidsai/kvikio/blob/main/CHANGELOG.md
+  type: api
+  versions: ["legacy", "stable", "nightly"]
+  description: >-
+    KvikIO is a Python and C++ library for high performance file IO using
+    GPUDirect Storage (GDS).
+
+- name: RAFT
+  github_url: https://github.com/rapidsai/raft
+  changelog_url: https://github.com/rapidsai/raft/blob/main/CHANGELOG.md
+  type: api
+  versions: ["legacy", "stable", "nightly"]
+  description: >-
+    RAFT contains fundamental widely-used algorithms and primitives for vector
+    search, machine learning, and information retrieval.
+
+- name: Dask-CUDA
+  github_url: https://github.com/rapidsai/dask-cuda
+  changelog_url: https://github.com/rapidsai/dask-cuda/blob/main/CHANGELOG.md
+  type: api
+  versions: ["legacy", "stable", "nightly"]
+  description: >-
+    Various utilities to improve deployment and management of Dask workers on
+    CUDA-enabled systems.
+
+- name: RMM
+  github_url: https://github.com/rapidsai/rmm
+  changelog_url: https://github.com/rapidsai/rmm/blob/main/CHANGELOG.md
+  type: api
+  versions: ["legacy", "stable", "nightly"]
+  description: >-
+    RAPIDS Memory Manager (RMM) is a central place for all device memory
+    allocations in cuDF (C++ and Python) and other RAPIDS libraries. In
+    addition, it is a replacement allocator for CUDA Device Memory (and CUDA
+    Managed Memory) and a pool allocator to make CUDA device memory allocation /
+    deallocation faster and asynchronous.
+
+# libraries
+
+- name: libcudf
+  github_url: https://github.com/rapidsai/cudf
+  changelog_url: https://github.com/rapidsai/cudf/blob/main/CHANGELOG.md
+  type: library
+  versions: ["legacy", "stable", "nightly"]
+  description: >-
+    libcudf is a C/C++ CUDA library for implementing standard dataframe
+    operations.
+
+- name: libcuspatial
+  github_url: https://github.com/rapidsai/cuspatial
+  changelog_url: https://github.com/rapidsai/cuspatial/blob/main/CHANGELOG.md
+  type: library
+  versions: ["legacy", "stable", "nightly"]
+  description: >-
+    libcuspatial is a GPU-accelerated header-only C++ vector GIS library
+    including binary predicates (DE-9IM), point-in-polygon, spatial join,
+    distances, and trajectory analysis.
+
+- name: libcuproj
+  github_url: https://github.com/rapidsai/cuspatial/tree/main/cpp/cuproj
+  changelog_url: https://github.com/rapidsai/cuspatial/blob/main/CHANGELOG.md # Shares a changelog with cuSpatial
+  type: library
+  versions: ["stable", "nightly"]
+  description: >-
+    libcuproj is a C++ header-only library for GPU-accelerated geographic and
+    geodetic coordinate transformation library which supports projecting
+    coordinates between coordinate reference systems (CRSes), similar to PROJ.
+
+- name: libcuml
+  github_url: https://github.com/rapidsai/cuml
+  changelog_url: https://github.com/rapidsai/cuml/blob/main/CHANGELOG.md
+  type: library
+  versions: ["legacy", "stable", "nightly"]
+  description: >-
+    libcuml is a C/C++ CUDA library for cuML.
+
+- name: librmm
+  github_url: https://github.com/rapidsai/rmm
+  changelog_url: https://github.com/rapidsai/rmm/blob/main/CHANGELOG.md
+  type: library
+  versions: ["legacy"]
+  description: >-
+    RAPIDS Memory Manager (RMM) is a central place for all device memory
+    allocations in cuDF (C++ and Python) and other RAPIDS libraries. In
+    addition, it is a replacement allocator for CUDA Device Memory (and CUDA
+    Managed Memory) and a pool allocator to make CUDA device memory allocation /
+    deallocation faster and asynchronous.
+
+- name: libkvikio
+  github_url: https://github.com/rapidsai/kvikio
+  changelog_url: https://github.com/rapidsai/kvikio/blob/main/CHANGELOG.md
+  type: library
+  versions: ["legacy", "stable", "nightly"]
+  description: >-
+    libkvikio is a C++ header-only library providing bindings to cuFile, which
+    enables GPUDirect Storage (GDS).
+
+- name: libucxx
+  github_url: https://github.com/rapidsai/ucxx
+  changelog_url: null # there is no changelog for UCXX
+  type: library
+  versions: ["nightly"]
+  description: >-
+    UCXX is an object-oriented C++ interface for UCX, with native support for
+    Python bindings.
+
+- name: rapids-cmake
+  github_url: https://github.com/rapidsai/rapids-cmake
+  changelog_url: https://github.com/rapidsai/rapids-cmake/blob/main/CHANGELOG.md
+  type: library
+  versions: ["legacy", "stable", "nightly"]
+  description: >-
+    This is a collection of CMake modules that are useful for all CUDA RAPIDS
+    projects. By sharing the code in a single place it makes rolling out CMake
+    fixes easier.
