@@ -12,38 +12,35 @@
   <div class="col">
     <div class="container">
 
-      <h1 class="text-center mb-10"> RAPIDS cuVS <br> Accelerated Vector Search and Clustering</h1>
-      
+      <h1 class="text-center mb-4">cuVS Accelerated Vector Search and Clustering</h1>
+      <p class="subheading mb-10">Vector search underpins many data mining and artificial intelligence applications, requiring efficient handling of massive workloads. <br> Building on low-level CUDA primitives, the RAPIDS cuVS library contains optimized algorithms for approximate nearest neighbors and clustering, along with many other essential tools for accelerated vector search.</p>
+
         <div class="row">
-          <div class="col-md-6 py-3">
-            <p>Vector search underpins many data mining and artificial intelligence applications, requiring efficient handling of massive workloads.</p>
-            <p>Building on low-level CUDA primitives, the RAPIDS cuVS library contains optimized algorithms for approximate nearest neighbors and clustering, along with many other essential tools for accelerated vector search.</p>
+          <div class="col-md-4 py-3">
+            <h2><i class="fa-light fa-gauge-high"></i> Improved Performance</h2>
+            <p >cuVS provides higher throughput and lower latency for efficient index building and searching large vector spaces. This results in significantly reduced inference time and cost compared to traditional CPU-based solutions.</p>
+
+            <br>
+
+            <h2 class="mt-5"><i class="fa-light fa-layer-plus"></i> Flexible Integration</h2>
+            <p>cuVS supports multiple languages including C, C++, Python, and Rust, making it easy to integrate into vectorized data applications. Additionally, cuVS provides interoperability between CPU and GPU, enabling index building on a GPU and searching on a CPU. </p>
+
           </div>
-          <div class="col-md-6 py-3">
+          <div class="col-md-4 py-3">
+            <h2><i class="fa-light fa-function"></i> Advanced Algorithms</h2>
+            <p>cuVS includes advanced algorithms for approximate nearest neighbor search that are performance-tuned for the latest compute architectures.</p>
+
+            <br>
+
+            <h2 class="mt-5"><i class="fa-light fa-cubes"></i> Scalability </h2>
+            <p>cuVS enables databases to scale up and out for processing massive-scale vector search and clustering workloads with GPU acceleration.</p>
+
+          </div>
+          <div class="col-md-4 py-3">
             {{ with .Resources.GetMatch "cuVS-arch.png" }}
             <img src="{{ .RelPermalink }}">
             {{ end }}
           </div>
-      </div>
-
-      <div class="row">
-        <div class="col-md-3 py-3">
-          <h2><i class="fa-light fa-gauge-high"></i> Improved Performance</h2>
-          <p>cuVS provides higher throughput and lower latency for efficient index building and searching large vector spaces. This results in significantly reduced inference time and cost compared to traditional CPU-based solutions.</p>
-        </div>
-        <div class="col-md-3 py-3">
-          <h2><i class="fa-light fa-gauge-high"></i> Flexible Integration</h2>
-          <p>cuVS supports multiple languages including C, C++, Python, and Rust, making it easy to integrate into vectorized data applications. Additionally, cuVS provides interoperability between CPU and GPU, enabling index building on a GPU and searching on a CPU. </p>
-        </div>
-        <div class="col-md-3 py-3">
-          <h2><i class="fa-light fa-gauge-high"></i> State-of-the-Art Algorithms</h2>
-          <p>cuVS includes advanced algorithms for approximate nearest neighbor search that are performance-tuned for the latest compute architectures.
-          </p>
-        </div>
-        <div class="col-md-3 py-3">
-          <h2><i class="fa-light fa-gauge-high"></i> Scalability </h2>
-          <p>cuVS enables databases to scale up and out for processing massive-scale vector search and clustering workloads with GPU acceleration.</p>
-        </div>
       </div>
 
     </div>
@@ -54,17 +51,12 @@
   <div class="bottom-slant-down bg-white"></div>
 </div>
 
-
 <section class="row section padding-top-slant padding-bottom-slant">
   <div class="col">
     <div class="container">
 
       <h1 class="mb-4"> World's Fastest Vector Search</h1>
-      <div class="row">
-        <div class="col-md-12 py-3">
-          Leveraging cuVS library, vector search operations achieve unmatched speed by delivering better index build times, higher throughput, and lower latency at every level of recall. cuVS exploits the parallel architecture of NVIDIA GPUs, allowing for deployment of complex algorithms like IVF-PQ, IVF-flat, and <a href="https://arxiv.org/abs/2308.15136" target="_blank"> CAGRA</a>. GPU-acceleration of vector similarity <a href="https://proceedings.mlr.press/v176/simhadri22a/simhadri22a.pdf" target="_blank"> search sets benchmark records for large-scale</a>, high-performance solutions.
-        </div>
-      </div>
+      <p class="subheading mb-5">Leveraging cuVS library, vector search operations achieve unmatched speed by delivering better index build times, higher throughput, and lower latency at every level of recall. cuVS exploits the parallel architecture of NVIDIA GPUs, allowing for deployment of complex algorithms like IVF-PQ, IVF-flat, and <a href="https://arxiv.org/abs/2308.15136" target="_blank"> CAGRA</a>. GPU-acceleration of vector similarity <a href="https://proceedings.mlr.press/v176/simhadri22a/simhadri22a.pdf" target="_blank"> search sets benchmark records for large-scale</a>, high-performance solutions.</p>
 
       <div class="row">
         <div class="col-md-6 py-3">
@@ -79,22 +71,21 @@
         </div>
       </div>
 
-      <h1 class="mt-10 mb-4"> Empowering Vector Databases with <br> Fastest Information Retrieval</h1>
-      <div class="row">
-        <div class="col-md-12 py-3">
-          NVIDIA integrates cuVS into vector search and database technologies like Faiss, Milvus, and Kinetica, delivering unparalleled speed and efficiency in information retrieval. Learn how to accelerate your vector database in the <a href="https://docs.rapids.ai/api/cuvs/nightly/getting_started/" target="_blank"> cuVS Getting Started Guide</a>.
-        </div>
+      <br><br>
 
-        <!-- TO DO ADD partners -->
-        {{ $row1 := slice "anaconda" "capital-one" "chainer" "cupy" "deepwave-digital" }}
-        {{ $row2 := slice  "gunrock" "nvidia" "quansight" "walmart" }}
+      <h1 class="mt-10 mb-4"> Empowering Vector Databases <br> with the Fastest Retrieval</h1>
+      <p class="subheading mb-5">NVIDIA integrates cuVS into vector search and database technologies like Faiss, Milvus, and Kinetica, delivering unparalleled speed and efficiency in information retrieval. Learn how to accelerate your vector database in the <a href="https://docs.rapids.ai/api/cuvs/nightly/getting_started/" target="_blank"> cuVS Getting Started Guide</a>.</p>
+
+      <div class="row">
+        {{ $row1 := slice "apache-lucene" "datastax" "faiss" "kinetica"}}
+        {{ $row2 := slice  "milvus" "opensearch" "redis" "weaviate"}}
         {{ $rows := slice $row1 $row2 }}
 
         {{ range $rows }}
         <div class="d-flex flex-wrap justify-content-between">
             {{ range . }}
             {{ with site.GetPage (printf "_partners/%s" . ) }}
-              {{ $resized_image := (.Resources.Get "logo.png").Resize "100x" }}
+              {{ $resized_image := (.Resources.Get "logo.png").Resize "200x" }}
               <a target="_blank" href="{{ .Params.github_org_url | default .Params.homepage_url }}">
                   <img src="{{ $resized_image.RelPermalink }}" alt ="{{ .Params.name }} Logo">
               </a>
@@ -103,38 +94,55 @@
         </div>
         {{ end }}
       </div>
+    
+      </div>
+    </div>
+</section>
+
+
+<div class="top-slant-container">
+  <div class="top-slant-up bg-rapids-gray"></div>
+</div>
+
+<section class="row section bg-rapids-gray padding-bottom-slant">
+  <div class="col">
+    <div class="container">
+      
+      <h1 class="mt-10 mb-4"> Use cases accelerated by Vector Search </h1>
+      <p class="subheading  mb-5">Featured use cases across a broad domain of applications. </p>
 
       <div class="row">
-        <h1 class="mt-10 mb-4"> Use cases accelerated by Vector Search </h1>
         <div class="col-md-3 py-3">
-          <h2><i class="fa-light fa-gauge-high"></i> Large Language Models </h2>
+          <h2><i class="fa-light fa-microchip-ai"></i> LLMs </h2>
           <p>Vector search accelerates the querying process in large language models, leading to faster response times. By quickly finding the nearest vectors in high-dimensional spaces, it enables efficient handling of complex language patterns, enhancing these models' overall performance and responsiveness. </p>
         </div>
         <div class="col-md-3 py-3">
-          <h2><i class="fa-light fa-gauge-high"></i> Recommender Systems </h2>
+          <h2><i class="fa-light fa-ballot-check"></i> Recommenders </h2>
           <p>In recommender systems, vector search plays a critical role in item matching. Accelerated vector search reduces latency and improves the quality of recommendations by efficiently searching through millions of potential matches, offering users a personalized and fast experience. </p>
         </div>
         <div class="col-md-3 py-3">
-          <h2><i class="fa-light fa-gauge-high"></i> Computer Vision </h2>
+          <h2><i class="fa-light fa-users-viewfinder"></i> Computer Vision </h2>
           <p>For computer vision tasks like image recognition or object detection, vector search aids in quickly finding similar vectors, thus accelerating the classification process. With GPU-accelerated vector search, the process of matching features and identifying patterns is significantly optimized, enhancing computer vision systems' overall speed and accuracy. </p>
         </div>
         <div class="col-md-3 py-3">
-          <h2><i class="fa-light fa-gauge-high"></i> Data Mining </h2>
+          <h2><i class="fa-light fa-cloud-binary"></i> Data Mining </h2>
           <p>Vector search forms the backbone for many important data mining algorithms, such as finding clusters, reducing dimensionality, and visualizing data points. GPU-accelerated vector search can take large machine learning and natural language processing workflows from hours to near real-time speeds, enabling important use-cases like hybrid search and anomaly detection. </p>
         </div>
       </div>
 
+
+      <h1 class="mt-10 mb-4"> Learn More</h1>
+      <p class="subheading  mb-5">Find where to get more resources and connect with developers.</p>
+
       <div class="row">
-        <h1 class="mt-10 mb-4"> Learn More</h1>
         <div class="col-md-6 py-3">
-          <h2><i class="fa-sharp fa-light fa-gear-complex-code"></i> Open Beta</h2>
+          <h2><i class="fa-light fa-flask-gear"></i> Open Beta</h2>
           <p>cuVS is in open beta and under active development. It's ready for wide use, but has a few known limitations and edge cases. You can learn more through the <a href="https://docs.rapids.ai/api/raft/stable/" target="_blank"> documentation</a>, which also includes instructions for running <a href="https://docs.rapids.ai/api/raft/stable/raft_ann_benchmarks/" target="_blank"> cuVS ANN benchmarks</a> on your system.</p>
         </div>
         <div class="col-md-6 py-3">
-          <h2><i class="fa-light fa-diagram-subtask"></i> Get in Touch</h2>
+          <h2><i class="fa-light fa-comment-code"></i> Get in Touch</h2>
           </p> Prefer conference presentations to documentation? Get all the details about how cuVS works in this GTC session. <br>
           Want to contribute or share feedback, reach out on <a href="https://github.com/rapidsai/cuvs" target="_blank"> GitHub</a> and join our <a href="https://rapids.ai/slack-invite" target="_blank"> RAPIDS slack channel</a>.</p>
-
         </div>
       </div>
 
