@@ -19,16 +19,15 @@
                     <i class="fa-sharp fa-regular fa-bell-on fa-stack-1x fa-inverse"></i>
                 </span>
                 <button class="text-rapids-purple-primary border-rapids-purple-primary"><strong>March 18 - 21</strong>
-                    <br />Register for NVIDIA GTC - In Person Experience Is Back</button>
+                    <br>NVIDIA GTC Begins - In Person and Online </button>
             </a>
 
-            <a href="/cudf-pandas" target='_blank' class="hero-announce">
+            <a href="/cuvs" target='_blank' class="hero-announce">
                 <span class="hero-announce-icon fa-stack">
                     <i class="fa-solid fa-circle fa-stack-2x"></i>
                     <i class="fa-sharp fa-regular fa-bell-on fa-stack-1x fa-inverse"></i>
                 </span>
-                <button class="text-rapids-purple-primary border-rapids-purple-primary"><strong>Now in open
-                        beta:</strong> <br> cuDF pandas accelerator mode</button>
+                <button class="text-rapids-purple-primary border-rapids-purple-primary"><strong>New</strong> <br>cuVS Vector Search</button>
             </a>
         </div>
     </div>
@@ -38,6 +37,10 @@
 
 <!-- Announcements -->
 {{ $announcements := slice
+    (dict
+    "text" "cuDF pandas accelerator updates"
+    "url" "/cudf-pandas"
+    )
     (dict
         "text" "RAPIDS 24.02 Released"
         "url" "https://docs.rapids.ai/install#selector"
