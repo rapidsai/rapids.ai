@@ -19,16 +19,7 @@
                     <i class="fa-sharp fa-regular fa-bell-on fa-stack-1x fa-inverse"></i>
                 </span>
                 <button class="text-rapids-purple-primary border-rapids-purple-primary"><strong>March 18 - 21</strong>
-                    <br />Register for NVIDIA GTC - In Person Experience Is Back</button>
-            </a>
-
-            <a href="/cudf-pandas" target='_blank' class="hero-announce">
-                <span class="hero-announce-icon fa-stack">
-                    <i class="fa-solid fa-circle fa-stack-2x"></i>
-                    <i class="fa-sharp fa-regular fa-bell-on fa-stack-1x fa-inverse"></i>
-                </span>
-                <button class="text-rapids-purple-primary border-rapids-purple-primary"><strong>Now in open
-                        beta:</strong> <br> cuDF pandas accelerator mode</button>
+                    <br> NVIDIA GTC Begins - In Person and Online</button>
             </a>
         </div>
     </div>
@@ -38,6 +29,10 @@
 
 <!-- Announcements -->
 {{ $announcements := slice
+    (dict
+    "text" "cuDF pandas accelerator updates"
+    "url" "/cudf-pandas"
+    )
     (dict
         "text" "RAPIDS 24.02 Released"
         "url" "https://docs.rapids.ai/install#selector"
@@ -105,11 +100,11 @@
 
             <div class="row has-background-rapids-image ">
                 <div class="col-md-12 py-5">
-                    <h2 class="text-white"><i class="fa-light fa-gauge-circle-bolt"></i> NEW: Pandas Accelerator Mode
+                    <h2 class="text-white"><i class="fa-light fa-gauge-circle-bolt"></i> Pandas Accelerator Mode
                         for cuDF </h2>
-                    <p class="text-white">Use cuDF's new pandas Accelerator Mode to speed up pandas workflows with zero
+                    <p class="text-white">Use cuDF pandas Accelerator Mode to speed up pandas workflows with zero
                         code change.
-                        <a href="/cudf-pandas"> Learn More on the Launch Page <i
+                        <a href="/cudf-pandas"> Learn More on the Accelerator Mode Page <i
                                 class="fa-solid fa-arrow-up-right"></i></a>
                     </p>
                 </div>
@@ -219,9 +214,9 @@ cugraph-cu12==24.2.*</code></pre>
                          detailed installation steps, and information about supported platforms. </p>
                 </div>
                 <div class="col-md-6 py-3">
-                    <h2 class="text-white"><i class="fa-light fa-gauge-circle-bolt"></i> Test Drive the new cuDF</h2>
-                    <p>Try out cuDF's new pandas Accelerator Mode, with a free required account, right now by <a
-                            href="https://nvda.ws/rapids-cudf" target="_blank">Launching Google CoLab <i
+                    <h2 class="text-white"><i class="fa-light fa-gauge-circle-bolt"></i> Test Drive cuDF</h2>
+                    <p>Try out cuDF pandas Accelerator Mode, with a free required account, right now by <a
+                            href="https://nvda.ws/rapids-cudf" target="_blank">launching Google Colab <i
                                 class="fa-solid fa-arrow-up-right"></i> </a> </p>
 
                     <br><br>

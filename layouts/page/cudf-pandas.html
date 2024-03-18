@@ -2,7 +2,7 @@
 
 <!-- Hero Partial -->
 {{ partial "hero.html" (dict
-"text" "cuDF pandas accelerator mode"
+"text" "cuDF pandas Accelerator Mode"
 "btn_text" "Get Started"
 "btn_link" "#get-started"
 ) }}
@@ -12,7 +12,7 @@
   <div class="col">
     <div class="container">
 
-      <h1 class="text-center mb-10"> OPEN BETA: ACCELERATING PANDAS <br> WITH ZERO CODE CHANGE </h1>
+      <h1 class="text-center mb-10"> ACCELERATING PANDAS <br> WITH ZERO CODE CHANGE </h1>
       <div class="row">
         <div class="col-md-4 py-3">
           <h2><i class="fa-light fa-file-binary"></i> Zero Code Change Acceleration </h2>
@@ -90,7 +90,9 @@
         <div class="col-md-6 py-3">
           <h2><i class="fa-light fa-gauge-high"></i> 150x Faster, Zero Code Change </h2>
           <canvas id="perfchart" width="500" height="375"></canvas>
-          <p class="fs-7 fw-lighter text-center">* Grace Hopper vs Intel Xeon Platinum 8480CL CPU <a
+          <p class="fs-7 fw-lighter text-center">* Standard DuckDB Data Benchmark (5GB) <br>
+            GPU: NVIDIA Grace Hopper, CPU: Intel® Xeon® Platinum 8480C <br>
+            pandas v2.2, RAPIDS cuDF v23.10 <a
               href="https://developer.nvidia.com/blog/rapids-cudf-accelerates-pandas-nearly-150x-with-zero-code-changes/"
               target="_blank">Learn More <i class="fa-solid fa-arrow-up-right"></i> </a></p>
         </div>
@@ -201,7 +203,7 @@
         {
           label: 'stand alone pandas',
           barPercentage: 0.6,
-          data: [336, 288],
+          data: [267, 274],
           backgroundColor: 'rgb(33, 150, 243, 0.8)',
           minBarLength: 4
         },
