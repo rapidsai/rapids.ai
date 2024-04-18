@@ -8,46 +8,19 @@
 ) }}
 
 
-<!-- Special -->
-<section class="row">
-    <div class="col">
-        <div class="hero-announce-container">
-            <a href="https://www.nvidia.com/gtc/" target='_blank'
-                class="hero-announce">
-                <span class="hero-announce-icon fa-stack">
-                    <i class="fa-solid fa-circle fa-stack-2x"></i>
-                    <i class="fa-sharp fa-regular fa-bell-on fa-stack-1x fa-inverse"></i>
-                </span>
-                <button class="text-rapids-purple-primary border-rapids-purple-primary"><strong>March 18 - 21</strong>
-                    <br>NVIDIA GTC Begins - In Person and Online </button>
-            </a>
-
-            <a href="/cuvs" target='_blank' class="hero-announce">
-                <span class="hero-announce-icon fa-stack">
-                    <i class="fa-solid fa-circle fa-stack-2x"></i>
-                    <i class="fa-sharp fa-regular fa-bell-on fa-stack-1x fa-inverse"></i>
-                </span>
-                <button class="text-rapids-purple-primary border-rapids-purple-primary"><strong>New</strong> <br>cuVS Vector Search</button>
-            </a>
-        </div>
-    </div>
-</section>
-
-<br>
-
 <!-- Announcements -->
 {{ $announcements := slice
     (dict
-    "text" "cuDF pandas accelerator updates"
-    "url" "/cudf-pandas"
+        "text" "New: cuVS Vector Search"
+        "url" "/cuvs"
+    )
+    (dict
+        "text" "Catch up with GTC'24 On-Demand"
+        "url" "https://www.nvidia.com/gtc/"
     )
     (dict
         "text" "RAPIDS 24.04 Released"
         "url" "https://docs.rapids.ai/install#selector"
-    )
-    (dict
-        "text" "Notice: Deprecation for Pascal GPUs"
-        "url" "https://docs.rapids.ai/notices/rsn0034/"
     )
 }}
 <section class="row">
