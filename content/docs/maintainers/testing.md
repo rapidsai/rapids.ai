@@ -1,33 +1,22 @@
 ---
-layout: default
-nav_order: 4
-parent: Maintainer Docs
 title: Testing Practices
+linkTitle: Testing Practices
+description: Gateway to Questions
+type: docs
+weight: 10
 ---
 
-# Testing Practices
 
 ## Overview
 
 Summary of the testing practices used by RAPIDS projects.
-
-### Intended audience
-
-Developers
-{: .label .label-green}
-
-Project Leads
-{: .label .label-blue}
-
-Operations
-{: .label .label-purple}
 
 ## Infrastructure
 
 Overall goal, follow the open source ecosystem for infrastructure choices
 
 ### GitHub Actions
-See docs [here]({% link resources/github-actions.md %}).
+See docs [here]({{< relref "../maintainers/github-actions.md" >}}).
 
 ### GitHub
 
@@ -76,7 +65,7 @@ See docs [here]({% link resources/github-actions.md %}).
 
 ## Datasets
 
-- Many tests depend on the presence of specific datasets in order to properly verify code correctness. See [datasets]({% link maintainers/datasets.md %}) for more details.
+- Many tests depend on the presence of specific datasets in order to properly verify code correctness. See [datasets]({{< relref "datasets.md" >}}) for more details.
 
 ## Integration / Workflow Testing and Benchmarking
 
