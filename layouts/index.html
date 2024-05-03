@@ -10,18 +10,18 @@
 
 <!-- Announcements -->
 {{ $announcements := slice
-    (dict
-        "text" "New: cuVS Vector Search"
-        "url" "/cuvs"
-    )
-    (dict
-        "text" "Catch up with GTC'24 On-Demand"
-        "url" "https://www.nvidia.com/gtc/"
-    )
-    (dict
-        "text" "RAPIDS 24.04 Released"
-        "url" "https://docs.rapids.ai/install#selector"
-    )
+(dict
+"text" "New: cuVS Vector Search"
+"url" "/cuvs"
+)
+(dict
+"text" "Catch up with GTC'24 On-Demand"
+"url" "https://www.nvidia.com/gtc/"
+)
+(dict
+"text" "RAPIDS 24.04 Released"
+"url" "https://docs.rapids.ai/install#selector"
+)
 }}
 <section class="row">
     <div class="col">
@@ -56,7 +56,8 @@
                             target="_blank">NVIDIA CUDA</a> and <a href="https://arrow.apache.org/"
                             target="_blank">Apache Arrow</a>, it unlocks the speed of GPUs with code you already know.
                         <a href="/learn-more/#about">Jump to About Section <i class="fa-solid fa-arrow-up-right"></i>
-                        </a></p>
+                        </a>
+                    </p>
 
                 </div>
                 <div class="col-md-4 py-3">
@@ -149,7 +150,8 @@
                     <br>
 
                     <p>For more information, refer to the <a href="https://docs.rapids.ai/install"
-                            target="_blank">RAPIDS Installation Guide <i class="fa-solid fa-arrow-up-right"></i></a> </p>
+                            target="_blank">RAPIDS Installation Guide <i class="fa-solid fa-arrow-up-right"></i></a>
+                    </p>
 
                     <h3 class="mt-5 text-white">Requirements</h3>
                     <p><strong>A.</strong> NVIDIA Volta™ or higher GPU with <a
@@ -169,7 +171,7 @@ bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
                     <br>
                     <p><strong>2.</strong> Then quick install RAPIDS with:</p>
                     <pre
-                        class="highlight use-white-copy"><code>conda create --solver=libmamba -n rapids-24.04 -c rapidsai -c conda-forge -c nvidia rapids=24.04 python=3.11 cuda-version=12.2</code></pre>
+                        class="highlight use-white-copy"><code>conda create -n rapids-24.04 -c rapidsai -c conda-forge -c nvidia rapids=24.04 python=3.11 cuda-version=12.2</code></pre>
 
                     <h3 class="mt-6 text-white">Install with pip</h3>
                     <p>Install via the NVIDIA PyPI index:</p>
@@ -190,9 +192,12 @@ cugraph-cu12==24.4.*</code></pre>
                             instructions <i class="fa-solid fa-arrow-up-right"></i> </a></p>
 
                     <h2 class="mt-9 text-white"><i class="fa-light fa-gears"></i> RAPIDS Release Selector</h2>
-                    <p>Please see the <a href="https://docs.rapids.ai/install" target="_blank">RAPIDS Installation Guide <i class="fa-solid fa-arrow-up-right"></i></a>
-                         for the interactive <a href="https://docs.rapids.ai/install#install-rapids" target="_blank">release selector <i class="fa-solid fa-arrow-up-right"></i></a> with more options,
-                         detailed installation steps, and information about supported platforms. </p>
+                    <p>Please see the <a href="https://docs.rapids.ai/install" target="_blank">RAPIDS Installation Guide
+                            <i class="fa-solid fa-arrow-up-right"></i></a>
+                        for the interactive <a href="https://docs.rapids.ai/install#install-rapids"
+                            target="_blank">release selector <i class="fa-solid fa-arrow-up-right"></i></a> with more
+                        options,
+                        detailed installation steps, and information about supported platforms. </p>
                 </div>
                 <div class="col-md-6 py-3">
                     <h2 class="text-white"><i class="fa-light fa-gauge-circle-bolt"></i> Test Drive cuDF</h2>
@@ -208,43 +213,45 @@ cugraph-cu12==24.4.*</code></pre>
 
                     <br>
                     {{ $row1 := slice
-                        (dict
-                            "id" "google-colab"
-                            "url_override" (site.GetPage "_partners/google-colab").Params.other_urls.pip_env
-                            "text" (printf "Jump right into a GPU enabled RAPIDS notebook environment with a free required account. Installed with pip, it is also available via <a href='%s' target='_blank'>Conda</a>." (site.GetPage "_partners/google-colab").Params.other_urls.conda_env)
-                        )
-                        (dict
-                            "id" "amazon-studio-lab"
-                            "text" "Enables Amazon Sagemaker notebook based environments in a free trial with required account."
-                        )
+                    (dict
+                    "id" "google-colab"
+                    "url_override" (site.GetPage "_partners/google-colab").Params.other_urls.pip_env
+                    "text" (printf "Jump right into a GPU enabled RAPIDS notebook environment with a free required
+                    account. Installed with pip, it is also available via <a href='%s' target='_blank'>Conda</a>."
+                    (site.GetPage "_partners/google-colab").Params.other_urls.conda_env)
+                    )
+                    (dict
+                    "id" "amazon-studio-lab"
+                    "text" "Enables Amazon Sagemaker notebook based environments in a free trial with required account."
+                    )
                     }}
                     {{ $row2 := slice
-                        (dict
-                            "id" "paperspace"
-                            "url_override" (site.GetPage "_partners/paperspace").Params.other_urls.gpu_cloud
-                            "text" "Use Quick Start Instances through a limited free account."
-                        )
-                        (dict
-                            "id" "nvidia-launchpad"
-                            "text" "Free short term use to try and learn with hands-on lab environment."
-                        )
+                    (dict
+                    "id" "paperspace"
+                    "url_override" (site.GetPage "_partners/paperspace").Params.other_urls.gpu_cloud
+                    "text" "Use Quick Start Instances through a limited free account."
+                    )
+                    (dict
+                    "id" "nvidia-launchpad"
+                    "text" "Free short term use to try and learn with hands-on lab environment."
+                    )
                     }}
                     {{ $row3 := slice
-                        (dict
-                            "id" "azure"
-                            "text" "Microsoft Azure Cloud infrastructure and services are available with RAPIDS."
-                            "url_override" (site.GetPage "_partners/azure").Params.other_urls.free_account
-                        )
-                        (dict
-                            "id" "oracle"
-                            "text" "Oracle Cloud infrastructure and services are available with RAPIDS."
-                        )
+                    (dict
+                    "id" "azure"
+                    "text" "Microsoft Azure Cloud infrastructure and services are available with RAPIDS."
+                    "url_override" (site.GetPage "_partners/azure").Params.other_urls.free_account
+                    )
+                    (dict
+                    "id" "oracle"
+                    "text" "Oracle Cloud infrastructure and services are available with RAPIDS."
+                    )
                     }}
                     {{ $row4 := slice
-                        (dict
-                            "id" "ibm"
-                            "text" "IBM Cloud infrastructure and services are available with RAPIDS."
-                        )
+                    (dict
+                    "id" "ibm"
+                    "text" "IBM Cloud infrastructure and services are available with RAPIDS."
+                    )
                     }}
                     {{ $rows := slice $row1 $row2 $row3 $row4 }}
 
@@ -253,11 +260,13 @@ cugraph-cu12==24.4.*</code></pre>
                         {{ range $_, $partner_obj := $rowPartners }}
                         {{ $img_width := cond (eq $rowIndex 0) "200" "150"}}
                         {{ $partner_resource := site.GetPage (printf "_partners/%s" $partner_obj.id ) }}
-                        {{ $resized_image := ($partner_resource.Resources.Get "logo.png" ).Resize (printf "%sx" $img_width) }}
+                        {{ $resized_image := ($partner_resource.Resources.Get "logo.png" ).Resize (printf "%sx"
+                        $img_width) }}
                         <div class="col-md-6 py-3">
                             <img src="{{ $resized_image.RelPermalink }}">
                             <h3>
-                                <a href="{{ $partner_obj.url_override | default $partner_resource.Params.homepage_url }}" target="_blank">{{
+                                <a href="{{ $partner_obj.url_override | default $partner_resource.Params.homepage_url }}"
+                                    target="_blank">{{
                                     $partner_resource.Params.name }} <i class="fa-solid fa-arrow-up-right"></i></a>
                             </h3>
                             <p>{{ .text | safeHTML }}</p>
@@ -321,20 +330,22 @@ cugraph-cu12==24.4.*</code></pre>
         <div class="container">
 
             <h2>Open Source</h2>
-            <p>RAPIDS would not be possible without the collaboration of these important open source projects. Click on a logo to
-              learn more: </p>
+            <p>RAPIDS would not be possible without the collaboration of these important open source projects. Click on
+                a logo to
+                learn more: </p>
             <div class="d-flex flex-wrap justify-content-between mt-5">
-              {{ $row := slice "apache-arrow" "dask" "nuclio" "numba" "scikit-learn" "xgboost" }}
-              {{ range $row }}
-              {{ with site.GetPage (printf "_partners/%s" . ) }}
-              {{ $sm_logo := .Resources.Get "logo_400x.png" }}
-              {{ $default_logo := .Resources.Get "logo.png" }}
-              {{ $resized_image := ($sm_logo | default $default_logo).Resize "100x" }}
-              <a target="_blank" href="{{ .Params.github_repo_url | default .Params.github_org_url | default .Params.homepage_url }}">
-                <img src="{{ $resized_image.RelPermalink }}" alt="{{ .Params.name }} Logo">
-              </a>
-              {{ end }}
-              {{ end }}
+                {{ $row := slice "apache-arrow" "dask" "nuclio" "numba" "scikit-learn" "xgboost" }}
+                {{ range $row }}
+                {{ with site.GetPage (printf "_partners/%s" . ) }}
+                {{ $sm_logo := .Resources.Get "logo_400x.png" }}
+                {{ $default_logo := .Resources.Get "logo.png" }}
+                {{ $resized_image := ($sm_logo | default $default_logo).Resize "100x" }}
+                <a target="_blank"
+                    href="{{ .Params.github_repo_url | default .Params.github_org_url | default .Params.homepage_url }}">
+                    <img src="{{ $resized_image.RelPermalink }}" alt="{{ .Params.name }} Logo">
+                </a>
+                {{ end }}
+                {{ end }}
             </div>
         </div>
 
@@ -342,21 +353,24 @@ cugraph-cu12==24.4.*</code></pre>
         <div class="container">
 
             <h2 class="mt-6">Adopters and Contributors</h2>
-            <p class="mb-5"> RAPIDS has a strong ecosystem of adopters and contributors in a variety of industries and communities. Click on a logo to learn more:</p>
+            <p class="mb-5"> RAPIDS has a strong ecosystem of adopters and contributors in a variety of industries and
+                communities. Click on a logo to learn more:</p>
 
-            {{ $row1 := slice "anyscale" "booz-allen-hamilton" "databricks" "graphistry" "h2oai" "ibm" "iguazio" "inria" "kinetica" "paperspace" }}
+            {{ $row1 := slice "anyscale" "booz-allen-hamilton" "databricks" "graphistry" "h2oai" "ibm" "iguazio" "inria"
+            "kinetica" "paperspace" }}
             {{ $row2 := slice "plotly-dash" "preferred-networks" "pytorch" "ray" "saturn-cloud" "uber" "ursa" }}
-            {{ $row3 := slice "anaconda" "capital-one" "chainer" "cupy" "deepwave-digital" "gunrock" "nvidia" "quansight" "walmart" }}
+            {{ $row3 := slice "anaconda" "capital-one" "chainer" "cupy" "deepwave-digital" "gunrock" "nvidia"
+            "quansight" "walmart" }}
             {{ $rows := slice $row1 $row2 $row3 }}
 
             {{ range $rows }}
             <div class="d-flex flex-wrap justify-content-between">
                 {{ range . }}
                 {{ with site.GetPage (printf "_partners/%s" . ) }}
-                  {{ $resized_image := (.Resources.Get "logo.png").Resize "100x" }}
-                  <a target="_blank" href="{{ .Params.github_org_url | default .Params.homepage_url }}">
-                      <img src="{{ $resized_image.RelPermalink }}" alt ="{{ .Params.name }} Logo">
-                  </a>
+                {{ $resized_image := (.Resources.Get "logo.png").Resize "100x" }}
+                <a target="_blank" href="{{ .Params.github_org_url | default .Params.homepage_url }}">
+                    <img src="{{ $resized_image.RelPermalink }}" alt="{{ .Params.name }} Logo">
+                </a>
                 {{ end }}
                 {{ end }}
             </div>
