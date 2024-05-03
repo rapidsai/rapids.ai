@@ -19,12 +19,5 @@
             "installTools": false
         }
     },
-    "customizations": {
-        "vscode": {
-            "extensions": [
-                "ms-python.python"
-            ]
-        }
-    },
     "postCreateCommand": "./scripts/devcontainer-init.sh"
 }
