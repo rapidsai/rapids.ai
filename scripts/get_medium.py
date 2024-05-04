@@ -75,7 +75,8 @@ def main():
     Retrieves latests RAPIDS posts from Medium's RSS feed and writes the content
     to a YAML file that can be used by Hugo.
     """
-    response = requests.get("https://medium.com/feed/rapids-ai")
+    headers = {"user-agent": "Mozilla/5.0"}
+    response = requests.get("https://medium.com/feed/rapids-ai", headers=headers)
     xml = xmltodict.parse(response.content)
     posts = []
 
