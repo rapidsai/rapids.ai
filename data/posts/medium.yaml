@@ -81,11 +81,3 @@
     input of a traditional neural network) with network structure (represented as
     a graph). Depending on the work...
   title: Intro to Graph Neural Networks with cuGraph-PyG
-- date: Tue, 09 May 2023 18:37:21 GMT
-  link: https://medium.com/rapids-ai/rapids-release-23-04-ed03055d378f
-  poster: Alex Ravenel
-  text: RAPIDS 23.04 is out! We are excited about this release, which includes major
-    updates to cuSpatial, continued improvements to graph neural network functionality
-    in our graph libraries, some performance improvements (and benchmarking!) in cuDF,
-    and a number of improvem...
-  title: RAPIDS Release 23.04
