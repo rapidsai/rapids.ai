@@ -30,7 +30,7 @@ Once an archetype template is created, it can be used like this:
 
 ```sh
 # Create a new partner
-hugo new _partners/dask-sql
+hugo new _partners/dask
 
 # Create a new announcement
 hugo new announcements/cuda-12-deprecation
