@@ -1,0 +1,128 @@
+{{- define "main" -}}
+
+<!-- Hero Partial -->
+{{ partial "hero.html" (dict
+"text" "Zero Code Change for PyData"
+"btn_text" "Get Started"
+"btn_link" "#get-started"
+) }}
+
+<!-- Intro -->
+<section class="row section mb-6">
+  <div class="col">
+    <div class="container">
+
+      <h1 class="text-center mb-10"> ZERO CODE CHANGE </h1>
+      <div class="row">
+        <div class="col-md-4 py-3">
+          <h2><i class="fa-light fa-file-binary"></i> Zero Code Change Acceleration </h2>
+          <p>Write your code with the full flexibility of pandas and networkx.</p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="bottom-slant-container">
+  <div class="bottom-slant-down bg-white"></div>
+</div>
+
+<!-- How it works -->
+<section class="row section padding-top-slant padding-bottom-slant">
+  <div class="col">
+    <div class="container">
+
+    </div>
+  </div>
+</section>
+
+<!-- Get Started -->
+<div id="get-started"></div>
+<div class="top-slant-container">
+  <div class="top-slant-up has-background-rapids-gray"></div>
+</div>
+
+<section class="row section has-background-rapids-gray padding-top-slant padding-bottom-slant">
+  <div class="col">
+    <div class="container">
+
+    </div>
+  </div>
+</section>
+
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"
+  integrity="sha512-CQBWl4fJHWbryGE+Pc7UAxWMUMNMWzWxF4SQo9CgkJIN1kx6djDQZjh3Y8SZ1d+6I+1zze6Z7kHXO7q3UyZAWw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+  const ctx = document.getElementById('perfchart');
+  new Chart(ctx, {
+    type: 'bar',
+    data: {
+      labels: ['Join ', 'Advanced Groupby '],
+      datasets: [
+        {
+          label: 'stand alone pandas',
+          barPercentage: 0.6,
+          data: [267, 274],
+          backgroundColor: 'rgb(33, 150, 243, 0.8)',
+          minBarLength: 4
+        },
+        {
+          label: 'cuDF pandas accelerator mode',
+          barPercentage: 0.6,
+          data: [1, 2],
+          backgroundColor: 'rgb(115, 6, 255, 0.8)',
+          minBarLength: 4,
+        }]
+    },
+    options: {
+      indexAxis: 'y',
+      scales: {
+        x: {
+          type: 'linear',
+          beginAtZero: true,
+          grid: {
+            display: true,
+            borderWidth: 0
+          },
+          title: {
+            display: true,
+            text: 'Time (s)'
+          }
+        },
+        y: {
+          ticks: {
+            font: {
+              weight: 'bold'
+            }
+          },
+          grid: {
+            display: false,
+            drawTicks: false,
+            borderWidth: 3
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          display: true
+        },
+        title: {
+          display: true,
+          text: 'DuckDB/H2O.ai Database-like Ops Benchmark (5GB)'
+        }
+      },
+      layout: {
+        padding: {
+          left: 0,
+          right: 0,
+          top: 0,
+          bottom: 0
+        }
+      }
+    }
+  });
+</script>
+{{ end }}
