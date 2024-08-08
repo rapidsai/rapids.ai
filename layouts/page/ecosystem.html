@@ -308,16 +308,6 @@
           )
         )
         (dict
-          "title" (site.GetPage "_partners/dask-sql").Params.name
-          "img" (((site.GetPage "_partners/dask-sql").Resources.Get "logo_400x.png").Resize "100x").RelPermalink
-          "labels" (slice "DISTRIBUTED" "SQL" "PYTHON")
-          "description" "Scale out workloads with Dask via tried-and-true SQL queries on your data."
-          "urls" (slice
-            (dict "text" "GitHub" "link" (site.GetPage "_partners/dask-sql").Params.github_repo_url)
-            (dict "text" "Documentation" "link" (site.GetPage "_partners/dask-sql").Params.documentation_url)
-          )
-        )
-        (dict
           "title" "Visualization"
           "img" ((.Resources.GetMatch "viz-logo.png").Resize "100x").RelPermalink
           "labels" (slice "PLOTLY DASH" "HOLOVIZ" "CUXFILTER" "NODE RAPIDS" "PYTHON / JS")
