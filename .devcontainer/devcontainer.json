@@ -7,8 +7,7 @@
     "features": {
         "ghcr.io/devcontainers/features/go:1": {},
         "ghcr.io/devcontainers/features/node:1": {
-            "version": "none",
-            "nodeGypDependencies": false
+            "version": "latest"
         },
         "ghcr.io/eitsupi/devcontainer-features/jq-likes:2": {
             "jqVersion": "latest",
