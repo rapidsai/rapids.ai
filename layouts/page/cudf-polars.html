@@ -50,7 +50,7 @@
   <div class="col">
     <div class="container">
 
-      <h1 class="text-center mb-4"> Process 100s of Millions of Rows in Seconds </h1>
+      <h1 class="text-center mb-4"> Process Hundreds of Millions of Rows in Seconds </h1>
       <div class="row">
         <div class="col-md-6">
           <h3 class="text-center"> Performance improves as data size grows </h3>
@@ -63,7 +63,8 @@
       </div>
       <div class="row">
         <div class="col">
-          <p class="fw-lighter text-center">*GPU: NVIDIA H100, CPU: Intel Xeon W9-3495X (Sapphire Rapids), Storage: Local NVMe derived from TPC-H but these results are not comparable to TPC-H results <a href="https://github.com/pola-rs/polars-benchmark" target="_blank">Learn More <i class="fa-solid fa-arrow-up-right"></i></a></p>
+          <p class="fw-lighter text-center">PDS-H benchmark | GPU: NVIDIA H100 | CPU: Intel Xeon W9-3495X (Sapphire Rapids) | Storage: Local NVMe <br>
+            Note: PDS-H is derived from TPC-H but these results are not comparable to TPC-H results. <a href="https://github.com/pola-rs/polars-benchmark" target="_blank">Learn More <i class="fa-solid fa-arrow-up-right"></i></a></p>
         </div>
       </div>
 
@@ -298,13 +299,13 @@
       labels: ['20GB', '40GB', '60GB'],
       datasets: [
         {
-          label: '.collect()',
+          label: 'Polars (CPU)',
           barPercentage: 0.6,
           data: [35,67,136], 
           backgroundColor: 'rgb(33, 150, 243, 0.8)'
         },
         {
-          label: '.collect(engine="gpu")',
+          label: 'Polars (GPU)',
           barPercentage: 0.6,
           data: [12,19,32],
           backgroundColor: 'rgb(115, 6, 255, 0.8)'
@@ -349,7 +350,7 @@
         },
         title: {
           display: true,
-          text: 'PDS-H benchmark 80GB query processing time across a range of dataset sizes'
+          text: 'Query Processing time across a range of dataset sizes'
         }
       },
       layout: {
@@ -423,7 +424,7 @@
         },
         title: {
           display: true,
-          text: 'PDS-H benchmark 80GB top performing compute heavy queries with complex groupby and join operations'
+          text: 'Top performing compute heavy queries with complex groupby and join operations (PDS-Benchmark; 80 GB dataset)'
         }
       },
       layout: {
