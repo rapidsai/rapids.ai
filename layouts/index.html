@@ -11,20 +11,24 @@
 <!-- Announcements -->
 {{ $announcements := slice
     (dict
-        "text" "New: cuDF now pre-installed in Google Colab"
+        "text" "New: Polars GPU Backend"
+        "url" "/cudf-polars"
+        "dur" "2s"
+    )
+    (dict
+        "text" "cuDF now pre-installed in Google Colab"
         "url" "https://developer.nvidia.com/blog/rapids-cudf-instantly-accelerates-pandas-up-to-50x-on-google-colab/?ncid=em-news-294101"
+        "dur" "1s"
     )
     (dict
-        "text" "New: cuVS Vector Search"
+        "text" "Vector Search now with cuVS "
         "url" "/cuvs"
-    )
-    (dict
-        "text" "Catch up with GTC'24 On-Demand"
-        "url" "https://www.nvidia.com/gtc/"
+        "dur" "1.5s"
     )
     (dict
         "text" "RAPIDS 24.08 Released"
         "url" "https://docs.rapids.ai/install#selector"
+        "dur" "1.8s"
     )
 }}
 <section class="row">
@@ -32,7 +36,7 @@
         <div class="hero-announce-container">
             {{ range $announcements }}
             <a href="{{ .url }} " target='_blank' class="hero-announce">
-                <span class="hero-announce-icon fa-stack">
+                <span class="hero-announce-icon fa-stack fa-bounce" style="--fa-animation-iteration-count: 2; --fa-animation-duration: {{ .dur }}">
                     <i class="fa-solid fa-circle fa-stack-2x"></i>
                     <i class="fa-regular fa-bell fa-stack-1x fa-inverse"></i>
                 </span>
@@ -50,8 +54,6 @@
 <section class="row section padding-bottom-slant">
     <div class="col">
         <div class="container">
-
-            <h1 class="text-center mb-5">Data Science at the speed of thought</h1>
             <div class="row">
                 <div class="col-md-4 py-3">
                     <h2><i class="fa-light fa-caret-right"></i> What is RAPIDS </h2>
@@ -83,7 +85,7 @@
 
             <br>
 
-            <div class="row has-background-rapids-image ">
+            <div class="row has-background-rapids-image has-box-shadow">
                 <div class="col-md-6 py-5">
                     <h2 class="text-white"><i class="fa-light fa-gauge-circle-bolt"></i> Pandas Accelerator Mode for cuDF </h2>
                     <p class="text-white">Use cuDF pandas Accelerator Mode to speed up pandas workflows with zero code change.
