@@ -13,21 +13,25 @@
     (dict
         "text" "New: Polars GPU Engine"
         "url" "/polars-gpu-engine"
+        "target" "_self"
         "dur" "2s"
     )
     (dict
         "text" "cuDF now pre-installed in Google Colab"
         "url" "https://developer.nvidia.com/blog/rapids-cudf-instantly-accelerates-pandas-up-to-50x-on-google-colab/?ncid=em-news-294101"
+        "target" "_blank"
         "dur" "1s"
     )
     (dict
         "text" "Vector Search now with cuVS "
         "url" "/cuvs"
+        "target" "_self"
         "dur" "1.5s"
     )
     (dict
         "text" "RAPIDS 24.08 Released"
         "url" "https://docs.rapids.ai/install#selector"
+        "target" "_blank"
         "dur" "1.8s"
     )
 }}
@@ -35,7 +39,7 @@
     <div class="col">
         <div class="hero-announce-container">
             {{ range $announcements }}
-            <a href="{{ .url }} " target='_blank' class="hero-announce">
+            <a href="{{ .url }}" target="{{ .target }}" class="hero-announce">
                 <span class="hero-announce-icon fa-stack fa-bounce" style="--fa-animation-iteration-count: 2; --fa-animation-duration: {{ .dur }}">
                     <i class="fa-solid fa-circle fa-stack-2x"></i>
                     <i class="fa-regular fa-bell fa-stack-1x fa-inverse"></i>
@@ -91,14 +95,14 @@
                     <p class="text-white">Use cuDF pandas Accelerator Mode to speed up pandas workflows with zero code change.
                         <a href="/cudf-pandas"> Learn More on the Accelerator Mode Page <i class="fa-solid fa-arrow-up-right"></i></a>
                     </p>
-                    
+
                 </div>
                 <div class="col-md-6 py-5">
                     <h2 class="text-white"><i class="fa-light fa-igloo"></i> Polars GPU Engine powered by cuDF </h2>
                     <p class="text-white">Accelerate Polars by enabling the GPU engine with zero code change.
                         <a href="/polars-gpu-engine"> Learn More on the Launch Page <i class="fa-solid fa-arrow-up-right"></i></a>
                     </p>
-                    
+
                 </div>
             </div>
 
