@@ -80,10 +80,10 @@
     <div class="container">
       
 
-      <h1 class="mb-4"> How To Use </h1>
+      <h1 class="mb-4">How To Use </h1>
       <div class="row">
         <div class="col">
-          <p>First, install the cuDF backend for Polars with a feature flag in your standard Python pip install command:</p>
+          <p>First, install the Polars GPU engine with a feature flag in your standard Python pip install command:</p>
           <code class="code-sample mt-3">
             pip install polars[gpu] —extra-index-url=https://pypi.nvidia.com
           </code>
@@ -93,8 +93,8 @@
 
       <div class="row">
         <div class="col-md-6 py-6">
-          <h2><i class="fa-light fa-file-check"></i> Default GPU Backend </h2>
-          <p>To use the default GPU backend configuration, simply specify the backend as GPU to materialize the Polars' LazyFrame into a DataFrame using <code>.collect()</code> API:</p>
+          <h2><i class="fa-light fa-file-check"></i> Default GPU Engine </h2>
+          <p>To use the default GPU engine configuration, simply specify the engine as GPU to materialize the Polars' LazyFrame into a DataFrame using <code>.collect()</code> API:</p>
           <code class="code-sample mt-3">
             import polars as pl
             
@@ -112,8 +112,8 @@
           </code>
         </div>
         <div class="col-md-6 py-6">         
-          <h2><i class="fa-regular fa-light fa-gear-complex-code"></i> Custom GPU Backend </h2>
-          <p>For finer control on the backend, you can pass a <code>GPUEngine</code> object with additional configurations like device details and verbosity to the <code>engine=</code> parameter:</p>
+          <h2><i class="fa-regular fa-light fa-gear-complex-code"></i> Custom GPU Engine </h2>
+          <p>For finer control on the engine, you can pass a <code>GPUEngine</code> object with additional configurations like device details and verbosity to the <code>engine=</code> parameter:</p>
           <code class="code-sample mt-3">
             import polars as pl
            
@@ -162,7 +162,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                  Do I have to install any RAPIDS specific package for the GPU backend to work? 
+                  Do I have to install any RAPIDS specific package for the GPU engine to work? 
                 </button>
               </h2>
               <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faq1">
@@ -179,12 +179,12 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                  Can I use the cuDF backend for Polars on my local Windows machine?
+                  Can I use Polars GPU engine on my local Windows machine?
                 </button>
               </h2>
               <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faq2">
                 <div class="accordion-body">
-                  <p>Yes, you can use the cuDF backend for Polars on a Windows machine by installing WSL2. Note: You would need WSL2 on a Windows 11 or above OS. For download and troubleshooting instructions, please visit <a href="https://docs.rapids.ai/install#wsl2" target="_blank">RAPIDS installation</a> page.</p>
+                  <p>Yes, you can use the Polars GPU engine on a Windows machine by installing WSL2. Note: You would need WSL2 on a Windows 11 or above OS. For download and troubleshooting instructions, please visit <a href="https://docs.rapids.ai/install#wsl2" target="_blank">RAPIDS installation</a> page.</p>
                 </div>
               </div>
             </div>
@@ -194,12 +194,12 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                  Can I try the cuDF backend with Polars' Rust API?
+                  Can I try the GPU engine with Polars' Rust API?
                 </button>
               </h2>
               <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faq3">
                 <div class="accordion-body">
-                  <p>No, at the moment the GPU-based cuDF backend is only supported in Polars' python API.</p>
+                  <p>No, at the moment the GPU-based engine is only supported in Polars' python API.</p>
                 </div>
               </div>
             </div>
@@ -214,7 +214,7 @@
               </h2>
               <div id="collapse4" class="accordion-collapse collapse " data-bs-parent="#faq4">
                 <div class="accordion-body">
-                  <p>The cuDF backend currently supports most of the core expressions and data types, but not all. For a detailed list of supported expressions visit the <a href="https://docs.pola.rs/user-guide/gpu-support/" target="_blank">GPU Support page</a> on Polars website.</p>
+                  <p>The GPU engine currently supports most of the core expressions and data types, but not all. For a detailed list of supported expressions visit the <a href="https://docs.pola.rs/user-guide/gpu-support/" target="_blank">GPU Support page</a> on Polars website.</p>
                 </div>
               </div>
             </div>
@@ -269,7 +269,7 @@
       <div class="row">
         <div class="col py-3">
           <h2><i class="fa-light fa-cloud-arrow-down"></i> Try Now</h2>
-          <p>Try cuDF Polars on <a href="https://colab.research.google.com/github/rapidsai-community/showcase/blob/main/accelerated_data_processing_examples/polars_gpu_engine_demo.ipynb" target="_blank">Google CoLab Right Now <i class="fa-solid fa-arrow-up-right"></i> </a></p>
+          <p>Try Polars GPU engine on <a href="https://colab.research.google.com/github/rapidsai-community/showcase/blob/main/accelerated_data_processing_examples/polars_gpu_engine_demo.ipynb" target="_blank">Google CoLab Right Now <i class="fa-solid fa-arrow-up-right"></i> </a></p>
         </div>
         <div class="col py-3">
           <h2><i class="fa-light fa-chalkboard-user"></i> Learn More</h2>
