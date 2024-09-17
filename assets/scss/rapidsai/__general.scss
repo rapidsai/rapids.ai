@@ -174,7 +174,7 @@ button {
   border-color: #dbdbdb;
   color: white;
   border-width: 3px;
-  border-radius: 0 0 0.5rem 0.5rem;
+  border-radius: 0.5rem 0 0.5rem 0.5rem;
   font-weight: 600;
   font-family: 'Open Sans';
   text-transform: uppercase;
@@ -203,8 +203,7 @@ button:hover {
 .has-background-rapids-image {
   background: url($header-bg-url) no-repeat;
   background-size: cover;
-  border-bottom-left-radius: 0.5rem;
-  border-bottom-right-radius: 0.5rem;
+  border-radius: 0 0 0.5rem 0.5rem;
 }
 
 .has-box-shadow {
