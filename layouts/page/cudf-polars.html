@@ -2,7 +2,7 @@
 
 <!-- Hero Partial -->
 {{ partial "hero.html" (dict
-"text" "cuDF Polars"
+"text" "Polars GPU engine powered by cuDF"
 "btn_text" "Get Started"
 "btn_link" "#get-started"
 ) }}
@@ -12,32 +12,28 @@
   <div class="col">
     <div class="container">
 
-      <h1 class="text-center mb-10"> Polars GPU engine powered by cuDF</h1>
+      <h1 class="text-center mb-10"> BRINGING ACCELERATED COMPUTING TO POLARS <br> [Open Beta] </h1>
       <div class="row">
         <div class="col-md-4 py-3">
           <h2><i class="fa-light fa-file-binary"></i> Zero Code Change</h2>
-          <p>Just pass <code>engine='gpu'</code> to the Polars' collect API and start using gpu to accelerate your tasks like data aggregation, merge, window functions, and much more.</p>
+          <p>Pass <code>engine=”gpu”</code> to the Polars' collect API to add GPU acceleration to your data processing tasks like data aggregation, merge, window functions, and much more.</p>
 
           <br>
 
           <h2 class="mt-4"><i class="fa-light fa-laptop-binary"></i> Ecosystem Compatible</h2>
-          <p>Polars growing ecosystem of data visualization, IO, & ML libraries can be accelerated with this backend.</p>
+          <p>Polars' growing ecosystem of data visualization, IO, & ML libraries can be accelerated with the GPU engine.</p>
         </div>
         <div class="col-md-4 py-3">
           <h2><i class="fa-light fa-boxes-stacked"></i> Seamless CPU Fallback</h2>
-          <p>For queries whose one or more operations are unsupported on the cuDF backend, the entire query execution would gracefully fallback to the CPU.</p>
+          <p>For queries where one or more operations are not supported in cuDF, the entire query execution will gracefully fallback to the default CPU engine.</p>
 
           <br>
 
           <h2 class="mt-4"><i class="fa-light fa-bolt-lightning"></i> Query Optimizer</h2>
-          <p>The cuDF backend utilizes Polars' query optimizer to ensure efficient execution and minimal memory usage.</p>
+          <p>The GPU engine utilizes Polars' query optimizer to ensure efficient execution and minimal memory usage.</p>
         </div>
         <div class="col-md-4 py-3">
-          <iframe style="max-width: 100%;" width="500" height="320"
-            src="https://www.youtube.com/embed/kmj1QOY71Ps?si=ToajeDGStxJynNdl" title="YouTube video player"
-            frameborder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            allowfullscreen></iframe>
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/AoKeit2Fbmw?si=Gin-Bwr5ndvaMABI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
         </div>
       </div>
 
@@ -54,23 +50,24 @@
   <div class="col">
     <div class="container">
 
-      <h1 class="mb-4"> RAPIDS cuDF is the go-to Polars backend for large datasets and compute heavy queries </h1>
+      <h1 class="mb-4"> The go-to Polars backend</h1>
       <div class="row">
-        <div class="col-md-6 py-3">
-          <h2><i class="fa-sharp fa-light fa-gear-complex-code"></i> Performance improves as <br> data scales </h2>
-          {{ with .Resources.GetMatch "polars-collect.png" }}
-          <img src="{{ .RelPermalink }}">
-          {{ end }}
-          <br>
-          <p class="fs-7 fw-lighter text-center">PDS-H benchmark | GPU: NVIDIA H100 | CPU: Intel Xeon W9-3495X (Sapphire Rapids) | Storage: Local NVMe</p>
+        <div class="col">
+          <p class="subheading">RAPIDS cuDF is the go-to Polars backend for large datasets and compute heavy queries.</p>
         </div>
-        <div class="col-md-6 py-3">
-          <h2><i class="fa-light fa-diagram-subtask"></i>  Higher acceleration with Compute vs memory and I/O bound queries </h2>
-            {{ with .Resources.GetMatch "polars-gpu-cpu.png" }}
-            <img src="{{ .RelPermalink }}">
-            {{ end }}
+      </div>
+      <div class="row">
+        <div class="col-md-6 py-6">
+          <h2><i class="fa-sharp fa-light fa-gear-complex-code"></i> Performance improves as <br> data size grows </h2>
+          <canvas id="perfchartdata" width="500" height="375"></canvas>
+          <br>
+          <p class="fs-7 fw-lighter text-center">*GPU: NVIDIA H100, CPU: Intel Xeon W9-3495X (Sapphire Rapids), Storage: Local NVMe</p>
+        </div>
+        <div class="col-md-6 py-6">
+          <h2><i class="fa-light fa-diagram-subtask"></i> Accelerate Polars <br> Workflows up to 13x</h2>
+          <canvas id="perfchartspeed" width="500" height="375"></canvas>
             <br>
-            <p class="fs-7 fw-lighter text-center">PDS-H is derived from TPC-H but these results are not comparable to TPC-H results. <a href="#" target="_blank">Learn More <i class="fa-solid fa-arrow-up-right"></i> </a></p>
+            <p class="fs-7 fw-lighter text-center">*PDS-H is derived from TPC-H but these results are not comparable to TPC-H results. <a href="#" target="_blank">Learn More <i class="fa-solid fa-arrow-up-right"></i> </a></p>
         </div>
       </div>
 
@@ -80,22 +77,26 @@
 
 
 <!-- Get Started -->
- <div id="get-started"></div>
+<div id="get-started"></div>
 <section class="row section padding-bottom-slant">
   <div class="col">
     <div class="container">
+      
 
-      <h1 class="mb-4"> How It Works</h1>
+      <h1 class="mb-4"> How To Use </h1>
       <div class="row">
-        <div class="col-md-6 py-3">
-          <h2><i class="fa-sharp fa-light fa-gear-complex-code"></i> Default GPU </h2>
+        <div class="col">
           <p>First, install the cuDF backend for Polars with a feature flag in your standard Python pip install command:</p>
           <code class="code-sample mt-3">
             pip install polars[gpu] —extra-index-url=https://pypi.nvidia.com
           </code>
          
-          <br>
+        </div>
+      </div>
 
+      <div class="row">
+        <div class="col-md-6 py-6">
+          <h2><i class="fa-sharp fa-light fa-gear-complex-code"></i> Default GPU </h2>
           <p>To use the default GPU backend configuration, simply specify the backend as GPU to materialize the Polars' LazyFrame into a DataFrame using <code>.collect()</code> API:</p>
           <code class="code-sample mt-3">
             import polars as pl
@@ -103,7 +104,7 @@
             <br><br>
 
             ldf = pl.LazyFrame({
-                "a": [1.242, 1.535],
+                "a": [1.242, 1.535]
             })
 
             <br><br>
@@ -113,15 +114,8 @@
                   ).collect(engine="gpu"))
           </code>
         </div>
-        <div class="col-md-6 py-3">         
+        <div class="col-md-6 py-6">         
           <h2><i class="fa-sharp fa-light fa-gear-complex-code"></i> Custom GPU </h2>
-          <p>First, install the cuDF backend for Polars with a feature flag in your standard Python pip install command:</p>
-          <code class="code-sample mt-3">
-            pip install polars[gpu] —extra-index-url=https://pypi.nvidia.com
-          </code>
-          
-          <br>
-
           <p>For finer control on the backend, you can pass a <code>GPUEngine</code> object with additional configurations like device details and verbosity to the <code>engine=</code> parameter:</p>
           <code class="code-sample mt-3">
             import polars as pl
@@ -129,14 +123,14 @@
             <br><br>
            
             ldf = pl.LazyFrame({
-                "a": [1.242, 1.535],
+                "a": [1.242, 1.535]
             })
            
             <br><br>
 
             gpu_engine = pl.GPUEngine(
-                device=0, # This is the default
-                raise_on_fail=True, # Fail loudly if can't execute on the GPU
+                device=0, #This is the default
+                raise_on_fail=True, #Fail loudly if can't execute on the GPU
                 )
 
             <br><br>
@@ -154,7 +148,7 @@
 
 
 <!-- FAQ -->
-
+<div id="#faq"></div>
 <div class="top-slant-container">
   <div class="top-slant-up bg-rapids-gray"></div>
 </div>
@@ -165,35 +159,101 @@
 
       <h1 class="mb-4"> Frequently Asked Questions </h1>
       <div class="row">
-        <div class="col py-3">
-         <h3>Do I have to install any RAPIDS specific package for the GPU backend to work? </h3>
-         <p>No, you just need to install polars with a feature flag in your standard Python pip install command: <br>
-            <code>pip install polars[gpu]--extra-index-url=https://pypi.nvidia.com</code>
-          </p>
+
+        <div class="col ">
+          <div class="accordion py-3" id="faq1">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
+                  Do I have to install any RAPIDS specific package for the GPU backend to work? 
+                </button>
+              </h2>
+              <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faq1">
+                <div class="accordion-body">
+                  <p>No, you just need to install polars with a feature flag in your standard Python pip install command: <br>
+                    <code>pip install polars[gpu]--extra-index-url=https://pypi.nvidia.com</code>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion py-3" id="faq2">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
+                  Can I use the cuDF backend for Polars on my local Windows machine?
+                </button>
+              </h2>
+              <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faq2">
+                <div class="accordion-body">
+                  <p>Yes, you can use the cuDF backend for Polars on a Windows machine by installing WSL2. Note: You would need WSL2 on a Windows 11 or above OS. For download and troubleshooting instructions, please visit <a href="https://docs.rapids.ai/install#wsl2" target="_blank">RAPIDS installation</a> page.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion py-3" id="faq3">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
+                  Can I try the cuDF backend with Polars' Rust API?
+                </button>
+              </h2>
+              <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faq3">
+                <div class="accordion-body">
+                  <p>No, at the moment the GPU-based cuDF backend is only supported in Polars' python API.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion py-3" id="faq4">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                  Are all operations within Polars supported?
+                </button>
+              </h2>
+              <div id="collapse4" class="accordion-collapse collapse " data-bs-parent="#faq4">
+                <div class="accordion-body">
+                  <p>The cuDF backend currently supports most of the core expressions and data types, but not all. For a detailed list of supported expressions visit the <a href="https://docs.pola.rs/user-guide/gpu-support/" target="_blank">GPU Support page</a> on Polars website.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion py-3" id="faq5">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                  What parameters can I pass to the GPUEngine?
+                </button>
+              </h2>
+              <div id="collapse5" class="accordion-collapse collapse " data-bs-parent="#faq5">
+                <div class="accordion-body">
+                  <p>To get a comprehensive list of parameters supported by the GPUEngine, visit <a href="https://docs.pola.rs/api/python/stable/reference/lazyframe/api/polars.LazyFrame.collect.html" target="_blank">Polars API documentation</a> page.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion py-3" id="faq6">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                  How can I provide feedback?
+                </button>
+              </h2>
+              <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#faq6">
+                <div class="accordion-body">
+                  <p>Raise an issue on <a href="https://github.com/pola-rs/polars/issues" target="_blank">Polars GitHub</a> and the project contributors will respond as soon as possible.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
-        <div class="col py-3">
-          <h3>Can I use the cuDF backend for Polars on my local Windows machine?</h3>
-          <p>Yes, you can use the cuDF backend for Polars on a Windows machine by installing WSL2. Note: You would need WSL2 on a Windows 11 or above OS. For download and troubleshooting instructions, please visit <a href="#" target="_blank">RAPIDS installation</a> page.</p>
-        </div>
-        <div class="col py-3">
-          <h3>Can I try the cuDF backend with Polars' Rust API?</h3>
-          <p>No, at the moment the GPU-based cuDF backend is only supported in Polars' python API.</p>
-        </div>
-      </div>
-      <div class="row">
-        <div class="col py-3">
-          <h3>Are all operations within Polars supported?</h3>
-          <p>The cuDF backend currently supports most of the core expressions and data types, but not all. For a detailed list of supported expressions visit the <a href="#" target="_blank">GPU Support page</a> on Polars website.</p>
-        </div>
-        <div class="col py-3">
-          <h3>What parameters can I pass to the GPUEngine?</h3>
-          <p>To get a comprehensive list of parameters supported by the GPUEngine, visit <a href="#" target="_blank">Polars API documentation</a> page.</p>
-        </div>
-        <div class="col py-3">
-          <h3>How can I provide feedback?</h3>
-          <p>Raise an issue on <a href="#" target="_blank">Polars github</a> and the project contributors will respond as soon as possible.</p>
-        </div>
-      </div>
 
     </div>
   </div>
@@ -212,15 +272,15 @@
       <div class="row">
         <div class="col py-3">
           <h2><i class="fa-sharp fa-light fa-gear-complex-code"></i> Try Now</h2>
-          <p>Try cuDF Polars on <a href="#" target="_blank">Google CoLab Right Now <i class="fa-solid fa-arrow-up-right"></i> </a></p>
+          <p>Try cuDF Polars on <a href="https://colab.research.google.com/github/rapidsai-community/showcase/blob/main/accelerated_data_processing_examples/polars_gpu_engine_demo.ipynb" target="_blank">Google CoLab Right Now <i class="fa-solid fa-arrow-up-right"></i> </a></p>
         </div>
         <div class="col py-3">
           <h2><i class="fa-sharp fa-light fa-gear-complex-code"></i> Learn More</h2>
-          <p>Find out more on the <a href="#" target="_blank">Polars GPU Support Page <i class="fa-solid fa-arrow-up-right"></i> </a></p>
+          <p>Find out more on the <a href="https://docs.pola.rs/user-guide/gpu-support/" target="_blank">Polars GPU Support Page <i class="fa-solid fa-arrow-up-right"></i> </a></p>
         </div>
         <div class="col py-3">
           <h2><i class="fa-sharp fa-light fa-gear-complex-code"></i> Share Feedback</h2>
-          <p>Share feedback on the <a href="#" target="_blank">Polars GitHub Page <i class="fa-solid fa-arrow-up-right"></i> </a></p>
+          <p>Share feedback on the <a href="https://github.com/pola-rs/polars/issues" target="_blank">Polars GitHub Page <i class="fa-solid fa-arrow-up-right"></i> </a></p>
         </div>
       </div>
     </div>
@@ -235,31 +295,30 @@
   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 <script>
-  const ctx = document.getElementById('perfchart');
-  new Chart(ctx, {
+  const ctx1 = document.getElementById('perfchartdata');
+  new Chart(ctx1, {
     type: 'bar',
     data: {
-      labels: ['Join ', 'Advanced Groupby '],
+      labels: ['20GB', '40GB', '60GB'],
       datasets: [
         {
-          label: 'stand alone pandas',
+          label: '.collect()',
           barPercentage: 0.6,
-          data: [267, 274],
-          backgroundColor: 'rgb(33, 150, 243, 0.8)',
-          minBarLength: 4
+          data: [33, 65, 132],
+          backgroundColor: 'rgb(33, 150, 243, 0.8)'
         },
         {
-          label: 'cuDF pandas accelerator mode',
+          label: '.collect(engine="gpu")',
           barPercentage: 0.6,
-          data: [1, 2],
-          backgroundColor: 'rgb(115, 6, 255, 0.8)',
-          minBarLength: 4,
+          data: [12, 18, 32],
+          backgroundColor: 'rgb(115, 6, 255, 0.8)'
         }]
     },
     options: {
-      indexAxis: 'y',
+      indexAxis: 'x',
+      grouped: true,
       scales: {
-        x: {
+        y: {
           type: 'linear',
           beginAtZero: true,
           grid: {
@@ -271,7 +330,7 @@
             text: 'Time (s)'
           }
         },
-        y: {
+        x: {
           ticks: {
             font: {
               weight: 'bold'
@@ -281,6 +340,10 @@
             display: false,
             drawTicks: false,
             borderWidth: 3
+          },
+          title: {
+            display: true,
+            text: 'Dataset Size (GB)'
           }
         }
       },
@@ -290,18 +353,93 @@
         },
         title: {
           display: true,
-          text: 'DuckDB/H2O.ai Database-like Ops Benchmark (5GB)'
+          text: 'PDS-H benchmark 80GB'
         }
       },
       layout: {
         padding: {
           left: 0,
-          right: 0,
-          top: 0,
+          right: 20,
+          top: 10,
           bottom: 0
         }
       }
     }
   });
 </script>
+
+<script>
+  const ctx2 = document.getElementById('perfchartspeed');
+  new Chart(ctx2, {
+    type: 'bar',
+    data: {
+      labels: ['Q13', 'Q17', 'Q18', 'Q21'],
+      datasets: [
+        {
+          label: 'Polars (CPU)',
+          barPercentage: 0.6,
+          data: [7, 11, 17, 41],
+          backgroundColor: 'rgb(33, 150, 243, 0.8)'
+        },
+        {
+          label: 'Polars (GPU)',
+          barPercentage: 0.6,
+          data: [1, 2, 1, 4],
+          backgroundColor: 'rgb(115, 6, 255, 0.8)'
+        }]
+    },
+    options: {
+      indexAxis: 'x',
+      grouped: true,
+      scales: {
+        y: {
+          type: 'linear',
+          beginAtZero: true,
+          grid: {
+            display: true,
+            borderWidth: 0
+          },
+          title: {
+            display: true,
+            text: 'Time (s)'
+          }
+        },
+        x: {
+          ticks: {
+            font: {
+              weight: 'bold'
+            }
+          },
+          grid: {
+            display: false,
+            drawTicks: false,
+            borderWidth: 3
+          },
+          title: {
+            display: true,
+            text: 'Query Number'
+          }
+        }
+      },
+      plugins: {
+        legend: {
+          display: true
+        },
+        title: {
+          display: true,
+          text: 'PDS-H benchmark 80GB'
+        }
+      },
+      layout: {
+        padding: {
+          left: 0,
+          right: 20,
+          top: 10,
+          bottom: 0
+        }
+      }
+    }
+  });
+</script>
+
 {{ end }}
