@@ -1,0 +1,23 @@
+{
+    "name": "rapids-site",
+    "image": "mcr.microsoft.com/devcontainers/base:ubuntu",
+    "forwardPorts": [
+        1313
+    ],
+    "features": {
+        "ghcr.io/devcontainers/features/go:1": {},
+        "ghcr.io/devcontainers/features/node:1": {
+            "version": "none",
+            "nodeGypDependencies": false
+        },
+        "ghcr.io/eitsupi/devcontainer-features/jq-likes:2": {
+            "jqVersion": "latest",
+            "yqVersion": "latest"
+        },
+        "ghcr.io/devcontainers/features/python:1": {
+            "version": "latest",
+            "installTools": false
+        }
+    },
+    "postCreateCommand": "./scripts/devcontainer-init.sh"
+}
