@@ -92,7 +92,7 @@ $theme-colors: map-merge($theme-colors, $custom-theme-colors);
 
 // Update Bootstrap accordion colors
 $accordion-button-color: map-get($custom-theme-colors, "rapids-purple-primary");
-$accordion-bg:  (#fff);
+$accordion-bg: (#fff);
 $accordion-button-active-bg: (#fff);
 $accordion-button-active-color: map-get($custom-theme-colors, "rapids-purple-primary");
 
