@@ -12,13 +12,13 @@
   <div class="col">
     <div class="container">
 
-      <h1 class="text-center mb-10"> BRINGING ACCELERATED COMPUTING TO POLARS <br> [Open Beta] </h1>
+      <h1 class="text-center mb-10"> BRINGING ACCELERATED COMPUTING TO POLARS <br/> [Open Beta] </h1>
       <div class="row">
         <div class="col-md-4 py-3">
           <h2><i class="fa-light fa-file-binary"></i> Zero Code Change</h2>
           <p>Pass <code>engine="gpu"</code> to the Polars <code>collect</code> API to add GPU acceleration to your data processing tasks like data aggregation, merges, window functions, and much more.</p>
 
-          <br>
+          <br/>
 
           <h2 class="mt-4"><i class="fa-sharp fa-light fa-solar-system"></i> Ecosystem Compatible</h2>
           <p>Polars' growing ecosystem of data visualization, IO, &amp; ML libraries can be accelerated with the GPU engine.</p>
@@ -27,7 +27,7 @@
           <h2><i class="fa-solid fa-light fa-microchip"></i> Seamless CPU Fallback</h2>
           <p>For queries where one or more operations are not supported in cuDF, the entire query execution will gracefully fallback to the default CPU engine.</p>
 
-          <br>
+          <br/>
 
           <h2 class="mt-4"><i class="fa-light fa-bolt-lightning"></i> Query Optimizer</h2>
           <p>The GPU engine utilizes Polars' query optimizer to ensure efficient execution and minimal memory usage.</p>
@@ -63,7 +63,7 @@
       </div>
       <div class="row">
         <div class="col">
-          <p class="fw-lighter text-center">PDS-H benchmark | GPU: NVIDIA H100 | CPU: Intel Xeon W9-3495X (Sapphire Rapids) | Storage: Local NVMe <br>
+          <p class="fw-lighter text-center">PDS-H benchmark | GPU: NVIDIA H100 | CPU: Intel Xeon W9-3495X (Sapphire Rapids) | Storage: Local NVMe <br/>
             Note: PDS-H is derived from TPC-H but these results are not comparable to TPC-H results. <a href="https://github.com/pola-rs/polars-benchmark" target="_blank">Learn More <i class="fa-solid fa-arrow-up-right"></i></a></p>
         </div>
       </div>
@@ -131,6 +131,7 @@
             &nbsp;&nbsp;&nbsp;&nbsp;device=0,&nbsp;&nbsp;# This is the default
             <br/>
             &nbsp;&nbsp;&nbsp;&nbsp;raise_on_fail=True,&nbsp;&nbsp;# Fail loudly if can't execute on the GPU
+            <br/>
             )
 
             <br/><br/>
@@ -177,7 +178,7 @@
               </h2>
               <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faq1">
                 <div class="accordion-body">
-                  <p>No, you just need to install polars with a feature flag in your standard Python pip install command: <br>
+                  <p>The following command will install Polars with the required RAPIDS packages: <br/>
                     <code>pip install polars[gpu] --extra-index-url=https://pypi.nvidia.com</code>
                   </p>
                 </div>
