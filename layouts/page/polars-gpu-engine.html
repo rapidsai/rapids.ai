@@ -21,7 +21,7 @@
           <br>
 
           <h2 class="mt-4"><i class="fa-sharp fa-light fa-solar-system"></i> Ecosystem Compatible</h2>
-          <p>Polars' growing ecosystem of data visualization, IO, & ML libraries can be accelerated with the GPU engine.</p>
+          <p>Polars' growing ecosystem of data visualization, IO, &amp; ML libraries can be accelerated with the GPU engine.</p>
         </div>
         <div class="col-md-4 py-3">
           <h2><i class="fa-solid fa-light fa-microchip"></i> Seamless CPU Fallback</h2>
@@ -78,63 +78,73 @@
 <section class="row section padding-bottom-slant">
   <div class="col">
     <div class="container">
-      
 
       <h1 class="mb-4">How To Use </h1>
       <div class="row">
         <div class="col">
-          <p>First, install the Polars GPU engine with a feature flag in your standard Python pip install command:</p>
+          <p>First, install Polars with pip using the the GPU engine "extra" and the NVIDIA PyPI index:</p>
           <code class="code-sample mt-3">
             pip install polars[gpu] --extra-index-url=https://pypi.nvidia.com
           </code>
-         
         </div>
       </div>
 
       <div class="row">
         <div class="col-md-6 py-6">
           <h2><i class="fa-light fa-file-check"></i> Default GPU Engine </h2>
-          <p>To use the default GPU engine configuration, simply specify the engine as GPU to materialize the Polars' LazyFrame into a DataFrame using <code>.collect()</code> API:</p>
+          <p>Materialize the Polars LazyFrame into a DataFrame with the default GPU engine configuration by calling <code>.collect(engine="gpu")</code>:</p>
           <code class="code-sample mt-3">
             import polars as pl
-            
-            <br><br>
 
-            ldf = pl.LazyFrame({
-                "a": [1.242, 1.535]
-            })
+            <br/><br/>
 
-            <br><br>
+            ldf = pl.LazyFrame({"a": [1.242, 1.535]})
 
-            print(ldf.select(
-                  pl.col("a").round(1)
-                  ).collect(engine="gpu"))
+            <br/><br/>
+
+            print(
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;ldf.select(
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pl.col("a").round(1)
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;).collect(engine="gpu")
+            <br/>
+            )
+
           </code>
         </div>
-        <div class="col-md-6 py-6">         
+        <div class="col-md-6 py-6">
           <h2><i class="fa-regular fa-light fa-gear-complex-code"></i> Custom GPU Engine </h2>
           <p>For finer control on the engine, you can pass a <code>GPUEngine</code> object with additional configurations like device details and verbosity to the <code>engine=</code> parameter:</p>
           <code class="code-sample mt-3">
             import polars as pl
-           
-            <br><br>
-           
-            ldf = pl.LazyFrame({
-                "a": [1.242, 1.535]
-            })
-           
-            <br><br>
+
+            <br/><br/>
+
+            ldf = pl.LazyFrame({"a": [1.242, 1.535]})
+
+            <br/><br/>
 
             gpu_engine = pl.GPUEngine(
-                device=0,  # This is the default
-                raise_on_fail=True,  # Fail loudly if can't execute on the GPU
-                )
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;device=0,&nbsp;&nbsp;# This is the default
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;raise_on_fail=True,&nbsp;&nbsp;# Fail loudly if can't execute on the GPU
+            )
 
-            <br><br>
-            
-            print(ldf.select(pl.col("a").round(1)
-            ).collect(engine=gpu_engine))
-            
+            <br/><br/>
+
+            print(
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;ldf.select(
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;pl.col("a").round(1)
+            <br/>
+            &nbsp;&nbsp;&nbsp;&nbsp;).collect(engine=gpu_engine)
+            <br/>
+            )
+
           </code>
         </div>
       </div>
@@ -162,7 +172,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse1" aria-expanded="true" aria-controls="collapse1">
-                  Do I have to install any RAPIDS specific package for the GPU engine to work? 
+                  Do I have to install any RAPIDS specific package for the GPU engine to work?
                 </button>
               </h2>
               <div id="collapse1" class="accordion-collapse collapse show" data-bs-parent="#faq1">
@@ -301,7 +311,7 @@
         {
           label: 'Polars (CPU)',
           barPercentage: 0.6,
-          data: [35,67,136], 
+          data: [35,67,136],
           backgroundColor: 'rgb(33, 150, 243, 0.8)'
         },
         {
