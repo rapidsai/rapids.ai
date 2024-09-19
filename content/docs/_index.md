@@ -5,7 +5,6 @@ description: Gateway to the RAPIDS documentation content
 weight: 1
 cascade:
   body_class: mt-8 mt-md-0 # accounts for fixed header
-  draft: true
 ---
 
 Some introductory text below the H1 title. Welcome to RAPIDS. Here is our documentation. More words go here. Let's make the demo text a little longer.
