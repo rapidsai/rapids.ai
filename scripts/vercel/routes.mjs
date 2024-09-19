@@ -4,7 +4,7 @@ import path from "node:path";
 
 const DEFAULT_REDIRECT_CODE = 301;
 
-const makeTrailingSlashRedirects = () => (
+const makeTrailingSlashRoutes = () => (
   [
     // special case for redirecting /docs/cudf/23.04 to /docs/cudf/23.04/
     {
@@ -59,7 +59,7 @@ const makeRedirectsFromFile = () => {
 
 const makeRedirects = () => {
   const redirects = [];
-  redirects.push(...makeRedirectsFromFile(), ...makeTrailingSlashRedirects());
+  redirects.push(...makeRedirectsFromFile());
   return redirects;
 };
 
@@ -76,6 +76,7 @@ export const makeRoutes = () => {
 
   if (error) throw error;
   return [
+    ...makeTrailingSlashRoutes(),
     ...routes,
     {
       handle: "error",
