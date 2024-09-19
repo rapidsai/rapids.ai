@@ -22,12 +22,14 @@ install_dependencies() {
   fi
   echo "installing npm dependencies"
   npm install
+
   echo "installing hugo"
   # TODO: move hugo version to its own file so it can be easily parsed by devcontainer
   # init scripts and renovate can update it.
   HUGO_VERSION="0.121.1"
   HUGO_URL="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz"
   curl -sSL "${HUGO_URL}" | tar -zx -C "${INSTALL_PREFIX}/bin"
+
   echo "installing golang"
   LATEST_GO_VERSION=$(curl -sSL https://go.dev/VERSION?m=text| head -n 1)
   curl -sSL "https://dl.google.com/go/${LATEST_GO_VERSION}.linux-amd64.tar.gz" | \
@@ -38,10 +40,14 @@ install_dependencies() {
 build() {
   echo "printing env..."
   env | sort
+
+  echo "clean output directories..."
+  rm -rf ./.vercel/output ./public
+
   echo "building..."
   hugo --gc --minify
   mkdir -p .vercel/output/
-  node scripts/generate-vercel-config.mjs > .vercel/output/config.json
+  node scripts/vercel/config.mjs > .vercel/output/config.json
   cp -r public .vercel/output/static
 }
 
