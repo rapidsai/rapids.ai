@@ -161,6 +161,20 @@
               class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
         <div class="col-md-4 py-3">
+          <h2 class="text-white"><i class="fa-regular fa-terminal"></i> cuVS </h2>
+          <div class="tags-container border-top border-2 border-white">
+            <span class="tags-item text-white border-white"><i class="fa-solid fa-tag"></i> VECTOR SEARCH </span>
+            <span class="tags-item text-white border-white"><i class="fa-solid fa-tag"></i> PYTHON / C / C++ / RUST </span>
+          </div>
+          <p class="text-white"> The cuVS library contains optimized algorithms for approximate nearest neighbors and clustering, along with many other essential tools for accelerated vector search. Integrate cuVS into any vector database or vectorized data application for optimized speed and efficiency in information retrieval.</p>
+          <a href="https://github.com/rapidsai/cuvs" target="_blank">GitHub <i
+              class="fa-solid fa-arrow-up-right"></i> </a> <br>
+          <a href="https://docs.rapids.ai/api/raft/stable/" target="_blank">Documentation <i
+              class="fa-solid fa-arrow-up-right"></i> </a> <br>
+          <a href="/cuvs" target="_blank">cuVS Page <i
+                class="fa-solid fa-arrow-up-right"></i> </a>
+        </div>
+        <div class="col-md-4 py-3">
           <h2 class="text-white"><i class="fa-regular fa-terminal"></i> RAFT</h2>
           <div class="tags-container border-top border-2 border-white">
             <span class="tags-item text-white border-white"><i class="fa-solid fa-tag"></i> PRIMITIVES </span>
@@ -173,22 +187,6 @@
           <a href="https://github.com/rapidsai/raft" target="_blank">GitHub <i class="fa-solid fa-arrow-up-right"></i>
           </a> <br>
           <a href="https://docs.rapids.ai/api/raft/stable" target="_blank">Documentation <i
-              class="fa-solid fa-arrow-up-right"></i> </a>
-        </div>
-        <div class="col-md-4 py-3">
-          <h2 class="text-white"><i class="fa-regular fa-terminal"></i> cuxfilter </h2>
-          <div class="tags-container border-top border-2 border-white">
-            <span class="tags-item text-white border-white"><i class="fa-solid fa-tag"></i> DASHBOARDS </span>
-            <span class="tags-item text-white border-white"><i class="fa-solid fa-tag"></i> VISUALIZATION </span>
-            <span class="tags-item text-white border-white"><i class="fa-solid fa-tag"></i> PYTHON </span>
-          </div>
-          <p class="text-white"> Quickly visualize and filter through large datasets, with a few lines of code,
-            using best in class charting libraries. </p>
-          <a href="https://github.com/rapidsai/cuxfilter" target="_blank">GitHub <i
-              class="fa-solid fa-arrow-up-right"></i> </a> <br>
-          <a href="https://docs.rapids.ai/api/cuxfilter/stable/" target="_blank">Documentation <i
-              class="fa-solid fa-arrow-up-right"></i> </a> <br>
-          <a href="https://github.com/orgs/rapidsai/projects/67/views/1" target="_blank">Roadmap <i
               class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
       </div>
@@ -218,21 +216,20 @@
               class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
         <div class="col-md-4 py-3">
-          <h2 class="text-white"><i class="fa-regular fa-terminal"></i> cuSignal </h2>
+          <h2 class="text-white"><i class="fa-regular fa-terminal"></i> cuxfilter </h2>
           <div class="tags-container border-top border-2 border-white">
-            <span class="tags-item text-white border-white"><i class="fa-solid fa-tag"></i> SCIPY-SIGNAL </span>
-            <span class="tags-item text-white border-white"><i class="fa-solid fa-tag"></i> SIGNAL PROCESSING </span>
+            <span class="tags-item text-white border-white"><i class="fa-solid fa-tag"></i> DASHBOARDS </span>
+            <span class="tags-item text-white border-white"><i class="fa-solid fa-tag"></i> VISUALIZATION </span>
             <span class="tags-item text-white border-white"><i class="fa-solid fa-tag"></i> PYTHON </span>
           </div>
-          <p class="text-white"> cuSignal accelerates manipulation and analysis of signal data in a Scipy Signal-like
-            API. </p>
-          <a href="https://github.com/rapidsai/cusignal" target="_blank">GitHub <i
+          <p class="text-white"> Quickly visualize and filter through large datasets, with a few lines of code,
+            using best in class charting libraries. </p>
+          <a href="https://github.com/rapidsai/cuxfilter" target="_blank">GitHub <i
               class="fa-solid fa-arrow-up-right"></i> </a> <br>
-          <a href="https://docs.rapids.ai/api/cusignal/stable" target="_blank">Documentation <i
+          <a href="https://docs.rapids.ai/api/cuxfilter/stable/" target="_blank">Documentation <i
               class="fa-solid fa-arrow-up-right"></i> </a> <br>
-          <a href="https://github.com/orgs/rapidsai/projects/41/views/5" target="_blank">Roadmap <i
+          <a href="https://github.com/orgs/rapidsai/projects/67/views/1" target="_blank">Roadmap <i
               class="fa-solid fa-arrow-up-right"></i> </a>
-
         </div>
         <div class="col-md-4 py-3">
           <h2 class="text-white"><i class="fa-regular fa-terminal"></i> cuCIM </h2>
@@ -311,16 +308,6 @@
           )
         )
         (dict
-          "title" (site.GetPage "_partners/dask-sql").Params.name
-          "img" (((site.GetPage "_partners/dask-sql").Resources.Get "logo_400x.png").Resize "100x").RelPermalink
-          "labels" (slice "DISTRIBUTED" "SQL" "PYTHON")
-          "description" "Scale out workloads with Dask via tried-and-true SQL queries on your data."
-          "urls" (slice
-            (dict "text" "GitHub" "link" (site.GetPage "_partners/dask-sql").Params.github_repo_url)
-            (dict "text" "Documentation" "link" (site.GetPage "_partners/dask-sql").Params.documentation_url)
-          )
-        )
-        (dict
           "title" "Visualization"
           "img" ((.Resources.GetMatch "viz-logo.png").Resize "100x").RelPermalink
           "labels" (slice "PLOTLY DASH" "HOLOVIZ" "CUXFILTER" "NODE RAPIDS" "PYTHON / JS")
@@ -393,25 +380,25 @@
               class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
         <div class="col-md-6 py-3">
-          <h2><i class="fa-regular fa-gauge-circle-bolt"></i> Merlin </h2>
+          <h2><i class="fa-regular fa-gauge-circle-bolt"></i> NeMo Curator </h2>
           <div class="tags-container border-top border-2 border-rapids-purple-primary">
             <span class="tags-item text-rapids-purple-primary border-rapids-purple-primary"><i
-                class="fa-solid fa-tag"></i> RECOMMENDERS </span>
+              class="fa-solid fa-tag"></i> CURATION </span>
             <span class="tags-item text-rapids-purple-primary border-rapids-purple-primary"><i
-                class="fa-solid fa-tag"></i> NVIDIA AI </span>
+                class="fa-solid fa-tag"></i> PYTHON </span>
+            <span class="tags-item text-rapids-purple-primary border-rapids-purple-primary"><i
+                class="fa-solid fa-tag"></i> NEMO </span>
           </div>
-          <p> NVIDIA Merlin is an open source library providing end-to-end GPU-accelerated recommender systems. Merlin
-            leverages RAPIDS cuDF and Dask cuDF for dataframe transformation during ETL and inference, as well as for
-            the optimized dataloaders in TensorFlow, PyTorch or HugeCTR to accelerate deep learning training. </p>
-          <a href="https://github.com/NVIDIA-Merlin" target="_blank">GitHub <i class="fa-solid fa-arrow-up-right"></i>
+          <p> NeMo Curator is a Python library designed for scalable and efficient dataset preparation, enhancing LLM training accuracy through GPU-accelerated data curation using Dask and RAPIDS. It offers a customizable and modular interface that simplifies pipeline expansion and accelerates model convergence by preparing high-quality tokens. </p>
+          <a href="https://github.com/NVIDIA/NeMo-Curator" target="_blank">GitHub <i class="fa-solid fa-arrow-up-right"></i>
           </a> <br>
-          <a href="https://developer.nvidia.com/nvidia-merlin" target="_blank">Learn More <i
+          <a href="https://docs.nvidia.com/nemo-framework/user-guide/latest/datacuration/index.html" target="_blank">Learn More <i
               class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
       </div>
       <div class="row">
         <div class="col-md-6 py-3">
-          <h2><i class="fa-regular fa-gauge-circle-bolt"></i> cuOpt</h2>
+          <h2><i class="fa-regular fa-gauge-circle-bolt"></i> cuOpt </h2>
           <div class="tags-container border-top border-2 border-rapids-purple-primary">
             <span class="tags-item text-rapids-purple-primary border-rapids-purple-primary"><i
                 class="fa-solid fa-tag"></i> ROUTING </span>
@@ -443,7 +430,7 @@
       </div>
       <div class="row">
         <div class="col-md-6 py-3">
-          <h2><i class="fa-regular fa-gauge-circle-bolt"></i>Clara </h2>
+          <h2><i class="fa-regular fa-gauge-circle-bolt"></i> Clara </h2>
           <div class="tags-container border-top border-2 border-rapids-purple-primary">
             <span class="tags-item text-rapids-purple-primary border-rapids-purple-primary"><i
                 class="fa-solid fa-tag"></i> MEDICAL </span>
@@ -459,18 +446,39 @@
               class="fa-solid fa-arrow-up-right"></i> </a>
         </div>
         <div class="col-md-6 py-3">
-          <h2><i class="fa-regular fa-gauge-circle-bolt"></i> Monai </h2>
+          <h2><i class="fa-regular fa-gauge-circle-bolt"></i> MONAI </h2>
           <div class="tags-container border-top border-2 border-rapids-purple-primary">
             <span class="tags-item text-rapids-purple-primary border-rapids-purple-primary"><i
                 class="fa-solid fa-tag"></i> MEDICAL IMAGING </span>
             <span class="tags-item text-rapids-purple-primary border-rapids-purple-primary"><i
-                class="fa-solid fa-tag"></i> cuCIM </span>
+                class="fa-solid fa-tag"></i> CUCIM </span>
           </div>
           <p> RAPIDS cuCIM has been integrated into the MONAI Transforms component to accelerate the data pathology
             training pipeline on GPU.</p>
           <a href="https://github.com/Project-MONAI" target="_blank"> GitHub <i class="fa-solid fa-arrow-up-right"></i>
           </a> <br>
           <a href="https://monai.io/" target="_blank">Project Page <i class="fa-solid fa-arrow-up-right"></i> </a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 py-3">
+          <h2><i class="fa-regular fa-gauge-circle-bolt"></i> Merlin </h2>
+          <div class="tags-container border-top border-2 border-rapids-purple-primary">
+            <span class="tags-item text-rapids-purple-primary border-rapids-purple-primary"><i
+                class="fa-solid fa-tag"></i> RECOMMENDERS </span>
+            <span class="tags-item text-rapids-purple-primary border-rapids-purple-primary"><i
+                class="fa-solid fa-tag"></i> NVIDIA AI </span>
+          </div>
+          <p> NVIDIA Merlin is an open source library providing end-to-end GPU-accelerated recommender systems. Merlin
+            leverages RAPIDS cuDF and Dask cuDF for dataframe transformation during ETL and inference, as well as for
+            the optimized dataloaders in TensorFlow, PyTorch or HugeCTR to accelerate deep learning training. </p>
+          <a href="https://github.com/NVIDIA-Merlin" target="_blank">GitHub <i class="fa-solid fa-arrow-up-right"></i>
+          </a> <br>
+          <a href="https://developer.nvidia.com/nvidia-merlin" target="_blank">Learn More <i
+              class="fa-solid fa-arrow-up-right"></i> </a>
+        </div>
+        <div class="col-md-6 py-3">
+
         </div>
       </div>
     </div>

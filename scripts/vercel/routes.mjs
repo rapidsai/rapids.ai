@@ -1,5 +1,7 @@
 import { getTransformedRoutes } from "@vercel/routing-utils";
 import { getLibraryVersions } from "./site-data.mjs"
+import { readFileSync } from "node:fs";
+import path from "node:path";
 
 const DEFAULT_REDIRECT_CODE = 301;
 
@@ -39,9 +41,27 @@ const makeTrailingSlashRoutes = () => (
   ]
 )
 
+const makeRedirectsFromFile = () => {
+  const redirectsFile = path.join(import.meta.dirname, "..", "..", "_redirects");
+  const redirectsFileContents = readFileSync(redirectsFile, "utf8");
+  const redirects = redirectsFileContents
+    .split("\n")
+    .filter(Boolean)
+    .map((line) => {
+      const [source, destination] = line.split(/\s+/).filter(Boolean);
+      return {
+        source,
+        destination,
+        statusCode: DEFAULT_REDIRECT_CODE,
+      };
+    });
+  return redirects;
+}
+
 const makeRedirects = (libraryVersions) => {
-  // TODO: read & parse redirects from _redirects file
   const redirects = [];
+  redirects.push(...makeRedirectsFromFile());
+
   for (const lib of libraryVersions) {
     // redirects for /docs/cudf/ => /docs/cudf/stable/
     if (!lib.version_strings.includes("stable")) continue;

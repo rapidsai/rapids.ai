@@ -177,8 +177,7 @@ button {
   border-color: #dbdbdb;
   color: white;
   border-width: 3px;
-  border-radius: 0.5rem;
-  border-top-right-radius: 0;
+  border-radius: 0.5rem 0 0.5rem 0.5rem;
   font-weight: 600;
   font-family: 'Open Sans';
   text-transform: uppercase;
@@ -194,6 +193,12 @@ button {
     0 2px 2px rgba(0, 0, 0, 0.2) inset;
 }
 
+/* Some buttons (in accordions) have long titles that must wrap */
+button.wrappable-button {
+  white-space: normal;
+  word-wrap: break-word;
+}
+
 button:hover {
   text-shadow: none;
   box-shadow: none;
@@ -207,6 +212,13 @@ button:hover {
 .has-background-rapids-image {
   background: url($header-bg-url) no-repeat;
   background-size: cover;
-  border-radius: 0.5rem;
-  border-top-right-radius: 0;
+  border-radius: 0.5rem 0 0.5rem 0.5rem;
+}
+
+.has-box-shadow {
+  box-shadow:
+  0 1px 2px rgba(0, 0, 0, 0.1),
+  0 2px 2px rgba(0, 0, 0, 0.1),
+  0 4px 2px rgba(0, 0, 0, 0.1),
+  0 2px 2px rgba(0, 0, 0, 0.2) inset;
 }

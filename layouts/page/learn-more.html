@@ -65,8 +65,6 @@
               target="_blank">cuSpatial</a> (similar API to geoPandas) <br>
             <i class="fa fa-caret-right"></i> Image processing with <a href="https://github.com/rapidsai/cucim"
               target="_blank">cuCIM</a> (similar API to scikit-image) <br>
-            <i class="fa fa-caret-right"></i> Signal processing <a href="https://github.com/rapidsai/cusignal"
-              target="_blank">cuSignal</a> (similar API to scipy.signal) <br>
             <i class="fa fa-caret-right"></i> Seamless cross-filtered dashboards with <a
               href="https://github.com/rapidsai/cuxfilter" target="_blank">cuxfilter</a> <br>
             <i class="fa fa-caret-right"></i> Low level compute primitives with <a
@@ -108,15 +106,30 @@
 
       <div id="accelerators"></div>
       <h1 class="mt-10 mb-5"> PyData Accelerators </h1>
+
       <div class="row">
         <div class="col-md-6 py-3">
-          <h2><i class="fa-light fa-gauge-circle-bolt"></i> cuDF Pandas Accelerator Mode </h2>
+          <h2><i class="fa-light fa-gauge-circle-bolt"></i> cuDF Pandas Accelerator </h2>
           <p>cuDF has a new pandas accelerator mode to speed up pandas workflows with zero code change. This is part of
             an on-going effort to streamline accelerated data science.
             <a href="/cudf-pandas">Learn More on the Launch Page <i class="fa-solid fa-arrow-up-right"></i> </a>
           </p>
         </div>
-        <div class="col-md-6 py-3"></div>
+        <div class="col-md-6 py-3">
+          <h2><i class="fa-light fa-igloo"></i> Polars GPU Engine </h2>
+          <p>RAPIDS and Polars are collaborating to GPU accelerate Polars DataFrames, enabling workflows to utilize both the GPU and CPU to significantly speed up workloads.
+            <a href="/polars-gpu-engine">Learn More on the Launch Page <i class="fa-solid fa-arrow-up-right"></i> </a>
+          </p>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-md-6 py-3">
+          <h2><i class="fa-light fa-circle-nodes"></i> NetworkX Accelerator</h2>
+          <p>The cuGraph backend for NetworkX brings accelerated graph analytics to every NetworkX user. This is another part of an on-going effort to streamline accelerated data science.
+            <a href="https://docs.rapids.ai/api/cugraph/stable/nx_cugraph/nx_cugraph/" target="_blank">Learn More on the cuGraph Docs Page <i class="fa-solid fa-arrow-up-right"></i> </a>
+          </p>
+        </div>
+        <div class="col-md-6 py-3"> </div>
       </div>
 
     </div>

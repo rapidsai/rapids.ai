@@ -1,6 +1,5 @@
 #!/bin/bash
 set -euo pipefail
-
 USAGE="Usage:
   build:           vercel.sh
   install deps:    vercel.sh install
@@ -13,7 +12,6 @@ else
   echo "${USAGE}"
   exit 1
 fi
-
 INSTALL_PREFIX="/usr/local"
 export PATH="${PATH}:${INSTALL_PREFIX}/go/bin"
 
@@ -22,7 +20,6 @@ install_dependencies() {
     echo "Not in Vercel, skipping install. Devcontainer already has everything installed."
     return
   fi
-
   echo "installing npm dependencies"
   npm install
 
@@ -48,13 +45,11 @@ build() {
   rm -rf ./.vercel/output ./public
 
   echo "building..."
-  # TODO: disable draft building
-  hugo --gc --minify --buildDrafts
+  hugo --gc --minify
   mkdir -p .vercel/output/
   node scripts/vercel/config.mjs > .vercel/output/config.json
   cp -r public .vercel/output/static
 }
-
 
 case "${CMD}" in
   "install")

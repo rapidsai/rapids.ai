@@ -8,51 +8,39 @@
 ) }}
 
 
-<!-- Special -->
-<section class="row">
-    <div class="col">
-        <div class="hero-announce-container">
-            <a href="https://www.nvidia.com/gtc/" target='_blank'
-                class="hero-announce">
-                <span class="hero-announce-icon fa-stack">
-                    <i class="fa-solid fa-circle fa-stack-2x"></i>
-                    <i class="fa-sharp fa-regular fa-bell-on fa-stack-1x fa-inverse"></i>
-                </span>
-                <button class="text-rapids-purple-primary border-rapids-purple-primary"><strong>March 18 - 21</strong>
-                    <br />Register for NVIDIA GTC - In Person Experience Is Back</button>
-            </a>
-
-            <a href="/cudf-pandas" target='_blank' class="hero-announce">
-                <span class="hero-announce-icon fa-stack">
-                    <i class="fa-solid fa-circle fa-stack-2x"></i>
-                    <i class="fa-sharp fa-regular fa-bell-on fa-stack-1x fa-inverse"></i>
-                </span>
-                <button class="text-rapids-purple-primary border-rapids-purple-primary"><strong>Now in open
-                        beta:</strong> <br> cuDF pandas accelerator mode</button>
-            </a>
-        </div>
-    </div>
-</section>
-
-<br>
-
 <!-- Announcements -->
 {{ $announcements := slice
     (dict
-        "text" "RAPIDS 24.02 Released"
-        "url" "https://docs.rapids.ai/install#selector"
+        "text" "New: Polars GPU Engine"
+        "url" "/polars-gpu-engine"
+        "target" "_self"
+        "dur" "2s"
     )
     (dict
-        "text" "Notice: Deprecation for Pascal GPUs"
-        "url" "https://docs.rapids.ai/notices/rsn0034/"
+        "text" "cuDF now pre-installed in Google Colab"
+        "url" "https://developer.nvidia.com/blog/rapids-cudf-instantly-accelerates-pandas-up-to-50x-on-google-colab/?ncid=em-news-294101"
+        "target" "_blank"
+        "dur" "1s"
+    )
+    (dict
+        "text" "Vector Search now with cuVS"
+        "url" "/cuvs"
+        "target" "_self"
+        "dur" "1.5s"
+    )
+    (dict
+        "text" "RAPIDS 24.08 Released"
+        "url" "https://docs.rapids.ai/install#selector"
+        "target" "_blank"
+        "dur" "1.8s"
     )
 }}
 <section class="row">
     <div class="col">
         <div class="hero-announce-container">
             {{ range $announcements }}
-            <a href="{{ .url }} " target='_blank' class="hero-announce">
-                <span class="hero-announce-icon fa-stack">
+            <a href="{{ .url }}" target="{{ .target }}" class="hero-announce">
+                <span class="hero-announce-icon fa-stack fa-bounce" style="--fa-animation-iteration-count: 2; --fa-animation-duration: {{ .dur }}">
                     <i class="fa-solid fa-circle fa-stack-2x"></i>
                     <i class="fa-regular fa-bell fa-stack-1x fa-inverse"></i>
                 </span>
@@ -70,8 +58,6 @@
 <section class="row section padding-bottom-slant">
     <div class="col">
         <div class="container">
-
-            <h1 class="text-center mb-5">Data Science at the speed of thought</h1>
             <div class="row">
                 <div class="col-md-4 py-3">
                     <h2><i class="fa-light fa-caret-right"></i> What is RAPIDS </h2>
@@ -103,15 +89,20 @@
 
             <br>
 
-            <div class="row has-background-rapids-image ">
-                <div class="col-md-12 py-5">
-                    <h2 class="text-white"><i class="fa-light fa-gauge-circle-bolt"></i> NEW: Pandas Accelerator Mode
-                        for cuDF </h2>
-                    <p class="text-white">Use cuDF's new pandas Accelerator Mode to speed up pandas workflows with zero
-                        code change.
-                        <a href="/cudf-pandas"> Learn More on the Launch Page <i
-                                class="fa-solid fa-arrow-up-right"></i></a>
+            <div class="row has-background-rapids-image has-box-shadow">
+                <div class="col-md-6 py-5">
+                    <h2 class="text-white"><i class="fa-light fa-gauge-circle-bolt"></i> Pandas Accelerator Mode for cuDF </h2>
+                    <p class="text-white">Use cuDF pandas Accelerator Mode to speed up pandas workflows with zero code change.
+                        <a href="/cudf-pandas"> Learn More on the Accelerator Mode Page <i class="fa-solid fa-arrow-up-right"></i></a>
                     </p>
+
+                </div>
+                <div class="col-md-6 py-5">
+                    <h2 class="text-white"><i class="fa-light fa-igloo"></i> Polars GPU Engine powered by cuDF </h2>
+                    <p class="text-white">Accelerate Polars by enabling the GPU engine with zero code change.
+                        <a href="/polars-gpu-engine"> Learn More on the Launch Page <i class="fa-solid fa-arrow-up-right"></i></a>
+                    </p>
+
                 </div>
             </div>
 
@@ -122,7 +113,7 @@
                 <div class="col-md-4 py-3">
                     <h2><i class="fa-thin fa-objects-column"></i> Faster Pandas <br> with cuDF</h2>
                     <p>cuDF accelerates pandas with no code change and brings greatly improved performance.</p> <br>
-                    <a href="https://github.com/rapidsai/cudf/blob/branch-24.02/docs/cudf/source/user_guide/performance-comparisons/performance-comparisons.ipynb"
+                    <a href="https://github.com/rapidsai/cudf/blob/branch-24.08/docs/cudf/source/user_guide/performance-comparisons/performance-comparisons.ipynb"
                         target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
 
                     <canvas id="cuDFchart" width="400" height="350"></canvas>
@@ -132,7 +123,7 @@
                 <div class="col-md-4 py-3">
                     <h2><i class="fa-light fa-microchip-ai"></i> Faster scikit-learn <br> with cuML</h2>
                     <p>cuML brings huge speedups to ML modeling with an API that matches scikit-learn.</p> <br>
-                    <a href="https://github.com/rapidsai/cuml/tree/branch-24.02/python/cuml/benchmark"
+                    <a href="https://github.com/rapidsai/cuml/tree/branch-24.08/python/cuml/cuml/benchmark"
                         target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
 
                     <canvas id="cuMLchart" width="400" height="350"></canvas>
@@ -140,15 +131,15 @@
                         NVIDIA A100 80GB (1x GPU) w/ scikit-learn v1.2 and cuML v23.02</p>
                 </div>
                 <div class="col-md-4 py-3">
-                    <h2><i class="fa-light fa-circle-nodes"></i> Faster networkX <br> with cuGraph</h2>
-                    <p>cuGraph makes migration from networkX easy, accelerates graph analytics, and allows scaling far
+                    <h2><i class="fa-light fa-circle-nodes"></i> Faster NetworkX <br> with cuGraph</h2>
+                    <p>cuGraph makes migration from NetworkX easy, accelerates graph analytics, and allows scaling far
                         beyond existing tools. </p>
-                    <a href="https://github.com/rapidsai/cugraph/blob/branch-24.02/notebooks/cugraph_benchmarks/synth_release.ipynb"
+                    <a href="https://github.com/rapidsai/cugraph/blob/branch-24.08/notebooks/cugraph_benchmarks/synth_release_single_gpu.ipynb"
                         target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
 
                     <canvas id="cuGraphChart" width="400" height="350"></canvas>
                     <p class="fs-8 text-muted">* Benchmark on AMD EPYC 7642 (using 1x 2.3GHz CPU core) w/ 512GB and
-                        NVIDIA A100 80GB (1x GPU) w/ networkX v3.0 and cuGraph v23.02</p>
+                        NVIDIA A100 80GB (1x GPU) w/ NetworkX v3.0 and cuGraph v23.02</p>
                 </div>
             </div>
         </div>
@@ -179,30 +170,30 @@
                     <p><strong>A.</strong> NVIDIA Volta™ or higher GPU with <a
                             href="https://developer.nvidia.com/cuda-gpus" target="_blank">compute capability 7.0+
                             <i class="fa-solid fa-arrow-up-right"></i></a></p>
-                    <p><strong>B.</strong> Ubuntu 20.04 or 22.04, CentOS 7, Rocky Linux 8, or WSL2 on Windows 11</p>
+                    <p><strong>B.</strong> Ubuntu 20.04 or 22.04, Rocky Linux 8, or WSL2 on Windows 11</p>
                     <p><strong>C.</strong> Recent <a href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html"
                             target="_blank"> CUDA version <em>and</em> NVIDIA driver pairs</a>. Check yours with:
                         <code>nvidia-smi</code>
 
                     <h3 class="mt-6 text-white">Install with Conda</h3>
                     <p><strong>1.</strong> If not installed, download and run the install script. <br>
-                        This will install the latest miniconda:
+                        This will install the latest miniforge:
                     </p>
-                    <pre class="highlight use-white-copy"><code>wget https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-bash Miniconda3-latest-Linux-x86_64.sh</code></pre>
+                    <pre class="highlight use-white-copy"><code>wget "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname)-$(uname -m).sh"
+bash Miniforge3-$(uname)-$(uname -m).sh</code></pre>
                     <br>
                     <p><strong>2.</strong> Then quick install RAPIDS with:</p>
                     <pre
-                        class="highlight use-white-copy"><code>conda create --solver=libmamba -n rapids-24.02 -c rapidsai -c conda-forge -c nvidia rapids=24.02 python=3.10 cuda-version=12.0</code></pre>
+                        class="highlight use-white-copy"><code>conda create -n rapids-24.08 -c rapidsai -c conda-forge -c nvidia rapids=24.08 python=3.11 cuda-version=12.5</code></pre>
 
                     <h3 class="mt-6 text-white">Install with pip</h3>
                     <p>Install via the NVIDIA PyPI index:</p>
                     <pre class="highlight use-white-copy"><code>pip install \
 --extra-index-url=https://pypi.nvidia.com \
-cudf-cu12==24.2.* \
-dask-cudf-cu12==24.2.* \
-cuml-cu12==24.2.* \
-cugraph-cu12==24.2.*</code></pre>
+cudf-cu12==24.8.* \
+dask-cudf-cu12==24.8.* \
+cuml-cu12==24.8.* \
+cugraph-cu12==24.8.*</code></pre>
 
                     <h3 class="mt-6 text-white">Install with Docker</h3>
                     <p>Check that you have the <a href="https://docs.rapids.ai/install#docker" target="_blank">required
@@ -219,15 +210,15 @@ cugraph-cu12==24.2.*</code></pre>
                          detailed installation steps, and information about supported platforms. </p>
                 </div>
                 <div class="col-md-6 py-3">
-                    <h2 class="text-white"><i class="fa-light fa-gauge-circle-bolt"></i> Test Drive the new cuDF</h2>
-                    <p>Try out cuDF's new pandas Accelerator Mode, with a free required account, right now by <a
-                            href="https://nvda.ws/rapids-cudf" target="_blank">Launching Google CoLab <i
+                    <h2 class="text-white"><i class="fa-light fa-gauge-circle-bolt"></i> Test Drive cuDF</h2>
+                    <p>Try out cuDF pandas Accelerator Mode, with a free required account, right now by <a
+                            href="https://nvda.ws/rapids-cudf" target="_blank">launching Google Colab <i
                                 class="fa-solid fa-arrow-up-right"></i> </a> </p>
 
                     <br><br>
 
                     <h2 class="text-white"><i class="fa-light fa-cloud-arrow-down"></i> Try RAPIDS Online </h2>
-                    <p>Don't have access to a GPU system right now? Try out RAPIDS with cloud based hardware from one of
+                    <p>Don't have access to a GPU system right now? Try out all of the RAPIDS libraries with cloud based hardware from one of
                         these featured channels: </p>
 
                     <br>
@@ -408,7 +399,7 @@ cugraph-cu12==24.2.*</code></pre>
                 </div>
                 <div class="col-md-4 py-3">
                     <h2><i class="fa-regular fa-chart-user"></i> Use Cases </h2>
-                    <p> Hear about success stories, resources for integrating RAPIDs workflows in your business, and
+                    <p> Hear about success stories, resources for integrating RAPIDS workflows in your business, and
                         deployment strategies in our
                         <a href="/learn-more#use-cases"> Use Cases Section <i
                                 class="fa-solid fa-arrow-up-right"></i></a>
@@ -627,7 +618,7 @@ cugraph-cu12==24.2.*</code></pre>
         data: {
             labels: ['Jaccard', 'Core Number', 'Louvain', 'PageRank', 'Katz'],
             datasets: [{
-                label: 'cuGraph vs networkX speedup',
+                label: 'cuGraph vs NetworkX speedup',
                 data: [7, 10, 35, 42, 87],
                 backgroundColor: [
                     'rgb(115, 6, 255, .80)'
