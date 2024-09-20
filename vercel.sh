@@ -26,7 +26,7 @@ install_dependencies() {
   echo "installing hugo"
   # TODO: move hugo version to its own file so it can be easily parsed by devcontainer
   # init scripts and renovate can update it.
-  HUGO_VERSION="0.121.1"
+  HUGO_VERSION="0.124.1"
   HUGO_URL="https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_extended_${HUGO_VERSION}_Linux-64bit.tar.gz"
   curl -sSL "${HUGO_URL}" | tar -zx -C "${INSTALL_PREFIX}/bin"
 
