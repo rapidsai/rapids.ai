@@ -9,7 +9,7 @@ services:
     ID: G-RKXFW6CM42
 
 disableKinds: [taxonomy, term]
-
+enableGitInfo: true
 sitemap:
   changefreq: monthly
   filename: sitemap.xml
