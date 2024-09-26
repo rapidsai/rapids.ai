@@ -1,0 +1,1 @@
+{{ site.Data.releases | jsonify }}
