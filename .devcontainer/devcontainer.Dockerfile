@@ -23,11 +23,17 @@ EOF
 # Install yq
 COPY --from=mikefarah/yq /usr/bin/yq /home/vscode/.local/bin/yq
 
-# Install jq
+# Install jq, Python
+ENV VIRTUAL_ENV="/home/vscode/venv"
 RUN <<EOF
 sudo apt-get update
 export DEBIAN_FRONTEND=noninteractive
-sudo apt-get -y install --no-install-recommends jq
+sudo apt-get -y install --no-install-recommends \
+  jq \
+  python3 python3-pip python3-venv
 sudo apt-get clean
 sudo rm -rf /var/lib/apt/lists/*
+
+python3 -m venv "${VIRTUAL_ENV}"
 EOF
+ENV PATH="$VIRTUAL_ENV/bin:$PATH"
