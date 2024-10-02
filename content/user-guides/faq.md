@@ -1,6 +1,9 @@
 ---
-title: FAQ | RAPIDS
-description: Frequently Asked Questions
+title: RAPIDS FAQ
+linkTitle: Frequently Asked Questions
+description: Gateway to Questions
+type: docs
+weight: 1
 ---
 
 ## Question 1
@@ -13,7 +16,3 @@ text text
 ### SubQuestion
 text text
 
-
-
-  <!-- Global JS -->
-  <script src="/js/main.js"></script>

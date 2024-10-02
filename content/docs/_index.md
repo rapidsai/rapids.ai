@@ -1,8 +1,10 @@
 ---
 title: Documentation
+linkTitle: RAPIDS Documentation
+description: Gateway to the RAPIDS documentation content
+weight: 1
 cascade:
   body_class: mt-8 mt-md-0 # accounts for fixed header
-  draft: true
 ---
 
 Some introductory text below the H1 title. Welcome to RAPIDS. Here is our documentation. More words go here. Let's make the demo text a little longer.
@@ -10,16 +12,9 @@ Some introductory text below the H1 title. Welcome to RAPIDS. Here is our docume
 ## Overview
 This is a docs page!
 
-Yes, it doesn't look great at the moment. We'll need to continue to refactor some styles from the Bulma -> Bootstrap migration.
+We'll need to continue to refactor things.
 
-That won't take long.
-
-When it's done, our documentation pages on rapids.ai will look like this: https://www.docsy.dev/docs/.
-
-Things to fix (non-exhaustive list):
-
-- Element spacing
-- Navbar offset (or potentially keeping the navbar statically placed on doc pages)
+When it's done, the documentation pages on rapids.ai will look like this: https://www.docsy.dev/docs/.
 
 Here's what a list looks like:
 
