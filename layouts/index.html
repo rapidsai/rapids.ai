@@ -138,7 +138,8 @@
 
                     <canvas id="cuGraphChart" width="400" height="350"></canvas>
                     <p class="fs-8 text-muted">* Benchmark on Intel(R) Xeon(R) w9-3495X w/ 250 GB and
-                        NVIDIA A100 80GB (1x GPU) w/ NetworkX v3.4.1 and cuGraph/nx-cugraph v24.10</p>
+                        NVIDIA A100 80GB (1x GPU) w/ NetworkX v3.4.1 and cuGraph/nx-cugraph v24.10;
+                        WCC = Weakly COnnected Components; Betweenness = Betweenness Centrality with k=100</p>
                 </div>
             </div>
         </div>
@@ -615,7 +616,7 @@ cugraph-cu12==24.10.*</code></pre>
     new Chart(ctx3, {
         type: 'bar',
         data: {
-            labels: ['WCC', 'Triangles', 'PageRank', 'Louvain', 'BC k=100'],
+            labels: ['WCC', 'Triangles', 'PageRank', 'Louvain', 'Betweenness'],
             datasets: [{
                 label: 'NetworkX+cuGraph vs NetworkX speedup',
                 data: [24, 137, 177, 195, 487],
