@@ -1,0 +1,790 @@
+# The website assumes the following:
+#  1. The releases are sorted with newer releases at the top
+#  2. The first list item is the next nightly release
+#  3. The second list item is the current nightly release
+#  4. The third list item is the current stable release
+#  5. The fourth list item is the current legacy release
+#  6. Dates are in the format "(Zero Padded Day) (Abbreviated Month) Year" (e.g. "06 Oct 2018")
+# Any deviation from these assumptions will result in the website not
+# displaying information correctly.
+
+- version: '24.06'
+  ucxx_version: '0.38'
+  cudf_dev:
+    start: 14 Mar 2024
+    end: 15 May 2024
+    days: 43
+  other_dev:
+    start: 21 Mar 2024
+    end: 22 May 2024
+    days: 43
+  cudf_burndown:
+    start: 16 May 2024
+    end: 22 May 2024
+    days: 5
+  other_burndown:
+    start: 23 May 2024
+    end: 29 May 2024
+    days: 4
+  cudf_codefreeze:
+    start: 23 May 2024
+    end: 04 Jun 2024
+    days: 8
+  other_codefreeze:
+    start: 30 May 2024
+    end: 04 Jun 2024
+    days: 4
+  release:
+    start: 05 Jun 2024
+    end: 06 Jun 2024
+    days: 2
+- version: '24.04'
+  ucxx_version: '0.37'
+  cudf_dev:
+    start: 18 Jan 2024
+    end: 13 Mar 2024
+    days: 39
+  other_dev:
+    start: 25 Jan 2024
+    end: 20 Mar 2024
+    days: 39
+  cudf_burndown:
+    start: 14 Mar 2024
+    end: 20 Mar 2024
+    days: 5
+  other_burndown:
+    start: 21 Mar 2024
+    end: 03 Apr 2024
+    days: 8
+  cudf_codefreeze:
+    start: 21 Mar 2024
+    end: 09 Apr 2024
+    days: 12
+  other_codefreeze:
+    start: 04 Apr 2024
+    end: 09 Apr 2024
+    days: 4
+  release:
+    start: 10 Apr 2024
+    end: 11 Apr 2024
+    days: 2
+- version: '24.02'
+  cudf_dev:
+    start: 09 Nov 2023
+    end: 17 Jan 2024
+    days: 42
+  other_dev:
+    start: 16 Nov 2023
+    end: 24 Jan 2024
+    days: 43
+  cudf_burndown:
+    start: 18 Jan 2024
+    end: 24 Jan 2024
+    days: 5
+  other_burndown:
+    start: 25 Jan 2024
+    end: 31 Jan 2024
+    days: 5
+  cudf_codefreeze:
+    start: 25 Jan 2024
+    end: 06 Feb 2024
+    days: 9
+  other_codefreeze:
+    start: 01 Feb 2024
+    end: 06 Feb 2024
+    days: 4
+  release:
+    start: 07 Feb 2024
+    end: 08 Feb 2024
+    days: 2
+- version: '23.12'
+  cudf_dev:
+    start: 21 Sep 2023
+    end: 08 Nov 2023
+    days: 35
+  other_dev:
+    start: 28 Sep 2023
+    end: 15 Nov 2023
+    days: 34
+  cudf_burndown:
+    start: 09 Nov 2023
+    end: 15 Nov 2023
+    days: 4
+  other_burndown:
+    start: 16 Nov 2023
+    end: 29 Nov 2023
+    days: 8
+  cudf_codefreeze:
+    start: 16 Nov 2023
+    end: 05 Dec 2023
+    days: 12
+  other_codefreeze:
+    start: 30 Nov 2023
+    end: 05 Dec 2023
+    days: 4
+  release:
+    start: 06 Dec 2023
+    end: 07 Dec 2023
+    days: 2
+- version: '23.10'
+  cudf_dev:
+    start: 20 Jul 2023
+    end: 20 Sep 2023
+    days: 42
+  other_dev:
+    start: 27 Jul 2023
+    end: 27 Sep 2023
+    days: 42
+  cudf_burndown:
+    start: 21 Sep 2023
+    end: 27 Sep 2023
+    days: 5
+  other_burndown:
+    start: 28 Sep 2023
+    end: 04 Oct 2023
+    days: 5
+  cudf_codefreeze:
+    start: 28 Sep 2023
+    end: 10 Oct 2023
+    days: 9
+  other_codefreeze:
+    start: 05 Oct 2023
+    end: 10 Oct 2023
+    days: 4
+  release:
+    start: 11 Oct 2023
+    end: 12 Oct 2023
+    days: 2
+- version: '23.08'
+  cudf_dev:
+    start: 18 May 2023
+    end: 19 Jul 2023
+    days: 40
+  other_dev:
+    start: 25 May 2023
+    end: 26 Jul 2023
+    days: 40
+  cudf_burndown:
+    start: 20 Jul 2023
+    end: 26 Jul 2023
+    days: 5
+  other_burndown:
+    start: 27 Jul 2023
+    end: 02 Aug 2023
+    days: 5
+  cudf_codefreeze:
+    start: 27 Jul 2023
+    end: 08 Aug 2023
+    days: 9
+  other_codefreeze:
+    start: 03 Aug 2023
+    end: 08 Aug 2023
+    days: 4
+  release:
+    start: 09 Aug 2023
+    end: 10 Aug 2023
+    days: 2
+- version: '23.06'
+  cudf_dev:
+    start: 23 Mar 2023
+    end: 17 May 2023
+    days: 40
+  other_dev:
+    start: 30 Mar 2023
+    end: 24 May 2023
+    days: 40
+  cudf_burndown:
+    start: 18 May 2023
+    end: 24 May 2023
+    days: 5
+  other_burndown:
+    start: 25 May 2023
+    end: 31 May 2023
+    days: 4
+  cudf_codefreeze:
+    start: 25 May 2023
+    end: 06 Jun 2023
+    days: 9
+  other_codefreeze:
+    start: 01 Jun 2023
+    end: 06 Jun 2023
+    days: 4
+  release:
+    start: 07 Jun 2023
+    end: 08 Jun 2023
+    days: 2
+- version: '23.04'
+  cudf_dev:
+    start: 19 Jan 2023
+    end: 22 Mar 2023
+    days: 42
+  other_dev:
+    start: 26 Jan 2023
+    end: 29 Mar 2023
+    days: 42
+  cudf_burndown:
+    start: 23 Mar 2023
+    end: 29 Mar 2023
+    days: 5
+  other_burndown:
+    start: 30 Mar 2023
+    end: 05 Apr 2023
+    days: 5
+  cudf_codefreeze:
+    start: 30 Mar 2023
+    end: 04 Apr 2023
+    days: 4
+  other_codefreeze:
+    start: 06 Apr 2023
+    end: 11 Apr 2023
+    days: 4
+  release:
+    start: 12 Apr 2023
+    end: 13 Apr 2023
+    days: 2
+- version: '23.02'
+  cudf_dev:
+    start: 10 Nov 2022
+    end: 18 Jan 2023
+    days: 42
+  other_dev:
+    start: 17 Nov 2022
+    end: 25 Jan 2023
+    days: 43
+  cudf_burndown:
+    start: 19 Jan 2023
+    end: 25 Jan 2023
+    days: 5
+  other_burndown:
+    start: 26 Jan 2023
+    end: 01 Feb 2023
+    days: 5
+  cudf_codefreeze:
+    start: 26 Jan 2023
+    end: 31 Jan 2023
+    days: 4
+  other_codefreeze:
+    start: 02 Feb 2023
+    end: 07 Feb 2023
+    days: 4
+  release:
+    start: 08 Feb 2023
+    end: 09 Feb 2023
+    days: 2
+- version: '22.12'
+  cudf_dev:
+    start: 22 Sep 2022
+    end: 09 Nov 2022
+    days: 35
+  other_dev:
+    start: 29 Sep 2022
+    end: 16 Nov 2022
+    days: 34
+  cudf_burndown:
+    start: 10 Nov 2022
+    end: 16 Nov 2022
+    days: 4
+  other_burndown:
+    start: 17 Nov 2022
+    end: 30 Nov 2022
+    days: 8
+  cudf_codefreeze:
+    start: 17 Nov 2022
+    end: 30 Nov 2022
+    days: 8
+  other_codefreeze:
+    start: 01 Dec 2022
+    end: 06 Dec 2022
+    days: 4
+  release:
+    start: 07 Dec 2022
+    end: 08 Dec 2022
+    days: 2
+- version: '22.10'
+  cudf_dev:
+    start: 21 Jul 2022
+    end: 21 Sep 2022
+    days: 42
+  other_dev:
+    start: 28 Jul 2022
+    end: 28 Sep 2022
+    days: 42
+  cudf_burndown:
+    start: 22 Sep 2022
+    end: 28 Sep 2022
+    days: 5
+  other_burndown:
+    start: 29 Sep 2022
+    end: 05 Oct 2022
+    days: 5
+  cudf_codefreeze:
+    start: 29 Sep 2022
+    end: 05 Oct 2022
+    days: 5
+  other_codefreeze:
+    start: 06 Oct 2022
+    end: 11 Oct 2022
+    days: 4
+  release:
+    start: 12 Oct 2022
+    end: 13 Oct 2022
+    days: 2
+- version: '22.08'
+  cudf_dev:
+    start: 18 May 2022
+    end: 20 Jul 2022
+    days: 41
+  other_dev:
+    start: 25 May 2022
+    end: 27 Jul 2022
+    days: 41
+  cudf_burndown:
+    start: 21 Jul 2022
+    end: 27 Jul 2022
+    days: 5
+  other_burndown:
+    start: 28 Jul 2022
+    end: 03 Aug 2022
+    days: 5
+  cudf_codefreeze:
+    start: 28 Jul 2022
+    end: 03 Aug 2022
+    days: 5
+  other_codefreeze:
+    start: 04 Aug 2022
+    end: 10 Aug 2022
+    days: 5
+  release:
+    start: 11 Aug 2022
+    end: 17 Aug 2022
+    days: 5
+- version: '22.06'
+  cudf_dev:
+    start: 17 Mar 2022
+    end: 17 May 2022
+    days: 44
+  other_dev:
+    start: 24 Mar 2022
+    end: 24 May 2022
+    days: 44
+  cudf_burndown:
+    start: 18 May 2022
+    end: 24 May 2022
+    days: 5
+  other_burndown:
+    start: 25 May 2022
+    end: 01 Jun 2022
+    days: 5
+  cudf_codefreeze:
+    start: 25 May 2022
+    end: 31 May 2022
+    days: 4
+  other_codefreeze:
+    start: 02 Jun 2022
+    end: 06 Jun 2022
+    days: 3
+  release:
+    start: 07 Jun 2022
+    end: 08 Jun 2022
+    days: 2
+- version: '22.04'
+  cudf_dev:
+    start: 12 Jan 2022
+    end: 16 Mar 2022
+    days: 44
+  other_dev:
+    start: 20 Jan 2022
+    end: 23 Mar 2022
+    days: 44
+  cudf_burndown:
+    start: 17 Mar 2022
+    end: 23 Mar 2022
+    days: 5
+  other_burndown:
+    start: 24 Mar 2022
+    end: 30 Mar 2022
+    days: 5
+  cudf_codefreeze:
+    start: 24 Mar 2022
+    end: 30 Mar 2022
+    days: 5
+  other_codefreeze:
+    start: 31 Mar 2022
+    end: 05 Apr 2022
+    days: 4
+  release:
+    start: 06 Apr 2022
+    end: 07 Apr 2022
+    days: 2
+- version: '22.02'
+  cudf_dev:
+    start: 04 Nov 2021
+    end: 11 Jan 2022
+    days: 43
+  other_dev:
+    start: 11 Nov 2021
+    end: 19 Jan 2022
+    days: 43
+  cudf_burndown:
+    start: 12 Jan 2022
+    end: 19 Jan 2022
+    days: 5
+  other_burndown:
+    start: 20 Jan 2022
+    end: 26 Jan 2022
+    days: 5
+  cudf_codefreeze:
+    start: 20 Jan 2022
+    end: 26 Jan 2022
+    days: 5
+  other_codefreeze:
+    start: 27 Jan 2022
+    end: 01 Feb 2022
+    days: 4
+  release:
+    start: 02 Feb 2022
+    end: 03 Feb 2022
+    days: 2
+- version: '21.12'
+  cudf_dev:
+    start: 16 Sep 2021
+    end: 03 Nov 2021
+    days: 35
+  other_dev:
+    start: 23 Sep 2021
+    end: 10 Nov 2021
+    days: 35
+  cudf_burndown:
+    start: 04 Nov 2021
+    end: 10 Nov 2021
+    days: 5
+  other_burndown:
+    start: 11 Nov 2021
+    end: 17 Nov 2021
+    days: 5
+  cudf_codefreeze:
+    start: 11 Nov 2021
+    end: 17 Nov 2021
+    days: 5
+  other_codefreeze:
+    start: 18 Nov 2021
+    end: 30 Nov 2021
+    days: 7
+  release:
+    start: 08 Dec 2021
+    end: 09 Dec 2021
+    days: 2
+- version: '21.10'
+  cudf_dev:
+    start: 14 Jul 2021
+    end: 15 Sep 2021
+    days: 45
+  other_dev:
+    start: 21 Jul 2021
+    end: 22 Sep 2021
+    days: 45
+  cudf_burndown:
+    start: 16 Sep 2021
+    end: 22 Sep 2021
+    days: 5
+  other_burndown:
+    start: 23 Sep 2021
+    end: 28 Sep 2021
+    days: 4
+  cudf_codefreeze:
+    start: 23 Sep 2021
+    end: 28 Sep 2021
+    days: 4
+  other_codefreeze:
+    start: 29 Sep 2021
+    end: 05 Oct 2021
+    days: 5
+  release:
+    start: 06 Oct 2021
+    end: 07 Oct 2021
+    days: 2
+- version: '21.08'
+  cudf_dev:
+    start: 19 May 2021
+    end: 14 Jul 2021
+    days: 39
+  other_dev:
+    start: 26 May 2021
+    end: 21 Jul 2021
+    days: 39
+  cudf_burndown:
+    start: 15 Jul 2021
+    end: 21 Jul 2021
+    days: 5
+  other_burndown:
+    start: 22 Jul 2021
+    end: 28 Jul 2021
+    days: 5
+  cudf_codefreeze:
+    start: 22 Jul 2021
+    end: 28 Jul 2021
+    days: 5
+  other_codefreeze:
+    start: 29 Jul 2021
+    end: 03 Aug 2021
+    days: 4
+  release:
+    start: 04 Aug 2021
+    end: 05 Aug 2021
+    days: 2
+- version: '21.06'
+  cudf_dev:
+    start: 25 Mar 2021
+    end: 18 May 2021
+    days: 39
+  other_dev:
+    start: 01 Apr 2021
+    end: 25 May 2021
+    days: 39
+  cudf_burndown:
+    start: 19 May 2021
+    end: 25 May 2021
+    days: 5
+  other_burndown:
+    start: 26 May 2021
+    end: 02 Jun 2021
+    days: 5
+  cudf_codefreeze:
+    start: 26 May 2021
+    end: 02 Jun 2021
+    days: 4
+  other_codefreeze:
+    start: 03 Jun 2021
+    end: 08 Jun 2021
+    days: 4
+  release:
+    start: 09 Jun 2021
+    end: 10 Jun 2021
+    days: 2
+- version: '0.19'
+  cudf_dev:
+    start: 27 Jan 2021
+    end: 24 Mar 2021
+    days: 40
+  other_dev:
+    start: 03 Feb 2021
+    end: 31 Mar 2021
+    days: 40
+  cudf_burndown:
+    start: 25 Mar 2021
+    end: 31 Mar 2021
+    days: 5
+  other_burndown:
+    start: 01 Apr 2021
+    end: 07 Apr 2021
+    days: 5
+  cudf_codefreeze:
+    start: 01 Apr 2021
+    end: 07 Apr 2021
+    days: 5
+  other_codefreeze:
+    start: 08 Apr 2021
+    end: 20 Apr 2021
+    days: 9
+  release:
+    start: 21 Apr 2021
+    end: 22 Apr 2021
+    days: 2
+- version: '0.18'
+  cudf_dev:
+    start: 24 Nov 2020
+    end: 26 Jan 2021
+    days: 34
+  other_dev:
+    start: 24 Nov 2020
+    end: 02 Feb 2021
+    days: 39
+  cudf_burndown:
+    start: 27 Jan 2021
+    end: 16 Feb 2021
+    days: 14
+  other_burndown:
+    start: 03 Feb 2021
+    end: 16 Feb 2021
+    days: 9
+  cudf_codefreeze:
+    start: 17 Feb 2021
+    end: 23 Feb 2021
+    days: 5
+  other_codefreeze:
+    start: 17 Feb 2021
+    end: 23 Feb 2021
+    days: 5
+  release:
+    start: 24 Feb 2021
+    end: 25 Feb 2021
+    days: 2
+- version: '0.17'
+  dev:
+    start: 01 Oct 2020
+    end: 23 Nov 2020
+    days: 38
+  burndown:
+    start: 24 Nov 2020
+    end: 03 Dec 2020
+    days: 6
+  codefreeze:
+    start: 04 Dec 2020
+    end: 09 Dec 2020
+    days: 4
+  release:
+    start: 10 Dec 2020
+    end: 10 Dec 2020
+    days: 1
+- version: '0.16'
+  dev:
+    start: 06 Aug 2020
+    end: 30 Sep 2020
+    days: 39
+  burndown:
+    start: 01 Oct 2020
+    end: 14 Oct 2020
+    days: 10
+  codefreeze:
+    start: 15 Oct 2020
+    end: 20 Oct 2020
+    days: 4
+  release:
+    start: 21 Oct 2020
+    end: 21 Oct 2020
+    days: 1
+- version: '0.15'
+  dev:
+    start: 19 May 2020
+    end: 05 Aug 2020
+    days: 56
+  burndown:
+    start: 06 Aug 2020
+    end: 19 Aug 2020
+    days: 10
+  codefreeze:
+    start: 20 Aug 2020
+    end: 25 Aug 2020
+    days: 4
+  release:
+    start: 26 Aug 2020
+    end: 26 Aug 2020
+    days: 1
+- version: '0.14'
+  dev:
+    start: 09 Mar 2020
+    end: 18 May 2020
+    days: 51
+  burndown:
+    start: 19 May 2020
+    end: 27 May 2020
+    days: 6
+  codefreeze:
+    start: 28 May 2020
+    end: 02 Jun 2020
+    days: 4
+  release:
+    start: 03 Jun 2020
+    end: 03 Jun 2020
+    days: 1
+- version: '0.13'
+  dev:
+    start: 16 Jan 2020
+    end: 06 Mar 2020
+    days: 35
+  burndown:
+    start: 09 Mar 2020
+    end: 26 Mar 2020
+    days: 14
+  codefreeze:
+    start: 27 Mar 2020
+    end: 30 Mar 2020
+    days: 2
+  release:
+    start: 31 Mar 2020
+    end: 31 Mar 2020
+    days: 1
+- version: '0.12'
+  dev:
+    start: 21 Nov 2019
+    end: 15 Jan 2020
+    days: 36
+  burndown:
+    start: 16 Jan 2020
+    end: 23 Jan 2020
+    days: 5
+  codefreeze:
+    start: 24 Jan 2020
+    end: 03 Feb 2020
+    days: 9
+  release:
+    start: 04 Feb 2020
+    end: 04 Feb 2020
+    days: 1
+- version: '0.11'
+  dev:
+    start: 26 Sep 2019
+    end: 20 Nov 2019
+    days: 40
+  burndown:
+    start: 21 Nov 2019
+    end: 04 Dec 2019
+    days: 8
+  codefreeze:
+    start: 05 Dec 2019
+    end: 10 Dec 2019
+    days: 4
+  release:
+    start: 11 Dec 2019
+    end: 11 Dec 2019
+    days: 1
+- version: '0.10'
+  dev:
+    start: 14 Aug 2019
+    end: 25 Sep 2019
+    days: 30
+  burndown:
+    start: 26 Sep 2019
+    end: 02 Oct 2019
+    days: 5
+  codefreeze:
+    start: 10 Oct 2019
+    end: 16 Oct 2019
+    days: 5
+  release:
+    start: 17 Oct 2019
+    end: 17 Oct 2019
+    days: 1
+- version: '0.9'
+  dev:
+    start: 24 Jun 2019
+    end: 06 Aug 2019
+    days: 30
+  burndown:
+    start: 07 Aug 2019
+    end: 13 Aug 2019
+    days: 5
+  codefreeze:
+    start: 14 Aug 2019
+    end: 20 Aug 2019
+    days: 5
+  release:
+    start: 21 Aug 2019
+    end: 21 Aug 2019
+    days: 1
+- version: '0.8'
+  date: 27 Jun 2019
+- version: '0.7'
+  date: 10 May 2019
+- version: '0.6'
+  date: 22 Mar 2019
+- version: '0.5'
+  date: 31 Jan 2019
+- version: '0.4'
+  date: 10 Dec 2018
+- version: '0.3'
+  date: 29 Nov 2018
+- version: '0.2'
+  date: 14 Nov 2018
+- version: '0.1'
+  date: 28 Oct 2018

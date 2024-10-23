@@ -1,0 +1,33 @@
+{{- define "main" -}}
+{{ .Content }}
+<ul>
+{{ range $lib := $.Site.Data.libraries }}
+  <li class="mb-4">
+  {{ $lib.name }}
+    <ul>
+    {{ range $version := $lib.versions }}
+      <li>
+      {{ $version }} - <a href="/docs/{{ $lib.name | lower }}/{{ $version }}/">/docs/{{ $lib.name | lower }}/{{ $version }}/</a>
+    {{ end }}
+    {{ $old_libs := slice "cudf" "cuml" "cugraph" }}
+      {{ if in $old_libs ($lib.name|lower) }}
+      <li>
+        old versions:
+        <ul>
+          <li>
+            23.04 - <a href="/docs/{{ $lib.name | lower }}/23.04/">/docs/{{ $lib.name | lower }}/23.04/</a>
+          </li>
+          <li>
+            23.08 - <a href="/docs/{{ $lib.name | lower }}/23.08/">/docs/{{ $lib.name | lower }}/23.08/</a>
+          </li>
+          <li>
+            23.10 - <a href="/docs/{{ $lib.name | lower }}/23.10/">/docs/{{ $lib.name | lower }}/23.10/</a>
+          </li>
+        </ul>
+      </li>
+      {{ end }}
+    </ul>
+  </li>
+{{ end }}
+</ul>
+{{ end }}
