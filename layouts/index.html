@@ -170,10 +170,11 @@
                     <p><strong>A.</strong> NVIDIA Volta™ or higher GPU with <a
                             href="https://developer.nvidia.com/cuda-gpus" target="_blank">compute capability 7.0+
                             <i class="fa-solid fa-arrow-up-right"></i></a></p>
-                    <p><strong>B.</strong> Ubuntu 20.04 or 22.04, Rocky Linux 8, or WSL2 on Windows 11</p>
+                    <p><strong>B.</strong> <a href="https://docs.rapids.ai/install/#system-req" target="_blank">Compatible Linux distribution</a> or <a href="https://docs.rapids.ai/install#wsl2" target="_blank">WSL2 on Windows 11</a></p>
                     <p><strong>C.</strong> Recent <a href="https://docs.nvidia.com/deploy/cuda-compatibility/index.html"
-                            target="_blank"> CUDA version <em>and</em> NVIDIA driver pairs</a>. Check yours with:
+                            target="_blank">CUDA version <em>and</em> NVIDIA driver pairs</a>. Check yours with:
                         <code>nvidia-smi</code>
+                    <p>See <a href="https://docs.rapids.ai/install/#system-req">System Requirements</a> for details.</p>
 
                     <h3 class="mt-6 text-white">Install with Conda</h3>
                     <p><strong>1.</strong> If not installed, download and run the install script. <br>
@@ -189,11 +190,11 @@ bash Miniforge3-$(uname)-$(uname -m).sh</code></pre>
                     <h3 class="mt-6 text-white">Install with pip</h3>
                     <p>Install via the NVIDIA PyPI index:</p>
                     <pre class="highlight use-white-copy"><code>pip install \
---extra-index-url=https://pypi.nvidia.com \
-cudf-cu12==24.10.* \
-dask-cudf-cu12==24.10.* \
-cuml-cu12==24.10.* \
-cugraph-cu12==24.10.*</code></pre>
+  --extra-index-url=https://pypi.nvidia.com \
+  cudf-cu12==24.10.* \
+  dask-cudf-cu12==24.10.* \
+  cuml-cu12==24.10.* \
+  cugraph-cu12==24.10.*</code></pre>
 
                     <h3 class="mt-6 text-white">Install with Docker</h3>
                     <p>Check that you have the <a href="https://docs.rapids.ai/install#docker" target="_blank">required
