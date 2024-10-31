@@ -117,6 +117,10 @@
           <br>
           
           <p>While NetworkX is a pure-Python implementation, backends may be written to use other libraries and even specialized hardware. As such, `nx-cugraph` is a NetworkX backend that uses RAPIDS cuGraph and NVIDIA GPUs to significantly improve NetworkX performance.</p>
+          
+          <br>
+          
+          In a simple script <code>demo.ipy</code>
 
           <code class="code-sample mt-3">
             import networkx as nx <br>
@@ -127,17 +131,17 @@
             G = nx.from_pandas_edgelist(df, source="src", target="dst") <br>
             <br>
             %time result = nx.betweenness_centrality(G, k=10)
+          </code>
 
-            <br><br>...<br>
-        
-            user@machine:/# ipython bc_demo.ipy<br>
+          <code class="code-sample mt-3">
+            user@machine:/# ipython demo.ipy<br>
             <br>
             CPU times: user 7min 36s, sys: 5.22 s, total: 7min 41s <br>
             Wall time: 7min 41s <br>
+          </code>
 
-            <br><br>...<br>
-
-            user@machine:/# NX_CUGRAPH_AUTOCONFIG=True ipython bc_demo.ipy<br>
+          <code class="code-sample mt-3">
+            user@machine:/# NX_CUGRAPH_AUTOCONFIG=True ipython demo.ipy<br>
             <br>
             CPU times: user 4.14 s, sys: 1.13 s, total: 5.27 s <br>
             Wall time: 5.32 s<br>
@@ -158,7 +162,7 @@
       <div class="row">
         <div class="col-md-6 py-3">
           <h2><i class="fa-light fa-bolt-lightning"></i> Try Now</h2>
-          <p>See how nx-cugraph can speedup your graph workflows in a free <a href="https://nvda.ws/4drM4re" target="_blank">CoLab GPU-enabled notebook environment</a> using your Google account.</p>
+          <p>See how nx-cugraph can speedup your graph workflows in a free <a href="https://nvda.ws/4drM4re" target="_blank">GPU-enabled Colab notebook environment</a> using your Google account.</p>
          
           <br>
          
@@ -170,7 +174,7 @@
           
           <br>
           
-          Interested to see nx-cugraph used in an end-to-end workflow - try this <a href="https://github.com/rapidsai-community/showcase/blob/HEAD/accelerated_data_processing_examples/nxcg_wikipedia_e2e.ipynb" target="_blank"> SciPy conference demo notebook</a>. Want to contribute or share feedback - reach out on <a href="https://github.com/rapidsai/cugraph" target="_blank">RAPIDS cuGraph GitHub</a>.</p>
+          Interested to see nx-cugraph used in an end-to-end workflow - try this <a href="https://colab.research.google.com/github/rapidsai-community/showcase/blob/HEAD/accelerated_data_processing_examples/nxcg_wikipedia_e2e.ipynb" target="_blank"> SciPy conference demo notebook</a>. Want to contribute or share feedback - reach out via <a href="https://github.com/rapidsai/nx-cugraph" target="_blank">GitHub</a>.</p>
         </div>
       </div>
 
