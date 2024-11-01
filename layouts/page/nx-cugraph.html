@@ -4,7 +4,7 @@
 {{ partial "hero.html" (dict
 "text" "GPU Accelerated NetworkX Backends"
 "btn_text" "Try Now"
-"btn_link" "https://github.com/rapidsai/cugraph"
+"btn_link" "https://github.com/rapidsai/nx-cugraph"
 ) }}
 
 
@@ -57,8 +57,9 @@
       <div class="row">
         <div class="col-md-4 py-3">
           <h2><i class="fa-light fa-book-sparkles"></i> How do Use It </h2>
-          <p>To accelerate NetworkX code, simply install <code>nx-cugraph</code> and enable it in NetworkX.</p>
-          
+          <p>To accelerate NetworkX code, simply <a href="https://docs.rapids.ai/api/cugraph/stable/nx_cugraph/installation/" target="_blank"> install nx-cugraph</a> and enable it in NetworkX.</p>
+          <br>
+          <code class="code-sample mt-3">pip install nx-cugraph-cu12 --extra-index-url https://pypi.nvidia.com</code>
           <br>
           
           <p>From the shell, set an environment variable: </p>
@@ -193,10 +194,10 @@
   new Chart(ctx1, {
         type: 'bar',
         data: {
-            labels: ['k=10', 'k=20', 'k=50', 'k=100', 'k=500'],
+            labels: ['k=10', 'k=20', 'k=50', 'k=100'],
             datasets: [{
                 label: 'nx-cugraph speedup',
-                data: [106, 191, 371, 568, 903],
+                data: [106, 191, 371, 568],
                 backgroundColor: [
                     'rgb(115, 6, 255, .80)'
                 ]
@@ -242,7 +243,6 @@
                                 `nx: 3min 12s\nnxcg: 1.01s`,
                                 `nx: 7min 56s\nnxcg: 1.28s`,
                                 `nx: 15min 50s\nnxcg: 1.67s`,
-                                `nx: 78min 13s\nnxcg: 5.20s`,
                             ];
 
                             // Get the data index of the hovered bar
