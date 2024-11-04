@@ -2,9 +2,9 @@
 
 <!-- Hero Partial -->
 {{ partial "hero.html" (dict
-"text" "GPU Accelerated NetworkX Backends"
-"btn_text" "Try Now"
-"btn_link" "https://github.com/rapidsai/nx-cugraph"
+"text" "GPU Accelerated NetworkX Backend"
+"btn_text" "Get Started"
+"btn_link" "#get-started"
 ) }}
 
 
@@ -17,7 +17,7 @@
         <div class="row">
           <div class="col-md-4 py-3">
             <h2><i class="fa-light fa-gauge-high"></i> Zero Code Change Acceleration </h2>
-            <p >Write your code with the full ease of Networkx. It's as easy as setting a single environment variable to begin accelerating your code on the GPU. </p>
+            <p >Write your code with the full ease of NetworkX. It's as easy as setting a single environment variable to begin accelerating your code on the GPU. </p>
 
             <br>
 
@@ -56,7 +56,7 @@
 
       <div class="row">
         <div class="col-md-4 py-3">
-          <h2><i class="fa-light fa-book-sparkles"></i> How do Use It </h2>
+          <h2><i class="fa-light fa-square-info"></i> How to Use It </h2>
           <p>To accelerate NetworkX code, simply <a href="https://docs.rapids.ai/api/cugraph/stable/nx_cugraph/installation/" target="_blank"> install nx-cugraph</a> and enable it in NetworkX.</p>
           <br>
           <code class="code-sample mt-3">pip install nx-cugraph-cu12 --extra-index-url https://pypi.nvidia.com</code>
@@ -93,13 +93,13 @@
         <div class="col-md-4 py-3">
 
           <canvas id="perfchartB" width="400" height="450"></canvas>
-          <p class="fs-8 fw-lighter text-center">* Dataset: soc-livejournal1 | 4.8M Nodes, 69M Edges<br>GPU: NVIDIA A100, 80 GB<br>CPU: Intel Xeon W9-3495X (Sapphire Rapids); Betweenness = Betweenness Centrality with k=100</p>
+          <p class="fs-8 fw-lighter text-center">* Dataset: soc-livejournal1 | 4.8M Nodes, 69M Edges<br>GPU: NVIDIA A100, 80 GB<br>CPU: Intel Xeon W9-3495X (Sapphire Rapids)<br>** BC = Betweenness Centrality with k=100</p>
         </div>
       </div>
     </div>
 </section>
 
-
+<!-- How it works -->
 <div class="top-slant-container">
   <div class="top-slant-up bg-rapids-gray"></div>
 </div>
@@ -121,7 +121,7 @@
           
           <br>
           
-          In a simple script <code>demo.ipy</code>
+          In a demo script <code>demo.ipy</code>
 
           <code class="code-sample mt-3">
             import networkx as nx <br>
@@ -150,13 +150,25 @@
           <p class="fs-8 fw-lighter text-center">*NetworkX 3.4.1, nx-cugraph 24.10, CPU: Intel(R) Xeon(R) Gold 6128 CPU @ 3.40GHz 45GB RAM, GPU: NVIDIA Quadro RTX 8000 50GB RAM </p>
         </div>
         <div class="col-md-6 py-3">
-          <h2><i class="fa-light fa-ballot-check"></i> Execution Flow </h2>
+          <h2><i class="fa-light fa-arrow-progress"></i> Execution Flow </h2>
           {{ with .Resources.GetMatch "nxcg-execution-diagram.jpg" }}
           <img src="{{ .RelPermalink }}">
           {{ end }}
         </div>
       </div>
+    </div>
+  </div>
+</section>
 
+<!-- Get Started -->
+<div id="get-started"></div>
+<div class="top-slant-container">
+  <div class="top-slant-up bg-rapids-gray"></div>
+</div>
+
+<section class="row section bg-rapids-gray padding-top-slant padding-bottom-slant">
+  <div class="col">
+    <div class="container">
       <h1 class="mt-10 mb-4"> Try nx-cugraph Yourself </h1>
       <p class="subheading  mb-5">Find where to get more resources and connect with developers.</p>
 
@@ -178,7 +190,6 @@
           Interested to see nx-cugraph used in an end-to-end workflow - try this <a href="https://colab.research.google.com/github/rapidsai-community/showcase/blob/HEAD/accelerated_data_processing_examples/nxcg_wikipedia_e2e.ipynb" target="_blank"> SciPy conference demo notebook</a>. Want to contribute or share feedback - reach out via <a href="https://github.com/rapidsai/nx-cugraph" target="_blank">GitHub</a>.</p>
         </div>
       </div>
-
     </div>
   </div>
 </section>
@@ -271,7 +282,7 @@
   new Chart(ctx2, {
         type: 'bar',
         data: {
-            labels: ['WCC', 'Triangles', 'PageRank', 'Louvain', 'Betweenness'],
+            labels: ['WCC', 'Triangles', 'PageRank', 'Louvain', 'BC'],
             datasets: [{
                 label: 'Speedup',
                 data: [24, 137, 177, 195, 487],
