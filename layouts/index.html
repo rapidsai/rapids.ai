@@ -91,6 +91,13 @@
 
             <div class="row has-background-rapids-image has-box-shadow">
                 <div class="col-md-6 py-5">
+                    <h2 class="text-white"><i class="fa-light fa-gauge-circle-bolt"></i> GPU Accelerated NetworkX </h2>
+                    <p class="text-white">Speed up your large-scale graph workflows with zero code change.
+                        <a href="/nx-cugraph"> Learn More on the nx-cugraph Page <i class="fa-solid fa-arrow-up-right"></i></a>
+                    </p>
+
+                </div>
+                <div class="col-md-6 py-5">
                     <h2 class="text-white"><i class="fa-light fa-gauge-circle-bolt"></i> Pandas Accelerator Mode for cuDF </h2>
                     <p class="text-white">Use cuDF pandas Accelerator Mode to speed up pandas workflows with zero code change.
                         <a href="/cudf-pandas"> Learn More on the Accelerator Mode Page <i class="fa-solid fa-arrow-up-right"></i></a>
@@ -339,7 +346,7 @@ cugraph-cu12==24.10.*</code></pre>
             <p>RAPIDS would not be possible without the collaboration of these important open source projects. Click on a logo to
               learn more: </p>
             <div class="d-flex flex-wrap justify-content-between mt-5">
-              {{ $row := slice "apache-arrow" "dask" "nuclio" "numba" "scikit-learn" "xgboost" }}
+              {{ $row := slice "apache-arrow" "dask" "networkx" "nuclio" "numba" "scikit-learn" "xgboost" }}
               {{ range $row }}
               {{ with site.GetPage (printf "_partners/%s" . ) }}
               {{ $sm_logo := .Resources.Get "logo_400x.png" }}
