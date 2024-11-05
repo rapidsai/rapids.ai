@@ -346,7 +346,7 @@ bash Miniforge3-$(uname)-$(uname -m).sh</code></pre>
             <p>RAPIDS would not be possible without the collaboration of these important open source projects. Click on a logo to
               learn more: </p>
             <div class="d-flex flex-wrap justify-content-between mt-5">
-              {{ $row := slice "apache-arrow" "dask" "nuclio" "networkx" "numba" "scikit-learn" "xgboost" }}
+              {{ $row := slice "apache-arrow" "dask" "networkx" "nuclio" "numba" "scikit-learn" "xgboost" }}
               {{ range $row }}
                 {{ with site.GetPage (printf "_partners/%s" . ) }}
                   {{ $sm_logo := .Resources.Get "logo_400x.png" }}
