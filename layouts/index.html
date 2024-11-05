@@ -347,16 +347,26 @@ bash Miniforge3-$(uname)-$(uname -m).sh</code></pre>
             <p>RAPIDS would not be possible without the collaboration of these important open source projects. Click on a logo to
               learn more: </p>
             <div class="d-flex flex-wrap justify-content-between mt-5">
-              {{ $row := slice "apache-arrow" "dask" "networkx" "nuclio" "numba" "scikit-learn" "xgboost" }}
+              {{ $row := slice "apache-arrow" "dask" "nuclio" "networkx" "numba" "scikit-learn" "xgboost" }}
               {{ range $row }}
-              {{ with site.GetPage (printf "_partners/%s" . ) }}
-              {{ $sm_logo := .Resources.Get "logo_400x.png" }}
-              {{ $default_logo := .Resources.Get "logo.png" }}
-              {{ $resized_image := ($sm_logo | default $default_logo).Resize "100x" }}
-              <a target="_blank" href="{{ .Params.github_repo_url | default .Params.github_org_url | default .Params.homepage_url }}">
-                <img src="{{ $resized_image.RelPermalink }}" alt="{{ .Params.name }} Logo">
-              </a>
-              {{ end }}
+                {{ with site.GetPage (printf "_partners/%s" . ) }}
+                  {{ $sm_logo := .Resources.Get "logo_400x.png" }}
+                  {{ $default_logo := .Resources.Get "logo.png" }}
+
+                  <!-- check to render logo differently. NetworkX logo is too small normally -->
+                  {{ if eq .Params.name "NetworkX" }}
+                    {{ $resized_image := ($sm_logo | default $default_logo).Resize "135x" }}
+                    <a target="_blank" href="{{ .Params.github_repo_url | default .Params.github_org_url | default .Params.homepage_url }}">
+                      <img src="{{ $resized_image.RelPermalink }}" alt="{{ .Params.name }} Logo">
+                    </a>
+                  {{ else }}
+                    {{ $resized_image := ($sm_logo | default $default_logo).Resize "100x" }}
+                    <a target="_blank" href="{{ .Params.github_repo_url | default .Params.github_org_url | default .Params.homepage_url }}">
+                      <img src="{{ $resized_image.RelPermalink }}" alt="{{ .Params.name }} Logo">
+                    </a>
+
+                  {{ end }}
+                {{ end }}
               {{ end }}
             </div>
         </div>
