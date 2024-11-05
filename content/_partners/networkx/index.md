@@ -1,5 +1,5 @@
 ---
-name: Networkx
+name: NetworkX
 homepage_url: https://www.networkx.org/
 github_org_url: https://github.com/networkx
 github_repo_url: https://github.com/networkx/networkx
