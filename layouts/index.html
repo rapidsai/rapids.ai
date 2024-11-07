@@ -90,17 +90,23 @@
             <br>
 
             <div class="row has-background-rapids-image has-box-shadow">
-                <div class="col-md-6 py-5">
+                <div class="col-md-4 py-5">
                     <h2 class="text-white"><i class="fa-light fa-gauge-circle-bolt"></i> Pandas Accelerator Mode for cuDF </h2>
                     <p class="text-white">Use cuDF pandas Accelerator Mode to speed up pandas workflows with zero code change.
                         <a href="/cudf-pandas"> Learn More on the Accelerator Mode Page <i class="fa-solid fa-arrow-up-right"></i></a>
                     </p>
-
                 </div>
-                <div class="col-md-6 py-5">
+                <div class="col-md-4 py-5">
                     <h2 class="text-white"><i class="fa-light fa-igloo"></i> Polars GPU Engine powered by cuDF </h2>
                     <p class="text-white">Accelerate Polars by enabling the GPU engine with zero code change.
                         <a href="/polars-gpu-engine"> Learn More on the Launch Page <i class="fa-solid fa-arrow-up-right"></i></a>
+                    </p>
+                    
+                </div>
+                <div class="col-md-4 py-5">
+                    <h2 class="text-white"><i class="fa-light fa-chart-network"></i> NetworkX Supercharged by cuGraph </h2>
+                    <p class="text-white">Speed up your large-scale graph workflows with zero code change.
+                        <a href="/nx-cugraph"> Learn More on the nx-cugraph Page <i class="fa-solid fa-arrow-up-right"></i></a>
                     </p>
 
                 </div>
@@ -340,16 +346,16 @@ bash Miniforge3-$(uname)-$(uname -m).sh</code></pre>
             <p>RAPIDS would not be possible without the collaboration of these important open source projects. Click on a logo to
               learn more: </p>
             <div class="d-flex flex-wrap justify-content-between mt-5">
-              {{ $row := slice "apache-arrow" "dask" "nuclio" "numba" "scikit-learn" "xgboost" }}
+              {{ $row := slice "apache-arrow" "dask" "networkx" "nuclio" "numba" "scikit-learn" "xgboost" }}
               {{ range $row }}
-              {{ with site.GetPage (printf "_partners/%s" . ) }}
-              {{ $sm_logo := .Resources.Get "logo_400x.png" }}
-              {{ $default_logo := .Resources.Get "logo.png" }}
-              {{ $resized_image := ($sm_logo | default $default_logo).Resize "100x" }}
-              <a target="_blank" href="{{ .Params.github_repo_url | default .Params.github_org_url | default .Params.homepage_url }}">
-                <img src="{{ $resized_image.RelPermalink }}" alt="{{ .Params.name }} Logo">
-              </a>
-              {{ end }}
+                {{ with site.GetPage (printf "_partners/%s" . ) }}
+                  {{ $sm_logo := .Resources.Get "logo_400x.png" }}
+                  {{ $default_logo := .Resources.Get "logo.png" }}
+                  {{ $resized_image := ($sm_logo | default $default_logo).Resize "100x" }}
+                  <a target="_blank" href="{{ .Params.github_repo_url | default .Params.github_org_url | default .Params.homepage_url }}">
+                      <img src="{{ $resized_image.RelPermalink }}" alt="{{ .Params.name }} Logo">
+                  </a>
+                {{ end }}
               {{ end }}
             </div>
         </div>

@@ -1,0 +1,336 @@
+{{- define "main" -}}
+
+<!-- Hero Partial -->
+{{ partial "hero.html" (dict
+"text" "GPU Accelerated NetworkX Backend"
+"btn_text" "Get Started"
+"btn_link" "#get-started"
+) }}
+
+
+<section class="row section mb-6">
+  <div class="col">
+    <div class="container">
+
+      <h1 class="text-center mb-6">Try Zero Code Change Accelerated NetworkX</h1>
+
+        <div class="row">
+          <div class="col-md-4 py-3">
+            <h2><i class="fa-light fa-gauge-high"></i> Zero Code Change Acceleration </h2>
+            <p >Write your code with the full ease of NetworkX. It's as easy as setting a single environment variable to begin accelerating your code on the GPU. </p>
+
+            <br>
+
+            <h2 class="mt-5"><i class="fa-regular fa-microchip"></i> Run the same code on CPU and GPU </h2>
+            <p>The same NetworkX code runs on CPU, and even faster on GPU - no need to have separate workflows or conditional imports. </p>
+
+          </div>
+          <div class="col-md-4 py-3">
+            <h2><i class="fa-regular fa-light fa-chart-network"></i> Unlock large graph analysis in NetworkX </h2>
+            <p>50x - 500x speedups, depending on algorithm and graph size. You can finally use NetworkX for large, real-world sized graph data.</p>
+
+            <br>
+
+            <h2 class="mt-5"><i class="fa-regular fa-circle-info"></i> First-class support in NetworkX </h2>
+            <p>GPU acceleration is achieved through the nx-cugraph backend and NetworkX function dispatching. This comes with the benefit of support from the NetworkX community.</p>
+
+          </div>
+          <div class="col-md-4 py-3">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/3EsbU1gcH5c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="bottom-slant-container">
+  <div class="bottom-slant-down bg-white"></div>
+</div>
+
+<section class="row section padding-top-slant padding-bottom-slant">
+  <div class="col">
+    <div class="container">
+
+      <h1 class="mb-4"> Bringing GPU Accelerated graph analytics <br> to every NetworkX User </h1>
+      <p class="subheading mb-5">Bring blazing fast performance to your graph workflows.</p>
+
+      <div class="row">
+        <div class="col-md-4 py-3">
+          <h2><i class="fa-light fa-square-info"></i> How to Use It </h2>
+          <p>To accelerate NetworkX code, simply <a href="https://docs.rapids.ai/api/cugraph/stable/nx_cugraph/installation/" target="_blank"> install nx-cugraph</a> and enable it in NetworkX.</p>
+          <br>
+          <code class="code-sample mt-3">pip install nx-cugraph-cu12 --extra-index-url https://pypi.nvidia.com</code>
+          <br>
+          
+          <p>From the shell, set an environment variable: </p>
+          <code class="code-sample mt-3">
+            NX_CUGRAPH_AUTOCONFIG=True<br>
+            python my_networkx_script.py
+          </code>
+
+          <br>
+
+          <p>From a notebook, use %env before importing NetworkX:</p>
+          <code class="code-sample mt-3">
+            %env NX_CUGRAPH_AUTOCONFIG=True<br>
+            import networkx
+          </code>
+
+          <br>
+
+          <p>See the <a href="https://networkx.org/documentation/stable/tutorial.html#using-networkx-backends" target="_blank"> NetworkX documentation</a> for additional ways to enable and use backends.</p>
+
+          <br>
+
+          <p>Learn more about these benchmark results in the <a href="https://developer.nvidia.com/blog/networkx-introduces-zero-code-change-acceleration-using-nvidia-cugraph/" target="_blank"> Announcement Blog</a> and <a href="https://docs.rapids.ai/api/cugraph/stable/nx_cugraph/" target="_blank"> nx-cugraph documentation</a>.</p>
+        </div>
+        <div class="col-md-4 py-3">
+
+          <canvas id="perfchartA" width="400" height="450"></canvas>
+          <p class="fs-8 fw-lighter text-center">* Dataset: cit-Patents | 3.7M Nodes, 16.5M Edges<br>GPU: NVIDIA A100, 80 GB<br>CPU: Intel Xeon W9-3495X (Sapphire Rapids)</p>
+       
+        </div>
+        <div class="col-md-4 py-3">
+
+          <canvas id="perfchartB" width="400" height="450"></canvas>
+          <p class="fs-8 fw-lighter text-center">* Dataset: soc-livejournal1 | 4.8M Nodes, 69M Edges<br>GPU: NVIDIA A100, 80 GB<br>CPU: Intel Xeon W9-3495X (Sapphire Rapids)<br>** BC = Betweenness Centrality with k=100</p>
+        </div>
+      </div>
+    </div>
+</section>
+
+<!-- How it works -->
+<div class="top-slant-container">
+  <div class="top-slant-up bg-rapids-gray"></div>
+</div>
+
+<section class="row section bg-rapids-gray padding-bottom-slant">
+  <div class="col">
+    <div class="container">
+      
+      <h1 class="mt-10 mb-4"> How It Works </h1>
+
+      <div class="row">
+        <div class="col-md-6 py-3">
+          <h2><i class="fa-regular fa-light fa-gear-code"></i> Under the Hood </h2>
+          <p>NetworkX has the ability to dispatch function calls to separately-installed third-party backends. These NetworkX backends let users experience improved performance and/or additional functionality without changing their NetworkX Python code. Examples include backends that provide algorithm acceleration using GPUs, parallel processing, graph database integration, and more.</p>
+          
+          <br>
+          
+          <p>While NetworkX is a pure-Python implementation, backends may be written to use other libraries and even specialized hardware. As such, nx-cugraph is a NetworkX backend that uses RAPIDS cuGraph and NVIDIA GPUs to significantly improve NetworkX performance.</p>
+          
+          <br>
+          
+          In a demo script <code>demo.ipy</code>
+
+          <code class="code-sample mt-3">
+            import networkx as nx <br>
+            import pandas as pd <br>
+            <br>
+            url = "https://data.rapids.ai/cugraph/datasets/cit-Patents.csv" <br>
+            df = pd.read_csv(url, sep=" ", names=["src", "dst"], dtype="int32") <br>
+            G = nx.from_pandas_edgelist(df, source="src", target="dst") <br>
+            <br>
+            %time result = nx.betweenness_centrality(G, k=10)
+          </code>
+
+          <code class="code-sample mt-3">
+            user@machine:/# ipython demo.ipy<br>
+            <br>
+            CPU times: user 7min 36s, sys: 5.22 s, total: 7min 41s <br>
+            Wall time: 7min 41s <br>
+          </code>
+
+          <code class="code-sample mt-3">
+            user@machine:/# NX_CUGRAPH_AUTOCONFIG=True ipython demo.ipy<br>
+            <br>
+            CPU times: user 4.14 s, sys: 1.13 s, total: 5.27 s <br>
+            Wall time: 5.32 s<br>
+          </code>
+          <p class="fs-8 fw-lighter text-center">*NetworkX 3.4.1, nx-cugraph 24.10, CPU: Intel(R) Xeon(R) Gold 6128 CPU @ 3.40GHz 45GB RAM, GPU: NVIDIA Quadro RTX 8000 50GB RAM </p>
+        </div>
+        <div class="col-md-6 py-3">
+          <h2><i class="fa-light fa-arrow-progress"></i> Execution Flow </h2>
+          {{ with .Resources.GetMatch "nxcg-execution-diagram.png" }}
+          <img src="{{ .RelPermalink }}">
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Get Started -->
+<div id="get-started"></div>
+<div class="top-slant-container">
+  <div class="top-slant-up bg-rapids-gray"></div>
+</div>
+
+<section class="row section bg-rapids-gray padding-top-slant padding-bottom-slant">
+  <div class="col">
+    <div class="container">
+      <h1 class="mt-10 mb-4"> Try nx-cugraph Yourself </h1>
+      <p class="subheading  mb-5">Get more resources and connect with developers.</p>
+
+      <div class="row">
+        <div class="col-md-6 py-3">
+          <h2><i class="fa-light fa-bolt-lightning"></i> Try Now</h2>
+          <p>See how nx-cugraph can speedup your graph workflows in a free <a href="https://nvda.ws/4drM4re" target="_blank">GPU-enabled Colab notebook environment</a> using your Google account.</p>
+         
+          <br>
+         
+          <p>Additionally, nx-cugraph is now included in the RAPIDS metapackage. Visit the <a href="https://rapids.ai/#quick-start">RAPIDS Quick Start</a> to get started with RAPIDS on your favorite platform.</p>
+        </div>
+        <div class="col-md-6 py-3">
+          <h2><i class="fa-light fa-comment-code"></i> Learn More </h2>
+          </p>Now nx-cugraph is generally available (GA) and ready for wide use. You can learn more from the <a href="https://developer.nvidia.com/blog/networkx-introduces-zero-code-change-acceleration-using-nvidia-cugraph/" target="_blank"> release blog</a> and <a href="https://docs.rapids.ai/api/cugraph/stable/nx_cugraph/" target="_blank"> nx-cugraph documentation</a>. </p>
+          
+          <br>
+          
+          Interested in seeing nx-cugraph used in an end-to-end workflow? Try this <a href="https://colab.research.google.com/github/rapidsai-community/showcase/blob/HEAD/accelerated_data_processing_examples/nxcg_wikipedia_e2e.ipynb" target="_blank"> SciPy conference demo notebook</a>. Want to contribute or share feedback? Reach out via <a href="https://github.com/rapidsai/nx-cugraph" target="_blank">GitHub</a>.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- Chart.js Code -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"
+  integrity="sha512-CQBWl4fJHWbryGE+Pc7UAxWMUMNMWzWxF4SQo9CgkJIN1kx6djDQZjh3Y8SZ1d+6I+1zze6Z7kHXO7q3UyZAWw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+  const ctx1 = document.getElementById('perfchartA');
+  new Chart(ctx1, {
+        type: 'bar',
+        data: {
+            labels: ['k=10', 'k=20', 'k=50', 'k=100'],
+            datasets: [{
+                label: 'nx-cugraph speedup',
+                data: [106, 191, 371, 568],
+                backgroundColor: [
+                    'rgb(115, 6, 255, .80)'
+                ]
+            }]  
+        },
+        options: {
+            scales: {
+                y: {
+                    type: 'linear',
+                    beginAtZero: true,
+                    grid: {
+                        display: false,
+                        borderWidth: 0
+                    },
+                    title: {
+                        display: true,
+                        text: 'X Times Faster'
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false,
+                        drawTicks: false,
+                        borderWidth: 2
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                },
+                title: {
+                    display: true,
+
+                    text: 'Betweenness Centrality: NetworkX vs. nx-cugraph'
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+                            // Custom information array, one for each bar
+                            const customInfo = [
+                                `nx: 1min 39s\nnxcg: 0.94s`,
+                                `nx: 3min 12s\nnxcg: 1.01s`,
+                                `nx: 7min 56s\nnxcg: 1.28s`,
+                                `nx: 15min 50s\nnxcg: 1.67s`,
+                            ];
+
+                            // Get the data index of the hovered bar
+                            const index = context.dataIndex;
+                            
+                            // Return custom text for each bar
+                            return customInfo[index] + `\nSpeedup: ${context.raw}x`;
+                        }
+                    }
+                }
+            },
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 20,
+                    bottom: 20
+                }
+            }
+        }
+    });
+</script>
+
+<script>
+  const ctx2 = document.getElementById('perfchartB');
+  new Chart(ctx2, {
+        type: 'bar',
+        data: {
+            labels: ['WCC', 'Triangles', 'PageRank', 'Louvain', 'BC'],
+            datasets: [{
+                label: 'Speedup',
+                data: [24, 137, 177, 195, 487],
+                backgroundColor: [
+                    'rgb(115, 6, 255, .80)'
+                ]
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    type: 'linear',
+                    beginAtZero: true,
+                    grid: {
+                        display: false,
+                        borderWidth: 0
+                    },
+                    title: {
+                        display: true,
+                        text: 'X Times Faster'
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false,
+                        drawTicks: false,
+                        borderWidth: 2
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                },
+                title: {
+                    display: true,
+                    text: 'NetworkX+cuGraph vs NetworkX speedup'
+                }
+            },
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 20,
+                    bottom: 20
+                }
+            }
+        }
+    });
+</script>
+{{ end }}
