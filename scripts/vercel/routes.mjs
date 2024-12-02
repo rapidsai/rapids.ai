@@ -1,4 +1,5 @@
 import { getTransformedRoutes } from "@vercel/routing-utils";
+import { getLibraryVersions } from "./site-data.mjs"
 import { readFileSync } from "node:fs";
 import path from "node:path";
 
@@ -57,21 +58,50 @@ const makeRedirectsFromFile = () => {
   return redirects;
 }
 
-const makeRedirects = () => {
+const makeRedirects = (libraryVersions) => {
   const redirects = [];
   redirects.push(...makeRedirectsFromFile());
+
+  for (const lib of libraryVersions) {
+    // redirects for /docs/cudf/ => /docs/cudf/stable/
+    if (!lib.version_strings.includes("stable")) continue;
+    redirects.push({
+      source: `/docs/${lib.name}/`,
+      destination: `/docs/${lib.name}/stable/`,
+      statusCode: DEFAULT_REDIRECT_CODE,
+    })
+  }
   return redirects;
 };
 
-const makeRewrites = () => {
+const makeRewrites = (libraryVersions) => {
+  // rewrite /docs/cudf/stable/* => https://d1664dvumjb44w.cloudfront.net/cudf/html/24.02/*
+  // rewrite /docs/cudf/* => https://d1664dvumjb44w.cloudfront.net/cudf/html/*
+
   const rewrites = [];
+  for (const lib of libraryVersions) {
+    for (let index = 0; index < lib.version_numbers.length; index++) {
+      const versionString = lib.version_strings[index];
+      const versionNumber = lib.version_numbers[index];
+
+      rewrites.push({
+        source: `/docs/${lib.name}/${versionString}/(.*)`,
+        destination: `https://d1664dvumjb44w.cloudfront.net/${lib.name}/html/${versionNumber}/$1`,
+      });
+    }
+    rewrites.push({
+      source: `/docs/${lib.name}/(.*)`,
+      destination: `https://d1664dvumjb44w.cloudfront.net/${lib.name}/html/$1`,
+    });
+  }
   return rewrites;
 };
 
 export const makeRoutes = () => {
+  const libraryVersions = getLibraryVersions();
   const { routes, error } = getTransformedRoutes({
-    redirects: makeRedirects(),
-    rewrites: makeRewrites(),
+    redirects: makeRedirects(libraryVersions),
+    rewrites: makeRewrites(libraryVersions),
   });
 
   if (error) throw error;

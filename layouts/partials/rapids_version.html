@@ -1,0 +1,7 @@
+{{- if eq . "legacy" -}}
+{{- (index site.Data.releases 3).version -}}
+{{- else if eq . "nightly" -}}
+{{- (index site.Data.releases 1).version -}}
+{{- else -}}
+{{- (index site.Data.releases 2).version -}}
+{{- end -}}
