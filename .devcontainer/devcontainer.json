@@ -5,4 +5,4 @@
     "workspaceFolder": "/workspace/rapids.ai",
     "forwardPorts": [1313],
     "postCreateCommand": "./scripts/devcontainer-init.sh"
-  }
+}
