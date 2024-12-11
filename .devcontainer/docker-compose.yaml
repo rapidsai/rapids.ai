@@ -1,0 +1,13 @@
+version: '3.3'
+
+services:
+  devcontainer:
+    build:
+      context: .
+      dockerfile: devcontainer.Dockerfile
+    volumes:
+        - ..:/workspace/rapids.ai
+    command: /bin/sh -c "while sleep 1000; do :; done"
+# TODO: add a reverse proxy & Hugo container. The reverse proxy container should
+# parse the redirects in the output of `scripts/vercel/config.mjs` to ensure
+# local development behaves like preview environments on PRs.
