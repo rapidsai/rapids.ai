@@ -29,7 +29,7 @@
         "dur" "1.5s"
     )
     (dict
-        "text" "RAPIDS 24.10 Released"
+        "text" "RAPIDS 24.12 Released"
         "url" "https://docs.rapids.ai/install#selector"
         "target" "_blank"
         "dur" "1.8s"
@@ -101,7 +101,7 @@
                     <p class="text-white">Accelerate Polars by enabling the GPU engine with zero code change.
                         <a href="/polars-gpu-engine"> Learn More on the Launch Page <i class="fa-solid fa-arrow-up-right"></i></a>
                     </p>
-                    
+
                 </div>
                 <div class="col-md-4 py-5">
                     <h2 class="text-white"><i class="fa-light fa-chart-network"></i> NetworkX Supercharged by cuGraph </h2>
@@ -119,7 +119,7 @@
                 <div class="col-md-4 py-3">
                     <h2><i class="fa-thin fa-objects-column"></i> Faster Pandas <br> with cuDF</h2>
                     <p>cuDF accelerates pandas with zero code changes and brings greatly improved performance.</p> <br>
-                    <a href="https://github.com/rapidsai/cudf/blob/branch-24.10/docs/cudf/source/user_guide/performance-comparisons/performance-comparisons.ipynb"
+                    <a href="https://github.com/rapidsai/cudf/blob/branch-24.12/docs/cudf/source/user_guide/performance-comparisons/performance-comparisons.ipynb"
                         target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
 
                     <canvas id="cuDFchart" width="400" height="350"></canvas>
@@ -129,7 +129,7 @@
                 <div class="col-md-4 py-3">
                     <h2><i class="fa-light fa-microchip-ai"></i> Faster scikit-learn <br> with cuML</h2>
                     <p>cuML brings huge speedups to ML modeling with an API that matches scikit-learn.</p> <br>
-                    <a href="https://github.com/rapidsai/cuml/tree/branch-24.10/python/cuml/cuml/benchmark"
+                    <a href="https://github.com/rapidsai/cuml/tree/branch-24.12/python/cuml/cuml/benchmark"
                         target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
 
                     <canvas id="cuMLchart" width="400" height="350"></canvas>
@@ -139,7 +139,7 @@
                 <div class="col-md-4 py-3">
                     <h2><i class="fa-light fa-circle-nodes"></i> Faster NetworkX <br> with cuGraph</h2>
                     <p>cuGraph accelerates NetworkX with zero code changes for much greater performance at scale.</p> <br>
-                    <a href="https://github.com/rapidsai/cugraph/blob/branch-24.10/benchmarks/nx-cugraph/pytest-based"
+                    <a href="https://github.com/rapidsai/nx-cugraph/blob/branch-24.12/benchmarks/pytest-based"
                         target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
 
                     <canvas id="cuGraphChart" width="400" height="350"></canvas>
@@ -191,16 +191,16 @@ bash Miniforge3-$(uname)-$(uname -m).sh</code></pre>
                     <br>
                     <p><strong>2.</strong> Then quick install RAPIDS with:</p>
                     <pre
-                        class="highlight use-white-copy"><code>conda create -n rapids-24.10 -c rapidsai -c conda-forge -c nvidia rapids=24.10 python=3.12 cuda-version=12.5</code></pre>
+                        class="highlight use-white-copy"><code>conda create -n rapids-24.12 -c rapidsai -c conda-forge -c nvidia rapids=24.12 python=3.12 cuda-version=12.5</code></pre>
 
                     <h3 class="mt-6 text-white">Install with pip</h3>
                     <p>Install via the NVIDIA PyPI index:</p>
                     <pre class="highlight use-white-copy"><code>pip install \
   --extra-index-url=https://pypi.nvidia.com \
-  cudf-cu12==24.10.* \
-  dask-cudf-cu12==24.10.* \
-  cuml-cu12==24.10.* \
-  cugraph-cu12==24.10.*</code></pre>
+  cudf-cu12==24.12.* \
+  dask-cudf-cu12==24.12.* \
+  cuml-cu12==24.12.* \
+  cugraph-cu12==24.12.*</code></pre>
 
                     <h3 class="mt-6 text-white">Install with Docker</h3>
                     <p>Check that you have the <a href="https://docs.rapids.ai/install#docker" target="_blank">required
