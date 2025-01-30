@@ -190,12 +190,12 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button wrappable-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse2" aria-expanded="false" aria-controls="collapse2">
-                  Can I use the Polars GPU engine on a Windows machine?
+                  How many GPUs does the Polars GPU Engine work with?
                 </button>
               </h2>
               <div id="collapse2" class="accordion-collapse collapse" data-bs-parent="#faq2">
                 <div class="accordion-body">
-                  <p>Yes, you can use the Polars GPU engine on a Windows machine by installing WSL2 (requires Windows 11 or higher). For download and troubleshooting instructions, please visit the <a href="https://docs.rapids.ai/install#wsl2" target="_blank">RAPIDS installation</a> page.</p>
+                  <p>Currently, the Open Beta for the Polars GPU engine is a single GPU implementation only.  It will be updated to use multiple GPUs soon!</p>
                 </div>
               </div>
             </div>
@@ -205,12 +205,12 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button wrappable-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse3" aria-expanded="false" aria-controls="collapse3">
-                  Can I try the GPU engine with Polars' Rust API?
+                  Can I use the Polars GPU engine on a Windows machine?
                 </button>
               </h2>
               <div id="collapse3" class="accordion-collapse collapse" data-bs-parent="#faq3">
                 <div class="accordion-body">
-                  <p>Currently, the GPU engine only supports Polars' Python API.</p>
+                  <p>Yes, you can use the Polars GPU engine on a Windows machine by installing WSL2 (requires Windows 11 or higher). For download and troubleshooting instructions, please visit the <a href="https://docs.rapids.ai/install#wsl2" target="_blank">RAPIDS installation</a> page.</p>
                 </div>
               </div>
             </div>
@@ -220,12 +220,12 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button wrappable-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                  Are all operations within Polars supported?
+                  Can I try the GPU engine with Polars' Rust API?
                 </button>
               </h2>
-              <div id="collapse4" class="accordion-collapse collapse " data-bs-parent="#faq4">
+              <div id="collapse4" class="accordion-collapse collapse" data-bs-parent="#faq4">
                 <div class="accordion-body">
-                  <p>The GPU engine currently supports most of the core expressions and data types, but not all. For a detailed list of supported expressions visit the <a href="https://docs.pola.rs/user-guide/gpu-support/" target="_blank">GPU Support page</a> on the Polars website.</p>
+                  <p>Currently, the GPU engine only supports Polars' Python API.</p>
                 </div>
               </div>
             </div>
@@ -235,12 +235,12 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button wrappable-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                  What parameters can I pass to the GPUEngine?
+                  Are all operations within Polars supported?
                 </button>
               </h2>
               <div id="collapse5" class="accordion-collapse collapse " data-bs-parent="#faq5">
                 <div class="accordion-body">
-                  <p>See the <a href="https://docs.pola.rs/api/python/dev/reference/lazyframe/api/polars.lazyframe.engine_config.GPUEngine.html" target="_blank">Polars GPUEngine API documentation</a>.</p>
+                  <p>The GPU engine currently supports most of the core expressions and data types, but not all. For a detailed list of supported expressions visit the <a href="https://docs.pola.rs/user-guide/gpu-support/" target="_blank">GPU Support page</a> on the Polars website.</p>
                 </div>
               </div>
             </div>
@@ -250,10 +250,25 @@
             <div class="accordion-item">
               <h2 class="accordion-header">
                 <button class="accordion-button wrappable-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                  What parameters can I pass to the GPUEngine?
+                </button>
+              </h2>
+              <div id="collapse6" class="accordion-collapse collapse " data-bs-parent="#faq6">
+                <div class="accordion-body">
+                  <p>See the <a href="https://docs.pola.rs/api/python/dev/reference/lazyframe/api/polars.lazyframe.engine_config.GPUEngine.html" target="_blank">Polars GPUEngine API documentation</a>.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="accordion py-3" id="faq7">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button wrappable-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
                   How can I provide feedback?
                 </button>
               </h2>
-              <div id="collapse6" class="accordion-collapse collapse" data-bs-parent="#faq6">
+              <div id="collapse7" class="accordion-collapse collapse" data-bs-parent="#faq7">
                 <div class="accordion-body">
                   <p>Raise an issue on the <a href="https://github.com/pola-rs/polars/issues" target="_blank">Polars GitHub</a> and the project contributors will respond as soon as possible.</p>
                 </div>
