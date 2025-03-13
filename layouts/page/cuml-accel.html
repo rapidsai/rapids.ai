@@ -1,0 +1,329 @@
+{{- define "main" -}}
+
+<!-- Hero Partial -->
+{{ partial "hero.html" (dict
+"text" "GPU Accelerated Machine Learning"
+"btn_text" "Get Started"
+"btn_link" "#get-started"
+) }}
+
+<!-- Intro -->
+<section class="row section mb-6">
+  <div class="col">
+    <div class="container">
+
+      <h1 class="text-center mb-10"> OPEN BETA: ACCELERATING SCIKIT-LEARN, UMAP, <br> AND HDBSCAN WITH ZERO CODE 
+        CHANGE </h1>
+      <div class="row">
+        <div class="col-md-4 py-3">
+          <h2><i class="fa-light fa-file-binary"></i> Zero Code Change Acceleration </h2>
+          <p>Write your code with the ease and familiarity of scikit-learn, UMAP, or HDBSCAN. Just load 
+            <strong>cuml.accel</strong> and run your code on the GPU for maximum performance.</p>
+
+          <br>
+
+          <h2 class="mt-4"><i class="fa-light fa-chart-diagram"></i> Algorithms for Every Use Case </h2>
+          <p>Accelerating the most popular estimators for classification, regression, dimensionality reduction, and 
+            clustering.</p>
+        </div>
+        <div class="col-md-4 py-3">
+          <h2><i class="fa-light fa-gauge-max"></i> Train Models Faster </h2>
+          <p>Up to 50x faster training times for popular machine learning algorithms. Spend less time waiting and more 
+            time optimizing your model.</p>
+
+          <br>
+
+          <h2 class="mt-4"><i class="fa-light fa-laptop-binary"></i> Device Independent Code </h2>
+          <p>Develop on GPUs and deploy on CPUs. Or vice versa. All without any changes to your code.</p>
+        </div>
+        <div class="col-md-4 py-3">
+          <iframe style="max-width: 100%;" width="500" height="320"
+            src="https://www.youtube.com/watch?v=cIJsVq8CPys" title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<div class="bottom-slant-container">
+  <div class="bottom-slant-down bg-white"></div>
+</div>
+
+<!-- How it works -->
+<section class="row section padding-top-slant padding-bottom-slant">
+  <div class="col">
+    <div class="container">
+
+      <h1 class="mb-4"> Bringing GPU Acceleration <br> to Every scikit-learn User </h1>
+      <div class="row">
+        <div class="col-md-4 py-3">
+          <h2><i class="fa-light fa-square-info"></i> How to Use It </h2>
+          <p>To accelerate IPython or Jupyter Notebooks, use the magic:</p>
+
+          <code class="code-sample mt-3">
+            %load_ext cuml.accel <br>
+            import sklearn <br>
+            ...
+          </code>
+
+          <br><br>
+
+          <p>To accelerate a Python script, you can use the Python module flag from the command line:</p>
+
+          <code class="code-sample mt-3">python -m cuml.accel script.py</code>
+
+          <br><br>
+
+          <p>Or, explicitly enable cuml.accel in your code via import if you can't use command line flags:</p>
+          <code class="code-sample mt-3">
+            import cuml.accel <br>
+            cuml.accel.install() <br><br>
+            import sklearn <br>
+            ...
+          </code>
+
+        </div>
+        <div class="col-md-4 py-3">
+
+            <canvas id="perfchartA" width="200" height="250"></canvas>
+            <!-- <p class="fs-8 fw-lighter text-center">GPU: NVIDIA H100, 80 GB HBM3<br>CPU: Intel Xeon Platinum 8480CL (Sapphire Rapids)</p> -->
+         
+          </div>
+          <div class="col-md-4 py-3">
+  
+            <canvas id="perfchartB" width="200" height="250"></canvas>
+            <!-- <p class="fs-8 fw-lighter text-center">GPU: NVIDIA H100, 80 GB HBM3<br>CPU: Intel Xeon Platinum 8480CL (Sapphire Rapids)</p> -->
+          </div>
+        </div>
+
+      <h1 class="mt-10 mb-4"> How It Works</h1>
+      <div class="row">
+        <div class="col-md-6 py-3">
+          <h2><i class="fa-sharp fa-light fa-gear-complex-code"></i> Under the Hood </h2>
+          <p>When you load cuml.accel, importing scikit-learn (or umap-learn or hdbscan) allows cuML to "intercept"
+            estimators from these CPU modules. When you create a new estimator to run a machine learning algorithm, a 
+            "proxy estimator" is created instead.</p>
+
+          <code class="code-sample mt-3">
+            In [1]: %load_ext cuml.accel <br>
+            In [2]: from sklearn.cluster import KMeans <br><br>
+
+            In [3]: type(KMeans) <br>
+            Out[3]: cuml.internals.base_helpers.BaseMetaClass;
+          </code>
+
+          <br><br>
+
+          <p>Estimators that are implemented in cuML will be dispatched to run on the GPU where possible, and fall 
+            back to the CPU library otherwise. This applies to scikit-learn operations in your code, as well as third 
+            party libraries you may be using.</p>
+
+          <br>
+
+          <p>If a model is constructed on the GPU and then a method is called that is not implemented in cuML,
+            cuml.accel will reconstruct the model on the CPU and gracefully fall back to the equivalent scikit-learn
+            function instead.</p>
+
+        </div>
+        <div class="col-md-6 py-3">
+          <h2><i class="fa-light fa-diagram-subtask"></i> Execution Flow </h2>
+          {{ with .Resources.GetMatch "chart_purple.png" }}
+          <img src="{{ .RelPermalink }}">
+          {{ end }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Get Started -->
+<!-- <div id="get-started"></div> -->
+<div class="top-slant-container">
+  <div class="top-slant-up bg-rapids-gray"></div>
+</div>
+
+<section class="row section bg-rapids-gray padding-top-slant padding-bottom-slant">
+  <div class="col">
+    <div class="container">
+
+      <h1 class="mb-4"> Get Started with <br> Accelerated Machine Learning </h1>
+      <div class="row">
+        <div class="col py-3">
+          <h2><i class="fa-light fa-bookmark"></i> Try Now on Colab</h2>
+          {{ $colabImg := ((site.GetPage "_partners/google-colab").Resources.Get "logo.png").Resize "200x" }}
+          <a href="https://colab.research.google.com/github/rapidsai-community/showcase/blob/main/getting_started_tutorials/cuml_sklearn_colab_demo.ipynb" target="_blank"><img src="{{ $colabImg.RelPermalink }}"></a>
+          <p>Get started accelerating your machine learning workflows in a free GPU-enabled notebook environment using
+            your Google account. <a href="https://colab.research.google.com/github/rapidsai-community/showcase/blob/main/getting_started_tutorials/cuml_sklearn_colab_demo.ipynb" 
+            target="_blank">Launch on Colab <i class="fa-solid fa-arrow-up-right"></i> </a></p>
+          <br>
+          <p>cuML's accelerator works smoothly with all of the other RAPIDS libraries. Visit the RAPIDS <a 
+            href="https://rapids.ai/#quick-start" target="_blank">Quick Start</a> to get started with any RAPIDS 
+            library on your favorite platform.</p>
+        </div>
+        <div class="col py-3">
+          <h2><i class="fa-light fa-head-side-gear"></i> Learn More</h2>
+          <p>cuML-accelerated scikit-learn is in open beta and under active development. It's ready for wide use, but 
+            certain estimators come with known issues and limitations. <a href="https://docs.rapids.ai/api/cuml/nightly/"
+              target="_blank">Learn more through the documentation</a> and <a
+              href=" https://developer.nvidia.com/blog/nvidia-cuml-brings-zero-code-change-acceleration-to-scikit-learn/"
+              target="_blank">the release blog <i class="fa-solid fa-arrow-up-right"></i> </a> </p>
+          <br>
+          <p>Want to contribute or share feedback, reach out <a href="https://github.com/rapidsai/cuml"
+              target="_blank">on GitHub <i class="fa-solid fa-arrow-up-right"></i> </a> </p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- Chart.js Code -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.min.js"
+  integrity="sha512-CQBWl4fJHWbryGE+Pc7UAxWMUMNMWzWxF4SQo9CgkJIN1kx6djDQZjh3Y8SZ1d+6I+1zze6Z7kHXO7q3UyZAWw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+<script>
+  const ctx1 = document.getElementById('perfchartA');
+  new Chart(ctx1, {
+        type: 'bar',
+        data: {
+            labels: ['Random Forest Class.', 'Linear Regression', 'TSNE'],
+            datasets: [{
+                label: 'Speedup',
+                data: [26, 52, 50],
+                backgroundColor: [
+                    'rgb(115, 6, 255, .80)'
+                ]
+            }]  
+        },
+        options: {
+            scales: {
+                y: {
+                    type: 'linear',
+                    beginAtZero: true,
+                    grid: {
+                        display: false,
+                        borderWidth: 0
+                    },
+                    title: {
+                        display: true,
+                        text: 'Speedup'
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false,
+                        drawTicks: false,
+                        borderWidth: 2
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                },
+                title: {
+                    display: true,
+
+                    text: '50x Faster scikit-learn'
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+
+                            // Get the data index of the hovered bar
+                            const index = context.dataIndex;
+                            
+                            // Return custom text for each bar
+                            return `\nSpeedup: ${context.raw}x`;
+                        }
+                    }
+                }
+            },
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 20,
+                    bottom: 20
+                }
+            }
+        }
+    });
+</script>
+
+<script>
+  const ctx2 = document.getElementById('perfchartB');
+  new Chart(ctx2, {
+        type: 'bar',
+        data: {
+            labels: ['UMAP', 'HDBSCAN'],
+            datasets: [{
+                label: 'Speedup',
+                data: [60, 175],
+                backgroundColor: [
+                    'rgb(115, 6, 255, .80)'
+                ]
+            }]
+        },
+        options: {
+            scales: {
+                y: {
+                    type: 'linear',
+                    beginAtZero: true,
+                    grid: {
+                        display: false,
+                        borderWidth: 0
+                    },
+                    title: {
+                        display: true,
+                        text: 'Speedup'
+                    }
+                },
+                x: {
+                    grid: {
+                        display: false,
+                        drawTicks: false,
+                        borderWidth: 2
+                    }
+                }
+            },
+            plugins: {
+                legend: {
+                    display: false
+                },
+                title: {
+                    display: true,
+                    text: '175x Faster UMAP and HDBSCAN'
+                },
+                tooltip: {
+                    callbacks: {
+                        label: function(context) {
+
+                            // Get the data index of the hovered bar
+                            const index = context.dataIndex;
+                            
+                            // Return custom text for each bar
+                            return `\nSpeedup: ${context.raw}x`;
+                        }
+                    }
+                }
+
+            },
+            layout: {
+                padding: {
+                    left: 0,
+                    right: 0,
+                    top: 20,
+                    bottom: 20
+                }
+            }
+        }
+    });
+</script>
+{{ end }}
