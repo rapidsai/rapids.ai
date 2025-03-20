@@ -16,7 +16,7 @@
       <div class="row">
         <div class="col-md-4 py-3">
           <h2><i class="fa-light fa-file-binary"></i> Zero Code Change Acceleration </h2>
-          <p>Write your code with the full flexibility of pandas. Just load cudf.pandas to accelerate on the GPU, with
+          <p>Write your code with the full flexibility of pandas. Just load <code>cudf.pandas</code> to accelerate on the GPU, with
             automatic CPU fallback if needed.</p>
 
           <br>
@@ -61,8 +61,9 @@
       <div class="row">
         <div class="col-md-6 py-3">
           <h2><i class="fa-light fa-square-info"></i> How to Use It </h2>
-          <p>This new mode is available in the standard cuDF package. To accelerate IPython or Jupyter Notebooks, use
-            the magic:</p>
+          <p>This mode is available in the standard cuDF package. To use <code>cudf.pandas</code>, enable it <em>before importing or using pandas</em> using one of these methods:</p>
+
+          <p>To accelerate IPython or Jupyter Notebooks, use the magic:</p>
 
           <code class="code-sample mt-3">
             %load_ext cudf.pandas <br>
@@ -78,7 +79,7 @@
 
           <br><br>
 
-          <p>Or, explicitly enable cudf.pandas via import if you can't use command line flags:</p>
+          <p>Or, explicitly enable <code>cudf.pandas</code> via import if you can't use command line flags:</p>
           <code class="code-sample mt-3">
             import cudf.pandas <br>
             cudf.pandas.install() <br><br>
@@ -91,7 +92,7 @@
           <h2><i class="fa-light fa-gauge-high"></i> 150x Faster, Zero Code Change </h2>
           <canvas id="perfchart" width="500" height="375"></canvas>
           <p class="fs-7 fw-lighter text-center">* Standard DuckDB Data Benchmark (5GB) <br>
-            GPU: NVIDIA Grace Hopper, CPU: Intel® Xeon® Platinum 8480C <br>
+          GPU: NVIDIA Grace Hopper, CPU: Intel<sup>&reg;</sup> Xeon<sup>&reg;</sup> Platinum 8480C <br>
             pandas v2.2, RAPIDS cuDF v23.10 <a
               href="https://developer.nvidia.com/blog/rapids-cudf-accelerates-pandas-nearly-150x-with-zero-code-changes/"
               target="_blank">Learn More <i class="fa-solid fa-arrow-up-right"></i> </a></p>
@@ -102,8 +103,8 @@
       <div class="row">
         <div class="col-md-6 py-3">
           <h2><i class="fa-sharp fa-light fa-gear-complex-code"></i> Under the Hood </h2>
-          <p>When cudf.pandas is enabled, import pandas (or any of its submodules) imports a magic module, rather than
-            “regular” pandas. This magic module contains proxy types and proxy functions:</p>
+          <p>When <code>cudf.pandas</code> is enabled, <code>import pandas</code> (or any of its submodules) imports a magic module, rather than
+            "regular" pandas. This magic module contains proxy types and proxy functions:</p>
 
           <code class="code-sample mt-3">
             In [1]: %load_ext cudf.pandas <br>
@@ -121,13 +122,13 @@
 
           <br>
 
-          <p>All cudf.pandas objects are a proxy to either a GPU (cuDF) or CPU (pandas) object at any given time.
+          <p>All <code>cudf.pandas</code> objects are a proxy to either a GPU (cuDF) or CPU (pandas) object at any given time.
             Operations are first attempted on the GPU (copying from CPU if necessary). If that fails, the operation is
             attempted on the CPU (copying from GPU if necessary).</p>
 
           <br>
 
-          <p>When using cudf.pandas, cuDF's pandas compatibility mode is automatically enabled, ensuring consistency
+          <p>When using <code>cudf.pandas</code>, cuDF's pandas compatibility mode is automatically enabled, ensuring consistency
             with pandas-specific semantics like default sort ordering.</p>
         </div>
         <div class="col-md-6 py-3">
@@ -179,7 +180,7 @@
               href="https://developer.nvidia.com/blog/rapids-cudf-accelerates-pandas-nearly-150x-with-zero-code-changes/"
               target="_blank">the release blog <i class="fa-solid fa-arrow-up-right"></i> </a> </p>
           <br>
-          <p>Prefer conference presentations to documentation? Get all the details about how cudf.pandas works, how we
+          <p>Prefer conference presentations to documentation? Get all the details about how <code>cudf.pandas</code> works, how we
             test it, and why we developed it at the <a
               href="https://www.nvidia.com/en-us/events/ai-data-science-virtual-summit/" target="_blank">AI and Data
               Science Virtual Summit <i class="fa-solid fa-arrow-up-right"></i> </a> </p>
