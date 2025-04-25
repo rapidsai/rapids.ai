@@ -19,7 +19,7 @@ params:
   title: RAPIDS | GPU Accelerated Data Science
   description: Open source GPU accelerated data science libraries
   images:
-    - /images/RAPIDS-logo-white.png
+    - /assets/images/rapids_logo.png
   social:
     twitter: rapidsai
 
