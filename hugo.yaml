@@ -19,7 +19,8 @@ params:
   title: RAPIDS | GPU Accelerated Data Science
   description: Open source GPU accelerated data science libraries
   images:
-    - /images/RAPIDS-logo-white.png
+    # This is used for the Open Graph preview on social media
+    - /assets/og_image.png
   social:
     twitter: rapidsai
 
