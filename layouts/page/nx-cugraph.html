@@ -61,7 +61,7 @@
           <br>
           <code class="code-sample mt-3">pip install nx-cugraph-cu12 --extra-index-url https://pypi.nvidia.com</code>
           <br>
-          
+
           <p>From the shell, set an environment variable: </p>
           <code class="code-sample mt-3">
             NX_CUGRAPH_AUTOCONFIG=True<br>
@@ -88,7 +88,7 @@
 
           <canvas id="perfchartA" width="400" height="450"></canvas>
           <p class="fs-8 fw-lighter text-center">* Dataset: cit-Patents | 3.7M Nodes, 16.5M Edges<br>GPU: NVIDIA A100, 80 GB<br>CPU: Intel Xeon W9-3495X (Sapphire Rapids)</p>
-       
+
         </div>
         <div class="col-md-4 py-3">
 
@@ -107,20 +107,20 @@
 <section class="row section bg-rapids-gray padding-bottom-slant">
   <div class="col">
     <div class="container">
-      
+
       <h1 class="mt-10 mb-4"> How It Works </h1>
 
       <div class="row">
         <div class="col-md-6 py-3">
           <h2><i class="fa-regular fa-light fa-gear-code"></i> Under the Hood </h2>
           <p>NetworkX has the ability to dispatch function calls to separately-installed third-party backends. These NetworkX backends let users experience improved performance and/or additional functionality without changing their NetworkX Python code. Examples include backends that provide algorithm acceleration using GPUs, parallel processing, graph database integration, and more.</p>
-          
+
           <br>
-          
+
           <p>While NetworkX is a pure-Python implementation, backends may be written to use other libraries and even specialized hardware. As such, nx-cugraph is a NetworkX backend that uses RAPIDS cuGraph and NVIDIA GPUs to significantly improve NetworkX performance.</p>
-          
+
           <br>
-          
+
           In a demo script <code>demo.ipy</code>
 
           <code class="code-sample mt-3">
@@ -176,17 +176,17 @@
         <div class="col-md-6 py-3">
           <h2><i class="fa-light fa-bolt-lightning"></i> Try Now</h2>
           <p>See how nx-cugraph can speedup your graph workflows in a free <a href="https://nvda.ws/4drM4re" target="_blank">GPU-enabled Colab notebook environment</a> using your Google account.</p>
-         
+
           <br>
-         
+
           <p>Additionally, nx-cugraph is now included in the RAPIDS metapackage. Visit the <a href="https://rapids.ai/#quick-start">RAPIDS Quick Start</a> to get started with RAPIDS on your favorite platform.</p>
         </div>
         <div class="col-md-6 py-3">
           <h2><i class="fa-light fa-comment-code"></i> Learn More </h2>
           </p>Now nx-cugraph is generally available (GA) and ready for wide use. You can learn more from the <a href="https://developer.nvidia.com/blog/networkx-introduces-zero-code-change-acceleration-using-nvidia-cugraph/" target="_blank"> release blog</a> and <a href="https://docs.rapids.ai/api/cugraph/stable/nx_cugraph/" target="_blank"> nx-cugraph documentation</a>. </p>
-          
+
           <br>
-          
+
           Interested in seeing nx-cugraph used in an end-to-end workflow? Try this <a href="https://colab.research.google.com/github/rapidsai-community/showcase/blob/HEAD/accelerated_data_processing_examples/nxcg_wikipedia_e2e.ipynb" target="_blank"> SciPy conference demo notebook</a>. Want to contribute or share feedback? Reach out via <a href="https://github.com/rapidsai/nx-cugraph" target="_blank">GitHub</a>.</p>
         </div>
       </div>
@@ -212,7 +212,7 @@
                 backgroundColor: [
                     'rgb(115, 6, 255, .80)'
                 ]
-            }]  
+            }]
         },
         options: {
             scales: {
@@ -258,7 +258,7 @@
 
                             // Get the data index of the hovered bar
                             const index = context.dataIndex;
-                            
+
                             // Return custom text for each bar
                             return customInfo[index] + `\nSpeedup: ${context.raw}x`;
                         }
