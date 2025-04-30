@@ -39,3 +39,43 @@ hugo new announcements/cuda-12-deprecation
 ## Pull Request Previews
 
 [Netlify](https://www.netlify.com/) will create a preview environment when PRs are opened.
+
+## Using pre-commit hooks
+
+This repository uses [pre-commit](https://pre-commit.com/) to execute all code linters and
+formatters. These tools ensure a consistent code format throughout the project. Using pre-commit
+ensures that linter versions and options are aligned for all developers. Additionally, there is a CI
+check in place to enforce that committed code follows our standards.
+
+To use `pre-commit`, install via `conda` or `pip`:
+
+```bash
+conda install -c conda-forge pre-commit
+```
+
+```bash
+pip install pre-commit
+```
+
+Then run pre-commit hooks before committing code:
+
+```bash
+pre-commit run
+```
+
+By default, pre-commit runs on staged files (only changes and additions that will be committed).
+To run pre-commit checks on all files, execute:
+
+```bash
+pre-commit run --all-files
+```
+
+Optionally, you may set up the pre-commit hooks to run automatically when you make a git commit. This can be done by running:
+
+```bash
+pre-commit install
+```
+
+Now code linters and formatters will be run each time you commit changes.
+
+You can skip these checks with `git commit --no-verify` or with the short version `git commit -n`.
