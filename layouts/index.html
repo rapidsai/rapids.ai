@@ -35,7 +35,7 @@
         "dur" "1.5s"
     )
     (dict
-        "text" "RAPIDS 25.04 Released"
+        "text" "RAPIDS 25.06 Released"
         "url" "https://docs.rapids.ai/install#selector"
         "target" "_blank"
         "dur" "1.8s"
@@ -133,7 +133,7 @@
                 <div class="col-md-4 py-3">
                     <h2><i class="fa-thin fa-objects-column"></i> Faster Pandas <br> with cuDF</h2>
                     <p>cuDF accelerates pandas with zero code changes and brings greatly improved performance.</p> <br>
-                    <a href="https://github.com/rapidsai/cudf/blob/branch-25.04/docs/cudf/source/user_guide/performance-comparisons/performance-comparisons.ipynb"
+                    <a href="https://github.com/rapidsai/cudf/blob/branch-25.06/docs/cudf/source/user_guide/performance-comparisons/performance-comparisons.ipynb"
                         target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
 
                     <canvas id="cuDFchart" width="400" height="350"></canvas>
@@ -143,7 +143,7 @@
                 <div class="col-md-4 py-3">
                     <h2><i class="fa-light fa-microchip-ai"></i> Faster scikit-learn <br> with cuML</h2>
                     <p>cuML brings huge speedups to ML modeling with an API that matches scikit-learn.</p> <br>
-                    <a href="https://github.com/rapidsai/cuml/tree/branch-25.04/python/cuml/cuml/benchmark"
+                    <a href="https://github.com/rapidsai/cuml/tree/branch-25.06/python/cuml/cuml/benchmark"
                         target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
 
                     <canvas id="cuMLchart" width="400" height="350"></canvas>
@@ -153,7 +153,7 @@
                 <div class="col-md-4 py-3">
                     <h2><i class="fa-light fa-circle-nodes"></i> Faster NetworkX <br> with cuGraph</h2>
                     <p>cuGraph accelerates NetworkX with zero code changes for much greater performance at scale.</p> <br>
-                    <a href="https://github.com/rapidsai/nx-cugraph/blob/branch-25.04/benchmarks/pytest-based"
+                    <a href="https://github.com/rapidsai/nx-cugraph/blob/branch-25.06/benchmarks/pytest-based"
                         target="_blank">Run this benchmark yourself <i class="fa-solid fa-arrow-up-right"></i> </a>
 
                     <canvas id="cuGraphChart" width="400" height="350"></canvas>
@@ -205,16 +205,16 @@ bash Miniforge3-$(uname)-$(uname -m).sh</code></pre>
                     <br>
                     <p><strong>2.</strong> Then quick install RAPIDS with:</p>
                     <pre
-                        class="highlight use-white-copy"><code>conda create -n rapids-25.04 -c rapidsai -c conda-forge -c nvidia rapids=25.04 python=3.12 cuda-version=12.8</code></pre>
+                        class="highlight use-white-copy"><code>conda create -n rapids-25.06 -c rapidsai -c conda-forge -c nvidia rapids=25.06 python=3.12 cuda-version=12.8</code></pre>
 
                     <h3 class="mt-6 text-white">Install with pip</h3>
                     <p>Install via the NVIDIA PyPI index:</p>
                     <pre class="highlight use-white-copy"><code>pip install \
   --extra-index-url=https://pypi.nvidia.com \
-  cudf-cu12==25.4.* \
-  dask-cudf-cu12==25.4.* \
-  cuml-cu12==25.4.* \
-  cugraph-cu12==25.4.*</code></pre>
+  cudf-cu12==25.6.* \
+  dask-cudf-cu12==25.6.* \
+  cuml-cu12==25.6.* \
+  cugraph-cu12==25.6.*</code></pre>
 
                     <h3 class="mt-6 text-white">Install with Docker</h3>
                     <p>Check that you have the <a href="https://docs.rapids.ai/install#docker" target="_blank">required
