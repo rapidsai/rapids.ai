@@ -7,3 +7,4 @@ The site uses [Hugo](https://gohugo.io/) as a static site generator with the [Do
 ## Contributing
 
 See [CONTRIBUTING.md](./CONTRIBUTING.md) for details on how to make contributions to this repository.
+
