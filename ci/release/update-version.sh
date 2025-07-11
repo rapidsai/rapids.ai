@@ -3,8 +3,6 @@
 # All rights reserved.
 # SPDX-License-Identifier: Apache-2.0
 
-.
-
 ## Usage
 # bash ./ci/release/update-version.sh <new_version>
 
