@@ -48,11 +48,6 @@ Start with the [Easy Path](/api/cugraph/stable/basics/nx_transition/#easy-path-u
 {: .mb-8 }
 
 
-### <i class="fa-light fa-location-crosshairs"></i> Spatial Analytics with [cuSpatial](https://github.com/rapidsai/cuspatial){: target="_blank"}
-Start with the [cuSpatial User Guide](/api/cuspatial/stable/user_guide/cuspatial_api_examples/){: target="_blank"} for an intro to GPU Accelerated Spatial Analytics. The [demo notebooks](https://github.com/rapidsai/cuspatial/tree/branch-{{ site.data.releases.stable.version }}/python/cuspatial/demos) are also a good showcase.
-{: .mb-8 }
-
-
 ### <i class="fa-light fa-chart-scatter-bubble"></i> Accelerated Cross-filtered Dashboards with [cuxfilter](https://github.com/rapidsai/cuxfilter)
 Start with [10 Minutes to Cuxfilter](/api/cuxfilter/stable/10_minutes_to_cuxfilter/){: target="_blank"} to get an overview of how to quickly create a dashboard and [the examples section](/api/cuxfilter/stable/examples/examples/){: target="_blank"} for real dataset examples.
 {: .mb-8 }
