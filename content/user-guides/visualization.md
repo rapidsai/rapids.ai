@@ -31,7 +31,7 @@ RAPIDS libraries can easily fit in visualization workflows. This catalog of feat
 
 ### GPU Accelerated Interaction
 
-The below libraries directly use RAPIDS cuDF/Dask-cuDF and/or cuSpatial to create charts that support accelerated crossfiltering or rendering:
+The below libraries directly use RAPIDS cuDF/Dask-cuDF to create charts that support accelerated crossfiltering or rendering:
 - **[Holoviews with Linked Brushing User Guide](https://holoviews.org/user_guide/Linked_Brushing.html?highlight=linked%20brushing)**
 - **[Datashader User Guide](https://datashader.org/user_guide/Performance.html)**
 - **[Plotly Dash with Holoviews Docs](https://dash.plotly.com/holoviews#gpu-accelerating-datashader-and-linked-selections-with-rapids)**
