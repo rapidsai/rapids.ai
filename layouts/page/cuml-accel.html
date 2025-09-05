@@ -115,11 +115,15 @@
             "proxy estimator" is created instead.</p>
 
           <code class="code-sample mt-3">
-            In [1]: %load_ext cuml.accel <br>
+            In [1]: %load_ext cuml.accel <br><br>
             In [2]: from sklearn.cluster import KMeans <br><br>
 
-            In [3]: type(KMeans) <br>
-            Out[3]: cuml.internals.base_helpers.BaseMetaClass;
+            In [3]: KMeans <br>
+            Out[3]: sklearn.cluster.KMeans <br><br>
+
+            In [4]: from cuml.accel import is_proxy <br><br>
+            In [5]: is_proxy(KMeans) <br>
+            Out[5]: True
           </code>
 
           <br><br>
