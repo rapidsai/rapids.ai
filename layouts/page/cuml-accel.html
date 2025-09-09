@@ -108,38 +108,66 @@
 
       <h1 class="mt-10 mb-4"> How It Works</h1>
       <div class="row">
-        <div class="col-md-6 py-3">
+        <div class="col-md-5 py-3">
           <h2><i class="fa-sharp fa-light fa-gear-complex-code"></i> Under the Hood </h2>
           <p>When you load cuml.accel, importing scikit-learn (or umap-learn or hdbscan) allows cuML to "intercept"
             estimators from these CPU modules. When you create a new estimator to run a machine learning algorithm, a
             "proxy estimator" is created instead.</p>
 
           <code class="code-sample mt-3">
-            In [1]: %load_ext cuml.accel <br>
-            In [2]: from sklearn.cluster import KMeans <br><br>
+            In [1]: %load_ext cuml.accel <br><br>
+            In [2]: from sklearn.ensemble import RandomForestClassifier <br>
+            In [3]: from sklearn.datasets import make_classification <br><br>
 
-            In [3]: type(KMeans) <br>
-            Out[3]: cuml.internals.base_helpers.BaseMetaClass;
+            In [4]: X, y = make_classification(n_samples=10000, n_features=20) <br><br>
+
+            In [5]: clf = RandomForestClassifier(n_estimators=100) <br><br>
+
+            In [6]: clf.fit(X, y)  # Runs on GPU! <br>
+            Out[6]: RandomForestClassifier() <br><br>
           </code>
-
-          <br><br>
 
           <p>Estimators that are implemented in cuML will be dispatched to run on the GPU where possible, and fall
             back to the CPU library otherwise. This applies to scikit-learn operations in your code, as well as third
             party libraries you may be using.</p>
 
-          <br>
+          <br><br>
 
-          <p>If a model is constructed on the GPU and then a method is called that is not implemented in cuML,
-            cuml.accel will reconstruct the model on the CPU and gracefully fall back to the equivalent scikit-learn
-            function instead.</p>
 
         </div>
-        <div class="col-md-6 py-3">
+        <div class="col-md-3 py-3">
           <h2><i class="fa-light fa-diagram-subtask"></i> Execution Flow </h2>
           {{ with .Resources.GetMatch "chart_purple.png" }}
           <img src="{{ .RelPermalink }}">
           {{ end }}
+        </div>
+        <div class="col-md-4 py-3">
+          <h2><i class="fa-light fa-check-circle"></i> Profiling </h2>
+          <p>You can verify that the estimator is a proxy estimator by using the <code>is_proxy</code> function:</p>
+
+          <code class="code-sample mt-3">
+            In [7]: from cuml.accel import is_proxy <br>
+            In [8]: is_proxy(clf) <br>
+            Out[8]: True <br><br>
+          </code>
+
+          <p class="mt-3">This confirms that your RandomForestClassifier is running on GPU through cuml.accel's proxy system.</p>
+
+          <p class="mt-3">For more detailed information on what is running on the GPU and what is running on the CPU, you can use the <code>profile</code> function:</p>
+
+          <div class="code-block mt-3">
+            <pre><code>In [8]: %%cuml.accel.profile
+   ...: clf.fit(X, y)
+   ...:
+   ...: </code></pre>
+          </div>
+
+          <p class="mt-3">This will output a table with the function name, the number of GPU calls, the GPU time, the number of CPU calls, and the CPU time.
+            See the <a href="https://docs.rapids.ai/api/cuml/stable/cuml-accel/logging-and-profiling/" target="_blank">documentation</a> for more information.
+          </p>
+
+          <br>
+
         </div>
       </div>
     </div>
@@ -147,7 +175,7 @@
 </section>
 
 <!-- Get Started -->
-<!-- <div id="get-started"></div> -->
+<div id="get-started"></div>
 <div class="top-slant-container">
   <div class="top-slant-up bg-rapids-gray"></div>
 </div>
@@ -160,15 +188,16 @@
       <div class="row">
         <div class="col py-3">
           <h2><i class="fa-light fa-bookmark"></i> Try Now on Colab</h2>
-          {{ $colabImg := ((site.GetPage "_partners/google-colab").Resources.Get "logo.png").Resize "200x" }}
-          <a href="https://colab.research.google.com/github/rapidsai-community/showcase/blob/main/getting_started_tutorials/cuml_sklearn_colab_demo.ipynb" target="_blank"><img src="{{ $colabImg.RelPermalink }}"></a>
           <p>Get started accelerating your machine learning workflows in a free GPU-enabled notebook environment using
             your Google account. <a href="https://colab.research.google.com/github/rapidsai-community/showcase/blob/main/getting_started_tutorials/cuml_sklearn_colab_demo.ipynb"
             target="_blank">Launch on Colab <i class="fa-solid fa-arrow-up-right"></i> </a></p>
-          <br>
-          <p>cuML's accelerator works smoothly with all of the other RAPIDS libraries. Visit the RAPIDS <a
-            href="https://rapids.ai/#quick-start" target="_blank">Quick Start</a> to get started with any RAPIDS
-            library on your favorite platform.</p>
+          {{ $colabImg := ((site.GetPage "_partners/google-colab").Resources.Get "logo.png").Resize "200x" }}
+          <a href="https://colab.research.google.com/github/rapidsai-community/showcase/blob/main/getting_started_tutorials/cuml_sklearn_colab_demo.ipynb" target="_blank"><img src="{{ $colabImg.RelPermalink }}"></a>
+        </div>
+        <div class="col py-3">
+          <h2><i class="fa-light fa-download"></i> Install cuML</h2>
+          <p>cuML.accel is automatically included with cuML - no separate installation required! Install cuML using conda, pip, or Docker to get started with GPU-accelerated machine learning.</p>
+          <p><a href="https://docs.rapids.ai/install" target="_blank" class="btn btn-primary">Install cuML <i class="fa-solid fa-arrow-up-right"></i></a></p>
         </div>
         <div class="col py-3">
           <h2><i class="fa-light fa-head-side-gear"></i> Learn More</h2>
