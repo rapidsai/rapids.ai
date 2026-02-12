@@ -39,7 +39,7 @@ Start with the [10 Minutes to cuDF and Dask-cuDF User Guide](/api/cudf/stable/us
 
 
 ### <i class="fa-light fa-list-tree"></i> Accelerated Machine Learning with [cuML](https://github.com/rapidsai/cuml){: target="_blank"}
-Start with the [User Guide](/api/cuml/stable/user_guide/){: target="_blank"} and the [Estimator Intro](https://github.com/rapidsai/cuml/blob/branch-{{ site.data.releases.stable.version }}/docs/source/estimator_intro.ipynb){: target="_blank"}, showcasing basic machine learning for training and evaluating machine learning models in cuML. The [Intro and key concepts for cuML](/api/cuml/stable/cuml_intro/) is helpful as well.
+Start with the [User Guide](/api/cuml/stable/user_guide/){: target="_blank"} and the [Estimator Intro](https://github.com/rapidsai/cuml/blob/release/{{ site.data.releases.stable.version }}/docs/source/estimator_intro.ipynb){: target="_blank"}, showcasing basic machine learning for training and evaluating machine learning models in cuML. The [Intro and key concepts for cuML](/api/cuml/stable/cuml_intro/) is helpful as well.
 {: .mb-8 }
 
 
@@ -52,14 +52,8 @@ Start with the [Easy Path](/api/cugraph/stable/basics/nx_transition/#easy-path-u
 Start with [10 Minutes to Cuxfilter](/api/cuxfilter/stable/10_minutes_to_cuxfilter/){: target="_blank"} to get an overview of how to quickly create a dashboard and [the examples section](/api/cuxfilter/stable/examples/examples/){: target="_blank"} for real dataset examples.
 {: .mb-8 }
 
-
-### <i class="fa-regular fa-signal-stream"></i> Signal Analytics with [cuSignal](https://github.com/rapidsai/cusignal){: target="_blank"}
-Start with the [End to End Example](https://github.com/rapidsai/cusignal/blob/branch-{{ site.data.releases.stable.version }}/notebooks/E2E_Example.ipynb){: target="_blank"} for simulating signals and influencing guide as well as the [API Guide](https://github.com/rapidsai/cusignal/tree/branch-{{ site.data.releases.stable.version }}/notebooks/api_guide){: target="_blank"}.
-{: .mb-8 }
-
-
 ### <i class="fa-light fa-images"></i> Computer Vision and Analytics with [cuCIM](https://github.com/rapidsai/cucim){: target="_blank"}
-Start with the [Welcome Notebook](https://github.com/rapidsai/cucim/blob/branch-{{ site.data.releases.stable.version }}/notebooks/Welcome.ipynb){: target="_blank"} for links to resources guides and a good overview of the project structure.
+Start with the [Welcome Notebook](https://github.com/rapidsai/cucim/blob/release/{{ site.data.releases.stable.version }}/notebooks/Welcome.ipynb){: target="_blank"} for links to resources guides and a good overview of the project structure.
 {: .mb-8 }
 
 
