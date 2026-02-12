@@ -35,7 +35,7 @@ function sed_runner() {
 }
 
 sed_runner "s|RAPIDS ${CURRENT_SHORT_VERSION}|RAPIDS ${NEXT_SHORT_VERSION}|g" "layouts/index.html"
-sed_runner "s|branch-${CURRENT_SHORT_VERSION}|branch-${NEXT_SHORT_VERSION}|g" "layouts/index.html"
+sed_runner "s|release/${CURRENT_SHORT_VERSION}|release/${NEXT_SHORT_VERSION}|g" "layouts/index.html"
 sed_runner "s|rapids-${CURRENT_SHORT_VERSION}|rapids-${NEXT_SHORT_VERSION}|g" "layouts/index.html"
 sed_runner "s|rapids=${CURRENT_SHORT_VERSION}|rapids=${NEXT_SHORT_VERSION}|g" "layouts/index.html"
 sed_runner "s|==${CURRENT_SHORT_VERSION_PEP440}\.\*|==${NEXT_SHORT_VERSION_PEP440}\.\*|g" "layouts/index.html"

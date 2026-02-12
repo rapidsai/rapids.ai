@@ -29,6 +29,7 @@ wget "https://github.com/gohugoio/hugo/releases/download/v${HUGO_VERSION}/hugo_e
 hugo config
 
 # Install NodeJS version from `.nvmrc` file
+# shellcheck disable=SC1091
 . "${NVM_DIR}/nvm.sh" --install
 rm -rf node_modules
 npm install
