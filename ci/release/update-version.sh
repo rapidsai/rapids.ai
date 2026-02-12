@@ -6,6 +6,8 @@
 ## Usage
 # bash ./ci/release/update-version.sh <new_version>
 
+set -e -u -o pipefail
+
 # Format is YY.MM.PP - no leading 'v' or trailing 'a'
 NEXT_FULL_VERSION=$1
 
@@ -23,7 +25,9 @@ else
     CURRENT_MAJOR=$NEXT_MAJOR
 fi
 
-CURRENT_SHORT_VERSION=${CURRENT_MAJOR}.${CURRENT_MINOR}
+CURRENT_SHORT_VERSION="${CURRENT_MAJOR}.${CURRENT_MINOR}"
+
+echo "Updating references from '${CURRENT_MAJOR}.${CURRENT_MINOR}' to '${NEXT_MAJOR}.${NEXT_MINOR}'"
 
 # Need to distutils-normalize the versions
 CURRENT_SHORT_VERSION_PEP440=$(python -c "from packaging.version import Version; print(Version('${CURRENT_SHORT_VERSION}'))")
