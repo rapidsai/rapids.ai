@@ -34,5 +34,5 @@ hugo config
 rm -rf node_modules
 npm install
 
-# Install the python libraries for get_medium.py
+# Install the python libraries for get_rapids_blog.py
 pip install requests xmltodict pyyaml
