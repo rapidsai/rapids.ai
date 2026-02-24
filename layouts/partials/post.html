@@ -8,7 +8,7 @@
 <div class="container">
   <h2 class="mt-5"><i class="fa-regular fa-message-quote"></i> Latest Posts </h2>
 
-  {{ range $index, $post := first 6 site.Data.posts.medium }}
+  {{ range $index, $post := first 6 site.Data.posts.nvidia }}
   {{ if (modBool $index 3) }}
     {{ $cssModifier := "mt-5" }}
     {{ if (eq $index 0) }}
@@ -28,7 +28,7 @@
           &nbsp;
           <i class="fa-sharp fa-solid fa-quote-right text-rapids-purple-secondary"></i>
           <br>
-          <span class="post-action">Post by {{ .poster }}</span>
+          <span class="post-action">Post by {{ .poster }}</span> <span class="post-date">&middot; {{ dateFormat "Jan 2, 2006" (time .date) }}</span>
         </p>
       </a>
     </div>
