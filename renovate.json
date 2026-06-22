@@ -3,6 +3,15 @@
   "extends": [
     "config:recommended"
   ],
+  "packageRules": [
+    {
+      "description": "Wait for 7 days post-release before updating",
+      "matchPackageNames": [
+        "*"
+      ],
+      "minimumReleaseAge": "7 days"
+    }
+  ],
   "schedule": [
     "before 4am on the first day of the month"
   ]
