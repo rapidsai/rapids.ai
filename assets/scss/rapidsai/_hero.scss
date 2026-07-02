@@ -17,10 +17,10 @@
 }
 
 .hero-body {
-  padding: 7rem 1.5rem;
+  padding: calc(7rem + var(--rapids-notice-offset)) 1.5rem 7rem;
 
   @include media-breakpoint-up(md) {
-    padding: 9rem 4.5rem;
+    padding: calc(9rem + var(--rapids-notice-offset)) 4.5rem 9rem;
   }
 }
 
