@@ -37,10 +37,10 @@ https://github.com/google/docsy/blob/v0.7.1/assets/scss/_main-container.scss
 
 // .td-404 main, // disable padding on 404 page
 .td-main main {
-  padding-top: 1.5rem;
+  padding-top: calc(1.5rem + var(--rapids-notice-offset));
   padding-bottom: 2rem;
 
   @include media-breakpoint-up(md) {
-    padding-top: 5.5rem;
+    padding-top: calc(5.5rem + var(--rapids-notice-offset));
   }
 }

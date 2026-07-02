@@ -3,6 +3,22 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
+:root {
+  --rapids-notice-offset: 5rem;
+}
+
+@include media-breakpoint-up(md) {
+  :root {
+    --rapids-notice-offset: 3.25rem;
+  }
+}
+
+@include media-breakpoint-up(lg) {
+  :root {
+    --rapids-notice-offset: 2.5rem;
+  }
+}
+
 .navigation {
   box-shadow: 0px 3px 2px rgba(0, 0, 0, 0.2);
   position: fixed;
@@ -10,6 +26,44 @@
   left: 0;
   right: 0;
   z-index: $zindex-fixed;
+  display: flex;
+  flex-direction: column;
+  background-color: var(--bs-rapids-purple-primary);
+}
+
+.navigation__notice {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  box-sizing: border-box;
+  min-height: var(--rapids-notice-offset);
+  padding: 0.5rem 1rem;
+  color: white;
+  background-color: #151515;
+  border-bottom: 2px solid var(--bs-rapids-teal);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: 1.35;
+  text-align: center;
+}
+
+.navigation__notice a {
+  color: var(--bs-rapids-teal);
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+
+  &:hover {
+    color: white;
+  }
+}
+
+.navigation__notice-icon {
+  color: var(--bs-rapids-teal);
+  flex: 0 0 auto;
+}
+
+.navigation__bar {
   background-color: var(--bs-rapids-purple-primary);
 
   @include media-breakpoint-up(lg) {

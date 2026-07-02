@@ -3,56 +3,64 @@
   SPDX-License-Identifier: Apache-2.0
 */}}
 
-<nav x-data="{isOpen: false}" class="navigation container-fluid" role="navigation" aria-label="main navigation">
-  <div class="navigation__brand">
-    <a class="navigation__item" href="/">
-      <img class="navigation__logo" src='{{ (resources.Get "images/RAPIDS-logo.png").RelPermalink }}'>
-    </a>
-
-    <button @click="isOpen = ! isOpen" class="navigation__burger" type="button" aria-controls="navigation__menu"
-    :aria-expanded="isOpen" aria-label="Toggle main navigation"></button>
+<nav x-data="{isOpen: false}" class="navigation" role="navigation" aria-label="main navigation">
+  <div class="navigation__notice" role="status">
+    <span class="navigation__notice-icon" aria-hidden="true">
+      <i class="fa-regular fa-circle-info"></i>
+    </span>
+    <span>RAPIDS pages will migrate to the <a href="https://developer.nvidia.com/topics/ai/data-science/cuda-x-data-science-libraries">NVIDIA domain</a> on August 11, 2026. No action needed &mdash; your saved bookmarks and links will redirect automatically.</span>
   </div>
 
-  <div :style="isOpen && {height: $el.scrollHeight+'px'}" class="navigation__menu" id="navigation__menu">
-    <div class="navigation__item navigation__item--dropdown">
-      <a class="navigation__link" href="/ecosystem">Ecosystem </a>
+  <div class="navigation__bar container-fluid">
+    <div class="navigation__brand">
+      <a class="navigation__item" href="/">
+        <img class="navigation__logo" src='{{ (resources.Get "images/RAPIDS-logo.png").RelPermalink }}'>
+      </a>
 
-      <div class="navigation__dropdown">
-        <a href="/ecosystem#overview" class="navigation__item">Overview </a>
-        <a href="/ecosystem#hardware" class="navigation__item">Hardware </a>
-        <a href="/ecosystem#software" class="navigation__item">Software </a>
-        <a href="/ecosystem#developers" class="navigation__item">Developers </a>
-      </div>
+      <button @click="isOpen = ! isOpen" class="navigation__burger" type="button" aria-controls="navigation__menu"
+      :aria-expanded="isOpen" aria-label="Toggle main navigation"></button>
     </div>
 
-    <div class="navigation__item navigation__item--dropdown">
-      <a class="navigation__link" href="/learn-more">Learn More </a>
+    <div :style="isOpen && {height: $el.scrollHeight+'px'}" class="navigation__menu" id="navigation__menu">
+      <div class="navigation__item navigation__item--dropdown">
+        <a class="navigation__link" href="/ecosystem">Ecosystem </a>
 
-      <div class="navigation__dropdown">
-        <a href="/learn-more#about" class="navigation__item">About RAPIDS </a>
-        <a href="/learn-more#accelerators" class="navigation__item">PyData Accelerators</a>
-        <a href="/learn-more#use-cases" class="navigation__item">Use Cases </a>
-        <a href="/learn-more#get-involved" class="navigation__item">Get Involved </a>
+        <div class="navigation__dropdown">
+          <a href="/ecosystem#overview" class="navigation__item">Overview </a>
+          <a href="/ecosystem#hardware" class="navigation__item">Hardware </a>
+          <a href="/ecosystem#software" class="navigation__item">Software </a>
+          <a href="/ecosystem#developers" class="navigation__item">Developers </a>
+        </div>
       </div>
-    </div>
 
-    <div class="navigation__item navigation__item--dropdown">
-      <a class="navigation__link" href="/news"> News </a>
+      <div class="navigation__item navigation__item--dropdown">
+        <a class="navigation__link" href="/learn-more">Learn More </a>
 
-      <div class="navigation__dropdown">
-        <a href="https://developer.nvidia.com/blog/tag/rapids/" target="_blank" class="navigation__item">RAPIDS Blog </a>
-        <a href="https://developer.nvidia.com/blog/" target="_blank" class="navigation__item">NVIDIA Dev Blog </a>
-        <a href="https://docs.rapids.ai/notices" target="_blank" class="navigation__item">Support Notices </a>
+        <div class="navigation__dropdown">
+          <a href="/learn-more#about" class="navigation__item">About RAPIDS </a>
+          <a href="/learn-more#accelerators" class="navigation__item">PyData Accelerators</a>
+          <a href="/learn-more#use-cases" class="navigation__item">Use Cases </a>
+          <a href="/learn-more#get-involved" class="navigation__item">Get Involved </a>
+        </div>
       </div>
+
+      <div class="navigation__item navigation__item--dropdown">
+        <a class="navigation__link" href="/news"> News </a>
+
+        <div class="navigation__dropdown">
+          <a href="https://developer.nvidia.com/blog/tag/rapids/" target="_blank" class="navigation__item">RAPIDS Blog </a>
+          <a href="https://developer.nvidia.com/blog/" target="_blank" class="navigation__item">NVIDIA Dev Blog </a>
+          <a href="https://docs.rapids.ai/notices" target="_blank" class="navigation__item">Support Notices </a>
+        </div>
+      </div>
+
+      <a class="navigation__item navigation__link" href="https://docs.rapids.ai/user-guide" target="_blank">User Guides </a>
+
+      <a class="navigation__item navigation__link" href="https://docs.rapids.ai/install" target="_blank">Install </a>
+
+      <a class="navigation__item navigation__link" href="https://docs.rapids.ai/" target="_blank">Docs </a>
+
+      <a class="navigation__item navigation__link" href="https://github.com/rapidsai" target="_blank">GitHub </a>
     </div>
-
-    <a class="navigation__item navigation__link" href="https://docs.rapids.ai/user-guide" target="_blank">User Guides </a>
-
-    <a class="navigation__item navigation__link" href="https://docs.rapids.ai/install" target="_blank">Install </a>
-
-    <a class="navigation__item navigation__link" href="https://docs.rapids.ai/" target="_blank">Docs </a>
-
-    <a class="navigation__item navigation__link" href="https://github.com/rapidsai" target="_blank">GitHub </a>
   </div>
-
 </nav>
