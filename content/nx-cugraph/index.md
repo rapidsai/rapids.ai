@@ -1,6 +1,6 @@
 ---
 title: nx-cugraph
-description: GPU Accelerated NetworkX Backend
+description: nx-cugraph retirement and final RAPIDS 26.12 release
 body_class: landing-page
 layout: nx-cugraph
 ---
